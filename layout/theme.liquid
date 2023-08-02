@@ -1,0 +1,722 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
+<head>
+<link rel='preconnect dns-prefetch' href='https://api.config-security.com/' crossorigin />
+<link rel='preconnect dns-prefetch' href='https://conf.config-security.com/' crossorigin />
+<link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin />
+<script>
+/* >> TriplePixel :: start*/
+window.TriplePixelData={TripleName:"patrick-adair-designs.myshopify.com",ver:"1.9.0"},function(W,H,A,L,E,_,B,N){function O(U,T,P,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,P?(H.open("POST",U,!0),H.setRequestHeader("Content-Type","application/json")):H.open("GET",U,!0),H.send(JSON.stringify(P||{})),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):P||(N[B]=R)):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}var i,m,p;A.getItem('"!nC`')||(_=A,A=N,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return"State"==t?E.s:(W=L(),(E._q=E._q||[]).push([W,t,e]),W)},E.s="Installed",E._q=[],E.ch=W,B="configSecurityConfModel",N[B]=1,O("//conf.config-security.com/model",5),i=L(),m=A[atob("c2NyZWVu")],_.setItem("di_pmt_wt",i),p={id:i,action:"profile",avatar:_.getItem("auth-security_rand_salt_"),time:m[atob("d2lkdGg=")]+":"+m[atob("aGVpZ2h0")],host:A.TriplePixelData.TripleName,url:window.location.href,ref:document.referrer,ver:window.TriplePixelData.ver},O("//api.config-security.com/",5,p),O("//triplewhale-pixel.web.app/dot1.9.txt",5)))}}("","TriplePixel",localStorage);
+/* << TriplePixel :: end*/
+</script>
+
+{% include 'replo-head' %}
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" async ></script>  -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" async></script>   -->
+  
+<script src="https://www.googleoptimize.com/optimize.js?id=OPT-NFGRBH7" async></script>
+{% include 'booster-seo' %}
+    <!-- Added By Navidium -->
+      {%- if template.name == 'product' and product.handle contains 'navidium' -%}
+        <script>location.replace('/');</script>
+      {%- endif -%}
+        <style>[data-handle*='navidium'],[data-product-handle*='navidium']{display: none !important;}</style>
+    <!-- End of Navidium -->
+
+{% if true %}  
+    
+{% else %}
+    <script type="text/javascript">
+       document.addEventListener('AsyncLoaded', function(){   
+          /* >> TriplePixel :: start*/
+          ~function(W,H,A,L,E,_){function O(T,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET","//triplewhale-pixel.web.app/triplepx.txt?"+~(Date.now()/9e7),!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?setTimeout(function(){return eval(H.responseText)},50):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(T-1))}}if(L=window,!L[H+"sn"]){L[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),W.includes("⇈")&&A.setItem(H+"Stg",1+(0|A.getItem(H+"Stg")||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=L,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),E._headless=!0,W},E.ch=W,O(5)))}}("","TriplePixel",localStorage);
+          /* << TriplePixel :: end*/
+       });
+    </script>           
+ {% endif %} 
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="{{ settings.color_button }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="preconnect" href="https://cdn.shopify.com">
+  <link rel="preconnect" href="https://fonts.shopifycdn.com">
+  <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com">
+  <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+  <link rel="dns-prefetch" href="https://maps.googleapis.com">
+  <link rel="dns-prefetch" href="https://maps.gstatic.com">
+
+<!-- <script src="https://www.googleoptimize.com/optimize.js?id=OPT-NFGRBH7"></script> -->
+
+  {%- if settings.favicon != blank -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
+  {%- endif -%}
+
+  {% comment %}{%- render 'seo-title' -%}{% endcomment %}
+
+  {%- if page_description -%}
+  {% comment %}<meta name="description" content="{{ page_description | escape }}">{% endcomment %}
+  {%- endif -%}
+
+  {%- render 'social-meta-tags' -%}
+
+  {%- render 'font-face' -%}
+  {%- render 'css-variables' -%}  
+  {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
+
+
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+    window.theme = window.theme || {};
+    theme.routes = {
+      home: "{{ routes.root_url }}",
+      cart: "{{ routes.cart_url | append: '.js' }}",
+      cartPage: "{{ routes.cart_url }}",
+      cartAdd: "{{ routes.cart_add_url | append: '.js' }}",
+      cartChange: "{{ routes.cart_change_url | append: '.js' }}",
+      search: "{{ routes.search_url }}"
+    };
+    theme.strings = {
+      soldOut: {{ 'products.product.sold_out' | t | json }},
+      unavailable: {{ 'products.product.unavailable' | t | json }},
+      inStockLabel: {{ 'products.product.in_stock_label' | t | json }},
+      stockLabel: {{ 'products.product.stock_label' | t: count: '[count]' | json }},
+      willNotShipUntil: {{ 'products.product.will_not_ship_until' | t: date: '[date]' | json }},
+      willBeInStockAfter: {{ 'products.product.will_be_in_stock_after' | t: date: '[date]' | json }},
+      waitingForStock: {{ 'products.product.waiting_for_stock' | t | json }},
+      savePrice: {{ 'products.general.save_html' | t: saved_amount: '[saved_amount]' | json }},
+      cartEmpty: {{ 'cart.general.empty' | t | json }},
+      cartTermsConfirmation: {{ 'cart.general.terms_confirm' | t | json }},
+      searchCollections: {{ 'general.search.collections' | t | json }},
+      searchPages: {{ 'general.search.pages' | t | json }},
+      searchArticles: {{ 'general.search.articles' | t | json }}
+    };
+    theme.settings = {
+      dynamicVariantsEnable: true,
+      cartType: {{ settings.cart_type | json }},
+      isCustomerTemplate: {% if request.page_type contains 'customers/' %}true{% else %}false{% endif %},
+      moneyFormat: {{ shop.money_format | json }},
+      saveType: {{ settings.product_save_type | json }},
+      productImageSize: {{ settings.product_grid_image_size | json }},
+      productImageCover: {{ settings.product_grid_image_fill }},
+      predictiveSearch: {{ settings.predictive_search_enabled }},
+      predictiveSearchType: {{ settings.search_type | json }},
+      quickView: {{ settings.quick_shop_enable }},
+      themeName: 'Impulse',
+      themeVersion: "5.5.0"
+    };
+  </script>
+
+  {% render 'header-scripts.zipifypages', renderctx: 'thm' %}
+
+<!--  content for header  ------------------------------------------------------------------->   
+  {{ content_for_header }}
+<!---- end content for header --------------------------------------------------------------->
+  
+  {% if template == 'product' and product.metafields.inventory.ShappifyHidden or product.type contains '_HIDDEN_' %}<meta name='robots' content='noindex'>{% endif %}
+
+{% if request.path contains  '/products' or request.path contains '/collections/luxury-rings' or request.path contains '/collections/the-celestial-series-space-themed-jewelry-from-patrick-adair-designs' or request.path contains '/cart' %} 
+  {%- render 'bold-options-hybrid' -%}
+  {%- render 'bold-common' -%}
+  {%- render 'sc-includes' -%}
+{% endif %}
+
+
+<script src="{{ 'vendor-scripts-v11.js' | asset_url | split: '?' | first }}" defer></script>
+
+  {%- if shop.enabled_currencies.size > 1 -%}
+    <link rel="stylesheet" href="{{ 'country-flags.css' | asset_url | split: '?' | first }}">
+  {%- endif -%}
+
+  <script src="{{ 'theme.js' | asset_url }}" defer></script>
+
+  {%- if request.page_type contains 'customers/' -%}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
+  {%- endif -%}
+  
+
+{%- if template.name == “product” -%}
+<script>
+  BOLD.common.eventEmitter.on('BOLD_OPTIONS_option_products_loaded', function(event){
+    var optionsDiv = document.querySelector('.bold_options_loaded');
+    if(optionsDiv.children.length != 0){
+      var buyItNow = document.querySelectorAll('.shopify-payment-button');
+console.log(buyItNow);
+      buyItNow.forEach(function(button){
+        button.remove();
+      })
+      }
+    });
+</script>
+
+ {% endif %}
+
+
+{% if request.path contains  '/products' or request.path contains '/collections/luxury-rings' or request.path contains '/collections/the-celestial-series-space-themed-jewelry-from-patrick-adair-designs' or request.path contains '/cart' %} 
+  {{ 'bold.css' | asset_url | stylesheet_tag }}
+{% endif %}  
+
+{% if request.path contains '/pages/contact-us' or request.path contains '/collections/custom-rings' %}    
+  {{ 'storeifyapps-formbuilder-styles.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+{% if template contains 'collection' %}{{ 'https://cdn.shopify.com/s/files/1/0382/4185/files/ajaxinate.js?937' | script_tag }}{% endif %}  
+
+{% if false %}  
+
+  {% if request.path contains '/pages/faq' %}
+    <script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=2087"  defer></script>
+    
+    <script>
+    GorgiasChat.init().then(async function() {
+        var chatElem = document.getElementById("gorgias-chat-container")
+        chatElem.style.display = "none";
+    
+        function sleep(seconds) {
+    	return new Promise(resolve => setTimeout(resolve, seconds * 1000));
+        }
+    
+        await sleep(25) // CHANGE THIS VALUE TO THE NUMBER OF SECONDS TO WAIT BEFORE SHOWING THE CHAT BUBBLE 
+        chatElem.style.display = "";
+    })
+    </script>  
+    {% endif %}
+{% endif %}  
+
+
+<!-- <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">   -->
+<link rel="preload" href="{{ 'custom.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ 'custom.css' | asset_url }}"></noscript>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" ></script>
+  
+{% comment %}        {% include 'analyzify-gtm-body' %}  {% endcomment %}
+<script src="{{ 'js.cookie.min.js' | asset_url }}"  defer></script>        
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "h90ocmajqr");
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-796784713"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-796784713');
+</script>
+
+
+  
+</head>
+        
+
+<body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %}" data-center-text="{{ settings.type_body_align_text }}" data-button_style="{{ settings.button_style }}" data-type_header_capitalize="{{ settings.type_header_capitalize }}" data-type_headers_align_text="{{ settings.type_headers_align_text }}" data-type_product_capitalize="{{ settings.type_product_capitalize }}" data-swatch_style="{{ settings.swatch_style }}" {% if settings.disable_animations %}data-disable-animations="true"{% endif %}>
+
+
+
+
+<script>window.KlarnaThemeGlobals={};{%case template.name%} {%when"product"%} {% if product.first_available_variant.price %}window.KlarnaThemeGlobals.data_purchase_amount = {{ product.first_available_variant.price }};{% endif %}window.KlarnaThemeGlobals.productVariants={{product.variants|json}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%when"cart"%} window.KlarnaThemeGlobals.data_purchase_amount={{cart.total_price}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%endcase%}</script>
+<script>
+     var url_string = window.location.href;
+      var url = new URL(url_string);
+      var pagemetricId = url.searchParams.get("autoconvert_ref");
+      console.log(pagemetricId);
+      if(pagemetricId){
+        window.localStorage.setItem("autoconvert_ref", pagemetricId);
+      }
+      console.log("autoconvert_ref", window.localStorage.getItem("autoconvert_ref"));
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+  <div id="PageContainer" class="page-container">
+    <div class="transition-body">
+
+    {%- section 'header' -%}
+
+      <main class="main-content" id="MainContent">
+        {{ content_for_layout }}
+      </main>
+
+      {%- section 'footer-promotions' -%}
+      {%- section 'footer' -%}
+
+    </div>
+  </div>
+
+  {%- section 'newsletter-popup' -%}
+
+  {%- liquid
+    render 'video-modal'
+    render 'photoswipe-template'
+    render 'tool-tip'
+  -%}
+{% render 'page-footer.zipifypages', renderctx: 'thm', ocuapp: oneclickupsellapp %}
+{% comment %}{{ 'storeifyapps-formbuilder-script.js' | asset_url | script_tag }}{% endcomment %} 
+
+
+
+
+{% if true %}  
+
+  <!-- Collection Script -->
+  <script type="text/javascript">
+  !function(){var geq=window.geq=window.geq||[];if(geq.initialize) return;if (geq.invoked){if (window.console && console.error) {console.error("GE snippet included twice.");}return;}geq.invoked = true;geq.methods = ["page", "suppress", "trackOrder", "identify", "addToCart", "callBack"];geq.factory = function(method){return function(){var args = Array.prototype.slice.call(arguments);args.unshift(method);geq.push(args);return geq;};};for (var i = 0; i < geq.methods.length; i++) {var key = geq.methods[i];geq[key] = geq.factory(key);}geq.load = function(key){var script = document.createElement("script");script.type = "text/javascript";script.async = true;if (location.href.includes("vge=true")) {script.src = "https://s3-us-west-2.amazonaws.com/jsstore/a/" + key + "/ge.js?v=" + Math.random();} else {script.src = "https://s3-us-west-2.amazonaws.com/jsstore/a/" + key + "/ge.js";}var first = document.getElementsByTagName("script")[0];first.parentNode.insertBefore(script, first);};geq.SNIPPET_VERSION = "1.6.0";
+  geq.load("5N0H27M");}();
+  </script>
+  <script>geq.page()</script>
+  
+  <!-- end -->
+  <!-- Suppression Script -->
+  <script>
+  window.addEventListener("klaviyoForms", function(e) {
+    if (e.detail.type == 'submit') {
+      geq.suppress();
+    }
+  });
+  </script>
+  
+  <!-- end -->  
+{% else %}
+  
+  {% if template contains 'collection' %}
+    <!-- Collection Script -->
+    <script type="text/javascript">
+      document.addEventListener('AsyncLoaded', function(){
+          !function(){var geq=window.geq=window.geq||[];if(geq.initialize) return;if (geq.invoked){if (window.console && console.error) {console.error("GE snippet included twice.");}return;}geq.invoked = true;geq.methods = ["page", "suppress", "trackOrder", "identify", "addToCart", "callBack"];geq.factory = function(method){return function(){var args = Array.prototype.slice.call(arguments);args.unshift(method);geq.push(args);return geq;};};for (var i = 0; i < geq.methods.length; i++) {var key = geq.methods[i];geq[key] = geq.factory(key);}geq.load = function(key){var script = document.createElement("script");script.type = "text/javascript";script.async = true;if (location.href.includes("vge=true")) {script.src = "https://s3-us-west-2.amazonaws.com/jsstore/a/" + key + "/ge.js?v=" + Math.random();} else {script.src = "https://s3-us-west-2.amazonaws.com/jsstore/a/" + key + "/ge.js";}var first = document.getElementsByTagName("script")[0];first.parentNode.insertBefore(script, first);};geq.SNIPPET_VERSION = "1.6.0";
+          geq.load("5N0H27M");}();
+          geq.page();
+        });
+    </script> 
+    <!-- Suppression Script -->
+        <script>
+        window.addEventListener("klaviyoForms", function(e) {
+          if (e.detail.type == 'submit') {
+            geq.suppress();
+          }
+        });
+        </script>
+    
+    <!-- end -->      
+    <!-- end -->
+  {% endif %}  
+{% endif %}
+  
+
+
+<script>
+
+      var first_gift_product = '';
+      var second_gift_product = '';
+      var first_gift_product_var = '';
+      var second_gift_product_var = '';
+    
+      var secondtier_first_gift_product = '';
+      var secondtier_second_gift_product = '';
+      var secondtier_first_gift_product_var = '';
+      var secondtier_second_gift_product_var = '';
+  
+      var thirdtier_first_gift_product = '';
+      var thirdtier_second_gift_product = '';
+      var thirdtier_first_gift_product_var = '';
+      var thirdtier_second_gift_product_var = '';
+  
+  {% if settings.show_gift_box %}    
+      {% assign first_gift_product = settings.product-handle-1 %}
+      {% assign first_gift_product_id = first_gift_product.id %} 
+      {% assign first_gift_product_id_var = first_gift_product.selected_or_first_available_variant.id %}
+      {% assign second_gift_product = settings.product-handle-2 %}
+      {% assign second_gift_product_id = second_gift_product.id %}
+      {% assign second_gift_product_id_var = second_gift_product.selected_or_first_available_variant.id %}
+  
+      var first_gift_product = {{ first_gift_product_id }};
+      var second_gift_product = {{ second_gift_product_id }};
+      var first_gift_product_var = {{ first_gift_product_id_var }};
+      var second_gift_product_var = {{ second_gift_product_id_var }};
+
+  {% endif %}  
+
+  {% if settings.second_show_gift_box %}
+      
+      {% assign secondtier_first_gift_product = settings.second_product-handle-1 %}
+      {% assign secondtier_first_gift_product_id = secondtier_first_gift_product.id %} 
+      {% assign secondtier_first_gift_product_id_var = secondtier_first_gift_product.selected_or_first_available_variant.id %}
+      {% assign secondtier_second_gift_product = settings.second_product-handle-2 %}
+      {% assign secondtier_second_gift_product_id = secondtier_second_gift_product.id %}
+      {% assign secondtier_second_gift_product_id_var = secondtier_second_gift_product.selected_or_first_available_variant.id %}
+
+      var secondtier_first_gift_product = {{ secondtier_first_gift_product_id }};
+      var secondtier_second_gift_product = {{ secondtier_second_gift_product_id }};
+      var secondtier_first_gift_product_var = {{ secondtier_first_gift_product_id_var }};
+      var secondtier_second_gift_product_var = {{ secondtier_second_gift_product_id_var }};
+  
+  {% endif %}
+  
+  {% if settings.third_show_gift_box %}
+
+      {% assign thirdtier_first_gift_product = settings.third_product-handle-1 %}
+      {% assign thirdtier_first_gift_product_id = thirdtier_first_gift_product.id %} 
+      {% assign thirdtier_first_gift_product_id_var = thirdtier_first_gift_product.selected_or_first_available_variant.id %}
+      {% assign thirdtier_second_gift_product = settings.third_product-handle-2 %}
+      {% assign thirdtier_second_gift_product_id = thirdtier_second_gift_product.id %}
+      {% assign thirdtier_second_gift_product_id_var = thirdtier_second_gift_product.selected_or_first_available_variant.id %}
+    
+      var thirdtier_first_gift_product = {{ thirdtier_first_gift_product_id }};
+      var thirdtier_second_gift_product = {{ thirdtier_second_gift_product_id }};
+      var thirdtier_first_gift_product_var = {{ thirdtier_first_gift_product_id_var }};
+      var thirdtier_second_gift_product_var = {{ thirdtier_second_gift_product_id_var }};
+  
+    {% endif %}
+      
+  
+  jQuery(document).ready(function($){
+    $(document).on('click', '.upsell_button_gtm', function(e){
+      e.preventDefault();
+      var id = $(this).attr('data-product-id');
+      var q = 1;
+      var ajax = {
+          type: "POST",
+          url: "/cart/add.js",
+          data: "quantity=" + q + "&id=" + id,
+          dataType: "json",
+          success: function (n) {
+  
+            document.dispatchEvent(new CustomEvent('ajaxProduct:added'));
+            document.dispatchEvent(new CustomEvent('cart:build'));
+                    
+          },
+          error: function (n, c) {
+             console.log('fail');
+          }
+       };
+      jQuery.ajax(ajax)  
+     });
+    //remove free gift
+    $(document).on('click', '.change_free_gift', function(e){
+      e.preventDefault();
+      let variantId = $(this).attr("data-remove_var");
+      $.ajax({
+        type: "POST",
+        url: "/cart/change.js",
+        dataType: "json",
+        data: {
+          id: parseFloat(variantId),
+          quantity: 0,
+        },
+      }).then((data) => {
+          document.dispatchEvent(new CustomEvent('ajaxProduct:added'));
+          document.dispatchEvent(new CustomEvent('cart:build'));
+      });
+       
+     });
+   });
+
+  function remove_auto_gift($prod_id){
+    let variantId = $prod_id;
+      $.ajax({
+        type: "POST",
+        url: "/cart/change.js",
+        dataType: "json",
+        data: {
+          id: parseFloat(variantId),
+          quantity: 0,
+        },
+      }).then((data) => {
+          document.dispatchEvent(new CustomEvent('ajaxProduct:added'));
+          document.dispatchEvent(new CustomEvent('cart:build'));
+      });
+  }
+
+  function updatedgCartUpsell() {
+    console.log('test');
+    const loader = document.querySelector('.overlay');
+    loader.style.display = 'block';
+
+  fetch("".concat(theme.routes.home, "?").concat("timestamp=").concat(Date.now()), {
+        credentials: 'same-origin',
+        method: 'GET'
+      }).then(response => response.text())
+    .then((data) =>{
+        // console.log(data);
+           const new_html1 = new DOMParser().parseFromString(data,'text/html').querySelector('.cart-shipping__wrapper').innerHTML;            
+           $('.cart-shipping__wrapper').html(new_html1);   
+        } 
+     );
+
+    fetch("".concat(theme.routes.cartPage, "?").concat("timestamp=").concat(Date.now()), {
+        credentials: 'same-origin',
+        method: 'GET'
+      }).then(function (content) { 
+          content.text().then(function (html) {
+            var tempElement = document.createElement('div');
+            tempElement.innerHTML = html;
+            document.querySelector(".dgCartUpSellWrapper").innerHTML = tempElement.querySelector('.dgCartUpSellWrapper').innerHTML;
+            
+            
+          });
+    });
+    
+    // progress bar code 
+
+     fetch('/cart.js')
+      .then(response => response.json())
+      .then(cart => {
+        {% assign GiftBoxAmount = settings.cart_threshold_amount %}
+        {% assign GiftBoxAmountRaw = settings.cart_threshold_amount | times:100 %}
+        {% assign SecondTierMinRaw = settings.min_cart_threshold_amount | times:100 %}
+        {% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times:100 %}
+        {% assign ThirdTierAmountRaw = settings.cart_threshold_amount_third | times:100 %}
+        calculateProgress(cart.total_price, {{GiftBoxAmountRaw}});
+        //remove free gift
+        let items = cart.items;
+        if(cart.total_price < {{GiftBoxAmountRaw}} ){
+          Cookies.set('FirstTier', 'false');
+          Cookies.set('SecondTier', 'false');
+          Cookies.set('ThirdTier', 'false');
+        //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift_grey.svg?v=1680028788";
+       //   document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift_grey.svg?v=1680028788";
+       //   document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift_grey.svg?v=1680028788";
+        }
+        else if(cart.total_price < {{SecondTierMinRaw}}){
+          {% if settings.show_gift_box %} 
+          Cookies.set('FirstTier', 'true');
+          Cookies.set('SecondTier', 'false');
+          Cookies.set('ThirdTier', 'false');
+        //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
+        //  document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
+        //  document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
+          {% endif %}
+        }
+        else if(cart.total_price < {{SecondTierMaxRaw}}){
+          {% if settings.second_show_gift_box %}
+          Cookies.set('FirstTier', 'false');
+          Cookies.set('SecondTier', 'true');
+          Cookies.set('ThirdTier', 'false');
+        //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
+        //  document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
+       //   document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
+          {% endif %}
+        }
+        else if(cart.total_price > {{SecondTierMaxRaw}} && cart.total_price < {{ThirdTierAmountRaw}}){
+          {% if settings.second_show_gift_box and settings.third_show_gift_box %}
+          Cookies.set('FirstTier', 'false');
+          Cookies.set('SecondTier', 'false');
+          Cookies.set('ThirdTier', 'false');
+        //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
+        //  document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
+       //   document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
+          {% endif %}
+        }  
+        else if(cart.total_price > {{ThirdTierAmountRaw}}){
+          {% if settings.third_show_gift_box %}
+          Cookies.set('FirstTier', 'false');
+          Cookies.set('SecondTier', 'false');
+          Cookies.set('ThirdTier', 'true');
+        //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
+       //   document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
+       //   document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
+          {% endif %}
+        }
+        setTimeout(function(){
+        if(Cookies.get('FirstTier') == 'false' && Cookies.get('SecondTier') == 'false' && Cookies.get('ThirdTier') == 'false') {
+          for(var i = 0; i < items.length; i++){
+            if (items[i].product_id == first_gift_product){
+              remove_auto_gift(first_gift_product_var);
+            }
+            if (items[i].product_id == second_gift_product){
+              remove_auto_gift(second_gift_product_var);
+            }
+            if (items[i].product_id == secondtier_first_gift_product){
+              remove_auto_gift(secondtier_first_gift_product_var);
+            }
+            if (items[i].product_id == secondtier_second_gift_product){
+              remove_auto_gift(secondtier_second_gift_product_var);
+            }
+            if (items[i].product_id == thirdtier_first_gift_product){
+              remove_auto_gift(thirdtier_first_gift_product_var);
+            }
+            if (items[i].product_id == thirdtier_second_gift_product){
+              remove_auto_gift(thirdtier_second_gift_product_var);
+            }
+          }
+        }
+        else if(Cookies.get('FirstTier') == 'true' && Cookies.get('SecondTier') == 'false' && Cookies.get('ThirdTier') == 'false') {
+          for(var i = 0; i < items.length; i++){
+            if (items[i].product_id == secondtier_first_gift_product){
+              remove_auto_gift(secondtier_first_gift_product_var);
+            }
+            if (items[i].product_id == secondtier_second_gift_product){
+              remove_auto_gift(secondtier_second_gift_product_var);
+            }
+            if (items[i].product_id == thirdtier_first_gift_product){
+              remove_auto_gift(thirdtier_first_gift_product_var);
+            }
+            if (items[i].product_id == thirdtier_second_gift_product){
+              remove_auto_gift(thirdtier_second_gift_product_var);
+            }
+          }
+        }
+        else if(Cookies.get('FirstTier') == 'false' && Cookies.get('SecondTier') == 'true' && Cookies.get('ThirdTier') == 'false') {
+          for(var i = 0; i < items.length; i++){
+            if (items[i].product_id == first_gift_product){
+              remove_auto_gift(first_gift_product_var);
+            }
+            if (items[i].product_id == second_gift_product){
+              remove_auto_gift(second_gift_product_var);
+            }
+            if (items[i].product_id == thirdtier_first_gift_product){
+              remove_auto_gift(thirdtier_first_gift_product_var);
+            }
+            if (items[i].product_id == thirdtier_second_gift_product){
+              remove_auto_gift(thirdtier_second_gift_product_var);
+            }
+          }
+        }
+        else if(Cookies.get('FirstTier') == 'false' && Cookies.get('SecondTier') == 'false' && Cookies.get('ThirdTier') == 'true') {
+          for(var i = 0; i < items.length; i++){
+            if (items[i].product_id == first_gift_product){
+              remove_auto_gift(first_gift_product_var);
+            }
+            if (items[i].product_id == second_gift_product){
+              remove_auto_gift(second_gift_product_var);
+            }
+            if (items[i].product_id == secondtier_first_gift_product){
+              remove_auto_gift(secondtier_first_gift_product_var);
+            }
+            if (items[i].product_id == secondtier_second_gift_product){
+              remove_auto_gift(secondtier_second_gift_product_var);
+            }
+          }
+        }
+        }, 1000);  
+        /*if(cart.total_price < {{GiftBoxAmountRaw}} || cart.total_price > {{SecondTierMinRaw}} || cart.total_price > {{ThirdTierAmountRaw}}){
+          for(var i = 0; i < items.length; i++){
+            if (items[i].product_id == first_gift_product){
+              remove_auto_gift(first_gift_product_var);
+            }
+            if (items[i].product_id == second_gift_product){
+              remove_auto_gift(second_gift_product_var);
+            }
+          }
+        }
+        else if(cart.total_price < {{SecondTierMinRaw}} || cart.total_price > {{ThirdTierAmountRaw}}){
+          for(var i = 0; i < items.length; i++){
+            if (items[i].product_id == secondtier_first_gift_product){
+              remove_auto_gift(secondtier_first_gift_product_var);
+            }
+            if (items[i].product_id == secondtier_second_gift_product){
+              remove_auto_gift(secondtier_second_gift_product_var);
+            }
+          }
+        }
+        else if(cart.total_price < {{ThirdTierAmountRaw}}){
+          for(var i = 0; i < items.length; i++){
+            if (items[i].product_id == thirdtier_first_gift_product){
+              remove_auto_gift(thirdtier_first_gift_product_var);
+            }
+            if (items[i].product_id == thirdtier_second_gift_product){
+              remove_auto_gift(thirdtier_second_gift_product_var);
+            }
+          }
+        }*/
+      });
+    
+  }
+  document.addEventListener('cart:updated', function(evt) {
+    var cart_obj = evt.detail.cart.items;
+    updatedgCartUpsell();
+  });
+
+  document.addEventListener('ajaxProduct:added', function(evt) {
+    updatedgCartUpsell();
+  });
+ 
+</script>  
+
+<!--   navidium script start -->
+{% include 'navidium-widget-v4' %}
+  <!--   navidium script end -->
+  
+{% if request.path contains '/pages/contact-us' or request.path contains '/collections/custom-rings' %}  
+  <script src="{{ 'storeifyapps-formbuilder-script.js' | asset_url }}" defer></script>
+{% endif %}  
+
+<!--Gorgias Chat Widget Start-->
+<script id="gorgias-chat-widget-install-v3" 
+    src="https://config.gorgias.chat/bundle-loader/01GYCBSGX4TDCG259Q5NG92X9W?source=shopify1click">
+</script>
+<script id="gorgias-chat-shopify-install">!function(_){_.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",_.SHOPIFY_CUSTOMER_ID="{{customer.id}}",_.SHOPIFY_CUSTOMER_EMAIL="{{customer.email}}"}(window||{});
+</script>
+<!--Gorgias Chat Widget End-->
+
+<script>  
+var observer = new MutationObserver(function(mutations) {
+    if (document.querySelector('#gorgias-chat-container iframe#chat-button')) {
+        
+        observer.disconnect(); 
+        const iframe = document.querySelector('#gorgias-chat-container iframe#chat-button');
+        if(screen.width < 850){
+          iframe.classList.add("custom_iframe_chat_btn");
+        }  
+        iframe.addEventListener('load', async function() {
+
+         while(1) {
+           var elmnt = iframe.contentWindow.document.querySelector('button#gorgias-chat-messenger-button');
+           if(elmnt) {
+             if(screen.width < 850){
+               elmnt.style.width = "35px";
+               elmnt.style.height = "35px"
+               var _div = iframe.contentWindow.document.querySelector('button#gorgias-chat-messenger-button div:nth-child(2)');
+               if(_div){
+                 console.log("screen width: " + screen.width);
+                 _div.style.width = "20px";
+                 _div.style.height = "20px"               
+               }
+             }
+             break;
+           }
+           await new Promise(function(resolve) {setTimeout(resolve, 100)});
+         }
+
+      });
+                
+    }
+});
+
+// Start observing
+observer.observe(document.body, { //document.body is node target to observe
+    childList: true, //This is a must have for the observer with subtree
+    subtree: true //Set to true if changes must also be observed in descendants.
+});  
+  
+</script>    
+</body>
+</html>
+
+{% comment %}{% endcomment %}

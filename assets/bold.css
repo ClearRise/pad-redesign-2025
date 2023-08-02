@@ -1,0 +1,61 @@
+.bold_options .bold_option_set .bold_option_element select {
+    background-color: #000;
+    padding: 12px;
+    border-width: 2px;
+    outline-style: none;
+  border-color: #fff9;
+}
+
+.bold_option_title, .bold_option_value_price {
+    font-weight: 600;
+  font-size: 14px;
+}
+
+
+.bold_options .bold_option_set .bold_tooltip {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+
+.bold_option_element input, .bold_option_element select, .bold_option_element textarea {
+    width: 100%;
+    align: left;
+}
+
+
+.bold_option_dropdown .bold_option_element {
+    margin-left: 0;
+}
+
+.bold_option_total>div {
+    color: #ad0000;
+}
+
+@media only screen and (max-width: 700px) {
+
+  .bold-modal__slider .flickity-viewport {
+    position: static !important;
+    height: auto !important;
+  }
+  
+  .bold-modal__slider .flickity-slider {
+    position: static !important;
+    height: 100vh !important;
+  }
+  
+  .flickity-slider .bold-grid__column--half,
+  .flickity-slider .bold-grid__column--third,
+  .flickity-slider .bold-grid__column--quarter {
+    width: 100% !important;
+  }
+
+  .bold-grid__column {
+    position: static !important;
+  }
+
+  .flickity-prev-next-button, .flickity-page-dots {
+    display: none !important;
+  }
+}
+

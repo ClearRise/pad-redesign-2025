@@ -1,0 +1,24 @@
+
+{%- comment -%}
+SC-INCLUDES.LIQUID
+
+---------------------------  WARNING  ---------------------------
+THIS IS A GENERATED ASSET OF INCLUDES FOR INSTALLED SHOP CIRCLE APPLICATIONS SO NOT MODIFY
+---------------------------  WARNING  ---------------------------
+{%- endcomment -%}
+
+<script>
+    window.BOLD.common.cacheParams.options = 1691008564;
+</script>
+{% if false %}
+  {{ 'bold-options.css' | asset_url | stylesheet_tag }}
+{% else %}  
+  <link rel="preload" href="{{ 'bold-options.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ 'bold-options.css' | asset_url }}"></noscript>
+{% endif %}  
+
+{% if false %}
+  {{ 'https://options.shopapps.site/js/options.js' | script_tag }}
+{% else %}    
+  <script src="https://options.shopapps.site/js/options.js" defer></script>
+{% endif %}

@@ -1,0 +1,404 @@
+<style>
+  .upsell-heading {
+    letter-spacing: .8px !important;
+  }
+    .gift_box {
+/*         border-radius: 3px;
+        border: 1px solid rgb(196, 196, 196); */
+        background: #f3f3f3;
+    } 
+
+  .item_added_to_cart button {
+     pointer-events: none;
+    }
+
+    .gift_box_title{
+      padding-top: 10px;
+      color: black;
+      /* border-bottom: 1px solid rgb(196, 196, 196); */
+      margin: 0;
+      font-size: 18px;
+      font-weight: 800;
+    }
+  
+  .gift_box_title_empty{
+      padding-top: 10px;
+      color: black;
+      margin: 0;
+      font-size: 18px;
+      font-weight: 400;
+     letter-spacing: 0.3px;
+      display: none;
+    }
+  .gift-products .upsell-product {
+      background: white;
+      margin: 0;
+      width: 100% !important;
+  }
+  .upsell-product-heading {
+    margin-top: 5px;
+    border-top: 1px solid #e9e9e9;
+    padding-top: 10px;
+    margin-bottom: 2px;
+  }
+  
+    .dgCartUpsell {
+        text-align: center;
+/*         margin: 25px auto; */
+        max-width: 1170px;
+      margin-bottom: 0px;
+    }
+    .dgCartUpsellCont {
+        margin: 0 auto;
+    }
+    .dgCartUpsellInner {
+        display: inline-flex;
+        margin: 0 auto;
+        border: 1px solid #f0f0f0;
+    }
+    .dgCartUpsellForm {
+        max-width: 300px;
+        padding: 10px 15px;
+        margin: 10px;
+    }
+    .dgCartUpsellForm * {
+        display: block;
+        clear: both;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .dgCartUpsell .dci-title {
+        font-size: 16px;
+        line-height: 21px;
+        min-height: 45px;
+    }
+    .dgCartUpsellQty {
+        display: none !important;
+    }
+    .dgCartUpsell input[type=number] {
+        float: none;
+        display: block;
+    }
+    .dgCartUpsell .btn-primary,
+    .dgCartUpsell .btn-primary:hover {}
+    .overlay {
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          background: #222222d9;
+      }
+      
+      .overlay__inner {
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+      }
+      
+      .overlay__content {
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+      }
+      
+      .spinner {
+          width: 75px;
+          height: 75px;
+          display: inline-block;
+          border-width: 2px;
+          border-color: rgba(255, 255, 255, 0.05);
+          border-top-color: #fff;
+          animation: spin 1s infinite linear;
+          border-radius: 100%;
+          border-style: solid;
+      }
+      
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+
+  @media  only screen and (max-width: 600px){
+    .upsell-collection .upsell-product .upsell-product-image img {
+    width: 100%;
+    max-width: 80px !important;
+}
+  }
+   .product-2 {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    height: 0 !important;
+  } 
+</style>
+{% assign upsellCollection = "upsells" %}
+{% assign upsellLimit = "3" -%}
+{% assign upsellTitle =  settings.upsell_box_title  %}
+{% assign upsellAtc = "Add to cart" %}
+
+<div class="dgCartUpsell dgCartUpSellWrapper appear-animation appear-delay-3" id="cart_gift_wrap">
+    <div class="overlay" style="display:none;">
+      <div class="overlay__inner">
+          <div class="overlay__content"><span class="spinner"></span></div>
+      </div>
+    </div>
+
+    {% assign FirstTierAmountRaw = settings.cart_threshold_amount | times:100 %}
+    {% assign SecondTierMinRaw = 100000000000 %}
+    {% assign SecondTierMaxRaw = 100000000000 %}
+    {% assign ThirdTierAmountRaw = settings.cart_threshold_amount_third | times:100 %}
+
+  
+
+    {% if settings.second_show_gift_box %}
+       {% assign SecondTierMinRaw = settings.min_cart_threshold_amount | times:100 %}
+    {% endif %}
+
+    {% if settings.third_show_gift_box %}
+       {% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times:100 %}
+    {% endif %}
+
+   
+  {% if settings.show_gift_box and cart.total_price >= FirstTierAmountRaw and cart.total_price < SecondTierMinRaw %}
+      <!-- gift box -->
+      {% assign GiftBoxAmount = settings.cart_threshold_amount %}
+      {% assign GiftBoxAmountRaw = settings.cart_threshold_amount | times:100 %}
+      {% assign GiftBoxAmountMoney = GiftBoxAmountRaw | abs | money %}
+      {% assign already_added =  'Change Gift' %}
+      {% assign first_product_found = true %}
+      {% assign second_product_found = true %}
+      {% if settings.product-handle-1 %}
+        {% assign first_gift_product = settings.product-handle-1 %}
+        {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
+        {% for item in cart.items %}
+          {% if item.id == first_gift_product_id %}
+              {% assign first_product_found = false %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% if settings.product-handle-2 %}
+        {% assign second_gift_product = settings.product-handle-2 %}
+        {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
+        {% for item in cart.items %}
+          {% if item.id == second_gift_product_id %}
+              {% assign second_product_found = false %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+    {% if cart.total_price < GiftBoxAmountRaw %}
+     
+<!--       <h4 class="" style="border-top: 1px solid;padding-top: 10px;margin-bottom: 0px;height: 14px; color: #000;font-size: 17px; letter-spacing: 0.1px;">{{ settings.spend_progress }}</h4> -->
+      <p class="gift_box_title_empty">{{ settings.empty_cart_text1 }}</p>
+      <p class="gift_box_title_empty">{{ settings.empty_cart_text2 }}</p>
+      <p class="gift_box_title_empty">{{ settings.empty_cart_text3 }}</p>
+    {% endif %}
+    
+      {% if cart.total_price >= GiftBoxAmountRaw %}
+  
+      <div class="gift_box  ffffffffffff">
+        {% if first_product_found == false or second_product_found == false %}
+          <h5 class="upsell-heading gift_box_title">Gifts will be added at checkout screen</h5>
+        {% else %}
+          <h5 class="upsell-heading gift_box_title">{{ settings.gift_box_title }}</h5>
+        {% endif %}
+        
+        <div class="upsell-collection dgCartUpsellCont gift-products pad_10">
+          {% if settings.product-handle-1 %}
+            {% assign first_gift_product = settings.product-handle-1 %}
+            {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
+            {% assign gift_product_found = true %}
+            {% for item in cart.items %}
+                {% if item.id == first_gift_product_id %}
+                    {% assign gift_product_found = false %}
+                {% endif %}
+            {% endfor %}
+            <div product-id="{{ first_gift_product_id }}" class="upsell-product-inner gift-product upsell_product-{{ first_gift_product_id }} {% if second_product_found == false %}hide {% else %}show {% endif %}">
+              <div class="upsell-product dgCartUpsellInner  border_line mb_10">
+                <div class="upsell-product-image">
+                  <img class="dci-image" src="{{ first_gift_product | img_url: '100x100' }}" alt="{{ first_gift_product.title | escape }}">
+                  
+                </div>
+                <div class="upsell-product-info">
+                    <div class="product-title-link">
+                        <strong class="dci-title">{{ first_gift_product.title }}</strong>
+                    </div>
+           {% comment %}
+                    <p class="description">
+                        {{ first_gift_product.description | truncate: 100, ". . . " }}
+                    </p>
+           {% endcomment %}
+               <div class="cart__item-sub">
+                 <div class="upsell-product-price aaaaaaaaa">
+                      {% if first_gift_product.price == 0 %}
+                        FREE
+                      {% else %}
+                        {{ first_gift_product.price | money }}
+                      {% endif %}
+                  </div>
+                    <button {% if first_product_found == false %}data-remove_var="{{ first_gift_product_id }}"{% endif %} data-product-id="{{ first_gift_product_id }}" class="{% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">{% if first_product_found == false %}{{ already_added }}{% else %}{{ upsellAtc }}{% endif %}</button>
+               </div>    
+           </div>
+              </div>
+            </div>
+          {% endif %}
+  
+          {% if settings.product-handle-2 %}
+            {% assign second_gift_product = settings.product-handle-2 %}
+            {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
+            {% assign gift_product_found = true %}
+            {% for item in cart.items %}
+                {% if item.id == second_gift_product_id %}
+                    {% assign gift_product_found = false %}
+                {% endif %}
+            {% endfor %}
+            
+            <div product-id="{{ second_gift_product_id }}" class="{% if settings.hide_gift_2 %}product-2 {% endif %} upsell-product-inner gift-product upsell_product-{{ second_gift_product_id }} {% if first_product_found == false %}hide {% else %}show {% endif %}">
+              <div class="upsell-product dgCartUpsellInner   border_line mb_10 ">
+                <div class="upsell-product-image">
+                  <img class="dci-image" src="{{ second_gift_product | img_url: '100x100' }}" alt="{{ second_gift_product.title | escape }}">
+                  
+                </div>
+                <div class="upsell-product-info">
+                    <div class="product-title-link">
+                        <strong class="dci-title">{{ second_gift_product.title }}</strong>
+                    </div>
+                 {% comment %}
+                    <p class="description">
+                        {{ second_gift_product.description | truncate: 100, ". . . " }}
+                    </p>
+                 {% endcomment %} 
+                  <div class="cart__item-sub">
+                    <div class="upsell-product-price bbbbbbbbb">
+                      {% if second_gift_product.price == 0 %}
+                        FREE
+                      {% else %}
+                        {{ second_gift_product.price | money }}
+                      {% endif %}
+                  </div>
+                    <button {% if second_product_found == false %}data-remove_var="{{ second_gift_product_id }}"{% endif %} data-product-id="{{ second_gift_product_id }}" class="{% if second_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">{% if second_product_found == false %}{{ already_added }}{% else %}{{ upsellAtc }}{% endif %}</button>
+                  </div>     
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+    {% endif %}
+
+   {% if settings.second_show_gift_box and cart.total_price >= SecondTierMinRaw and cart.total_price < SecondTierMaxRaw  %}
+      {% render 'secondtiergift' %}
+    {% endif %}
+    {% if settings.third_show_gift_box and cart.total_price >= ThirdTierAmountRaw %}
+      {% render 'thirdtiergift' %}
+    {% endif %}
+
+{% comment %}
+  UPSELL PRODUCTS
+{% endcomment %}
+{% assign col_products = '' %}
+{% for collection in collections %}
+  {% if collection.handle == upsellCollection %}
+    {% for product in collection.products limit:upsellLimit %}
+      {% assign variant_product_id = product.selected_or_first_available_variant.id %}
+      {% assign col_products =  col_products | append: variant_product_id | append: ',' %} 
+    {% endfor %}
+  {% endif %}
+{% endfor %} 
+  
+{% assign upsell_product_found = true %}
+{% assign cartitemsids = cart.items | map: 'id' %}
+{% assign col_products_array = col_products | split: ',' %}
+{% for item in cart.items %}
+    {% for col_product in col_products_array %}
+      {% assign col_products_int = col_product | times: 1 %}
+      {% assign col_products_comma = col_product | append: ',' %}
+      {% if col_products_int == item.id %}
+        {% assign col_products = col_products | replace: col_products_comma, '' %}
+      {% endif %}
+    {% endfor %}
+{% endfor %}
+{% if settings.show_fbt %}
+   {% if cart.total_price < FirstTierAmountRaw %}
+ <div class="upsell_box"> 
+    {% unless col_products == '' %}
+      <h4 class="upsell-heading upsell-product-heading" style="color:black;">{{ upsellTitle }}</h4>
+    {% endunless %}
+    <div class="upsell-collection dgCartUpsellCont">
+        {% for collection in collections %}
+            {% if collection.handle == upsellCollection %}
+                {% for product in collection.products limit:upsellLimit %}
+                    {% assign product_id = product.selected_or_first_available_variant.id %}
+                    {% assign product_found = true %}
+                    {% for item in cart.items %}
+                        {% if item.id == product_id %}
+                            {% assign product_found = false %}
+                        {% endif %}
+                    {% endfor %}
+                    <div product-id="{{ product_id }}" class="upsell-product-inner upsell_product-{{ product_id }} show {% if product_found %}  {% else %} hide {% endif %}">
+                        <div class="upsell-product dgCartUpsellInner">
+                            <div class="upsell-product-image">
+                                <img class="dci-image" src="{{ product | img_url: '100x100' }}" alt="{{ product.title | escape }}">
+                              {% comment %}
+                                    <div class="upsell-product-price">
+                                        {{ product.price | money }}
+                                    </div>
+                              {% endcomment %}
+                                </div>
+                                <div class="upsell-product-info">
+                                    <div class="product-title-link">
+                                        <strong class="dci-title">{{ product.title }}</strong>
+                                    </div>
+                                  {% comment %}
+                                    <div class="description">
+                                        {{ product.description | truncate: 150, "..." }}
+                                    </div>
+                                {% endcomment %}
+                                  <div  class="cart__item-sub">
+                                    <div class="upsell-product-price cccccccc">
+                                      
+                                        {{ product.price | money }}
+                                     {%- if product.compare_at_price > product.price -%}
+                                        <span id="PriceA11y" class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                                        <span class="product-single__price--wrapper" aria-hidden="false" style="margin-left: 10px;">
+                                          <span id="ComparePrice" class="product-single__price--compare-at product__price product__price--compare" style="font-size:14px;color:red">
+                                            {{ product.compare_at_price | money }}
+                                          </span>
+                                        </span>
+                                        <span id="ComparePriceA11y" class="visually-hidden" aria-hidden="false">{{ 'products.general.sale_price' | t }}</span>
+                                     {%- else -%}
+                                        <span id="PriceA11y" class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                                        <span class="product-single__price--wrapper hide" aria-hidden="true">
+                                          <span id="ComparePrice" class="product-single__price--compare-at"></span>
+                                        </span>
+                                        <span id="ComparePriceA11y" class="visually-hidden" aria-hidden="true">{{ 'products.general.sale_price' | t }}</span>
+                                    {%- endif -%}
+                                  </div>
+  {% if product.selected_or_first_available_variant.inventory_quantity < 1 %}
+          {% assign quick_buy_text = 'product.buttons.sold_out' | t %}
+          {% assign quick_buy_classes = quick_buy_classes | append: ' disabled' %}
+  {% endif %}                
+                  <div style="display:none;">{{ product.selected_or_first_available_variant.inventory_quantity }}</div>
+                                {% if product.selected_or_first_available_variant.inventory_quantity < 1 %}
+                                    <button data-product-id="{{ product_id }}" class="upsell_button_gtm upsell-add-to-cart disabled" disabled>SOLD OUT</button>
+                                {% else %}   
+                                    <button data-product-id="{{ product_id }}" class="upsell_button_gtm upsell-add-to-cart">{{ upsellAtc }}</button>
+                                {% endif %}
+                                  </div>   
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </div>
+      </div> 
+     {% endif %}
+      {% endif %}
+    </div>
