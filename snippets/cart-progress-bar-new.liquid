@@ -1,0 +1,458 @@
+<!-- Free shipping progress markup -->
+{% assign FirstTierAmountRaw = settings.cart_threshold_amount | times:100 %}
+{% assign SecondTierMinRaw = settings.min_cart_threshold_amount | times:100 %}
+{% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times:100 %}
+{% assign ThirdTierAmountRaw = settings.cart_threshold_amount_third | times:100 %}
+
+<div class="cart-shipping__wrapper">
+  <p class="cart-shipping__numOuter black_txt">Spend $150+ to unlock a free gift(s)!</p>
+  {% if settings.show_gift_box and cart.total_price < SecondTierMinRaw %}
+    <p class="cart_progress_text cart-shipping__success black_txt first_tier_progress">{{ settings.first_tier_progress }}</p>
+  
+  {% elsif settings.second_show_gift_box and cart.total_price >= SecondTierMinRaw and cart.total_price < ThirdTierAmountRaw %}
+    <p class="cart_progress_text cart-shipping__success black_txt second_tier_progress">{{ settings.second_tier_progress }}</p>
+  
+  {% elsif settings.third_show_gift_box and cart.total_price >= ThirdTierAmountRaw %}
+    <p class="cart_progress_text cart-shipping__success black_txt third_tier_progress">{{ settings.third_tier_progress }}</p>
+
+  {% endif %}
+<!--   <div class="cart-shippingThreshold__bar">
+    <span class="cart-shippingThreshold__progress"></span>
+  </div> -->
+
+
+<div class="progress-bar-wrapper">
+  <div class="progress-bar-body">
+    <div class="progress-bar-static-text" id="progress-bar-static-text-above">
+      <span></span>
+    </div>
+    <div class="progress-bar-checkpoints">
+      <div class="progress-bar-add-1" style="display: none; position: absolute; top: -30px;left: 0%; transform: translateY(-50%); z-index: 999;">
+        <button onclick="window.pg.addCheckpointToCart(1)" type="button" class="progress-bar-button-add">
+          <span> + </span>
+        </button>
+      </div>
+      <div class="checkpoint-image-wrapper" style="max-height: 42px; max-width: 32px; left: max(0%, 0px); transform: translateY(-50%); display: flex;--checkpoint-images-size: 30px">
+        <div style=" font-size: 12px; position: relative; width: 100%; padding-top: 100%;"> $0 </div>
+      </div>
+      <div class="checkpoint-title" style="top: max(2px, 2px)!important; left: max(0%, calc(var(--width) / 2)); --width:0px; transform: translateY(-50%);">
+        <img class="progress-bar-product-img start_img" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" width="30px" height="30px" alt="start point" > 
+        <span title="Free shipping"></span>
+      </div>
+      <div class="progress-bar-add-2" style="display: none; position: absolute; top: -30px;left: 50%; transform: translateY(-50%) translateX(-50%); z-index: 999;">
+        <button onclick="window.pg.addCheckpointToCart(2)" type="button" class="progress-bar-button-add">
+          <span> + </span>
+        </button>
+      </div>
+      <div class="checkpoint-image-wrapper" style="max-height: 42px;max-width: 42px;left: max(33%, calc(30px / 2));transform: translateY(-50%) translateX(-50%);display: flex;--checkpoint-images-size: 30px;">
+        <div style="font-size: 12px; position: relative; width: 100%; padding-top: 100%;">${{ settings.cart_threshold_amount }}
+        </div>
+      </div>
+      <div class="checkpoint-title" style="top: max(6px, 6px);left: max(33%, calc(var(--width) / 2));--width:0px;transform: translateY(-50%) translateX(-50%);">
+       {% if cart.total_price < GiftBoxAmountRaw %}
+         <img id="FirstTier" class="progress-bar-product-img" src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764" width="30px" height="30px" alt="free Gift" > 
+       {% else %}
+         <img id="FirstTier" class="progress-bar-product-img" src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718" width="30px" height="30px" alt="free Gift" > 
+       {% endif %}  
+        <span title="1 Free Gift">1 Free Gift</span>
+      </div>
+      <div class="checkpoint-image-wrapper" style="max-height: 42px;max-width: 42px;left: max(68%, calc(30px / 2));transform: translateY(-50%) translateX(-100%);display: flex;--checkpoint-images-size: 30px;">
+        <div style="font-size: 12px; position: relative;width: 100%;padding-top: 100%;"> ${{ settings.min_cart_threshold_amount }} </div>
+      </div>  
+      <div class="checkpoint-title" style="top: max(6px, 6px);left: max(69%, calc(var(--width) / 2)); --width:0px;transform: translateY(-50%) translateX(-100%);">
+       {% if cart.total_price < SecondTierMinRaw %}
+         <img id="SecondTier" class="progress-bar-product-img" src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764" width="30px" height="30px" alt="free Gift" > 
+       {% else %}
+         <img id="SecondTier" class="progress-bar-product-img" src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718" width="30px" height="30px" alt="free Gift" > 
+       {% endif %}  
+        <span title="2 Free Gift">2 Free Gifts </span>
+      </div>
+       <div class="checkpoint-image-wrapper" style="max-height: 42px;max-width: 50px;left: max(100%, calc(30px / 2));transform: translateY(-50%) translateX(-82%);display: flex;--checkpoint-images-size: 30px">
+        <div style="font-size: 12px; position: relative; width: 100%; padding-top: 100%;"> ${{ settings.cart_threshold_amount_third }} </div>
+      </div>
+      <div class="checkpoint-title" style="top: max(6px, 6px);left: max(100%, calc(var(--width) / 2)); --width: 100%;    width: 100%;transform: translateY(-50%) translateX(-73%);">
+       {% if cart.total_price < ThirdTierAmountRaw %}
+         <img id="ThirdTier" class="progress-bar-product-img" src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764" width="30px" height="30px" alt="free Gift" > 
+       {% else %}
+         <img id="ThirdTier" class="progress-bar-product-img" src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718" width="30px" height="30px" alt="free Gift" > 
+       {% endif %}  
+       <span title="Santa Gift">Special Gift</span>
+      </div>
+    </div>
+    <div class="progress-bar">
+     {% comment %}
+      <div class="progress-bar-marquee" style="display: flex;">
+        <span style="color: rgb(0, 0, 0); font-size: 15px;">
+        <span class="cart-shipping__numOuter black_txt">You are $<span class="cart-shipping__num"></span> away from free Gift!</span>
+  {% if settings.show_gift_box and cart.total_price < SecondTierMinRaw %}
+    <span class="cart_progress_text cart-shipping__success black_txt first_tier_progress">{{ settings.first_tier_progress }}</span>
+  
+  {% elsif settings.second_show_gift_box and cart.total_price >= SecondTierMinRaw and cart.total_price < ThirdTierAmountRaw %}
+    <p class="cart_progress_text cart-shipping__success black_txt second_tier_progress">{{ settings.second_tier_progress }}</p>
+  
+  {% elsif settings.third_show_gift_box and cart.total_price >= ThirdTierAmountRaw %}
+    <p class="cart_progress_text cart-shipping__success black_txt third_tier_progress">{{ settings.third_tier_progress }}</p>
+  {% endif %}
+  </span>
+      </div>
+      {% endcomment %}
+      <div class="progress-bar-static-text" id="progress-bar-static-text-inside">
+        <span></span>
+      </div>
+<!--       <div class="cart-shippingThreshold__bar">
+        <span class="cart-shippingThreshold__progress"></span>
+      </div> -->
+      <div class="progress-bar-progress cart-shippingThreshold__progress" style="background-color: rgb(151, 203, 231); background-size: auto 18px; width: 29.1667%;">
+        <span></span>
+      </div>
+      <div class="checkpoint-separator" style="
+                        width: 2px;
+                        left: 0%;
+                        transform: ;
+                        background-color: rgba(0, 0, 0, 1);
+                    ">
+        <span></span>
+      </div>
+      <div class="checkpoint-separator" style="
+                        width: 2px;
+                        left: 33%;
+                        transform: translateX(-50%);
+                        background-color: rgba(0, 0, 0, 1);
+                    ">
+        <span></span>
+      </div>
+      <div class="checkpoint-separator" style="
+                        width: 2px;
+                        left: 66%;
+                        transform: translateX(-50%);
+                        background-color: rgba(0, 0, 0, 1);
+                    ">
+        <span></span>
+      </div>
+      <div class="checkpoint-separator" style="
+                        width: 2px;
+                        left: 100%;
+                        transform: translateX(-100%);
+                        background-color: rgba(0, 0, 0, 1);
+                    ">
+        <span></span>
+      </div>
+    </div>
+    <div class="progress-bar-static-text" id="progress-bar-static-text-under">
+      <span></span>
+    </div>
+  </div>
+</div>
+
+  
+</div>
+
+
+
+<style>
+.progress-bar {
+    background-color: #e3e3e3;
+    background-size: auto 18px;
+    height: 2px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar-static-text {
+    text-align: center;
+    justify-content: space-around;
+    display: none;
+}
+
+#progress-bar-static-text-under {
+    margin-top: 25px;
+}
+
+#progress-bar-static-text-inside {
+    align-items: center;
+    width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+#progress-bar-static-text-inside span {
+    margin-top: -1px;
+    vertical-align: middle;
+    display: inline-flex;
+}
+
+#progress-bar-static-text-above {
+    margin-bottom: 55px;
+}
+
+.progress-bar-wrapper {
+    padding: 0 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.progress-bar-body {
+    padding-top: 35px;
+    padding-bottom: 30px;
+}
+
+.progress-bar-checkpoints {
+    position: relative;
+}
+
+.progress-bar-progress {
+    height: 100%;
+    background-color: red;
+    width: 0;
+    transition: 1s;
+}
+
+.progress-bar-product-img, .checkpoint-image-wrapper div > svg {
+/*    position: absolute;*/
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    object-fit: contain;
+    object-position: center;
+    max-width: 34px;
+/*     border: 1px solid #138f7e; */
+    padding: 0px;
+    border-radius: 50%;
+}
+.start_img{
+    width: 34px;
+    background-color: #138f7e;
+}
+.checkpoint-title {
+    position: absolute;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+    max-width: 70px;
+    line-height: 1.1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+   letter-spacing: initial;
+    z-index: 999;
+}
+
+.checkpoint-title a, .checkpoint-title span {
+    text-decoration: none;
+    color: initial;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    visibility: visible;
+    font-size: 10px;
+}
+
+.checkpoint-separator {
+    height: 100%;
+    position: absolute;
+    top:0;
+    display: none;
+}
+
+.checkpoint-image-wrapper {
+    align-items: flex-end;
+    position: absolute;
+    --checkpoint-images-size: 40px;
+/*     top: calc(0px - var(--checkpoint-images-size) / 2 - 10px); */
+    top: calc(0px - 40px);  
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    color: black;
+}
+
+.progress-bar-marquee {
+    align-items: center;
+    display: none;
+    width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.progress-bar-marquee span {
+    color:#212121;
+    margin-top: -1px;
+    vertical-align: middle;
+    display: inline-flex;
+    padding-left:100%;
+    -webkit-animation: marquee 20s infinite linear;
+    animation: marquee 20s infinite linear;
+}
+
+[class^=progress-bar-add] {
+    width: 50px;
+    height: 50px;
+}
+
+.progress-bar-button-add {
+    position: absolute;
+    top: 0;
+    right: 0;
+    aspect-ratio: 1;
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+    transition-property: transform;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar-button-add:hover {
+    transform: translate(50%, -50%) scale(1.1);
+}
+
+.progress-bar-button-add span {
+    display: block;
+    animation-name: rotate;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+}
+
+
+@-webkit-keyframes marquee {
+    0%{-webkit-transform: translate(0, 0);}
+    100%{-webkit-transform: translate(-100%, 0);}
+}
+@keyframes marquee{
+    0%{transform: translate(0, 0);}
+    100%{transform: translate(-100%, 0)}
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(3600deg);
+    }
+}
+
+
+       </style> 
+
+
+<style>
+/*  Style the progress bar  */
+.cart-shipping__wrapper {
+    padding: 0 30px !important;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+ .cart-shipping__wrapper p {
+    margin-bottom: 5px;
+  }
+.cart-shippingThreshold__bar {
+  position: relative;
+  /*  Progress bar background color  */
+  background-color: #d8d8d8;
+  height: 1rem;
+}
+
+.cart-shippingThreshold__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  /*  Progress bar fill color  */
+  background-color: #138f7e; 
+}
+
+@media screen and (max-width: 767px) {
+  .checkpoint-title{
+      max-width: 60px;
+      top: max(7px, 7px)!important;
+  }
+  .progress-bar-product-img, .checkpoint-image-wrapper div > svg{
+    max-width: 28px;
+  }
+  .start_img {
+    width: 27px;
+  }
+}  
+</style>
+
+<script>
+// Calculate the progress number, and the width of the progress bar.
+function calculateProgress(currentVal, targetVal) {
+  var progressBar = document.querySelectorAll('.cart-shippingThreshold__progress');
+  var progressNum = document.querySelectorAll('.cart-shipping__num');
+  var progressOuter = document.querySelectorAll('.cart-shipping__numOuter');
+  var successMsg = document.querySelectorAll('.cart-shipping__success');
+  // calculate how far progress is from the total as a percentage
+  var result = Math.round(33 * currentVal / targetVal);
+
+  progressBar.forEach(function(el){
+    el.setAttribute('style', "width: ".concat(result, "%"));
+  })
+   // Update the progess text. If threshold is met, show success message
+  var newProgressNum = (targetVal - currentVal) / 100;
+  if(newProgressNum <= 0){
+    successMsg.forEach(function(el){
+      el.style.display = 'block';
+    });
+    progressOuter.forEach(function(el){
+      el.style.display = 'none';
+    });
+    progressNum.forEach(function(el){
+      el.textContent = newProgressNum;
+    });
+  } else {
+    successMsg.forEach(function(el){
+      el.style.display = 'none';
+    });
+    progressOuter.forEach(function(el){
+      el.style.display = 'block';
+    });
+    progressNum.forEach(function(el){
+      el.textContent = newProgressNum;
+    });
+  }
+};
+
+// In your theme's main JS file, find each ajax call where your store adds to, deletes from, and updates the cart. Put this in the success function of each. 
+// NOTE: If you make this ajax request outside of the functions that update the cart, the calculator won't sync with the current cart state without refreshing the page. You need to specify that you want to read the current cart data AFTER the new items are added/removed.
+ fetch('/cart.js')
+.then(response => response.json())
+.then(data => {
+  {% assign GiftBoxAmount = settings.cart_threshold_amount %}
+  {% assign GiftBoxAmountRaw = settings.cart_threshold_amount | times:100 %}
+  calculateProgress(data.total_price, {{GiftBoxAmountRaw}});
+});
+  
+</script>
+

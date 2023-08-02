@@ -1,0 +1,34 @@
+{% comment %}
+  JS-load cart markup without bloat of a full layout.
+
+  This is used in both the cart drawer and cart page.
+  When a quantity is changed, this file is scraped and data-products
+    is fully replaced to account for possible cart discounts changing
+
+  The cart-wide discount div also replaces what is originally in the cart
+     as it can change anytime a cart-item changes
+{% endcomment %}
+{% layout none %}
+
+<div class="cart__items pad_10 fix_area"
+  data-count="{{ cart.item_count }}"
+  data-cart-subtotal="{{ cart.total_price }}">
+  {% for item in cart.items %}
+    {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
+  {%- if item.properties._boldBuilderId  and item.properties._boldVariantIds == null -%}
+      <input type="hidden" name="updates[]" id="updates_{{- item.key -}}" class="bold_hidden_input cart__product-qty" value="{{- item.quantity -}}" min="0" data-id="{{- item.key -}}">
+      {%- continue -%}
+  {%- endif -%}
+{%- render 'cart-item', product: item -%}
+  {% endfor %}
+</div>
+<div class="cart__discounts cart__item-sub cart__item-row {% if cart.cart_level_discount_applications == blank %} hide{% endif %}">
+  <div>{{ 'cart.general.discounts' | t }}</div>
+  <div>
+    {% for cart_discount in cart.cart_level_discount_applications %}
+      <div class="cart__discount">
+        {{ cart_discount.title }} (-{{ cart_discount.total_allocated_amount | money }})
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,190 @@
+<style>
+  .home_img_with_txt {
+    background: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+/*     padding-bottom: 60px; */
+    padding-top: 60px;
+    
+  }
+  .img_item_wrap{
+  	max-width: 33.33%;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    float: left;
+    width: 33%;    
+  }
+  .sub_title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .img_item_wrap img{
+    width: 100%;
+/*      height: 300px;  */
+    object-fit: cover;
+  }
+  .sub_description{
+  	max-width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 125%;
+  }
+  @media only screen and (max-width: 767px){
+ 	.sub_title {
+        margin-bottom: 10px;
+        font-size: 120%;
+        min-height: 50px;
+    }
+   .img_item_wrap{
+/*   	max-width: 100%!important; */
+   }
+/*     .img_item_wrap img{
+      width: 105px;
+   	  height: 105px;
+      object-fit: cover;
+    } */
+    .sub_description{
+      max-width: 95%;
+      font-size: 100% !important;
+    }
+    .home_img_with_txt{
+    	display: block;
+    }
+    .sub_description {
+        margin-top: 15px;
+        margin-bottom: 35px;
+    }    
+  }
+  
+</style>  
+
+<section class="section section--{{ section.id }} home_img_with_txt" data-section-id="{{ section.id }}" data-section-type="home-img_with_txt">
+ <div class="page-width">
+  <div class="img_item_wrap">
+    <p class="sub_title">{{section.settings.sub_title1}}</p>
+    {%- assign img_url = section.settings.image_1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    <img class="lazyload"
+        data-src="{{ img_url }}"
+        data-widths="[105, 120, 150, 200, 360, 400, 450, 500, 550, 600, 750]"
+        data-aspectratio="{{ section.settings.image_1.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ section.settings.image_1.alt }}">
+    <noscript>
+      <img class="lazyloaded" src="{{ section.settings.image_1 | img_url: '450x' }}" alt="{{ section.settings.image_1.alt }}">
+    </noscript>
+<!--     <img src="{{ section.settings.image_1 | img_url: 'large' }}"> -->
+    <p class="sub_description">{{section.settings.text_1}}</p>
+  </div>
+  <div class="img_item_wrap">
+    <p class="sub_title">{{section.settings.sub_title2}}</p>
+    {%- assign img_url = section.settings.image_2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    <img class="lazyload"
+        data-src="{{ img_url }}"
+        data-widths="[105, 120, 150, 200, 360, 400, 450, 500, 550, 600, 750]"
+        data-aspectratio="{{ section.settings.image_2.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ section.settings.image_2.alt }}">
+    <noscript>
+      <img class="lazyloaded" src="{{ section.settings.image_2 | img_url: '450x' }}" alt="{{ section.settings.image_2.alt }}">
+    </noscript>
+    <p class="sub_description">{{section.settings.text_2}}</p>
+  </div>
+  <div class="img_item_wrap">
+    <p class="sub_title">{{section.settings.sub_title3}}</p>
+    {%- assign img_url = section.settings.image_3 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    <img class="lazyload"
+        data-src="{{ img_url }}"
+        data-widths="[105, 120, 150, 200, 360, 400, 450, 500, 550, 600, 750]"
+        data-aspectratio="{{ section.settings.image_3.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ section.settings.image_3.alt }}">
+    <noscript>
+      <img class="lazyloaded" src="{{ section.settings.image_3 | img_url: '450x' }}" alt="{{ section.settings.image_3.alt }}">
+    </noscript>
+    <p class="sub_description">{{section.settings.text_3}}</p>
+  </div>
+ </div>
+</section>
+
+
+
+{% schema %}
+{
+  "name": "Product Image with Text",
+  "settings": [
+    {
+       "type": "text",
+       "id": "sub_title1",
+       "default": "sub title 1",
+       "label": "Sub Title 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Product Image 1"
+    },
+    {
+       "type": "text",
+       "id": "text_1",
+       "default": "Product Text 1",
+       "label": "Product Text 1"
+    },
+    {
+       "type": "url",
+       "id": "url_1",
+       "label": "Product URL 1"
+    },
+    {
+       "type": "text",
+       "id": "sub_title2",
+       "default": "sub title 2",
+       "label": "Sub Title 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Product Image 2"
+    },
+    {
+       "type": "text",
+       "id": "text_2",
+       "default": "Product Text 2",
+       "label": "Product Text 2"
+    },
+    {
+       "type": "url",
+       "id": "url_2",
+       "label": "Product URL 2"
+    },
+    {
+       "type": "text",
+       "id": "sub_title3",
+       "default": "sub title 3",
+       "label": "Sub Title 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Product Image 3"
+    },
+    {
+       "type": "text",
+       "id": "text_3",
+       "default": "Product Text 3",
+       "label": "Product Text 3"
+    },
+    {
+       "type": "url",
+       "id": "url_3",
+       "label": "Product URL 3"
+    }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+{% endjavascript %}
