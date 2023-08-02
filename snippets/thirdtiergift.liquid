@@ -1,0 +1,111 @@
+<!-- 3rd tier gift box -->
+{% assign upsellAtc = "Add to cart" %}
+{% assign upsellTitle =  settings.gift_box_title_third  %}
+{% assign ThirdTierMin = settings.cart_threshold_amount_third %}
+{% assign ThirdTierAmountRaw = settings.cart_threshold_amount_third | times:100 %}
+
+{% assign already_added =  'Change Gift' %}
+{% assign first_product_found = true %}
+{% assign second_product_found = true %}
+{% if settings.third_product-handle-1 %}
+  {% assign first_gift_product = settings.third_product-handle-1 %}
+  {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
+  {% for item in cart.items %}
+    {% if item.id == first_gift_product_id %}
+        {% assign first_product_found = false %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% if settings.third_product-handle-2 %}
+  {% assign second_gift_product = settings.third_product-handle-2 %}
+  {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
+  {% for item in cart.items %}
+    {% if item.id == second_gift_product_id %}
+        {% assign second_product_found = false %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if cart.total_price < ThirdTierAmountRaw %}
+<h4 class="" style="border-top: 1px solid;padding-top: 10px;margin-bottom: 0px;height: 14px;">{{ settings.third_spend_progress }}</h4>
+{% endif %}
+
+{% if cart.total_price >= ThirdTierAmountRaw %}
+<div class="gift_box">
+  {% if first_product_found == false or second_product_found == false %}
+    <h5 class="upsell-heading gift_box_title">Gifts will be added at checkout screen</h5>
+  {% else %}
+    <h5 class="upsell-heading gift_box_title">{{ settings.gift_box_title_third }}</h5>
+  {% endif %}
+  
+  <div class="upsell-collection dgCartUpsellCont gift-products pad_10">
+    {% if settings.third_product-handle-1 %}
+      {% assign first_gift_product = settings.third_product-handle-1 %}
+      {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
+      {% assign gift_product_found = true %}
+      {% for item in cart.items %}
+          {% if item.id == first_gift_product_id %}
+              {% assign gift_product_found = false %}
+          {% endif %}
+      {% endfor %}
+      <div product-id="{{ first_gift_product_id }}" class="upsell-product-inner gift-product upsell_product-{{ first_gift_product_id }} {% if first_product_found == false %}item_added_to_cart {% else %}show {% endif %}">
+        <div class="upsell-product dgCartUpsellInner   border_line mb_10">
+          <div class="upsell-product-image">
+            <img class="dci-image" src="{{ first_gift_product | img_url: '100x100' }}" alt="{{ first_gift_product.title | escape }}">
+            
+          </div>
+          <div class="upsell-product-info">
+              <div class="product-title-link">
+                  <strong class="dci-title">{{ first_gift_product.title }}</strong>
+              </div>
+         <div class="cart__item-sub">
+           <div class="upsell-product-price aaaaaaaaa">
+                {% if first_gift_product.price == 0 %}
+                  FREE
+                {% else %}
+                  {{ first_gift_product.price | money }}
+                {% endif %}
+            </div>
+              <button data-product-id="{{ first_gift_product_id }}" class="upsell_button_gtm upsell-add-to-cart">{% if first_product_found == false %} Added to Cart! {% else %} {{ upsellAtc }} {% endif %}</button>
+         </div>    
+     </div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if settings.third_product-handle-2 %}
+      {% assign second_gift_product = settings.third_product-handle-2 %}
+      {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
+      {% assign gift_product_found = true %}
+      {% for item in cart.items %}
+          {% if item.id == second_gift_product_id %}
+              {% assign gift_product_found = false %}
+          {% endif %}
+      {% endfor %}
+      <div product-id="{{ second_gift_product_id }}" class="{% if settings.hide_gift_2 %}product-2 {% endif %} upsell-product-inner gift-product upsell_product-{{ second_gift_product_id }} {% if second_product_found == false %}item_added_to_cart {% else %}show {% endif %}">
+        <div class="upsell-product dgCartUpsellInner   border_line mb_10">
+          <div class="upsell-product-image">
+            <img class="dci-image" src="{{ second_gift_product | img_url: '100x100' }}" alt="{{ second_gift_product.title | escape }}">
+            
+          </div>
+          <div class="upsell-product-info">
+              <div class="product-title-link">
+                  <strong class="dci-title">{{ second_gift_product.title }}</strong>
+              </div>
+            <div class="cart__item-sub">
+              <div class="upsell-product-price bbbbbbbbb">
+                {% if second_gift_product.price == 0 %}
+                  FREE
+                {% else %}
+                  {{ second_gift_product.price | money }}
+                {% endif %}
+            </div>
+              <button data-product-id="{{ second_gift_product_id }}" class="upsell_button_gtm upsell-add-to-cart">{% if second_product_found == false %} Added to Cart! {% else %} {{ upsellAtc }} {% endif %}</button>
+            </div>     
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

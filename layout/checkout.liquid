@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <script>(function () { function asyncLoad() { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://s3.eu-west-1.amazonaws.com/production-klarna-il-shopify-osm/44241829bcc56116e10834fcdc3b3f3426feef24/patrick-adair-designs.myshopify.com-1677186485148.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (window.attachEvent) { window.attachEvent('onload', asyncLoad); } else { window.addEventListener('load', asyncLoad, false); } })(); </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MH67S6R');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+
+    <style>
+      .switch{
+        padding:15px 0;
+      }
+      #terms_err_msg{
+        display: none;
+      }
+      #terms_err_msg p{
+        padding-left: 20px;
+        color:#be2626;
+      }      
+      .terms_wrap{
+          margin-bottom: 2px!important;
+      }      
+    </style>
+{% comment %}  {% include 'analyzify-gtm-checkout' %}  {% endcomment %}
+</head>
+  <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH67S6R"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+        
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+           {% if true %} 
+              {% assign free_gift = false %}
+              {% for line_item in checkout.line_items %}
+                {% if line_item.product.type contains 'free_gift' %}
+                  {% assign free_gift = true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+            <div class="promoCodeInviteHeader" style="padding:10px;color: #fff !important;background-color: black !important;text-align: center !important;margin-bottom: 20px;font-size: 18px; margin-top: 5px; line-height: 1.2; {% unless free_gift %} display: none; {% endunless %}">
+              <p>Order in the next  <b style="color: #138f7e;">10 minutes </b><br> to lock in your <b style="color: #138f7e;">FREE GIFT</b></p>
+              <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 1000vh;
+                       
+                        margin: 0;
+                        padding: 0;
+                    }
+                    #countdown {
+                        font-size: 42px;
+                        color: #138f7e;
+                    }
+                </style>
+                            <div id="countdown">00:00</div>
+                <script>
+                    let countdownDisplay = document.getElementById("countdown");
+                    let timeLeft = 10 * 60; // 10 minutes in seconds
+            
+                    function updateCountdown() {
+                        let minutes = Math.floor(timeLeft / 60);
+                        let seconds = timeLeft % 60;
+            
+                        countdownDisplay.textContent = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+            
+                        if (timeLeft === 0) {
+                           timeLeft = 10 * 60;
+                            //clearInterval(countdownInterval);
+                        } else {
+                            timeLeft--;
+                        }
+                    }
+            
+                    updateCountdown(); // Update the countdown immediately
+                    let countdownInterval = setInterval(updateCountdown, 1000); // Update the countdown every second
+                </script>  
+              </div>     
+            {% endif %}
+            {{ content_for_order_summary }}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+    <script>
+ const shopCurrency = '{{ shop.money_format }}';
+ Shopify.shop= 'patrick-adair-designs.myshopify.com'; 
+
+   if (document.querySelector("body > aside > button.order-summary-toggle")) {
+    document.querySelector("body > aside > button.order-summary-toggle").click();
+  }
+
+setTimeout(() => {
+  document.getElementById("continue_button").addEventListener("click", function(event){ 
+    if(!document.querySelector("#checkout_terms_cond").checked){
+      event.preventDefault();
+      document.querySelector("#terms_err_msg").style.display="block";
+    }
+  });
+}, "1000");  
+
+
+var observer = new MutationObserver(function(mutations) {
+    if (document.querySelector('.section__content .fieldset [data-sms-marketing]')) {
+          var newElement = document.createElement("div");
+          newElement.id = "myElement";
+          newElement.innerHTML = `<div class="field field--show-floating-label"><div class="terms_wrap checkbox-wrapper"><div class="checkbox__input"><input name="checkout[terms_cond]" type="hidden" value="0" autocomplete="off"><input class="input-checkbox" type="checkbox" value="1" name="checkout[terms_cond]" id="checkout_terms_cond"></div><label class="checkbox__label" for="checkout_terms_cond"><span style="color:red;">*&nbsp</span>I have read and agreed to Patrick Adair Design's <a href="https://patrickadairdesigns.com/pages/terms-and-conditions" target="_blank">Terms and Conditions Policy</a></label></div><div id="terms_err_msg"><p>*&nbsp You must agree to the terms and conditions before continuing</p></div></div>`;
+          var parentElement = document.querySelector(".section--shipping-address .section__content .fieldset");         
+          parentElement.appendChild(newElement);
+          observer.disconnect();                 
+    }
+});
+
+// Start observing
+observer.observe(document.body, { //document.body is node target to observe
+    childList: true, //This is a must have for the observer with subtree
+    subtree: true //Set to true if changes must also be observed in descendants.
+});  
+      
+</script>
+    {% include 'navidium-widget-v6' %}
+  </body>
+</html>
