@@ -167,7 +167,9 @@
                       data-src="{{ img_url }}"
                       data-aspectratio="{{ block.settings.image.aspect_ratio }}"
                       data-sizes="auto"
-                      alt="{{ block.settings.image.alt | escape }}">
+                      width="{{block.settings.image.width}}"
+                      height="{{block.settings.image.height}}"
+                      alt="{{ block.settings.image.alt | escape }}" loading="lazy">
                     <noscript>
                       <img
                         class="image-fit promo-grid__bg-image promo-grid__bg-image--{{ block.id }} lazyloaded"
