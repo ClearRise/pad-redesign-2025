@@ -62,6 +62,8 @@
 
   .go_how_does_it_work_item .go_text .go_img img {
     width: 45%;
+    display: initial;
+    height: auto;
   }
   
   
@@ -80,10 +82,34 @@
                 <div class="go_desc">{{block.settings.text}}</div>
                 <div class="go_img">
                   {% if block.settings.image_1 %}
-                    <img src="{{ block.settings.image_1 | img_url: 'large' }}">
+{% comment %}                     <img src="{{ block.settings.image_1 | img_url: 'large' }}"> {% endcomment %}
+                    {%- assign img_url = block.settings.image_1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                     <img class="h_auto lazyload"
+                        data-src="{{ img_url }}"
+                        data-widths="[105, 120, 150, 200, 300, 350, 400, 450, 500, 600, 750]"
+                        data-aspectratio="{{ block.settings.image_1.aspect_ratio }}"
+                        data-sizes="auto"
+                        width="{{ block.settings.image_1.width }}"
+                        height="{{ block.settings.image_1.height }}"
+                        alt="{{ block.settings.image_1.alt }}" loading="lazy">
+                    <noscript>
+                      <img class="lazyloaded" src="{{ block.settings.image_1 | img_url: '300x' }}" alt="{{ block.settings.image_1.alt }}">
+                    </noscript>
                   {% endif %}
                   {% if block.settings.image_2 %}
-                    <img src="{{ block.settings.image_2 | img_url: 'large' }}">
+{% comment %}                     <img src="{{ block.settings.image_2 | img_url: 'large' }}"> {% endcomment %}
+                    {%- assign img_url = block.settings.image_2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                    <img class="h_auto lazyload"
+                        data-src="{{ img_url }}"
+                        data-widths="[105, 120, 150, 200, 300, 350, 400, 450, 500, 600, 750]"
+                        data-aspectratio="{{ block.settings.image_2.aspect_ratio }}"
+                        data-sizes="auto"
+                        width="{{ block.settings.image_2.width }}"
+                        height="{{ block.settings.image_2.height }}"
+                        alt="{{ block.settings.image_2.alt }}" loading="lazy">
+                    <noscript>
+                      <img class="lazyloaded" src="{{ block.settings.image_2 | img_url: '300x' }}" alt="{{ block.settings.image_2.alt }}">
+                    </noscript>  
                   {% endif %}
                 </div>
             </div>

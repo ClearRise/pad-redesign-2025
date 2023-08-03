@@ -22,12 +22,14 @@
           {%- endif -%}
           {%- if block.settings.image != blank -%}
             {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-            <img class="logo-bar__image lazyload"
+            <img class="h_auto logo-bar__image lazyload"
                 data-src="{{ img_url }}"
                 data-widths="[180, 360, 540, 720]"
                 data-aspectratio="{{ block.settings.image.aspect_ratio }}"
                 data-sizes="auto"
-                alt="{{ block.settings.image.alt }}">
+                width="{{block.settings.image.width}}"
+                height="{{block.settings.image.height}}"
+                alt="{{ block.settings.image.alt }}" loading="lazy">
           {%- else -%}
             {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}

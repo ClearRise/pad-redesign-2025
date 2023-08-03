@@ -11,9 +11,7 @@ window.TriplePixelData={TripleName:"patrick-adair-designs.myshopify.com",ver:"1.
 </script>
 
 {% include 'replo-head' %}
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" async ></script>  -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" async></script>   -->
-  
+
 <script src="https://www.googleoptimize.com/optimize.js?id=OPT-NFGRBH7" async></script>
 {% include 'booster-seo' %}
     <!-- Added By Navidium -->
@@ -22,18 +20,6 @@ window.TriplePixelData={TripleName:"patrick-adair-designs.myshopify.com",ver:"1.
       {%- endif -%}
         <style>[data-handle*='navidium'],[data-product-handle*='navidium']{display: none !important;}</style>
     <!-- End of Navidium -->
-
-{% if true %}  
-    
-{% else %}
-    <script type="text/javascript">
-       document.addEventListener('AsyncLoaded', function(){   
-          /* >> TriplePixel :: start*/
-          ~function(W,H,A,L,E,_){function O(T,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET","//triplewhale-pixel.web.app/triplepx.txt?"+~(Date.now()/9e7),!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?setTimeout(function(){return eval(H.responseText)},50):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(T-1))}}if(L=window,!L[H+"sn"]){L[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),W.includes("⇈")&&A.setItem(H+"Stg",1+(0|A.getItem(H+"Stg")||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=L,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),E._headless=!0,W},E.ch=W,O(5)))}}("","TriplePixel",localStorage);
-          /* << TriplePixel :: end*/
-       });
-    </script>           
- {% endif %} 
   
 
   <meta charset="utf-8">
@@ -48,7 +34,6 @@ window.TriplePixelData={TripleName:"patrick-adair-designs.myshopify.com",ver:"1.
   <link rel="dns-prefetch" href="https://maps.googleapis.com">
   <link rel="dns-prefetch" href="https://maps.gstatic.com">
 
-<!-- <script src="https://www.googleoptimize.com/optimize.js?id=OPT-NFGRBH7"></script> -->
 
   {%- if settings.favicon != blank -%}
     <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
@@ -64,7 +49,13 @@ window.TriplePixelData={TripleName:"patrick-adair-designs.myshopify.com",ver:"1.
 
   {%- render 'font-face' -%}
   {%- render 'css-variables' -%}  
-  {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
+  
+{% if false %}
+  {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}   
+{% else %}  
+  <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ 'theme.css' | asset_url }}"></noscript>
+{% endif %}
 
 
   <script>
@@ -156,11 +147,21 @@ console.log(buyItNow);
 
 
 {% if request.path contains  '/products' or request.path contains '/collections/luxury-rings' or request.path contains '/collections/the-celestial-series-space-themed-jewelry-from-patrick-adair-designs' or request.path contains '/cart' %} 
-  {{ 'bold.css' | asset_url | stylesheet_tag }}
+  {% if false %}
+    {{ 'bold.css' | asset_url | stylesheet_tag }}
+  {% else %}  
+    <link rel="preload" href="{{ 'bold.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ 'bold.css' | asset_url }}"></noscript>
+  {% endif %}  
 {% endif %}  
 
 {% if request.path contains '/pages/contact-us' or request.path contains '/collections/custom-rings' %}    
-  {{ 'storeifyapps-formbuilder-styles.css' | asset_url | stylesheet_tag }}
+  {% if false %}
+    {{ 'storeifyapps-formbuilder-styles.css' | asset_url | stylesheet_tag }}
+  {% else %}  
+    <link rel="preload" href="{{ 'storeifyapps-formbuilder-styles.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ 'storeifyapps-formbuilder-styles.css' | asset_url }}"></noscript>
+  {% endif %}
 {% endif %}
 
 {% if template contains 'collection' %}{{ 'https://cdn.shopify.com/s/files/1/0382/4185/files/ajaxinate.js?937' | script_tag }}{% endif %}  
@@ -454,7 +455,6 @@ console.log(buyItNow);
   }
 
   function updatedgCartUpsell() {
-    console.log('test');
     const loader = document.querySelector('.overlay');
     loader.style.display = 'block';
 

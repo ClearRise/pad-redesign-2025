@@ -141,7 +141,7 @@
 {% assign upsellTitle =  settings.upsell_box_title  %}
 {% assign upsellAtc = "Add to cart" %}
 
-<div class="dgCartUpsell dgCartUpSellWrapper appear-animation appear-delay-3" id="cart_gift_wrap">
+<div class="dgCartUpsell dgCartUpSellWrapper  appear-delay-3" id="cart_gift_wrap">
     <div class="overlay" style="display:none;">
       <div class="overlay__inner">
           <div class="overlay__content"><span class="spinner"></span></div>
@@ -344,7 +344,11 @@
                     <div product-id="{{ product_id }}" class="upsell-product-inner upsell_product-{{ product_id }} show {% if product_found %}  {% else %} hide {% endif %}">
                         <div class="upsell-product dgCartUpsellInner">
                             <div class="upsell-product-image">
-                                <img class="dci-image" src="{{ product | img_url: '100x100' }}" alt="{{ product.title | escape }}">
+                                <!-- <img class="dci-image" src="{{ product | img_url: '100x100' }}" alt="{{ product.title | escape }}"> -->
+                                <img class="dci-image lazyload" src="{{ product | img_url: '100x100' }}"  
+                                 data-src="{{ product | img_url: '100x100' }}"  data-aspectratio="1" 
+                                data-sizes="auto" width="100" height="100" 
+                                alt="{{ product.title | escape }}" loading="lazy">
                               {% comment %}
                                     <div class="upsell-product-price">
                                         {{ product.price | money }}

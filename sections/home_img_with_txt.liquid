@@ -68,17 +68,53 @@
  <div class="page-width">
   <div class="img_item_wrap">
     <p class="sub_title">{{section.settings.sub_title1}}</p>
-    <img src="{{ section.settings.image_1 | img_url: 'large' }}">
+<!--     <img src="{{ section.settings.image_1 | img_url: 'large' }}"> -->
+        {%- assign img_url = section.settings.image_1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+         <img class="h_auto lazyload"
+            data-src="{{ img_url }}"
+            data-widths="[105, 120, 150, 200, 300, 350, 400, 450, 500, 600, 750]"
+            data-aspectratio="{{ section.settings.image_1.aspect_ratio }}"
+            data-sizes="auto"
+            width="{{ section.settings.image_1.width }}"
+            height="{{ section.settings.image_1.height }}"
+            alt="{{ section.settings.image_1.alt }}" loading="lazy">
+        <noscript>
+          <img class="lazyloaded" src="{{ section.settings.image_1 | img_url: '300x' }}" alt="{{ section.settings.image_1.alt }}">
+        </noscript>    
     <p class="sub_description">{{section.settings.text_1}}</p>
   </div>
   <div class="img_item_wrap">
     <p class="sub_title">{{section.settings.sub_title2}}</p>
-    <img src="{{ section.settings.image_2 | img_url: 'large' }}">
+<!--     <img src="{{ section.settings.image_2 | img_url: 'large' }}"> -->
+            {%- assign img_url = section.settings.image_2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+         <img class="h_auto lazyload"
+            data-src="{{ img_url }}"
+            data-widths="[105, 120, 150, 200, 300, 350, 400, 450, 500, 600, 750]"
+            data-aspectratio="{{ section.settings.image_2.aspect_ratio }}"
+            data-sizes="auto"
+            width="{{ section.settings.image_1.width }}"
+            height="{{ section.settings.image_1.height }}"
+            alt="{{ section.settings.image_2.alt }}" loading="lazy">
+        <noscript>
+          <img class="lazyloaded" src="{{ section.settings.image_2 | img_url: '300x' }}" alt="{{ section.settings.image_2.alt }}">
+        </noscript>    
     <p class="sub_description">{{section.settings.text_2}}</p>
   </div>
   <div class="img_item_wrap">
     <p class="sub_title">{{section.settings.sub_title3}}</p>
-    <img src="{{ section.settings.image_3 | img_url: 'large' }}">
+<!--     <img src="{{ section.settings.image_3 | img_url: 'large' }}"> -->
+            {%- assign img_url = section.settings.image_3 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+         <img class="h_auto lazyload"
+            data-src="{{ img_url }}"
+            data-widths="[105, 120, 150, 200, 300, 350, 400, 450, 500, 600, 750]"
+            data-aspectratio="{{ section.settings.image_3.aspect_ratio }}"
+            data-sizes="auto"
+            width="{{ section.settings.image_1.width }}"
+            height="{{ section.settings.image_1.height }}"
+            alt="{{ section.settings.image_3.alt }}" loading="lazy">
+        <noscript>
+          <img class="lazyloaded" src="{{ section.settings.image_3 | img_url: '300x' }}" alt="{{ section.settings.image_3.alt }}">
+        </noscript>        
     <p class="sub_description">{{section.settings.text_3}}</p>
   </div>
  </div>  
