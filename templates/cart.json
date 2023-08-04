@@ -14,7 +14,6 @@
     },
     "featured-collection": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
         "title": "Gifts to Consider",
         "home_featured_products": "you-might-also-like",
