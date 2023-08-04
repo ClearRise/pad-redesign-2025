@@ -103,7 +103,7 @@
     "third_spend_progress": "",
     "third_product-handle-1": "the-patriot-carbon-fiber-glow-ring-2",
     "third_product-handle-2": "malachite-trustone-and-gold-pendant-2",
-    "cart_additional_buttons": false,
+    "cart_additional_buttons": true,
     "cart_notes_enable": false,
     "cart_terms_conditions_enable": false,
     "favicon": "shopify:\/\/shop_images\/Black_and_White_Version.png",
