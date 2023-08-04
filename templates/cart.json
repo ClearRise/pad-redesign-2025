@@ -1,1 +1,33 @@
-{"sections":{"main":{"type":"main-cart","settings":{}},"recently-viewed":{"type":"recently-viewed","disabled":true,"settings":{"recent_count":5}},"featured-collection":{"type":"featured-collection","settings":{"title":"Gifts to Consider","home_featured_products":"you-might-also-like","per_row":4,"rows":1,"mobile_scrollable":true,"view_all":false,"divider":false}}},"order":["main","recently-viewed","featured-collection"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Gifts to Consider",
+        "home_featured_products": "you-might-also-like",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recently-viewed",
+    "featured-collection"
+  ]
+}
