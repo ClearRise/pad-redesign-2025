@@ -1,23 +1,23 @@
 {
   "current": {
-    "color_body_bg": "#ffffff",
-    "color_body_text": "#111111",
-    "color_price": "#111111",
-    "color_savings_text": "#cf7208",
-    "color_borders": "#111111",
+    "color_body_bg": "#000000",
+    "color_body_text": "#ffffff",
+    "color_price": "#ffffff",
+    "color_savings_text": "#a45700",
+    "color_borders": "#ffffff",
     "color_button": "#138f7e",
     "color_button_text": "#ffffff",
-    "color_sale_tag": "#990000",
+    "color_sale_tag": "#b30000",
     "color_sale_tag_text": "#ffffff",
     "color_cart_dot": "#b30000",
     "color_small_image_bg": "#ffffff",
     "color_large_image_bg": "#ffffff",
-    "color_header": "#d8d8d8",
-    "color_header_text": "#111111",
+    "color_header": "#000000",
+    "color_header_text": "#ffffff",
     "color_announcement": "#138f7e",
     "color_announcement_text": "#ffffff",
-    "color_footer": "#d8d8d8",
-    "color_footer_text": "#111111",
+    "color_footer": "#000000",
+    "color_footer_text": "#ffffff",
     "color_drawer_background": "#262626",
     "color_drawer_text": "#f3f3f3",
     "color_drawer_border": "#dddddd",
@@ -30,7 +30,7 @@
     "type_header_font_family": "sans-serif",
     "type_header_spacing": "100",
     "type_header_base_size": 45,
-    "type_header_line_height": 1.5,
+    "type_header_line_height": 1,
     "type_header_capitalize": false,
     "type_headers_align_text": true,
     "type_base_font_family": "sans-serif",
@@ -130,9 +130,10 @@
           "1524770014057": {
             "type": "logo",
             "settings": {
-              "logo": "shopify:\/\/shop_images\/115807_VectorLogoPad_082517_1c2d4277-9c34-4d89-84ce-b712a5990a93.png",
-              "desktop_logo_width": 100,
-              "mobile_logo_width": 60
+              "logo": "shopify:\/\/shop_images\/Patrick_Adair_32ef305a-e336-4428-9cfd-9a36e0b30ffb.png",
+              "logo-inverted": "shopify:\/\/shop_images\/White.png",
+              "desktop_logo_width": 250,
+              "mobile_logo_width": 160
             }
           }
         },
