@@ -5,7 +5,6 @@
       "blocks": {
         "slideshow-0": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "",
             "title": "",
@@ -22,30 +21,10 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
-        },
-        "fb50339e-8956-4128-afc0-09841994c29b": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "title": "",
-            "title_size": 80,
-            "subheading": "",
-            "link": "shopify:\/\/collections\/flash-sale-rings",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/fs_hero.png",
-            "image_mobile": "shopify:\/\/shop_images\/flash_slae_mobile.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
         }
       },
       "block_order": [
-        "slideshow-0",
-        "fb50339e-8956-4128-afc0-09841994c29b"
+        "slideshow-0"
       ],
       "settings": {
         "use_img_banner": true,
@@ -120,7 +99,7 @@
           "settings": {
             "subheading": "Up to 30% off",
             "heading": "FLASH SALE",
-            "textarea": "ENDS THIS WEEKEND",
+            "textarea": "LIMITED TIME ONLY",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/flash-sale-rings",
             "cta_text2": "",
