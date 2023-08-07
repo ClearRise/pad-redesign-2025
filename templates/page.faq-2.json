@@ -12,7 +12,7 @@
         "template--14576336601170__6403731b-871d-448b-b44f-86ebc0092e9c-heading-1": {
           "type": "heading",
           "settings": {
-            "title": "Shipping Information"
+            "title": "Patrick Adair Designs - FAQ"
           }
         }
       },
@@ -32,95 +32,69 @@
           "type": "rich-text",
           "settings": {
             "title": "",
-            "text": "<p>All Patrick Adair Designs products are handmade, made to order. Our production timelines vary for each ring based on many things including but not limited to - material availability, labor availability, and order volume. Furthermore, <strong>our production timelines are merely estimates and are not guarantees<\/strong>. We will do our absolute best to get your order shipped within our current estimated timelines but by placing an order, you are acknowledging production delays may occur due to the things listed above. We will do our best to notify you if any delays do occur. If you have any questions regarding the status of your order or are needing your order sooner than the current estimated timeline (i.e. for a wedding), email us at support@patrickadairdesigns.com<\/p>",
-            "align_text": "left"
-          }
-        },
-        "e6ad0d02-2a01-41e5-9002-3fa3c4796bb2": {
-          "type": "rich-text",
-          "settings": {
-            "title": "Current Lead Times",
-            "text": "<p>Below are our current lead times for all of our rings, grouped by ring type\/material. Some rings are on a different lead time and will be listed separately. If you are unsure of what section your ring belongs to, refer to the \"Delivery\" section of the specific product listing.<\/p>",
+            "text": "<p>Below is a list of Frequently Asked Questions (FAQs) regarding Patrick Adair Designs. If you have a question that isn't answered here, or would like futher information on our brand or a specific product,<strong> <\/strong><a href=\"https:\/\/patrickadairdesigns.com\/pages\/contact-us\" target=\"_self\"><strong>contact us<\/strong><\/a>.<\/p>",
             "align_text": "left"
           }
         },
         "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-1": {
           "type": "question",
           "settings": {
-            "title": "Glowstone Rings",
-            "text": "<p>Glowstone rings are currently taking approx. <strong>2-4 weeks to ship<\/strong>.<\/p><p>The below rings are shipping in approx.<strong> 1-2 weeks<\/strong>.<\/p><ul><li>Star Dust™ Ring<\/li><li>Star Dust™ Ring in Black Ceramic<\/li><li>Star Dust™ Ring in White Ceramic<\/li><li>Star Dust™ Stackable Ring<\/li><li>Star Dust™ Ring on Tungsten<\/li><li>Matching Star Dust™ Wedding Ring Set in Tungsten<\/li><li>Radiant Star Dust™ Ring<\/li><li>Custom Titanium Glowstone Ring<\/li><li>Custom Tungsten Glowstone Ring<\/li><li>Custom Ceramic Glowstone Ring<\/li><li>Lavender Opal Glowstone Ring<\/li><li>Lavender Opal Glowstone Stackable Ring<\/li><li>Radiant Lavender Opal Glowstone Ring<\/li><li>Matching Lavender Opal Glowstone Wedding Ring Set in Black Ceramic<\/li><li>Black Fire Opal Glowstone Ring<\/li><li>Radiant Black Fire Opal Glowstone Ring<\/li><li>Matching Black Fire Opal Glowstone Wedding Ring Set<\/li><li>Winter's Howl Glowstone Ring<\/li><li>Matching Winter's Howl Glowstone Wedding Ring Set in Tungsten<\/li><li>The Ember Glowstone Ring<\/li><li>Ember Glowstone Stackable Ring<\/li><li>Matching Ember Glowstone Wedding Ring Set<\/li><li>Sunken Artifact Glowstone Ring<\/li><li>Matching Sunken Artifact Glowstone Wedding Ring Set in Tungsten<\/li><li>Area 51 Glowstone Ring<\/li><li>Matching Area 51 Glowstone Wedding Ring Set<\/li><li>Glowstone Cremation Ring with Ashes<\/li><li>Kaiju Glowstone Ring<\/li><li>Black Emerald Opal Glowstone Ring<\/li><li>Dragon Scale Opal Glowstone Ring<\/li><\/ul>"
+            "title": "When will my ring ship?",
+            "text": "<p>Every Patrick Adair Designs ring is handmade, made to order. Each order is crafted by a highly-trained artisan with thought and integrity in an extremely time consuming process. Our lead times vary and are estimates. Production depends on a variety of factors including but not limited to - material availability, labor availability, and order volume. For a detailed breakdown on how quickly we are shipping our products, check out our <a href=\"https:\/\/patrickadairdesigns.com\/pages\/shipping-information\" target=\"_self\"><strong>Shipping Information<\/strong><\/a> page.<\/p>"
           }
         },
         "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2": {
           "type": "question",
           "settings": {
-            "title": "Meteorite Rings",
-            "text": "<p>Any ring containing solid meteorite is currently taking approx. <strong>2-4 weeks to ship<\/strong>.<\/p>"
+            "title": "Where do you get your meteorite?",
+            "text": "<p>All of our meteorite is currently sourced from meteorite dealers that we find either through eBay or that we know through personal connections. We use authentic and genuine Muonionalusta Meteorite for all of our meteorite products.<\/p>"
           }
         },
         "9edaa1a8-e6fc-401d-be5e-7b9412d62dc0": {
           "type": "question",
           "settings": {
-            "title": "Gold Rings",
-            "text": "<p>Any ring containing solid gold is currently taking approx <strong>4-6 weeks to ship<\/strong>.<\/p>"
+            "title": "How does the glow work on your glowstone rings?",
+            "text": "<p>The glow comes from strontium aluminate, which is a natural crystal powder that glows after being charged with a UV light. It is nontoxic and glows brighter and longer than copper activated zinc sulfide, which is one of its most popular competitors. Check out our blog post on <a href=\"https:\/\/patrickadairdesigns.com\/blogs\/blog\/how-do-i-get-my-glow-ring-to-glow\" target=\"_self\"><strong>How Our Glow Rings Glow<\/strong><\/a> for more information on how to charge and how long they glow for.<\/p>"
           }
         },
         "8bd5b863-fcb1-43ae-bde3-7333f20f183b": {
           "type": "question",
           "settings": {
-            "title": "Carbon Fiber Rings",
-            "text": "<p>Carbon Fiber Rings are currently taking approx. <strong>1-2 weeks to ship<\/strong>.<\/p><p>If the Carbon Fiber Ring also contains other materials (e.g. a liner, accents, inlay) then it will ship in approx <strong>2-4 weeks to ship.<\/strong><\/p>"
+            "title": "What is Damascus Steel?",
+            "text": "<p>Damascus steel is created by combining strips of either iron and steel or two different kinds of steel. They are then heated and forged to create a new and stronger steel. The material has a similar silver color; however, if it is placed in an acid bath, the acid will eat at the different combinations of steel at different rates to form a woodgrain pattern that makes <a href=\"https:\/\/patrickadairdesigns.com\/collections\/damascus-steel-rings\" target=\"_self\"><strong>Damascus Steel Rings<\/strong><\/a> incredibly unique.<\/p>"
           }
         },
         "f04d8342-18cb-44cd-8612-a1fdf4afc09b": {
           "type": "question",
           "settings": {
-            "title": "Opal Rings",
-            "text": "<p>All solid opal rings are currently taking approx. <strong>4 weeks to ship.<\/strong><\/p>"
+            "title": "What if I order the wrong size?",
+            "text": "<p>We offer one free size exchange for all non-custom rings. Don't hesitate to contact us if you order the wrong size. Email us at support@patrickadairdesigns.com and we will be happy to figure out the best solution for your case.<\/p>"
           }
         },
         "56c40efd-9201-4a79-86d6-f829d8584f99": {
           "type": "question",
           "settings": {
-            "title": "Misc. Rings",
-            "text": "<ul><li>Mokume Gane Rings: 4 weeks<\/li><li>Timascus Rings: 4 weeks<\/li><li>Zircuti Rings: 4 weeks<\/li><li>Reptilian Damascus Steel Ring: 4-6 weeks<\/li><li>Spirograph Damascus Steel Ring: 4-6 weeks<\/li><\/ul>"
+            "title": "Do you ship internationally?",
+            "text": "<p>Yes, we ship worldwide through DHL and UPS. Shpiping rates are based off of destination and any orders with value exceeding $700 USD ship for free through DHL Express Worldwide.<\/p>"
           }
         },
         "e9488b45-be9e-41c3-afb4-b05cfa7c0070": {
           "type": "question",
           "settings": {
-            "title": "Pendants",
-            "text": "<p>All pendants are handmade in batches with differing timelines based on material (excluding Glowstone pendants, which are made to order). Since they are made in batches, most pendants are in stock and ready to ship in 2-3 business days.<\/p>"
-          }
-        },
-        "24f90d41-4f8a-413c-ad3a-f4197b96f670": {
-          "type": "question",
-          "settings": {
-            "title": "Glowstone Earrings",
-            "text": "<p>All Glowstone Earrings are currently estimated to take 6 weeks to ship<\/p>"
-          }
-        },
-        "caf44b84-4f9b-4c8d-9e94-aa908c58814c": {
-          "type": "rich-text",
-          "settings": {
-            "title": "Shipping Information and Rates",
-            "text": "<p><span style=\"text-decoration:underline\"><strong>United States Orders<\/strong><\/span><\/p><p>USPS First Class (3-5 business days once shipped): <strong>FREE<\/strong><\/p><p><span style=\"text-decoration:underline\"><strong>International Orders<\/strong><\/span><\/p><p>All international orders are shipped through DHL Worldwide Express or UPS Worldwide Expedited. Rates are location based. You can estimate the cost of shipping by entering your mailing address in the checkout phase. <\/p><p>All orders with order value <strong>greater than $700 ship for FREE <\/strong>with DHL Worldwide Express.<\/p><p><\/p>",
-            "align_text": "left"
+            "title": "Do I need to pay a VAT on international orders?",
+            "text": "<p>Additional charges for customs clearance are borne by the recipient and are not included in the price of shipping. We have no control over these charges and cannot predict what they may be. To find out whether you are likely to end up paying a Value Added Tax (VAT), please check your local customs and import policy.<\/p>"
           }
         }
       },
       "block_order": [
         "2c920b74-e75b-4448-b0e0-f2ddb7e698bf",
-        "e6ad0d02-2a01-41e5-9002-3fa3c4796bb2",
         "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-1",
         "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2",
         "9edaa1a8-e6fc-401d-be5e-7b9412d62dc0",
         "8bd5b863-fcb1-43ae-bde3-7333f20f183b",
         "f04d8342-18cb-44cd-8612-a1fdf4afc09b",
         "56c40efd-9201-4a79-86d6-f829d8584f99",
-        "e9488b45-be9e-41c3-afb4-b05cfa7c0070",
-        "24f90d41-4f8a-413c-ad3a-f4197b96f670",
-        "caf44b84-4f9b-4c8d-9e94-aa908c58814c"
+        "e9488b45-be9e-41c3-afb4-b05cfa7c0070"
       ],
       "settings": {
         "title": ""
