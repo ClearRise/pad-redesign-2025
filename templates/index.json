@@ -56,41 +56,6 @@
         "space_around": true
       }
     },
-    "rich-text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": "Most jewelry looks the same"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>Express yourself with something truly unique.<\/p><p>Since 2015, we’ve been handcrafting artisan rings using the most uncommon luxury materials.<\/p><p>Whether it’s hand-forged Damascus steel from Nevada, fossilized mammoth tooth from Siberia, or meteorite pulled from the Arctic Circle you’ll find a story in every ring<\/p>"
-          }
-        },
-        "6608bf6f-85b6-4b98-80ce-d2b158c1626a": {
-          "type": "button",
-          "settings": {
-            "link": "https:\/\/patrickadairdesigns.com\/collections\/all-products?filter.p.m.custom.product_type=Ring",
-            "link_text": "Discover Yours"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "6608bf6f-85b6-4b98-80ce-d2b158c1626a"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
-      }
-    },
     "1646694183f97c4822": {
       "type": "promo-grid",
       "blocks": {
@@ -173,6 +138,41 @@
         "space_below": false
       }
     },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Most jewelry looks the same"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Express yourself with something truly unique.<\/p><p>Since 2015, we’ve been handcrafting artisan rings using the most uncommon luxury materials.<\/p><p>Whether it’s hand-forged Damascus steel from Nevada, fossilized mammoth tooth from Siberia, or meteorite pulled from the Arctic Circle you’ll find a story in every ring<\/p>"
+          }
+        },
+        "6608bf6f-85b6-4b98-80ce-d2b158c1626a": {
+          "type": "button",
+          "settings": {
+            "link": "https:\/\/patrickadairdesigns.com\/collections\/all-products?filter.p.m.custom.product_type=Ring",
+            "link_text": "Discover Yours"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "6608bf6f-85b6-4b98-80ce-d2b158c1626a"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "164755740363a75745": {
       "type": "home_img_with_txt",
       "settings": {
@@ -204,6 +204,7 @@
     },
     "1646695572d73bfd5a": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "164669557254083090-0": {
           "type": "heading",
@@ -223,6 +224,7 @@
     },
     "1647557717e099d38f": {
       "type": "index_how_to_work",
+      "disabled": true,
       "blocks": {
         "df9da119-3ecd-4da4-8621-695a8ea6d85f": {
           "type": "text",
@@ -498,8 +500,8 @@
   "order": [
     "slideshow",
     "16466920156dc1f06b",
-    "rich-text",
     "1646694183f97c4822",
+    "rich-text",
     "164755740363a75745",
     "featured-collection",
     "1646695572d73bfd5a",
