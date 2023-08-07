@@ -2,38 +2,134 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
+      }
+    },
+    "6403731b-871d-448b-b44f-86ebc0092e9c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14576336601170__6403731b-871d-448b-b44f-86ebc0092e9c-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Shipping Information"
+          }
+        }
+      },
+      "block_order": [
+        "template--14576336601170__6403731b-871d-448b-b44f-86ebc0092e9c-heading-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
       }
     },
     "312781d0-96bd-4627-abf9-f7ed33aed4b5": {
       "type": "faq",
       "blocks": {
+        "2c920b74-e75b-4448-b0e0-f2ddb7e698bf": {
+          "type": "rich-text",
+          "settings": {
+            "title": "",
+            "text": "<p>All Patrick Adair Designs products are handmade, made to order. Our production timelines vary for each ring based on many things including but not limited to - material availability, labor availability, and order volume. Furthermore, <strong>our production timelines are merely estimates and are not guarantees<\/strong>. We will do our absolute best to get your order shipped within our current estimated timelines but by placing an order, you are acknowledging production delays may occur due to the things listed above. We will do our best to notify you if any delays do occur. If you have any questions regarding the status of your order or are needing your order sooner than the current estimated timeline (i.e. for a wedding), email us at support@patrickadairdesigns.com<\/p>",
+            "align_text": "left"
+          }
+        },
+        "e6ad0d02-2a01-41e5-9002-3fa3c4796bb2": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Current Lead Times",
+            "text": "<p>Below are our current lead times for all of our rings, grouped by ring type\/material. Some rings are on a different lead time and will be listed separately. If you are unsure of what section your ring belongs to, refer to the \"Delivery\" section of the specific product listing.<\/p>",
+            "align_text": "left"
+          }
+        },
         "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-1": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+            "title": "Glowstone Rings",
+            "text": "<p>Glowstone rings are currently taking approx. <strong>2-4 weeks to ship<\/strong>.<\/p><p>The below rings are shipping in approx.<strong> 1-2 weeks<\/strong>.<\/p><ul><li>Star Dust™ Ring<\/li><li>Star Dust™ Ring in Black Ceramic<\/li><li>Star Dust™ Ring in White Ceramic<\/li><li>Star Dust™ Stackable Ring<\/li><li>Star Dust™ Ring on Tungsten<\/li><li>Matching Star Dust™ Wedding Ring Set in Tungsten<\/li><li>Radiant Star Dust™ Ring<\/li><li>Custom Titanium Glowstone Ring<\/li><li>Custom Tungsten Glowstone Ring<\/li><li>Custom Ceramic Glowstone Ring<\/li><li>Lavender Opal Glowstone Ring<\/li><li>Lavender Opal Glowstone Stackable Ring<\/li><li>Radiant Lavender Opal Glowstone Ring<\/li><li>Matching Lavender Opal Glowstone Wedding Ring Set in Black Ceramic<\/li><li>Black Fire Opal Glowstone Ring<\/li><li>Radiant Black Fire Opal Glowstone Ring<\/li><li>Matching Black Fire Opal Glowstone Wedding Ring Set<\/li><li>Winter's Howl Glowstone Ring<\/li><li>Matching Winter's Howl Glowstone Wedding Ring Set in Tungsten<\/li><li>The Ember Glowstone Ring<\/li><li>Ember Glowstone Stackable Ring<\/li><li>Matching Ember Glowstone Wedding Ring Set<\/li><li>Sunken Artifact Glowstone Ring<\/li><li>Matching Sunken Artifact Glowstone Wedding Ring Set in Tungsten<\/li><li>Area 51 Glowstone Ring<\/li><li>Matching Area 51 Glowstone Wedding Ring Set<\/li><li>Glowstone Cremation Ring with Ashes<\/li><li>Kaiju Glowstone Ring<\/li><li>Black Emerald Opal Glowstone Ring<\/li><li>Dragon Scale Opal Glowstone Ring<\/li><\/ul>"
           }
         },
         "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+            "title": "Meteorite Rings",
+            "text": "<p>Any ring containing solid meteorite is currently taking approx. <strong>2-4 weeks to ship<\/strong>.<\/p>"
+          }
+        },
+        "9edaa1a8-e6fc-401d-be5e-7b9412d62dc0": {
+          "type": "question",
+          "settings": {
+            "title": "Gold Rings",
+            "text": "<p>Any ring containing solid gold is currently taking approx <strong>4-6 weeks to ship<\/strong>.<\/p>"
+          }
+        },
+        "8bd5b863-fcb1-43ae-bde3-7333f20f183b": {
+          "type": "question",
+          "settings": {
+            "title": "Carbon Fiber Rings",
+            "text": "<p>Carbon Fiber Rings are currently taking approx. <strong>1-2 weeks to ship<\/strong>.<\/p><p>If the Carbon Fiber Ring also contains other materials (e.g. a liner, accents, inlay) then it will ship in approx <strong>2-4 weeks to ship.<\/strong><\/p>"
+          }
+        },
+        "f04d8342-18cb-44cd-8612-a1fdf4afc09b": {
+          "type": "question",
+          "settings": {
+            "title": "Opal Rings",
+            "text": "<p>All solid opal rings are currently taking approx. <strong>4 weeks to ship.<\/strong><\/p>"
+          }
+        },
+        "56c40efd-9201-4a79-86d6-f829d8584f99": {
+          "type": "question",
+          "settings": {
+            "title": "Misc. Rings",
+            "text": "<ul><li>Mokume Gane Rings: 4 weeks<\/li><li>Timascus Rings: 4 weeks<\/li><li>Zircuti Rings: 4 weeks<\/li><li>Reptilian Damascus Steel Ring: 4-6 weeks<\/li><li>Spirograph Damascus Steel Ring: 4-6 weeks<\/li><\/ul>"
+          }
+        },
+        "e9488b45-be9e-41c3-afb4-b05cfa7c0070": {
+          "type": "question",
+          "settings": {
+            "title": "Pendants",
+            "text": "<p>All pendants are handmade in batches with differing timelines based on material (excluding Glowstone pendants, which are made to order). Since they are made in batches, most pendants are in stock and ready to ship in 2-3 business days.<\/p>"
+          }
+        },
+        "24f90d41-4f8a-413c-ad3a-f4197b96f670": {
+          "type": "question",
+          "settings": {
+            "title": "Glowstone Earrings",
+            "text": "<p>All Glowstone Earrings are currently estimated to take 6 weeks to ship<\/p>"
+          }
+        },
+        "caf44b84-4f9b-4c8d-9e94-aa908c58814c": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Shipping Information and Rates",
+            "text": "<p><span style=\"text-decoration:underline\"><strong>United States Orders<\/strong><\/span><\/p><p>USPS First Class (3-5 business days once shipped): <strong>FREE<\/strong><\/p><p><span style=\"text-decoration:underline\"><strong>International Orders<\/strong><\/span><\/p><p>All international orders are shipped through DHL Worldwide Express or UPS Worldwide Expedited. Rates are location based. You can estimate the cost of shipping by entering your mailing address in the checkout phase. <\/p><p>All orders with order value <strong>greater than $700 ship for FREE <\/strong>with DHL Worldwide Express.<\/p><p><\/p>",
+            "align_text": "left"
           }
         }
       },
       "block_order": [
+        "2c920b74-e75b-4448-b0e0-f2ddb7e698bf",
+        "e6ad0d02-2a01-41e5-9002-3fa3c4796bb2",
         "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-1",
-        "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2"
+        "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2",
+        "9edaa1a8-e6fc-401d-be5e-7b9412d62dc0",
+        "8bd5b863-fcb1-43ae-bde3-7333f20f183b",
+        "f04d8342-18cb-44cd-8612-a1fdf4afc09b",
+        "56c40efd-9201-4a79-86d6-f829d8584f99",
+        "e9488b45-be9e-41c3-afb4-b05cfa7c0070",
+        "24f90d41-4f8a-413c-ad3a-f4197b96f670",
+        "caf44b84-4f9b-4c8d-9e94-aa908c58814c"
       ],
       "settings": {
-        "title": "FAQs"
+        "title": ""
       }
     }
   },
   "order": [
     "main",
+    "6403731b-871d-448b-b44f-86ebc0092e9c",
     "312781d0-96bd-4627-abf9-f7ed33aed4b5"
   ]
 }
