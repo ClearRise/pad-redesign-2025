@@ -17,7 +17,15 @@
     <form action="{{ routes.cart_url }}" method="post" novalidate data-location="page" id="CartPageForm">
       <div class="cart__page">
         <div data-products class="cart__page-col">
-          {% for item in cart.items %}
+          {% assign intelligems_total = 0 %}
+{% for item in cart.items %}
+    {% case item.properties._igp %}
+      {% when "0" or nil or blank %}
+        {% assign intelligems_discount = 0 %}
+      {% else %}
+        {% assign intelligems_discount = item.properties._igp | plus: 0 %}
+        {% assign intelligems_total = intelligems_total | plus: item.properties._igp | times: item.quantity %}
+    {% endcase %} 
             {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
   {%- if item.properties._boldBuilderId  and item.properties._boldVariantIds == null -%}
       <input type="hidden" name="updates[]" id="updates_{{- item.key -}}" class="bold_hidden_input cart__product-qty" value="{{- item.quantity -}}" min="0" data-id="{{- item.key -}}">
