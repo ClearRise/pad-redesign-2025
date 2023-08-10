@@ -23,7 +23,7 @@
       <input type="hidden" name="updates[]" id="updates_{{- item.key -}}" class="bold_hidden_input cart__product-qty" value="{{- item.quantity -}}" min="0" data-id="{{- item.key -}}">
       {%- continue -%}
   {%- endif -%}
-{%- render 'cart-item', product: item -%}
+{%- render 'cart-item', product: item, line: forloop.index -%}
           {%- endfor -%}
         </div>
         <div class="cart__page-col">
@@ -53,8 +53,8 @@
           </div>
 
           <div class="cart__item-sub cart__item-row">
-            <div>{{ 'cart.general.subtotal' | t }}</div><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>
-            <div data-subtotal>{{ cart.total_price | money }}</div>
+            <div>{{ 'cart.general.subtotal' | t }}</div><span class="old_cart_total" style="display:none !important;"></span>
+            <div data-subtotal><span class="bcpo-cart-original-total">{{ cart.total_price | money }}</span></div>
           </div>
 
           {% if settings.cart_terms_conditions_enable %}
