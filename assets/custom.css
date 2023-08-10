@@ -1446,3 +1446,44 @@ button.upsell-add-to-cart.disabled{
     width: 45px!important;
     height: 45px!important;
 }
+
+/*engrave feature css*/
+.product-page-section-header{
+  font-size:18px;
+  display:inline-block;
+  justify-content:center;
+  align-items:center;
+  margin-bottom: 0px;
+  font-weight: 700;
+  color: #000;
+}
+
+.pdp-engraving-disclaimer {
+  margin: 0;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+.product-page-engraving-input {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid grey;
+  margin: 5px 0 10px;
+  font-size: 14px;
+}
+span.bold_line_property {
+  text-transform: capitalize;
+}
+.product-option .engraving-icon {
+  cursor: pointer;
+  margin-left: 5px;
+}
+a.add-engraving-inline-button {
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+input#swal2-input {
+    text-transform: uppercase;
+}
+/* end engrave feature css*/
