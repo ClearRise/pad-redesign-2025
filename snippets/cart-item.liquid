@@ -112,7 +112,15 @@
             <div>
               {{ p.first }}:
               {% if p.last contains '/uploads/' %}
-                <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                <a href="{{ p.last }}">
+{% assign file_type = p.last | split: '.' | last | downcase %}
+{% assign file_types = 'jpg,jpeg,webp,gif,png,apng,avif,svg,bmp,ico,tiff' | split: ',' %}
+{% if file_types contains file_type %}
+  <div class="bcpo-cart-file"><img src="{{ p.last }}" style="max-width: 50px; height: auto;"></div>
+{% else %}
+  <span class="bcpo-cart-file">Uploaded file</span>
+{% endif %}
+</a>
               {% else %}
                 {{ p.last }}
               {% endif %}
@@ -179,8 +187,8 @@
             <span class="bcpo-cart-item-price" data-key="{{product.key}}">{{ product.final_price | money }}</span>
           </span>
         {% else %}
-          <span class="cart__price  black_txt"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" style="display:none !important;"></span>
-            <span class="bcpo-cart-item-original-price" data-key="{{product.key}}">{{ product.original_price | money }}</span>icon-delete
+          <span class="cart__price  black_txt"><span class="old_cart_item_price" style="display:none !important;"></span>
+            <span class="bcpo-cart-item-original-price" data-key="{{product.key}}">{{ product.original_price | money }}</span>
           </span>
         {% endif %}
 
@@ -208,3 +216,4 @@
     </div>
   </div>
 </div>
+<!-- bcpo done -->
