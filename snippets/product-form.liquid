@@ -22,6 +22,7 @@
         assign button_text = 'products.product.sold_out' | t
       endunless
     -%}
+   <div class="product-page-section-header">CUSTOM ENGRAVING</div>
 <div class="bold_options" data-product-id="{{ product.id }}"></div>
     {% if settings.product-engraving and settings.show_engraving %}
       {% assign engrave_product = settings.product-engraving %}
