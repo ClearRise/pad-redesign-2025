@@ -172,15 +172,15 @@
         {% if product.original_price != product.final_price %}
           <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
           <small class="cart__price cart__price--strikethrough  black_txt">
-            {{ product.original_price | money }}
+            <span class="bcpo-cart-item-original-price" data-key="{{product.key}}">{{ product.original_price | money }}</span>
           </small>
           <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
           <span class="cart__price cart__discount black_txt">
-            {{ product.final_price | money }}
+            <span class="bcpo-cart-item-price" data-key="{{product.key}}">{{ product.final_price | money }}</span>
           </span>
         {% else %}
           <span class="cart__price  black_txt"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" style="display:none !important;"></span>
-            {{ product.original_price | money }}
+            <span class="bcpo-cart-item-original-price" data-key="{{product.key}}">{{ product.original_price | money }}</span>
           </span>
         {% endif %}
 
