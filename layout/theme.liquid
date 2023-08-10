@@ -201,7 +201,21 @@ console.log(buyItNow);
 <noscript><link rel="stylesheet" href="{{ 'custom.css' | asset_url }}"></noscript>
   
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" ></script>
-  
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>  
+{% if settings.show_engraving and settings.product-engraving %}
+  {% assign engraving_product = settings.product-engraving %}
+  {% assign engraving_product_id = engraving_product.id %} 
+  {% assign engraving_product_id_var = engraving_product.selected_or_first_available_variant.id %}
+  <script>
+    theme.engraving = {
+      engraving_id: {{ engraving_product_id }},
+      engraving_var_id: {{ engraving_product_id_var }}
+    };
+  </script>
+<script src="{{ 'engraving.js' | asset_url }}"></script>  
+{% endif %}
+
 {% comment %}        {% include 'analyzify-gtm-body' %}  {% endcomment %}
 <script src="{{ 'js.cookie.min.js' | asset_url }}"  defer></script>        
 
