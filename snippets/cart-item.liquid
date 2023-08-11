@@ -95,7 +95,7 @@
                 
                 {% for variant in engrave_product.variants %}
                   {% if variant.id == first_gift_product_id_var %}
-                    <p class="black_txt">Engraving Price: {{ variant.price | money_without_trailing_zeros }}</p>
+                    <p class="black_txt en_price">Engraving Price: {{ variant.price | money_without_trailing_zeros }}</p>
                     <input type="hidden" name="engraving" class="engraving_p" value="true" />
                   {% endif %}
                 {% endfor %}
