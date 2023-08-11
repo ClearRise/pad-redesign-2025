@@ -1488,7 +1488,8 @@ input#swal2-input {
 }
 /* end engrave feature css*/
 
-.bold_line_properties > div:last-child {
+/* .bold_line_properties > div:last-child { */
+.bold_line_properties div:nth-child(2){
   float: left;
   margin-right: 0.5rem;
 }
