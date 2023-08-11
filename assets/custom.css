@@ -1470,6 +1470,7 @@ button.upsell-add-to-cart.disabled{
   border: 2px solid grey;
   margin: 5px 0 10px;
   font-size: 14px;
+  text-transform: unset!important;
 }
 span.bold_line_property {
   text-transform: capitalize;
