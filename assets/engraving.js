@@ -132,46 +132,46 @@ $(document).ready(function () {
   });
 
   //handle adding engraving product
-  document.addEventListener('ajaxProduct:added', function (evt) {
-    // Get the added product information
-    var addedProduct = evt.detail.product;
+  // document.addEventListener('ajaxProduct:added', function (evt) {
+  //   // Get the added product information
+  //   var addedProduct = evt.detail.product;
     
-    // Check if the added product has engraving properties
-    if (addedProduct.properties && addedProduct.properties['engraving']) {
-      var engravingValue = addedProduct.properties['engraving'];
+  //   // Check if the added product has engraving properties
+  //   if (addedProduct.properties && addedProduct.properties['engraving']) {
+  //     var engravingValue = addedProduct.properties['engraving'];
 
-      // Check if the engraving property has a value
-      if (engravingValue) {
-        // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
-        var engravingProductID = theme.engraving.engraving_var_id;
+  //     // Check if the engraving property has a value
+  //     if (engravingValue) {
+  //       // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
+  //       var engravingProductID = theme.engraving.engraving_var_id;
 
-        // Add the engraving product to the cart
-        $.ajax({
-          type: 'POST',
-          url: '/cart/add.js',
-          data: {
-            quantity: 1,
-            id: engravingProductID
-          },
-          dataType: 'json',
-          success: function (data) {
-            // Handle success if needed
-            document.dispatchEvent(new CustomEvent('cart:build'));
-            document.dispatchEvent(new CustomEvent('cart:open'));
-          },
-          error: function (error) {
-            // Handle error if needed
-            document.dispatchEvent(new CustomEvent('cart:close'));
-            Swal.fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: 'Error adding engraving product to the cart!'
-            })
-          }
-        });
-      }
-    }
-  });
+  //       // Add the engraving product to the cart
+  //       $.ajax({
+  //         type: 'POST',
+  //         url: '/cart/add.js',
+  //         data: {
+  //           quantity: 1,
+  //           id: engravingProductID
+  //         },
+  //         dataType: 'json',
+  //         success: function (data) {
+  //           // Handle success if needed
+  //           document.dispatchEvent(new CustomEvent('cart:build'));
+  //           document.dispatchEvent(new CustomEvent('cart:open'));
+  //         },
+  //         error: function (error) {
+  //           // Handle error if needed
+  //           document.dispatchEvent(new CustomEvent('cart:close'));
+  //           Swal.fire({
+  //             icon: 'error',
+  //             title: 'Oops...',
+  //             text: 'Error adding engraving product to the cart!'
+  //           })
+  //         }
+  //       });
+  //     }
+  //   }
+  // });
 });
 
 function AutoAddEngravingProduct() {
