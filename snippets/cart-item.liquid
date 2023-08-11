@@ -140,9 +140,9 @@
     {% assign productObj = products_obj[0] %}
   {% endpaginate %}
 
-  {% if productObj.tags contains 'engrave' %}
+  
     <a data-line="{{ line }}" data-key="{{ product.key }}" class="add-engraving-inline-button" title="Add an engraving" role="button" tabindex="0">Add an engraving</a>
-  {% endif %}
+
 {% endunless %}
     </div>
     <div class="cart__item-sub">
