@@ -297,14 +297,14 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
     inputPlaceholder: '20 characters or less',
     inputAttributes: {
       maxlength: 20
-    },    
+    },
     showCancelButton: true,
     confirmButtonText: 'Save',
   }).then((result) => {
     if (result.isConfirmed) {
       // Get the entered text from the SweetAlert input field
       const newEngravingText = result.value.toUpperCase();
-
+      
       var data = {
         line: itemLine,
         properties: {
@@ -315,7 +315,10 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
         url: '/cart/change.js',
         data: data
       }).then(function(response) {
-        if($autoAdd){
+        if($autoAdd && newEngravingText == ''){
+          //document.dispatchEvent(new CustomEvent('cart:build'));
+        }
+        else if($autoAdd && newEngravingText != ''){
           AutoAddEngravingProduct();
         }
         else {
