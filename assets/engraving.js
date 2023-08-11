@@ -11,7 +11,7 @@ $(document).ready(function () {
       let engravingValue = engravingInput.val();
       let field = $(this);
   
-      field.val(field.val().toUpperCase());
+      // field.val(field.val().toUpperCase());
   
       if (engravingValue !== '') {
         productFormSubmitBtn.html('<span>ADD TO CART + ENGRAVING</span>');
@@ -303,7 +303,7 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
   }).then((result) => {
     if (result.isConfirmed) {
       // Get the entered text from the SweetAlert input field
-      const newEngravingText = result.value.toUpperCase();
+      // const newEngravingText = result.value.toUpperCase();
       
       var data = {
         line: itemLine,
