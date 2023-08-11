@@ -122,7 +122,7 @@
       </div>
 
       <div class="cart__item-price-col text-right">
-        {% if product.original_price != product.final_price %}
+        {% if product.original_price != product.final_price and intelligems_discount == 0 %}
           <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
           <small class="cart__price cart__price--strikethrough  black_txt">
             {{ product.original_price | money }}
@@ -133,7 +133,11 @@
           </span>
         {% else %}
           <span class="cart__price  black_txt"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" style="display:none !important;"></span>
-            {{ product.original_price | money }}
+            {% if intelligems_discount == 0 %}
+              {{ product.original_price | money }}
+            {% else %}
+              {{ product.final_price | money }}
+            {% endif %}
           </span>
         {% endif %}
 
