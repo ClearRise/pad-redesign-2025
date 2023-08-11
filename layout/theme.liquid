@@ -109,7 +109,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     };
   </script>
 
-  {% render 'header-scripts.zipifypages', renderctx: 'thm' %}
+{% comment %} {% render 'header-scripts.zipifypages', renderctx: 'thm' %}  {% endcomment %}
 
 <!--  content for header  ------------------------------------------------------------------->   
   {{ content_for_header }}
@@ -676,11 +676,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
   document.addEventListener('cart:updated', function(evt) {
     var cart_obj = evt.detail.cart.items;
-    updatedgCartUpsell();
+    //updatedgCartUpsell();
   });
 
   document.addEventListener('ajaxProduct:added', function(evt) {
-    updatedgCartUpsell();
+    //updatedgCartUpsell();
   });
  
 </script>  
