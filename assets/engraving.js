@@ -294,6 +294,10 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
     input: 'text',
     inputValue: itemText,
     inputLabel: 'Engraving Text',
+    inputPlaceholder: '20 characters or less',
+    inputAttributes: {
+      maxlength: 20
+    },    
     showCancelButton: true,
     confirmButtonText: 'Save',
   }).then((result) => {
