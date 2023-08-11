@@ -1484,7 +1484,7 @@ a.add-engraving-inline-button {
   text-decoration: underline;
 }
 input#swal2-input {
-    text-transform: uppercase;
+    text-transform: unset;
 }
 /* end engrave feature css*/
 a.add-engraving-inline-button{
