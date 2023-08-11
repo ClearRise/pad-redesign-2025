@@ -1487,9 +1487,10 @@ input#swal2-input {
     text-transform: uppercase;
 }
 /* end engrave feature css*/
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 768px){
   .en_price{
       font-size: 12px;
+      letter-spacing: .1px;
   }
 }
 /* .bold_line_properties > div:last-child { */
