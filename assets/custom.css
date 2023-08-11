@@ -1487,3 +1487,7 @@ input#swal2-input {
     text-transform: uppercase;
 }
 /* end engrave feature css*/
+
+.bold_line_properties > div:last-child {
+  float: left;
+}
