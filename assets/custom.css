@@ -1492,6 +1492,9 @@ input#swal2-input {
       font-size: 12px;
       letter-spacing: .1px;
   }
+  a.add-engraving-inline-button{
+      font-size: 12px;    
+  }
 }
 /* .bold_line_properties > div:last-child { */
 /* .bold_line_properties div:nth-child(2){
