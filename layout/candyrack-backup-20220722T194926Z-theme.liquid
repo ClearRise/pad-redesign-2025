@@ -85,7 +85,7 @@ window.TriplePixelData={TripleName:"patrick-adair-designs.myshopify.com",ver:"1.
     };
   </script>
 
-  {% render 'header-scripts.zipifypages', renderctx: 'thm' %}{{ content_for_header }}
+  {{ content_for_header }}
 
   {% if template == 'product' and product.metafields.inventory.ShappifyHidden or product.type contains '_HIDDEN_' %}<meta name='robots' content='noindex'>{% endif %}
 {%- render 'bold-options-hybrid' -%}
@@ -168,7 +168,7 @@ GorgiasChat.init().then(async function() {
     render 'photoswipe-template'
     render 'tool-tip'
   -%}
-{% render 'page-footer.zipifypages', renderctx: 'thm', ocuapp: oneclickupsellapp %}{{ 'storeifyapps-formbuilder-script.js' | asset_url | script_tag }}
+{{ 'storeifyapps-formbuilder-script.js' | asset_url | script_tag }}
 </body>
 </html>
 
