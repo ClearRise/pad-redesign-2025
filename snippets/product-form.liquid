@@ -23,7 +23,7 @@
       endunless
     -%}
 <div class="bold_options" data-product-id="{{ product.id }}"></div>
-    {% if product.tags contains 'engrave' and settings.product-engraving and settings.show_engraving %}
+    {% if settings.product-engraving and settings.show_engraving %}
       {% assign engrave_product = settings.product-engraving %}
       {% assign engrave_product_id = engrave_product.id %} 
       {% assign first_gift_product_id_var = engrave_product.selected_or_first_available_variant.id %}
