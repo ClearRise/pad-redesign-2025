@@ -11,7 +11,7 @@ $(document).ready(function () {
       let engravingValue = engravingInput.val();
       let field = $(this);
   
-      // field.val(field.val().toUpperCase());
+      field.val(field.val().toUpperCase());
   
       if (engravingValue !== '') {
         productFormSubmitBtn.html('<span>ADD TO CART + ENGRAVING</span>');
@@ -132,46 +132,46 @@ $(document).ready(function () {
   });
 
   //handle adding engraving product
-  // document.addEventListener('ajaxProduct:added', function (evt) {
-  //   // Get the added product information
-  //   var addedProduct = evt.detail.product;
+  /*document.addEventListener('ajaxProduct:added', function (evt) {
+    // Get the added product information
+    var addedProduct = evt.detail.product;
     
-  //   // Check if the added product has engraving properties
-  //   if (addedProduct.properties && addedProduct.properties['engraving']) {
-  //     var engravingValue = addedProduct.properties['engraving'];
+    // Check if the added product has engraving properties
+    if (addedProduct.properties && addedProduct.properties['engraving']) {
+      var engravingValue = addedProduct.properties['engraving'];
 
-  //     // Check if the engraving property has a value
-  //     if (engravingValue) {
-  //       // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
-  //       var engravingProductID = theme.engraving.engraving_var_id;
+      // Check if the engraving property has a value
+      if (engravingValue) {
+        // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
+        var engravingProductID = theme.engraving.engraving_var_id;
 
-  //       // Add the engraving product to the cart
-  //       $.ajax({
-  //         type: 'POST',
-  //         url: '/cart/add.js',
-  //         data: {
-  //           quantity: 1,
-  //           id: engravingProductID
-  //         },
-  //         dataType: 'json',
-  //         success: function (data) {
-  //           // Handle success if needed
-  //           document.dispatchEvent(new CustomEvent('cart:build'));
-  //           document.dispatchEvent(new CustomEvent('cart:open'));
-  //         },
-  //         error: function (error) {
-  //           // Handle error if needed
-  //           document.dispatchEvent(new CustomEvent('cart:close'));
-  //           Swal.fire({
-  //             icon: 'error',
-  //             title: 'Oops...',
-  //             text: 'Error adding engraving product to the cart!'
-  //           })
-  //         }
-  //       });
-  //     }
-  //   }
-  // });
+        // Add the engraving product to the cart
+        $.ajax({
+          type: 'POST',
+          url: '/cart/add.js',
+          data: {
+            quantity: 1,
+            id: engravingProductID
+          },
+          dataType: 'json',
+          success: function (data) {
+            // Handle success if needed
+            document.dispatchEvent(new CustomEvent('cart:build'));
+            document.dispatchEvent(new CustomEvent('cart:open'));
+          },
+          error: function (error) {
+            // Handle error if needed
+            document.dispatchEvent(new CustomEvent('cart:close'));
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Error adding engraving product to the cart!'
+            })
+          }
+        });
+      }
+    }
+  });*/
 });
 
 function AutoAddEngravingProduct() {
@@ -271,6 +271,14 @@ function _updateCart(params) {
   });
 }
 
+function _getCart() {
+  var url = ''.concat(theme.routes.cart, '?t=').concat(Date.now());
+  return fetch(url, {
+    credentials: 'same-origin',
+    method: 'GET'
+  }).then(response => response.json());
+}
+
 function deleteEngraving(itemKey, itemLine) {
   const newEngravingText = '';
 
@@ -289,7 +297,6 @@ function deleteEngraving(itemKey, itemLine) {
   });
 }
 function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
-  //document.dispatchEvent(new CustomEvent('cart:close'));
   Swal.fire({
     input: 'text',
     inputValue: itemText,
@@ -302,32 +309,59 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
     confirmButtonText: 'Save',
   }).then((result) => {
     if (result.isConfirmed) {
-      // Get the entered text from the SweetAlert input field
-      // const newEngravingText = result.value.toUpperCase();
-      
-      var data = {
-        line: itemLine,
-        properties: {
-          engraving: newEngravingText
-        }
-      };
-      _updateCart({
-        url: '/cart/change.js',
-        data: data
-      }).then(function(response) {
-        if($autoAdd && newEngravingText == ''){
-          //document.dispatchEvent(new CustomEvent('cart:build'));
-        }
-        else if($autoAdd && newEngravingText != ''){
-          AutoAddEngravingProduct();
-        }
-        else {
-          // Handle the response data here
-          document.dispatchEvent(new CustomEvent('cart:build'));
-          //document.dispatchEvent(new CustomEvent('cart:open'));
+      const newEngravingText = result.value.toUpperCase();
+
+      // Get the current cart contents
+      $.ajax({
+        type: 'GET',
+        url: '/cart.js',
+        dataType: 'json',
+        success: function(cartData) {
+          // Find the line item by key
+          var lineItemToUpdate = cartData.items.find(function(item) {
+            return item.key === itemKey;
+          });
+
+          if (lineItemToUpdate) {
+            // Preserve existing properties and update engraving
+            var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
+              engraving: newEngravingText
+            });
+
+            var data = {
+              line: itemLine,
+              properties: updatedProperties
+            };
+
+            // Update the cart using change.js
+            $.ajax({
+              type: 'POST',
+              url: '/cart/change.js',
+              data: data,
+              dataType: 'json',
+              success: function(response) {
+                if($autoAdd && newEngravingText == ''){
+                  //document.dispatchEvent(new CustomEvent('cart:build'));
+                }
+                else if($autoAdd && newEngravingText != ''){
+                  AutoAddEngravingProduct();
+                }
+                else {
+                  // Handle the response data here
+                  document.dispatchEvent(new CustomEvent('cart:build'));
+                  //document.dispatchEvent(new CustomEvent('cart:open'));
+                }
+              },
+              error: function(error) {
+                // Handle error
+              }
+            });
+          }
+        },
+        error: function(error) {
+          // Handle error
         }
       });
-
     }
   });
 }
