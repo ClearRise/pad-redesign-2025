@@ -366,29 +366,3 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
   });
 }
 
-
-
-$(document).ready(function(){
-        $('input[type="checkbox"]').click(function(){
-            if($(this).prop("checked") == true){
-                console.log("Checkbox is checked.");
-            }
-            else if($(this).prop("checked") == false){
-                console.log("Checkbox is unchecked.");
-            }
-        });
-    });
-
-
-// warranty product
-
-  document.addEventListener("DOMContentLoaded", function(){
-    document.querySelector('#gift-wrapping').addEventListener("change", function(event) {
-       console.log('checked');
-      if (event.target.checked) {
-       console.log('checked');
-      } else {
-        console.log('not checked');
-      }
-
-    });
