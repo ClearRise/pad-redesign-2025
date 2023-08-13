@@ -1513,4 +1513,5 @@ a.add-engraving-inline-button{
 
 .add-engraving-inline-button {
   display: inline-block;
+      width: 100%;
 }
