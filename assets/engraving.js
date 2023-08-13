@@ -365,3 +365,18 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
     }
   });
 }
+
+
+
+
+// warranty product
+
+  document.addEventListener("DOMContentLoaded", function(){
+    document.querySelector('[name="attributes[gift-wrapping]"]').addEventListener("change", function(event) {
+      if (event.target.checked) {
+       console.log('checked');
+      } else {
+        console.log('not checked');
+      }
+
+    });
