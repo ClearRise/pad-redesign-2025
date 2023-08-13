@@ -38,45 +38,9 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
   </div>
 </line-item>
   
-  <p id="gift-note-container" class="gift-note-input" {% if cart.attributes.gift-wrapping %}
-      style="display: block;" {% else %} style="display: none !important;"
-      {% endif %}>
-      <label style="display:block;" for="gift-note" class="gift-note-title"><strong>Gift Message (Optional):</strong></label>
-    <textarea name="attributes[gift-note]" is="resizable-textarea" id="gift-note" class="textarea gift-note-textarea">{{ cart.attributes.gift-note }}</textarea>
-  </p>
-  
 </div>
 
-
-
-<script>
-  
-  setGiftWrap = function() {
-    console.log("Show Gift Note Container")
-    jQuery("#gift-note-container").slideDown(function() { jQuery( "#gift-note" ).focus(); })
-  }
-  
-  hideGiftWrap = function() {
-    console.log("HIDE Gift Note Container")
-    jQuery("#gift-note-container").slideUp()
-  }
-    
-// When the gift-wrapping checkbox is checked or unchecked.
-// jQuery(function() {
-//   jQuery('#gift-wrapping').change(function() {
-//       console.log('gift checked')
-//     if (jQuery(this).is(':checked')) {
-//       setGiftWrap(); 
-      
-//     }
-//     else {
-//       hideGiftWrap()
-//     }
-//   });
-// });
- 
-</script>  
-<!-- <script>
+ <!-- <script>
 jQuery(document).ready(function($) {	
     $("#gift-wrapping").on("change",function(){
         console.log('checkbox clicked')
