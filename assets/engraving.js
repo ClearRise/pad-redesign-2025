@@ -383,7 +383,8 @@ $(document).ready(function(){
 // warranty product
 
   document.addEventListener("DOMContentLoaded", function(){
-    document.querySelector('[name="attributes[gift-wrapping]"]').addEventListener("change", function(event) {
+    document.querySelector('#gift-wrapping').addEventListener("change", function(event) {
+       console.log('checked');
       if (event.target.checked) {
        console.log('checked');
       } else {
