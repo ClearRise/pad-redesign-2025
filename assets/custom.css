@@ -1510,3 +1510,7 @@ a.add-engraving-inline-button{
   float: left;
   margin-right: 0.5rem;
 } 
+
+.add-engraving-inline-button {
+  display: inline-block;
+}
