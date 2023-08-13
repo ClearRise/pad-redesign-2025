@@ -27,15 +27,43 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
     > Add protection warranty
     </label>
   </p>
+
+
+
+  <div class="nvd-mini"><div class="appearance-right-previw" id="nvd-widget-cart">
+         <div class="d-flexCstm">
+           <div class="flex-shrink-0Cstm">
+             <div class="form-checkCstm form-switchCstm">
+               <input class="forms-check-inputCstm" type="checkbox" id="shippingProtectionCheckBox" onclick="getShippingProtection('40215383146578','66', this)" data-protected-variant="40215383146578" data-gtm-form-interact-field-id="1">
+                 <div class="img">
+                   <img class="navidium-shipping-icon" width="auto" height="auto" src="https://app.navidiumapp.com/dashboard/img/navidium-shipping-icon.png" alt="Navidium icon">
+                   <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M9.8056 0.867554L0.00976562 4.2023C0.218188 8.16232 -0.177814 14.415 0.635031 17.1245C1.32282 19.4171 7.16558 23.8634 9.8056 25.6698C11.9593 23.9329 17.3442 20.4317 18.3509 18.1666C20.0183 14.415 19.8793 8.09285 19.6014 4.2023L9.8056 0.867554Z" fill="#6D7175"></path>
+                     <path d="M5.01172 13.1644L7.92963 16.7076L14.3907 10.0381" stroke="white" stroke-width="1.66738" stroke-linecap="round" stroke-linejoin="round"></path>
+                   </svg>
+                 </div>
+             </div>
+           </div>
+           <div class="flex-grow-1Cstm ms-3Cstm">
+             <h4>Navidium Shipping Protection
+               <button type="button" class="btnCstm tooltipCstm">
+                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path d="M7.5 0C3.36433 0 0 3.36433 0 7.5C0 11.6357 3.36433 15 7.5 15C11.6357 15 15 11.6357 15 7.5C15 3.36433 11.6357 0 7.5 0ZM7.5 11.875C7.15496 11.875 6.87504 11.595 6.87504 11.25C6.87504 10.905 7.15496 10.625 7.5 10.625C7.84504 10.625 8.12496 10.905 8.12496 11.25C8.12496 11.595 7.84504 11.875 7.5 11.875ZM8.48934 7.90123C8.26813 8.00308 8.12496 8.22624 8.12496 8.46943V8.75004C8.12496 9.09496 7.84561 9.375 7.5 9.375C7.15439 9.375 6.87504 9.09496 6.87504 8.75004V8.46943C6.87504 7.73998 7.30373 7.0713 7.96566 6.76563C8.60252 6.47255 9.06246 5.69435 9.06246 5.31246C9.06246 4.45129 8.36185 3.75 7.5 3.75C6.63815 3.75 5.93754 4.45129 5.93754 5.31246C5.93754 5.6575 5.65807 5.93754 5.31246 5.93754C4.96685 5.93754 4.6875 5.6575 4.6875 5.31246C4.6875 3.7619 5.94933 2.49996 7.5 2.49996C9.05067 2.49996 10.3125 3.7619 10.3125 5.31246C10.3125 6.15692 9.57996 7.39815 8.48934 7.90123Z" fill="#212B36"></path>
+                 </svg>
+                 <span class="toolltiptextCstm">Get peace of mind with Navidium’s Delivery Guarantee in the event your delivery is damaged, stolen, or lost during transit</span>
+               </button>
+             </h4>
+             <p class="black_txt">Protection from Damage, Loss &amp; Theft
+               <strong class="shipping-protection-price">
+                <span class="money">$66.00 USD</span>
+               </strong>
+             </p>
+   	        <p class="nvd-selected black_txt" style="display: none;">Get peace of mind with Navidium’s Delivery Guarantee in the event your delivery is damaged, stolen, or lost during transit</p>
+             <p class="nvd-dis-selected" style="display: block;">By Deselecting Shipping Protection, we will not be liable for lost or stolen packages</p>
+           </div>
+         </div>
+       </div></div>
   
-  <img src="{{ settings.gift_wrap_image | image_url: width: 80 }}" width="80" height="80" loading="lazy" sizes="(max-width: 699px) 70px, 80px" class="line-item__mediax">
-  <div class="line-item-info">
-  <div class="v-stack justify-items-start gap-2">
-  <div class="v-stack justify-items-start gap-1">
-  <span class="h6">{{ settings.gift_wrap_heading }}</span>
-  <price-list class="price-list "><sale-price class="h6 text-subdued">
-    <span class="sr-only">Sale price</span>{{ linklists.gift-wrapping.links.first.object.price | money }}</sale-price></price-list></div></div>
-  </div>
 </line-item>
   
 </div>
