@@ -84,7 +84,7 @@ item.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif %}
   Shopify.Cart.GiftWrap = {};
 
   Shopify.Cart.GiftWrap.set = function() {
-    setGiftWrap(); 
+
     var headers = new Headers({ 'Content-Type': 'application/json' });
 
     var request = {
@@ -105,7 +105,6 @@ item.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif %}
 
   Shopify.Cart.GiftWrap.remove = function() {
     var headers = new Headers({ 'Content-Type': 'application/json' });
-hideGiftWrap();
     var request = {
       method: 'POST',
       headers: headers,
@@ -161,20 +160,6 @@ hideGiftWrap();
 
     });
 
-  document.querySelector('#gift-note').addEventListener("change", function(evt) {
-      var note = evt.target.value;
-      var headers = new Headers({ 'Content-Type': 'application/json' });
-
-      var request = {
-        method: 'POST',
-        headers: headers,
-        body: JSON.stringify({ attributes: { 'gift-note': note } })
-      };
-
-      fetch('/cart/update.js', request);
-    });
-  
-  
   
   // When the gift-wrapping checkbox is checked or unchecked.
   document.addEventListener("DOMContentLoaded", function(){
