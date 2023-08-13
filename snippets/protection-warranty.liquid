@@ -84,6 +84,7 @@ item.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif %}
   Shopify.Cart.GiftWrap = {};
 
   Shopify.Cart.GiftWrap.set = function() {
+  console.log('jhj');
 
     var headers = new Headers({ 'Content-Type': 'application/json' });
 
