@@ -69,6 +69,28 @@
               </label>
             </div>
           {% endif %}
+
+<p>
+    <input
+      id="gift-wrapping"
+      type="checkbox"
+      name="attributes[gift-wrapping]"
+      value="yes"
+      {% if cart.attributes.gift-wrapping %}
+      checked="checked"
+      {% endif %}
+      style="float: none"
+    />
+    <label
+      for="gift-wrapping"
+      style="display:inline; padding-left: 5px; float: none;"
+    >
+      For {{ linklists.gift-wrapping.links.first.object.price | money }}
+      please wrap the products in this order.
+    </label>
+  </p>
+
+          
       <div class='nvd-mini'></div>
           <div class="cart__item-row cart__checkout-wrapper">
             <button type="submit" name="checkout" data-terms-required="{{ settings.cart_terms_conditions_enable }}" class="btn cart__checkout">
