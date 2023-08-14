@@ -81,7 +81,7 @@ $(document).ready(function () {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Error adding engraving product to the cart!'
+            text: 'Plan error!'
           })
         }
       });
