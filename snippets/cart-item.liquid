@@ -39,6 +39,19 @@
   {% endif %}
 {% endif %}
 
+
+{% if product.metafields.custom.premium_protection_product %}
+  {% liquid
+    assign protection_product = all_products[product.metafields.custom.premium_protection_product]
+    assign protection_product_id = protection_product.id
+    assign first_protection_product_id_var = protection_product.selected_or_first_available_variant.id 
+      if first_protection_product_id_var == product.id
+        assign  match_protection_product = true
+      endif
+  %}
+{% endif %} 
+
+
 <div class="cart__item rm_border{% if match_engraving_product %} hide{% endif %}{% if match_gift_product %} hide{% endif %}" data-key="{{ product.key }}" data-handle='{{ product.product.handle }}'>
   {%- assign img_url = product | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
   <div class="cart__image">
