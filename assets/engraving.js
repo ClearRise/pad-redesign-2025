@@ -28,7 +28,7 @@ $(document).ready(function () {
     if($(this).is(":checked")) {
       protectionInput = $(this).attr('data-protection');
     } else {
-         protectionInput = '';      
+      protectionInput = '';      
     }
     console.log(protectionInput);
   });
@@ -70,7 +70,7 @@ $(document).ready(function () {
         url: '/cart/add.js',
         data: {
           quantity: 1,
-          id: protectionInput
+          id: engravingProductID
         },
         dataType: 'json',
         success: function (data) {
