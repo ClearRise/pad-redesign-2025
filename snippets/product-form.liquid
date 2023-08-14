@@ -42,10 +42,10 @@
       
 {% if product.metafields.custom.premium_protection_product %}
   {% liquid
-    assign protection_product = product.metafields.custom.premium_protection_product
+    assign protection_product = all_products[product.metafields.custom.premium_protection_product]
   %}
 
-  {{ protection_product }}
+  {{ protection_product.id }}
     <div class="bold_option bold_option_checkbox ">
        <label>
        <span class="bold_option_element">
