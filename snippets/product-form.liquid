@@ -43,6 +43,13 @@
 {% if product.metafields.custom.premium_protection_product %}
   {% liquid
     assign protection_product = all_products[product.metafields.custom.premium_protection_product]
+    assign protection_product_id = protection_product.id
+    assign first_protection_product_id_var = protection_product.selected_or_first_available_variant.id
+    for variant in protection_product.variants
+      if variant.id == first_protection_product_id_var
+        assign  protection_product_price = variant.price | money_without_trailing_zeros
+        endif
+      endfor  
   %}
 
   {{ protection_product.id }}
