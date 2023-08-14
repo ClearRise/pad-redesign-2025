@@ -3,6 +3,7 @@ $(document).ready(function () {
   const productFormSubmit = $(".add-to-cart");
   const productFormSubmitBtn = $(".add-to-cart span");
   const engravingInput = $(".product-page-engraving-input");
+  const protectionInput = $(".protection-plan");
   const engravingProductID = theme.engraving.engraving_var_id;
   let hiddenFieldsAdded = false;
   
@@ -20,6 +21,15 @@ $(document).ready(function () {
       }
     });
   }
+
+  protectionInput.click(function() {
+    if($(this).is(":checked")) {
+        console.log('yes');
+    } else {
+         console.log('no');
+    }
+});
+  
 
   productFormSubmit.on('click', function (event) {
     // Prevent the default form submission
