@@ -27,10 +27,8 @@ $(document).ready(function () {
   protectField.click(function() {
     if($(this).is(":checked")) {
       protectionInput = $(this).val();
-      console.log($(this).val());
     } else {
-         protectionInput = '';
-      
+         protectionInput = '';      
     }
     console.log(protectionInput);
   });
@@ -66,10 +64,33 @@ $(document).ready(function () {
         }
       });
     }
+    else if(protectionInput !== ''){
+      $.ajax({
+        type: 'POST',
+        url: '/cart/add.js',
+        data: {
+          quantity: 1,
+          id: protectionInput
+        },
+        dataType: 'json',
+        success: function (data) {
+          // Handle success if needed
+          productForm.submit();
+        },
+        error: function (error) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Error adding engraving product to the cart!'
+          })
+        }
+      });
+    }
     else {
       // Submit the form programmatically
       productForm.submit();
     }
+    
   });
   $(document).on('click', '.cart__remove a', function (event) {
     event.preventDefault();
