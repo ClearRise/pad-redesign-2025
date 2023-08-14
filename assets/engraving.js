@@ -26,7 +26,7 @@ $(document).ready(function () {
 
   protectField.click(function() {
     if($(this).is(":checked")) {
-      protectionInput = $(this).val();
+      protectionInput = $(this).attr('data-protection');
     } else {
          protectionInput = '';      
     }
