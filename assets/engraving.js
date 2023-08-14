@@ -27,12 +27,15 @@ $(document).ready(function () {
   protectField.click(function() {
     if($(this).is(":checked")) {
      let protectionInput = $(this).val();
+      
     } else {
-        let protectionInput = ''
+        let protectionInput = '';
+      
     }
+    console.log(protectionInput);
   });
 
-  console.log(protectionInput);
+ 
   
 
   productFormSubmit.on('click', function (event) {
