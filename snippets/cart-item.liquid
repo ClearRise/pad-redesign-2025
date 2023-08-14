@@ -52,7 +52,7 @@
 {% endif %} 
 
 
-<div class="cart__item rm_border{% if match_engraving_product %} hide{% endif %}{% if match_gift_product %} hide{% endif %}" data-key="{{ product.key }}" data-handle='{{ product.product.handle }}'>
+<div class="cart__item rm_border{% if match_engraving_product or match_protection_product %} hide{% endif %}{% if match_gift_product %} hide{% endif %}" data-key="{{ product.key }}" data-handle='{{ product.product.handle }}'>
   {%- assign img_url = product | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
   <div class="cart__image">
     <a href="{{ product.url }}" style="height: 0; padding-bottom: {{ 100 | divided_by: product.image.aspect_ratio }}%;">
