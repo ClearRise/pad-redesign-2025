@@ -122,7 +122,7 @@
 
           {% if product.metafields.custom.premium_protection_product %}
             hi
-            {% if p.first contains 'Premium Protection Plan' %}
+            {% if p.first contains 'Protection' %}
               {% unless p.last == '' or p.last == null %}
                 {% assign engrave_product = settings.product-engraving %}
                 {% assign first_gift_product_id_var = engrave_product.selected_or_first_available_variant.id %}
