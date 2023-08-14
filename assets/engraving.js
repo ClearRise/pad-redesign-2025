@@ -26,9 +26,9 @@ $(document).ready(function () {
 
   protectField.click(function() {
     if($(this).is(":checked")) {
-      protectionInput = $(this).attr('data-protection-product-id');
+     let protectionInput = $(this).attr('data-protection-product-id');
     } else {
-         protectionInput = ''
+        let protectionInput = ''
     }
   });
 
