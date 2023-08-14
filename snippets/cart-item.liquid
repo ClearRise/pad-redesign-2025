@@ -92,35 +92,8 @@
       {% assign found_engrave = false %}
       {% if property_size > 0 %}
         {% for p in product.properties %}
-          {% if settings.show_engraving and settings.product-engraving %}
-            {% if p.first contains 'engraving' %}
-              {% unless p.last == '' or p.last == null %}
-                {% assign engrave_product = settings.product-engraving %}
-                {% assign first_gift_product_id_var = engrave_product.selected_or_first_available_variant.id %}
 
-                <div class="product-option">
-                  <span id="edit-engraving-btn" data-line="{{ line }}" data-key="{{ product.key }}" data-text="{{ p.last }}" class="edit-engraving-btn engraving-icon engraving-edit-icon desktop_only editIconFor{{ product.key }}" data-id="editIconFor{{ product.key }}">
-                    {% render 'icon-edit' %}
-                  </span>
-                  <span id="delete-engraving-btn" data-line="{{ line }}" data-key="{{ product.key }}" class="delete-engraving-btn engraving-icon engraving-remove-icon deleteIconFor{{ product.key }}" data-id="deleteIconFor{{ product.key }}">
-                    {% render 'icon-delete' %}
-                  </span>
-                </div>
-                
-                {% for variant in engrave_product.variants %}
-                  {% if variant.id == first_gift_product_id_var %}
-                    <p class="black_txt en_price">Engraving Price: {{ variant.price | money_without_trailing_zeros }}</p>
-                    <input type="hidden" name="engraving" class="engraving_p" value="true" />
-                  {% endif %}
-                {% endfor %}
-    
-                
-                {% assign found_engrave = true %}
-              {% endunless %}
-            {% endif %}
-          {% endif %}
-
-          {% if product.metafields.custom.premium_protection_product %}
+        {% if product.metafields.custom.premium_protection_product %}
             hi
             {% if p.first contains 'Protection' %}
               {% unless p.last == '' or p.last == null %}
@@ -148,8 +121,36 @@
               {% endunless %}
             {% endif %}
           {% endif %}
-
           
+
+      
+          {% if settings.show_engraving and settings.product-engraving %}
+            {% if p.first contains 'engraving' %}
+              {% unless p.last == '' or p.last == null %}
+                {% assign engrave_product = settings.product-engraving %}
+                {% assign first_gift_product_id_var = engrave_product.selected_or_first_available_variant.id %}
+
+                <div class="product-option">
+                  <span id="edit-engraving-btn" data-line="{{ line }}" data-key="{{ product.key }}" data-text="{{ p.last }}" class="edit-engraving-btn engraving-icon engraving-edit-icon desktop_only editIconFor{{ product.key }}" data-id="editIconFor{{ product.key }}">
+                    {% render 'icon-edit' %}
+                  </span>
+                  <span id="delete-engraving-btn" data-line="{{ line }}" data-key="{{ product.key }}" class="delete-engraving-btn engraving-icon engraving-remove-icon deleteIconFor{{ product.key }}" data-id="deleteIconFor{{ product.key }}">
+                    {% render 'icon-delete' %}
+                  </span>
+                </div>
+                
+                {% for variant in engrave_product.variants %}
+                  {% if variant.id == first_gift_product_id_var %}
+                    <p class="black_txt en_price">Engraving Price: {{ variant.price | money_without_trailing_zeros }}</p>
+                    <input type="hidden" name="engraving" class="engraving_p" value="true" />
+                  {% endif %}
+                {% endfor %}
+    
+                
+                {% assign found_engrave = true %}
+              {% endunless %}
+            {% endif %}
+          {% endif %}
         {% endfor %}
 
 {% comment %}
