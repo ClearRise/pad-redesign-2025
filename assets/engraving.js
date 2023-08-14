@@ -26,10 +26,10 @@ $(document).ready(function () {
 
   protectField.click(function() {
     if($(this).is(":checked")) {
-     let protectionInput = $(this).val();
+      protectionInput = $(this).val();
       console.log($(this).val());
     } else {
-        let protectionInput = '';
+         protectionInput = '';
       
     }
     console.log(protectionInput);
