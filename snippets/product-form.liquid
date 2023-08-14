@@ -42,7 +42,7 @@
       
 {% if product.metafields.custom.premium_protection_product %}
   {% liquid
-    assign protection_product = product.metafields.custom.premium_protection_product;
+    assign protection_product = product.metafields.custom.premium_protection_product
   %}
 
   {{ protection_product | json }}
