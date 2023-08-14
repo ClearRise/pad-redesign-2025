@@ -3,9 +3,11 @@ $(document).ready(function () {
   const productFormSubmit = $(".add-to-cart");
   const productFormSubmitBtn = $(".add-to-cart span");
   const engravingInput = $(".product-page-engraving-input");
-  const protectionInput = $(".protection-plan");
+  const protectField = $(".protection-plan");
+  let protectionInput = '';
   const engravingProductID = theme.engraving.engraving_var_id;
   let hiddenFieldsAdded = false;
+
   
   if (engravingInput.length) {
     engravingInput.on('input', function () {
@@ -22,13 +24,15 @@ $(document).ready(function () {
     });
   }
 
-  protectionInput.click(function() {
+  protectField.click(function() {
     if($(this).is(":checked")) {
-        console.log('yes');
+      protectionInput = $(this).attr('data-protection-product-id');
     } else {
-         console.log('no');
+         protectionInput = ''
     }
-});
+  });
+
+  console.log(protectionInput);
   
 
   productFormSubmit.on('click', function (event) {
