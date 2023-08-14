@@ -33,7 +33,30 @@ $(document).ready(function () {
     console.log(protectionInput);
   });
 
- 
+
+
+  function ProtectionPlanAjaxAdd(productId){
+     $.ajax({
+        type: 'POST',
+        url: '/cart/add.js',
+        data: {
+          quantity: 1,
+          id: productId
+        },
+        dataType: 'json',
+        success: function (data) {
+          // Handle success if needed
+          productForm.submit();
+        },
+        error: function (error) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Plan error!'
+          })
+        }
+      });
+  }
   
 
   productFormSubmit.on('click', function (event) {
@@ -53,7 +76,12 @@ $(document).ready(function () {
         dataType: 'json',
         success: function (data) {
           // Handle success if needed
-          productForm.submit();
+          if(protectionInput !== ''){
+             ProtectionPlanAjaxAdd(engravingProductID);
+          }
+          else {
+            productForm.submit();
+          }
         },
         error: function (error) {
           Swal.fire({
@@ -64,31 +92,14 @@ $(document).ready(function () {
         }
       });
     }
-    else if(protectionInput !== ''){
-      $.ajax({
-        type: 'POST',
-        url: '/cart/add.js',
-        data: {
-          quantity: 1,
-          id: engravingProductID
-        },
-        dataType: 'json',
-        success: function (data) {
-          // Handle success if needed
-          productForm.submit();
-        },
-        error: function (error) {
-          Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Plan error!'
-          })
-        }
-      });
-    }
     else {
       // Submit the form programmatically
-      productForm.submit();
+      if(protectionInput !== ''){
+             ProtectionPlanAjaxAdd(engravingProductID);
+          }
+          else {
+            productForm.submit();
+          }
     }
     
   });
