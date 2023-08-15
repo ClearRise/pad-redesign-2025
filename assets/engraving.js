@@ -431,7 +431,8 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
     if($(this).is(":checked")) {
       addProtectionPlan(productId, key, line, true);
     } else {
-      deleteProtection(productId, key, line, true);
+      deleteProtectionPlan(productId, key, line, true);
+      removeProtectionProduct(productId, key, line, true);
     }
   });
 
@@ -511,3 +512,71 @@ function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
       });
     }
 
+function deleteProtectionPlan(itemKey, itemLine) {
+
+  var data = {
+    line: itemLine,
+    properties: {
+      Protection: 'No'
+    }
+  };
+  _updateCart({
+    url: '/cart/change.js',
+    data: data
+  }).then(function(response) {
+    // Handle the response data here
+    document.dispatchEvent(new CustomEvent('cart:build'));
+  });
+}
+
+function removeProtectionProduct(productId, itemKey, itemLine, $autoAdd) {
+  // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
+  var engravingProductID = productId;
+
+  // Get the current cart items
+  $.ajax({
+    type: 'GET',
+    url: '/cart.js',
+    dataType: 'json',
+    success: function (cartData) {
+      // Find the item with the engraving product ID in the cart
+      var itemToUpdate = cartData.items.find(function (item) {
+        return item.variant_id === engravingProductID;
+      });
+
+      if (itemToUpdate) {
+        // Decrease the quantity of the engraving product by 1
+        var newQuantity = itemToUpdate.quantity - 1;
+
+        // Make an AJAX request to update the quantity of the engraving product
+        $.ajax({
+          type: 'POST',
+          url: '/cart/change.js',
+          data: {
+            quantity: newQuantity,
+            id: itemToUpdate.id,
+          },
+          dataType: 'json',
+          success: function (data) {
+            // Handle success if needed
+            document.dispatchEvent(new CustomEvent('cart:build'));
+            //document.dispatchEvent(new CustomEvent('cart:open'));
+          },
+          error: function (error) {
+            // Handle error if needed
+            //document.dispatchEvent(new CustomEvent('cart:close'));
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Error!'
+            })
+          }
+        });
+      }
+    },
+    error: function (error) {
+      // Handle error if needed
+      console.error('Error fetching cart data:', error);
+    }
+  });
+}
