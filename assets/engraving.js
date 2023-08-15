@@ -194,7 +194,7 @@ $(document).ready(function () {
       console.log('no');
     // deleteProtection(productId, key, line, true);
     }
-  //  document.dispatchEvent(new CustomEvent('cart:build'));
+    document.dispatchEvent(new CustomEvent('cart:build'));
   // console.log('yesss');
   });
 
