@@ -245,7 +245,7 @@
           <div class="bold_option bold_option_checkbox ">
              <label>
              <span class="bold_option_element">
-               <input data-line="{{ line }}" data-key="{{ product.key }}" type="checkbox" class="add-protection-plan" name="properties[Protection]" value="Yes" data-protection="{{ first_protection_product_id_var }}">
+               <input data-line="{{ line }}" data-key="{{ product.key }}" type="checkbox" class="add-protection-plan" data-protection="{{ first_protection_product_id_var }}">
              </span>
              <span class="bold_option_title">{{ protection_product.title }}</span>
              <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span>
