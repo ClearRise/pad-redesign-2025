@@ -427,6 +427,7 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
       var productId = $(this).attr('data-protection');
       var key = $(this).attr('data-key');
       var line = $(this).attr('data-line');
+   console.log('in function');
     if($(this).is(":checked")) {
       addProtectionPlan(productId, key, line, true);
     } else {
