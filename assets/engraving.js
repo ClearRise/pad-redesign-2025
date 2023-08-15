@@ -424,7 +424,6 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
 // Handle Protection Plan
 
  $('.cart__page-col').on('click', '.add-protection-plan', function (e) {
-   e.preventDefault();
       var productId = $(this).attr('data-protection');
       var key = $(this).attr('data-key');
       var line = $(this).attr('data-line');
