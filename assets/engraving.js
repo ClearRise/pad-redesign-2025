@@ -190,11 +190,12 @@ $(document).ready(function () {
       var line = $(this).attr('data-line');
     if($(this).is(":checked")) {
       console.log('yesss');
-      addProtection(productId, key, line, true);
+      //addProtection(productId, key, line, true);
     } else {
       console.log('no');
-     deleteProtection(productId, key, line, true);
+    // deleteProtection(productId, key, line, true);
     }
+    document.dispatchEvent(new CustomEvent('cart:build'));
   // console.log('yesss');
   });
 
