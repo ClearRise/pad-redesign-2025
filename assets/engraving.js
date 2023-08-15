@@ -387,7 +387,7 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
     if (result.isConfirmed) {
       // const newEngravingText = result.value.toUpperCase();
       const newEngravingText = result.value;
-
+      var new_lineItem = parseInt(itemLine - 1);
       // Get the current cart contents
       $.ajax({
         type: "GET",
@@ -401,8 +401,7 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
 
           if (lineItemToUpdate) {
             // Preserve existing properties and update engraving
-            var updatedProperties = Object.assign(
-              {},
+            var updatedProperties = Object.assign({}, 
               lineItemToUpdate.properties,
               {
                 engraving: newEngravingText,
@@ -410,7 +409,7 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
             );
 
             var data = {
-              line: itemLine,
+              line: new_lineItem,
               properties: updatedProperties,
             };
 
