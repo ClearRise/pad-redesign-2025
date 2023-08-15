@@ -93,7 +93,7 @@
       {% assign found_protection = false %}
       {% if property_size > 0 %}
         {% for p in product.properties %}
-
+  {{ p }}
         {% if product.metafields.custom.premium_protection_product %}
             {% if p.first contains 'Protection' %}
               {% unless p.last == '' or p.last == null %}
