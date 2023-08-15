@@ -514,6 +514,12 @@ function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
 
 function deleteProtectionPlan(productId, itemKey, itemLine) {
 
+    $.ajax({
+        type: 'GET',
+        url: '/cart.js',
+        dataType: 'json',
+        success: function(cartData) {
+          
    var lineItemToUpdate = cartData.items.find(function(item) {
             return item.key === itemKey;
        });
@@ -537,7 +543,12 @@ function deleteProtectionPlan(productId, itemKey, itemLine) {
     document.dispatchEvent(new CustomEvent('cart:build'));
   });
   }
+},
+error: function(error) {
+          // Handle error
 }
+   });
+    }
 
 function removeProtectionProduct(productId, itemKey, itemLine) {
 
