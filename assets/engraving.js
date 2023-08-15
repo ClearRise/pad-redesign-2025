@@ -479,6 +479,8 @@ function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
             return item.key === itemKey;
           });
 
+          console.log(lineItemToUpdate);
+
           if (lineItemToUpdate) {
             // Preserve existing properties and update engraving
             var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
