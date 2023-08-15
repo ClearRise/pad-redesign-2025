@@ -111,9 +111,11 @@ console.log('test');
        console.log('inside');
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
      }
-console.log($productId);
+
     
     if ($productId != '') {
+
+      console.log($productId);
       // Get the current cart items
       $.ajax({
         type: "GET",
