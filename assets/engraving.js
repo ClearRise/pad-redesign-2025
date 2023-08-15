@@ -77,7 +77,7 @@ $(document).ready(function () {
         success: function (data) {
           // Handle success if needed
           if(protectionInput !== ''){
-             ProtectionPlanAjaxAdd(engravingProductID);
+             ProtectionPlanAjaxAdd(protectionInput);
           }
           else {
             productForm.submit();
@@ -95,7 +95,7 @@ $(document).ready(function () {
     else {
       // Submit the form programmatically
       if(protectionInput !== ''){
-             ProtectionPlanAjaxAdd(engravingProductID);
+             ProtectionPlanAjaxAdd(protectionInput);
           }
           else {
             productForm.submit();
