@@ -181,21 +181,6 @@ $(document).ready(function () {
   });
 
 
-// Handle Protection Plan
-
- $('.cart__page-col').on('click', '.add-protection-plan', function (e) {
-   e.preventDefault();
-      var productId = $(this).attr('data-protection');
-      var key = $(this).attr('data-key');
-      var line = $(this).attr('data-line');
-    if($(this).is(":checked")) {
-      console.log('yesss');
-      addProtection(productId, key, line, true);
-    } else {
-      console.log('no');
-      deleteProtection(productId, key, line, true);
-    }
-  });
 
   
 
@@ -436,6 +421,25 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
 }
 
 
+// Handle Protection Plan
+
+ $('.cart__page-col').on('click', '.add-protection-plan', function (e) {
+   e.preventDefault();
+      var productId = $(this).attr('data-protection');
+      var key = $(this).attr('data-key');
+      var line = $(this).attr('data-line');
+    if($(this).is(":checked")) {
+      console.log('yesss');
+      addProtection(productId, key, line, true);
+    } else {
+      console.log('no');
+      deleteProtection(productId, key, line, true);
+    }
+  });
+
+
+
+
 function AutoAddProtectionProduct(productId) {
    
   $.ajax({
@@ -480,7 +484,7 @@ function addProtection(productId, itemKey, itemLine, $autoAdd) {
           if (lineItemToUpdate) {
             // Preserve existing properties and update engraving
             var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
-              Protection: 'yes'
+              Protection: 'Yes'
             });
 
             var data = {
