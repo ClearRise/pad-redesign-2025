@@ -129,7 +129,7 @@
                         {% if variant.id == protection_product_id %}
                           <span class="bold_option_value_price">
                             <span class="money"> {{ variant.price | money_without_trailing_zeros }}</span></span>
-                          <input type="hidden" name="Protection" class="Protection_p" value="true">
+                          <input type="hidden" name="Protection" class="Protection_p" value="true" data-product-id = "{{ protection_product_id }}">
                         {% endif %}
                       {% endfor %}
                     </label>
