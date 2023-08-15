@@ -540,7 +540,7 @@ function removeProtectionProduct(productId, itemKey, itemLine) {
             var itemToUpdate = cartData.items.find(function (item) {
               return item.variant_id == parseInt(productId);
             });
-            console.log(typeof(productId));
+            console.log(typeof productId);
             console.log(cartData);
             console.log(itemToUpdate);
       
