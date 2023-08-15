@@ -3,9 +3,9 @@
 {% assign match_protection_product = false %}
 
 {% if settings.show_gift_box %}
-  {% assign first_gift_product = settings.product-handle-1 %}
-  {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %} 
-  {% assign second_gift_product = settings.product-handle-2 %} 
+  {% assign first_gift_product = settings['product-handle-1'] %}
+  {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
+  {% assign second_gift_product = settings['product-handle-2'] %}
   {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
   {% if first_gift_product_id == product.id or second_gift_product_id == product.id %}
     {% assign match_gift_product = true %}
@@ -13,60 +13,66 @@
 {% endif %}
 
 {% if settings.second_show_gift_box %}
-  {% assign second_tier_first_gift_product = settings.second_product-handle-1 %}
-  {% assign second_tier_first_gift_product_id = second_tier_first_gift_product.selected_or_first_available_variant.id %} 
-  {% assign second_tier_second_gift_product = settings.second_product-handle-2 %}
+  {% assign second_tier_first_gift_product = settings['second_product-handle-1'] %}
+  {% assign second_tier_first_gift_product_id = second_tier_first_gift_product.selected_or_first_available_variant.id %}
+  {% assign second_tier_second_gift_product = settings['second_product-handle-2'] %}
   {% assign second_tier_second_gift_product_id = second_tier_second_gift_product.selected_or_first_available_variant.id %}
   {% if second_tier_first_gift_product_id == product.id or second_tier_second_gift_product_id == product.id %}
     {% assign match_gift_product = true %}
   {% endif %}
 {% endif %}
 {% if settings.third_show_gift_box %}
-  {% assign third_tier_first_gift_product = settings.third_product-handle-1 %}
-  {% assign third_tier_first_gift_product_id = third_tier_first_gift_product.selected_or_first_available_variant.id %} 
-  {% assign third_tier_second_gift_product = settings.third_product-handle-2 %}
+  {% assign third_tier_first_gift_product = settings['third_product-handle-1'] %}
+  {% assign third_tier_first_gift_product_id = third_tier_first_gift_product.selected_or_first_available_variant.id %}
+  {% assign third_tier_second_gift_product = settings['third_product-handle-2'] %}
   {% assign third_tier_second_gift_product_id = third_tier_second_gift_product.selected_or_first_available_variant.id %}
   {% if third_tier_first_gift_product_id == product.id or third_tier_second_gift_product_id == product.id %}
     {% assign match_gift_product = true %}
   {% endif %}
 {% endif %}
-{% if settings.show_engraving and settings.product-engraving %}
-  {% assign engraving_product = settings.product-engraving %}
-  {% assign engraving_product_id = engraving_product.id %} 
+{% if settings.show_engraving and settings['product-engraving'] %}
+  {% assign engraving_product = settings['product-engraving'] %}
+  {% assign engraving_product_id = engraving_product.id %}
   {% assign engraving_product_id_var = engraving_product.selected_or_first_available_variant.id %}
   {% if engraving_product_id_var == product.id %}
     {% assign match_engraving_product = true %}
   {% endif %}
 {% endif %}
 
-
 {% if product.metafields.custom.premium_protection_product %}
   {% liquid
     assign protection_product = all_products[product.metafields.custom.premium_protection_product]
     assign protection_product_id = protection_product.id
-    assign first_protection_product_id_var = protection_product.selected_or_first_available_variant.id 
-      if first_protection_product_id_var == product.id
-        assign  match_protection_product = true
-      endif
+    assign first_protection_product_id_var = protection_product.selected_or_first_available_variant.id
+    if first_protection_product_id_var == product.id
+      assign match_protection_product = true
+    endif
   %}
-{% endif %} 
+{% endif %}
 
-
-<div class="cart__item rm_border{% if match_engraving_product %} hide{% endif %}{% if match_protection_product %} hide{% endif %}{% if match_gift_product %} hide{% endif %}" data-key="{{ product.key }}" data-handle='{{ product.product.handle }}'>
+<div
+  class="cart__item rm_border{% if match_engraving_product %} hide{% endif %}{% if match_protection_product %} hide{% endif %}{% if match_gift_product %} hide{% endif %}"
+  data-key="{{ product.key }}"
+  data-handle="{{ product.product.handle }}"
+>
   {%- assign img_url = product | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
   <div class="cart__image">
     <a href="{{ product.url }}" style="height: 0; padding-bottom: {{ 100 | divided_by: product.image.aspect_ratio }}%;">
-      <img class="lazyload"
-          data-src="{{ img_url }}"
-          data-widths="[180, 360, 540]"
-          data-aspectratio="{{ product.aspect_ratio }}"
-          data-sizes="auto"
-          alt="{{ product.product.title | escape }}">
+      <img
+        class="lazyload"
+        data-src="{{ img_url }}"
+        data-widths="[180, 360, 540]"
+        data-aspectratio="{{ product.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ product.product.title | escape }}"
+      >
 
       <noscript>
-        <img class="lazyloaded"
+        <img
+          class="lazyloaded"
           src="{{ product | img_url: '400x' }}"
-          alt="{{ product.product.title | escape }}">
+          alt="{{ product.product.title | escape }}"
+        >
       </noscript>
     </a>
   </div>
@@ -78,7 +84,9 @@
       {%- unless product.product.has_only_default_variant -%}
         <div class="cart__item--variants">
           {%- for option in product.options_with_values -%}
-            <div class="black_txt"><span>{{ option.name }}:</span> {{ option.value }}</div>
+            <div class="black_txt">
+              <span>{{ option.name }}:</span> {{ option.value }}
+            </div>
           {%- endfor -%}
         </div>
       {%- endunless -%}
@@ -93,133 +101,170 @@
       {% assign found_protection = false %}
       {% if property_size > 0 %}
         {% for p in product.properties %}
-        {% if product.product.metafields.custom.premium_protection_product %}
+          {% if product.product.metafields.custom.premium_protection_product %}
             {% if p.first contains 'Protection' %}
               {% unless p.last == '' or p.last == null %}
-                {%  assign protection_product = all_products[product.product.metafields.custom.premium_protection_product] %}
+                {% assign protection_product = all_products[product.product.metafields.custom.premium_protection_product] %}
                 {% assign protection_product_id = protection_product.selected_or_first_available_variant.id %}
 
                 <div class="product-option">
-
-                <div class="bold_option bold_option_checkbox ">
-                   <label>
-                   <span class="bold_option_element">
-                     <input type="checkbox" class="protection-plan" name="properties[Protection]" value="Yes" data-protection="{{ protection_product_id }}">
-                   </span>
-                   <span class="bold_option_title">{{ protection_product.title }}</span>
-                     {% for variant in protection_product.variants %}
-                  {% if variant.id == protection_product_id %}
-                    <span class="bold_option_value_price"><span class="money"> {{ variant.price | money_without_trailing_zeros }}</span></span>
-                    <input type="hidden" name="Protection" class="Protection_p" value="true" />
-                  {% endif %}
-                {% endfor %}
-                   </label>
-                   <span class="bold_tooltip"><small>Protect your ring for a lifetime. See below tab for details.</small></span>
-                </div> 
-                
-                  <span id="delete-engravingx-btn" data-line="{{ line }}" data-key="{{ product.key }}" class="delete-engraving-btn engraving-icon engraving-remove-icon deleteIconFor{{ product.key }}" data-id="deleteIconFor{{ product.key }}">
-                    {% render 'icon-delete' %}
-                  </span>
+                  <div class="bold_option bold_option_checkbox ">
+                    <label>
+                      <span class="bold_option_element">
+                        <input
+                          type="checkbox"
+                          class="protection-plan"
+                          name="properties[Protection]"
+                          value="Yes"
+                          data-protection="{{ protection_product_id }}"
+                        >
+                      </span>
+                      <span class="bold_option_title">{{ protection_product.title }}</span>
+                      {% for variant in protection_product.variants %}
+                        {% if variant.id == protection_product_id %}
+                          <span class="bold_option_value_price"
+                            ><span class="money"> {{ variant.price | money_without_trailing_zeros }}</span></span
+                          >
+                          <input type="hidden" name="Protection" class="Protection_p" value="true">
+                        {% endif %}
+                      {% endfor %}
+                    </label>
+                    <span class="bold_tooltip">
+                      <small>Protect your ring for a lifetime. See below tab for details.</small>
+                    </span>
+                  </div>
                 </div>
-                  
+
                 {% assign found_protection = true %}
               {% endunless %}
             {% endif %}
           {% endif %}
-          
-
-      
-          {% if settings.show_engraving and settings.product-engraving %}
+<br>
+          {% if settings.show_engraving and settings['product-engraving'] %}
             {% if p.first contains 'engraving' %}
               {% unless p.last == '' or p.last == null %}
-                {% assign engrave_product = settings.product-engraving %}
+                {% assign engrave_product = settings['product-engraving'] %}
                 {% assign first_gift_product_id_var = engrave_product.selected_or_first_available_variant.id %}
 
                 <div class="product-option">
-                  <span id="edit-engraving-btn" data-line="{{ line }}" data-key="{{ product.key }}" data-text="{{ p.last }}" class="edit-engraving-btn engraving-icon engraving-edit-icon desktop_only editIconFor{{ product.key }}" data-id="editIconFor{{ product.key }}">
+                  <span
+                    id="edit-engraving-btn"
+                    data-line="{{ line }}"
+                    data-key="{{ product.key }}"
+                    data-text="{{ p.last }}"
+                    class="edit-engraving-btn engraving-icon engraving-edit-icon desktop_only editIconFor{{ product.key }}"
+                    data-id="editIconFor{{ product.key }}"
+                  >
                     {% render 'icon-edit' %}
                   </span>
-                  <span id="delete-engraving-btn" data-line="{{ line }}" data-key="{{ product.key }}" class="delete-engraving-btn engraving-icon engraving-remove-icon deleteIconFor{{ product.key }}" data-id="deleteIconFor{{ product.key }}">
+                  <span
+                    id="delete-engraving-btn"
+                    data-line="{{ line }}"
+                    data-key="{{ product.key }}"
+                    class="delete-engraving-btn engraving-icon engraving-remove-icon deleteIconFor{{ product.key }}"
+                    data-id="deleteIconFor{{ product.key }}"
+                  >
                     {% render 'icon-delete' %}
                   </span>
                 </div>
-                
+
                 {% for variant in engrave_product.variants %}
                   {% if variant.id == first_gift_product_id_var %}
-                    <p class="black_txt en_price">Engraving Price: {{ variant.price | money_without_trailing_zeros }}</p>
-                    <input type="hidden" name="engraving" class="engraving_p" value="true" />
+                    <p class="black_txt en_price">
+                      Engraving Price: {{ variant.price | money_without_trailing_zeros }}
+                    </p>
+                    <input type="hidden" name="engraving" class="engraving_p" value="true">
                   {% endif %}
                 {% endfor %}
-    
-                
+
                 {% assign found_engrave = true %}
               {% endunless %}
             {% endif %}
           {% endif %}
         {% endfor %}
 
-{% comment %}
- BOLD hidden properties
-        {% for p in product.properties %}
-          {%- assign first_character_in_key = p.first | truncate: 1, '' -%}
-          {% unless p.last == blank or first_character_in_key == '_' %}
-            <div>
-              {{ p.first }}:
-              {% if p.last contains '/uploads/' %}
-                <a href="{{ p.last }}">
-{% assign file_type = p.last | split: '.' | last | downcase %}
-{% assign file_types = 'jpg,jpeg,webp,gif,png,apng,avif,svg,bmp,ico,tiff' | split: ',' %}
-{% if file_types contains file_type %}
-  <div class="bcpo-cart-file"><img src="{{ p.last }}" style="max-width: 50px; height: auto;"></div>
-{% else %}
-  <span class="bcpo-cart-file">Uploaded file</span>
-{% endif %}
-</a>
-              {% else %}
-                {{ p.last }}
-              {% endif %}
-            </div>
-          {% endunless %}
-        {% endfor %}
-      
-{% endcomment %}
-{% endif %}
-{% unless found_engrave %}
-  {% paginate collections.all.products by 1000 %}
-    {% assign product_id = product.product_id | times: 1 %}
-    {% assign products_obj = collections.all.products | where: 'id', product_id %}
-    {% assign productObj = products_obj[0] %}
-  {% endpaginate %}
+        {% comment %}
+           BOLD hidden properties
+                  {% for p in product.properties %}
+                    {%- assign first_character_in_key = p.first | truncate: 1, '' -%}
+                    {% unless p.last == blank or first_character_in_key == '_' %}
+                      <div>
+                        {{ p.first }}:
+                        {% if p.last contains '/uploads/' %}
+                          <a href="{{ p.last }}">
+          {% assign file_type = p.last | split: '.' | last | downcase %}
+          {% assign file_types = 'jpg,jpeg,webp,gif,png,apng,avif,svg,bmp,ico,tiff' | split: ',' %}
+          {% if file_types contains file_type %}
+            <div class="bcpo-cart-file"><img src="{{ p.last }}" style="max-width: 50px; height: auto;"></div>
+          {% else %}
+            <span class="bcpo-cart-file">Uploaded file</span>
+          {% endif %}
+          </a>
+                        {% else %}
+                          {{ p.last }}
+                        {% endif %}
+                      </div>
+                    {% endunless %}
+                  {% endfor %}
+        {% endcomment %}
+      {% endif %}
+      {% unless found_engrave %}
+        {% paginate collections.all.products by 1000 %}
+          {% assign product_id = product.product_id | times: 1 %}
+          {% assign products_obj = collections.all.products | where: 'id', product_id %}
+          {% assign productObj = products_obj[0] %}
+        {% endpaginate %}
 
-
-    <a data-line="{{ line }}" data-key="{{ product.key }}" class="add-engraving-inline-button" title="Add an engraving" role="button" tabindex="0">Add an engraving</a>
-
-{% endunless %}
+        <a
+          data-line="{{ line }}"
+          data-key="{{ product.key }}"
+          class="add-engraving-inline-button"
+          title="Add an engraving"
+          role="button"
+          tabindex="0"
+          >Add an engraving</a
+        >
+      {% endunless %}
     </div>
     <div class="cart__item-sub">
       <div>
         <div class="js-qty__wrapper">
           <label for="cart_updates_{{ product.key }}" class="hidden-label">{{ 'cart.label.quantity' | t }}</label>
-          <input type="text"
-            {% if match_gift_product %}style="pointer-events: none;"{% endif %}
+          <input
+            type="text"
+            {% if match_gift_product %}
+              style="pointer-events: none;"
+            {% endif %}
             id="cart_updates_{{ product.key }}"
             name="updates[]"
             class="js-qty__num black_txt"
             value="{{ product.quantity }}"
             min="0"
             pattern="[0-9]*"
-            data-id="{{ product.key }}">
-          <button type="button"
+            data-id="{{ product.key }}"
+          >
+          <button
+            type="button"
             class="js-qty__adjust js-qty__adjust--minus"
-            aria-label="{{ 'cart.general.reduce_quantity' | t }}">
-              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" viewBox="0 0 20 20"><path fill="#444" d="M17.543 11.029H2.1A1.032 1.032 0 0 1 1.071 10c0-.566.463-1.029 1.029-1.029h15.443c.566 0 1.029.463 1.029 1.029 0 .566-.463 1.029-1.029 1.029z"/></svg>
-              <span class="icon__fallback-text" aria-hidden="true">&minus;</span>
+            aria-label="{{ 'cart.general.reduce_quantity' | t }}"
+          >
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" viewBox="0 0 20 20">
+              <path fill="#444" d="M17.543 11.029H2.1A1.032 1.032 0 0 1 1.071 10c0-.566.463-1.029 1.029-1.029h15.443c.566 0 1.029.463 1.029 1.029 0 .566-.463 1.029-1.029 1.029z"/>
+            </svg>
+            <span class="icon__fallback-text" aria-hidden="true">&minus;</span>
           </button>
-          <button {% if match_gift_product %}style="pointer-events: none;"{% endif %} type="button"
+          <button
+            {% if match_gift_product %}
+              style="pointer-events: none;"
+            {% endif %}
+            type="button"
             class="js-qty__adjust js-qty__adjust--plus"
-            aria-label="{{ 'cart.general.increase_quantity' | t }}">
-              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 20 20"><path fill="#444" d="M17.409 8.929h-6.695V2.258c0-.566-.506-1.029-1.071-1.029s-1.071.463-1.071 1.029v6.671H1.967C1.401 8.929.938 9.435.938 10s.463 1.071 1.029 1.071h6.605V17.7c0 .566.506 1.029 1.071 1.029s1.071-.463 1.071-1.029v-6.629h6.695c.566 0 1.029-.506 1.029-1.071s-.463-1.071-1.029-1.071z"/></svg>
-              <span class="icon__fallback-text" aria-hidden="true">+</span>
+            aria-label="{{ 'cart.general.increase_quantity' | t }}"
+          >
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 20 20">
+              <path fill="#444" d="M17.409 8.929h-6.695V2.258c0-.566-.506-1.029-1.071-1.029s-1.071.463-1.071 1.029v6.671H1.967C1.401 8.929.938 9.435.938 10s.463 1.071 1.029 1.071h6.605V17.7c0 .566.506 1.029 1.071 1.029s1.071-.463 1.071-1.029v-6.629h6.695c.566 0 1.029-.506 1.029-1.071s-.463-1.071-1.029-1.071z"/>
+            </svg>
+            <span class="icon__fallback-text" aria-hidden="true">+</span>
           </button>
         </div>
 
@@ -234,21 +279,28 @@
         {% if product.original_price != product.final_price %}
           <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
           <small class="cart__price cart__price--strikethrough  black_txt">
-            <span class="bcpo-cart-item-original-price" data-key="{{product.key}}">{{ product.original_price | money }}</span>
+            <span class="bcpo-cart-item-original-price" data-key="{{product.key}}">
+              {{- product.original_price | money -}}
+            </span>
           </small>
           <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
           <span class="cart__price cart__discount black_txt">
             <span class="bcpo-cart-item-price" data-key="{{product.key}}">{{ product.final_price | money }}</span>
           </span>
         {% else %}
-          <span class="cart__price  black_txt"><span class="old_cart_item_price" style="display:none !important;"></span>
-            <span class="bcpo-cart-item-original-price" data-key="{{product.key}}">{{ product.original_price | money }}</span>
+          <span class="cart__price  black_txt"
+            ><span class="old_cart_item_price" style="display:none !important;"></span>
+            <span class="bcpo-cart-item-original-price" data-key="{{product.key}}">
+              {{- product.original_price | money -}}
+            </span>
           </span>
         {% endif %}
 
         {%- if product.line_level_discount_allocations != blank -%}
           {%- for discount_allocation in product.line_level_discount_allocations -%}
-            <small class="cart__discount">{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})</small>
+            <small class="cart__discount">
+              {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})</small
+            >
           {%- endfor -%}
         {%- endif -%}
 
@@ -266,7 +318,7 @@
 
           <div class="product__unit-price">{{ product.unit_price | money }}/{{ unit_price_base_unit }}</div>
         {%- endif -%}
-      </div>       
+      </div>
     </div>
   </div>
 </div>
