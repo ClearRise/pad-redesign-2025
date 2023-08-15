@@ -100,7 +100,7 @@ $(document).ready(function () {
     var $this = $(this);
     var $remove_url = $(this).attr("href");
     var $productId = '';
-console.log('test');
+
      if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
        
      }
@@ -126,7 +126,7 @@ console.log('test');
           console.log(cartData);
           // Find the item with the engraving product ID in the cart
           var itemToUpdate = cartData.items.find(function (item) {
-            return item.variant_id === $productId;
+            return item.variant_id === parseInt($productId);
           });
 
           if (itemToUpdate) {
