@@ -94,7 +94,42 @@
       {% if property_size > 0 %}
         {% for p in product.properties %}
 
-        
+        {% if product.metafields.custom.premium_protection_product %}
+            {% if p.first contains 'Protection' %}
+              {% unless p.last == '' or p.last == null %}
+                {%  assign protection_product = all_products[product.metafields.custom.premium_protection_product] %}
+                {% assign protection_product_id = protection_product.selected_or_first_available_variant.id %}
+
+              <div class="product-option">
+
+                <div class="bold_option bold_option_checkbox ">
+                   <label>
+                   <span class="bold_option_element">
+                     <input type="checkbox" class="protection-plan" name="properties[Protection]" value="Yes" data-protection="{{ protection_product_id }}">
+                   </span>
+                   <span class="bold_option_title">{{ protection_product.title }}</span>
+                   <span class="bold_option_value_price"><span class="money">{% if protection_product.price != '' %}{{ protection_product.price }}{% endif %} </span></span>
+                   </label>
+                   <span class="bold_tooltip"><small>Protect your ring for a lifetime. See below tab for details.</small></span>
+                </div> 
+                
+                  <span id="delete-engravingx-btn" data-line="{{ line }}" data-key="{{ product.key }}" class="delete-engraving-btn engraving-icon engraving-remove-icon deleteIconFor{{ product.key }}" data-id="deleteIconFor{{ product.key }}">
+                    {% render 'icon-delete' %}
+                  </span>
+                </div>
+                
+                {% for variant in protection_product.variants %}
+                  {% if variant.id == protection_product_id %}
+                    <p class="black_txt en_price">Protection Plan Price: {{ variant.price | money_without_trailing_zeros }}</p>
+                    <input type="hidden" name="Protection" class="Protection_p" value="true" />
+                  {% endif %}
+                {% endfor %}
+    
+                
+                {% assign found_protection = true %}
+              {% endunless %}
+            {% endif %}
+          {% endif %}
           
 
       
