@@ -99,6 +99,18 @@ $(document).ready(function () {
     event.preventDefault();
     var $this = $(this);
     var $remove_url = $(this).attr("href");
+    var $productId = '';
+
+     if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".engraving_p").val() == "true")) {
+       
+     }
+     else if ($(this).parents(".cart__item").find(".engraving_p").val() == "true") {
+       $productId = engravingProductID;
+     }
+     else if ($(this).parents(".cart__item").find(".Protection_p").val() == "true") {
+       $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
+     }
+    
     if ($(this).parents(".cart__item").find(".engraving_p").val() == "true") {
       // Get the current cart items
       $.ajax({
