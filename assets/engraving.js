@@ -101,7 +101,7 @@ $(document).ready(function () {
     var $remove_url = $(this).attr("href");
     var $productId = '';
 
-     if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".engraving_p").val() == "true")) {
+     if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
        
      }
      else if ($(this).parents(".cart__item").find(".engraving_p").val() == "true") {
@@ -110,8 +110,9 @@ $(document).ready(function () {
      else if ($(this).parents(".cart__item").find(".Protection_p").val() == "true") {
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
      }
+
     
-    if ($(this).parents(".cart__item").find(".engraving_p").val() == "true") {
+    if ($productId != '') {
       // Get the current cart items
       $.ajax({
         type: "GET",
