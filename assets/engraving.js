@@ -111,6 +111,9 @@ $(document).ready(function () {
        console.log('inside');
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
      }
+    else {
+      $productId = '';
+    }
 
     
     if ($productId != '') {
