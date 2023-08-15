@@ -514,12 +514,21 @@ function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
 
 function deleteProtectionPlan(productId, itemKey, itemLine) {
 
-  var data = {
-    line: itemLine,
-    properties: {
-      Protection: ''
-    }
-  };
+   var lineItemToUpdate = cartData.items.find(function(item) {
+            return item.key === itemKey;
+       });
+
+  if (lineItemToUpdate) {
+            // Preserve existing properties and update engraving
+            var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
+              Protection: ''
+            });
+
+            var data = {
+              line: itemLine,
+              properties: updatedProperties
+            };
+
   _updateCart({
     url: '/cart/change.js',
     data: data
@@ -527,6 +536,7 @@ function deleteProtectionPlan(productId, itemKey, itemLine) {
     // Handle the response data here
     document.dispatchEvent(new CustomEvent('cart:build'));
   });
+  }
 }
 
 function removeProtectionProduct(productId, itemKey, itemLine) {
