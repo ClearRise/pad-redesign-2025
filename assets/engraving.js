@@ -466,7 +466,6 @@ function AutoAddProtectionProduct(productId) {
   });
 }
 
-
 function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
 
       // Get the current cart contents
@@ -530,53 +529,51 @@ function deleteProtectionPlan(productId, itemKey, itemLine) {
 }
 
 function removeProtectionProduct(productId, itemKey, itemLine) {
-  // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
-  var engravingProductID = productId;
 
-  // Get the current cart items
-  $.ajax({
-    type: 'GET',
-    url: '/cart.js',
-    dataType: 'json',
-    success: function (cartData) {
-      // Find the item with the engraving product ID in the cart
-      var itemToUpdate = cartData.items.find(function (item) {
-        return item.variant_id === engravingProductID;
-      });
-
-      if (itemToUpdate) {
-        // Decrease the quantity of the engraving product by 1
-        var newQuantity = itemToUpdate.quantity - 1;
-
-        // Make an AJAX request to update the quantity of the engraving product
+      // Get the current cart items
         $.ajax({
-          type: 'POST',
-          url: '/cart/change.js',
-          data: {
-            quantity: newQuantity,
-            id: itemToUpdate.id,
-          },
+          type: 'GET',
+          url: '/cart.js',
           dataType: 'json',
-          success: function (data) {
-            // Handle success if needed
-            document.dispatchEvent(new CustomEvent('cart:build'));
-            //document.dispatchEvent(new CustomEvent('cart:open'));
+          success: function (cartData) {
+            // Find the item with the engraving product ID in the cart
+            var itemToUpdate = cartData.items.find(function (item) {
+              return item.variant_id === productId;
+            });
+      
+            if (itemToUpdate) {
+              // Decrease the quantity of the engraving product by 1
+              var newQuantity = itemToUpdate.quantity - 1;
+      
+              // Make an AJAX request to update the quantity of the engraving product
+              $.ajax({
+                type: 'POST',
+                url: '/cart/change.js',
+                data: {
+                  quantity: newQuantity,
+                  id: itemToUpdate.id,
+                },
+                dataType: 'json',
+                success: function (data) {
+                  // Handle success if needed
+                  document.dispatchEvent(new CustomEvent('cart:build'));
+                  //document.dispatchEvent(new CustomEvent('cart:open'));
+                },
+                error: function (error) {
+                  // Handle error if needed
+                  //document.dispatchEvent(new CustomEvent('cart:close'));
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Error!'
+                  })
+                }
+              });
+            }
           },
           error: function (error) {
             // Handle error if needed
-            //document.dispatchEvent(new CustomEvent('cart:close'));
-            Swal.fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: 'Error!'
-            })
+            console.error('Error fetching cart data:', error);
           }
         });
-      }
-    },
-    error: function (error) {
-      // Handle error if needed
-      console.error('Error fetching cart data:', error);
-    }
-  });
 }
