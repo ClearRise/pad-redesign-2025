@@ -120,7 +120,7 @@ $(document).ready(function () {
         success: function (cartData) {
           // Find the item with the engraving product ID in the cart
           var itemToUpdate = cartData.items.find(function (item) {
-            return item.variant_id === engravingProductID;
+            return item.variant_id === $productId;
           });
 
           if (itemToUpdate) {
