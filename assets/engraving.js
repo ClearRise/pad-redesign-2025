@@ -409,7 +409,7 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
             );
 
             var data = {
-              line: new_lineItem,
+              id: itemKey,
               properties: updatedProperties,
             };
 
