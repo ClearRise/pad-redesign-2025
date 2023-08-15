@@ -540,6 +540,8 @@ function removeProtectionProduct(productId, itemKey, itemLine) {
             var itemToUpdate = cartData.items.find(function (item) {
               return item.variant_id === productId;
             });
+
+            console.log('yes');
       
             if (itemToUpdate) {
               // Decrease the quantity of the engraving product by 1
