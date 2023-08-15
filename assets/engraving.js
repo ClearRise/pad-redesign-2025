@@ -429,10 +429,8 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
       var key = $(this).attr('data-key');
       var line = $(this).attr('data-line');
     if($(this).is(":checked")) {
-      console.log('yesss');
-      addProtection(productId, key, line, true);
+      addProtectionPlan(productId, key, line, true);
     } else {
-      console.log('no');
       deleteProtection(productId, key, line, true);
     }
   });
@@ -468,7 +466,7 @@ function AutoAddProtectionProduct(productId) {
 }
 
 
-function addProtection(productId, itemKey, itemLine, $autoAdd) {
+function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
 
       // Get the current cart contents
       $.ajax({
