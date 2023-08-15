@@ -114,6 +114,9 @@
                         <input
                           type="checkbox"
                           class="protection-plan"
+                          {% if p.first contains 'Protection' and p.last contains 'Yes' %}
+                              checked="checked"
+                          {% endif %}
                           name="properties[Protection]"
                           value="Yes"
                           data-protection="{{ protection_product_id }}"
