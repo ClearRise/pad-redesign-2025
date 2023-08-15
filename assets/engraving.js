@@ -431,8 +431,8 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
     if($(this).is(":checked")) {
       addProtectionPlan(productId, key, line, true);
     } else {
-      deleteProtectionPlan(productId, key, line, true);
-      removeProtectionProduct(productId, key, line, true);
+      deleteProtectionPlan(productId, key, line);
+      removeProtectionProduct(productId, key, line);
     }
   });
 
@@ -512,7 +512,7 @@ function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
       });
     }
 
-function deleteProtectionPlan(itemKey, itemLine) {
+function deleteProtectionPlan(productId, itemKey, itemLine) {
 
   var data = {
     line: itemLine,
@@ -529,7 +529,7 @@ function deleteProtectionPlan(itemKey, itemLine) {
   });
 }
 
-function removeProtectionProduct(productId, itemKey, itemLine, $autoAdd) {
+function removeProtectionProduct(productId, itemKey, itemLine) {
   // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
   var engravingProductID = productId;
 
