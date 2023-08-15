@@ -595,6 +595,7 @@ function removeProtectionProduct(productId, itemKey, itemLine) {
     url: "/cart.js",
     dataType: "json",
     success: function (cartData) {
+      console.log(cartData);
       // Find the item with the engraving product ID in the cart
       var itemToUpdate = cartData.items.find(function (item) {
         return item.variant_id === parseInt(productId);
