@@ -180,6 +180,23 @@ $(document).ready(function () {
     removeEngravingProduct();
   });
 
+
+// Handle Protection Plan
+
+ $(document).on('click', '.add-protection-plan', function (e) {
+    e.preventDefault();
+      var productId = $(this).attr('data-protection');
+      var key = $(this).attr('data-key');
+      var line = $(this).attr('data-line');
+    if($(this).is(":checked")) {
+      addProtection(productId, key, line, true);
+    } else {
+     deleteProtection(productId, key, line, true);
+    }
+  });
+
+  
+
   //handle adding engraving product
   /*document.addEventListener('ajaxProduct:added', function (evt) {
     // Get the added product information
