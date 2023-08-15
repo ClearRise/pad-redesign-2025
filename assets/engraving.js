@@ -107,7 +107,7 @@ $(document).ready(function () {
     event.preventDefault();
     var $this = $(this);
     var $remove_url = $(this).attr('href');
-    if($(this).parents('.cart__item').find('.engraving_p').val() == 'true') {
+    if($(this).parents('.cart__item').find('.engraving_p').val() == 'true' || $(this).parents('.cart__item').find('.Protection_p').val() == 'true') {
       // Get the current cart items
       $.ajax({
         type: 'GET',
