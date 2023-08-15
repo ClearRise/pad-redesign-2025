@@ -113,6 +113,8 @@
                       <span class="bold_option_element">
                         <input
                           type="checkbox"
+                          data-line="{{ line }}"
+                          data-key="{{ product.key }}"
                           class="add-protection-plan"
                           {% if p.first contains 'Protection' and p.last contains 'Yes' %}
                               checked="checked"
