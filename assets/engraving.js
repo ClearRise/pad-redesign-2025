@@ -183,8 +183,7 @@ $(document).ready(function () {
 
 // Handle Protection Plan
 
-
-   $('.add-protection-plan').click(function(e) {
+ $('.cart__page-col').on('click', '.add-protection-plan', function (e) {
       var productId = $(this).attr('data-protection');
       var key = $(this).attr('data-key');
       var line = $(this).attr('data-line');
