@@ -338,7 +338,7 @@ function deleteEngraving(itemKey, itemLine) {
         });
 
         var data = {
-          line: itemLine,
+           id: itemKey,
           properties: updatedProperties,
         };
 
@@ -505,7 +505,7 @@ function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
 
         console.log(updatedProperties);
         var data = {
-          line: itemLine,
+           id: itemKey,
           properties: updatedProperties,
         };
 
@@ -547,7 +547,7 @@ function deleteProtectionPlan(productId, itemKey, itemLine) {
         });
 
         var data = {
-          line: itemLine,
+          id: itemKey,
           properties: updatedProperties,
         };
 
