@@ -96,10 +96,10 @@
         {% if product.product.metafields.custom.premium_protection_product %}
             {% if p.first contains 'Protection' %}
               {% unless p.last == '' or p.last == null %}
-                {%  assign protection_product = all_products[product.metafields.custom.premium_protection_product] %}
+                {%  assign protection_product = all_products[product.product.metafields.custom.premium_protection_product] %}
                 {% assign protection_product_id = protection_product.selected_or_first_available_variant.id %}
 
-              <div class="product-option">
+                <div class="product-option">
 
                 <div class="bold_option bold_option_checkbox ">
                    <label>
