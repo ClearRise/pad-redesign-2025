@@ -4,185 +4,172 @@ $(document).ready(function () {
   const productFormSubmitBtn = $(".add-to-cart span");
   const engravingInput = $(".product-page-engraving-input");
   const protectField = $(".protection-plan");
-  let protectionInput = '';
+  let protectionInput = "";
   const engravingProductID = theme.engraving.engraving_var_id;
   let hiddenFieldsAdded = false;
 
-  
   if (engravingInput.length) {
-    engravingInput.on('input', function () {
+    engravingInput.on("input", function () {
       let engravingValue = engravingInput.val();
       let field = $(this);
-  
+
       // field.val(field.val().toUpperCase());
-  
-      if (engravingValue !== '') {
-        productFormSubmitBtn.html('<span>ADD TO CART + ENGRAVING</span>');
-      } else if (engravingValue === '') {
-        productFormSubmitBtn.html('<span>ADD TO CART</span>');
+
+      if (engravingValue !== "") {
+        productFormSubmitBtn.html("<span>ADD TO CART + ENGRAVING</span>");
+      } else if (engravingValue === "") {
+        productFormSubmitBtn.html("<span>ADD TO CART</span>");
       }
     });
   }
 
-  protectField.click(function() {
-    if($(this).is(":checked")) {
-      protectionInput = $(this).attr('data-protection');
+  protectField.click(function () {
+    if ($(this).is(":checked")) {
+      protectionInput = $(this).attr("data-protection");
     } else {
-      protectionInput = '';      
+      protectionInput = "";
     }
     console.log(protectionInput);
   });
 
-
-
-  function ProtectionPlanAjaxAdd(productId){
-     $.ajax({
-        type: 'POST',
-        url: '/cart/add.js',
-        data: {
-          quantity: 1,
-          id: productId
-        },
-        dataType: 'json',
-        success: function (data) {
-          // Handle success if needed
-          productForm.submit();
-        },
-        error: function (error) {
-          Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Plan error!'
-          })
-        }
-      });
+  function ProtectionPlanAjaxAdd(productId) {
+    $.ajax({
+      type: "POST",
+      url: "/cart/add.js",
+      data: {
+        quantity: 1,
+        id: productId,
+      },
+      dataType: "json",
+      success: function (data) {
+        // Handle success if needed
+        productForm.submit();
+      },
+      error: function (error) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Plan error!",
+        });
+      },
+    });
   }
-  
 
-  productFormSubmit.on('click', function (event) {
+  productFormSubmit.on("click", function (event) {
     // Prevent the default form submission
     event.preventDefault();
-  
+
     let engravingValue = engravingInput.val();
-  
-    if (engravingValue !== '') {
+
+    if (engravingValue !== "") {
       $.ajax({
-        type: 'POST',
-        url: '/cart/add.js',
+        type: "POST",
+        url: "/cart/add.js",
         data: {
           quantity: 1,
-          id: engravingProductID
+          id: engravingProductID,
         },
-        dataType: 'json',
+        dataType: "json",
         success: function (data) {
           // Handle success if needed
-          if(protectionInput !== ''){
-             ProtectionPlanAjaxAdd(protectionInput);
-          }
-          else {
+          if (protectionInput !== "") {
+            ProtectionPlanAjaxAdd(protectionInput);
+          } else {
             productForm.submit();
           }
         },
         error: function (error) {
           Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Error adding engraving product to the cart!'
-          })
-        }
+            icon: "error",
+            title: "Oops...",
+            text: "Error adding engraving product to the cart!",
+          });
+        },
       });
-    }
-    else {
+    } else {
       // Submit the form programmatically
-      if(protectionInput !== ''){
-             ProtectionPlanAjaxAdd(protectionInput);
-          }
-          else {
-            productForm.submit();
-          }
+      if (protectionInput !== "") {
+        ProtectionPlanAjaxAdd(protectionInput);
+      } else {
+        productForm.submit();
+      }
     }
-    
   });
-  $(document).on('click', '.cart__remove a', function (event) {
+  $(document).on("click", ".cart__remove a", function (event) {
     event.preventDefault();
     var $this = $(this);
-    var $remove_url = $(this).attr('href');
-    if($(this).parents('.cart__item').find('.engraving_p').val() == 'true') {
+    var $remove_url = $(this).attr("href");
+    if ($(this).parents(".cart__item").find(".engraving_p").val() == "true") {
       // Get the current cart items
       $.ajax({
-        type: 'GET',
-        url: '/cart.js',
-        dataType: 'json',
+        type: "GET",
+        url: "/cart.js",
+        dataType: "json",
         success: function (cartData) {
           // Find the item with the engraving product ID in the cart
           var itemToUpdate = cartData.items.find(function (item) {
             return item.variant_id === engravingProductID;
           });
-    
+
           if (itemToUpdate) {
             // Decrease the quantity of the engraving product by 1
             var newQuantity = itemToUpdate.quantity - 1;
-    
+
             // Make an AJAX request to update the quantity of the engraving product
             $.ajax({
-              type: 'POST',
-              url: '/cart/change.js',
+              type: "POST",
+              url: "/cart/change.js",
               data: {
                 quantity: newQuantity,
                 id: itemToUpdate.id,
               },
-              dataType: 'json',
+              dataType: "json",
               success: function (data) {
                 window.location.href = $remove_url;
               },
               error: function (error) {
                 Swal.fire({
-                  icon: 'error',
-                  title: 'Oops...',
-                  text: 'Error!'
-                })
-              }
+                  icon: "error",
+                  title: "Oops...",
+                  text: "Error!",
+                });
+              },
             });
           }
         },
         error: function (error) {
           // Handle error if needed
-          console.error('Error fetching cart data:', error);
-        }
+          console.error("Error fetching cart data:", error);
+        },
       });
-    }
-    else {
+    } else {
       window.location.href = $remove_url;
     }
   });
-  $(document).on('click', '.add-engraving-inline-button', function (e) {
+  $(document).on("click", ".add-engraving-inline-button", function (e) {
     e.preventDefault();
-    var text = '';
-    var key = $(this).attr('data-key');
-    var line = $(this).attr('data-line');
+    var text = "";
+    var key = $(this).attr("data-key");
+    var line = $(this).attr("data-line");
     editEngraving(text, key, line, true);
   });
   // Handle click event on elements with class "edit-engraving-btn"
-  $(document).on('click', '.edit-engraving-btn', function (e) {
+  $(document).on("click", ".edit-engraving-btn", function (e) {
     e.preventDefault();
-    var text = $(this).attr('data-text');
-    var key = $(this).attr('data-key');
-    var line = $(this).attr('data-line');
+    var text = $(this).attr("data-text");
+    var key = $(this).attr("data-key");
+    var line = $(this).attr("data-line");
     editEngraving(text, key, line, false);
   });
 
   // Handle click event on elements with class "delete-engraving-btn"
-  $(document).on('click', '.delete-engraving-btn', function (e) {
+  $(document).on("click", ".delete-engraving-btn", function (e) {
     e.preventDefault();
-    var key = $(this).attr('data-key');
-    var itemLine = $(this).attr('data-line');
+    var key = $(this).attr("data-key");
+    var itemLine = $(this).attr("data-line");
     deleteEngraving(key, itemLine);
     removeEngravingProduct();
   });
-
-
-
-  
 
   //handle adding engraving product
   /*document.addEventListener('ajaxProduct:added', function (evt) {
@@ -232,27 +219,27 @@ function AutoAddEngravingProduct() {
   var engravingProductID = theme.engraving.engraving_var_id;
 
   $.ajax({
-    type: 'POST',
-    url: '/cart/add.js',
+    type: "POST",
+    url: "/cart/add.js",
     data: {
       quantity: 1,
-      id: engravingProductID
+      id: engravingProductID,
     },
-    dataType: 'json',
+    dataType: "json",
     success: function (data) {
       // Handle success if needed
-      document.dispatchEvent(new CustomEvent('cart:build'));
+      document.dispatchEvent(new CustomEvent("cart:build"));
       //document.dispatchEvent(new CustomEvent('cart:open'));
     },
     error: function (error) {
       // Handle error if needed
       //document.dispatchEvent(new CustomEvent('cart:close'));
       Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Error!'
-      })
-    }
+        icon: "error",
+        title: "Oops...",
+        text: "Error!",
+      });
+    },
   });
 }
 
@@ -262,9 +249,9 @@ function removeEngravingProduct() {
 
   // Get the current cart items
   $.ajax({
-    type: 'GET',
-    url: '/cart.js',
-    dataType: 'json',
+    type: "GET",
+    url: "/cart.js",
+    dataType: "json",
     success: function (cartData) {
       // Find the item with the engraving product ID in the cart
       var itemToUpdate = cartData.items.find(function (item) {
@@ -277,89 +264,125 @@ function removeEngravingProduct() {
 
         // Make an AJAX request to update the quantity of the engraving product
         $.ajax({
-          type: 'POST',
-          url: '/cart/change.js',
+          type: "POST",
+          url: "/cart/change.js",
           data: {
             quantity: newQuantity,
             id: itemToUpdate.id,
           },
-          dataType: 'json',
+          dataType: "json",
           success: function (data) {
             // Handle success if needed
-            document.dispatchEvent(new CustomEvent('cart:build'));
+            document.dispatchEvent(new CustomEvent("cart:build"));
             //document.dispatchEvent(new CustomEvent('cart:open'));
           },
           error: function (error) {
             // Handle error if needed
             //document.dispatchEvent(new CustomEvent('cart:close'));
             Swal.fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: 'Error!'
-            })
-          }
+              icon: "error",
+              title: "Oops...",
+              text: "Error!",
+            });
+          },
         });
       }
     },
     error: function (error) {
       // Handle error if needed
-      console.error('Error fetching cart data:', error);
-    }
+      console.error("Error fetching cart data:", error);
+    },
   });
 }
 // Add the _updateCart function
 function _updateCart(params) {
   return fetch(params.url, {
-    method: 'POST',
+    method: "POST",
     body: JSON.stringify(params.data),
-    credentials: 'same-origin',
+    credentials: "same-origin",
     headers: {
-      'Content-Type': 'application/json',
-      'X-Requested-With': 'XMLHttpRequest'
-    }
+      "Content-Type": "application/json",
+      "X-Requested-With": "XMLHttpRequest",
+    },
   })
-  .then(response => response.json())
-  .then(function(responseData) {
-    return responseData;
-  });
+    .then((response) => response.json())
+    .then(function (responseData) {
+      return responseData;
+    });
 }
 
 function _getCart() {
-  var url = ''.concat(theme.routes.cart, '?t=').concat(Date.now());
+  var url = "".concat(theme.routes.cart, "?t=").concat(Date.now());
   return fetch(url, {
-    credentials: 'same-origin',
-    method: 'GET'
-  }).then(response => response.json());
+    credentials: "same-origin",
+    method: "GET",
+  }).then((response) => response.json());
 }
 
 function deleteEngraving(itemKey, itemLine) {
-  const newEngravingText = '';
+  
+  const newEngravingText = "";
+  $.ajax({
+    type: "GET",
+    url: "/cart.js",
+    dataType: "json",
+    success: function (cartData) {
+      var lineItemToUpdate = cartData.items.find(function (item) {
+        return item.key === itemKey;
+      });
 
-  var data = {
-    line: itemLine,
-    properties: {
-      engraving: newEngravingText
-    }
-  };
-  _updateCart({
-    url: '/cart/change.js',
-    data: data
-  }).then(function(response) {
-    // Handle the response data here
-    document.dispatchEvent(new CustomEvent('cart:build'));
+      if (lineItemToUpdate) {
+        // Preserve existing properties and update engraving
+        var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
+          engraving: newEngravingText,
+        });
+
+        var data = {
+          line: itemLine,
+          properties: updatedProperties,
+        };
+
+        _updateCart({
+          url: "/cart/change.js",
+          data: data,
+        }).then(function (response) {
+          // Handle the response data here
+          document.dispatchEvent(new CustomEvent("cart:build"));
+        });
+      }
+    },
+    error: function (error) {
+      // Handle error
+    },
   });
+  
+  
+  // var data = {
+  //   line: itemLine,
+  //   properties: {
+  //     engraving: newEngravingText,
+  //   },
+  // };
+  // _updateCart({
+  //   url: "/cart/change.js",
+  //   data: data,
+  // }).then(function (response) {
+  //   // Handle the response data here
+  //   document.dispatchEvent(new CustomEvent("cart:build"));
+  // });
+  
 }
 function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
   Swal.fire({
-    input: 'text',
+    input: "text",
     inputValue: itemText,
-    inputLabel: 'Engraving Text',
-    inputPlaceholder: '20 characters or less',
+    inputLabel: "Engraving Text",
+    inputPlaceholder: "20 characters or less",
     inputAttributes: {
-      maxlength: 20
+      maxlength: 20,
     },
     showCancelButton: true,
-    confirmButtonText: 'Save',
+    confirmButtonText: "Save",
   }).then((result) => {
     if (result.isConfirmed) {
       // const newEngravingText = result.value.toUpperCase();
@@ -367,235 +390,228 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
 
       // Get the current cart contents
       $.ajax({
-        type: 'GET',
-        url: '/cart.js',
-        dataType: 'json',
-        success: function(cartData) {
+        type: "GET",
+        url: "/cart.js",
+        dataType: "json",
+        success: function (cartData) {
           // Find the line item by key
-          var lineItemToUpdate = cartData.items.find(function(item) {
+          var lineItemToUpdate = cartData.items.find(function (item) {
             return item.key === itemKey;
           });
 
           if (lineItemToUpdate) {
             // Preserve existing properties and update engraving
-            var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
-              engraving: newEngravingText
-            });
+            var updatedProperties = Object.assign(
+              {},
+              lineItemToUpdate.properties,
+              {
+                engraving: newEngravingText,
+              }
+            );
 
             var data = {
               line: itemLine,
-              properties: updatedProperties
+              properties: updatedProperties,
             };
 
             // Update the cart using change.js
             $.ajax({
-              type: 'POST',
-              url: '/cart/change.js',
+              type: "POST",
+              url: "/cart/change.js",
               data: data,
-              dataType: 'json',
-              success: function(response) {
-                if($autoAdd && newEngravingText == ''){
+              dataType: "json",
+              success: function (response) {
+                if ($autoAdd && newEngravingText == "") {
                   //document.dispatchEvent(new CustomEvent('cart:build'));
-                }
-                else if($autoAdd && newEngravingText != ''){
+                } else if ($autoAdd && newEngravingText != "") {
                   AutoAddEngravingProduct();
-                }
-                else {
+                } else {
                   // Handle the response data here
-                  document.dispatchEvent(new CustomEvent('cart:build'));
+                  document.dispatchEvent(new CustomEvent("cart:build"));
                   //document.dispatchEvent(new CustomEvent('cart:open'));
                 }
               },
-              error: function(error) {
+              error: function (error) {
                 // Handle error
-              }
+              },
             });
           }
         },
-        error: function(error) {
+        error: function (error) {
           // Handle error
-        }
+        },
       });
     }
   });
 }
 
-
 // Handle Protection Plan
 
- $(document).on('click', '.add-protection-plan', function (e) {
-      var productId = $(this).attr('data-protection');
-      var key = $(this).attr('data-key');
-      var line = $(this).attr('data-line');
-   console.log('in function');
-    if($(this).is(":checked")) {
-      addProtectionPlan(productId, key, line, true);
-    } else {
-      deleteProtectionPlan(productId, key, line);
-      removeProtectionProduct(productId, key, line);
-    }
-  });
-
-
-
+$(document).on("click", ".add-protection-plan", function (e) {
+  var productId = $(this).attr("data-protection");
+  var key = $(this).attr("data-key");
+  var line = $(this).attr("data-line");
+  console.log("in function");
+  if ($(this).is(":checked")) {
+    addProtectionPlan(productId, key, line, true);
+  } else {
+    deleteProtectionPlan(productId, key, line);
+    removeProtectionProduct(productId, key, line);
+  }
+});
 
 function AutoAddProtectionProduct(productId) {
-   
   $.ajax({
-    type: 'POST',
-    url: '/cart/add.js',
+    type: "POST",
+    url: "/cart/add.js",
     data: {
       quantity: 1,
-      id: productId
+      id: productId,
     },
-    dataType: 'json',
+    dataType: "json",
     success: function (data) {
       // Handle success if needed
-      document.dispatchEvent(new CustomEvent('cart:build'));
+      document.dispatchEvent(new CustomEvent("cart:build"));
       //document.dispatchEvent(new CustomEvent('cart:open'));
     },
     error: function (error) {
       // Handle error if needed
       //document.dispatchEvent(new CustomEvent('cart:close'));
       Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Error!'
-      })
-    }
+        icon: "error",
+        title: "Oops...",
+        text: "Error!",
+      });
+    },
   });
 }
 
 function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
-
-      // Get the current cart contents
-      $.ajax({
-        type: 'GET',
-        url: '/cart.js',
-        dataType: 'json',
-        success: function(cartData) {
-          // Find the line item by key
-          var lineItemToUpdate = cartData.items.find(function(item) {
-            return item.key === itemKey;
-          });
-
-          if (lineItemToUpdate) {
-            // Preserve existing properties and update engraving
-            var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
-              Protection: 'Yes'
-            });
-
-            console.log(updatedProperties);
-            var data = {
-              line: itemLine,
-              properties: updatedProperties
-            };
-            
-            // Update the cart using change.js
-            $.ajax({
-              type: 'POST',
-              url: '/cart/change.js',
-              data: data,
-              dataType: 'json',
-              success: function(response) {
-                 AutoAddProtectionProduct(productId);
-              },
-              error: function(error) {
-                // Handle error
-              }
-            });
-          }
-        },
-        error: function(error) {
-          // Handle error
-        }
+  // Get the current cart contents
+  $.ajax({
+    type: "GET",
+    url: "/cart.js",
+    dataType: "json",
+    success: function (cartData) {
+      // Find the line item by key
+      var lineItemToUpdate = cartData.items.find(function (item) {
+        return item.key === itemKey;
       });
-    }
+
+      if (lineItemToUpdate) {
+        // Preserve existing properties and update engraving
+        var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
+          Protection: "Yes",
+        });
+
+        console.log(updatedProperties);
+        var data = {
+          line: itemLine,
+          properties: updatedProperties,
+        };
+
+        // Update the cart using change.js
+        $.ajax({
+          type: "POST",
+          url: "/cart/change.js",
+          data: data,
+          dataType: "json",
+          success: function (response) {
+            AutoAddProtectionProduct(productId);
+          },
+          error: function (error) {
+            // Handle error
+          },
+        });
+      }
+    },
+    error: function (error) {
+      // Handle error
+    },
+  });
+}
 
 function deleteProtectionPlan(productId, itemKey, itemLine) {
+  $.ajax({
+    type: "GET",
+    url: "/cart.js",
+    dataType: "json",
+    success: function (cartData) {
+      var lineItemToUpdate = cartData.items.find(function (item) {
+        return item.key === itemKey;
+      });
 
-    $.ajax({
-        type: 'GET',
-        url: '/cart.js',
-        dataType: 'json',
-        success: function(cartData) {
-          
-   var lineItemToUpdate = cartData.items.find(function(item) {
-            return item.key === itemKey;
-       });
+      if (lineItemToUpdate) {
+        // Preserve existing properties and update engraving
+        var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
+          Protection: "",
+        });
 
-  if (lineItemToUpdate) {
-            // Preserve existing properties and update engraving
-            var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
-              Protection: ''
-            });
+        var data = {
+          line: itemLine,
+          properties: updatedProperties,
+        };
 
-            var data = {
-              line: itemLine,
-              properties: updatedProperties
-            };
-
-  _updateCart({
-    url: '/cart/change.js',
-    data: data
-  }).then(function(response) {
-    // Handle the response data here
-    document.dispatchEvent(new CustomEvent('cart:build'));
+        _updateCart({
+          url: "/cart/change.js",
+          data: data,
+        }).then(function (response) {
+          // Handle the response data here
+          document.dispatchEvent(new CustomEvent("cart:build"));
+        });
+      }
+    },
+    error: function (error) {
+      // Handle error
+    },
   });
-  }
-},
-error: function(error) {
-          // Handle error
 }
-   });
-    }
 
 function removeProtectionProduct(productId, itemKey, itemLine) {
+  // Get the current cart items
+  $.ajax({
+    type: "GET",
+    url: "/cart.js",
+    dataType: "json",
+    success: function (cartData) {
+      // Find the item with the engraving product ID in the cart
+      var itemToUpdate = cartData.items.find(function (item) {
+        return item.variant_id === parseInt(productId);
+      });
 
-      // Get the current cart items
+      if (itemToUpdate) {
+        // Decrease the quantity of the engraving product by 1
+        var newQuantity = itemToUpdate.quantity - 1;
+
+        // Make an AJAX request to update the quantity of the engraving product
         $.ajax({
-          type: 'GET',
-          url: '/cart.js',
-          dataType: 'json',
-          success: function (cartData) {
-            // Find the item with the engraving product ID in the cart
-            var itemToUpdate = cartData.items.find(function (item) {
-              return item.variant_id === parseInt(productId);
-            });
-           
-            if (itemToUpdate) {
-              // Decrease the quantity of the engraving product by 1
-              var newQuantity = itemToUpdate.quantity - 1;
-      
-              // Make an AJAX request to update the quantity of the engraving product
-              $.ajax({
-                type: 'POST',
-                url: '/cart/change.js',
-                data: {
-                  quantity: newQuantity,
-                  id: itemToUpdate.id,
-                },
-                dataType: 'json',
-                success: function (data) {
-                  // Handle success if needed
-                  document.dispatchEvent(new CustomEvent('cart:build'));
-                  //document.dispatchEvent(new CustomEvent('cart:open'));
-                },
-                error: function (error) {
-                  // Handle error if needed
-                  //document.dispatchEvent(new CustomEvent('cart:close'));
-                  Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Error!'
-                  })
-                }
-              });
-            }
+          type: "POST",
+          url: "/cart/change.js",
+          data: {
+            quantity: newQuantity,
+            id: itemToUpdate.id,
+          },
+          dataType: "json",
+          success: function (data) {
+            // Handle success if needed
+            document.dispatchEvent(new CustomEvent("cart:build"));
+            //document.dispatchEvent(new CustomEvent('cart:open'));
           },
           error: function (error) {
             // Handle error if needed
-            console.error('Error fetching cart data:', error);
-          }
+            //document.dispatchEvent(new CustomEvent('cart:close'));
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Error!",
+            });
+          },
         });
+      }
+    },
+    error: function (error) {
+      // Handle error if needed
+      console.error("Error fetching cart data:", error);
+    },
+  });
 }
