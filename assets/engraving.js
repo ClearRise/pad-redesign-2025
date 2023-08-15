@@ -193,6 +193,7 @@ $(document).ready(function () {
     } else {
      deleteProtection(productId, key, line, true);
     }
+   console.log('yesss');
   });
 
   
