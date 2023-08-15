@@ -538,11 +538,11 @@ function removeProtectionProduct(productId, itemKey, itemLine) {
           success: function (cartData) {
             // Find the item with the engraving product ID in the cart
             var itemToUpdate = cartData.items.find(function (item) {
-              return item.variant_id === productId;
+              return item.variant_id == parseInt(productId);
             });
-             console.log(productId);
+            console.log(typeof(productId));
             console.log(cartData);
-           console.log(itemToUpdate);
+            console.log(itemToUpdate);
       
             if (itemToUpdate) {
               // Decrease the quantity of the engraving product by 1
