@@ -541,6 +541,7 @@ function removeProtectionProduct(productId, itemKey, itemLine) {
               return item.variant_id === productId;
             });
 
+            console.log(cartData);
            console.log(itemToUpdate);
       
             if (itemToUpdate) {
