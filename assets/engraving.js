@@ -100,7 +100,7 @@ $(document).ready(function () {
     var $this = $(this);
     var $remove_url = $(this).attr("href");
     var $productId = '';
-
+console.log('test');
      if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
        
      }
