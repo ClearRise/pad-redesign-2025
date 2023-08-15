@@ -517,7 +517,7 @@ function deleteProtectionPlan(productId, itemKey, itemLine) {
   var data = {
     line: itemLine,
     properties: {
-      Protection: 'No'
+      Protection: ''
     }
   };
   _updateCart({
