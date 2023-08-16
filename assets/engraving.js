@@ -510,6 +510,9 @@ function AutoAddProtectionProduct(productId) {
 
 function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
   // Get the current cart contents
+  var now = new Date().getTime();
+  var random = Math.floor(Math.random() * 100000);
+  var new_random = now+random;
   $.ajax({
     type: "GET",
     url: "/cart.js",
@@ -524,7 +527,7 @@ function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
         // Preserve existing properties and update engraving
         var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
           Protection: "Yes",
-          _prot_timestamp: '' 
+          _prot_timestamp: new_random 
         });
 
         console.log(updatedProperties);
