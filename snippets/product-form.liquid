@@ -40,8 +40,8 @@
              <label>
              <span class="bold_option_element">
                <input type="checkbox" class="protection-plan" name="properties[Protection]" value="Yes" data-protection="{{ first_protection_product_id_var }}">
-               <input type="hidden" class="hidden_protection_info" name="properties[_prot-product-title]" value="{{ protection_product.title }}">
-               <input type="hidden" class="hidden_protection_info" name="properties[_prot-form-id]" value="{{ form_id }}">
+               <input type="hidden" class="hidden_protection_info" name="properties[prot-product-title]" value="{{ protection_product.title }}">
+               <input type="hidden" class="hidden_protection_info" name="properties[prot-form-id]" value="{{ form_id }}">
              </span>
              <span class="bold_option_title">{{ protection_product.title }}</span>
              <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span>
