@@ -483,7 +483,7 @@ $(document).on("click", ".add-protection-plan", function (e) {
   if ($(this).is(":checked")) {
     addProtectionPlan(productId, key, line, itemQuantity, true);
   } else {
-    deleteProtectionPlan(productId, key, itemQuantity, line);
+    deleteProtectionPlan(productId, key, line, itemQuantity);
     removeProtectionProduct(productId, key, line);
   }
 });
