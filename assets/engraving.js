@@ -174,7 +174,8 @@ $(document).ready(function () {
     var text = "";
     var key = $(this).attr("data-key");
     var line = $(this).attr("data-line");
-    editEngraving(text, key, line, true);
+    var itemQuantity = $(this).attr("data-quantity");
+    editEngraving(text, key, line, itemQuantity, true);
   });
   // Handle click event on elements with class "edit-engraving-btn"
   $(document).on("click", ".edit-engraving-btn", function (e) {
@@ -182,7 +183,8 @@ $(document).ready(function () {
     var text = $(this).attr("data-text");
     var key = $(this).attr("data-key");
     var line = $(this).attr("data-line");
-    editEngraving(text, key, line, false);
+    var itemQuantity = $(this).attr("data-quantity");
+    editEngraving(text, key, line, itemQuantity, false);
   });
 
   // Handle click event on elements with class "delete-engraving-btn"
@@ -190,7 +192,8 @@ $(document).ready(function () {
     e.preventDefault();
     var key = $(this).attr("data-key");
     var itemLine = $(this).attr("data-line");
-    deleteEngraving(key, itemLine);
+    var itemQuantity = $(this).attr("data-quantity");
+    deleteEngraving(key, itemLine, itemQuantity);
     removeEngravingProduct();
   });
 
@@ -342,7 +345,7 @@ function _getCart() {
   }).then((response) => response.json());
 }
 
-function deleteEngraving(itemKey, itemLine) {
+function deleteEngraving(itemKey, itemLine, itemQuantity) {
   
   const newEngravingText = "";
   $.ajax({
@@ -361,7 +364,8 @@ function deleteEngraving(itemKey, itemLine) {
         });
 
         var data = {
-           id: itemKey,
+          id: itemKey,
+          quantity: itemQuantity,
           properties: updatedProperties,
         };
 
@@ -395,7 +399,7 @@ function deleteEngraving(itemKey, itemLine) {
   // });
   
 }
-function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
+function editEngraving(itemText, itemKey, itemLine, itemQuantity, $autoAdd) {
   Swal.fire({
     input: "text",
     inputValue: itemText,
@@ -433,7 +437,8 @@ function editEngraving(itemText, itemKey, itemLine, $autoAdd) {
 
             var data = {
               id: itemKey,
-              properties: updatedProperties,
+              quantity: itemQuantity,
+              properties: updatedProperties
             };
 
             // Update the cart using change.js
@@ -473,11 +478,12 @@ $(document).on("click", ".add-protection-plan", function (e) {
   var productId = $(this).attr("data-protection");
   var key = $(this).attr("data-key");
   var line = $(this).attr("data-line");
+  var itemQuantity = $(this).attr("data-quantity");
   console.log("in function");
   if ($(this).is(":checked")) {
-    addProtectionPlan(productId, key, line, true);
+    addProtectionPlan(productId, key, line, itemQuantity, true);
   } else {
-    deleteProtectionPlan(productId, key, line);
+    deleteProtectionPlan(productId, key, itemQuantity, line);
     removeProtectionProduct(productId, key, line);
   }
 });
@@ -508,7 +514,7 @@ function AutoAddProtectionProduct(productId) {
   });
 }
 
-function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
+function addProtectionPlan(productId, itemKey, itemLine, itemQuantity, $autoAdd) {
   // Get the current cart contents
   var now = new Date().getTime();
   var random = Math.floor(Math.random() * 100000);
@@ -532,8 +538,9 @@ function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
 
         console.log(updatedProperties);
         var data = {
-           id: itemKey,
-          properties: updatedProperties,
+          id: itemKey,
+          quantity: itemQuantity,
+          properties: updatedProperties
         };
 
         // Update the cart using change.js
@@ -557,7 +564,7 @@ function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
   });
 }
 
-function deleteProtectionPlan(productId, itemKey, itemLine) {
+function deleteProtectionPlan(productId, itemKey, itemLine, itemQuantity) {
   $.ajax({
     type: "GET",
     url: "/cart.js",
@@ -575,7 +582,8 @@ function deleteProtectionPlan(productId, itemKey, itemLine) {
 
         var data = {
           id: itemKey,
-          properties: updatedProperties,
+          quantity: itemQuantity,
+          properties: updatedProperties
         };
 
         _updateCart({
