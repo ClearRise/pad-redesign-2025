@@ -116,6 +116,7 @@ $(document).ready(function () {
      }
     else {
       $productId = '';
+      removeEngrageShippingItems($productId);
     }
 
   });
