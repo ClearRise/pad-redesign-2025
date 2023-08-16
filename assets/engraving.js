@@ -102,21 +102,27 @@ $(document).ready(function () {
     var $productId = '';
 
      if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
-       
+       $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
+       removeEngrageShippingItems($productId);
+       removeEngrageShippingItems(engravingProductID);
      }
      else if ($(this).parents(".cart__item").find(".engraving_p").val() == "true") {
-       $productId = engravingProductID;
+       removeEngrageShippingItems(engravingProductID);
+      
      }
      else if ($(this).parents(".cart__item").find(".Protection_p").val() == "true") {
-       console.log('inside');
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
+       removeEngrageShippingItems($productId);
      }
     else {
       $productId = '';
     }
 
-    
-    if ($productId != '') {
+  });
+
+
+function removeEngrageShippingItems($productId){
+   if ($productId != '') {
 
       console.log($productId);
       // Get the current cart items
@@ -168,7 +174,8 @@ $(document).ready(function () {
     } else {
       window.location.href = $remove_url;
     }
-  });
+}
+  
   $(document).on("click", ".add-engraving-inline-button", function (e) {
     e.preventDefault();
     var text = "";
