@@ -527,7 +527,7 @@ function addProtectionPlan(productId, itemKey, itemLine, $autoAdd) {
         // Preserve existing properties and update engraving
         var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
           Protection: "Yes",
-          _prot_timestamp: new_random 
+          // _prot_timestamp: new_random 
         });
 
         console.log(updatedProperties);
