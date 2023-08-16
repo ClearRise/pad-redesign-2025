@@ -133,6 +133,8 @@ $(document).ready(function () {
           });
 
           console.log(itemToUpdate);
+
+          die;
           if (itemToUpdate) {
             // Decrease the quantity of the engraving product by 1
             var newQuantity = itemToUpdate.quantity - 1;
