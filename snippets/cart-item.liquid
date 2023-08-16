@@ -52,6 +52,7 @@
 
 <div
   class="cart__item rm_border{% if match_engraving_product %} hide{% endif %}{% if match_protection_product %} hide{% endif %}{% if match_gift_product %} hide{% endif %}"
+  data-quantity="{{ product.quantity }}"
   data-key="{{ product.key }}"
   data-handle="{{ product.product.handle }}"
 >
@@ -113,6 +114,7 @@
                       <span class="bold_option_element">
                         <input
                           type="checkbox"
+                          data-quantity="{{ product.quantity }}"
                           data-line="{{ line }}"
                           data-key="{{ product.key }}"
                           class="add-protection-plan"
@@ -153,6 +155,7 @@
                 <div class="product-option">
                   <span
                     id="edit-engraving-btn"
+                    data-quantity="{{ product.quantity }}"
                     data-line="{{ line }}"
                     data-key="{{ product.key }}"
                     data-text="{{ p.last }}"
@@ -163,6 +166,7 @@
                   </span>
                   <span
                     id="delete-engraving-btn"
+                    data-quantity="{{ product.quantity }}"
                     data-line="{{ line }}"
                     data-key="{{ product.key }}"
                     class="delete-engraving-btn engraving-icon engraving-remove-icon deleteIconFor{{ product.key }}"
@@ -220,6 +224,7 @@
         {% endpaginate %}
 
         <a
+          data-quantity="{{ product.quantity }}"
           data-line="{{ line }}"
           data-key="{{ product.key }}"
           class="add-engraving-inline-button"
@@ -246,7 +251,7 @@
           <div class="">
              <label>
              <span class="bold_option_element">
-               <input data-line="{{ line }}" data-key="{{ product.key }}" type="checkbox" class="add-protection-plan" data-protection="{{ first_protection_product_id_var }}">
+               <input data-quantity="{{ product.quantity }}" data-line="{{ line }}" data-key="{{ product.key }}" type="checkbox" class="add-protection-plan" data-protection="{{ first_protection_product_id_var }}">
              </span>
              <span class="bold_option_title">{{ protection_product.title }}</span>
              <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span>
