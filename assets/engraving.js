@@ -95,28 +95,114 @@ $(document).ready(function () {
       }
     }
   });
-  $(document).on("click", ".cart__remove a", function (event) {
+
+  
+  // $(document).on("click", ".cart__remove a", function (event) {
+  //   event.preventDefault();
+  //   var $this = $(this);
+  //   var $remove_url = $(this).attr("href");
+  //   var $productId = '';
+
+  //    if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
+       
+  //    }
+  //    else if ($(this).parents(".cart__item").find(".engraving_p").val() == "true") {
+  //      $productId = engravingProductID;
+  //    }
+  //    else if ($(this).parents(".cart__item").find(".Protection_p").val() == "true") {
+  //      console.log('inside');
+  //      $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
+  //    }
+  //   else {
+  //     $productId = '';
+  //   }
+
+    
+  //   if ($productId != '') {
+
+  //     console.log($productId);
+  //     // Get the current cart items
+  //     $.ajax({
+  //       type: "GET",
+  //       url: "/cart.js",
+  //       dataType: "json",
+  //       success: function (cartData) {
+
+  //         console.log(cartData);
+  //         // Find the item with the engraving product ID in the cart
+  //         var itemToUpdate = cartData.items.find(function (item) {
+  //           return item.variant_id === parseInt($productId);
+  //         });
+
+  //         console.log(itemToUpdate);
+          
+  //         if (itemToUpdate) {
+  //           // Decrease the quantity of the engraving product by 1
+  //           var newQuantity = itemToUpdate.quantity - 1;
+
+  //           // Make an AJAX request to update the quantity of the engraving product
+  //           $.ajax({
+  //             type: "POST",
+  //             url: "/cart/change.js",
+  //             data: {
+  //               quantity: newQuantity,
+  //               id: itemToUpdate.id,
+  //             },
+  //             dataType: "json",
+  //             success: function (data) {
+  //               window.location.href = $remove_url;
+  //             },
+  //             error: function (error) {
+  //               Swal.fire({
+  //                 icon: "error",
+  //                 title: "Oops...",
+  //                 text: "Error!",
+  //               });
+  //             },
+  //           });
+  //         }
+  //       },
+  //       error: function (error) {
+  //         // Handle error if needed
+  //         console.error("Error fetching cart data:", error);
+  //       },
+  //     });
+  //   } else {
+  //     window.location.href = $remove_url;
+  //   }
+  // });
+
+ $(document).on("click", ".cart__remove a", function (event) {
     event.preventDefault();
     var $this = $(this);
     var $remove_url = $(this).attr("href");
     var $productId = '';
 
      if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
-       
+       $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
+       removeEngrageShippingItems($productId, $remove_url);
+       removeEngrageShippingItems(engravingProductID, $remove_url);
      }
      else if ($(this).parents(".cart__item").find(".engraving_p").val() == "true") {
-       $productId = engravingProductID;
+       removeEngrageShippingItems(engravingProductID, $remove_url);
+      
      }
      else if ($(this).parents(".cart__item").find(".Protection_p").val() == "true") {
-       console.log('inside');
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
+       removeEngrageShippingItems($productId, $remove_url);
      }
     else {
       $productId = '';
+      window.location.href = $remove_url;
     }
 
-    
-    if ($productId != '') {
+   window.location.href = $remove_url;
+   
+  });
+
+
+function removeEngrageShippingItems($productId, $remove_url){
+   if ($productId != '') {
 
       console.log($productId);
       // Get the current cart items
@@ -148,7 +234,8 @@ $(document).ready(function () {
               },
               dataType: "json",
               success: function (data) {
-                window.location.href = $remove_url;
+                console.log('success');
+              //  window.location.href = $remove_url;
               },
               error: function (error) {
                 Swal.fire({
@@ -166,9 +253,11 @@ $(document).ready(function () {
         },
       });
     } else {
-      window.location.href = $remove_url;
+    //  window.location.href = $remove_url;
     }
-  });
+}
+
+  
   $(document).on("click", ".add-engraving-inline-button", function (e) {
     e.preventDefault();
     var text = "";
