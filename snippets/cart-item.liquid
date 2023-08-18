@@ -1,6 +1,9 @@
 {% assign match_gift_product = false %}
 {% assign match_engraving_product = false %}
 {% assign match_protection_product = false %}
+{% assign engraving_product_id = '' %}
+{% assign protection_product_id = '' %}
+
 
 {% if settings.show_gift_box %}
   {% assign first_gift_product = settings['product-handle-1'] %}
