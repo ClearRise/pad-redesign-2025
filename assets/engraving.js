@@ -177,6 +177,7 @@ $(document).ready(function () {
     var $this = $(this);
     var $remove_url = $(this).attr("href");
     var $productId = '';
+    var itemQuantity = $(this).parents(".cart__item").attr('data-quantity');
 
      if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
