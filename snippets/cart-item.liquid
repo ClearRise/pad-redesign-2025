@@ -1,8 +1,8 @@
 {% assign match_gift_product = false %}
 {% assign match_engraving_product = false %}
 {% assign match_protection_product = false %}
-{% assign engraving_product_id = '' %}
-{% assign protection_product_id = '' %}
+{% assign e_product_id = '' %}
+{% assign p_product_id = '' %}
 
 
 {% if settings.show_gift_box %}
@@ -111,6 +111,8 @@
                 {% assign protection_product = all_products[product.product.metafields.custom.premium_protection_product] %}
                 {% assign protection_product_id = protection_product.selected_or_first_available_variant.id %}
 
+              {% assign p_product_id = protection_product.selected_or_first_available_variant.id %}
+
                 <div class="product-option">
                   <div class="bold_option bold_option_checkbox ">
                     <label>
@@ -154,7 +156,8 @@
               {% unless p.last == '' or p.last == null %}
                 {% assign engrave_product = settings['product-engraving'] %}
                 {% assign first_gift_product_id_var = engrave_product.selected_or_first_available_variant.id %}
-
+                {% assign e_product_id = engrave_product.selected_or_first_available_variant.id %}
+                
                 <div class="product-option">
                   <span
                     id="edit-engraving-btn"
@@ -281,6 +284,8 @@
             min="0"
             pattern="[0-9]*"
             data-id="{{ product.key }}"
+            data-engraving="{{ e_product_id }}"
+            data-protection="{{ p_product_id }}"
           >
           <button
             type="button"
