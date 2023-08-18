@@ -329,7 +329,7 @@ function removeEngrageShippingItems($productId, $remove_url){
   });*/
 });
 
-function AutoAddEngravingProduct() {
+function AutoAddEngravingProduct(itemQuantity) {
   // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
   var engravingProductID = theme.engraving.engraving_var_id;
 
@@ -337,7 +337,7 @@ function AutoAddEngravingProduct() {
     type: "POST",
     url: "/cart/add.js",
     data: {
-      quantity: 1,
+      quantity: 1*itemQuantity,
       id: engravingProductID,
     },
     dataType: "json",
@@ -540,7 +540,7 @@ function editEngraving(itemText, itemKey, itemLine, itemQuantity, $autoAdd) {
                 if ($autoAdd && newEngravingText == "") {
                   //document.dispatchEvent(new CustomEvent('cart:build'));
                 } else if ($autoAdd && newEngravingText != "") {
-                  AutoAddEngravingProduct();
+                  AutoAddEngravingProduct(itemQuantity);
                 } else {
                   // Handle the response data here
                   document.dispatchEvent(new CustomEvent("cart:build"));
