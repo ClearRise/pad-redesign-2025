@@ -1515,3 +1515,11 @@ a.add-engraving-inline-button{
   display: inline-block;
       width: 100%;
 }
+
+
+.protection_div {
+    text-transform: capitalize;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: underline;
+}
