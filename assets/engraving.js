@@ -573,16 +573,16 @@ $(document).on("click", ".add-protection-plan", function (e) {
     addProtectionPlan(productId, key, line, itemQuantity, true);
   } else {
     deleteProtectionPlan(productId, key, line, itemQuantity);
-    removeProtectionProduct(productId, key, line);
+    removeProtectionProduct(productId, key, line, itemQuantity);
   }
 });
 
-function AutoAddProtectionProduct(productId) {
+function AutoAddProtectionProduct(productId, itemQuantity) {
   $.ajax({
     type: "POST",
     url: "/cart/add.js",
     data: {
-      quantity: 1,
+      quantity: 1*itemQuantity,
       id: productId,
     },
     dataType: "json",
@@ -639,7 +639,7 @@ function addProtectionPlan(productId, itemKey, itemLine, itemQuantity, $autoAdd)
           data: data,
           dataType: "json",
           success: function (response) {
-            AutoAddProtectionProduct(productId);
+            AutoAddProtectionProduct(productId, itemQuantity);
           },
           error: function (error) {
             // Handle error
@@ -690,7 +690,7 @@ function deleteProtectionPlan(productId, itemKey, itemLine, itemQuantity) {
   });
 }
 
-function removeProtectionProduct(productId, itemKey, itemLine) {
+function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
   // Get the current cart items
   $.ajax({
     type: "GET",
