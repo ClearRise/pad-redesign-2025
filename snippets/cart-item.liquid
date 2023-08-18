@@ -105,51 +105,7 @@
       {% assign found_protection = false %}
       {% if property_size > 0 %}
         {% for p in product.properties %}
-          {% if product.product.metafields.custom.premium_protection_product %}
-            {% if p.first contains 'Protection' %}
-              {% unless p.last == '' or p.last == null %}
-                {% assign protection_product = all_products[product.product.metafields.custom.premium_protection_product] %}
-                {% assign protection_product_id = protection_product.selected_or_first_available_variant.id %}
-
-              {% assign p_product_id = protection_product.selected_or_first_available_variant.id %}
-
-                <div class="product-option">
-                  <div class="bold_option bold_option_checkbox ">
-                    <label class="protection_div">
-                      <span class="bold_option_element">
-                        <input
-                          type="checkbox"
-                          data-quantity="{{ product.quantity }}"
-                          data-line="{{ line }}"
-                          data-key="{{ product.key }}"
-                          class="add-protection-plan"
-                          {% if p.first contains 'Protection' and p.last contains 'Yes' %}
-                              checked="checked"
-                          {% endif %}
-                          name="properties[Protection]"
-                          value="Yes"
-                          data-protection="{{ protection_product_id }}"
-                        >
-                      </span>
-                      <span class="bold_option_title"> {% render 'icon-delete' %}</span>
-                      {% for variant in protection_product.variants %}
-                        {% if variant.id == protection_product_id %}
-                         
-                            {% comment %}
-                           <span class="bold_option_value_price">
-                            <span class="money"> {{ variant.price | money_without_trailing_zeros }}</span></span>
-                          {% endcomment %}
-                          <input type="hidden" name="Protection" class="Protection_p" value="true" data-product-id = "{{ protection_product_id }}">
-                        {% endif %}
-                      {% endfor %}
-                    </label>
-                  </div>
-                </div>
-
-                {% assign found_protection = true %}
-              {% endunless %}
-            {% endif %}
-          {% endif %}
+          
           
           {% if settings.show_engraving and settings['product-engraving'] %}
             {% if p.first contains 'engraving' %}
@@ -195,6 +151,53 @@
               {% endunless %}
             {% endif %}
           {% endif %}
+{% if product.product.metafields.custom.premium_protection_product %}
+            {% if p.first contains 'Protection' %}
+              {% unless p.last == '' or p.last == null %}
+                {% assign protection_product = all_products[product.product.metafields.custom.premium_protection_product] %}
+                {% assign protection_product_id = protection_product.selected_or_first_available_variant.id %}
+
+              {% assign p_product_id = protection_product.selected_or_first_available_variant.id %}
+
+                <div class="product-option">
+                  <div class="bold_option bold_option_checkbox ">
+                    <label class="protection_div">
+                      <span class="bold_option_element">
+                        <input
+                          type="checkbox"
+                          data-quantity="{{ product.quantity }}"
+                          data-line="{{ line }}"
+                          data-key="{{ product.key }}"
+                          class="add-protection-plan"
+                          {% if p.first contains 'Protection' and p.last contains 'Yes' %}
+                              checked="checked"
+                          {% endif %}
+                          name="properties[Protection]"
+                          value="Yes"
+                          data-protection="{{ protection_product_id }}"
+                        >
+                      </span>
+                      <span class="bold_option_title"> {% render 'icon-delete' %}</span>
+                      {% for variant in protection_product.variants %}
+                        {% if variant.id == protection_product_id %}
+                         
+                            {% comment %}
+                           <span class="bold_option_value_price">
+                            <span class="money"> {{ variant.price | money_without_trailing_zeros }}</span></span>
+                          {% endcomment %}
+                          <input type="hidden" name="Protection" class="Protection_p" value="true" data-product-id = "{{ protection_product_id }}">
+                        {% endif %}
+                      {% endfor %}
+                    </label>
+                  </div>
+                </div>
+
+                {% assign found_protection = true %}
+              {% endunless %}
+            {% endif %}
+          {% endif %}
+
+          
         {% endfor %}
 
         {% comment %}
