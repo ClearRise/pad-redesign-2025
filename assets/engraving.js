@@ -283,7 +283,7 @@ function removeEngrageShippingItems($productId, $remove_url){
     var itemLine = $(this).attr("data-line");
     var itemQuantity = $(this).attr("data-quantity");
     deleteEngraving(key, itemLine, itemQuantity);
-    removeEngravingProduct();
+    removeEngravingProduct(itemQuantity);
   });
 
   //handle adding engraving product
@@ -358,7 +358,7 @@ function AutoAddEngravingProduct(itemQuantity) {
   });
 }
 
-function removeEngravingProduct() {
+function removeEngravingProduct(itemQuantity) {
   // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
   var engravingProductID = theme.engraving.engraving_var_id;
 
@@ -375,7 +375,7 @@ function removeEngravingProduct() {
 
       if (itemToUpdate) {
         // Decrease the quantity of the engraving product by 1
-        var newQuantity = itemToUpdate.quantity - 1;
+        var newQuantity = itemToUpdate.quantity - 1*itemQuantity;
 
         // Make an AJAX request to update the quantity of the engraving product
         $.ajax({
