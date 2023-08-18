@@ -1524,3 +1524,11 @@ a.add-engraving-inline-button{
     text-decoration: underline;
   letter-spacing: 0 !important;
 }
+
+.protection_div span.bold_option_element input {
+    width: auto;
+    margin-right: 0;
+    visibility: hidden;
+    width: 0px;
+    height: 0;
+}
