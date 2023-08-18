@@ -134,8 +134,11 @@
                       <span class="bold_option_title"> {% render 'icon-delete' %}</span>
                       {% for variant in protection_product.variants %}
                         {% if variant.id == protection_product_id %}
-                          <span class="bold_option_value_price">
+                         
+                            {% comment %}
+                           <span class="bold_option_value_price">
                             <span class="money"> {{ variant.price | money_without_trailing_zeros }}</span></span>
+                          {% endcomment %}
                           <input type="hidden" name="Protection" class="Protection_p" value="true" data-product-id = "{{ protection_product_id }}">
                         {% endif %}
                       {% endfor %}
