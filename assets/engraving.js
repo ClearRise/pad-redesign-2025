@@ -705,7 +705,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
 
       if (itemToUpdate) {
         // Decrease the quantity of the engraving product by 1
-        var newQuantity = itemToUpdate.quantity - 1;
+        var newQuantity = itemToUpdate.quantity - 1*itemQuantity;
 
         // Make an AJAX request to update the quantity of the engraving product
         $.ajax({
