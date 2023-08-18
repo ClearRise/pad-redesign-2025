@@ -181,16 +181,16 @@ $(document).ready(function () {
 
      if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
-       removeEngrageShippingItems($productId, $remove_url);
-       removeEngrageShippingItems(engravingProductID, $remove_url);
+       removeEngrageShippingItems($productId, $remove_url, itemQuantity);
+       removeEngrageShippingItems(engravingProductID, $remove_url, itemQuantity);
      }
      else if ($(this).parents(".cart__item").find(".engraving_p").val() == "true") {
-       removeEngrageShippingItems(engravingProductID, $remove_url);
+       removeEngrageShippingItems(engravingProductID, $remove_url, itemQuantity);
       
      }
      else if ($(this).parents(".cart__item").find(".Protection_p").val() == "true") {
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
-       removeEngrageShippingItems($productId, $remove_url);
+       removeEngrageShippingItems($productId, $remove_url, itemQuantity);
      }
     else {
       $productId = '';
@@ -202,7 +202,7 @@ $(document).ready(function () {
   });
 
 
-function removeEngrageShippingItems($productId, $remove_url){
+function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
    if ($productId != '') {
 
       console.log($productId);
