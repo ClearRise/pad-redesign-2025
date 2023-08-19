@@ -687,6 +687,7 @@ function addProtectionPlan(productId, itemKey, itemLine, itemQuantity, productTi
 }
 
 function deleteProtectionPlan(productId, itemKey, itemLine, itemQuantity) {
+  $('.overlay').show();
   $.ajax({
     type: "GET",
     url: "/cart.js",
@@ -715,6 +716,7 @@ function deleteProtectionPlan(productId, itemKey, itemLine, itemQuantity) {
         }).then(function (response) {
           // Handle the response data here
           document.dispatchEvent(new CustomEvent("cart:build"));
+          $('.overlay').hide();
         });
       }
     },
