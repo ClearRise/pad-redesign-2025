@@ -114,6 +114,20 @@
               {% assign p_product_id = protection_product.selected_or_first_available_variant.id %}
 
                 <div class="product-option">
+                  <span
+                    id="delete-protection-btn"
+                    data-quantity="{{ product.quantity }}"
+                    data-line="{{ line }}"
+                    data-key="{{ product.key }}"
+                    class="delete-protection-btn protection-icon protection-remove-icon deleteIconFor{{ product.key }}"
+                    data-id="deleteIconFor{{ product.key }}"
+                    data-protection="{{ protection_product_id }}"
+                  >
+                    {% render 'icon-delete' %}
+                  </span>
+                </div>
+                
+                <div class="product-option">
                   <div class="bold_option bold_option_checkbox ">
                     <label class="protection_div">
                       <span class="bold_option_element">
