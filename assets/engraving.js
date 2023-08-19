@@ -564,6 +564,16 @@ function editEngraving(itemText, itemKey, itemLine, itemQuantity, $autoAdd) {
 
 // Handle Protection Plan
 
+$(document).on("click", ".add-protection-inline-button", function (e) {
+    e.preventDefault();
+   var productId = $(this).attr("data-protection");
+  var productTitle = $(this).attr("data-product-title");
+  var key = $(this).attr("data-key");
+  var line = $(this).attr("data-line");
+  var itemQuantity = $(this).attr("data-quantity");
+  addProtectionPlan(productId, key, line, itemQuantity, productTitle);
+  });
+
 $(document).on("click", ".add-protection-plan", function (e) {
   var productId = $(this).attr("data-protection");
   var productTitle = $(this).attr("data-product-title");
