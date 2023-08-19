@@ -574,6 +574,19 @@ $(document).on("click", ".add-protection-inline-button", function (e) {
   addProtectionPlan(productId, key, line, itemQuantity, productTitle);
   });
 
+// Handle click event on elements with class "delete-engraving-btn"
+  $(document).on("click", ".delete-protection-btn", function (e) {
+    e.preventDefault();
+    var productId = $(this).attr("data-protection");
+    var productTitle = $(this).attr("data-product-title");
+    var key = $(this).attr("data-key");
+    var line = $(this).attr("data-line");
+    var itemQuantity = $(this).attr("data-quantity");
+    deleteProtectionPlan(productId, key, line, itemQuantity);
+    removeProtectionProduct(productId, key, line, itemQuantity);
+  });
+
+
 $(document).on("click", ".add-protection-plan", function (e) {
   var productId = $(this).attr("data-protection");
   var productTitle = $(this).attr("data-product-title");
