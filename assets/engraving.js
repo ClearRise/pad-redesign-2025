@@ -566,12 +566,14 @@ function editEngraving(itemText, itemKey, itemLine, itemQuantity, $autoAdd) {
 
 $(document).on("click", ".add-protection-plan", function (e) {
   var productId = $(this).attr("data-protection");
+  var productTitle = $(this).attr("data-product-title");
   var key = $(this).attr("data-key");
   var line = $(this).attr("data-line");
   var itemQuantity = $(this).attr("data-quantity");
+  
   console.log("in function");
   if ($(this).is(":checked")) {
-    addProtectionPlan(productId, key, line, itemQuantity, true);
+    addProtectionPlan(productId, key, line, itemQuantity, productTitle);
   } else {
     deleteProtectionPlan(productId, key, line, itemQuantity);
     removeProtectionProduct(productId, key, line, itemQuantity);
@@ -604,7 +606,7 @@ function AutoAddProtectionProduct(productId, itemQuantity) {
   });
 }
 
-function addProtectionPlan(productId, itemKey, itemLine, itemQuantity, $autoAdd) {
+function addProtectionPlan(productId, itemKey, itemLine, itemQuantity, productTitle) {
   // Get the current cart contents
   var now = new Date().getTime();
   var random = Math.floor(Math.random() * 100000);
@@ -623,6 +625,7 @@ function addProtectionPlan(productId, itemKey, itemLine, itemQuantity, $autoAdd)
         // Preserve existing properties and update engraving
         var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
           'Protection Plan': "Yes",
+          '_prot-product-title': productTitle
           // _prot_timestamp: new_random 
         });
 
@@ -667,7 +670,8 @@ function deleteProtectionPlan(productId, itemKey, itemLine, itemQuantity) {
       if (lineItemToUpdate) {
         // Preserve existing properties and update engraving
         var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
-          'Protection Plan': "",
+          'Protection Plan': '',
+          '_prot-product-title': ''
         });
 
         var data = {
