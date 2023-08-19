@@ -670,8 +670,9 @@ function addProtectionPlan(productId, itemKey, itemLine, itemQuantity, productTi
           data: data,
           dataType: "json",
           success: function (response) {
-            $('.overlay').hide();
+            
             AutoAddProtectionProduct(productId, itemQuantity);
+            $('.overlay').hide();
           },
           error: function (error) {
             // Handle error
