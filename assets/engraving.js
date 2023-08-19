@@ -610,9 +610,6 @@ function AutoAddProtectionProduct(productId, itemQuantity, itemKey) {
     data: {
       quantity: 1*itemQuantity,
       id: productId,
-      properties: {
-        'prot-product-key': itemKey
-      }
     },
     dataType: "json",
     success: function (data) {
