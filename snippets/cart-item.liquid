@@ -106,7 +106,7 @@
       {% if property_size > 0 %}
         {% for p in product.properties %}
           {% if product.product.metafields.custom.premium_protection_product %}
-            {% if p.first contains 'Protection' %}
+            {% if p.first contains 'Protection Plan' %}
               {% unless p.last == '' or p.last == null %}
                 {% assign protection_product = all_products[product.product.metafields.custom.premium_protection_product] %}
                 {% assign protection_product_id = protection_product.selected_or_first_available_variant.id %}
@@ -123,10 +123,10 @@
                           data-line="{{ line }}"
                           data-key="{{ product.key }}"
                           class="add-protection-plan"
-                          {% if p.first contains 'Protection' and p.last contains 'Yes' %}
+                          {% if p.first contains 'Protection Plan' and p.last contains 'Yes' %}
                               checked="checked"
                           {% endif %}
-                          name="properties[Protection]"
+                          name="properties[Protection Plan]"
                           value="Yes"
                           data-protection="{{ protection_product_id }}"
                         >
