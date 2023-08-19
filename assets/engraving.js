@@ -667,7 +667,7 @@ function deleteProtectionPlan(productId, itemKey, itemLine, itemQuantity) {
       if (lineItemToUpdate) {
         // Preserve existing properties and update engraving
         var updatedProperties = Object.assign({}, lineItemToUpdate.properties, {
-          `Protection Plan`: "",
+          'Protection Plan': "",
         });
 
         var data = {
