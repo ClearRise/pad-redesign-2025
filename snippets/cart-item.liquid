@@ -114,7 +114,17 @@
               {% assign p_product_id = protection_product.selected_or_first_available_variant.id %}
                 
                 <div class="product-option">
-                 <span
+                
+                      {% for variant in protection_product.variants %}
+                        {% if variant.id == protection_product_id %}
+                         <p class="black_txt en_price">
+                            Protection Plan Price: {{ variant.price | money_without_trailing_zeros }}
+                          </p>
+
+                          <input type="hidden" name="Protection" class="Protection_p" value="true" data-product-id = "{{ protection_product_id }}">
+                        {% endif %}
+                      {% endfor %}
+                <span
                     id="delete-protection-btn"
                     data-quantity="{{ product.quantity }}"
                     data-line="{{ line }}"
@@ -125,15 +135,6 @@
                   >
                     {% render 'icon-delete' %}
                   </span>
-                      {% for variant in protection_product.variants %}
-                        {% if variant.id == protection_product_id %}
-                         <p class="black_txt en_price">
-                            Protection Plan Price: {{ variant.price | money_without_trailing_zeros }}
-                          </p>
-
-                          <input type="hidden" name="Protection" class="Protection_p" value="true" data-product-id = "{{ protection_product_id }}">
-                        {% endif %}
-                      {% endfor %}
                
              
                 </div>
