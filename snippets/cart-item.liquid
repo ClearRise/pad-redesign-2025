@@ -113,7 +113,7 @@
 
               {% assign p_product_id = protection_product.selected_or_first_available_variant.id %}
                 
-                <div class="product-option">
+                <div class="product-option action_icons">
                 
                       {% for variant in protection_product.variants %}
                         {% if variant.id == protection_product_id %}
@@ -151,7 +151,17 @@
                 {% assign first_gift_product_id_var = engrave_product.selected_or_first_available_variant.id %}
                 {% assign e_product_id = engrave_product.selected_or_first_available_variant.id %}
                 
-                <div class="product-option">
+                <div class="product-option action_icons">
+
+                    {% for variant in engrave_product.variants %}
+                      {% if variant.id == first_gift_product_id_var %}
+                        <p class="black_txt en_price">
+                          Engraving Price: {{ variant.price | money_without_trailing_zeros }}
+                        </p>
+                        <input type="hidden" name="engraving" class="engraving_p" value="true">
+                      {% endif %}
+                    {% endfor %}
+                
                   <span
                     id="edit-engraving-btn"
                     data-quantity="{{ product.quantity }}"
@@ -175,14 +185,7 @@
                   </span>
                 </div>
 
-                {% for variant in engrave_product.variants %}
-                  {% if variant.id == first_gift_product_id_var %}
-                    <p class="black_txt en_price">
-                      Engraving Price: {{ variant.price | money_without_trailing_zeros }}
-                    </p>
-                    <input type="hidden" name="engraving" class="engraving_p" value="true">
-                  {% endif %}
-                {% endfor %}
+                
 
                 {% assign found_engrave = true %}
               {% endunless %}
