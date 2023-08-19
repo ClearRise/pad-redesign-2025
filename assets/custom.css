@@ -1506,10 +1506,15 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
       font-size: 12px;    
   }
 }
-.bold_line_properties > div:last-child {
+/* .bold_line_properties > div:last-child {
   float: left;
   margin-right: 0.5rem;
-} 
+}  */
+
+.action_icons {
+  display: flex;
+  gap: 1rem
+}
 
 .add-engraving-inline-button , .add-protection-inline-button{
   display: inline-block;
