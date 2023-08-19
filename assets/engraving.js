@@ -603,16 +603,20 @@ $(document).on("click", ".add-protection-inline-button", function (e) {
 //   }
 // });
 
-function AutoAddProtectionProduct(productId, itemQuantity) {
+function AutoAddProtectionProduct(productId, itemQuantity, itemKey) {
   $.ajax({
     type: "POST",
     url: "/cart/add.js",
     data: {
       quantity: 1*itemQuantity,
       id: productId,
+      properties: {
+        'prot-product-key': itemKey
+      }
     },
     dataType: "json",
     success: function (data) {
+      
       // Handle success if needed
       document.dispatchEvent(new CustomEvent("cart:build"));
       //document.dispatchEvent(new CustomEvent('cart:open'));
@@ -670,7 +674,7 @@ function addProtectionPlan(productId, itemKey, itemLine, itemQuantity, productTi
           dataType: "json",
           success: function (response) {
             
-            AutoAddProtectionProduct(productId, itemQuantity);
+            AutoAddProtectionProduct(productId, itemQuantity, itemKey);
             $('.overlay').hide();
           },
           error: function (error) {
