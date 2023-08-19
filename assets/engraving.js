@@ -584,6 +584,7 @@ $(document).on("click", ".add-protection-inline-button", function (e) {
     var line = $(this).attr("data-line");
     var itemQuantity = $(this).attr("data-quantity");
     deleteProtectionPlan(productId, key, line, itemQuantity);
+    removeProtectionProduct(productId, key, line, itemQuantity);
   });
 
 
@@ -603,7 +604,7 @@ $(document).on("click", ".add-protection-inline-button", function (e) {
 //   }
 // });
 
-function AutoAddProtectionProduct(productId, itemQuantity, itemKey) {
+function AutoAddProtectionProduct(productId, itemQuantity) {
   $.ajax({
     type: "POST",
     url: "/cart/add.js",
@@ -613,7 +614,6 @@ function AutoAddProtectionProduct(productId, itemQuantity, itemKey) {
     },
     dataType: "json",
     success: function (data) {
-      
       // Handle success if needed
       document.dispatchEvent(new CustomEvent("cart:build"));
       //document.dispatchEvent(new CustomEvent('cart:open'));
@@ -671,7 +671,7 @@ function addProtectionPlan(productId, itemKey, itemLine, itemQuantity, productTi
           dataType: "json",
           success: function (response) {
             
-            AutoAddProtectionProduct(productId, itemQuantity, itemKey);
+            AutoAddProtectionProduct(productId, itemQuantity);
             $('.overlay').hide();
           },
           error: function (error) {
@@ -715,9 +715,8 @@ function deleteProtectionPlan(productId, itemKey, itemLine, itemQuantity) {
           data: data,
         }).then(function (response) {
           // Handle the response data here
-           removeProtectionProduct(productId, itemKey, itemLine, itemQuantity);
-         // document.dispatchEvent(new CustomEvent("cart:build"));
-        
+          document.dispatchEvent(new CustomEvent("cart:build"));
+          $('.overlay').hide();
         });
       }
     },
@@ -756,7 +755,6 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
           success: function (data) {
             // Handle success if needed
             document.dispatchEvent(new CustomEvent("cart:build"));
-             $('.overlay').hide();
             //document.dispatchEvent(new CustomEvent('cart:open'));
           },
           error: function (error) {
@@ -777,3 +775,10 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
     },
   });
 }
+
+
+document.addEventListener('line-item:change', function(event) {
+  let finalQuantity = event.detail.quantity; // New quantity (may be 0 !)
+  let cart = event.detail.cart;
+  console.log('yes');
+});
