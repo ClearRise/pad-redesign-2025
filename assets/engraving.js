@@ -778,8 +778,6 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
   });
 }
 
-document.addEventListener('line-item:change', function(event) {
-  let finalQuantity = event.detail.quantity; // New quantity (may be 0 !)
-  let cart = event.detail.cart;
-  console.log('yes');
-});
+document.dispatchEvent(new CustomEvent('cart:quantity' + .cart-page, {
+             console.log('rrr');
+          }));
