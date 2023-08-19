@@ -117,9 +117,9 @@
                 
                       {% for variant in protection_product.variants %}
                         {% if variant.id == protection_product_id %}
-                         <p class="black_txt en_price">
+                         <span class="black_txt en_price">
                             Protection Plan Price: {{ variant.price | money_without_trailing_zeros }}
-                          </p>
+                          </span>
 
                           <input type="hidden" name="Protection" class="Protection_p" value="true" data-product-id = "{{ protection_product_id }}">
                         {% endif %}
@@ -155,9 +155,9 @@
 
                     {% for variant in engrave_product.variants %}
                       {% if variant.id == first_gift_product_id_var %}
-                        <p class="black_txt en_price">
+                        <span class="black_txt en_price">
                           Engraving Price: {{ variant.price | money_without_trailing_zeros }}
-                        </p>
+                        </span>
                         <input type="hidden" name="engraving" class="engraving_p" value="true">
                       {% endif %}
                     {% endfor %}
