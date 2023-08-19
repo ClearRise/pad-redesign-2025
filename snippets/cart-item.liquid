@@ -112,9 +112,9 @@
                 {% assign protection_product_id = protection_product.selected_or_first_available_variant.id %}
 
               {% assign p_product_id = protection_product.selected_or_first_available_variant.id %}
-
+                
                 <div class="product-option">
-                  <span
+                 <span
                     id="delete-protection-btn"
                     data-quantity="{{ product.quantity }}"
                     data-line="{{ line }}"
@@ -125,40 +125,17 @@
                   >
                     {% render 'icon-delete' %}
                   </span>
-                </div>
-                
-                <div class="product-option">
-                  <div class="bold_option bold_option_checkbox ">
-                    <label class="protection_div">
-                      <span class="bold_option_element">
-                        <input
-                          type="checkbox"
-                          data-quantity="{{ product.quantity }}"
-                          data-line="{{ line }}"
-                          data-key="{{ product.key }}"
-                          class="add-protection-plan"
-                          {% if p.first contains 'Protection Plan' and p.last contains 'Yes' %}
-                              checked="checked"
-                          {% endif %}
-                          name="properties[Protection Plan]"
-                          value="Yes"
-                          data-protection="{{ protection_product_id }}"
-                        >
-                      <input type="hidden" class="hidden_protection_info" name="properties[_prot-product-title]" value="{{ protection_product.title }}">
-                      </span>
-                      <span class="">{% render 'icon-delete' %}</span>
                       {% for variant in protection_product.variants %}
                         {% if variant.id == protection_product_id %}
-                         
-                            {% comment %}
-                           <span class="bold_option_value_price">
-                            <span class="money"> {{ variant.price | money_without_trailing_zeros }}</span></span>
-                          {% endcomment %}
+                         <p class="black_txt en_price">
+                            Protection Plan Price: {{ variant.price | money_without_trailing_zeros }}
+                          </p>
+
                           <input type="hidden" name="Protection" class="Protection_p" value="true" data-product-id = "{{ protection_product_id }}">
                         {% endif %}
                       {% endfor %}
-                    </label>
-                  </div>
+               
+             
                 </div>
 
                 {% assign found_protection = true %}
