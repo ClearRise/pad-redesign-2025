@@ -130,8 +130,9 @@
                           value="Yes"
                           data-protection="{{ protection_product_id }}"
                         >
+                      <input type="hidden" class="hidden_protection_info" name="properties[_prot-product-title]" value="{{ protection_product.title }}">
                       </span>
-                      <span class=""> Remove Protection Plan {% render 'icon-delete' %}</span>
+                      <span class="">{% render 'icon-delete' %}</span>
                       {% for variant in protection_product.variants %}
                         {% if variant.id == protection_product_id %}
                          
