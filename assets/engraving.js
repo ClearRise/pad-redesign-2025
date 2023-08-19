@@ -584,7 +584,6 @@ $(document).on("click", ".add-protection-inline-button", function (e) {
     var line = $(this).attr("data-line");
     var itemQuantity = $(this).attr("data-quantity");
     deleteProtectionPlan(productId, key, line, itemQuantity);
-    removeProtectionProduct(productId, key, line, itemQuantity);
   });
 
 
@@ -715,8 +714,9 @@ function deleteProtectionPlan(productId, itemKey, itemLine, itemQuantity) {
           data: data,
         }).then(function (response) {
           // Handle the response data here
-          document.dispatchEvent(new CustomEvent("cart:build"));
-          $('.overlay').hide();
+           removeProtectionProduct(productId, itemKey, itemLine, itemQuantity);
+         // document.dispatchEvent(new CustomEvent("cart:build"));
+        
         });
       }
     },
@@ -755,6 +755,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
           success: function (data) {
             // Handle success if needed
             document.dispatchEvent(new CustomEvent("cart:build"));
+             $('.overlay').hide();
             //document.dispatchEvent(new CustomEvent('cart:open'));
           },
           error: function (error) {
