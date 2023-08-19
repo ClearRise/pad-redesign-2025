@@ -362,7 +362,7 @@ function AutoAddEngravingProduct(itemQuantity) {
 function removeEngravingProduct(itemQuantity) {
   // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
   var engravingProductID = theme.engraving.engraving_var_id;
-
+$('.overlay').show();
   // Get the current cart items
   $.ajax({
     type: "GET",
@@ -389,6 +389,7 @@ function removeEngravingProduct(itemQuantity) {
           dataType: "json",
           success: function (data) {
             // Handle success if needed
+            $('.overlay').hide();
             document.dispatchEvent(new CustomEvent("cart:build"));
             //document.dispatchEvent(new CustomEvent('cart:open'));
           },
