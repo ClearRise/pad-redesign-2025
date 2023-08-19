@@ -615,11 +615,6 @@ function AutoAddProtectionProduct(productId, itemQuantity, itemKey) {
     success: function (data) {
       
       // Handle success if needed
-
-      document.dispatchEvent(new CustomEvent('cart:quantity' + '.cart-page', {
-              detail: [itemKey, qty, this.wrapper]
-          }));
-      
       document.dispatchEvent(new CustomEvent("cart:build"));
       //document.dispatchEvent(new CustomEvent('cart:open'));
     },
@@ -782,4 +777,3 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
     },
   });
 }
-
