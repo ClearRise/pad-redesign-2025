@@ -254,6 +254,18 @@
               endif
             endfor  
         %}
+
+        <a
+          data-quantity="{{ product.quantity }}"
+          data-line="{{ line }}"
+          data-key="{{ product.key }}"
+          class="add-protection-inline-button"
+          title="Add Premium Protection Plan"
+          role="button"
+          tabindex="0"
+          data-product-title="{{ protection_product.title }}" 
+          data-protection="{{ first_protection_product_id_var }}"
+          >Add Premium Protection Plan <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span></a>
         
           <div class="">
              <label class="protection_div">
