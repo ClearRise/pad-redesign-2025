@@ -588,21 +588,21 @@ $(document).on("click", ".add-protection-inline-button", function (e) {
   });
 
 
-$(document).on("click", ".add-protection-plan", function (e) {
-  var productId = $(this).attr("data-protection");
-  var productTitle = $(this).attr("data-product-title");
-  var key = $(this).attr("data-key");
-  var line = $(this).attr("data-line");
-  var itemQuantity = $(this).attr("data-quantity");
+// $(document).on("click", ".add-protection-plan", function (e) {
+//   var productId = $(this).attr("data-protection");
+//   var productTitle = $(this).attr("data-product-title");
+//   var key = $(this).attr("data-key");
+//   var line = $(this).attr("data-line");
+//   var itemQuantity = $(this).attr("data-quantity");
   
-  console.log("in function");
-  if ($(this).is(":checked")) {
-    addProtectionPlan(productId, key, line, itemQuantity, productTitle);
-  } else {
-    deleteProtectionPlan(productId, key, line, itemQuantity);
-    removeProtectionProduct(productId, key, line, itemQuantity);
-  }
-});
+//   console.log("in function");
+//   if ($(this).is(":checked")) {
+//     addProtectionPlan(productId, key, line, itemQuantity, productTitle);
+//   } else {
+//     deleteProtectionPlan(productId, key, line, itemQuantity);
+//     removeProtectionProduct(productId, key, line, itemQuantity);
+//   }
+// });
 
 function AutoAddProtectionProduct(productId, itemQuantity) {
   $.ajax({
@@ -635,6 +635,9 @@ function addProtectionPlan(productId, itemKey, itemLine, itemQuantity, productTi
   var now = new Date().getTime();
   var random = Math.floor(Math.random() * 100000);
   var new_random = now+random;
+
+  $('.overlay').show();
+  
   $.ajax({
     type: "GET",
     url: "/cart.js",
@@ -667,6 +670,7 @@ function addProtectionPlan(productId, itemKey, itemLine, itemQuantity, productTi
           data: data,
           dataType: "json",
           success: function (response) {
+            $('.overlay').hide();
             AutoAddProtectionProduct(productId, itemQuantity);
           },
           error: function (error) {
