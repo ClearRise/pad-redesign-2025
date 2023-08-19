@@ -258,7 +258,8 @@
           data-product-title="{{ protection_product.title }}" 
           data-protection="{{ first_protection_product_id_var }}"
           >Add Premium Protection Plan <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span></a>
-        
+
+      {% comment %}
           <div class="">
              <label class="protection_div">
              <span class="bold_option_element">
@@ -268,6 +269,7 @@
              <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span>
              </label>
           </div> 
+    {% endcomment %}
       {% endif %} 
 {% endunless %} 
 
