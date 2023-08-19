@@ -778,6 +778,6 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
   });
 }
 
-document.dispatchEvent(new CustomEvent('cart:quantity', {
-             console.log('rrr');
+document.dispatchEvent(new CustomEvent('cart:quantity' + .cart-page, {
+              detail: [this.options.key, qty, this.wrapper]
           }));
