@@ -777,3 +777,57 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
     },
   });
 }
+document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('cart:quantity.cart-page', function (evt) {
+    var key = evt.detail[0];
+    var qty = evt.detail[1];
+    var el = evt.detail[2];
+    var quantityInput = el.querySelector('.js-qty__num');
+  
+    var dataEngravingValue = quantityInput.getAttribute('data-engraving');
+    var dataProtectionValue = quantityInput.getAttribute('data-protection');
+  
+    if (dataEngravingValue && dataProtectionValue) {
+      updateOtherProductQuantity(qty, dataEngravingValue, dataProtectionValue);
+    }
+    else if (dataEngravingValue) {
+      updateOtherProductQuantity(qty, dataEngravingValue, false);
+    }
+    else if (dataProtectionValue) {
+      updateOtherProductQuantity(qty, false, dataProtectionValue);
+    }
+  });
+
+  // Function to update the quantity of the other product
+  function updateOtherProductQuantity(quantity, dataEngravingValue, dataProtectionValue) {
+    var EngravingProductId = dataEngravingValue;
+    var ProtectionProductId = dataProtectionValue;
+    var requestData = {
+      updates: {}
+    };
+    if(dataEngravingValue) {
+      requestData.updates[EngravingProductId] = quantity;
+    }
+    if(dataProtectionValue) {
+      requestData.updates[ProtectionProductId] = quantity;
+    }
+    
+    $('.overlay').show();
+    setTimeout(function(){
+      $.ajax({
+        type: 'POST',
+        url: '/cart/update.js',
+        data: requestData,
+        dataType: 'json',
+        success: function (data) {
+          document.dispatchEvent(new CustomEvent("cart:build"));
+          $('.overlay').hide();
+        },
+        error: function (error) {
+          // Handle error
+          console.error('Error updating other product quantity:', error);
+        }
+      });
+    }, 1000);  
+  }
+});
