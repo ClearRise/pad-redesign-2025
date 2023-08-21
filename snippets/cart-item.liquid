@@ -52,7 +52,7 @@
     endif
   %}
 {% endif %}
-{% unless product.tags contains 'OPTIONS_HIDDEN_PRODUCT' %}
+
 <div
   class="cart__item rm_border{% if match_engraving_product %} hide{% endif %}{% if match_protection_product %} hide{% endif %}{% if match_gift_product %} hide{% endif %}"
   data-quantity="{{ product.quantity }}"
@@ -278,7 +278,6 @@
 
       
     </div>
-  {% endunless %}
     <div class="cart__item-sub">
       <div>
         <div class="js-qty__wrapper">
