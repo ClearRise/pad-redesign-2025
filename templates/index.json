@@ -3,25 +3,6 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "d2cec34e-fe66-4a55-b5f3-58f543c8980d": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "title": "",
-            "title_size": 80,
-            "subheading": "",
-            "link": "shopify:\/\/collections\/flash-sale-rings",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/fs_hero_5922e078-d6af-47c3-8ad9-810c09a99666.png",
-            "image_mobile": "shopify:\/\/shop_images\/flash_slae_mobile_25a56b65-cb08-4b11-8c1a-99b3d773af0c.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
         "slideshow-0": {
           "type": "image",
           "disabled": true,
@@ -41,11 +22,30 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
+        },
+        "07b77c16-21d9-4eaf-b5a1-167f1d580951": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "shopify:\/\/collections\/all-products",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/swaggy_bg.png",
+            "image_mobile": "shopify:\/\/shop_images\/bg2.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
-        "d2cec34e-fe66-4a55-b5f3-58f543c8980d",
-        "slideshow-0"
+        "slideshow-0",
+        "07b77c16-21d9-4eaf-b5a1-167f1d580951"
       ],
       "settings": {
         "use_img_banner": true,
@@ -118,11 +118,11 @@
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
           "type": "advanced",
           "settings": {
-            "subheading": "Up to 30% off",
-            "heading": "FLASH SALE",
-            "textarea": "LIMITED TIME ONLY",
+            "subheading": "",
+            "heading": "Meteorite Rings",
+            "textarea": "",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/flash-sale-rings",
+            "cta_link1": "shopify:\/\/collections\/meteorite-rings",
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
