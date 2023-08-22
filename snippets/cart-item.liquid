@@ -42,6 +42,8 @@
   {% endif %}
 {% endif %}
 
+{{ product.product.metafields.custom.premium_protection_product | json }}
+
 {% if product.product.metafields.custom.premium_protection_product %}
   {% liquid
     assign protection_product = all_products[product.product.metafields.custom.premium_protection_product]
