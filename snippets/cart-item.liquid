@@ -43,7 +43,7 @@
 {% endif %}
 
   {% liquid
-    assign protection_product = all_products[product.product.metafields.custom.premium_protection_product]
+    assign protection_product = all_products[product.metafields.custom.premium_protection_product]
     assign protection_product_id = protection_product.id
     assign first_protection_product_id_var = protection_product.selected_or_first_available_variant.id
     if first_protection_product_id_var == product.id
