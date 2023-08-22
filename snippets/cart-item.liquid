@@ -54,9 +54,9 @@
   %}
 {% endif %}
 
-{% unless product.product.tags contains 'hidden' %}
+
 <div
-  class="cart__item rm_border{% if match_engraving_product %} hide{% endif %}{% if match_protection_product %} hide{% endif %}{% if match_gift_product %} hide{% endif %}"
+  class="cart__item rm_border{% if match_engraving_product %} hide{% endif %}{% if product.product.tags contains 'hidden' %} hide{% endif %}{% if match_gift_product %} hide{% endif %}"
   data-quantity="{{ product.quantity }}"
   data-key="{{ product.key }}"
   data-handle="{{ product.product.handle }}"
@@ -378,5 +378,5 @@
     </div>
   </div>
 </div>
-                {% endunless %}
+
 <!-- bcpo done -->
