@@ -23,9 +23,9 @@
       <input type="hidden" name="updates[]" id="updates_{{- item.key -}}" class="bold_hidden_input cart__product-qty" value="{{- item.quantity -}}" min="0" data-id="{{- item.key -}}">
       {%- continue -%}
   {%- endif -%}
-{% unless item.product.tags contains 'OPTIONS_HIDDEN_PRODUCT' %}            
+        
 {%- render 'cart-item', product: item, line: forloop.index -%}
- {% endunless %} 
+
           {%- endfor -%}
         </div>
         <div class="cart__page-col">
