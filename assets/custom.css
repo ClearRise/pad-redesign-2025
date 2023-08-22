@@ -1328,6 +1328,9 @@ button.upsell-add-to-cart.disabled{
     font-size: .85em!important;
     padding-left: 8px;
   }  
+  .custom_product{
+    padding-top: 0!important;
+  }
 }
 
   .cart__discount{
