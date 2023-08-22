@@ -42,6 +42,8 @@
   {% endif %}
 {% endif %}
 
+
+{% if product.product.metafields.custom.premium_protection_product %}
   {% liquid
     assign protection_product = all_products[product.product.metafields.custom.premium_protection_product]
     assign protection_product_id = protection_product.id
@@ -50,11 +52,9 @@
       assign match_protection_product = true
     endif
   %}
+{% endif %}
 
-{{ protection_product | json }}
-
-
-
+{% unless product.product.tags contains 'hidden' %}
 <div
   class="cart__item rm_border{% if match_engraving_product %} hide{% endif %}{% if match_protection_product %} hide{% endif %}{% if match_gift_product %} hide{% endif %}"
   data-quantity="{{ product.quantity }}"
@@ -378,4 +378,5 @@
     </div>
   </div>
 </div>
+                {% endunless %}
 <!-- bcpo done -->
