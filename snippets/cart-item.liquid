@@ -33,7 +33,7 @@
     {% assign match_gift_product = true %}
   {% endif %}
 {% endif %}
-{% if settings.show_engraving and settings['product-engraving'] %}
+{% if settings.show_engraving and settings['product-engraving'] and product.type == 'Ring' %}
   {% assign engraving_product = settings['product-engraving'] %}
   {% assign engraving_product_id = engraving_product.id %}
   {% assign engraving_product_id_var = engraving_product.selected_or_first_available_variant.id %}
@@ -146,7 +146,7 @@
             {% endif %}
           {% endif %}
           
-          {% if settings.show_engraving and settings['product-engraving'] %}
+          {% if settings.show_engraving and settings['product-engraving'] and product.type == 'Ring' %}
             {% if p.first contains 'engraving' %}
               {% unless p.last == '' or p.last == null %}
                 {% assign engrave_product = settings['product-engraving'] %}
