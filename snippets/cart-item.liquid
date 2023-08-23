@@ -221,6 +221,7 @@
         {% endcomment %}
       {% endif %}
       {% unless found_engrave %}
+       {% if product.type == 'Ring' %} 
         {% paginate collections.all.products by 1000 %}
           {% assign product_id = product.product_id | times: 1 %}
           {% assign products_obj = collections.all.products | where: 'id', product_id %}
@@ -237,6 +238,7 @@
           tabindex="0"
           >Add an engraving</a
         >
+         {% endif %}
       {% endunless %}
 
 {% unless found_protection %}
