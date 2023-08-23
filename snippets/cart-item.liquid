@@ -221,7 +221,7 @@
         {% endcomment %}
       {% endif %}
       {% unless found_engrave %}
-       {% if product.type == 'Ring' %} 
+     {% if settings.show_engraving and settings['product-engraving'] and product.type == 'Ring' %} 
         {% paginate collections.all.products by 1000 %}
           {% assign product_id = product.product_id | times: 1 %}
           {% assign products_obj = collections.all.products | where: 'id', product_id %}
