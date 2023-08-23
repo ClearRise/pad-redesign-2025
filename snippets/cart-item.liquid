@@ -146,7 +146,7 @@
             {% endif %}
           {% endif %}
           
-          {% if settings.show_engraving and settings['product-engraving'] and product.type == 'Ring' %}
+          {% if settings.show_engraving and settings['product-engraving'] %}
             {% if p.first contains 'engraving' %}
               {% unless p.last == '' or p.last == null %}
                 {% assign engrave_product = settings['product-engraving'] %}
