@@ -344,7 +344,9 @@ function AutoAddEngravingProduct(itemQuantity) {
     dataType: "json",
     success: function (data) {
       // Handle success if needed
-      document.dispatchEvent(new CustomEvent("cart:build"));
+      setTimeout(function(){
+        document.dispatchEvent(new CustomEvent("cart:build"));
+      }, 1000);
       //document.dispatchEvent(new CustomEvent('cart:open'));
     },
     error: function (error) {
@@ -389,8 +391,11 @@ $('.overlay').show();
           dataType: "json",
           success: function (data) {
             // Handle success if needed
-            $('.overlay').hide();
-            document.dispatchEvent(new CustomEvent("cart:build"));
+            setTimeout(function(){
+              $('.overlay').hide();
+              document.dispatchEvent(new CustomEvent("cart:build"));
+            }, 1000);
+            
             //document.dispatchEvent(new CustomEvent('cart:open'));
           },
           error: function (error) {
@@ -465,7 +470,9 @@ function deleteEngraving(itemKey, itemLine, itemQuantity) {
           data: data,
         }).then(function (response) {
           // Handle the response data here
-          document.dispatchEvent(new CustomEvent("cart:build"));
+          setTimeout(function(){
+            document.dispatchEvent(new CustomEvent("cart:build"));
+          }, 1000);
         });
       }
     },
@@ -545,7 +552,9 @@ function editEngraving(itemText, itemKey, itemLine, itemQuantity, $autoAdd) {
                   AutoAddEngravingProduct(itemQuantity);
                 } else {
                   // Handle the response data here
-                  document.dispatchEvent(new CustomEvent("cart:build"));
+                  setTimeout(function(){
+                    document.dispatchEvent(new CustomEvent("cart:build"));
+                  }, 2000);
                   //document.dispatchEvent(new CustomEvent('cart:open'));
                 }
               },
@@ -615,7 +624,9 @@ function AutoAddProtectionProduct(productId, itemQuantity, itemKey) {
     success: function (data) {
       
       // Handle success if needed
-      document.dispatchEvent(new CustomEvent("cart:build"));
+      setTimeout(function(){
+        document.dispatchEvent(new CustomEvent("cart:build"));
+      }, 1000);
       //document.dispatchEvent(new CustomEvent('cart:open'));
     },
     error: function (error) {
@@ -755,8 +766,10 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
           dataType: "json",
           success: function (data) {
             // Handle success if needed
-            document.dispatchEvent(new CustomEvent("cart:build"));
-             $('.overlay').hide();
+            setTimeout(function(){
+              document.dispatchEvent(new CustomEvent("cart:build"));
+              $('.overlay').hide();
+            }, 2000);
             //document.dispatchEvent(new CustomEvent('cart:open'));
           },
           error: function (error) {
@@ -783,51 +796,91 @@ document.addEventListener('DOMContentLoaded', function () {
     var qty = evt.detail[1];
     var el = evt.detail[2];
     var quantityInput = el.querySelector('.js-qty__num');
+    var prevQty = parseInt(quantityInput.getAttribute('value'));
+    if(prevQty > qty) {
+      var action = 'minus';
+    }
+    else {
+      var action = 'plus';
+    }
+    var comp_qty = parseInt(qty - prevQty);
   
     var dataEngravingValue = quantityInput.getAttribute('data-engraving');
     var dataProtectionValue = quantityInput.getAttribute('data-protection');
   
     if (dataEngravingValue && dataProtectionValue) {
-      updateOtherProductQuantity(qty, dataEngravingValue, dataProtectionValue);
+      updateOtherProductQuantity(qty, dataEngravingValue, dataProtectionValue, action, comp_qty);
     }
     else if (dataEngravingValue) {
-      updateOtherProductQuantity(qty, dataEngravingValue, false);
+      updateOtherProductQuantity(qty, dataEngravingValue, false, action, comp_qty);
     }
     else if (dataProtectionValue) {
-      updateOtherProductQuantity(qty, false, dataProtectionValue);
+      updateOtherProductQuantity(qty, false, dataProtectionValue, action, comp_qty);
     }
   });
 
   // Function to update the quantity of the other product
-  function updateOtherProductQuantity(quantity, dataEngravingValue, dataProtectionValue) {
-    var EngravingProductId = dataEngravingValue;
-    var ProtectionProductId = dataProtectionValue;
+  function updateOtherProductQuantity(quantity, dataEngravingValue, dataProtectionValue, action, comp_qty) {
     var requestData = {
       updates: {}
     };
-    if(dataEngravingValue) {
-      requestData.updates[EngravingProductId] = quantity;
-    }
-    if(dataProtectionValue) {
-      requestData.updates[ProtectionProductId] = quantity;
-    }
-    
+  
     $('.overlay').show();
-    setTimeout(function(){
-      $.ajax({
-        type: 'POST',
-        url: '/cart/update.js',
-        data: requestData,
-        dataType: 'json',
-        success: function (data) {
-          document.dispatchEvent(new CustomEvent("cart:build"));
-          $('.overlay').hide();
-        },
-        error: function (error) {
-          // Handle error
-          console.error('Error updating other product quantity:', error);
+  
+    // Fetch current cart information
+    $.ajax({
+      type: 'GET',
+      url: '/cart.js',
+      dataType: 'json',
+      success: function (cartData) {
+        // Get current quantities of EngravingProductId and ProtectionProductId
+        var engravingProduct = cartData.items.find(item => item.variant_id == dataEngravingValue);
+        var protectionProduct = cartData.items.find(item => item.variant_id == dataProtectionValue);
+  console.log(protectionProduct);
+        if (engravingProduct) {
+          if(action == 'minus'){
+            requestData.updates[dataEngravingValue] = engravingProduct.quantity + comp_qty;
+            requestData.updates[dataEngravingValue].properties = engravingProduct.properties;
+          }
+          else {
+            requestData.updates[dataEngravingValue] = engravingProduct.quantity + comp_qty;
+            requestData.updates[dataEngravingValue].properties = engravingProduct.properties;
+          }
         }
-      });
-    }, 1000);  
+        
+        if (protectionProduct) {
+          if(action == 'minus'){
+            requestData.updates[dataProtectionValue] = protectionProduct.quantity + comp_qty;
+            requestData.updates[dataProtectionValue].properties = protectionProduct.properties;
+          }
+          else {
+            requestData.updates[dataProtectionValue] = protectionProduct.quantity + comp_qty;
+            requestData.updates[dataProtectionValue].properties = protectionProduct.properties;
+          }
+        }
+  
+        // Update cart quantities
+        $.ajax({
+          type: 'POST',
+          url: '/cart/update.js',
+          data: requestData,
+          dataType: 'json',
+          success: function (data) {
+            setTimeout(function(){
+              document.dispatchEvent(new CustomEvent("cart:build"));
+              $('.overlay').hide();
+            }, 1000);
+          },
+          error: function (error) {
+            // Handle error
+            console.error('Error updating other product quantity:', error);
+          }
+        });
+      },
+      error: function (error) {
+        // Handle error
+        console.error('Error fetching cart data:', error);
+      }
+    });
   }
 });
