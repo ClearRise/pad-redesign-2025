@@ -163,6 +163,12 @@
             "title": "Ask a question",
             "phone": false
           }
+        },
+        "7c137c00-10b8-47a9-9121-7ea72d88242e": {
+          "type": "size_chart",
+          "settings": {
+            "size_chart": "premium-protection-plan"
+          }
         }
       },
       "block_order": [
@@ -186,7 +192,8 @@
         "8aca98a7-09cd-4cf0-a4d8-b87789875b12",
         "e15f8d39-327a-449c-ae3e-f545ea35c05e",
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86",
-        "contact"
+        "contact",
+        "7c137c00-10b8-47a9-9121-7ea72d88242e"
       ],
       "settings": {
         "sku_enable": false,
