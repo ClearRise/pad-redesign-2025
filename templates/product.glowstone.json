@@ -66,7 +66,7 @@
           "type": "tab",
           "settings": {
             "title": "Premium Protection",
-            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <strong>Premium Protection Plan<\/strong> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
+            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our Premium Protection Plan covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
             "page": "",
             "enable_readmore": true,
             "size_chart": "premium-protection-plan"
