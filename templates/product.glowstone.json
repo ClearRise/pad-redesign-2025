@@ -68,7 +68,7 @@
           "type": "tab",
           "settings": {
             "title": "Premium Protection",
-            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"\/pages\/premium-protection-plan\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
+            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"\/pages\/premium-protection-plan\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": "premium-protection-plan"
