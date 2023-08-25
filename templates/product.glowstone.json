@@ -53,7 +53,8 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
-            "surface_pickup_enable": true
+            "surface_pickup_enable": true,
+            "tooltip_content": "<p><\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>"
           }
         },
         "8b562356-ae61-4e76-9d41-a70561a3c483": {
