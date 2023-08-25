@@ -1540,3 +1540,14 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
     width: 0px;
     height: 0;
 }
+
+.custom_plink:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid currentColor;
+    transition: width .5s ease;
+}
+
