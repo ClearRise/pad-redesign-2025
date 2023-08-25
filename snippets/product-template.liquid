@@ -229,7 +229,9 @@
                         {{ block.settings.content }}
                         {{ block.settings.page.content }}
                       {% endcapture %}
-                      {%- render 'tab', id: tab_id, title: block.settings.title, content: tab_content -%}
+                      {%- render 'tab', id: tab_id,  title: block.settings.title, content: tab_content, readmore: block.settings.enable_readmore,
+                        size_chart: block.settings.size_chart
+                      -%}
                     </div>
                   {%- when 'contact' -%}
                     <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
