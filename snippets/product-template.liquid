@@ -397,8 +397,9 @@
                       {%- unless product.empty? -%}
 
                         {% capture tooltip_content  %}
-                          {{ product.metafields.custom.premium_protection_plan }}
-                           {{ block.settings.tooltip_content }}
+                          <div>{{ product.metafields.custom.premium_protection_plan }}</div>
+                          
+                           <p>{{ block.settings.tooltip_content }}</p>
                         {% endcapture %}
                         
                         <div class="product-block">
