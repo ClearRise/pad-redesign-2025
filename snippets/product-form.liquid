@@ -66,13 +66,13 @@
              <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span>
              </label>
              <!-- <span class="bold_tooltip"><small>Protect your ring for a lifetime. See below tab for details.</small></span> -->
-             {% if tooltip_content %}
-             {%- render 'tool-tip-trigger',
+             {% if enable_tooltip %}
+                 {%- render 'tool-tip-trigger',
                           title: 'Learn More',
                           content: tooltip_content,
                           context: 'learn-more'
-                        -%}
-          {% endif %}
+                 -%}
+             {% endif %}
           </div> 
       {% endif %} 
 
