@@ -1559,3 +1559,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
 .custom_plink:hover{
   text-decoration: none!important;
 }
+
+.custom_plink:hover:after {
+    width: 100%;
+}
