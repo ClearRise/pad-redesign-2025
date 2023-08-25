@@ -397,8 +397,8 @@
                       {%- unless product.empty? -%}
 
                         {% capture tooltip_content  %}
+                          <div>{{ block.settings.tooltip_header }}</div>
                           <div>{{ product.metafields.custom.premium_protection_plan }}</div>
-                          
                            <p>{{ block.settings.tooltip_content }}</p>
                         {% endcapture %}
                         
@@ -408,7 +408,8 @@
                             product: product,
                             show_dynamic_checkout: block.settings.show_dynamic_checkout,
                             current_variant: current_variant,
-                            tooltip_content: tooltip_content
+                            tooltip_content: tooltip_content,
+                            enable_tooltip: block.settings.enable_tooltip
                           -%}
                         </div>
                       {%- endunless -%}
