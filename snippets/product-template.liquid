@@ -395,13 +395,19 @@
                   {%- when 'buy_buttons' -%}
                     <div class="product-block" {{ block.shopify_attributes }}>
                       {%- unless product.empty? -%}
+
+                        {% capture tooltip_content  %}
+                          {{ product.metafields.custom.premium_protection_plan }}
+                           {{ block.settings.tooltip_content }}
+                        {% endcapture %}
+                        
                         <div class="product-block">
                           {%- render 'product-form',
                             form_id: form_id,
                             product: product,
                             show_dynamic_checkout: block.settings.show_dynamic_checkout,
                             current_variant: current_variant,
-                            tooltip_content: block.settings.tooltip_content
+                            tooltip_content: tooltip_content
                           -%}
                         </div>
                       {%- endunless -%}
