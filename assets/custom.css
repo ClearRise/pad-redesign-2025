@@ -1446,3 +1446,7 @@ button.upsell-add-to-cart.disabled{
     width: 45px!important;
     height: 45px!important;
 }
+
+.product-block--price{
+  margin-bottom: 8px!important;
+}
