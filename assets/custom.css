@@ -1547,6 +1547,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
     position: relative;
     display: inline-block;
     /* font-weight: 600; */
+   letter-spacing: 0.05px;
 }
 .custom_plink:after {
     content: "";
