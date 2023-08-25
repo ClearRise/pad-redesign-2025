@@ -178,7 +178,7 @@ $(document).ready(function () {
     var $remove_url = $(this).attr("href");
     var $productId = '';
     var itemQuantity = $(this).parents(".cart__item").attr('data-quantity');
-
+    $('.overlay').show();
      if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
        removeEngrageShippingItems($productId, $remove_url, itemQuantity);
@@ -195,17 +195,17 @@ $(document).ready(function () {
     else {
       $productId = '';
       window.location.href = $remove_url;
-    }
-
-   window.location.href = $remove_url;
+    } 
+    setTimeout(function(){
+      $('.overlay').hide();
+      window.location.href = $remove_url;
+    }, 2000);
    
   });
 
 
 function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
    if ($productId != '') {
-
-      console.log($productId);
       // Get the current cart items
       $.ajax({
         type: "GET",
@@ -218,8 +218,6 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
           var itemToUpdate = cartData.items.find(function (item) {
             return item.variant_id === parseInt($productId);
           });
-
-          console.log(itemToUpdate);
           
           if (itemToUpdate) {
             // Decrease the quantity of the engraving product by 1
@@ -860,22 +858,22 @@ document.addEventListener('DOMContentLoaded', function () {
         }
   
         // Update cart quantities
-        $.ajax({
-          type: 'POST',
-          url: '/cart/update.js',
-          data: requestData,
-          dataType: 'json',
-          success: function (data) {
-            setTimeout(function(){
+        setTimeout(function(){
+          $.ajax({
+            type: 'POST',
+            url: '/cart/update.js',
+            data: requestData,
+            dataType: 'json',
+            success: function (data) {
               document.dispatchEvent(new CustomEvent("cart:build"));
               $('.overlay').hide();
-            }, 1000);
-          },
-          error: function (error) {
-            // Handle error
-            console.error('Error updating other product quantity:', error);
-          }
-        });
+            },
+            error: function (error) {
+              // Handle error
+              console.error('Error updating other product quantity:', error);
+            }
+          });
+        }, 1000);
       },
       error: function (error) {
         // Handle error
