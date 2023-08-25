@@ -1554,7 +1554,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
     bottom: -2px;
     left: 0;
     width: 0%;
-    border-bottom: 2px solid currentColor;
+    border-bottom: 1px solid currentColor;
     transition: width .5s ease;
 }
 .custom_plink:hover{
