@@ -53,7 +53,8 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
-            "surface_pickup_enable": true
+            "surface_pickup_enable": true,
+            "tooltip_content": "<p>Our Premium Protection Plan covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>"
           }
         },
         "8b562356-ae61-4e76-9d41-a70561a3c483": {
