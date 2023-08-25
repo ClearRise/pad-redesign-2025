@@ -55,7 +55,7 @@
             "show_dynamic_checkout": false,
             "surface_pickup_enable": true,
             "enable_tooltip": true,
-            "tooltip_header": "<h2>Premium Protection<\/h2>",
+            "tooltip_header": "<h3>Premium Protection<\/h3>",
             "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
           }
         },
