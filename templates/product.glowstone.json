@@ -166,6 +166,7 @@
         },
         "7c137c00-10b8-47a9-9121-7ea72d88242e": {
           "type": "size_chart",
+          "disabled": true,
           "settings": {
             "size_chart": "premium-protection-plan"
           }
