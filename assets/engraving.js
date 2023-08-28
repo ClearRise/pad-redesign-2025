@@ -346,6 +346,7 @@ function AutoAddEngravingProduct(itemQuantity) {
         document.dispatchEvent(new CustomEvent("cart:build"));
       }, 1000);
       //document.dispatchEvent(new CustomEvent('cart:open'));
+      $('.overlay').hide();
     },
     error: function (error) {
       // Handle error if needed
@@ -508,6 +509,7 @@ function editEngraving(itemText, itemKey, itemLine, itemQuantity, $autoAdd) {
     confirmButtonText: "Save",
   }).then((result) => {
     if (result.isConfirmed) {
+      $('.overlay').show();
       // const newEngravingText = result.value.toUpperCase();
       const newEngravingText = result.value;
       var new_lineItem = parseInt(itemLine - 1);
