@@ -1,6 +1,10 @@
 {
   "sections": {
-
+    "zp-product-header-content": {
+      "type": "product-header-content-zipifypages",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -60,10 +64,7 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
-            "surface_pickup_enable": true,
-            "enable_tooltip": true,
-            "tooltip_header": "<h3>Premium Protection<\/h3>",
-            "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
+            "surface_pickup_enable": true
           }
         },
         "8b562356-ae61-4e76-9d41-a70561a3c483": {
@@ -71,16 +72,6 @@
           "settings": {
             "gift_box_title": "",
             "gift_included": ""
-          }
-        },
-        "622a42e2-fba5-4aba-810a-cc0d00d85caa": {
-          "type": "tab",
-          "settings": {
-            "title": "Premium Protection",
-            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"\/pages\/premium-protection-plan\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": "premium-protection-plan"
           }
         },
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
@@ -127,9 +118,7 @@
           "settings": {
             "title": "Additional Details",
             "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": ""
+            "page": ""
           }
         },
         "7cf22f7b-2877-4d38-a231-95946286cc18": {
@@ -137,9 +126,7 @@
           "settings": {
             "title": "Sizing Information",
             "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": ""
+            "page": ""
           }
         },
         "tab": {
@@ -147,9 +134,7 @@
           "settings": {
             "title": "Shipping information",
             "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": ""
+            "page": ""
           }
         },
         "8aca98a7-09cd-4cf0-a4d8-b87789875b12": {
@@ -157,9 +142,7 @@
           "settings": {
             "title": "How The Glow Works",
             "content": "<p>Our glowstone rings contain an odorless, non-flammable glow powder called <strong>strontium aluminate<\/strong>. To get your ring to glow, expose it to a UV light source (such as the sun) to charge it and take it into the dark shortly after. There are many factors that affect the strength of the glow which are detailed on this helpful <a href=\"https:\/\/patrickadairdesigns.com\/blogs\/blog\/how-to-get-your-glow-ring-to-glow\" title=\"https:\/\/patrickadairdesigns.com\/blogs\/blog\/how-to-get-your-glow-ring-to-glow\"><strong>page<\/strong><\/a>.<\/p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": ""
+            "page": ""
           }
         },
         "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
@@ -167,9 +150,7 @@
           "settings": {
             "title": "How To Care",
             "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": ""
+            "page": ""
           }
         },
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
@@ -177,9 +158,7 @@
           "settings": {
             "title": "Lifetime Warranty",
             "content": "<p>At Patrick Adair Designs, all products come with a <a href=\"\/pages\/warranty-and-return-information\" title=\"Limited Lifetime Warranty and Return Policy\"><strong>Limited Lifetime Warranty<\/strong><\/a> by default. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.<\/p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": ""
+            "page": ""
           }
         },
         "contact": {
@@ -187,13 +166,6 @@
           "settings": {
             "title": "Ask a question",
             "phone": false
-          }
-        },
-        "7c137c00-10b8-47a9-9121-7ea72d88242e": {
-          "type": "size_chart",
-          "disabled": true,
-          "settings": {
-            "size_chart": "premium-protection-plan"
           }
         }
       },
@@ -207,7 +179,6 @@
         "inventory_status",
         "buy_buttons",
         "8b562356-ae61-4e76-9d41-a70561a3c483",
-        "622a42e2-fba5-4aba-810a-cc0d00d85caa",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
@@ -219,8 +190,7 @@
         "8aca98a7-09cd-4cf0-a4d8-b87789875b12",
         "e15f8d39-327a-449c-ae3e-f545ea35c05e",
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86",
-        "contact",
-        "7c137c00-10b8-47a9-9121-7ea72d88242e"
+        "contact"
       ],
       "settings": {
         "sku_enable": false,
@@ -373,9 +343,15 @@
       "type": "collection-return",
       "settings": {
       }
+    },
+    "zp-product-footer-content": {
+      "type": "product-footer-content-zipifypages",
+      "settings": {
+      }
     }
   },
   "order": [
+    "zp-product-header-content",
     "main",
     "product_img_with_txt",
     "product_how_to_work",
@@ -384,6 +360,7 @@
     "164740826566424b78",
     "product-recommendations",
     "recently-viewed",
-    "collection-return"
+    "collection-return",
+    "zp-product-footer-content"
   ]
 }
