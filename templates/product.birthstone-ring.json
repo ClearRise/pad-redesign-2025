@@ -1,1 +1,389 @@
-{"sections":{"zp-product-header-content":{"type":"product-header-content-zipifypages","settings":{}},"main":{"type":"main-product","blocks":{"7a40c00f-33ab-4e69-b17f-4b0da4e6853a":{"type":"shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29","settings":{"product":"{{product}}"}},"price":{"type":"price","settings":{}},"separator":{"type":"separator","disabled":true,"settings":{}},"variant_picker":{"type":"variant_picker","settings":{"size_chart":"","variant_labels":true,"picker_type":"button","color_swatches":false}},"inventory_status":{"type":"inventory_status","disabled":true,"settings":{"inventory_threshold":10,"inventory_transfers_enable":true}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":false,"surface_pickup_enable":true}},"d2bfdc2f-2cae-43b1-91ed-390419b7a7d8":{"type":"free_gifts","settings":{"gift_box_title":"","gift_included":""}},"09f5859d-9056-4303-b7d1-5b25f005239b":{"type":"tab","settings":{"title":"<b>Premium Protection<\/b>","content":"<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>","page":""}},"07bdb91c-b9ed-4326-8127-0098675d0092":{"type":"sales_point","settings":{"icon":"checkmark","text":"Handcrafted in Utah, USA","url":""}},"87272cff-cc16-40a9-b501-c6f3b9acd243":{"type":"sales_point","settings":{"icon":"heart","text":"Made to order just for you","url":""}},"f1a8f2b3-4268-4aa9-bef1-6bee30df3005":{"type":"sales_point","settings":{"icon":"shield","text":"Limited Lifetime Warranty","url":""}},"sales_point":{"type":"sales_point","settings":{"icon":"globe","text":"Worldwide shipping","url":""}},"description":{"type":"description","disabled":true,"settings":{"is_tab":false}},"67cf22ff-76d8-4ad2-91e5-80b67524f841":{"type":"tab","settings":{"title":"Additional Details","content":"<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>","page":""}},"7cf22f7b-2877-4d38-a231-95946286cc18":{"type":"tab","settings":{"title":"Sizing Information","content":"<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>","page":""}},"tab":{"type":"tab","settings":{"title":"Shipping information","content":"<p>{{ product.metafields.global.delivery.value }}<\/p>","page":""}},"0858aa42-4ab1-4194-814a-990ffd086efc":{"type":"tab","settings":{"title":"HOW THE GLOW WORKS","content":"<p>Our glowstone rings contain an odorless, non-flammable glow powder called <strong>strontium aluminate<\/strong>. To get your ring to glow, expose it to a UV light source (such as the sun) to charge it and take it into the dark shortly after. There are many factors that affect the strength of the glow which are detailed on this helpful <a href=\"https:\/\/patrickadairdesigns.com\/blogs\/blog\/how-do-i-get-my-glow-ring-to-glow\" title=\"How The Glow Works\"><strong>page<\/strong><\/a>.<\/p>","page":""}},"e15f8d39-327a-449c-ae3e-f545ea35c05e":{"type":"tab","settings":{"title":"How To Care","content":"<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>","page":""}},"e4a1127a-fe7b-4aa3-af5f-a5f1222dec86":{"type":"tab","settings":{"title":"Lifetime Warranty","content":"<p>At Patrick Adair Designs, all products come with a <a href=\"\/pages\/warranty-and-return-information\" title=\"Limited Lifetime Warranty and Return Policy\"><strong>Limited Lifetime Warranty<\/strong><\/a> by default. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.<\/p>","page":""}},"contact":{"type":"contact","settings":{"title":"Ask a question","phone":false}}},"block_order":["7a40c00f-33ab-4e69-b17f-4b0da4e6853a","price","separator","variant_picker","inventory_status","buy_buttons","d2bfdc2f-2cae-43b1-91ed-390419b7a7d8","09f5859d-9056-4303-b7d1-5b25f005239b","07bdb91c-b9ed-4326-8127-0098675d0092","87272cff-cc16-40a9-b501-c6f3b9acd243","f1a8f2b3-4268-4aa9-bef1-6bee30df3005","sales_point","description","67cf22ff-76d8-4ad2-91e5-80b67524f841","7cf22f7b-2877-4d38-a231-95946286cc18","tab","0858aa42-4ab1-4194-814a-990ffd086efc","e15f8d39-327a-449c-ae3e-f545ea35c05e","e4a1127a-fe7b-4aa3-af5f-a5f1222dec86","contact"],"settings":{"sku_enable":false,"image_position":"left","image_size":"medium","product_zoom_enable":true,"thumbnail_position":"below","thumbnail_arrows":true,"mobile_layout":"full","enable_video_looping":true,"product_video_style":"muted"}},"product_img_with_txt":{"type":"product_img_with_txt","settings":{"sub_title1":"Handcrafted in the USA","image_1":"shopify:\/\/shop_images\/img2.jpg","text_1":"Every ring is handmade by trade artisans in Utah, USA.","url_1":"","sub_title2":"Uncommon materials","image_2":"shopify:\/\/shop_images\/img1.jpg","text_2":"Go beyond silver and gold and find something that’s truly you.","url_2":"","sub_title3":"Every ring is unique","image_3":"shopify:\/\/shop_images\/img3.jpg","text_3":"Your ring is made to order just for you. No two rings are the same.","url_3":""}},"1660247075673c3c06":{"type":"text-and-image","settings":{"image":"{{ product.metafields.custom.blog_photo_1.value }}","image2":"{{ product.metafields.custom.blog_photo_2.value }}","image_width":700,"subtitle":"","title":"{{ product.metafields.custom.blog_section_heading.value }}","text":"<p>Check out our dedicated blog post on this month's birthstone and learn about its rich history, meaning, and color.<\/p>","button_label":"READ MORE","button_link":"{{ product.metafields.custom.blog_link.value }}","button_style":"primary","align_text":"left","layout":"right","divider":false}},"product_how_to_work":{"type":"product_how_to_work","blocks":{"93e02dd1-0098-4d81-bb47-a37e47aeb0c1":{"type":"text","settings":{"sub_title":"Place your order","text":"Unsure of your size? Select “unsure – send ring sizer first” and we’ll post you a free ring sizer","image_1":"shopify:\/\/shop_images\/how-it-works-11.jpg","image_2":"shopify:\/\/shop_images\/how-it-works-22.jpg"}},"0669e6bd-9d26-4ae4-b380-ce53681e452e":{"type":"text","settings":{"sub_title":"Confirm your ring size","text":"After using the sizer, simply send us your size via email"}},"ba8bc2a1-afb2-4a08-8837-4ae3795928a4":{"type":"text","settings":{"sub_title":"We handcraft your ring","text":"Your order hits the workshop and our trained artisans start crafting your new ring"}}},"block_order":["93e02dd1-0098-4d81-bb47-a37e47aeb0c1","0669e6bd-9d26-4ae4-b380-ce53681e452e","ba8bc2a1-afb2-4a08-8837-4ae3795928a4"],"settings":{"enable":true,"title":"Find Your Ring Size","title_size":21,"bg_color":"#000000","padding_top":5,"padding_bottom":5}},"1646853684b754aedd":{"type":"rich-text","blocks":{"164685368492299ea2-0":{"type":"heading","settings":{"title":"Unique Birthstone Jewelry"}},"164685368492299ea2-1":{"type":"text","settings":{"enlarge_text":true,"text":"<p>{{ product.metafields.global.unrivaled_process | metafield_tag }}<\/p>"}}},"block_order":["164685368492299ea2-0","164685368492299ea2-1"],"settings":{"align_text":"center","narrow_column":true,"divider":false}},"sub":{"type":"product-full-width","blocks":{"46cc26fb-adef-48ef-adb5-d7706819bd7b":{"type":"text","settings":{"text":""}}},"block_order":["46cc26fb-adef-48ef-adb5-d7706819bd7b"],"settings":{"max_width":true}},"16602466454a97b1e9":{"type":"featured-collection","settings":{"title":"Shop The Birthstone Series","home_featured_products":"birthstone-series","per_row":4,"rows":1,"mobile_scrollable":true,"view_all":true,"divider":false}},"164740826566424b78":{"type":"apps","blocks":{"0b2c4db0-68a2-468e-890c-52a77263cb09":{"type":"shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29","settings":{"product":"{{product}}","widget_type":"combined_widget"}}},"block_order":["0b2c4db0-68a2-468e-890c-52a77263cb09"],"settings":{"full_width":false,"space_around":true}},"product-recommendations":{"type":"product-recommendations","settings":{"show_product_recommendations":false,"product_recommendations_heading":"You may also like","related_count":5}},"recently-viewed":{"type":"recently-viewed","settings":{"recent_count":5}},"collection-return":{"type":"collection-return","settings":{}},"zp-product-footer-content":{"type":"product-footer-content-zipifypages","settings":{}}},"order":["zp-product-header-content","main","product_img_with_txt","1660247075673c3c06","product_how_to_work","1646853684b754aedd","sub","16602466454a97b1e9","164740826566424b78","product-recommendations","recently-viewed","collection-return","zp-product-footer-content"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "7a40c00f-33ab-4e69-b17f-4b0da4e6853a": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "size_chart": "",
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": false
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true,
+            "tooltip_content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>"
+          }
+        },
+        "d2bfdc2f-2cae-43b1-91ed-390419b7a7d8": {
+          "type": "free_gifts",
+          "settings": {
+            "gift_box_title": "",
+            "gift_included": ""
+          }
+        },
+        "09f5859d-9056-4303-b7d1-5b25f005239b": {
+          "type": "tab",
+          "settings": {
+            "title": "Premium Protection",
+            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "07bdb91c-b9ed-4326-8127-0098675d0092": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "checkmark",
+            "text": "Handcrafted in Utah, USA",
+            "url": ""
+          }
+        },
+        "87272cff-cc16-40a9-b501-c6f3b9acd243": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "heart",
+            "text": "Made to order just for you",
+            "url": ""
+          }
+        },
+        "f1a8f2b3-4268-4aa9-bef1-6bee30df3005": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "shield",
+            "text": "Limited Lifetime Warranty",
+            "url": ""
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "globe",
+            "text": "Worldwide shipping",
+            "url": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
+          "type": "tab",
+          "settings": {
+            "title": "Additional Details",
+            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "7cf22f7b-2877-4d38-a231-95946286cc18": {
+          "type": "tab",
+          "settings": {
+            "title": "Sizing Information",
+            "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "0858aa42-4ab1-4194-814a-990ffd086efc": {
+          "type": "tab",
+          "settings": {
+            "title": "HOW THE GLOW WORKS",
+            "content": "<p>Our glowstone rings contain an odorless, non-flammable glow powder called <strong>strontium aluminate<\/strong>. To get your ring to glow, expose it to a UV light source (such as the sun) to charge it and take it into the dark shortly after. There are many factors that affect the strength of the glow which are detailed on this helpful <a href=\"https:\/\/patrickadairdesigns.com\/blogs\/blog\/how-do-i-get-my-glow-ring-to-glow\" title=\"How The Glow Works\"><strong>page<\/strong><\/a>.<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
+          "type": "tab",
+          "settings": {
+            "title": "How To Care",
+            "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
+          "type": "tab",
+          "settings": {
+            "title": "Lifetime Warranty",
+            "content": "<p>At Patrick Adair Designs, all products come with a <a href=\"\/pages\/warranty-and-return-information\" title=\"Limited Lifetime Warranty and Return Policy\"><strong>Limited Lifetime Warranty<\/strong><\/a> by default. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        }
+      },
+      "block_order": [
+        "7a40c00f-33ab-4e69-b17f-4b0da4e6853a",
+        "price",
+        "separator",
+        "variant_picker",
+        "inventory_status",
+        "buy_buttons",
+        "d2bfdc2f-2cae-43b1-91ed-390419b7a7d8",
+        "09f5859d-9056-4303-b7d1-5b25f005239b",
+        "07bdb91c-b9ed-4326-8127-0098675d0092",
+        "87272cff-cc16-40a9-b501-c6f3b9acd243",
+        "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
+        "sales_point",
+        "description",
+        "67cf22ff-76d8-4ad2-91e5-80b67524f841",
+        "7cf22f7b-2877-4d38-a231-95946286cc18",
+        "tab",
+        "0858aa42-4ab1-4194-814a-990ffd086efc",
+        "e15f8d39-327a-449c-ae3e-f545ea35c05e",
+        "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86",
+        "contact"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": true,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "product_img_with_txt": {
+      "type": "product_img_with_txt",
+      "settings": {
+        "sub_title1": "Handcrafted in the USA",
+        "image_1": "shopify:\/\/shop_images\/img2.jpg",
+        "text_1": "Every ring is handmade by trade artisans in Utah, USA.",
+        "url_1": "",
+        "sub_title2": "Uncommon materials",
+        "image_2": "shopify:\/\/shop_images\/img1.jpg",
+        "text_2": "Go beyond silver and gold and find something that’s truly you.",
+        "url_2": "",
+        "sub_title3": "Every ring is unique",
+        "image_3": "shopify:\/\/shop_images\/img3.jpg",
+        "text_3": "Your ring is made to order just for you. No two rings are the same.",
+        "url_3": ""
+      }
+    },
+    "1660247075673c3c06": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "{{ product.metafields.custom.blog_photo_1.value }}",
+        "image2": "{{ product.metafields.custom.blog_photo_2.value }}",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "{{ product.metafields.custom.blog_section_heading.value }}",
+        "text": "<p>Check out our dedicated blog post on this month's birthstone and learn about its rich history, meaning, and color.<\/p>",
+        "button_label": "READ MORE",
+        "button_link": "{{ product.metafields.custom.blog_link.value }}",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "product_how_to_work": {
+      "type": "product_how_to_work",
+      "blocks": {
+        "93e02dd1-0098-4d81-bb47-a37e47aeb0c1": {
+          "type": "text",
+          "settings": {
+            "sub_title": "Place your order",
+            "text": "Unsure of your size? Select “unsure – send ring sizer first” and we’ll post you a free ring sizer",
+            "image_1": "shopify:\/\/shop_images\/how-it-works-11.jpg",
+            "image_2": "shopify:\/\/shop_images\/how-it-works-22.jpg"
+          }
+        },
+        "0669e6bd-9d26-4ae4-b380-ce53681e452e": {
+          "type": "text",
+          "settings": {
+            "sub_title": "Confirm your ring size",
+            "text": "After using the sizer, simply send us your size via email"
+          }
+        },
+        "ba8bc2a1-afb2-4a08-8837-4ae3795928a4": {
+          "type": "text",
+          "settings": {
+            "sub_title": "We handcraft your ring",
+            "text": "Your order hits the workshop and our trained artisans start crafting your new ring"
+          }
+        }
+      },
+      "block_order": [
+        "93e02dd1-0098-4d81-bb47-a37e47aeb0c1",
+        "0669e6bd-9d26-4ae4-b380-ce53681e452e",
+        "ba8bc2a1-afb2-4a08-8837-4ae3795928a4"
+      ],
+      "settings": {
+        "enable": true,
+        "title": "Find Your Ring Size",
+        "title_size": 21,
+        "bg_color": "#000000",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "1646853684b754aedd": {
+      "type": "rich-text",
+      "blocks": {
+        "164685368492299ea2-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Unique Birthstone Jewelry"
+          }
+        },
+        "164685368492299ea2-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>{{ product.metafields.global.unrivaled_process | metafield_tag }}<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "164685368492299ea2-0",
+        "164685368492299ea2-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "46cc26fb-adef-48ef-adb5-d7706819bd7b": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "46cc26fb-adef-48ef-adb5-d7706819bd7b"
+      ],
+      "settings": {
+        "max_width": true
+      }
+    },
+    "16602466454a97b1e9": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop The Birthstone Series",
+        "home_featured_products": "birthstone-series",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "164740826566424b78": {
+      "type": "apps",
+      "blocks": {
+        "0b2c4db0-68a2-468e-890c-52a77263cb09": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "combined_widget"
+          }
+        }
+      },
+      "block_order": [
+        "0b2c4db0-68a2-468e-890c-52a77263cb09"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": false,
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_img_with_txt",
+    "1660247075673c3c06",
+    "product_how_to_work",
+    "1646853684b754aedd",
+    "sub",
+    "16602466454a97b1e9",
+    "164740826566424b78",
+    "product-recommendations",
+    "recently-viewed",
+    "collection-return"
+  ]
+}

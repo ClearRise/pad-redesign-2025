@@ -52,7 +52,7 @@
   
   {%- render 'product-template-variables', product: product, current_variant: current_variant -%}
 
-  <div class="page-content page-content--product">
+  <div class="page-content page-content--product custom_product">
     <div class="page-width">
 
       <div class="grid{% unless image_position == 'left' %} grid--product-images-right{% endunless %}{% if mobile_layout == 'partial' %} grid--product-images--partial{% endif %}">
@@ -229,7 +229,9 @@
                         {{ block.settings.content }}
                         {{ block.settings.page.content }}
                       {% endcapture %}
-                      {%- render 'tab', id: tab_id, title: block.settings.title, content: tab_content -%}
+                      {%- render 'tab', id: tab_id,  title: block.settings.title, content: tab_content, readmore: block.settings.enable_readmore,
+                        size_chart: block.settings.size_chart
+                      -%}
                     </div>
                   {%- when 'contact' -%}
                     <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
@@ -324,6 +326,28 @@
                         {%- render 'quantity-input', form_id: form_id, id: qty_id, qty: 1, min: 1 -%}
                       </div>
                     </div>
+
+                   {%- when 'size_chart' -%}
+                  
+                      {%- capture size_chart_title -%}
+                        {{ 'products.general.size_chart' | t }}<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-size-chart" viewBox="0 0 64 64"><path d="M22.39 33.53c-7.46 0-13.5-3.9-13.5-8.72s6-8.72 13.5-8.72 13.5 3.9 13.5 8.72a12 12 0 0 1-.22 1.73"/><ellipse cx="22.39" cy="24.81" rx="3.28" ry="2.12"/><path d="M8.89 24.81V38.5c0 7.9 6.4 9.41 14.3 9.41h31.92V33.53H22.39m24.39 0v7.44m-8.13-7.44v7.44m-8.13-7.44v7.44m-8.13-7.44v7.44"/></svg>
+                      {%- endcapture -%}
+
+                      <div class="size-chart__standalone" {{ block.shopify_attributes }}>
+                        {%- render
+                          'tool-tip-trigger',
+                          title: size_chart_title,
+                          content: block.settings.size_chart.content,
+                          context: 'size-chart'
+                        -%}
+                        {% style %}
+                          tool-tip-trigger {
+                            text-transform: uppercase;
+                          }
+                        {% endstyle %}
+                      </div>
+                
+                  
                   {%- when 'variant_picker' -%}
                     <div class="product-block" {{ block.shopify_attributes }}>
                       {%- unless product.has_only_default_variant -%}
@@ -371,12 +395,21 @@
                   {%- when 'buy_buttons' -%}
                     <div class="product-block" {{ block.shopify_attributes }}>
                       {%- unless product.empty? -%}
+
+                        {% capture tooltip_content  %}
+                          <div>{{ block.settings.tooltip_header }}</div>
+                          <div>{{ product.metafields.custom.premium_protection_plan }}</div>
+                          <p>{{ block.settings.tooltip_content }}</p>
+                        {% endcapture %}
+                        
                         <div class="product-block">
                           {%- render 'product-form',
                             form_id: form_id,
                             product: product,
                             show_dynamic_checkout: block.settings.show_dynamic_checkout,
-                            current_variant: current_variant
+                            current_variant: current_variant,
+                            tooltip_content: tooltip_content,
+                            enable_tooltip: block.settings.enable_tooltip
                           -%}
                         </div>
                       {%- endunless -%}

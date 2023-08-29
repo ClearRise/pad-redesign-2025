@@ -31,11 +31,11 @@
       <input type="hidden" name="updates[]" id="updates_{{- item.key -}}" class="bold_hidden_input cart__product-qty" value="{{- item.quantity -}}" min="0" data-id="{{- item.key -}}">
       {%- continue -%}
   {%- endif -%}
-{%- render 'cart-item', product: item, intelligems_discount: intelligems_discount -%}
+{%- render 'cart-item', product: item, line: forloop.index, intelligems_discount: intelligems_discount -%}
           {%- endfor -%}
         </div>
         <div class="cart__page-col">
-<p class="right" style="color:red;">Use code <span style="font-weight: 800;">SUMMER25</span> at checkout for 25% off your order.</p>
+          <p class="right" style="color:red;">Use code <span style="font-weight: 800;">SUMMER25</span> at checkout for 25% off your order.</p>
            {% render 'dg-cart-upsells' %}
     
           {% if settings.cart_notes_enable %}
@@ -61,8 +61,8 @@
           </div>
 
           <div class="cart__item-sub cart__item-row">
-            <div>{{ 'cart.general.subtotal' | t }}</div><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>
-            <div data-subtotal>{{ cart.total_price | money }}</div>
+            <div>{{ 'cart.general.subtotal' | t }}</div><span class="old_cart_total" style="display:none !important;"></span>
+            <div data-subtotal><span class="bcpo-cart-original-total">{{ cart.total_price | money }}</span></div>
           </div>
 
           {% if settings.cart_terms_conditions_enable %}
@@ -77,6 +77,8 @@
               </label>
             </div>
           {% endif %}
+
+          
       <div class='nvd-mini'></div>
           <div class="cart__item-row cart__checkout-wrapper">
             <button type="submit" name="checkout" data-terms-required="{{ settings.cart_terms_conditions_enable }}" class="btn cart__checkout">
@@ -104,3 +106,5 @@
     "name": "Cart page"
   }
 {% endschema %}
+
+<!-- bcpo done -->

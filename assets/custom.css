@@ -1328,6 +1328,9 @@ button.upsell-add-to-cart.disabled{
     font-size: .85em!important;
     padding-left: 8px;
   }  
+  .page-content.custom_product{
+    padding-top: 0!important;
+  }
 }
 
   .cart__discount{
@@ -1449,4 +1452,120 @@ button.upsell-add-to-cart.disabled{
 
 .product-block--price, .custom_txt_block{
   margin-bottom: 8px!important;
+}
+
+/*engrave feature css*/
+.product-page-section-header{
+  font-size:18px;
+  display:inline-block;
+  justify-content:center;
+  align-items:center;
+  margin-bottom: 0px;
+  font-weight: 700;
+  color: #000;
+}
+
+.pdp-engraving-disclaimer {
+  margin: 0;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+.product-page-engraving-input {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid grey;
+  margin: 5px 0 10px;
+  font-size: 14px;
+  text-transform: unset!important;
+}
+span.bold_line_property {
+  text-transform: capitalize;
+}
+.product-option .engraving-icon {
+  cursor: pointer;
+  margin-left: 5px;
+}
+a.add-engraving-inline-button , a.add-protection-inline-button {
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+input#swal2-input {
+    text-transform: unset;
+}
+/* end engrave feature css*/
+a.add-engraving-inline-button , a.add-protection-inline-button{
+    font-size: 16px;    
+}
+
+@media only screen and (max-width: 1024px){
+  a.add-engraving-inline-button, a.add-protection-inline-button{
+      font-size: 16px;    
+  }
+}
+@media only screen and (max-width: 768px){
+  .en_price{
+      font-size: 12px;
+      letter-spacing: .1px;
+  }
+  a.add-engraving-inline-button, a.add-protection-inline-button{
+      font-size: 12px;    
+  }
+}
+/* .bold_line_properties > div:last-child {
+  float: left;
+  margin-right: 0.5rem;
+}  */
+
+.action_icons {
+  display: flex;
+  gap: 1rem
+}
+
+.add-engraving-inline-button , .add-protection-inline-button{
+  display: inline-block;
+      width: 100%;
+}
+
+
+.protection_div {
+    text-transform: capitalize !important;
+    font-size: 16px !important;
+    cursor: pointer;
+    text-decoration: underline;
+  letter-spacing: 0 !important;
+}
+
+.protection_div span.bold_option_element input {
+    width: auto;
+    margin-right: 0;
+    visibility: hidden;
+    width: 0px;
+    height: 0;
+}
+.custom_plink{
+  text-decoration: none;
+    border-bottom: 1px solid;
+    border-bottom-color: #11111126;
+    position: relative;
+    display: inline-block;
+    /* font-weight: 600; */
+   letter-spacing: 0.05px;
+}
+.custom_plink:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid currentColor;
+    transition: width .5s ease;
+}
+.custom_plink:hover{
+  text-decoration: none!important;
+}
+
+.custom_plink:hover:after {
+    width: 100%;
 }
