@@ -42,7 +42,9 @@
           "settings": {
             "show_dynamic_checkout": false,
             "surface_pickup_enable": true,
-            "tooltip_content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>"
+            "enable_tooltip": true,
+            "tooltip_header": "<h4>Premium Protection<\/h4>",
+            "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
           }
         },
         "d2bfdc2f-2cae-43b1-91ed-390419b7a7d8": {
@@ -50,16 +52,6 @@
           "settings": {
             "gift_box_title": "",
             "gift_included": ""
-          }
-        },
-        "09f5859d-9056-4303-b7d1-5b25f005239b": {
-          "type": "tab",
-          "settings": {
-            "title": "Premium Protection",
-            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": ""
           }
         },
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
@@ -177,7 +169,6 @@
         "inventory_status",
         "buy_buttons",
         "d2bfdc2f-2cae-43b1-91ed-390419b7a7d8",
-        "09f5859d-9056-4303-b7d1-5b25f005239b",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
