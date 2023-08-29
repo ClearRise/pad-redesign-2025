@@ -1,5 +1,10 @@
 {
   "sections": {
+    "zp-product-header-content": {
+      "type": "product-header-content-zipifypages",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -22,7 +27,8 @@
             "locale_fallback": "",
             "theme": "light",
             "topPadding": "0",
-            "bottomPadding": "0"
+            "bottomPadding": "0",
+            "messagePrefix": ""
           }
         },
         "separator": {
@@ -52,7 +58,10 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
-            "surface_pickup_enable": true
+            "surface_pickup_enable": true,
+            "enable_tooltip": true,
+            "tooltip_header": "<h4>Premium Protection<\/h4>",
+            "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
           }
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
@@ -106,7 +115,9 @@
           "settings": {
             "title": "Sizing Information",
             "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
@@ -114,7 +125,9 @@
           "settings": {
             "title": "Lifetime Warranty",
             "content": "<p>{{ product.metafields.global.lifetime_warranty | metafield_tag }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
@@ -122,7 +135,9 @@
           "settings": {
             "title": "Additional Details",
             "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
@@ -130,7 +145,9 @@
           "settings": {
             "title": "How To Care",
             "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "tab": {
@@ -138,7 +155,9 @@
           "settings": {
             "title": "Shipping information",
             "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "contact": {
@@ -146,12 +165,6 @@
           "settings": {
             "title": "Ask a question",
             "phone": false
-          }
-        },
-        "b803315f-cbc6-4181-a363-b6042d03f896": {
-          "type": "size_chart",
-          "settings": {
-            "size_chart": "premium-protection-plan"
           }
         }
       },
@@ -174,8 +187,7 @@
         "67cf22ff-76d8-4ad2-91e5-80b67524f841",
         "e15f8d39-327a-449c-ae3e-f545ea35c05e",
         "tab",
-        "contact",
-        "b803315f-cbc6-4181-a363-b6042d03f896"
+        "contact"
       ],
       "settings": {
         "sku_enable": false,
@@ -328,9 +340,15 @@
       "type": "collection-return",
       "settings": {
       }
+    },
+    "zp-product-footer-content": {
+      "type": "product-footer-content-zipifypages",
+      "settings": {
+      }
     }
   },
   "order": [
+    "zp-product-header-content",
     "main",
     "product_img_with_txt",
     "product_how_to_work",
@@ -339,6 +357,7 @@
     "164740826566424b78",
     "product-recommendations",
     "recently-viewed",
-    "collection-return"
+    "collection-return",
+    "zp-product-footer-content"
   ]
 }
