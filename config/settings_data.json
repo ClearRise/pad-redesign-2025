@@ -74,6 +74,8 @@
     "product3-text": "",
     "product-1": "",
     "product-2": "",
+    "show_engraving": true,
+    "product-engraving": "laser-engraving",
     "cart_type": "page",
     "empty_menu_link_list": "empty-cart-menu",
     "empty_cart_text1": ".",

@@ -157,6 +157,18 @@
         "limit": 1
       },
       {
+        "type": "size_chart",
+        "name": "Size Chart",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "page",
+            "id": "size_chart",
+            "label": "Size Chart"
+          }
+        ]
+      },      
+      {
         "type": "variant_picker",
         "name": "Variant picker",
         "limit": 1,
@@ -226,7 +238,25 @@
             "label": "Enable pickup availability feature",
             "info": "Learn how to setup this feature [here](https://help.shopify.com/en/manual/shipping/setting-up-and-managing-your-shipping/local-methods/local-pickup)",
             "default": true
-          }
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_tooltip",
+            "label": "Enable Tooltip",
+            "default": false
+          },
+          {
+            "type": "html",
+            "id": "tooltip_header",
+            "label": "Tooltip Header",
+            "default": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>"
+          },
+          {
+            "type": "html",
+            "id": "tooltip_content",
+            "label": "Tooltip content",
+            "default": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>"
+          }          
         ]
       },
       {
@@ -386,6 +416,18 @@
             "type": "page",
             "id": "page",
             "label": "Tab content from page"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_readmore",
+            "label": "Enable Protection Read more link",
+            "info": "Read more link enable",
+            "default": false
+          },
+           {
+            "type": "page",
+            "id": "size_chart",
+            "label": "Protection Read more popup"
           }
         ]
       },

@@ -19,7 +19,8 @@
       <input type="hidden" name="updates[]" id="updates_{{- item.key -}}" class="bold_hidden_input cart__product-qty" value="{{- item.quantity -}}" min="0" data-id="{{- item.key -}}">
       {%- continue -%}
   {%- endif -%}
-{%- render 'cart-item', product: item -%}
+ 
+{%- render 'cart-item', product: item, line: forloop.index -%}
   {% endfor %}
 </div>
 <div class="cart__discounts cart__item-sub cart__item-row {% if cart.cart_level_discount_applications == blank %} hide{% endif %}">

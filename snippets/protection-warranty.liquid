@@ -1,0 +1,183 @@
+
+{% if linklists.gift-wrapping.links.size > 0 and
+linklists.gift-wrapping.links.first.type == 'product_link' %}
+
+<div
+  id="is-a-gift"
+  style="clear: left; margin: 5px 0"
+  class="clearfix rte"
+>
+  
+  <line-item class="line-item" style="column-gap: 1rem;">
+
+  <p>
+    <input
+      id="gift-wrapping"
+      type="checkbox"
+      name="attributes[gift-wrapping]"
+      value="yes"
+      {% if cart.attributes.gift-wrapping %}
+      checked="checked"
+      {% endif %}
+      style="float: none"
+    />
+    <label id="giftwraplabel"
+      for="gift-wrapping"
+      style="display:inline; padding-left: 5px; float: none;"
+    > Add protection warranty
+    </label>
+  </p>
+
+
+  
+</line-item>
+  
+</div>
+
+ <!-- <script>
+jQuery(document).ready(function($) {	
+    $("#gift-wrapping").on("change",function(){
+        console.log('checkbox clicked')
+        if($(this).is(":checked")) {
+            console.log('checked')
+            setGiftWrap(); 
+            // $(this).val("1");
+            $('#gift-wrapping').prop('checked', true);
+            // $('#gift-note-container').css('display', 'block')
+            $('.gift-note-input').show()
+            
+
+        } else {
+            console.log('unchecked')
+            hideGiftWrap()
+            $('#gift-wrapping').prop('checked', false);
+            // $('#gift-note-container').css('display', 'none')
+            // $(this).val("0");
+            $('.gift-note-input').hide()
+        }
+    });
+});
+</script> -->
+
+{% assign id = linklists.gift-wrapping.links.first.object.variants.first.id
+%} {% assign gift_wraps_in_cart = 0 %} {% for item in cart.items %} {% if
+item.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif %}
+{% endfor %}
+
+<style>
+  #updates_{{ id }} { display: none; }
+  input[type=checkbox] {
+          accent-color: #50413d;
+        }
+</style>
+
+<script>
+
+  Shopify.Cart = Shopify.Cart || {};
+
+  Shopify.Cart.GiftWrap = {};
+
+  Shopify.Cart.GiftWrap.set = function() {
+
+    var headers = new Headers({ 'Content-Type': 'application/json' });
+
+    var request = {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify({ updates: { {{ id }}: 1 }, attributes: { 'gift-wrapping': true } })
+    };
+    fetch('/cart/update.js', request)
+    .then(function() {
+            document.dispatchEvent(new CustomEvent('cart:build'));
+      // location.href = '/cart';
+    });
+   
+    
+  }
+
+  Shopify.Cart.GiftWrap.remove = function() {
+    var headers = new Headers({ 'Content-Type': 'application/json' });
+    var request = {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify({ updates: { {{ id }}: 0 }, attributes: { 'gift-wrapping': '', 'gift-note': '' } })
+    };
+    fetch('/cart/update.js', request)
+    .then(function() {
+          document.dispatchEvent(new CustomEvent('cart:build'));
+      //location.href = '/cart';
+    });
+  }
+
+  // If we have nothing but gift-wrap items in the cart.
+  {% if cart.items.size == 1 and gift_wraps_in_cart > 0 %}
+  document.addEventListener("DOMContentLoaded", function(){
+    Shopify.Cart.GiftWrap.remove();
+   
+  });
+  // If we have more than one gift-wrap item in the cart.
+  {% elsif gift_wraps_in_cart > 1 %}
+  document.addEventListener("DOMContentLoaded", function(){
+    Shopify.Cart.GiftWrap.set();
+   
+  });
+  // If we have a gift-wrap item in the cart but our gift-wrapping cart attribute has not been set.
+  {% elsif gift_wraps_in_cart > 0 and cart.attributes.gift-wrapping == blank  %}
+  document.addEventListener("DOMContentLoaded", function(){
+    Shopify.Cart.GiftWrap.set();
+   
+  });
+  // If we have no gift-wrap item in the cart but our gift-wrapping cart attribute has been set.
+  {% elsif gift_wraps_in_cart == 0 and cart.attributes.gift-wrapping != blank  %}
+  document.addEventListener("DOMContentLoaded", function(){
+    Shopify.Cart.GiftWrap.set();
+   
+  });
+  {% endif %}
+
+
+
+  document.querySelector('[name="attributes[gift-wrapping]"]').addEventListener("change", function(event) {
+      if (event.target.checked) {
+        console.log('set');
+        Shopify.Cart.GiftWrap.set();
+       
+      } else {
+        console.log('not set');
+        Shopify.Cart.GiftWrap.remove();
+        
+      }
+
+    });
+
+  
+  // When the gift-wrapping checkbox is checked or unchecked.
+  document.addEventListener("DOMContentLoaded", function(){
+    // document.querySelector('[name="attributes[gift-wrapping]"]').addEventListener("change", function(event) {
+    //   if (event.target.checked) {
+    //     console.log('set');
+    //     Shopify.Cart.GiftWrap.set();
+    //   } else {
+    //     console.log('not set');
+    //     Shopify.Cart.GiftWrap.remove();
+    //   }
+
+    // });
+
+    // document.querySelector('#gift-note').addEventListener("change", function(evt) {
+    //   var note = evt.target.value;
+    //   var headers = new Headers({ 'Content-Type': 'application/json' });
+
+    //   var request = {
+    //     method: 'POST',
+    //     headers: headers,
+    //     body: JSON.stringify({ attributes: { 'gift-note': note } })
+    //   };
+
+    //   fetch('/cart/update.js', request);
+    // });
+  }, true);
+</script>
+
+
+{% endif %}

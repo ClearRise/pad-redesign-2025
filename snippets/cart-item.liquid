@@ -1,8 +1,14 @@
 {% assign match_gift_product = false %}
+{% assign match_engraving_product = false %}
+{% assign match_protection_product = false %}
+{% assign e_product_id = '' %}
+{% assign p_product_id = '' %}
+
+
 {% if settings.show_gift_box %}
-  {% assign first_gift_product = settings.product-handle-1 %}
-  {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %} 
-  {% assign second_gift_product = settings.product-handle-2 %} 
+  {% assign first_gift_product = settings['product-handle-1'] %}
+  {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
+  {% assign second_gift_product = settings['product-handle-2'] %}
   {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
   {% if first_gift_product_id == product.id or second_gift_product_id == product.id %}
     {% assign match_gift_product = true %}
@@ -10,39 +16,69 @@
 {% endif %}
 
 {% if settings.second_show_gift_box %}
-  {% assign second_tier_first_gift_product = settings.second_product-handle-1 %}
-  {% assign second_tier_first_gift_product_id = second_tier_first_gift_product.selected_or_first_available_variant.id %} 
-  {% assign second_tier_second_gift_product = settings.second_product-handle-2 %}
+  {% assign second_tier_first_gift_product = settings['second_product-handle-1'] %}
+  {% assign second_tier_first_gift_product_id = second_tier_first_gift_product.selected_or_first_available_variant.id %}
+  {% assign second_tier_second_gift_product = settings['second_product-handle-2'] %}
   {% assign second_tier_second_gift_product_id = second_tier_second_gift_product.selected_or_first_available_variant.id %}
   {% if second_tier_first_gift_product_id == product.id or second_tier_second_gift_product_id == product.id %}
     {% assign match_gift_product = true %}
   {% endif %}
 {% endif %}
 {% if settings.third_show_gift_box %}
-  {% assign third_tier_first_gift_product = settings.third_product-handle-1 %}
-  {% assign third_tier_first_gift_product_id = third_tier_first_gift_product.selected_or_first_available_variant.id %} 
-  {% assign third_tier_second_gift_product = settings.third_product-handle-2 %}
+  {% assign third_tier_first_gift_product = settings['third_product-handle-1'] %}
+  {% assign third_tier_first_gift_product_id = third_tier_first_gift_product.selected_or_first_available_variant.id %}
+  {% assign third_tier_second_gift_product = settings['third_product-handle-2'] %}
   {% assign third_tier_second_gift_product_id = third_tier_second_gift_product.selected_or_first_available_variant.id %}
   {% if third_tier_first_gift_product_id == product.id or third_tier_second_gift_product_id == product.id %}
     {% assign match_gift_product = true %}
   {% endif %}
 {% endif %}
+{% if settings.show_engraving and settings['product-engraving'] %}
+  {% assign engraving_product = settings['product-engraving'] %}
+  {% assign engraving_product_id = engraving_product.id %}
+  {% assign engraving_product_id_var = engraving_product.selected_or_first_available_variant.id %}
+  {% if engraving_product_id_var == product.id %}
+    {% assign match_engraving_product = true %}
+  {% endif %}
+{% endif %}
 
-<div class="cart__item rm_border{% if match_gift_product %} hide{% endif %}" data-key="{{ product.key }}" data-handle='{{ product.product.handle }}'>
+
+{% if product.product.metafields.custom.premium_protection_product %}
+  {% liquid
+    assign protection_product = all_products[product.product.metafields.custom.premium_protection_product]
+    assign protection_product_id = protection_product.id
+    assign first_protection_product_id_var = protection_product.selected_or_first_available_variant.id
+    if first_protection_product_id_var == product.id
+      assign match_protection_product = true
+    endif
+  %}
+{% endif %}
+
+
+<div
+  class="cart__item rm_border{% if match_engraving_product %} hide{% endif %}{% if product.product.tags contains 'hidden' %} hide{% endif %}{% if match_gift_product %} hide{% endif %}"
+  data-quantity="{{ product.quantity }}"
+  data-key="{{ product.key }}"
+  data-handle="{{ product.product.handle }}"
+>
   {%- assign img_url = product | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
   <div class="cart__image">
     <a href="{{ product.url }}" style="height: 0; padding-bottom: {{ 100 | divided_by: product.image.aspect_ratio }}%;">
-      <img class="lazyload"
-          data-src="{{ img_url }}"
-          data-widths="[180, 360, 540]"
-          data-aspectratio="{{ product.aspect_ratio }}"
-          data-sizes="auto"
-          alt="{{ product.product.title | escape }}">
+      <img
+        class="lazyload"
+        data-src="{{ img_url }}"
+        data-widths="[180, 360, 540]"
+        data-aspectratio="{{ product.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ product.product.title | escape }}"
+      >
 
       <noscript>
-        <img class="lazyloaded"
+        <img
+          class="lazyloaded"
           src="{{ product | img_url: '400x' }}"
-          alt="{{ product.product.title | escape }}">
+          alt="{{ product.product.title | escape }}"
+        >
       </noscript>
     </a>
   </div>
@@ -54,7 +90,9 @@
       {%- unless product.product.has_only_default_variant -%}
         <div class="cart__item--variants">
           {%- for option in product.options_with_values -%}
-            <div class="black_txt"><span>{{ option.name }}:</span> {{ option.value }}</div>
+            <div class="black_txt">
+              <span>{{ option.name }}:</span> {{ option.value }}
+            </div>
           {%- endfor -%}
         </div>
       {%- endunless -%}
@@ -65,58 +103,232 @@
       {%- endif -%}
       {%- assign property_size = product.properties | size -%}
       <span class="bold_load_cart_item_properties black_txt"></span>
+      {% assign found_engrave = false %}
+      {% assign found_protection = false %}
       {% if property_size > 0 %}
-
-{% comment %}
- BOLD hidden properties
         {% for p in product.properties %}
-          {%- assign first_character_in_key = p.first | truncate: 1, '' -%}
-          {% unless p.last == blank or first_character_in_key == '_' %}
-            <div>
-              {{ p.first }}:
-              {% if p.last contains '/uploads/' %}
-                <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
-              {% else %}
-                {{ p.last }}
-              {% endif %}
-            </div>
-          {% endunless %}
-        {% endfor %}
-      
-{% endcomment %}
-{% endif %}
+          {% if product.product.metafields.custom.premium_protection_product %}
+            {% if p.first contains 'Protection Plan' %}
+              {% unless p.last == '' or p.last == null %}
+                {% assign protection_product = all_products[product.product.metafields.custom.premium_protection_product] %}
+                {% assign protection_product_id = protection_product.selected_or_first_available_variant.id %}
 
+              {% assign p_product_id = protection_product.selected_or_first_available_variant.id %}
+                
+                <div class="product-option action_icons">
+                
+                      {% for variant in protection_product.variants %}
+                        {% if variant.id == protection_product_id %}
+                         <span class="black_txt en_price">
+                            Protection Plan Price: {{ variant.price | money_without_trailing_zeros }}
+                          </span>
+
+                          <input type="hidden" name="Protection" class="Protection_p" value="true" data-product-id = "{{ protection_product_id }}">
+                        {% endif %}
+                      {% endfor %}
+                <span
+                    id="delete-protection-btn"
+                    data-quantity="{{ product.quantity }}"
+                    data-line="{{ line }}"
+                    data-key="{{ product.key }}"
+                    class="delete-protection-btn engraving-icon protection-remove-icon deleteIconFor{{ product.key }}"
+                    data-id="deleteIconFor{{ product.key }}"
+                    data-protection="{{ protection_product_id }}"
+                  >
+                    {% render 'icon-delete' %}
+                  </span>
+               
+             
+                </div>
+
+                {% assign found_protection = true %}
+              {% endunless %}
+            {% endif %}
+          {% endif %}
+          
+          {% if settings.show_engraving and settings['product-engraving'] %}
+            {% if p.first contains 'engraving' %}
+              {% unless p.last == '' or p.last == null %}
+                {% assign engrave_product = settings['product-engraving'] %}
+                {% assign first_gift_product_id_var = engrave_product.selected_or_first_available_variant.id %}
+                {% assign e_product_id = engrave_product.selected_or_first_available_variant.id %}
+                
+                <div class="product-option action_icons">
+
+                    {% for variant in engrave_product.variants %}
+                      {% if variant.id == first_gift_product_id_var %}
+                        <span class="black_txt en_price">
+                          Engraving Price: {{ variant.price | money_without_trailing_zeros }}
+                        </span>
+                        <input type="hidden" name="engraving" class="engraving_p" value="true">
+                      {% endif %}
+                    {% endfor %}
+                
+                  <span
+                    id="edit-engraving-btn"
+                    data-quantity="{{ product.quantity }}"
+                    data-line="{{ line }}"
+                    data-key="{{ product.key }}"
+                    data-text="{{ p.last }}"
+                    class="edit-engraving-btn engraving-icon engraving-edit-icon desktop_only editIconFor{{ product.key }}"
+                    data-id="editIconFor{{ product.key }}"
+                  >
+                    {% render 'icon-edit' %}
+                  </span>
+                  <span
+                    id="delete-engraving-btn"
+                    data-quantity="{{ product.quantity }}"
+                    data-line="{{ line }}"
+                    data-key="{{ product.key }}"
+                    class="delete-engraving-btn engraving-icon engraving-remove-icon deleteIconFor{{ product.key }}"
+                    data-id="deleteIconFor{{ product.key }}"
+                  >
+                    {% render 'icon-delete' %}
+                  </span>
+                </div>
+
+                
+
+                {% assign found_engrave = true %}
+              {% endunless %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        {% comment %}
+           BOLD hidden properties
+                  {% for p in product.properties %}
+                    {%- assign first_character_in_key = p.first | truncate: 1, '' -%}
+                    {% unless p.last == blank or first_character_in_key == '_' %}
+                      <div>
+                        {{ p.first }}:
+                        {% if p.last contains '/uploads/' %}
+                          <a href="{{ p.last }}">
+          {% assign file_type = p.last | split: '.' | last | downcase %}
+          {% assign file_types = 'jpg,jpeg,webp,gif,png,apng,avif,svg,bmp,ico,tiff' | split: ',' %}
+          {% if file_types contains file_type %}
+            <div class="bcpo-cart-file"><img src="{{ p.last }}" style="max-width: 50px; height: auto;"></div>
+          {% else %}
+            <span class="bcpo-cart-file">Uploaded file</span>
+          {% endif %}
+          </a>
+                        {% else %}
+                          {{ p.last }}
+                        {% endif %}
+                      </div>
+                    {% endunless %}
+                  {% endfor %}
+        {% endcomment %}
+      {% endif %}
+      {% unless found_engrave %}
+     {% if settings.show_engraving and settings['product-engraving'] and product.product.type == 'Ring' %} 
+        {% paginate collections.all.products by 1000 %}
+          {% assign product_id = product.product_id | times: 1 %}
+          {% assign products_obj = collections.all.products | where: 'id', product_id %}
+          {% assign productObj = products_obj[0] %}
+        {% endpaginate %}
+
+        <a
+          data-quantity="{{ product.quantity }}"
+          data-line="{{ line }}"
+          data-key="{{ product.key }}"
+          class="add-engraving-inline-button"
+          title="Add an engraving"
+          role="button"
+          tabindex="0"
+          >Add an engraving</a
+        >
+         {% endif %}
+      {% endunless %}
+
+{% unless found_protection %}
+  {% if product.product.metafields.custom.premium_protection_product %}
+        {% liquid
+          assign protection_product = all_products[product.product.metafields.custom.premium_protection_product]
+          assign protection_product_id = protection_product.id
+          assign first_protection_product_id_var = protection_product.selected_or_first_available_variant.id
+          for variant in protection_product.variants
+            if variant.id == first_protection_product_id_var
+              assign  protection_product_price = variant.price | money_without_trailing_zeros
+              endif
+            endfor  
+        %}
+
+        <a
+          data-quantity="{{ product.quantity }}"
+          data-line="{{ line }}"
+          data-key="{{ product.key }}"
+          class="add-protection-inline-button"
+          title="Add Premium Protection Plan"
+          role="button"
+          tabindex="0"
+          data-product-title="{{ protection_product.title }}" 
+          data-protection="{{ first_protection_product_id_var }}"
+          >Add Premium Protection Plan <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span></a>
+
+      {% comment %}
+          <div class="">
+             <label class="protection_div">
+             <span class="bold_option_element">
+               <input data-quantity="{{ product.quantity }}" data-line="{{ line }}" data-key="{{ product.key }}" type="checkbox" class="add-protection-plan" data-product-title={{ protection_product.title }} data-protection="{{ first_protection_product_id_var }}">
+             </span>
+             <span class="">Add Premium Protection Plan</span>
+             <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span>
+             </label>
+          </div> 
+    {% endcomment %}
+      {% endif %} 
+{% endunless %} 
+
+      
     </div>
     <div class="cart__item-sub">
       <div>
         <div class="js-qty__wrapper">
           <label for="cart_updates_{{ product.key }}" class="hidden-label">{{ 'cart.label.quantity' | t }}</label>
-          <input type="text"
-            {% if match_gift_product %}style="pointer-events: none;"{% endif %}
+          <input
+            type="text"
+            {% if match_gift_product %}
+              style="pointer-events: none;"
+            {% endif %}
             id="cart_updates_{{ product.key }}"
             name="updates[]"
             class="js-qty__num black_txt"
             value="{{ product.quantity }}"
             min="0"
             pattern="[0-9]*"
-            data-id="{{ product.key }}">
-          <button type="button"
+            data-id="{{ product.key }}"
+            data-engraving="{{ e_product_id }}"
+            data-protection="{{ p_product_id }}"
+          >
+          <button
+            type="button"
             class="js-qty__adjust js-qty__adjust--minus"
-            aria-label="{{ 'cart.general.reduce_quantity' | t }}">
-              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" viewBox="0 0 20 20"><path fill="#444" d="M17.543 11.029H2.1A1.032 1.032 0 0 1 1.071 10c0-.566.463-1.029 1.029-1.029h15.443c.566 0 1.029.463 1.029 1.029 0 .566-.463 1.029-1.029 1.029z"/></svg>
-              <span class="icon__fallback-text" aria-hidden="true">&minus;</span>
+            aria-label="{{ 'cart.general.reduce_quantity' | t }}"
+          >
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" viewBox="0 0 20 20">
+              <path fill="#444" d="M17.543 11.029H2.1A1.032 1.032 0 0 1 1.071 10c0-.566.463-1.029 1.029-1.029h15.443c.566 0 1.029.463 1.029 1.029 0 .566-.463 1.029-1.029 1.029z"/>
+            </svg>
+            <span class="icon__fallback-text" aria-hidden="true">&minus;</span>
           </button>
-          <button {% if match_gift_product %}style="pointer-events: none;"{% endif %} type="button"
+          <button
+            {% if match_gift_product %}
+              style="pointer-events: none;"
+            {% endif %}
+            type="button"
             class="js-qty__adjust js-qty__adjust--plus"
-            aria-label="{{ 'cart.general.increase_quantity' | t }}">
-              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 20 20"><path fill="#444" d="M17.409 8.929h-6.695V2.258c0-.566-.506-1.029-1.071-1.029s-1.071.463-1.071 1.029v6.671H1.967C1.401 8.929.938 9.435.938 10s.463 1.071 1.029 1.071h6.605V17.7c0 .566.506 1.029 1.071 1.029s1.071-.463 1.071-1.029v-6.629h6.695c.566 0 1.029-.506 1.029-1.071s-.463-1.071-1.029-1.071z"/></svg>
-              <span class="icon__fallback-text" aria-hidden="true">+</span>
+            aria-label="{{ 'cart.general.increase_quantity' | t }}"
+          >
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 20 20">
+              <path fill="#444" d="M17.409 8.929h-6.695V2.258c0-.566-.506-1.029-1.071-1.029s-1.071.463-1.071 1.029v6.671H1.967C1.401 8.929.938 9.435.938 10s.463 1.071 1.029 1.071h6.605V17.7c0 .566.506 1.029 1.071 1.029s1.071-.463 1.071-1.029v-6.629h6.695c.566 0 1.029-.506 1.029-1.071s-.463-1.071-1.029-1.071z"/>
+            </svg>
+            <span class="icon__fallback-text" aria-hidden="true">+</span>
           </button>
         </div>
 
         <div class="cart__remove">
-          <a href="{{ routes.cart_change_url }}?id={{ product.key }}&amp;quantity=0" class="text-link">
-            {{ 'cart.general.remove' | t }}
+          <a href="{{ routes.cart_change_url }}?id={{ product.key }}&amp;quantity=0" class="text-link" alt=" {{ 'cart.general.remove' | t }}">
+            {% render 'icon-delete' %}
           </a>
         </div>
       </div>
@@ -125,25 +337,32 @@
         {% if product.original_price != product.final_price and intelligems_discount == 0 %}
           <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
           <small class="cart__price cart__price--strikethrough  black_txt">
-            {{ product.original_price | money }}
+            <span class="bcpo-cart-item-original-price" data-key="{{product.key}}">
+              {{- product.original_price | money -}}
+            </span>
           </small>
           <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
           <span class="cart__price cart__discount black_txt">
-            {{ product.final_price | money }}
+            <span class="bcpo-cart-item-price" data-key="{{product.key}}">{{ product.final_price | money }}</span>
           </span>
         {% else %}
           <span class="cart__price  black_txt"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" style="display:none !important;"></span>
+            <span class="bcpo-cart-item-original-price" data-key="{{product.key}}">
             {% if intelligems_discount == 0 %}
               {{ product.original_price | money }}
             {% else %}
               {{ product.final_price | money }}
             {% endif %}
+            </span>
+
           </span>
         {% endif %}
 
         {%- if product.line_level_discount_allocations != blank -%}
           {%- for discount_allocation in product.line_level_discount_allocations -%}
-            <small class="cart__discount">{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})</small>
+            <small class="cart__discount">
+              {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})</small
+            >
           {%- endfor -%}
         {%- endif -%}
 
@@ -161,7 +380,9 @@
 
           <div class="product__unit-price">{{ product.unit_price | money }}/{{ unit_price_base_unit }}</div>
         {%- endif -%}
-      </div>       
+      </div>
     </div>
   </div>
 </div>
+
+<!-- bcpo done -->

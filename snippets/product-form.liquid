@@ -24,6 +24,58 @@
     -%}
 <div class="bold_options" data-product-id="{{ product.id }}"></div>
 
+    {% if settings.product-engraving and settings.show_engraving  and product.type == 'Ring' %}
+      {% assign engrave_product = settings.product-engraving %}
+      {% assign engrave_product_id = engrave_product.id %} 
+      {% assign first_gift_product_id_var = engrave_product.selected_or_first_available_variant.id %}
+      <div class="product-page-section-header">CUSTOM ENGRAVING</div>
+      {% for variant in engrave_product.variants %}
+        {% if variant.id == first_gift_product_id_var %}
+          <p class="pdp-engraving-disclaimer">Additional {{ variant.price | money_without_trailing_zeros }}</p>
+        {% endif %}
+      {% endfor %}
+      <div>
+        <input maxlength="20" class="product-page-engraving-input" type="text" placeholder="Enter your engraving text here" name="properties[engraving]">
+      </div>
+      
+    {% endif %}
+
+
+       {% if product.metafields.custom.premium_protection_product %}
+        {% liquid
+          assign protection_product = all_products[product.metafields.custom.premium_protection_product]
+          assign protection_product_id = protection_product.id
+          assign first_protection_product_id_var = protection_product.selected_or_first_available_variant.id
+          for variant in protection_product.variants
+            if variant.id == first_protection_product_id_var
+              assign  protection_product_price = variant.price | money_without_trailing_zeros
+              endif
+            endfor  
+        %}
+
+         {% capture random %}{{ 'now' | date: "%09N" }}{% endcapture %}
+          <div class="bold_option bold_option_checkbox ">
+             <label>
+             <span class="bold_option_element">
+               <input type="checkbox" class="protection-plan" name="properties[Protection Plan]" value="Yes" data-protection="{{ first_protection_product_id_var }}">
+               <input type="hidden" class="hidden_protection_info" name="properties[_prot-product-title]" value="{{ protection_product.title }}">
+             <!--   <input type="hidden" class="hidden_protection_info" name="properties[_prot_timestamp]" value="{{ random }}"> -->
+               
+             </span>
+             <span class="bold_option_title">Premium Protection Plan</span>
+             <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span>
+             </label>
+             <!-- <span class="bold_tooltip"><small>Protect your ring for a lifetime. See below tab for details.</small></span> -->
+             {% if enable_tooltip %}
+                 {%- render 'tool-tip-trigger',
+                          title: 'Learn More',
+                          content: tooltip_content,
+                          context: 'learn-more'
+                 -%}
+             {% endif %}
+          </div> 
+      {% endif %} 
+
 
     <button
       {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}

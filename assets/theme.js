@@ -3019,6 +3019,8 @@ Bold:POv2*/
         }
   
         this.input.value = qty;
+
+        console.log(this.wrapper);
   
         if (this.options.isCart) {
           document.dispatchEvent(new CustomEvent('cart:quantity' + this.options.namespace, {
