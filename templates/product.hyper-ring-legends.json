@@ -41,7 +41,10 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
-            "surface_pickup_enable": true
+            "surface_pickup_enable": true,
+            "enable_tooltip": false,
+            "tooltip_header": "<h4>Premium Protection<\/h4>",
+            "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
           }
         },
         "f567edcb-e92a-47b5-908b-bd1cbb6c479c": {
@@ -102,7 +105,9 @@
           "settings": {
             "title": "Standard Edition",
             "content": "<p>{{ product.metafields.custom.standard_edition | metafield_tag }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
@@ -110,7 +115,9 @@
           "settings": {
             "title": "Legends Edition",
             "content": "<p>{{ product.metafields.custom.legends_edition | metafield_tag }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
@@ -118,7 +125,9 @@
           "settings": {
             "title": "Behind The Packaging",
             "content": "<p>{{ product.metafields.custom.behind_the_packaging | metafield_tag }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
@@ -126,7 +135,9 @@
           "settings": {
             "title": "Additional Details",
             "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "9daed7c5-c21b-4033-b726-7c26d3d72ea2": {
@@ -134,7 +145,9 @@
           "settings": {
             "title": "Lifetime Warranty",
             "content": "<p>{{ product.metafields.global.lifetime_warranty | metafield_tag }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "tab": {
@@ -142,7 +155,9 @@
           "settings": {
             "title": "Sizing Information",
             "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "9f3c4f96-a4d7-41c2-bdcb-ecc1bb3c9d89": {
@@ -150,7 +165,9 @@
           "settings": {
             "title": "Shipping information",
             "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "2106a3d2-6b37-4d40-a6eb-d08e36e770f9": {
@@ -158,7 +175,9 @@
           "settings": {
             "title": "How To Care",
             "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         }
       },
