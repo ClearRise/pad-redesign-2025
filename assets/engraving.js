@@ -549,16 +549,14 @@ function editEngraving(itemText, itemKey, itemLine, itemQuantity, $autoAdd) {
                   //document.dispatchEvent(new CustomEvent('cart:build'));
                 } else if ($autoAdd && newEngravingText != "") {
                   AutoAddEngravingProduct(itemQuantity);
-                  $('.overlay').hide();
                 } else {
                   // Handle the response data here
                   setTimeout(function(){
                     document.dispatchEvent(new CustomEvent("cart:build"));
-                    $('.overlay').hide();
                   }, 2000);
                   //document.dispatchEvent(new CustomEvent('cart:open'));
                 }
-                  
+                  $('.overlay').hide();
               },
               error: function (error) {
                 // Handle error
