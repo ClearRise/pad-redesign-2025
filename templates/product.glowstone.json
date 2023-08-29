@@ -1,6 +1,5 @@
 {
   "sections": {
-
     "main": {
       "type": "main-product",
       "blocks": {
@@ -71,16 +70,6 @@
           "settings": {
             "gift_box_title": "",
             "gift_included": ""
-          }
-        },
-        "622a42e2-fba5-4aba-810a-cc0d00d85caa": {
-          "type": "tab",
-          "settings": {
-            "title": "Premium Protection",
-            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"\/pages\/premium-protection-plan\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": "premium-protection-plan"
           }
         },
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
@@ -207,7 +196,6 @@
         "inventory_status",
         "buy_buttons",
         "8b562356-ae61-4e76-9d41-a70561a3c483",
-        "622a42e2-fba5-4aba-810a-cc0d00d85caa",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
