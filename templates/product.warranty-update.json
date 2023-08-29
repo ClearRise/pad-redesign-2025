@@ -22,7 +22,8 @@
             "locale_fallback": "",
             "theme": "light",
             "topPadding": "0",
-            "bottomPadding": "0"
+            "bottomPadding": "0",
+            "messagePrefix": ""
           }
         },
         "separator": {
@@ -52,7 +53,10 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
-            "surface_pickup_enable": true
+            "surface_pickup_enable": true,
+            "enable_tooltip": true,
+            "tooltip_header": "<h4>Premium Protection<\/h4>",
+            "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
           }
         },
         "e4a07dea-36b2-4d5b-8915-ed9e7d1959ed": {
@@ -60,14 +64,6 @@
           "settings": {
             "gift_box_title": "",
             "gift_included": ""
-          }
-        },
-        "622a42e2-fba5-4aba-810a-cc0d00d85caa": {
-          "type": "tab",
-          "settings": {
-            "title": "<b>Premium Protection<\/b>",
-            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/warranty-and-return-information\" title=\"Lifetime Warranty and Return Policy\">Premium Protection Plan<\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
-            "page": ""
           }
         },
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
@@ -114,7 +110,9 @@
           "settings": {
             "title": "Sizing Information",
             "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
@@ -122,7 +120,9 @@
           "settings": {
             "title": "Lifetime Warranty",
             "content": "<p>{{ product.metafields.global.lifetime_warranty | metafield_tag }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
@@ -130,7 +130,9 @@
           "settings": {
             "title": "Additional Details",
             "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
@@ -138,7 +140,9 @@
           "settings": {
             "title": "How To Care",
             "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "tab": {
@@ -146,7 +150,9 @@
           "settings": {
             "title": "Shipping information",
             "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "contact": {
@@ -166,7 +172,6 @@
         "inventory_status",
         "buy_buttons",
         "e4a07dea-36b2-4d5b-8915-ed9e7d1959ed",
-        "622a42e2-fba5-4aba-810a-cc0d00d85caa",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
