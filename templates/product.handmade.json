@@ -58,7 +58,7 @@
           "type": "sales_point",
           "settings": {
             "icon": "checkmark",
-            "text": "Handcrafted with care",
+            "text": "Handmade",
             "url": ""
           }
         },
@@ -66,7 +66,7 @@
           "type": "sales_point",
           "settings": {
             "icon": "heart",
-            "text": "Made to order just for you",
+            "text": "Made to order",
             "url": ""
           }
         },
