@@ -312,8 +312,21 @@
     },
     "recently-viewed": {
       "type": "recently-viewed",
+      "disabled": true,
       "settings": {
         "recent_count": 5
+      }
+    },
+    "1ed66697-c823-4c92-8d31-310e56b00540": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "You May Also Like",
+        "home_featured_products": "you-may-also-like",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
       }
     },
     "collection-return": {
@@ -331,6 +344,7 @@
     "164740826566424b78",
     "product-recommendations",
     "recently-viewed",
+    "1ed66697-c823-4c92-8d31-310e56b00540",
     "collection-return"
   ]
 }
