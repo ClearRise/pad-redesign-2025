@@ -23,7 +23,8 @@
       endunless
     -%}
 <div class="bold_options" data-product-id="{{ product.id }}"></div>
- {% unless product.tags contains: 'hidden' %}
+
+ {% unless product.product.tags contains 'hide_engrave' %}     
     {% if settings.product-engraving and settings.show_engraving  and product.type == 'Ring' %}
       {% assign engrave_product = settings.product-engraving %}
       {% assign engrave_product_id = engrave_product.id %} 
@@ -39,7 +40,8 @@
       </div>
       
     {% endif %}
-{% endunless  %}
+   {% endunless %}
+
 
        {% if product.metafields.custom.premium_protection_product %}
         {% liquid
