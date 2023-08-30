@@ -57,8 +57,8 @@
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
           "type": "sales_point",
           "settings": {
-            "icon": "checkmark",
-            "text": "Handcrafted in Utah, USA",
+            "icon": "gift",
+            "text": "Handmade in Utah",
             "url": ""
           }
         },
@@ -66,24 +66,24 @@
           "type": "sales_point",
           "settings": {
             "icon": "heart",
-            "text": "Made to order just for you",
+            "text": "Made to order",
             "url": ""
           }
         },
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005": {
           "type": "sales_point",
           "settings": {
-            "icon": "shield",
-            "text": "Limited Lifetime Warranty",
+            "icon": "truck",
+            "text": "Worldwide Shipping",
             "url": ""
           }
         },
         "sales_point": {
           "type": "sales_point",
           "settings": {
-            "icon": "globe",
-            "text": "Worldwide shipping",
-            "url": ""
+            "icon": "tag",
+            "text": "Find Your Size",
+            "url": "https:\/\/patrickadairdesigns.com\/pages\/how-to-use-a-ring-sizer"
           }
         },
         "description": {
