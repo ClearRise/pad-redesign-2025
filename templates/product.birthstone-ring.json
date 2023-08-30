@@ -356,10 +356,10 @@
       "type": "featured-collection",
       "settings": {
         "title": "You May Also Like",
-        "home_featured_products": "",
+        "home_featured_products": "you-may-also-like",
         "per_row": 4,
         "rows": 1,
-        "mobile_scrollable": true,
+        "mobile_scrollable": false,
         "view_all": false,
         "divider": false
       }
