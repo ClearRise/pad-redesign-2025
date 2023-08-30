@@ -57,8 +57,8 @@
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
           "type": "sales_point",
           "settings": {
-            "icon": "checkmark",
-            "text": "Handcrafted in Utah, USA",
+            "icon": "gift",
+            "text": "Handcrafted",
             "url": ""
           }
         },
@@ -66,7 +66,7 @@
           "type": "sales_point",
           "settings": {
             "icon": "heart",
-            "text": "Made to order just for you",
+            "text": "Made to order",
             "url": ""
           }
         },
