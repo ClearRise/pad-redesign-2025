@@ -1575,23 +1575,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
 }
 
 
-#adding-product-modal {
-    opacity: 1;
-    z-index: 9;
-    visibility: visible;
-    background: #FFF;
-    width: 200px;
-    height: 165px;
-    position: fixed;
-    top: calc(50% - 100px);
-    padding: 20px;
-    display: none;
-    justify-content: center;
-    box-shadow: 0 0 13px #3e2c5a14;
-    border-radius: 0;
-    border: 1px solid rgba(0,0,0,.09);
-    border-bottom: 1px solid #e0e0e0;
-}
+
 .Modal--dark {
     background: #5c5c5c;
     color: #fff;
@@ -1697,7 +1681,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
   width: 200px;
   height: 165px;
   position: fixed;
-  top: calc(50% - 80px);
+  top: calc(50% - 100px);
   padding: 20px;
   display: none;
   justify-content: center;
