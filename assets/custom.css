@@ -5,6 +5,9 @@
   object-fit: contain;
 } */
 
+h2{
+  line-height: 1.2em;
+}
 
 #dynamic-checkout-cart .shopify-cleanslate .p28_J2fRvZNDqyZkZ2H9 {
   display: flex !important;
