@@ -506,6 +506,9 @@ img.h_auto[data-sizes=auto]{
   	width: 100%!important;
     padding: 20px 3px!important;
   }
+  .index-section {
+    margin: 5px 0!important;
+  }
   
   .product-single__meta {
       text-align: left!important;
