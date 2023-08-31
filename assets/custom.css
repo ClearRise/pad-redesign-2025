@@ -1574,7 +1574,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
     width: 100%;
 }
 
-
+/* loading modal */
 
 .Modal--dark {
     background: #5c5c5c;
@@ -1798,4 +1798,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
   100% {
     height: 28px;
     width: 14px;
-    opacity: 1; } }
+    opacity: 1; } 
+}
+
+/* end loading modal */
