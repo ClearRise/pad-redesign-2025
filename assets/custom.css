@@ -1616,22 +1616,6 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
     word-break: break-word;
 }
 
-#adding-product-modal .CircleSpinner {
-    border-left-color: #22486b;
-    -webkit-animation: LoaderSpin 1.2s infinite linear;
-    animation: LoaderSpin 1.2s infinite linear;
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
-    border-radius: 50%;
-    width: 52px;
-    height: 52px;
-    border: 3px solid rgba(0,0,0,.2);
-    border-top: 3px #22486b solid;
-    border-right: 3px #22486b solid;
-    border-bottom: 3px #22486b solid;
-    margin-bottom: 14px;
-}
 
 .CircleSpinner {
     border-left-color: #22486b;
@@ -1650,18 +1634,12 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
     margin-bottom: 14px;
 }
 
-#adding-product-modal .Checkmark {
-    display: none;
-}
 
 .Checkmark {
     display: none;
 }
 
-#adding-product-modal .Message {
-    font-size: 16px;
-    color: #000;
-}
+
 .Message {
     font-size: 16px;
     color: #000;
