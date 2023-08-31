@@ -490,6 +490,7 @@ img.h_auto[data-sizes=auto]{
   }
   .sub_description {
       font-size: 15px !important;
+      margin-bottom: 5px;
   }  
   .slide-text__title{
       font-size: 24px!important;
@@ -1330,6 +1331,7 @@ button.upsell-add-to-cart.disabled{
   }  
   .page-content.custom_product{
     padding-top: 0!important;
+    padding-bottom: 0px!important;
   }
 }
 
