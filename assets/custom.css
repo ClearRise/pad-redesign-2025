@@ -1573,3 +1573,118 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
 .custom_plink:hover:after {
     width: 100%;
 }
+
+
+#adding-product-modal {
+    opacity: 1;
+    z-index: 9;
+    visibility: visible;
+    background: #FFF;
+    width: 200px;
+    height: 165px;
+    position: fixed;
+    top: calc(50% - 80px);
+    padding: 20px;
+    display: none;
+    justify-content: center;
+    box-shadow: 0 0 13px #3e2c5a14;
+    border-radius: 0;
+    border: 1px solid rgba(0,0,0,.09);
+    border-bottom: 1px solid #e0e0e0;
+}
+.Modal--dark {
+    background: #5c5c5c;
+    color: #fff;
+}
+
+.Modal {
+    max-height: 200px;
+}
+
+.Modal {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    width: 480px;
+    max-width: calc(100vw - 40px);
+    max-height: calc(100vh - 40px);
+    padding: 15px 20px 20px;
+    z-index: 20;
+    opacity: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #ffffff;
+    transform: translate(-50%,-50%);
+    transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
+}
+
+.Modal__Content.Rte {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Rte {
+    word-break: break-word;
+}
+
+#adding-product-modal .CircleSpinner {
+    border-left-color: #22486b;
+    -webkit-animation: LoaderSpin 1.2s infinite linear;
+    animation: LoaderSpin 1.2s infinite linear;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    border: 3px solid rgba(0,0,0,.2);
+    border-top: 3px #22486b solid;
+    border-right: 3px #22486b solid;
+    border-bottom: 3px #22486b solid;
+    margin-bottom: 14px;
+}
+
+.CircleSpinner {
+    border-left-color: #22486b;
+    -webkit-animation: LoaderSpin 1.2s infinite linear;
+    animation: LoaderSpin 1.2s infinite linear;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    border: 3px solid rgba(0,0,0,.2);
+    border-top: 3px #22486b solid;
+    border-right: 3px #22486b solid;
+    border-bottom: 3px #22486b solid;
+    margin-bottom: 14px;
+}
+
+#adding-product-modal .Checkmark {
+    display: none;
+}
+
+.Checkmark {
+    display: none;
+}
+
+#adding-product-modal .Message {
+    font-size: 16px;
+    color: #000;
+}
+.Message {
+    font-size: 16px;
+    color: #000;
+}
+
+.Rte:after {
+    content: "";
+    display: block;
+    clear: both;
+}
