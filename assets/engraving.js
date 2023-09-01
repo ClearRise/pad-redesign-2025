@@ -59,7 +59,7 @@ $(document).ready(function () {
     // Prevent the default form submission
     event.preventDefault();
 
-    $('#add-to-cart-loader').show();
+    $('.add-to-cart-loader').show();
     let engravingValue = engravingInput.val();
 
     if (engravingInput.length > 0){
