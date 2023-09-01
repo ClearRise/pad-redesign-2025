@@ -5,6 +5,9 @@
   object-fit: contain;
 } */
 
+h2{
+  line-height: 1.2em;
+}
 
 #dynamic-checkout-cart .shopify-cleanslate .p28_J2fRvZNDqyZkZ2H9 {
   display: flex !important;
@@ -490,6 +493,7 @@ img.h_auto[data-sizes=auto]{
   }
   .sub_description {
       font-size: 15px !important;
+      margin-bottom: 5px!important;
   }  
   .slide-text__title{
       font-size: 24px!important;
@@ -504,6 +508,9 @@ img.h_auto[data-sizes=auto]{
   .img_item_wrap{
   	width: 100%!important;
     padding: 20px 3px!important;
+  }
+  .index-section {
+    margin: 5px 0!important;
   }
   
   .product-single__meta {
@@ -1330,6 +1337,7 @@ button.upsell-add-to-cart.disabled{
   }  
   .page-content.custom_product{
     padding-top: 0!important;
+    padding-bottom: 0px!important;
   }
 }
 
@@ -1569,3 +1577,210 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
 .custom_plink:hover:after {
     width: 100%;
 }
+
+/* loading modal */
+
+.Modal--dark {
+    background: #5c5c5c;
+    color: #fff;
+}
+
+.Modal {
+    max-height: 200px;
+}
+
+.Modal {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    width: 480px;
+    max-width: calc(100vw - 40px);
+    max-height: calc(100vh - 40px);
+    padding: 15px 20px 20px;
+    z-index: 20;
+    opacity: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #ffffff;
+    transform: translate(-50%,-50%);
+    transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
+}
+
+.Modal__Content.Rte {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Rte {
+    word-break: break-word;
+}
+
+
+.CircleSpinner {
+    border-left-color: #22486b;
+    -webkit-animation: LoaderSpin 1.2s infinite linear;
+    animation: LoaderSpin 1.2s infinite linear;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    border: 3px solid rgba(0,0,0,.2);
+    border-top: 3px #22486b solid;
+    border-right: 3px #22486b solid;
+    border-bottom: 3px #22486b solid;
+    margin-bottom: 14px;
+}
+
+
+.Checkmark {
+    display: none;
+}
+
+
+.Message {
+    font-size: 16px;
+    color: #000;
+}
+
+.Rte:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#adding-product-modal {
+  opacity: 1;
+  z-index: 9;
+  visibility: visible;
+  background: #FFF;
+  width: 200px;
+  height: 165px;
+  position: fixed;
+  top: calc(50% - 100px);
+  padding: 20px;
+  display: none;
+  justify-content: center;
+  box-shadow: 0 0 13px 0 rgba(62, 44, 90, 0.08);
+  border-radius: 0px;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-bottom: 1px solid #e0e0e0; }
+  #adding-product-modal .Checkmark {
+    display: none; }
+  #adding-product-modal .CircleSpinner {
+    border-left-color: #22486b;
+    -webkit-animation: LoaderSpin 1.2s infinite linear;
+    animation: LoaderSpin 1.2s infinite linear;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-top: 3px #22486b solid;
+    border-right: 3px #22486b solid;
+    border-bottom: 3px #22486b solid;
+    margin-bottom: 14px; }
+  #adding-product-modal .LoadComplete {
+    -webkit-animation: none;
+    animation: none;
+    border-color: #22486b;
+    transition: border 500ms ease-out; }
+    #adding-product-modal .LoadComplete .Checkmark {
+      display: block; }
+  #adding-product-modal .Checkmark.Draw:after {
+    animation-duration: 1050ms;
+    animation-timing-function: ease;
+    animation-name: Checkmark;
+    -webkit-transform: scaleX(-1) rotate(135deg);
+    -ms-transform: scaleX(-1) rotate(135deg);
+    transform: scaleX(-1) rotate(135deg); }
+  #adding-product-modal .Checkmark:after {
+    opacity: 1;
+    height: 28px;
+    width: 14px;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    border-right: 3px solid #22486b;
+    border-top: 3px solid #22486b;
+    content: '';
+    left: 10px;
+    top: 26px;
+    position: absolute; }
+  #adding-product-modal .Message {
+    font-size: 16px;
+    color: #000; }
+
+@-webkit-keyframes LoaderSpin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes LoaderSpin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes Checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1; }
+
+  20% {
+    height: 0;
+    width: 14px;
+    opacity: 1; }
+
+  40% {
+    height: 28px;
+    width: 14px;
+    opacity: 1; }
+
+  100% {
+    height: 28px;
+    width: 14px;
+    opacity: 1; } }
+
+@keyframes Checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1; }
+
+  20% {
+    height: 0;
+    width: 14px;
+    opacity: 1; }
+
+  40% {
+    height: 28px;
+    width: 14px;
+    opacity: 1; }
+
+  100% {
+    height: 28px;
+    width: 14px;
+    opacity: 1; } 
+}
+
+/* end loading modal */

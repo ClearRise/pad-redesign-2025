@@ -1655,7 +1655,6 @@ lazySizesConfig.expFactor = 4;
   
       onSubmit: function(evt) {
         this.submitBtn.classList.add(classes.btnLoading);
-  
         if (config.requiresTerms) {
           if (this.termsCheckbox.checked) {
             // continue to checkout
