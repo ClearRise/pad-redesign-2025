@@ -553,7 +553,7 @@ function editEngraving(itemText, itemKey, itemLine, itemQuantity, $autoAdd) {
                   // Handle the response data here
                   setTimeout(function(){
                     document.dispatchEvent(new CustomEvent("cart:build"));
-                  }, 1500);
+                  }, 2000);
                   //document.dispatchEvent(new CustomEvent('cart:open'));
                 }
                   $('.overlay').hide();
