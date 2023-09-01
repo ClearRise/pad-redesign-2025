@@ -23,7 +23,7 @@
   -%}
   <div class="bold_options" data-product-id="{{ product.id }}"></div>
 
-  {% if product.metafields.custom.hide_engrave !== true %}
+  {% if product.metafields.custom.hide_engrave != true %}
     {% if settings['product-engraving'] and settings.show_engraving and product.type == 'Ring' %}
       {% assign engrave_product = settings['product-engraving'] %}
       {% assign engrave_product_id = engrave_product.id %}
