@@ -106,10 +106,6 @@
       {% assign found_engrave = false %}
       {% assign found_protection = false %}
 
-       {% if product.product.tags contains 'hide_engrave' %}   
-          {% assign found_engrave = true %}
-      {% endif %}
-      
       {% if property_size > 0 %}
         {% for p in product.properties %}
           {% if product.product.metafields.custom.premium_protection_product %}
