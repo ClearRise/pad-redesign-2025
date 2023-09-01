@@ -25,7 +25,7 @@
 <div class="bold_options" data-product-id="{{ product.id }}"></div>
 
    
-    {% if settings.product-engraving and settings.show_engraving  and product.type == 'Ring' %}
+    {% if settings.product-engraving and settings.show_engraving  and product.type == 'Ring' and product.tags contains 'hide_engrave' %}
       {% assign engrave_product = settings.product-engraving %}
       {% assign engrave_product_id = engrave_product.id %} 
       {% assign first_gift_product_id_var = engrave_product.selected_or_first_available_variant.id %}
