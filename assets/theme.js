@@ -1655,13 +1655,11 @@ lazySizesConfig.expFactor = 4;
   
       onSubmit: function(evt) {
         this.submitBtn.classList.add(classes.btnLoading);
-           $('.pg_overlay').show();
         if (config.requiresTerms) {
           if (this.termsCheckbox.checked) {
             // continue to checkout
           } else {
             alert(theme.strings.cartTermsConfirmation);
-             $('.pg_overlay').hide();
             this.submitBtn.classList.remove(classes.btnLoading)
             evt.preventDefault();
             return false;
