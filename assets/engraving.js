@@ -58,11 +58,7 @@ $(document).ready(function () {
   productFormSubmit.on("click", function (event) {
     // Prevent the default form submission
     $('.add-to-cart-loader').show();
-
-     setTimeout(function(){
-       $('.add-to-cart-loader .CircleSpinner').addClass('LoadComplete');
-      }, 2000);
-    
+   
     event.preventDefault();
    
     let engravingValue = engravingInput.val();
@@ -100,6 +96,9 @@ $(document).ready(function () {
         productForm.submit();
       }
     }
+    setTimeout(function(){
+       $('.add-to-cart-loader .CircleSpinner').addClass('LoadComplete');
+    }, 2000);
   });
 
   
