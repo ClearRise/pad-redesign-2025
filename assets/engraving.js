@@ -58,7 +58,7 @@ $(document).ready(function () {
   productFormSubmit.on("click", function (event) {
     // Prevent the default form submission
     $('.add-to-cart-loader').show();
-    
+  
     event.preventDefault();
    
     let engravingValue = engravingInput.val();
@@ -74,6 +74,7 @@ $(document).ready(function () {
         dataType: "json",
         success: function (data) {
           // Handle success if needed
+          $('.CircleSpinner').addClass('LoadComplete');
           if (protectionInput !== "") {
             ProtectionPlanAjaxAdd(protectionInput);
           } else {
@@ -89,6 +90,7 @@ $(document).ready(function () {
         },
       });
     } else {
+      $('.CircleSpinner').addClass('LoadComplete');
       // Submit the form programmatically
       if (protectionInput !== "") {
         ProtectionPlanAjaxAdd(protectionInput);
