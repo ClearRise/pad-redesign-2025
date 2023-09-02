@@ -2697,7 +2697,7 @@ lazySizesConfig.expFactor = 4;
   
     function ProductForm(form, submit, args) {
 
-      
+      console.log('testtt');
       
       this.form = form;
       this.args = args;
