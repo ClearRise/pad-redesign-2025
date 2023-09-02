@@ -1654,6 +1654,7 @@ lazySizesConfig.expFactor = 4;
       },
   
       onSubmit: function(evt) {
+        console.log('yesss');
         this.submitBtn.classList.add(classes.btnLoading);
         if (config.requiresTerms) {
           if (this.termsCheckbox.checked) {
