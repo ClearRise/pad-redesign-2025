@@ -74,13 +74,12 @@ $(document).ready(function () {
         dataType: "json",
         success: function (data) {
           // Handle success if needed
-         
+          $('.CircleSpinner').addClass('LoadComplete');
           if (protectionInput !== "") {
             ProtectionPlanAjaxAdd(protectionInput);
           } else {
             productForm.submit();
           }
-           $('.CircleSpinner').addClass('LoadComplete');
         },
         error: function (error) {
           Swal.fire({
@@ -91,14 +90,13 @@ $(document).ready(function () {
         },
       });
     } else {
-      
+      $('.CircleSpinner').addClass('LoadComplete');
       // Submit the form programmatically
       if (protectionInput !== "") {
         ProtectionPlanAjaxAdd(protectionInput);
       } else {
         productForm.submit();
       }
-      $('.CircleSpinner').addClass('LoadComplete');
     }
   });
 
