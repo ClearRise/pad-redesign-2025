@@ -96,9 +96,7 @@ $(document).ready(function () {
         productForm.submit();
       }
     }
-    setTimeout(function(){
-       $('.add-to-cart-loader .CircleSpinner').addClass('LoadComplete');
-    }, 4000);
+   
   });
 
   
