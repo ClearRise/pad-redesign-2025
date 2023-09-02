@@ -98,7 +98,7 @@ $(document).ready(function () {
     }
     setTimeout(function(){
        $('.add-to-cart-loader .CircleSpinner').addClass('LoadComplete');
-    }, 2000);
+    }, 4000);
   });
 
   
