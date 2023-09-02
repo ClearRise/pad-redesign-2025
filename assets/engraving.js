@@ -57,7 +57,7 @@ $(document).ready(function () {
 
   productFormSubmit.on("click", function (event) {
     // Prevent the default form submission
-    $('.pg_overlay').show();
+    $('.add-to-cart-loader').show();
     event.preventDefault();
    
     let engravingValue = engravingInput.val();
