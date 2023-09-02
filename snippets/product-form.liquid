@@ -25,11 +25,7 @@
 
   {% if settings['product-engraving'] and settings.show_engraving and product.type == 'Ring' %}
     <div
-      class="engraving_div"
-      {% if product.tags contains 'hide_engrave' %}
-        style="visibility: hidden; height: 0;"
-      {% endif %}
-    >
+      class="engraving_div">
       {% assign engrave_product = settings['product-engraving'] %}
       {% assign engrave_product_id = engrave_product.id %}
       {% assign first_gift_product_id_var = engrave_product.selected_or_first_available_variant.id %}
