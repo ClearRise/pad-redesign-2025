@@ -1657,7 +1657,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
   visibility: visible;
   background: #FFF;
   width: 200px;
-  height: 165px;
+  /* height: 165px; */
   position: fixed;
   top: calc(50% - 100px);
   padding: 20px;
