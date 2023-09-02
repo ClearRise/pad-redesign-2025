@@ -61,7 +61,7 @@ $(document).ready(function () {
 
      setTimeout(function(){
        $('.add-to-cart-loader .CircleSpinner').addClass('LoadComplete');
-      }, 1000);
+      }, 2000);
     
     event.preventDefault();
    
