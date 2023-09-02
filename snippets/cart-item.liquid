@@ -237,6 +237,9 @@
           title="Add an engraving"
           role="button"
           tabindex="0"
+          {% if product.tags contains 'hide_engrave' %}
+            style="visibility: hidden; height: 0;"
+          {% endif %}
           >Add an engraving</a
         >
          {% endif %}
