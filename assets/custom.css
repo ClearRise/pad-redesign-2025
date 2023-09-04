@@ -510,7 +510,7 @@ img.h_auto[data-sizes=auto]{
     padding: 20px 3px!important;
   }
   .index-section {
-    margin: 5px 0!important;
+    margin: 35px 0!important;
   }
   
   .product-single__meta {
@@ -1657,7 +1657,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
   visibility: visible;
   background: #FFF;
   width: 200px;
-  /* height: 165px; */
+  height: 165px;
   position: fixed;
   top: calc(50% - 100px);
   padding: 20px;
