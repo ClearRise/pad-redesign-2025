@@ -1654,6 +1654,7 @@ lazySizesConfig.expFactor = 4;
       },
   
       onSubmit: function(evt) {
+        console.log('yesss');
         this.submitBtn.classList.add(classes.btnLoading);
         if (config.requiresTerms) {
           if (this.termsCheckbox.checked) {
@@ -2697,7 +2698,7 @@ lazySizesConfig.expFactor = 4;
   
     function ProductForm(form, submit, args) {
 
-      
+      console.log('testtt');
       
       this.form = form;
       this.args = args;

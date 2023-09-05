@@ -2,6 +2,15 @@
 
   {%- render 'breadcrumbs' -%}
 
+  <div id="adding-product-modal" class="add-to-cart-loader-cart Modal Modal--dark" aria-hidden="true" role="dialog" data-scrollable="" style="display: none;">
+   <div class="Modal__Content Rte">
+      <div class="CircleSpinner cart-loader">
+        <div class="Checkmark Draw"></div>
+      </div>
+      <div class="Message">Checking out...</div>
+   </div>
+</div>
+  
   <header class="section-header text-center{% if cart.item_count == 0 %} section-header--404{% endif %}">
     <h1 class="section-header__title">{{ 'cart.general.title' | t }}</h1>
     <div class="rte text-spacing">
