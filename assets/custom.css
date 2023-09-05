@@ -1784,3 +1784,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
 }
 
 /* end loading modal */
+
+.cart__remove {
+  display: none;
+}
