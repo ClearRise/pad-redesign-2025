@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $('.cart__remove').show();
+ // $('.cart__remove').show();
   const productForm = $(".product-single__form");
   const productFormSubmit = $(".add-to-cart");
   const productFormSubmitBtn = $(".add-to-cart span");
