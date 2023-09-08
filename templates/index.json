@@ -36,8 +36,8 @@
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/fs_hero.png",
-            "image_mobile": "shopify:\/\/shop_images\/flash_slae_mobile.png",
+            "image": "shopify:\/\/shop_images\/flash_210_desktop.png",
+            "image_mobile": "shopify:\/\/shop_images\/flash_210_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
