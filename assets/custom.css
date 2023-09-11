@@ -1811,3 +1811,11 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
 
 /* end loading modal */
 
+.variant-wrapper.custom_dropbtn{
+  display: flex;
+}
+
+label.variant__label.custom_label{
+  padding-right: 10px;
+  margin-bottom: 0px;
+}
