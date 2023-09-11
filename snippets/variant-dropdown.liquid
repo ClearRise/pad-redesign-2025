@@ -3,7 +3,7 @@
     for="SingleOptionSelector-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
     {{ option.name }}
   </label>
-  <div class="variant-input-wrap" data-index="option{{ forloop.index }}" data-handle="{{ option.name | handleize }}">
+  <div class="variant-input-wrap custom-select" data-index="option{{ forloop.index }}" data-handle="{{ option.name | handleize }}">
     <select
       form="{{ form_id }}"
       data-variant-input
