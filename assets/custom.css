@@ -1663,7 +1663,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
   width: 200px;
   /* height: 165px; */
   position: fixed;
-  /* top: calc(50% - 100px); */
+  top: calc(50% - 30px);
   padding: 20px;
   display: none;
   justify-content: center;
