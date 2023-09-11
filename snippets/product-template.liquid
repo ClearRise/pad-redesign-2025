@@ -27,7 +27,7 @@
   assign product_img_structure = product.featured_media | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
 -%}
 
-<div id="adding-product-modal" class="add-to-cart-loader Modal Modal--dark" aria-hidden="true" role="dialog" data-scrollable="" style="display: block;">
+<div id="adding-product-modal" class="add-to-cart-loader Modal Modal--dark" aria-hidden="true" role="dialog" data-scrollable="" style="display: none;">
    <div class="Modal__Content Rte">
       <div class="CircleSpinner">
         <div class="Checkmark Draw"></div>
