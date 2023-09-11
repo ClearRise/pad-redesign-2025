@@ -1820,3 +1820,7 @@ label.variant__label.custom_label{
   margin-bottom: 0px;
   padding-top: 15px;
 }
+
+.variant-input-wrap.custom-select{
+    margin: 0px;
+}
