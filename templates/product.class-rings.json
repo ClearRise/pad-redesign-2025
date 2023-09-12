@@ -219,15 +219,15 @@
       "settings": {
         "sub_title1": "Handcrafted in the USA",
         "image_1": "shopify:\/\/shop_images\/img2.jpg",
-        "text_1": "Every ring is handmade by trade artisans in Utah, USA.",
+        "text_1": "",
         "url_1": "",
-        "sub_title2": "Uncommon materials",
+        "sub_title2": "Unique Materials",
         "image_2": "shopify:\/\/shop_images\/img1.jpg",
-        "text_2": "Go beyond silver and gold and find something that’s truly you.",
+        "text_2": "",
         "url_2": "",
-        "sub_title3": "Every ring is unique",
+        "sub_title3": "One-of-a-kind Rings",
         "image_3": "shopify:\/\/shop_images\/img3.jpg",
-        "text_3": "Your ring is made to order just for you. No two rings are the same.",
+        "text_3": "",
         "url_3": ""
       }
     },
@@ -353,7 +353,7 @@
     "2a17ff04-e874-4d0d-8550-f78df3ba83ee": {
       "type": "featured-collection",
       "settings": {
-        "title": "You May Also Like",
+        "title": "Shop Class Rings",
         "home_featured_products": "you-may-also-like",
         "per_row": 4,
         "rows": 1,
