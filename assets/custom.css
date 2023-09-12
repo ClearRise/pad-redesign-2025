@@ -1523,6 +1523,9 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
   a.add-engraving-inline-button, a.add-protection-inline-button{
       font-size: 12px;    
   }
+  .product__main-photos{
+        margin-bottom: 12px;
+  }
 }
 /* .bold_line_properties > div:last-child {
   float: left;
