@@ -1884,3 +1884,7 @@ label.variant__label.custom_label{
     border-top: 4px solid #000;
     top: 100%;
 }
+
+.variant-wrapper+.variant-wrapper {
+    margin-top: 0px;
+}
