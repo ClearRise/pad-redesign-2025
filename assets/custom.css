@@ -1837,8 +1837,8 @@ label.variant__label.custom_label{
     width: 16px;
     height: 16px;
     background-size: 16px 16px;
-    top: 3px;
-    padding-right: 3px;
+    /* top: 3px; */
+    margin-right: 3px;
 }
 
 .custom_tooltip:hover>:first-child {
