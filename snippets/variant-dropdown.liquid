@@ -3,8 +3,8 @@
     for="SingleOptionSelector-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
     {{ option.name }}
   </label>
-  <span class="tooltip tootip_icon">
-    <span class="tooltip__label">Select your U.S. Ring Size. If you do not know your size, request a free sizer.</span>
+  <span class="custom_tooltip tootip_icon">
+    <span class="custom_tooltip_label">Select your U.S. Ring Size. If you do not know your size, request a free sizer.</span>
   </span>
 
   <div class="variant-input-wrap custom-select" data-index="option{{ forloop.index }}" data-handle="{{ option.name | handleize }}">
