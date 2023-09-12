@@ -1817,7 +1817,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
 .variant-wrapper.custom_dropbtn{
   display: flex;
   align-items: center;
-  padding-top: 15px;
+  padding-top: 12px;
 }
 
 label.variant__label.custom_label{
