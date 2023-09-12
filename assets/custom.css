@@ -1826,3 +1826,16 @@ label.variant__label.custom_label{
 .variant-input-wrap.custom-select{
     margin: 0px;
 }
+
+.tootip_icon{
+  background-color: #fff;
+    border-radius: 10px;
+      position: relative;
+    display: inline-block;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAACR0lEQVR4Ae2Vz0obURTGf4mTiLEbSZhQW/sGRREi8UGEZtGNJOQFWhLzANq6tUjAdqvYQDZF6FsUg6uqLYrdqGmhSvNnM90cDsjMZWbu0ILg7y7Pd893c+79MjxwL0izTIsuR/QZM6bPEV3WKJMmMc/Y5AeeYV3whjmscdlhjBeyRrQpYMFLfuJFXH0qxCLDhzsNfrNLlRJ5smQpUKLGHjd3NG0cIpLjM56ur6wyZdBVOUaVHJCLdnptzx9e4YSoGwxQCxxCea/yY54ThXlO0UGFXq1Kv+ASlSKHuu8FmHH5pad3iUNRf8U1eYzs6OwDh6OnDGKBoVS3janVWL2G2AbQ1Og9IZBNfZiOlUGGE6lvEEBa/3NWwcoAalI/J4WPZU3tFLZMcytdlvDRktIuSdiXLk18dKVUJQl16dLBx5GUSiShLF16+OhLKQ/WlwyuKK7wIRkgm8hgUrPw3w10RIV/NSK9ZFuDkEvWZ1qzNgh5pmtS2ktk8FEUDfOPuyFnbfCIW/Og01xoli0NdEBnpAjgrX7NMlYGWb5JfZ1A5jQLDSuDllSHzGKgLZIB87ENFvWTuYWRgsbtlCJxeMx32XnJDGao6CkPKcZo39N9K4TQVukpC0RhUU/v8Y5QHA5UPqBJBjOQpcVQ9Z+YIAI51AKPE2pMG2JVl4cp7ZkiIo4OStLNPnXKuEwyiUuZOh1JrQ6HCWJR4Rov4rpkBQvybDMKbT5kixmsecoG58bmZ6wzS2LSLNGkQ48rRoy4okeHBiVS3AMe+Asl4wJqmp6/FwAAAABJRU5ErkJggg==);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px;
+    top: 3px;
+}
