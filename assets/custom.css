@@ -1839,3 +1839,44 @@ label.variant__label.custom_label{
     background-size: 16px 16px;
     top: 3px;
 }
+
+.custom_tooltip:hover>:first-child {
+    opacity: .8;
+    margin-bottom: 0;
+    height: auto;
+    line-height: 1em;
+    padding: 1em;
+}
+
+.custom_tooltip>:first-child {
+    position: absolute;
+    width: 140px;
+    color: #fff;
+    background: #000;
+    height: 1px;
+    line-height: 1px;
+    padding: 0;
+    text-align: center;
+    opacity: 0;
+    border-radius: 4px;
+    transition: all .4s;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 999;
+    bottom: 30px;
+    margin-bottom: -0.5em;
+    margin-top: 0;
+}
+
+.custom_tooltip>:first-child:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -4px;
+    width: 0;
+    height: 0;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-top: 4px solid #000;
+    top: 100%;
+}
