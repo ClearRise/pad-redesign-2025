@@ -278,13 +278,13 @@
         "164685368492299ea2-0": {
           "type": "heading",
           "settings": {
-            "title": "The Unrivaled Process"
+            "title": "Personalized Class Rings"
           }
         },
         "164685368492299ea2-1": {
           "type": "text",
           "settings": {
-            "enlarge_text": true,
+            "enlarge_text": false,
             "text": "<p>{{ product.metafields.global.unrivaled_process | metafield_tag }}<\/p>"
           }
         }
@@ -296,6 +296,18 @@
       "settings": {
         "align_text": "center",
         "narrow_column": true,
+        "divider": false
+      }
+    },
+    "2a17ff04-e874-4d0d-8550-f78df3ba83ee": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop Class Rings",
+        "home_featured_products": "class-rings",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
         "divider": false
       }
     },
@@ -350,18 +362,6 @@
         "recent_count": 5
       }
     },
-    "2a17ff04-e874-4d0d-8550-f78df3ba83ee": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Shop Class Rings",
-        "home_featured_products": "class-rings",
-        "per_row": 4,
-        "rows": 1,
-        "mobile_scrollable": false,
-        "view_all": false,
-        "divider": false
-      }
-    },
     "collection-return": {
       "type": "collection-return",
       "settings": {
@@ -373,11 +373,11 @@
     "product_img_with_txt",
     "product_how_to_work",
     "1646853684b754aedd",
+    "2a17ff04-e874-4d0d-8550-f78df3ba83ee",
     "sub",
     "164740826566424b78",
     "product-recommendations",
     "recently-viewed",
-    "2a17ff04-e874-4d0d-8550-f78df3ba83ee",
     "collection-return"
   ]
 }
