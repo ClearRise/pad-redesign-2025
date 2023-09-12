@@ -354,7 +354,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Shop Class Rings",
-        "home_featured_products": "you-may-also-like",
+        "home_featured_products": "class-rings",
         "per_row": 4,
         "rows": 1,
         "mobile_scrollable": false,
