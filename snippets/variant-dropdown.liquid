@@ -1,9 +1,21 @@
-<div class="variant-wrapper variant-wrapper--dropdown js" data-type="dropdown">
-  <label class="variant__label{% if option.name == 'Default' or option.name == 'Title' %} hidden-label{% endif %}{% unless variant_labels %} hidden-label{% endunless %}"
+<div class="variant-wrapper variant-wrapper--dropdown js custom_dropbtn" data-type="dropdown">
+  <label class="custom_label variant__label{% if option.name == 'Default' or option.name == 'Title' %} hidden-label{% endif %}{% unless variant_labels %} hidden-label{% endunless %}"
     for="SingleOptionSelector-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
     {{ option.name }}
   </label>
-  <div class="variant-input-wrap" data-index="option{{ forloop.index }}" data-handle="{{ option.name | handleize }}">
+  <span class="custom_tooltip tootip_icon">
+    <span class="custom_tooltip_label">
+      {% if option.name == 'Size' %}
+          {{ settings.size_tooltip }}
+        {% elsif option.name == 'Width' %}
+          {{ settings.width_tooltip }}
+        {% else %}
+          Select your U.S. Ring Size. If you do not know your size, request a free sizer.
+        {% endif %}
+      </span>
+  </span>
+
+  <div class="variant-input-wrap custom-select" data-index="option{{ forloop.index }}" data-handle="{{ option.name | handleize }}">
     <select
       form="{{ form_id }}"
       data-variant-input

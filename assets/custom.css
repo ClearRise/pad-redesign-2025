@@ -1523,6 +1523,12 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
   a.add-engraving-inline-button, a.add-protection-inline-button{
       font-size: 12px;    
   }
+  .product__main-photos{
+        margin-bottom: 12px;
+  }
+  input, select, textarea {
+    font-size: 14px!important;
+  }
 }
 /* .bold_line_properties > div:last-child {
   float: left;
@@ -1811,3 +1817,77 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
 
 /* end loading modal */
 
+.variant-wrapper.custom_dropbtn{
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+}
+
+label.variant__label.custom_label{
+  padding-right: 3px;
+  margin-bottom: 0px;
+  
+}
+
+.variant-input-wrap.custom-select{
+    margin: 0px;
+}
+
+.tootip_icon{
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAACR0lEQVR4Ae2Vz0obURTGf4mTiLEbSZhQW/sGRREi8UGEZtGNJOQFWhLzANq6tUjAdqvYQDZF6FsUg6uqLYrdqGmhSvNnM90cDsjMZWbu0ILg7y7Pd893c+79MjxwL0izTIsuR/QZM6bPEV3WKJMmMc/Y5AeeYV3whjmscdlhjBeyRrQpYMFLfuJFXH0qxCLDhzsNfrNLlRJ5smQpUKLGHjd3NG0cIpLjM56ur6wyZdBVOUaVHJCLdnptzx9e4YSoGwxQCxxCea/yY54ThXlO0UGFXq1Kv+ASlSKHuu8FmHH5pad3iUNRf8U1eYzs6OwDh6OnDGKBoVS3janVWL2G2AbQ1Og9IZBNfZiOlUGGE6lvEEBa/3NWwcoAalI/J4WPZU3tFLZMcytdlvDRktIuSdiXLk18dKVUJQl16dLBx5GUSiShLF16+OhLKQ/WlwyuKK7wIRkgm8hgUrPw3w10RIV/NSK9ZFuDkEvWZ1qzNgh5pmtS2ktk8FEUDfOPuyFnbfCIW/Og01xoli0NdEBnpAjgrX7NMlYGWb5JfZ1A5jQLDSuDllSHzGKgLZIB87ENFvWTuYWRgsbtlCJxeMx32XnJDGao6CkPKcZo39N9K4TQVukpC0RhUU/v8Y5QHA5UPqBJBjOQpcVQ9Z+YIAI51AKPE2pMG2JVl4cp7ZkiIo4OStLNPnXKuEwyiUuZOh1JrQ6HCWJR4Rov4rpkBQvybDMKbT5kixmsecoG58bmZ6wzS2LSLNGkQ48rRoy4okeHBiVS3AMe+Asl4wJqmp6/FwAAAABJRU5ErkJggg==);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px;
+    /* top: 3px; */
+    margin-right: 5px;
+}
+
+.custom_tooltip:hover>:first-child {
+    opacity: .8;
+    margin-bottom: 0;
+    height: auto;
+    line-height: 1em;
+    padding: 1em;
+}
+
+.custom_tooltip>:first-child {
+    position: absolute;
+    width: 140px;
+    color: #fff;
+    background: #000;
+    height: 1px;
+    line-height: 1px;
+    padding: 0;
+    text-align: center;
+    opacity: 0;
+    border-radius: 4px;
+    transition: all .4s;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 999;
+    bottom: 30px;
+    margin-bottom: -0.5em;
+    margin-top: 0;
+}
+
+.custom_tooltip>:first-child:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -4px;
+    width: 0;
+    height: 0;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-top: 4px solid #000;
+    top: 100%;
+}
+
+.variant-wrapper+.variant-wrapper {
+    margin-top: 0px;
+}
