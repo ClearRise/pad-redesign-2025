@@ -588,13 +588,13 @@
         "type": "text",
         "id": "size_tooltip",
         "label": "Size Tooltip text",
-        "default": ">Select your Size. If you do not know your size, request a free sizer."
+        "default": "Select your Size. If you do not know your size, request a free sizer."
       },
       {
         "type": "text",
         "id": "width_tooltip",
         "label": "Width Tooltip text",
-        "default": ">Select your Width. If you do not know your size, request a free sizer."
+        "default": "Select your Width. If you do not know your size, request a free sizer."
       }
     ]
   },
