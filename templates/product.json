@@ -1,10 +1,5 @@
 {
   "sections": {
-    "zp-product-header-content": {
-      "type": "product-header-content-zipifypages",
-      "settings": {
-      }
-    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -42,7 +37,7 @@
           "settings": {
             "size_chart": "",
             "variant_labels": true,
-            "picker_type": "button",
+            "picker_type": "dropdown",
             "color_swatches": false
           }
         },
@@ -59,9 +54,9 @@
           "settings": {
             "show_dynamic_checkout": false,
             "surface_pickup_enable": true,
-            "enable_tooltip": true,
-            "tooltip_header": "<h4>Premium Protection<\/h4>",
-            "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
+            "enable_tooltip": false,
+            "tooltip_header": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>",
+            "tooltip_content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>"
           }
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
@@ -166,6 +161,12 @@
             "title": "Ask a question",
             "phone": false
           }
+        },
+        "b803315f-cbc6-4181-a363-b6042d03f896": {
+          "type": "size_chart",
+          "settings": {
+            "size_chart": "premium-protection-plan"
+          }
         }
       },
       "block_order": [
@@ -187,7 +188,8 @@
         "67cf22ff-76d8-4ad2-91e5-80b67524f841",
         "e15f8d39-327a-449c-ae3e-f545ea35c05e",
         "tab",
-        "contact"
+        "contact",
+        "b803315f-cbc6-4181-a363-b6042d03f896"
       ],
       "settings": {
         "sku_enable": false,
@@ -340,15 +342,9 @@
       "type": "collection-return",
       "settings": {
       }
-    },
-    "zp-product-footer-content": {
-      "type": "product-footer-content-zipifypages",
-      "settings": {
-      }
     }
   },
   "order": [
-    "zp-product-header-content",
     "main",
     "product_img_with_txt",
     "product_how_to_work",
@@ -357,7 +353,6 @@
     "164740826566424b78",
     "product-recommendations",
     "recently-viewed",
-    "collection-return",
-    "zp-product-footer-content"
+    "collection-return"
   ]
 }
