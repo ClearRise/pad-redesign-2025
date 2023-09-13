@@ -4,7 +4,15 @@
     {{ option.name }}
   </label>
   <span class="custom_tooltip tootip_icon">
-    <span class="custom_tooltip_label">Select your U.S. Ring Size. If you do not know your size, request a free sizer.</span>
+    <span class="custom_tooltip_label">
+      {% if option.name == 'Size' %}
+          {{ settings.size_tooltip }}
+        {% elsif option.name == 'Width' %}
+          {{ settings.width_tooltip }}
+        {% else %}
+          Select your U.S. Ring Size. If you do not know your size, request a free sizer.
+        {% endif %}
+      </span>
   </span>
 
   <div class="variant-input-wrap custom-select" data-index="option{{ forloop.index }}" data-handle="{{ option.name | handleize }}">
