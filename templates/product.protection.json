@@ -37,7 +37,7 @@
           "settings": {
             "size_chart": "",
             "variant_labels": true,
-            "picker_type": "button",
+            "picker_type": "dropdown",
             "color_swatches": false
           }
         },
