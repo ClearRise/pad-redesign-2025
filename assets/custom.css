@@ -1826,7 +1826,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
 label.variant__label.custom_label{
   padding-right: 3px;
   margin-bottom: 0px;
-  
+  font-weight: 700;
 }
 
 .variant-input-wrap.custom-select{
