@@ -36,8 +36,8 @@
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/Flash_Sale_Desk.png",
-            "image_mobile": "shopify:\/\/shop_images\/Flash_Sale_Mob.png",
+            "image": "shopify:\/\/shop_images\/this_weekend_only_desktop.png",
+            "image_mobile": "shopify:\/\/shop_images\/This_weekend_only_mob_1.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
