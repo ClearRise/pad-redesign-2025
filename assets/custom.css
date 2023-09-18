@@ -1891,3 +1891,14 @@ label.variant__label.custom_label{
 .variant-wrapper+.variant-wrapper {
     margin-top: 0px;
 }
+/*  end tooltip */
+.custom_discount_wrap{
+  padding-top: 7px;
+}
+
+@media screen and (max-width: 767px){
+  .custom_discount_wrap .cart__discount {
+      font-size: 11px!important;
+      padding-left: 8px;
+  }
+}
