@@ -1898,7 +1898,8 @@ label.variant__label.custom_label{
 
 @media screen and (max-width: 767px){
   .custom_discount_wrap .cart__discount {
-      font-size: 11px!important;
+      font-size: 10px!important;
       padding-left: 8px;
+      letter-spacing: 0.1px;
   }
 }
