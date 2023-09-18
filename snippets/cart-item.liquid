@@ -360,7 +360,7 @@
 
           </span>
         {% endif %}
-
+{% if false %}
         {%- if product.line_level_discount_allocations != blank -%}
           {%- for discount_allocation in product.line_level_discount_allocations -%}
             <small class="cart__discount">
@@ -368,7 +368,7 @@
             >
           {%- endfor -%}
         {%- endif -%}
-
+{% endif %}
         {%- if product.unit_price_measurement -%}
           {%- capture unit_price_base_unit -%}
             <span class="unit-price-base">
@@ -385,6 +385,13 @@
         {%- endif -%}
       </div>
     </div>
+    {%- if product.line_level_discount_allocations != blank -%}
+      {%- for discount_allocation in product.line_level_discount_allocations -%}
+        <div class="cart__discount">
+          {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})</div
+        >
+      {%- endfor -%}
+    {%- endif -%}  
   </div>
 </div>
 
