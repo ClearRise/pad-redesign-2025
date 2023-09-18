@@ -386,11 +386,13 @@
       </div>
     </div>
     {%- if product.line_level_discount_allocations != blank -%}
+      <div class="custom_discount_wrap">
       {%- for discount_allocation in product.line_level_discount_allocations -%}
-        <div class="cart__discount">
-          {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})</div
+        <small class="cart__discount">
+          {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})</small
         >
       {%- endfor -%}
+      </div>
     {%- endif -%}  
   </div>
 </div>
