@@ -1891,3 +1891,7 @@ label.variant__label.custom_label{
 .variant-wrapper+.variant-wrapper {
     margin-top: 0px;
 }
+
+.custom-product-blocK{
+  margin-bottom: 8px!important;
+}
