@@ -1891,6 +1891,7 @@ label.variant__label.custom_label{
 .variant-wrapper+.variant-wrapper {
     margin-top: 0px;
 }
+
 /*  end tooltip */
 .custom_discount_wrap{
   padding-top: 7px;
@@ -1902,4 +1903,17 @@ label.variant__label.custom_label{
       padding-left: 8px;
       letter-spacing: 0.1px;
   }
+}
+
+.custom-product-blocK{
+  margin-bottom: 12px!important;
+}
+
+.bold_option_title{
+  font-weight: 700!important;
+}
+
+.custom-product-blocK select{
+    border-color: #000!important;
+    border-width: 2px;
 }
