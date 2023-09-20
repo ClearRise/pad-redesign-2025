@@ -25,7 +25,7 @@
           "settings": {
             "size_chart": "",
             "variant_labels": true,
-            "picker_type": "button",
+            "picker_type": "dropdown",
             "color_swatches": false
           }
         },
@@ -41,7 +41,10 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
-            "surface_pickup_enable": true
+            "surface_pickup_enable": true,
+            "enable_tooltip": false,
+            "tooltip_header": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>",
+            "tooltip_content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>"
           }
         },
         "a1f32824-d0c0-4637-9f69-562bde50bc77": {
@@ -49,35 +52,41 @@
           "settings": {
             "title": "<b>Premium Protection<\/b>",
             "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/warranty-and-return-information\" title=\"Lifetime Warranty and Return Policy\">Premium Protection Plan<\/a> covers your bracelet for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
           "type": "sales_point",
           "settings": {
             "icon": "checkmark",
-            "text": "Handcrafted in Utah, USA"
+            "text": "Handcrafted in Utah, USA",
+            "url": ""
           }
         },
         "87272cff-cc16-40a9-b501-c6f3b9acd243": {
           "type": "sales_point",
           "settings": {
             "icon": "heart",
-            "text": "Made to order just for you"
+            "text": "Made to order just for you",
+            "url": ""
           }
         },
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005": {
           "type": "sales_point",
           "settings": {
             "icon": "shield",
-            "text": "Lifetime Warranty"
+            "text": "Lifetime Warranty",
+            "url": ""
           }
         },
         "sales_point": {
           "type": "sales_point",
           "settings": {
             "icon": "globe",
-            "text": "Worldwide shipping"
+            "text": "Worldwide shipping",
+            "url": ""
           }
         },
         "description": {
@@ -92,7 +101,9 @@
           "settings": {
             "title": "Sizing Information",
             "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
@@ -100,7 +111,9 @@
           "settings": {
             "title": "Lifetime Warranty",
             "content": "<p>{{ product.metafields.global.lifetime_warranty | metafield_tag }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
@@ -108,7 +121,9 @@
           "settings": {
             "title": "Additional Details",
             "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
@@ -116,7 +131,9 @@
           "settings": {
             "title": "How To Care",
             "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "tab": {
@@ -124,7 +141,9 @@
           "settings": {
             "title": "Shipping information",
             "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
-            "page": ""
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "contact": {
