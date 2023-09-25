@@ -401,6 +401,7 @@
 
 <script>
   let items =  document.getElementsByClassName("cart__item custom_discount_wrap cart__discount");
+  console.log(items);
   for (let i = 0; i < items.length; i++) {
     if(items[i].textContent.includes("Intelligems")){
       items[i].style.display = "none";
