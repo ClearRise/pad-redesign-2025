@@ -402,7 +402,7 @@
 <script>
   let items =  document.getElementsByClassName("cart__discount");
   console.log(items);
-  for (let i = 0; i < items.length; i++) {
+  for (let i = 0; i < items.length; i++) { console.log(items[i].textContent);
     if(items[i].textContent.includes("Intelligems")){
       items[i].style.display = "none";
     }
