@@ -60,7 +60,7 @@
           "settings": {
             "show_dynamic_checkout": false,
             "surface_pickup_enable": true,
-            "enable_tooltip": true,
+            "enable_tooltip": false,
             "tooltip_header": "<h3>Premium Protection<\/h3>",
             "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
           }
@@ -70,6 +70,16 @@
           "settings": {
             "gift_box_title": "",
             "gift_included": ""
+          }
+        },
+        "458f6ce8-d05a-4939-b43c-1df6cf9c4e3d": {
+          "type": "tab",
+          "settings": {
+            "title": "<b>Premium Protection Plan<\/b>",
+            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
@@ -189,6 +199,7 @@
         "inventory_status",
         "buy_buttons",
         "8b562356-ae61-4e76-9d41-a70561a3c483",
+        "458f6ce8-d05a-4939-b43c-1df6cf9c4e3d",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
@@ -219,15 +230,15 @@
       "settings": {
         "sub_title1": "Handcrafted in the USA",
         "image_1": "shopify:\/\/shop_images\/img2.jpg",
-        "text_1": "",
+        "text_1": "Every ring is handmade by trade artisans in Utah, USA.",
         "url_1": "",
         "sub_title2": "Unique Materials",
         "image_2": "shopify:\/\/shop_images\/img1.jpg",
-        "text_2": "",
+        "text_2": "Go beyond silver and gold and find something that’s truly you.",
         "url_2": "",
         "sub_title3": "One-of-a-kind Rings",
         "image_3": "shopify:\/\/shop_images\/img3.jpg",
-        "text_3": "",
+        "text_3": "Your ring is made to order just for you. No two rings are the same.",
         "url_3": ""
       }
     },
