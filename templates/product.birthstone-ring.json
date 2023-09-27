@@ -42,7 +42,7 @@
           "settings": {
             "show_dynamic_checkout": false,
             "surface_pickup_enable": true,
-            "enable_tooltip": true,
+            "enable_tooltip": false,
             "tooltip_header": "<h4>Premium Protection<\/h4>",
             "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
           }
@@ -159,6 +159,16 @@
             "title": "Ask a question",
             "phone": false
           }
+        },
+        "aee49288-aed2-447a-9362-0e6b1ca600d1": {
+          "type": "tab",
+          "settings": {
+            "title": "<b>Premium Protection Plan<\/b>",
+            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
         }
       },
       "block_order": [
@@ -180,7 +190,8 @@
         "0858aa42-4ab1-4194-814a-990ffd086efc",
         "e15f8d39-327a-449c-ae3e-f545ea35c05e",
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86",
-        "contact"
+        "contact",
+        "aee49288-aed2-447a-9362-0e6b1ca600d1"
       ],
       "settings": {
         "sku_enable": false,
