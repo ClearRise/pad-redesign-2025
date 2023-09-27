@@ -37,13 +37,6 @@
             "inventory_transfers_enable": true
           }
         },
-        "fedeed79-9cb7-4600-875e-825d3d9456ad": {
-          "type": "free_gifts",
-          "settings": {
-            "gift_box_title": "",
-            "gift_included": ""
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -52,6 +45,23 @@
             "enable_tooltip": true,
             "tooltip_header": "<h4>Premium Protection<\/h4>",
             "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
+          }
+        },
+        "fedeed79-9cb7-4600-875e-825d3d9456ad": {
+          "type": "free_gifts",
+          "settings": {
+            "gift_box_title": "",
+            "gift_included": ""
+          }
+        },
+        "dde6419c-9baf-419e-88a7-367a0c1dc14f": {
+          "type": "tab",
+          "settings": {
+            "title": "<b>Premium Protection Plan<\/b>",
+            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
           }
         },
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
@@ -157,8 +167,9 @@
         "separator",
         "variant_picker",
         "inventory_status",
-        "fedeed79-9cb7-4600-875e-825d3d9456ad",
         "buy_buttons",
+        "fedeed79-9cb7-4600-875e-825d3d9456ad",
+        "dde6419c-9baf-419e-88a7-367a0c1dc14f",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
