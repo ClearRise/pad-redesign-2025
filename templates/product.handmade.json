@@ -42,7 +42,7 @@
           "settings": {
             "show_dynamic_checkout": false,
             "surface_pickup_enable": true,
-            "enable_tooltip": true,
+            "enable_tooltip": false,
             "tooltip_header": "<h4>Premium Protection<\/h4>",
             "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
           }
@@ -54,11 +54,21 @@
             "gift_included": ""
           }
         },
+        "10d1515e-f4f3-4bd5-9ec0-58820668b55d": {
+          "type": "tab",
+          "settings": {
+            "title": "<b>Premium Protection Plan<\/b>",
+            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
           "type": "sales_point",
           "settings": {
-            "icon": "checkmark",
-            "text": "Handmade",
+            "icon": "gift",
+            "text": "Handmade in Utah",
             "url": ""
           }
         },
@@ -73,17 +83,17 @@
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005": {
           "type": "sales_point",
           "settings": {
-            "icon": "shield",
-            "text": "Limited Lifetime Warranty",
+            "icon": "truck",
+            "text": "Worldwide Shipping",
             "url": ""
           }
         },
         "sales_point": {
           "type": "sales_point",
           "settings": {
-            "icon": "globe",
-            "text": "Worldwide shipping",
-            "url": ""
+            "icon": "tag",
+            "text": "Find Your Size",
+            "url": "https:\/\/patrickadairdesigns.com\/pages\/how-to-use-a-ring-sizer"
           }
         },
         "description": {
@@ -159,6 +169,7 @@
         "inventory_status",
         "buy_buttons",
         "f913fa62-4c78-411b-aeaf-8c3aa3d0f21d",
+        "10d1515e-f4f3-4bd5-9ec0-58820668b55d",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
