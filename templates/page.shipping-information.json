@@ -48,14 +48,14 @@
           "type": "question",
           "settings": {
             "title": "Glowstone Rings",
-            "text": "<p>Glowstone rings are currently taking approx. <strong>2-4 weeks to ship<\/strong>.<\/p><p>The below rings are shipping in approx.<strong> 1-2 weeks<\/strong>.<\/p><ul><li>Star Dust™ Ring<\/li><li>Star Dust™ Ring in Black Ceramic<\/li><li>Star Dust™ Ring in White Ceramic<\/li><li>Star Dust™ Stackable Ring<\/li><li>Star Dust™ Ring on Tungsten<\/li><li>Matching Star Dust™ Wedding Ring Set in Tungsten<\/li><li>Radiant Star Dust™ Ring<\/li><li>Custom Titanium Glowstone Ring<\/li><li>Custom Tungsten Glowstone Ring<\/li><li>Custom Ceramic Glowstone Ring<\/li><li>Lavender Opal Glowstone Ring<\/li><li>Lavender Opal Glowstone Stackable Ring<\/li><li>Radiant Lavender Opal Glowstone Ring<\/li><li>Matching Lavender Opal Glowstone Wedding Ring Set in Black Ceramic<\/li><li>Black Fire Opal Glowstone Ring<\/li><li>Radiant Black Fire Opal Glowstone Ring<\/li><li>Matching Black Fire Opal Glowstone Wedding Ring Set<\/li><li>Winter's Howl Glowstone Ring<\/li><li>Matching Winter's Howl Glowstone Wedding Ring Set in Tungsten<\/li><li>The Ember Glowstone Ring<\/li><li>Ember Glowstone Stackable Ring<\/li><li>Matching Ember Glowstone Wedding Ring Set<\/li><li>Sunken Artifact Glowstone Ring<\/li><li>Matching Sunken Artifact Glowstone Wedding Ring Set in Tungsten<\/li><li>Area 51 Glowstone Ring<\/li><li>Matching Area 51 Glowstone Wedding Ring Set<\/li><li>Glowstone Cremation Ring with Ashes<\/li><li>Kaiju Glowstone Ring<\/li><li>Black Emerald Opal Glowstone Ring<\/li><li>Dragon Scale Opal Glowstone Ring<\/li><\/ul>"
+            "text": "<p>Glowstone rings are currently taking approx. <strong>6 weeks to ship<\/strong>.<\/p><p>The below rings are shipping in approx.<strong> 2-4 weeks<\/strong>.<\/p><ul><li>Star Dust™ Ring<\/li><li>Star Dust™ Ring in Black Ceramic<\/li><li>Star Dust™ Ring in White Ceramic<\/li><li>Star Dust™ Stackable Ring<\/li><li>Star Dust™ Ring on Tungsten<\/li><li>Matching Star Dust™ Wedding Ring Set in Tungsten<\/li><li>Radiant Star Dust™ Ring<\/li><li>Custom Titanium Glowstone Ring<\/li><li>Custom Tungsten Glowstone Ring<\/li><li>Custom Ceramic Glowstone Ring<\/li><li>Lavender Opal Glowstone Ring<\/li><li>Lavender Opal Glowstone Stackable Ring<\/li><li>Radiant Lavender Opal Glowstone Ring<\/li><li>Matching Lavender Opal Glowstone Wedding Ring Set in Black Ceramic<\/li><li>Black Fire Opal Glowstone Ring<\/li><li>Radiant Black Fire Opal Glowstone Ring<\/li><li>Matching Black Fire Opal Glowstone Wedding Ring Set<\/li><li>Winter's Howl Glowstone Ring<\/li><li>Matching Winter's Howl Glowstone Wedding Ring Set in Tungsten<\/li><li>The Ember Glowstone Ring<\/li><li>Ember Glowstone Stackable Ring<\/li><li>Matching Ember Glowstone Wedding Ring Set<\/li><li>Sunken Artifact Glowstone Ring<\/li><li>Matching Sunken Artifact Glowstone Wedding Ring Set in Tungsten<\/li><li>Area 51 Glowstone Ring<\/li><li>Matching Area 51 Glowstone Wedding Ring Set<\/li><li>Glowstone Cremation Ring with Ashes<\/li><li>Kaiju Glowstone Ring<\/li><li>Black Emerald Opal Glowstone Ring<\/li><li>Dragon Scale Opal Glowstone Ring<\/li><\/ul>"
           }
         },
         "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2": {
           "type": "question",
           "settings": {
             "title": "Meteorite Rings",
-            "text": "<p>Any ring containing solid meteorite is currently taking approx. <strong>2-4 weeks to ship<\/strong>.<\/p>"
+            "text": "<p>Any ring containing solid meteorite is currently taking approx. <strong>2-6 weeks to ship<\/strong>.<\/p>"
           }
         },
         "9edaa1a8-e6fc-401d-be5e-7b9412d62dc0": {
@@ -83,7 +83,7 @@
           "type": "question",
           "settings": {
             "title": "Misc. Rings",
-            "text": "<ul><li>Mokume Gane Rings: 4 weeks<\/li><li>Timascus Rings: 4 weeks<\/li><li>Zircuti Rings: 4 weeks<\/li><li>Reptilian Damascus Steel Ring: 4-6 weeks<\/li><li>Spirograph Damascus Steel Ring: 4-6 weeks<\/li><\/ul>"
+            "text": "<ul><li>Mokume Gane Rings: 2-4 weeks<\/li><li>Timascus Rings: 2-4 weeks<\/li><li>Reptilian Damascus Steel Ring: 4-6 weeks<\/li><li>Spirograph Damascus Steel Ring: 4-6 weeks<\/li><li>Superconductor Rings: 4-6 weeks<\/li><\/ul>"
           }
         },
         "e9488b45-be9e-41c3-afb4-b05cfa7c0070": {
@@ -97,7 +97,7 @@
           "type": "question",
           "settings": {
             "title": "Glowstone Earrings",
-            "text": "<p>All Glowstone Earrings are currently estimated to take 6 weeks to ship<\/p>"
+            "text": "<p>All Glowstone Earrings are currently estimated to take 4 weeks to ship<\/p>"
           }
         },
         "caf44b84-4f9b-4c8d-9e94-aa908c58814c": {
