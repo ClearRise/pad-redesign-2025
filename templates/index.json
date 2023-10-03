@@ -101,7 +101,7 @@
             "heading": "FLASH SALE",
             "textarea": "LIMITED TIME ONLY",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/flash-sale-rings",
+            "cta_link1": "shopify:\/\/collections\/flash-sale-ring",
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
@@ -465,7 +465,6 @@
     },
     "1646695630466c29fc": {
       "type": "advanced-content",
-      "disabled": true,
       "blocks": {
         "1646695630c9a9076b-0": {
           "type": "image",
@@ -489,6 +488,7 @@
         "1646695630c9a9076b-0",
         "1646695630c9a9076b-1"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true
