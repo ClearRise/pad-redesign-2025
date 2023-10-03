@@ -38,6 +38,14 @@
           "settings": {
           }
         },
+        "inventory_status": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -45,14 +53,6 @@
             "variant_labels": true,
             "picker_type": "dropdown",
             "color_swatches": false
-          }
-        },
-        "inventory_status": {
-          "type": "inventory_status",
-          "disabled": true,
-          "settings": {
-            "inventory_threshold": 10,
-            "inventory_transfers_enable": true
           }
         },
         "buy_buttons": {
@@ -195,8 +195,8 @@
         "d6ad76eb-921a-4ffc-8b29-f7ffd62621d6",
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
         "separator",
-        "variant_picker",
         "inventory_status",
+        "variant_picker",
         "buy_buttons",
         "8b562356-ae61-4e76-9d41-a70561a3c483",
         "458f6ce8-d05a-4939-b43c-1df6cf9c4e3d",
