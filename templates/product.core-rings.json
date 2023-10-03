@@ -151,16 +151,6 @@
             "size_chart": ""
           }
         },
-        "8aca98a7-09cd-4cf0-a4d8-b87789875b12": {
-          "type": "tab",
-          "settings": {
-            "title": "How The Glow Works",
-            "content": "<p>Our glowstone rings contain an odorless, non-flammable glow powder called <strong>strontium aluminate<\/strong>. To get your ring to glow, expose it to a UV light source (such as the sun) to charge it and take it into the dark shortly after. There are many factors that affect the strength of the glow which are detailed on this helpful <a href=\"https:\/\/patrickadairdesigns.com\/blogs\/blog\/how-to-get-your-glow-ring-to-glow\" title=\"https:\/\/patrickadairdesigns.com\/blogs\/blog\/how-to-get-your-glow-ring-to-glow\"><strong>page<\/strong><\/a>.<\/p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": ""
-          }
-        },
         "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
           "type": "tab",
           "settings": {
@@ -208,7 +198,6 @@
         "67cf22ff-76d8-4ad2-91e5-80b67524f841",
         "7cf22f7b-2877-4d38-a231-95946286cc18",
         "tab",
-        "8aca98a7-09cd-4cf0-a4d8-b87789875b12",
         "e15f8d39-327a-449c-ae3e-f545ea35c05e",
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86",
         "contact"
