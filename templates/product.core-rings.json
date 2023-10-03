@@ -302,12 +302,12 @@
     "2a17ff04-e874-4d0d-8550-f78df3ba83ee": {
       "type": "featured-collection",
       "settings": {
-        "title": "Shop Class Rings",
-        "home_featured_products": "class-rings",
+        "title": "Shop the CORE Collection",
+        "home_featured_products": "core-rings",
         "per_row": 4,
         "rows": 1,
-        "mobile_scrollable": false,
-        "view_all": false,
+        "mobile_scrollable": true,
+        "view_all": true,
         "divider": false
       }
     },
