@@ -66,7 +66,7 @@
             "heading": "FLASH SALE",
             "textarea": "LIMITED TIME ONLY",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/flash-sale-rings",
+            "cta_link1": "shopify:\/\/collections\/flash-sale-ring",
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
@@ -204,7 +204,6 @@
     },
     "1646695572d73bfd5a": {
       "type": "rich-text",
-      "disabled": true,
       "blocks": {
         "164669557254083090-0": {
           "type": "heading",
@@ -216,6 +215,7 @@
       "block_order": [
         "164669557254083090-0"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
@@ -224,7 +224,6 @@
     },
     "1647557717e099d38f": {
       "type": "index_how_to_work",
-      "disabled": true,
       "blocks": {
         "df9da119-3ecd-4da4-8621-695a8ea6d85f": {
           "type": "text",
@@ -255,6 +254,7 @@
         "eaf7d4d7-8304-48a3-90e3-8b53e73c2e32",
         "6d049a6c-e799-432f-b3fc-561a00a683bf"
       ],
+      "disabled": true,
       "settings": {
         "enable": true,
         "title": "How it Works",
@@ -467,7 +467,6 @@
     },
     "1646695630466c29fc": {
       "type": "advanced-content",
-      "disabled": true,
       "blocks": {
         "1646695630c9a9076b-0": {
           "type": "image",
@@ -491,6 +490,7 @@
         "1646695630c9a9076b-0",
         "1646695630c9a9076b-1"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true
