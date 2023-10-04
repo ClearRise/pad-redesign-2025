@@ -7,16 +7,15 @@
     <span class="custom_tooltip_label">   
       {% if variant_labels %}
 
-    {% for var_item in product.metafields.custom.variant_items.value %}
-  <script>
-    var variantItems = {{ var_item | json }};
-    for (var i = 0; i < variantItems.items.length; i++) {
-      if (variantItems.items[i].name == '{{ option.name }}') {
-        alert(variantItems.items[i].comment);
-      }
-    }
-  </script>
-{% endfor %}
+           {% assign variant_items = product.metafields.custom.variant_items.value %}
+        {{ variant_items }}
+            {% for var_item in variant_items.items %}
+              <span>
+                {% if var_item.name == option.name %}
+                  {{ var_item.comment }}
+                {% endif %}
+              </span>
+            {% endfor %}
 
       {% else %}  
           {% if option.name == 'Size' %}
