@@ -147,11 +147,20 @@
               "link_text": "Save Up to 25% on Select Designs",
               "link": "shopify:\/\/collections\/flash-sale"
             }
+          },
+          "3783cdda-5e62-4c46-a5cf-b85d760de31c": {
+            "type": "announcement",
+            "settings": {
+              "text": "FREE GIFT",
+              "link_text": "Get a Free Ring or Pendant ($250 Value) with any order over $210",
+              "link": ""
+            }
           }
         },
         "block_order": [
           "1524770014057",
-          "0a6f3a54-50ab-4864-bc1e-1c783828528e"
+          "0a6f3a54-50ab-4864-bc1e-1c783828528e",
+          "3783cdda-5e62-4c46-a5cf-b85d760de31c"
         ],
         "settings": {
           "main_menu_link_list": "05-16-23-lewis-main-menu",
