@@ -12,7 +12,7 @@
     var variantItems = {{ var_item | json }};
     for (var i = 0; i < variantItems.items.length; i++) {
       if (variantItems.items[i].name == '{{ option.name }}') {
-        document.write(variantItems.items[i].comment);
+        alert(variantItems.items[i].comment);
       }
     }
   </script>
