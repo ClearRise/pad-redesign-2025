@@ -7,7 +7,7 @@
     <span class="custom_tooltip_label">   
       {% if variant_labels %}
 
-           {% assign variant_items = product.metafields.custom.variant_items | json_parse %}
+           {% assign variant_items = product.metafields.custom.variant_items | json %}
             {% for var_item in variant_items.items %}
               <span>
                 {% if var_item.name == option.name %}
