@@ -139,10 +139,19 @@
               "desktop_logo_width": 100,
               "mobile_logo_width": 60
             }
+          },
+          "0a6f3a54-50ab-4864-bc1e-1c783828528e": {
+            "type": "announcement",
+            "settings": {
+              "text": "ENDS SUNDAY",
+              "link_text": "Save Up to 25% on Select Designs",
+              "link": "shopify:\/\/collections\/flash-sale"
+            }
           }
         },
         "block_order": [
-          "1524770014057"
+          "1524770014057",
+          "0a6f3a54-50ab-4864-bc1e-1c783828528e"
         ],
         "settings": {
           "main_menu_link_list": "05-16-23-lewis-main-menu",
