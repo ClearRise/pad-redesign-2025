@@ -9,7 +9,7 @@
 
             {% for var_item in product.metafields.custom.variant_items.value %}
              <span>
-              {{ var_item }}
+              {{ var_item['items'] }}
                {% if var_item.name ==  option.name %}
                  {{ var_item.comment }}
                {% endif %} 
