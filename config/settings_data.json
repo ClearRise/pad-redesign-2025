@@ -171,7 +171,7 @@
           "header_style": "normal",
           "sticky_index": false,
           "sticky_collection": false,
-          "announcement_compact": false,
+          "announcement_compact": true,
           "announcement_above_header": false,
           "toolbar_menu": "top-menu",
           "toolbar_social": true,
