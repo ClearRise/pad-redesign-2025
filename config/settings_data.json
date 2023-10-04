@@ -144,7 +144,7 @@
             "type": "announcement",
             "settings": {
               "text": "ENDS SUNDAY",
-              "link_text": "Save Up to 25% on Select Designs",
+              "link_text": "Save Up to 30% on Select Designs",
               "link": "shopify:\/\/collections\/flash-sale"
             }
           },
@@ -152,7 +152,7 @@
             "type": "announcement",
             "settings": {
               "text": "FREE GIFT",
-              "link_text": "Get a Free Ring or Pendant ($250 Value) with any order over $210",
+              "link_text": "Get a Free Ring or Pendant ($250 Value) with any order $210+",
               "link": ""
             }
           }
