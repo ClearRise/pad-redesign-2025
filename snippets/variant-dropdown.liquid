@@ -7,13 +7,13 @@
     <span class="custom_tooltip_label">   
       {% if variant_labels %}
 
-            {% for var_item in product.metafields.custom.variant_items.value %}
-             <span>
-              {{ var_item.name }}
-               {% if var_item.name ==  option.name %}
-                 {{ var_item.comment }}
-               {% endif %} 
-             </span>
+           {% assign variant_items = product.metafields.custom.variant_items | json_parse %}
+            {% for var_item in variant_items.items %}
+              <span>
+                {% if var_item.name == option.name %}
+                  {{ var_item.comment }}
+                {% endif %}
+              </span>
             {% endfor %}
 
       {% else %}  
