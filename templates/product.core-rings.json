@@ -52,7 +52,8 @@
             "size_chart": "",
             "variant_labels": true,
             "picker_type": "dropdown",
-            "color_swatches": false
+            "color_swatches": false,
+            "custom_variant_comment": true
           }
         },
         "buy_buttons": {
