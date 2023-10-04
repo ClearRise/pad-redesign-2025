@@ -6,6 +6,8 @@
   <span class="custom_tooltip tootip_icon">
     <span class="custom_tooltip_label">  {{ product.metafields.custom.variant_items }}
       {% if variant_labels %}
+
+      {{ variant_labels }}
             {% for var_item in product.metafields.custom.variant_items["items"] %}
               {{ var_item }}
                {% if var_item.name ==  option.name %}
