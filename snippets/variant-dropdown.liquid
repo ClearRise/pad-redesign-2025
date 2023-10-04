@@ -4,14 +4,25 @@
     {{ option.name }}
   </label>
   <span class="custom_tooltip tootip_icon">
-    <span class="custom_tooltip_label">
-      {% if option.name == 'Size' %}
-          {{ settings.size_tooltip }}
-        {% elsif option.name == 'Width' %}
-          {{ settings.width_tooltip }}
-        {% else %}
-          Select your U.S. Ring Size. If you do not know your size, request a free sizer.
-        {% endif %}
+    <span class="custom_tooltip_label">   
+      {% if custom_variant_comment %}
+
+           {% assign variant_items = product.metafields.custom.variant_items.value %}
+            {% for var_item in variant_items.items %}
+                {% if var_item.name == option.name %}
+                  {{ var_item.comment }}
+                {% endif %}
+            {% endfor %}
+
+      {% else %}  
+          {% if option.name == 'Size' %}
+            {{ settings.size_tooltip }}
+          {% elsif option.name == 'Width' %}
+            {{ settings.width_tooltip }}
+          {% else %}
+            Select your U.S. Ring Size. If you do not know your size, request a free sizer.
+          {% endif %}
+       {% endif %} 
       </span>
   </span>
 
