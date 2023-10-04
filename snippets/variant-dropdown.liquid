@@ -8,7 +8,7 @@
       {% if variant_labels %}
 
             {% for var_item in product.metafields.custom.variant_items.value %}
-              {{ var_item.comment }}
+              {{ var_item }}
                {% if var_item.name ==  option.name %}
                  {{ var_item.comment }}
                {% endif %}  
