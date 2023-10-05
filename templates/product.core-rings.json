@@ -75,8 +75,9 @@
         },
         "458f6ce8-d05a-4939-b43c-1df6cf9c4e3d": {
           "type": "tab",
+          "disabled": true,
           "settings": {
-            "title": "<b>Premium Protection Plan<\/b>",
+            "title": "Premium Protection Plan",
             "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
             "page": "",
             "enable_readmore": false,
@@ -166,7 +167,7 @@
           "type": "tab",
           "settings": {
             "title": "Lifetime Warranty",
-            "content": "<p>At Patrick Adair Designs, all products come with a <a href=\"\/pages\/warranty-and-return-information\" title=\"Limited Lifetime Warranty and Return Policy\"><strong>Limited Lifetime Warranty<\/strong><\/a> by default. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.<\/p>",
+            "content": "<p>At Patrick Adair Designs, all products come with a <a href=\"\/pages\/warranty-and-return-information\" title=\"Limited Lifetime Warranty and Return Policy\"><strong>Limited Lifetime Warranty<\/strong><\/a> by default. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.<\/p><p>To Purchase <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a>  for this product, please contact us at support@patrickadairdesigns.com<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
