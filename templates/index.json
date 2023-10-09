@@ -21,10 +21,31 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
+        },
+        "e61989c9-7e79-4cf5-b4cf-b24de5137873": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "shopify:\/\/collections\/all-products",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/prime_day_desktop.png",
+            "image_mobile": "shopify:\/\/shop_images\/prime_day_centered.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
-        "slideshow-0"
+        "slideshow-0",
+        "e61989c9-7e79-4cf5-b4cf-b24de5137873"
       ],
       "settings": {
         "use_img_banner": true,
