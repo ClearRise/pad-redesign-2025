@@ -91,7 +91,7 @@
     "spend_progress": "",
     "product-handle-1": "the-ember-glowstone-ring-2",
     "product-handle-2": "",
-    "hide_gift_2": true,
+    "hide_gift_2": false,
     "second_show_gift_box": false,
     "second_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
     "gift_box_title_second": "Choose One Free Gift",
