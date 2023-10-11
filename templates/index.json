@@ -36,8 +36,8 @@
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/prime_day_desktop.png",
-            "image_mobile": "shopify:\/\/shop_images\/prime_day_centered.png",
+            "image": "shopify:\/\/shop_images\/ends_tonight_desk.png",
+            "image_mobile": "shopify:\/\/shop_images\/ends_tonight_center.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
