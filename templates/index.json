@@ -21,10 +21,31 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
+        },
+        "5f833efe-ec96-4f51-a22b-43b283c8a793": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/Guaranteed_sale_desktop.png",
+            "image_mobile": "shopify:\/\/shop_images\/Guaranteed_sale_movile.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
-        "slideshow-0"
+        "slideshow-0",
+        "5f833efe-ec96-4f51-a22b-43b283c8a793"
       ],
       "settings": {
         "use_img_banner": true,
