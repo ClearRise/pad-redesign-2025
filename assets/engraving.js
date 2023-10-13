@@ -14,7 +14,19 @@
       var thirdtier_second_gift_product_var = '';
   
   if(theme.settings.show_gift_box ){    
-     console.log('yes');
+      {% assign first_gift_product = settings.product-handle-1 %}
+      {% assign first_gift_product_id = first_gift_product.id %} 
+      {% assign first_gift_product_id_var = first_gift_product.selected_or_first_available_variant.id %}
+      {% assign second_gift_product = settings.product-handle-2 %}
+      {% assign second_gift_product_id = second_gift_product.id %}
+      {% assign second_gift_product_id_var = second_gift_product.selected_or_first_available_variant.id %}
+    
+  
+      var first_gift_product = {{ first_gift_product_id }};
+      var second_gift_product = {{ second_gift_product_id }};
+      var first_gift_product_var = {{ first_gift_product_id_var }};
+      var second_gift_product_var = {{ second_gift_product_id_var }};
+
 }  
 
   {% if settings.second_show_gift_box %}
