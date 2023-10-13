@@ -84,7 +84,6 @@ if tag contains '_label_'
         {% assign saved_amount = saved_amount | plus: 0 %}
         {% assign saved_percent = saved_percent | plus: 0 %}
         {{ saved_amount }}
-        {% if saved_amount > 0 %}
           <div class="grid-product__tag grid-product__tag--sale"  data-product-id="{{ product.id }}">
               {% if saved_percent < 20 %}
                 <div class="igSavingsPrice">
@@ -96,7 +95,6 @@ if tag contains '_label_'
                 </div>
               {% endif %}  
           </div>
-        {%- endif -%}    
       {%- endif -%}
     {%- endif -%}
 
