@@ -633,9 +633,11 @@ $(document).ready(function () {
     var itemQuantity = $(this).parents(".cart__item").attr('data-quantity');
     $('.overlay').show();
 
+   updatedgCartUpsell();
+   
    console.log('testing delete');
    
-   
+    setTimeout(function(){
      if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
        bothRemoveEngrageShippingItems($productId, engravingProductID, $remove_url, itemQuantity);
@@ -653,6 +655,7 @@ $(document).ready(function () {
       $productId = '';
       window.location.href = $remove_url;
     } 
+    },1500);
     // setTimeout(function(){
     //   $('.overlay').hide();
     //   window.location.href = $remove_url;
