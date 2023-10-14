@@ -64,7 +64,7 @@
       
   
   jQuery(document).ready(function($){
-    
+       updatedgCartUpsell();
     $(document).on('click', '.upsell_button_gtm', function(e){
       e.preventDefault();
       var id = $(this).attr('data-product-id');
@@ -631,6 +631,7 @@ $(document).ready(function () {
 
  $(document).on("click", ".cart__remove a", function (event) {
     event.preventDefault();
+   updatedgCartUpsell();
     var $this = $(this);
     var $remove_url = $(this).attr("href");
     var $productId = '';
