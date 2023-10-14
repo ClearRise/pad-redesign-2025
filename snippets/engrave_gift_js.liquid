@@ -339,6 +339,10 @@
   document.addEventListener('ajaxProduct:added', function(evt) {
      updatedgCartUpsell();
   });
+ document.addEventListener('page:loaded', function(evt) {
+     updatedgCartUpsell();
+  });
+
 
 
 
