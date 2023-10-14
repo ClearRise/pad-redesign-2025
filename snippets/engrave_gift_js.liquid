@@ -64,6 +64,10 @@
       
   
   jQuery(document).ready(function($){
+
+    updatedgCartUpsell();
+
+    
     $(document).on('click', '.upsell_button_gtm', function(e){
       e.preventDefault();
       var id = $(this).attr('data-product-id');
