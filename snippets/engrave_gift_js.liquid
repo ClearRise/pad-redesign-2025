@@ -64,9 +64,7 @@
       
   
   jQuery(document).ready(function($){
-
-    updatedgCartUpsell();
-   
+    
     $(document).on('click', '.upsell_button_gtm', function(e){
       e.preventDefault();
       var id = $(this).attr('data-product-id');
@@ -363,7 +361,7 @@
     }
     var comp_qty = parseInt(qty - prevQty);
 
-   
+     updatedgCartUpsell();
   
     var dataEngravingValue = quantityInput.getAttribute('data-engraving');
     var dataProtectionValue = quantityInput.getAttribute('data-protection');
@@ -676,7 +674,7 @@ $(document).ready(function () {
           url: "/cart.js",
           dataType: "json",
           success: function (cartData) {
-          
+            updatedgCartUpsell();
             
             console.log(cartData);
             // Find the item with the engraving product ID in the cart
@@ -738,7 +736,7 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
         dataType: "json",
         success: function (cartData) {
 
-        
+           updatedgCartUpsell();
           
           console.log(cartData);
           // Find the item with the engraving product ID in the cart
