@@ -638,7 +638,7 @@ $(document).ready(function () {
 
    console.log('testing delete');
    
-    updatedgCartUpsell();
+   
      if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
        bothRemoveEngrageShippingItems($productId, engravingProductID, $remove_url, itemQuantity);
@@ -673,7 +673,8 @@ $(document).ready(function () {
           url: "/cart.js",
           dataType: "json",
           success: function (cartData) {
-  
+            updatedgCartUpsell();
+            
             console.log(cartData);
             // Find the item with the engraving product ID in the cart
             var itemToUpdate = cartData.items.find(function (item) {
@@ -734,6 +735,8 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
         dataType: "json",
         success: function (cartData) {
 
+           updatedgCartUpsell();
+          
           console.log(cartData);
           // Find the item with the engraving product ID in the cart
           var itemToUpdate = cartData.items.find(function (item) {
