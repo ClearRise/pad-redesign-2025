@@ -297,36 +297,7 @@
           }
         }
         }, 1000);  
-        /*if(cart.total_price < {{GiftBoxAmountRaw}} || cart.total_price > {{SecondTierMinRaw}} || cart.total_price > {{ThirdTierAmountRaw}}){
-          for(var i = 0; i < items.length; i++){
-            if (items[i].product_id == first_gift_product){
-              remove_auto_gift(first_gift_product_var);
-            }
-            if (items[i].product_id == second_gift_product){
-              remove_auto_gift(second_gift_product_var);
-            }
-          }
-        }
-        else if(cart.total_price < {{SecondTierMinRaw}} || cart.total_price > {{ThirdTierAmountRaw}}){
-          for(var i = 0; i < items.length; i++){
-            if (items[i].product_id == secondtier_first_gift_product){
-              remove_auto_gift(secondtier_first_gift_product_var);
-            }
-            if (items[i].product_id == secondtier_second_gift_product){
-              remove_auto_gift(secondtier_second_gift_product_var);
-            }
-          }
-        }
-        else if(cart.total_price < {{ThirdTierAmountRaw}}){
-          for(var i = 0; i < items.length; i++){
-            if (items[i].product_id == thirdtier_first_gift_product){
-              remove_auto_gift(thirdtier_first_gift_product_var);
-            }
-            if (items[i].product_id == thirdtier_second_gift_product){
-              remove_auto_gift(thirdtier_second_gift_product_var);
-            }
-          }
-        }*/
+        
       }); 
   }
   document.addEventListener('cart:updated', function(evt) {
@@ -338,6 +309,10 @@
      updatedgCartUpsell();
   });
 
+document.addEventListener('page:loaded', function() {
+    updatedgCartUpsell();
+  });
+  
 //
 
 
