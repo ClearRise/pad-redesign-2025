@@ -635,6 +635,9 @@ $(document).ready(function () {
     var $productId = '';
     var itemQuantity = $(this).parents(".cart__item").attr('data-quantity');
     $('.overlay').show();
+
+   console.log('testing delete');
+   
     updatedgCartUpsell();
      if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
