@@ -640,20 +640,29 @@ $(document).ready(function () {
    
      if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
+      setTimeout(function(){
+        
        bothRemoveEngrageShippingItems($productId, engravingProductID, $remove_url, itemQuantity);
+        }, 2000);
       // removeEngrageShippingItems(engravingProductID, $remove_url, itemQuantity);
      }
      else if ($(this).parents(".cart__item").find(".engraving_p").val() == "true") {
-       removeEngrageShippingItems(engravingProductID, $remove_url, itemQuantity);
+        setTimeout(function(){
+          removeEngrageShippingItems(engravingProductID, $remove_url, itemQuantity);
+           }, 2000);
       
      }
      else if ($(this).parents(".cart__item").find(".Protection_p").val() == "true") {
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
-       removeEngrageShippingItems($productId, $remove_url, itemQuantity);
+        setTimeout(function(){
+           removeEngrageShippingItems($productId, $remove_url, itemQuantity);
+           }, 2000);
      }
     else {
       $productId = '';
+       setTimeout(function(){
       window.location.href = $remove_url;
+         }, 2000);
     } 
     // setTimeout(function(){
     //   $('.overlay').hide();
