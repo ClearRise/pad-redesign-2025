@@ -633,7 +633,6 @@ $(document).ready(function () {
 
  $(document).on("click", ".cart__remove a", function (event) {
     event.preventDefault();
-   updatedgCartUpsell();
     var $this = $(this);
     var $remove_url = $(this).attr("href");
     var $productId = '';
@@ -677,7 +676,6 @@ $(document).ready(function () {
           url: "/cart.js",
           dataType: "json",
           success: function (cartData) {
-            updatedgCartUpsell();
             
             console.log(cartData);
             // Find the item with the engraving product ID in the cart
@@ -738,8 +736,6 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
         url: "/cart.js",
         dataType: "json",
         success: function (cartData) {
-
-           updatedgCartUpsell();
           
           console.log(cartData);
           // Find the item with the engraving product ID in the cart
