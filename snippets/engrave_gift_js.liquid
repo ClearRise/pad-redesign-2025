@@ -627,7 +627,6 @@ $(document).ready(function () {
 
  $(document).on("click", ".cart__remove a", function (event) {
   
-   
     event.preventDefault();
     var $this = $(this);
     var $remove_url = $(this).attr("href");
@@ -635,8 +634,8 @@ $(document).ready(function () {
     var itemQuantity = $(this).parents(".cart__item").attr('data-quantity');
    
     $('.overlay').show();
- updatedgCartUpsell();
-   
+
+    updatedgCartUpsell();
    console.log('testing delete');
    
      if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
@@ -654,7 +653,7 @@ $(document).ready(function () {
      }
     else {
       $productId = '';
-    //  window.location.href = $remove_url;
+      window.location.href = $remove_url;
     } 
     // setTimeout(function(){
     //   $('.overlay').hide();
@@ -698,7 +697,7 @@ $(document).ready(function () {
                      removeEngrageShippingItems(engraveId, $remove_url, itemQuantity); 
                    }
                     else {
-                    //  window.location.href = $remove_url;
+                      window.location.href = $remove_url;
                     }                  
                   },
                   error: function (error) {
@@ -755,7 +754,7 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
               dataType: "json",
               success: function (data) {
                 console.log('success');
-             //   window.location.href = $remove_url;
+                window.location.href = $remove_url;
               },
               error: function (error) {
                 Swal.fire({
