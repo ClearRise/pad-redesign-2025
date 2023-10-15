@@ -1045,7 +1045,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
        //   document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
           {% endif %}
         }
-        setTimeout(function(){
+      
         if(Cookies.get('FirstTier') == 'false' && Cookies.get('SecondTier') == 'false' && Cookies.get('ThirdTier') == 'false') {
           for(var i = 0; i < items.length; i++){
             if (items[i].product_id == first_gift_product){
@@ -1116,7 +1116,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
             }
           }
         }
-        }, 1000);  
+         
 
 
 
@@ -1212,7 +1212,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
         // Get current quantities of EngravingProductId and ProtectionProductId
         var engravingProduct = cartData.items.find(item => item.variant_id == dataEngravingValue);
         var protectionProduct = cartData.items.find(item => item.variant_id == dataProtectionValue);
-  console.log(protectionProduct);
+         console.log(protectionProduct);
         if (engravingProduct) {
           if(action == 'minus'){
             requestData.updates[dataEngravingValue] = engravingProduct.quantity + comp_qty;
