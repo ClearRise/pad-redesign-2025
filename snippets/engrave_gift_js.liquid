@@ -1252,7 +1252,9 @@ function remove_auto_gift($prod_id){
             data: requestData,
             dataType: 'json',
             success: function (data) {
-              window.location.reload();
+              document.dispatchEvent(new CustomEvent('ajaxProduct:added'));
+              document.dispatchEvent(new CustomEvent('cart:build'));
+            //  window.location.reload();
             //  document.dispatchEvent(new CustomEvent("cart:build"));
               $('.overlay').hide();
             },
