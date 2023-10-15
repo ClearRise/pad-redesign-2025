@@ -1149,11 +1149,11 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
   }
   document.addEventListener('cart:updated', function(evt) {
     var cart_obj = evt.detail.cart.items;
-     updatedgCartUpsell(xyz);
+     updatedgCartUpsell();
   });
 
   document.addEventListener('ajaxProduct:added', function(evt) {
-     updatedgCartUpsell(xyz);
+     updatedgCartUpsell();
   });
 
 //
@@ -1179,7 +1179,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
     }
     var comp_qty = parseInt(qty - prevQty);
 
-     updatedgCartUpsell(xyz, false);
+     updatedgCartUpsell();
   
     var dataEngravingValue = quantityInput.getAttribute('data-engraving');
     var dataProtectionValue = quantityInput.getAttribute('data-protection');
