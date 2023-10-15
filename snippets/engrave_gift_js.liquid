@@ -1045,7 +1045,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
        //   document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
           {% endif %}
         }
-      
+        setTimeout(function(){
         if(Cookies.get('FirstTier') == 'false' && Cookies.get('SecondTier') == 'false' && Cookies.get('ThirdTier') == 'false') {
           for(var i = 0; i < items.length; i++){
             if (items[i].product_id == first_gift_product){
@@ -1116,10 +1116,10 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
             }
           }
         }
-         
+        }, 300);  
 
 
-
+    setTimeout(function(){
         if($remove){
           console.log('yes');
             var $this = $remove_this;
@@ -1145,6 +1145,8 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
               window.location.href = $remove_url;
             } 
         }
+       }, 1000);
+        
       }); 
   }
   document.addEventListener('cart:updated', function(evt) {
