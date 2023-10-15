@@ -1149,11 +1149,11 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
   }
   document.addEventListener('cart:updated', function(evt) {
     var cart_obj = evt.detail.cart.items;
-     updatedgCartUpsell(xyz, false);
+     updatedgCartUpsell(xyz);
   });
 
   document.addEventListener('ajaxProduct:added', function(evt) {
-     updatedgCartUpsell(xyz, false);
+     updatedgCartUpsell(xyz);
   });
 
 //
