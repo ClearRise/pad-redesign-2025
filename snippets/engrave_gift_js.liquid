@@ -1274,25 +1274,25 @@ function remove_auto_gift($prod_id){
 
 
 
-  // $(document).on("click", ".cart__remove a", function (event) {
+  $(document).on("click", ".cart__remove a", function (event) {
   
-  //   event.preventDefault();
-  //   var $this = $(this);
-  //   // var $remove_url = $(this).attr("href");
-  //   // var $productId = '';
-  //   // var itemQuantity = $(this).parents(".cart__item").attr('data-quantity');
-  //   updatedgCartUpsell($this, true);
-  //   $('.overlay').show();
+    event.preventDefault();
+    var $this = $(this);
+    // var $remove_url = $(this).attr("href");
+    // var $productId = '';
+    // var itemQuantity = $(this).parents(".cart__item").attr('data-quantity');
+    updatedgCartUpsell($this, true);
+    $('.overlay').show();
 
    
-  //  console.log('testing delete');
+   console.log('testing delete');
       
-  //   // setTimeout(function(){
-  //   //   $('.overlay').hide();
-  //   //   window.location.href = $remove_url;
-  //   // }, 2000);
+    // setTimeout(function(){
+    //   $('.overlay').hide();
+    //   window.location.href = $remove_url;
+    // }, 2000);
    
-  // });
+  });
 
 
 function bothRemoveEngrageShippingItems($productId, engraveId, $remove_url, itemQuantity){
