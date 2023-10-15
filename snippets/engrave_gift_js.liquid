@@ -926,21 +926,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
      });
    });
 
-  function remove_auto_gift($prod_id){
-    let variantId = $prod_id;
-      $.ajax({
-        type: "POST",
-        url: "/cart/change.js",
-        dataType: "json",
-        data: {
-          id: parseFloat(variantId),
-          quantity: 0,
-        },
-      }).then((data) => {
-          document.dispatchEvent(new CustomEvent('ajaxProduct:added'));
-          document.dispatchEvent(new CustomEvent('cart:build'));
-      });
-  }
+  
 
   function updatedgCartUpsell($remove_this, $remove) {
     const loader = document.querySelector('.overlay');
@@ -982,7 +968,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
         {% assign ThirdTierAmountRaw = settings.cart_threshold_amount_third | times:100 %}
      //  calculateProgress(cart.total_price, {{GiftBoxAmountRaw}});
 
-        console.log(cart.total_price);
+        console.log(cart.items);
         console.log({{GiftBoxAmountRaw}});
         
         //remove free gift
@@ -1158,6 +1144,25 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
      updatedgCartUpsell();
   });
 
+
+
+function remove_auto_gift($prod_id){
+    console.log('removed');
+    let variantId = $prod_id;
+      $.ajax({
+        type: "POST",
+        url: "/cart/change.js",
+        dataType: "json",
+        data: {
+          id: parseFloat(variantId),
+          quantity: 0,
+        },
+      }).then((data) => {
+          document.dispatchEvent(new CustomEvent('ajaxProduct:added'));
+          document.dispatchEvent(new CustomEvent('cart:build'));
+      });
+  }
+  
 //
 
 
@@ -1181,7 +1186,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
     }
     var comp_qty = parseInt(qty - prevQty);
 
-     updatedgCartUpsell();
+    updatedgCartUpsell();
   
     var dataEngravingValue = quantityInput.getAttribute('data-engraving');
     var dataProtectionValue = quantityInput.getAttribute('data-protection');
