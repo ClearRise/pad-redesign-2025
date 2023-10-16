@@ -1033,8 +1033,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
           {% endif %}
         }
         
-      setTimeout(function(){
-        
+        console.log('testttinggg');
         if(Cookies.get('FirstTier') == 'false' && Cookies.get('SecondTier') == 'false' && Cookies.get('ThirdTier') == 'false') {
           for(var i = 0; i < items.length; i++){
             if (items[i].product_id == first_gift_product){
@@ -1105,7 +1104,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
             }
           }
         }
-        }, 800);  
+     
 
 
     setTimeout(function(){
