@@ -1274,10 +1274,7 @@ function remove_auto_gift($prod_id){
        removeEngrageShippingItems($productId, $remove_url, itemQuantity);
      }
     else {       
-        return fetch($remove_url, {
-          credentials: "same-origin",
-          method: "GET",
-        }).then((response) => response.json());                  
+       remove_all($remove_url);
     } 
     
     
@@ -1326,14 +1323,8 @@ function bothRemoveEngrageShippingItems($productId, engraveId, $remove_url, item
                      removeEngrageShippingItems(engraveId, $remove_url, itemQuantity); 
                    }
                     else {
-                     return fetch($remove_url, {
-                        credentials: "same-origin",
-                        method: "GET",
-                      }).then((response) => response.json())
-                       .then(function (response) {
-                          // Handle the response data here
-                             updatedgCartUpsell();   
-                        });
+                      
+                      remove_all($remove_url);
                       
                     //  window.location.href = $remove_url;
                     }                  
@@ -1356,15 +1347,7 @@ function bothRemoveEngrageShippingItems($productId, engraveId, $remove_url, item
         });
       // });
     } else {
-              return fetch($remove_url, {
-                        credentials: "same-origin",
-                        method: "GET",
-                      }).then((response) => response.json())
-                       .then(function (response) {
-                          // Handle the response data here
-                             updatedgCartUpsell();   
-                        });
-                      
+             remove_all($remove_url);
     }
 }
   
@@ -1400,14 +1383,7 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
               dataType: "json",
               success: function (data) {
                 console.log('success');
-                  return fetch($remove_url, {
-                        credentials: "same-origin",
-                        method: "GET",
-                      }).then((response) => response.json())
-                       .then(function (response) {
-                          // Handle the response data here
-                             updatedgCartUpsell();   
-                        });
+                  remove_all($remove_url);
                       
               },
               error: function (error) {
@@ -1426,20 +1402,23 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
         },
       });
     } else {
-              return fetch($remove_url, {
-                        credentials: "same-origin",
-                        method: "GET",
-                      }).then((response) => response.json())
-                       .then(function (response) {
-                          // Handle the response data here
-                             updatedgCartUpsell();   
-                        });
-                      
+         remove_all($remove_url);
+                     
     }
 }
 
 
-  
+  function remove_all(url){
+     return fetch(url, {
+          credentials: "same-origin",
+          method: "GET",
+        }).then((response) => response.json())
+        .then(function (response) {
+          console.log(response);
+                          // Handle the response data here
+                             updatedgCartUpsell();   
+                        });
+  }
   
  
 </script> 
