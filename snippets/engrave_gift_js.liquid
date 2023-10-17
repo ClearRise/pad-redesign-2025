@@ -1415,7 +1415,10 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
         }).then(function (response) {
           console.log(response);
                           // Handle the response data here
-                             updatedgCartUpsell();   
+                 setTimeout(function(){
+                    updatedgCartUpsell();  
+                 }, 800)
+                             
                         });
   }
   
