@@ -1033,7 +1033,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
           {% endif %}
         }
         
-       
+      setTimeout(function(){
         if(Cookies.get('FirstTier') == 'false' && Cookies.get('SecondTier') == 'false' && Cookies.get('ThirdTier') == 'false') {
           for(var i = 0; i < items.length; i++){
             if (items[i].product_id == first_gift_product){
@@ -1105,8 +1105,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
             }
           }
         }
-     
-      
+      }, 700); 
       }); 
   }
   document.addEventListener('cart:updated', function(evt) {
@@ -1274,23 +1273,15 @@ function remove_auto_gift($prod_id){
        $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
        removeEngrageShippingItems($productId, $remove_url, itemQuantity);
      }
-    else {
-      $productId = '';
-     _updateCart({
-                          url: $remove_url,
-                        
-                        }).then(function (response) {
-                          // Handle the response data here
-                             updatedgCartUpsell();   
-                        });
-                      
+    else {       
+        return fetch($remove_url, {
+          credentials: "same-origin",
+          method: "GET",
+        }).then((response) => response.json());                  
     } 
     
-  
     
-    $('.overlay').show();
-
-   
+  $('.overlay').show();   
    console.log('testing delete');
       
     // setTimeout(function(){
@@ -1335,10 +1326,11 @@ function bothRemoveEngrageShippingItems($productId, engraveId, $remove_url, item
                      removeEngrageShippingItems(engraveId, $remove_url, itemQuantity); 
                    }
                     else {
-                      _updateCart({
-                          url: $remove_url,
-                        
-                        }).then(function (response) {
+                     return fetch($remove_url, {
+                        credentials: "same-origin",
+                        method: "GET",
+                      }).then((response) => response.json())
+                       .then(function (response) {
                           // Handle the response data here
                              updatedgCartUpsell();   
                         });
@@ -1364,10 +1356,11 @@ function bothRemoveEngrageShippingItems($productId, engraveId, $remove_url, item
         });
       // });
     } else {
-      _updateCart({
-                          url: $remove_url,
-                         
-                        }).then(function (response) {
+              return fetch($remove_url, {
+                        credentials: "same-origin",
+                        method: "GET",
+                      }).then((response) => response.json())
+                       .then(function (response) {
                           // Handle the response data here
                              updatedgCartUpsell();   
                         });
@@ -1407,10 +1400,11 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
               dataType: "json",
               success: function (data) {
                 console.log('success');
-               _updateCart({
-                          url: $remove_url
-                         
-                        }).then(function (response) {
+                  return fetch($remove_url, {
+                        credentials: "same-origin",
+                        method: "GET",
+                      }).then((response) => response.json())
+                       .then(function (response) {
                           // Handle the response data here
                              updatedgCartUpsell();   
                         });
@@ -1432,10 +1426,11 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
         },
       });
     } else {
-      _updateCart({
-                          url: $remove_url,
-                         
-                        }).then(function (response) {
+              return fetch($remove_url, {
+                        credentials: "same-origin",
+                        method: "GET",
+                      }).then((response) => response.json())
+                       .then(function (response) {
                           // Handle the response data here
                              updatedgCartUpsell();   
                         });
