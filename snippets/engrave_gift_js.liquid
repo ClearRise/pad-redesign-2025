@@ -1412,8 +1412,7 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
      return fetch(url, {
           credentials: "same-origin",
           method: "GET",
-        }).then((response) => response.json())
-        .then(function (response) {
+        }).then(function (response) {
           console.log(response);
                           // Handle the response data here
                              updatedgCartUpsell();   
