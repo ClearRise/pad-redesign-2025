@@ -1105,7 +1105,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
             }
           }
         }
-
+        document.dispatchEvent(new CustomEvent('cart:build'));
        // location.reload();
       }, 700); 
       }); 
