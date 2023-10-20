@@ -57,480 +57,189 @@
         "autoplay_speed": 7
       }
     },
-    "16466920156dc1f06b": {
-      "type": "advanced-content",
-      "blocks": {
-        "1646692015dc9bcd88-1": {
-          "type": "liquid",
-          "settings": {
-            "code": "<div class=\"one-third-column\">\n<center>Made to Order<\/center>\n<\/div>\n<div class=\"one-third-column\">\n<center>Satisfaction Guarantee<\/center>\n<\/div>\n<div class=\"one-third-column-last\">\n<center>Worldwide Shipping<\/center>\n<\/div>\n<div style=\"clear:both;\" >\n<\/div>",
-            "width": "100%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "1646692015dc9bcd88-1"
-      ],
+    "b83f732f-7586-44d1-8196-569a5f831266": {
+      "type": "replo-trust-icons",
       "settings": {
-        "full_width": false,
-        "space_around": true
       }
     },
-    "rich-text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": "Most jewelry looks the same"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>Express yourself with something truly unique.<\/p><p>Since 2015, we’ve been handcrafting artisan rings using the most uncommon luxury materials.<\/p><p>Whether it’s hand-forged Damascus steel from Nevada, fossilized mammoth tooth from Siberia, or meteorite pulled from the Arctic Circle you’ll find a story in every ring<\/p>"
-          }
-        },
-        "6608bf6f-85b6-4b98-80ce-d2b158c1626a": {
-          "type": "button",
-          "settings": {
-            "link": "https:\/\/patrickadairdesigns.com\/collections\/all-products?filter.p.m.custom.product_type=Ring",
-            "link_text": "Discover Yours"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "6608bf6f-85b6-4b98-80ce-d2b158c1626a"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
-      }
-    },
-    "1646694183f97c4822": {
+    "18d61218-afee-40dc-a9af-f51e5ae51ccf": {
       "type": "promo-grid",
       "blocks": {
-        "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
-          "type": "advanced",
+        "7cc93651-f9c7-42fd-aebe-267f7439ccfa": {
+          "type": "image",
           "settings": {
-            "subheading": "",
-            "heading": "Meteorite Rings",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/meteorite-rings",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 300,
-            "text_size": 105,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
+            "image": "shopify:\/\/shop_images\/Amethyst-Glowstone-Ring-6.png",
+            "link": "",
+            "width": "33"
           }
         },
-        "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
-          "type": "advanced",
+        "d880a9af-9a4f-43c5-b252-4604b6bee437": {
+          "type": "image",
           "settings": {
-            "subheading": "",
-            "heading": "The Glowstone<br> Series",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/the-glowstone-series",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/glowstone-2.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 300,
-            "text_size": 100,
-            "text_align": "vertical-center horizontal-right",
-            "focal_point": "center",
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
+            "image": "shopify:\/\/shop_images\/Amethyst-Glowstone-Ring-6.png",
+            "link": "",
+            "width": "33"
           }
         },
-        "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
-          "type": "advanced",
+        "656a9d3a-6e49-4cb4-9d36-5d828f784620": {
+          "type": "image",
           "settings": {
-            "subheading": "",
-            "heading": "Find Your <br> Wedding Band",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/best-selling-wedding-bands-v1",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/DSC00620.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 300,
-            "text_size": 120,
-            "text_align": "vertical-center horizontal-right",
-            "focal_point": "center",
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
+            "image": "shopify:\/\/shop_images\/Amethyst-Glowstone-Ring-6.png",
+            "link": "",
+            "width": "33"
           }
         }
       },
       "block_order": [
-        "8fd2c38f-76d2-4ebe-87c5-e072122f3d02",
-        "2f6050a5-96b7-4f7d-b405-7b5952c82699",
-        "85a12c0c-6ee7-4aba-a660-0e12f6bdc907"
+        "7cc93651-f9c7-42fd-aebe-267f7439ccfa",
+        "d880a9af-9a4f-43c5-b252-4604b6bee437",
+        "656a9d3a-6e49-4cb4-9d36-5d828f784620"
       ],
       "settings": {
-        "full_width": false,
-        "gutter_size": 20,
+        "full_width": true,
+        "gutter_size": 0,
         "space_above": false,
         "space_below": false
       }
     },
-    "164755740363a75745": {
-      "type": "home_img_with_txt",
+    "28fba7ba-c556-4a41-98e8-59504c6930d1": {
+      "type": "replo-ethos",
       "settings": {
-        "sub_title1": "Handcrafted in the USA",
-        "image_1": "shopify:\/\/shop_images\/img2.jpg",
-        "text_1": "Every ring is handmade by trade artisans in Utah, USA.",
-        "url_1": "",
-        "sub_title2": "Uncommon materials",
-        "image_2": "shopify:\/\/shop_images\/img1.jpg",
-        "text_2": "Go beyond silver and gold and find something that’s truly you.",
-        "url_2": "",
-        "sub_title3": "Every ring is unique",
-        "image_3": "shopify:\/\/shop_images\/met_rings_group_photo_for_sale_1_Medium_6c7b5d12-c012-4184-aeb3-917e318100b1.png",
-        "text_3": "Your ring is made to order just for you. No two rings are the same.",
-        "url_3": ""
       }
     },
-    "featured-collection": {
+    "876851c1-fa92-4866-a9c5-eae86f4d9d7a": {
       "type": "featured-collection",
       "settings": {
-        "title": "Best Sellers",
+        "title": "Shop Best Sellers",
         "home_featured_products": "best-sellers",
         "per_row": 5,
         "rows": 2,
-        "mobile_scrollable": false,
+        "mobile_scrollable": true,
         "view_all": true,
         "divider": false
       }
     },
-    "1646695572d73bfd5a": {
-      "type": "rich-text",
-      "blocks": {
-        "164669557254083090-0": {
-          "type": "heading",
-          "settings": {
-            "title": "Need to find your ring size?"
-          }
-        }
-      },
-      "block_order": [
-        "164669557254083090-0"
-      ],
+    "b3d68141-b4cf-49ca-bea6-f5103edb0a27": {
+      "type": "background-image-text",
       "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
+        "subtitle": "One-of-a-Kind Pieces",
+        "title": "Find the Perfect Ring",
+        "text": "<ul><li>Expert Craftsmanship<\/li><li>High quality Materials<\/li><li>Fully Customizable<\/li><\/ul>",
+        "button_label": "Shop All Rings",
+        "button_link": "shopify:\/\/collections\/all-products",
+        "focal_point": "center",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": false
       }
     },
-    "1647557717e099d38f": {
-      "type": "index_how_to_work",
-      "blocks": {
-        "df9da119-3ecd-4da4-8621-695a8ea6d85f": {
-          "type": "text",
-          "settings": {
-            "sub_title": "Place your order",
-            "text": "Unsure of your size? Select “unsure – send ring sizer first” and we’ll post you a free ring sizer",
-            "image_1": "shopify:\/\/shop_images\/how-it-works-11.jpg",
-            "image_2": "shopify:\/\/shop_images\/how-it-works-22.jpg"
-          }
-        },
-        "eaf7d4d7-8304-48a3-90e3-8b53e73c2e32": {
-          "type": "text",
-          "settings": {
-            "sub_title": "Confirm your ring size",
-            "text": "After using the sizer, simply send us your size via email"
-          }
-        },
-        "6d049a6c-e799-432f-b3fc-561a00a683bf": {
-          "type": "text",
-          "settings": {
-            "sub_title": "We handcraft your ring",
-            "text": "Once we get your ring size, we begin making your ring."
-          }
-        }
-      },
-      "block_order": [
-        "df9da119-3ecd-4da4-8621-695a8ea6d85f",
-        "eaf7d4d7-8304-48a3-90e3-8b53e73c2e32",
-        "6d049a6c-e799-432f-b3fc-561a00a683bf"
-      ],
-      "settings": {
-        "enable": true,
-        "title": "How it Works",
-        "title_size": 21,
-        "bg_color": "#111111",
-        "padding_top": 5,
-        "padding_bottom": 5
-      }
-    },
-    "1646694979441d8438": {
-      "type": "rich-text",
-      "blocks": {
-        "1646694979babf5da2-0": {
-          "type": "heading",
-          "settings": {
-            "title": "Customer Testimonials"
-          }
-        },
-        "1646694979babf5da2-1": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>“I love this ring. Every step of the process from sizing to delivery was amazing.”<\/p><p>- Brett P.<\/p><p>“I couldn’t have asked for a better ring. PAD did an amazing job and was very communicative through the whole process and was done in a timely manner!”<\/p><p>- Amber A<\/p><p>“Feels and looks like anything you’d buy from the highest-end jewelers stores without the high-end prices.”<\/p><p>- Ben<\/p><p><\/p><p><a href=\"https:\/\/patrickadairdesigns.com\/pages\/reviews\" title=\"https:\/\/patrickadairdesigns.com\/pages\/reviews\"><span style=\"text-decoration:underline\">See more reviews<\/span><\/a><\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "1646694979babf5da2-0",
-        "1646694979babf5da2-1"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
-      }
-    },
-    "1647409114af22e67c": {
-      "type": "apps",
-      "blocks": {
-        "d29f7c33-7e89-45f4-9d2f-1628a524400d": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "d29f7c33-7e89-45f4-9d2f-1628a524400d"
-      ],
-      "settings": {
-        "full_width": false,
-        "space_around": true
-      }
-    },
-    "featured-collections": {
+    "ec9377f9-28e4-481f-8919-27dba48916ab": {
       "type": "featured-collections",
       "blocks": {
-        "featured-collections-0": {
+        "template--14630909837394__ec9377f9-28e4-481f-8919-27dba48916ab-collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "the-classic-series",
+            "collection": "",
             "title": "",
             "focal_point": "center center"
           }
         },
-        "featured-collections-1": {
+        "template--14630909837394__ec9377f9-28e4-481f-8919-27dba48916ab-collection-2": {
           "type": "collection",
           "settings": {
-            "collection": "the-glowstone-series",
+            "collection": "",
             "title": "",
             "focal_point": "center center"
           }
         },
-        "featured-collections-2": {
+        "template--14630909837394__ec9377f9-28e4-481f-8919-27dba48916ab-collection-3": {
           "type": "collection",
           "settings": {
-            "collection": "the-obsidian-series",
+            "collection": "",
             "title": "",
             "focal_point": "center center"
           }
         },
-        "featured-collections-3": {
+        "template--14630909837394__ec9377f9-28e4-481f-8919-27dba48916ab-collection-4": {
           "type": "collection",
           "settings": {
-            "collection": "the-signature-series-v2",
+            "collection": "",
             "title": "",
-            "focal_point": "center center"
-          }
-        },
-        "8232be18-c1e0-4ac8-9c19-c24ab0e02edd": {
-          "type": "collection",
-          "settings": {
-            "collection": "the-boundless-series",
-            "title": "The Boundless Series",
-            "focal_point": "center center"
-          }
-        },
-        "a95a8e0e-63a8-4e27-ac68-37c8678d7e65": {
-          "type": "collection",
-          "settings": {
-            "collection": "obsidian-opal-series",
-            "title": "The Opal Series",
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "featured-collections-0",
-        "featured-collections-1",
-        "featured-collections-2",
-        "featured-collections-3",
-        "8232be18-c1e0-4ac8-9c19-c24ab0e02edd",
-        "a95a8e0e-63a8-4e27-ac68-37c8678d7e65"
+        "template--14630909837394__ec9377f9-28e4-481f-8919-27dba48916ab-collection-1",
+        "template--14630909837394__ec9377f9-28e4-481f-8919-27dba48916ab-collection-2",
+        "template--14630909837394__ec9377f9-28e4-481f-8919-27dba48916ab-collection-3",
+        "template--14630909837394__ec9377f9-28e4-481f-8919-27dba48916ab-collection-4"
       ],
       "settings": {
-        "title": "SHOP BY SERIES",
+        "title": "Shop By Material",
         "divider": false,
-        "per_row": 2,
+        "per_row": 4,
         "enable_gutter": true
       }
     },
-    "16466952397d45f287": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/img2.jpg",
-        "image2": "shopify:\/\/shop_images\/82139302_566280807302856_2281391060317896704_o.jpg",
-        "image_width": 700,
-        "subtitle": "",
-        "title": "Get a Custom Ring",
-        "text": "<p>We pride ourselves on our ability to make intricate, handmade custom rings made from exotic materials.<\/p>",
-        "button_label": "Learn More",
-        "button_link": "shopify:\/\/collections\/custom-rings",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "left",
-        "divider": false
-      }
-    },
-    "1646695257dcd29238": {
-      "type": "logo-list",
+    "19598b4f-502c-4bfe-9bae-77b7a1d57194": {
+      "type": "text-columns",
       "blocks": {
-        "74cd7a8f-eac7-4f17-b13d-81ef7dab01d8": {
-          "type": "logo_image",
+        "template--14630909837394__19598b4f-502c-4bfe-9bae-77b7a1d57194-text_block-1": {
+          "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Brides_Logo.jpg",
-            "link": ""
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Mens Bands",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "1646695257b3b83b78-0": {
-          "type": "logo_image",
+        "template--14630909837394__19598b4f-502c-4bfe-9bae-77b7a1d57194-text_block-2": {
+          "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Pewdiepie.png",
-            "link": ""
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Womens Bands",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "1646695257b3b83b78-1": {
-          "type": "logo_image",
+        "template--14630909837394__19598b4f-502c-4bfe-9bae-77b7a1d57194-text_block-3": {
+          "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/awesomer.png",
-            "link": ""
-          }
-        },
-        "1646695257b3b83b78-2": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Vinwiki_black.png",
-            "link": ""
-          }
-        },
-        "1646695257b3b83b78-3": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Strad-Logo_2C_864x_82c0b21f-b2de-42f1-ba44-102b06edc5fc.webp",
-            "link": ""
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Matching Sets",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "74cd7a8f-eac7-4f17-b13d-81ef7dab01d8",
-        "1646695257b3b83b78-0",
-        "1646695257b3b83b78-1",
-        "1646695257b3b83b78-2",
-        "1646695257b3b83b78-3"
+        "template--14630909837394__19598b4f-502c-4bfe-9bae-77b7a1d57194-text_block-1",
+        "template--14630909837394__19598b4f-502c-4bfe-9bae-77b7a1d57194-text_block-2",
+        "template--14630909837394__19598b4f-502c-4bfe-9bae-77b7a1d57194-text_block-3"
       ],
       "settings": {
-        "title": "AS SEEN ON",
-        "logo_opacity": 100,
-        "divider": false
-      }
-    },
-    "16466952952773af78": {
-      "type": "rich-text",
-      "blocks": {
-        "164669529537272836-0": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "title": "and 84M views and counting on YouTube"
-          }
-        }
-      },
-      "block_order": [
-        "164669529537272836-0"
-      ],
-      "settings": {
+        "title": "Shop Wedding Bands",
         "align_text": "center",
-        "narrow_column": true,
         "divider": false
-      }
-    },
-    "1646695630466c29fc": {
-      "type": "advanced-content",
-      "blocks": {
-        "1646695630c9a9076b-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/how-it-works-22.jpg",
-            "link": "",
-            "width": "50%",
-            "alignment": "center"
-          }
-        },
-        "1646695630c9a9076b-1": {
-          "type": "liquid",
-          "settings": {
-            "code": "<h2>1.<\/h2><p>Unsure of your size? Select \"unsure - send ring sizer first\" and we'll post you a free ring sizer<\/p>\n<h2>2.<\/h2><p>After using the sizer, simply email us your size<\/p>\n\n<h2>3.<\/h2><p>Your order hits the workshop and our trained artisans start crafting your ring<\/p>",
-            "width": "50%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "1646695630c9a9076b-0",
-        "1646695630c9a9076b-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "space_around": true
       }
     }
   },
   "order": [
     "slideshow",
-    "16466920156dc1f06b",
-    "rich-text",
-    "1646694183f97c4822",
-    "164755740363a75745",
-    "featured-collection",
-    "1646695572d73bfd5a",
-    "1647557717e099d38f",
-    "1646694979441d8438",
-    "1647409114af22e67c",
-    "featured-collections",
-    "16466952397d45f287",
-    "1646695257dcd29238",
-    "16466952952773af78",
-    "1646695630466c29fc"
+    "b83f732f-7586-44d1-8196-569a5f831266",
+    "18d61218-afee-40dc-a9af-f51e5ae51ccf",
+    "28fba7ba-c556-4a41-98e8-59504c6930d1",
+    "876851c1-fa92-4866-a9c5-eae86f4d9d7a",
+    "b3d68141-b4cf-49ca-bea6-f5103edb0a27",
+    "ec9377f9-28e4-481f-8919-27dba48916ab",
+    "19598b4f-502c-4bfe-9bae-77b7a1d57194"
   ]
 }
