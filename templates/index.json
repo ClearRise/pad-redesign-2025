@@ -230,6 +230,80 @@
         "align_text": "center",
         "divider": false
       }
+    },
+    "e5d2f01a-fe85-4ad7-a4d9-cbaec44db34d": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "Impressive",
+        "title": "Shop Pendants",
+        "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
+        "button_label": "S",
+        "button_link": "",
+        "focal_point": "center",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": true
+      }
+    },
+    "c54d5724-fbab-4556-8b5e-7b792249eb0e": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14630909837394__c54d5724-fbab-4556-8b5e-7b792249eb0e-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "See What Customers Are Saying"
+          }
+        },
+        "template--14630909837394__c54d5724-fbab-4556-8b5e-7b792249eb0e-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>“I love this ring. Every step of the process from sizing to delivery was amazing.”<\/p><p>- Brett P.<\/p><p>“I couldn’t have asked for a better ring. PAD did an amazing job and was very communicative through the whole process and was done in a timely manner!”<\/p><p>- Amber A<\/p><p>“Feels and looks like anything you’d buy from the highest-end jewelers stores without the high-end prices.”<\/p><p>- Ben<\/p><p><\/p><p><a href=\"https:\/\/patrickadairdesigns.com\/pages\/reviews\" title=\"https:\/\/patrickadairdesigns.com\/pages\/reviews\"><span style=\"text-decoration:underline\">See more reviews (2,773+)<\/span><\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14630909837394__c54d5724-fbab-4556-8b5e-7b792249eb0e-heading-1",
+        "template--14630909837394__c54d5724-fbab-4556-8b5e-7b792249eb0e-text-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1a1b666e-56e5-4ab7-8616-02ffce4135d6": {
+      "type": "newsletter",
+      "blocks": {
+        "template--14630909837394__1a1b666e-56e5-4ab7-8616-02ffce4135d6-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Sign Up For Our Newsletter"
+          }
+        },
+        "e64387e8-2a23-47cd-93a2-c3cc824c5def": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>"
+          }
+        },
+        "template--14630909837394__1a1b666e-56e5-4ab7-8616-02ffce4135d6-form-1": {
+          "type": "form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--14630909837394__1a1b666e-56e5-4ab7-8616-02ffce4135d6-title-1",
+        "e64387e8-2a23-47cd-93a2-c3cc824c5def",
+        "template--14630909837394__1a1b666e-56e5-4ab7-8616-02ffce4135d6-form-1"
+      ],
+      "settings": {
+        "color_background": "#f9f9f9",
+        "color_text": "#1c1d1d"
+      }
     }
   },
   "order": [
@@ -240,6 +314,9 @@
     "876851c1-fa92-4866-a9c5-eae86f4d9d7a",
     "b3d68141-b4cf-49ca-bea6-f5103edb0a27",
     "ec9377f9-28e4-481f-8919-27dba48916ab",
-    "19598b4f-502c-4bfe-9bae-77b7a1d57194"
+    "19598b4f-502c-4bfe-9bae-77b7a1d57194",
+    "e5d2f01a-fe85-4ad7-a4d9-cbaec44db34d",
+    "c54d5724-fbab-4556-8b5e-7b792249eb0e",
+    "1a1b666e-56e5-4ab7-8616-02ffce4135d6"
   ]
 }
