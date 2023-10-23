@@ -149,7 +149,7 @@
           "mega_menu_images": true,
           "show_menu_img": true,
           "menu_img": "shopify:\/\/shop_images\/carbon-fiber-ring.jpg",
-          "main_menu_alignment": "center-split",
+          "main_menu_alignment": "left",
           "header_style": "normal",
           "sticky_index": false,
           "sticky_collection": false,
