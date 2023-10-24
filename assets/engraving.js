@@ -1,4 +1,6 @@
+
 $(document).ready(function () {
+  
 
  // $('.cart__remove').show();
   const productForm = $(".product-single__form");
