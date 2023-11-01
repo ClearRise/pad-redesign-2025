@@ -68,7 +68,7 @@
         "7cc93651-f9c7-42fd-aebe-267f7439ccfa": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Amethyst-Glowstone-Ring-6.png",
+            "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
             "link": "",
             "width": "33"
           }
@@ -76,7 +76,7 @@
         "d880a9af-9a4f-43c5-b252-4604b6bee437": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Amethyst-Glowstone-Ring-6.png",
+            "image": "shopify:\/\/shop_images\/glowstone-2.jpg",
             "link": "",
             "width": "33"
           }
@@ -84,7 +84,7 @@
         "656a9d3a-6e49-4cb4-9d36-5d828f784620": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Amethyst-Glowstone-Ring-6.png",
+            "image": "shopify:\/\/shop_images\/DSC00620.jpg",
             "link": "",
             "width": "33"
           }
@@ -132,7 +132,7 @@
         "layout": "left",
         "height": 450,
         "framed": false,
-        "parallax": true
+        "parallax": false
       }
     },
     "ec9377f9-28e4-481f-8919-27dba48916ab": {
@@ -302,7 +302,7 @@
         "template--14630909837394__1a1b666e-56e5-4ab7-8616-02ffce4135d6-form-1"
       ],
       "settings": {
-        "color_background": "#f9f9f9",
+        "color_background": "#ffffff",
         "color_text": "#1c1d1d"
       }
     }
