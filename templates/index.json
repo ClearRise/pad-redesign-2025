@@ -409,6 +409,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Gold.png",
             "image_width": 650,
             "title": "Exotic Luxury Materials",
             "text": "<p>Every Patrick Adair Designs ring is made from exotic luxury materials including meteorite, glowstone, and dozens of others.<\/p>",
@@ -420,6 +421,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Patrick_working_on_lathe.png",
             "image_width": 650,
             "title": "Artisan Craftsmanship",
             "text": "<p>Every Patrick Adair Designs ring is machined in Salt Lake City, Utah before undergoing a rigorous inspection process.<\/p>",
@@ -431,7 +433,8 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image_width": 650,
+            "image": "shopify:\/\/shop_images\/Stack_1_shorter_116c85fa-56ed-44e3-adac-1e911e64a4ec.png",
+            "image_width": 600,
             "title": "Every Ring is Unique",
             "text": "<p>With hundreds of styles and thousands of customization options, no two rings are ever the same. <\/p>",
             "button_label": "",
