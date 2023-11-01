@@ -14,7 +14,7 @@
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
+            "color_accent": "#000000",
             "text_align": "vertical-center horizontal-center",
             "image": "shopify:\/\/shop_images\/THIS_WEEKEND_ONLY.png",
             "image_mobile": "shopify:\/\/shop_images\/This_weekend_only_1.png",
@@ -65,62 +65,175 @@
     "18d61218-afee-40dc-a9af-f51e5ae51ccf": {
       "type": "promo-grid",
       "blocks": {
-        "7cc93651-f9c7-42fd-aebe-267f7439ccfa": {
-          "type": "image",
+        "7f26157e-c39f-4ce1-bdfc-c3ad337fe84c": {
+          "type": "banner",
+          "disabled": true,
           "settings": {
+            "heading": "Banner promotion",
+            "text": "Add the details of your promotion in smaller text",
+            "link": "",
+            "label": "Shop now",
+            "color_tint": "#000000",
+            "color_tint_opacity": 8,
+            "framed": false
+          }
+        },
+        "f31d8aaf-92e4-44b6-ae3e-b3ca4493a7da": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Up to 30% Off",
+            "heading": "Sale Rings",
+            "textarea": "Limited time Only",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
             "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
-            "link": "",
-            "width": "33"
+            "video_url": "",
+            "width": "33",
+            "height": 260,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
           }
         },
-        "d880a9af-9a4f-43c5-b252-4604b6bee437": {
-          "type": "image",
+        "3878b240-7324-4547-b37c-731e5855e8e4": {
+          "type": "advanced",
           "settings": {
-            "image": "shopify:\/\/shop_images\/glowstone-2.jpg",
-            "link": "",
-            "width": "33"
+            "subheading": "",
+            "heading": "The <br> Glowstone <br>Series",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Glowstone_Ring_2.png",
+            "video_url": "",
+            "width": "33",
+            "height": 260,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-right",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
           }
         },
-        "656a9d3a-6e49-4cb4-9d36-5d828f784620": {
-          "type": "image",
+        "f53954df-90aa-4202-94a1-63c6e46c3a78": {
+          "type": "advanced",
           "settings": {
-            "image": "shopify:\/\/shop_images\/DSC00620.jpg",
-            "link": "",
-            "width": "33"
+            "subheading": "",
+            "heading": "Wedding Bands",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Image_2_372b11de-a6fe-46e2-8a25-7e93c255f1a3.png",
+            "video_url": "",
+            "width": "33",
+            "height": 260,
+            "text_size": 120,
+            "text_align": "vertical-top horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
           }
         }
       },
       "block_order": [
-        "7cc93651-f9c7-42fd-aebe-267f7439ccfa",
-        "d880a9af-9a4f-43c5-b252-4604b6bee437",
-        "656a9d3a-6e49-4cb4-9d36-5d828f784620"
+        "7f26157e-c39f-4ce1-bdfc-c3ad337fe84c",
+        "f31d8aaf-92e4-44b6-ae3e-b3ca4493a7da",
+        "3878b240-7324-4547-b37c-731e5855e8e4",
+        "f53954df-90aa-4202-94a1-63c6e46c3a78"
       ],
       "settings": {
         "full_width": true,
-        "gutter_size": 0,
+        "gutter_size": 5,
         "space_above": false,
         "space_below": false
       }
     },
-    "28fba7ba-c556-4a41-98e8-59504c6930d1": {
-      "type": "replo-ethos",
+    "1af522c7-c91a-4818-95dc-45bf51df11c9": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14630909837394__1af522c7-c91a-4818-95dc-45bf51df11c9-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Find Your Ring",
+            "title_size": 80,
+            "subheading": "Expert Craftsmanship from High Quality Materials",
+            "link": "",
+            "link_text": "Shop All Rings",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffa500",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/Artboard_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/Artboard_2.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14630909837394__1af522c7-c91a-4818-95dc-45bf51df11c9-image-1"
+      ],
       "settings": {
+        "use_img_banner": false,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "ea52cbfc-3a01-40db-94ac-65979f9d09a2": {
+      "type": "text-columns",
+      "blocks": {
+        "template--14630909837394__ea52cbfc-3a01-40db-94ac-65979f9d09a2-text_block-3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14630909837394__ea52cbfc-3a01-40db-94ac-65979f9d09a2-text_block-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
       }
     },
     "876851c1-fa92-4866-a9c5-eae86f4d9d7a": {
       "type": "featured-collection",
       "settings": {
-        "title": "Shop Best Sellers",
+        "title": "Best Sellers",
         "home_featured_products": "best-sellers",
-        "per_row": 5,
-        "rows": 2,
-        "mobile_scrollable": true,
-        "view_all": true,
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
         "divider": false
       }
     },
     "b3d68141-b4cf-49ca-bea6-f5103edb0a27": {
       "type": "background-image-text",
+      "disabled": true,
       "settings": {
         "subtitle": "",
         "title": "Find the Perfect Ring",
@@ -133,6 +246,11 @@
         "height": 450,
         "framed": false,
         "parallax": false
+      }
+    },
+    "28fba7ba-c556-4a41-98e8-59504c6930d1": {
+      "type": "replo-ethos",
+      "settings": {
       }
     },
     "ec9377f9-28e4-481f-8919-27dba48916ab": {
@@ -311,9 +429,11 @@
     "slideshow",
     "b83f732f-7586-44d1-8196-569a5f831266",
     "18d61218-afee-40dc-a9af-f51e5ae51ccf",
-    "28fba7ba-c556-4a41-98e8-59504c6930d1",
+    "1af522c7-c91a-4818-95dc-45bf51df11c9",
+    "ea52cbfc-3a01-40db-94ac-65979f9d09a2",
     "876851c1-fa92-4866-a9c5-eae86f4d9d7a",
     "b3d68141-b4cf-49ca-bea6-f5103edb0a27",
+    "28fba7ba-c556-4a41-98e8-59504c6930d1",
     "ec9377f9-28e4-481f-8919-27dba48916ab",
     "19598b4f-502c-4bfe-9bae-77b7a1d57194",
     "e5d2f01a-fe85-4ad7-a4d9-cbaec44db34d",
