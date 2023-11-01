@@ -44,7 +44,7 @@
     "type_product_style": "body",
     "type_collection_font": "body",
     "type_collection_size": 23,
-    "button_style": "angled",
+    "button_style": "square",
     "icon_weight": "5px",
     "icon_linecaps": "miter",
     "product_save_amount": true,
