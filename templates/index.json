@@ -127,11 +127,12 @@
         "text": "<ul><li>Expert Craftsmanship<\/li><li>High quality Materials<\/li><li>Fully Customizable<\/li><\/ul>",
         "button_label": "Shop All Rings",
         "button_link": "shopify:\/\/collections\/all-products",
+        "image": "shopify:\/\/shop_images\/met_timas_mokume_group_Medium_a3115abd-14f1-471b-80de-58e6a2147a5a.png",
         "focal_point": "center",
         "layout": "left",
-        "height": 550,
+        "height": 450,
         "framed": false,
-        "parallax": false
+        "parallax": true
       }
     },
     "ec9377f9-28e4-481f-8919-27dba48916ab": {
