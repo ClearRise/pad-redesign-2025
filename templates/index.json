@@ -308,7 +308,7 @@
         "template--14630909837394__ec9377f9-28e4-481f-8919-27dba48916ab-collection-2": {
           "type": "collection",
           "settings": {
-            "collection": "all-glowstone-rings",
+            "collection": "the-glowstone-series",
             "title": "Glowstone",
             "focal_point": "center center"
           }
@@ -324,7 +324,7 @@
         "template--14630909837394__ec9377f9-28e4-481f-8919-27dba48916ab-collection-4": {
           "type": "collection",
           "settings": {
-            "collection": "precious-metals",
+            "collection": "gold-rings",
             "title": "Gold",
             "focal_point": "center center"
           }
