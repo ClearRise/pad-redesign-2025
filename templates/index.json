@@ -5,6 +5,7 @@
       "blocks": {
         "slideshow-0": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "title": "",
@@ -21,10 +22,30 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
+        },
+        "40699d6a-bd9f-425f-8d36-adc52d8f858d": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "shopify:\/\/collections\/all-products",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/Black_Friday_Came_Early_Desktop.png",
+            "image_mobile": "shopify:\/\/shop_images\/Black_Friday_is_here_early_Mobile.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
-        "slideshow-0"
+        "slideshow-0",
+        "40699d6a-bd9f-425f-8d36-adc52d8f858d"
       ],
       "settings": {
         "use_img_banner": true,
@@ -98,7 +119,7 @@
           "type": "advanced",
           "settings": {
             "subheading": "Up to 30% off",
-            "heading": "Flash Sale",
+            "heading": "Sale",
             "textarea": "Limited Time Only",
             "cta_text1": "",
             "cta_link1": "https:\/\/patrickadairdesigns.com\/collections\/flash-sale-collection",
