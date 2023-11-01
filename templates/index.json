@@ -300,32 +300,32 @@
         "template--14630909837394__ec9377f9-28e4-481f-8919-27dba48916ab-collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": "",
+            "collection": "meteorite-jewelry",
+            "title": "Meteorite",
             "focal_point": "center center"
           }
         },
         "template--14630909837394__ec9377f9-28e4-481f-8919-27dba48916ab-collection-2": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": "",
+            "collection": "all-glowstone-rings",
+            "title": "Glowstone",
             "focal_point": "center center"
           }
         },
         "template--14630909837394__ec9377f9-28e4-481f-8919-27dba48916ab-collection-3": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": "",
+            "collection": "opal-rings",
+            "title": "Opal",
             "focal_point": "center center"
           }
         },
         "template--14630909837394__ec9377f9-28e4-481f-8919-27dba48916ab-collection-4": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": "",
+            "collection": "precious-metals",
+            "title": "Gold",
             "focal_point": "center center"
           }
         }
@@ -343,6 +343,65 @@
         "enable_gutter": true
       }
     },
+    "6943ace3-6fdc-4af2-a580-cab86ecac351": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--14630909837394__6943ace3-6fdc-4af2-a580-cab86ecac351-advanced-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Pendants",
+            "textarea": "Unique Pieces from <br> Exotic Materials",
+            "cta_text1": "Shop Pendants",
+            "cta_link1": "shopify:\/\/collections\/necklaces",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Pendant_56ae5f17-8dbc-4305-8aaa-5db6424d04ce.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "#ffa500",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "template--14630909837394__6943ace3-6fdc-4af2-a580-cab86ecac351-advanced-2": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Earrings",
+            "textarea": "Glowstone inlaid <br>into Titanium Settings",
+            "cta_text1": "Shop This",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/earrings.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "#ffa500",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14630909837394__6943ace3-6fdc-4af2-a580-cab86ecac351-advanced-1",
+        "template--14630909837394__6943ace3-6fdc-4af2-a580-cab86ecac351-advanced-2"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false
+      }
+    },
     "19598b4f-502c-4bfe-9bae-77b7a1d57194": {
       "type": "text-columns",
       "blocks": {
@@ -351,8 +410,8 @@
           "settings": {
             "enable_image": true,
             "image_width": 650,
-            "title": "Mens Bands",
-            "text": "",
+            "title": "Exotic Luxury Materials",
+            "text": "<p>Every Patrick Adair Designs ring is made from exotic luxury materials including meteorite, glowstone, and dozens of others.<\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -362,8 +421,8 @@
           "settings": {
             "enable_image": true,
             "image_width": 650,
-            "title": "Womens Bands",
-            "text": "",
+            "title": "Artisan Craftsmanship",
+            "text": "<p>Every Patrick Adair Designs ring is machined in Salt Lake City, Utah before undergoing a rigorous inspection process.<\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -373,8 +432,8 @@
           "settings": {
             "enable_image": true,
             "image_width": 650,
-            "title": "Matching Sets",
-            "text": "",
+            "title": "Every Ring is Unique",
+            "text": "<p>With hundreds of styles and thousands of customization options, no two rings are ever the same. <\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -386,7 +445,7 @@
         "template--14630909837394__19598b4f-502c-4bfe-9bae-77b7a1d57194-text_block-3"
       ],
       "settings": {
-        "title": "Shop Wedding Bands",
+        "title": "Why Patrick Adair Designs?",
         "align_text": "center",
         "divider": false
       }
@@ -477,6 +536,7 @@
     "b3d68141-b4cf-49ca-bea6-f5103edb0a27",
     "28fba7ba-c556-4a41-98e8-59504c6930d1",
     "ec9377f9-28e4-481f-8919-27dba48916ab",
+    "6943ace3-6fdc-4af2-a580-cab86ecac351",
     "19598b4f-502c-4bfe-9bae-77b7a1d57194",
     "e5d2f01a-fe85-4ad7-a4d9-cbaec44db34d",
     "c54d5724-fbab-4556-8b5e-7b792249eb0e",
