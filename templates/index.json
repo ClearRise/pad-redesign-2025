@@ -513,7 +513,7 @@
       "settings": {
         "align_text": "center",
         "narrow_column": true,
-        "divider": false
+        "divider": true
       }
     },
     "1a1b666e-56e5-4ab7-8616-02ffce4135d6": {
