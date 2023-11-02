@@ -516,6 +516,24 @@
         "divider": true
       }
     },
+    "1698960689cc8859a7": {
+      "type": "apps",
+      "blocks": {
+        "18994950-d2ce-4421-958d-eedc10fe5cce": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "18994950-d2ce-4421-958d-eedc10fe5cce"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
     "1a1b666e-56e5-4ab7-8616-02ffce4135d6": {
       "type": "newsletter",
       "blocks": {
@@ -564,6 +582,7 @@
     "19598b4f-502c-4bfe-9bae-77b7a1d57194",
     "e5d2f01a-fe85-4ad7-a4d9-cbaec44db34d",
     "c54d5724-fbab-4556-8b5e-7b792249eb0e",
+    "1698960689cc8859a7",
     "1a1b666e-56e5-4ab7-8616-02ffce4135d6"
   ]
 }
