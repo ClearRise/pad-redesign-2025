@@ -65,19 +65,6 @@
     "18d61218-afee-40dc-a9af-f51e5ae51ccf": {
       "type": "promo-grid",
       "blocks": {
-        "7f26157e-c39f-4ce1-bdfc-c3ad337fe84c": {
-          "type": "banner",
-          "disabled": true,
-          "settings": {
-            "heading": "Banner promotion",
-            "text": "Add the details of your promotion in smaller text",
-            "link": "",
-            "label": "Shop now",
-            "color_tint": "#000000",
-            "color_tint_opacity": 8,
-            "framed": false
-          }
-        },
         "f31d8aaf-92e4-44b6-ae3e-b3ca4493a7da": {
           "type": "advanced",
           "settings": {
@@ -165,99 +152,33 @@
             "boxed": false,
             "framed": false
           }
+        },
+        "7f26157e-c39f-4ce1-bdfc-c3ad337fe84c": {
+          "type": "banner",
+          "disabled": true,
+          "settings": {
+            "heading": "Banner promotion",
+            "text": "a whole bunch of text with a hyper link",
+            "link": "",
+            "label": "",
+            "color_tint": "#000000",
+            "color_tint_opacity": 8,
+            "framed": false
+          }
         }
       },
       "block_order": [
-        "7f26157e-c39f-4ce1-bdfc-c3ad337fe84c",
         "f31d8aaf-92e4-44b6-ae3e-b3ca4493a7da",
         "3878b240-7324-4547-b37c-731e5855e8e4",
         "f53954df-90aa-4202-94a1-63c6e46c3a78",
-        "f75fd18c-9e18-4fef-b492-1c37fa4dccb3"
+        "f75fd18c-9e18-4fef-b492-1c37fa4dccb3",
+        "7f26157e-c39f-4ce1-bdfc-c3ad337fe84c"
       ],
       "settings": {
         "full_width": true,
         "gutter_size": 5,
         "space_above": false,
         "space_below": false
-      }
-    },
-    "ff103f43-84ab-4273-8fdd-66e8a9de5409": {
-      "type": "background-image-text",
-      "disabled": true,
-      "settings": {
-        "subtitle": "",
-        "title": "Find Your Ring",
-        "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
-        "button_label": "Shop All Rings",
-        "button_link": "shopify:\/\/collections\/all-products",
-        "image": "shopify:\/\/shop_images\/AmethystGlowstoneRing.png",
-        "focal_point": "center",
-        "layout": "left",
-        "height": 550,
-        "framed": false,
-        "parallax": true
-      }
-    },
-    "1af522c7-c91a-4818-95dc-45bf51df11c9": {
-      "type": "slideshow",
-      "blocks": {
-        "template--14630909837394__1af522c7-c91a-4818-95dc-45bf51df11c9-image-1": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "title": "Find Your Ring",
-            "title_size": 80,
-            "subheading": "Expert Craftsmanship from High Quality Materials",
-            "link": "",
-            "link_text": "Shop All Rings",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffa500",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/Artboard_1.png",
-            "image_mobile": "shopify:\/\/shop_images\/Artboard_2.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "template--14630909837394__1af522c7-c91a-4818-95dc-45bf51df11c9-image-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "use_img_banner": false,
-        "section_height": "natural",
-        "mobile_height": "auto",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": true,
-        "autoplay_speed": 5
-      }
-    },
-    "ea52cbfc-3a01-40db-94ac-65979f9d09a2": {
-      "type": "text-columns",
-      "blocks": {
-        "template--14630909837394__ea52cbfc-3a01-40db-94ac-65979f9d09a2-text_block-3": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": false,
-            "image_width": 650,
-            "title": "Example title",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
-            "button_label": "Optional button",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--14630909837394__ea52cbfc-3a01-40db-94ac-65979f9d09a2-text_block-3"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "align_text": "center",
-        "divider": false
       }
     },
     "876851c1-fa92-4866-a9c5-eae86f4d9d7a": {
@@ -290,23 +211,6 @@
         "align_text": "center",
         "narrow_column": true,
         "divider": false
-      }
-    },
-    "b3d68141-b4cf-49ca-bea6-f5103edb0a27": {
-      "type": "background-image-text",
-      "disabled": true,
-      "settings": {
-        "subtitle": "",
-        "title": "Find the Perfect Ring",
-        "text": "<ul><li>Expert Craftsmanship<\/li><li>High quality Materials<\/li><li>Fully Customizable<\/li><\/ul>",
-        "button_label": "Shop All Rings",
-        "button_link": "shopify:\/\/collections\/all-products",
-        "image": "shopify:\/\/shop_images\/met_timas_mokume_group_Medium_a3115abd-14f1-471b-80de-58e6a2147a5a.png",
-        "focal_point": "center",
-        "layout": "left",
-        "height": 450,
-        "framed": false,
-        "parallax": false
       }
     },
     "28fba7ba-c556-4a41-98e8-59504c6930d1": {
@@ -409,15 +313,75 @@
             "boxed": false,
             "framed": false
           }
+        },
+        "f5211496-cdcd-46c1-a2c3-27c3eea682ca": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "1-on-1",
+            "heading": "Virtual <br> Appointments",
+            "textarea": "Book a virtual video <br>consultation to <br>hand-pick (or design) <br>your perfect piece",
+            "cta_text1": "Book Now",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Lifestyle_Zoomed_Out_Shot.png",
+            "video_url": "",
+            "width": "100",
+            "height": 700,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "#ffa500",
+            "boxed": false,
+            "framed": false
+          }
         }
       },
       "block_order": [
         "template--14630909837394__6943ace3-6fdc-4af2-a580-cab86ecac351-advanced-1",
-        "template--14630909837394__6943ace3-6fdc-4af2-a580-cab86ecac351-advanced-2"
+        "template--14630909837394__6943ace3-6fdc-4af2-a580-cab86ecac351-advanced-2",
+        "f5211496-cdcd-46c1-a2c3-27c3eea682ca"
       ],
       "settings": {
         "full_width": false,
         "gutter_size": 20,
+        "space_above": false,
+        "space_below": false
+      }
+    },
+    "50f12708-7b5a-46fe-ac47-f6aaf1d32271": {
+      "type": "promo-grid",
+      "blocks": {
+        "69324a22-4707-4b30-ac20-c207a37016b9": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "1-on-1",
+            "heading": "Virtual <br>Appointment",
+            "textarea": "Book a virtual video <br>consultation to <br>hand-pick (or design) <br>your perfect piece",
+            "cta_text1": "Book Now",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Lifestyle_Zoomed_Out_Shot.png",
+            "video_url": "",
+            "width": "100",
+            "height": 700,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "#ffa500",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "69324a22-4707-4b30-ac20-c207a37016b9"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "gutter_size": 0,
         "space_above": false,
         "space_below": false
       }
@@ -570,15 +534,12 @@
     "slideshow",
     "b83f732f-7586-44d1-8196-569a5f831266",
     "18d61218-afee-40dc-a9af-f51e5ae51ccf",
-    "ff103f43-84ab-4273-8fdd-66e8a9de5409",
-    "1af522c7-c91a-4818-95dc-45bf51df11c9",
-    "ea52cbfc-3a01-40db-94ac-65979f9d09a2",
     "876851c1-fa92-4866-a9c5-eae86f4d9d7a",
     "0b2d4b5e-6a4d-4480-8436-9e3d30ac2ad0",
-    "b3d68141-b4cf-49ca-bea6-f5103edb0a27",
     "28fba7ba-c556-4a41-98e8-59504c6930d1",
     "ec9377f9-28e4-481f-8919-27dba48916ab",
     "6943ace3-6fdc-4af2-a580-cab86ecac351",
+    "50f12708-7b5a-46fe-ac47-f6aaf1d32271",
     "19598b4f-502c-4bfe-9bae-77b7a1d57194",
     "e5d2f01a-fe85-4ad7-a4d9-cbaec44db34d",
     "c54d5724-fbab-4556-8b5e-7b792249eb0e",
