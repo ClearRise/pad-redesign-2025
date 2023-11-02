@@ -292,7 +292,6 @@
     },
     "edb31de5-46f4-431c-bc58-646bc57f485a": {
       "type": "background-image-text",
-      "disabled": true,
       "settings": {
         "subtitle": "",
         "title": "Glowstone",
@@ -302,13 +301,79 @@
         "image": "shopify:\/\/shop_images\/P1040357.00_00_33_46.Still004.png",
         "focal_point": "center",
         "layout": "left",
-        "height": 550,
+        "height": 750,
         "framed": false,
         "parallax": false
       }
     },
+    "ae5a5e09-35e0-4fc5-9ff7-dd17c4e29f8f": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--14630908985426__ae5a5e09-35e0-4fc5-9ff7-dd17c4e29f8f-image-1": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "template--14630908985426__ae5a5e09-35e0-4fc5-9ff7-dd17c4e29f8f-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Custom content<\/h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.<\/p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14630908985426__ae5a5e09-35e0-4fc5-9ff7-dd17c4e29f8f-image-1",
+        "template--14630908985426__ae5a5e09-35e0-4fc5-9ff7-dd17c4e29f8f-liquid-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "90846cdf-809b-4b26-8f9a-a5a66aec37e4": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14630908985426__90846cdf-809b-4b26-8f9a-a5a66aec37e4-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Black Friday Special",
+            "title": "Get a Free Gift\nWith Your Order",
+            "title_size": 50,
+            "subheading": "Spend $210+ and get a free Gold Burl Carbon Fiber Ring or Pendant only during the month of November.",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify:\/\/shop_images\/gold-burl-carbon-fiber-ring_1800x1800_243196b5-8ede-4a44-9256-0f64bd82d7b7.webp",
+            "image_mobile": "shopify:\/\/shop_images\/gold-burl-carbon-fiber-ring_1800x1800_243196b5-8ede-4a44-9256-0f64bd82d7b7.webp",
+            "overlay_opacity": 0,
+            "focal_point": "top center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14630908985426__90846cdf-809b-4b26-8f9a-a5a66aec37e4-image-1"
+      ],
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "100vh",
+        "mobile_height": "500px",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
     "6f7799dc-494e-401d-8737-8e9ae2a498c8": {
       "type": "replo-ethos",
+      "disabled": true,
       "settings": {
       }
     },
@@ -478,6 +543,8 @@
     "main",
     "d8f01d1f-ebab-4c21-91d4-cd234e7faca4",
     "edb31de5-46f4-431c-bc58-646bc57f485a",
+    "ae5a5e09-35e0-4fc5-9ff7-dd17c4e29f8f",
+    "90846cdf-809b-4b26-8f9a-a5a66aec37e4",
     "6f7799dc-494e-401d-8737-8e9ae2a498c8",
     "a3d488da-2f1e-4a5f-9e0f-767d9e97d233",
     "product_img_with_txt",
