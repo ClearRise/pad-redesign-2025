@@ -272,6 +272,26 @@
         "divider": false
       }
     },
+    "0b2d4b5e-6a4d-4480-8436-9e3d30ac2ad0": {
+      "type": "rich-text",
+      "blocks": {
+        "030c2399-07ee-414a-ac43-064bae3829fa": {
+          "type": "button",
+          "settings": {
+            "link": "shopify:\/\/collections\/best-sellers",
+            "link_text": "Shop All Bestsellers"
+          }
+        }
+      },
+      "block_order": [
+        "030c2399-07ee-414a-ac43-064bae3829fa"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "b3d68141-b4cf-49ca-bea6-f5103edb0a27": {
       "type": "background-image-text",
       "disabled": true,
@@ -536,6 +556,7 @@
     "1af522c7-c91a-4818-95dc-45bf51df11c9",
     "ea52cbfc-3a01-40db-94ac-65979f9d09a2",
     "876851c1-fa92-4866-a9c5-eae86f4d9d7a",
+    "0b2d4b5e-6a4d-4480-8436-9e3d30ac2ad0",
     "b3d68141-b4cf-49ca-bea6-f5103edb0a27",
     "28fba7ba-c556-4a41-98e8-59504c6930d1",
     "ec9377f9-28e4-481f-8919-27dba48916ab",
