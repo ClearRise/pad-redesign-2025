@@ -38,7 +38,8 @@
             "size_chart": "",
             "variant_labels": true,
             "picker_type": "dropdown",
-            "color_swatches": false
+            "color_swatches": false,
+            "custom_variant_comment": false
           }
         },
         "inventory_status": {
@@ -207,8 +208,108 @@
         "product_video_style": "muted"
       }
     },
+    "d8f01d1f-ebab-4c21-91d4-cd234e7faca4": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--14630908985426__d8f01d1f-ebab-4c21-91d4-cd234e7faca4-advanced-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Handcrafted <br> in the USA",
+            "textarea": "Every ring is handmade<br>  by trade artisans <br>in Utah, USA.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/img2.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "template--14630908985426__d8f01d1f-ebab-4c21-91d4-cd234e7faca4-advanced-2": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Uncommon <br>Materials",
+            "textarea": "Go beyond silver and <br> gold and find something <br>that's truly you.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/P1040357.00_00_33_46.Still004.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "d92ac671-ec91-4aa3-81ab-e3eaeff43452": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Every Ring <br>  is Unique",
+            "textarea": "Your ring is made to <br>order just for you. <br>No two rings are <br> the same.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/met_timas_mokume_group_Medium_a3115abd-14f1-471b-80de-58e6a2147a5a.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14630908985426__d8f01d1f-ebab-4c21-91d4-cd234e7faca4-advanced-1",
+        "template--14630908985426__d8f01d1f-ebab-4c21-91d4-cd234e7faca4-advanced-2",
+        "d92ac671-ec91-4aa3-81ab-e3eaeff43452"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true
+      }
+    },
+    "a3d488da-2f1e-4a5f-9e0f-767d9e97d233": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "title": "Why Patrick Adair?",
+        "text": "<ul><li>Handcrafted in the USA<\/li><\/ul><p>Every ring is handmade by trade artisans in Utah, USA<\/p><ul><li>Uncommon Materials<\/li><\/ul><p>Go beyond silver and gold and find something that's truly you<\/p><ul><li>Every Ring is Unique<\/li><\/ul><p>Your ring is made to order just for you. No two rings are the same. <\/p>",
+        "button_label": "",
+        "button_link": "",
+        "image": "shopify:\/\/shop_images\/Patrick_Deep_Photo.jpg",
+        "focal_point": "center",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": false
+      }
+    },
     "product_img_with_txt": {
       "type": "product_img_with_txt",
+      "disabled": true,
       "settings": {
         "sub_title1": "Handcrafted in the USA",
         "image_1": "shopify:\/\/shop_images\/img2.jpg",
@@ -256,6 +357,7 @@
         "0669e6bd-9d26-4ae4-b380-ce53681e452e",
         "ba8bc2a1-afb2-4a08-8837-4ae3795928a4"
       ],
+      "disabled": true,
       "settings": {
         "enable": true,
         "title": "Find Your Ring Size",
@@ -286,6 +388,7 @@
         "164685368492299ea2-0",
         "164685368492299ea2-1"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
@@ -298,13 +401,14 @@
         "46cc26fb-adef-48ef-adb5-d7706819bd7b": {
           "type": "text",
           "settings": {
-            "text": ""
+            "text": "fasfdasdfsadfsadfsadfsdafsadfsdafsd"
           }
         }
       },
       "block_order": [
         "46cc26fb-adef-48ef-adb5-d7706819bd7b"
       ],
+      "disabled": true,
       "settings": {
         "max_width": true
       }
@@ -350,6 +454,8 @@
   },
   "order": [
     "main",
+    "d8f01d1f-ebab-4c21-91d4-cd234e7faca4",
+    "a3d488da-2f1e-4a5f-9e0f-767d9e97d233",
     "product_img_with_txt",
     "product_how_to_work",
     "1646853684b754aedd",
