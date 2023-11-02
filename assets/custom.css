@@ -1911,6 +1911,7 @@ label.variant__label.custom_label{
 
 .bold_option_title{
   font-weight: 700!important;
+  display: inline-block;
 }
 
 .custom-product-blocK select{
