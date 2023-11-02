@@ -139,7 +139,7 @@
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
           "settings": {
-            "title": "Additional Details",
+            "title": "Description",
             "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
             "page": "",
             "enable_readmore": false,
@@ -290,13 +290,35 @@
         "space_below": true
       }
     },
+    "edb31de5-46f4-431c-bc58-646bc57f485a": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "title": "Glowstone",
+        "text": "<p>Talk about Glowstone Stuff Talk about Glowstone Stuff Talk about Glowstone Stuff Talk about Glowstone Stuff Talk about Glowstone Stuff Talk about Glowstone Stuff<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "image": "shopify:\/\/shop_images\/P1040357.00_00_33_46.Still004.png",
+        "focal_point": "center",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": false
+      }
+    },
+    "6f7799dc-494e-401d-8737-8e9ae2a498c8": {
+      "type": "replo-ethos",
+      "settings": {
+      }
+    },
     "a3d488da-2f1e-4a5f-9e0f-767d9e97d233": {
       "type": "background-image-text",
       "disabled": true,
       "settings": {
         "subtitle": "",
-        "title": "Why Patrick Adair?",
-        "text": "<ul><li>Handcrafted in the USA<\/li><\/ul><p>Every ring is handmade by trade artisans in Utah, USA<\/p><ul><li>Uncommon Materials<\/li><\/ul><p>Go beyond silver and gold and find something that's truly you<\/p><ul><li>Every Ring is Unique<\/li><\/ul><p>Your ring is made to order just for you. No two rings are the same. <\/p>",
+        "title": "100M+ Viewers and Counting",
+        "text": "<p>all of our rings have been handcrafted by artisans using the most uncommon luxury materials. <\/p><p>Along the way, we've documented the process on YouTube to 100M+ viewers.<\/p>",
         "button_label": "",
         "button_link": "",
         "image": "shopify:\/\/shop_images\/Patrick_Deep_Photo.jpg",
@@ -455,6 +477,8 @@
   "order": [
     "main",
     "d8f01d1f-ebab-4c21-91d4-cd234e7faca4",
+    "edb31de5-46f4-431c-bc58-646bc57f485a",
+    "6f7799dc-494e-401d-8737-8e9ae2a498c8",
     "a3d488da-2f1e-4a5f-9e0f-767d9e97d233",
     "product_img_with_txt",
     "product_how_to_work",
