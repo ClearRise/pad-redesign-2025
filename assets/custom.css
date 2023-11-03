@@ -1918,3 +1918,33 @@ label.variant__label.custom_label{
     border-color: #000!important;
     border-width: 2px;
 }
+
+.bold_option_dropdown .bold_option_element{
+    display: block;
+    padding-bottom: 10px;
+}
+.variant-wrapper.custom_dropbtn{
+  width: 100%;
+  display: inline-block;
+}
+label.variant__label.custom_label{
+  display: inline;
+}
+.custom-select{
+    width: 100%;
+    display: block;
+}
+.custom-select select{
+  width: 100%;
+}
+.custom_tooltip.tootip_icon{
+  margin-bottom: -3px;
+}
+.btn{
+  background: #ffa500;
+  color: #000;
+}
+.custom_btn{
+  background-color: #ffa500;
+  color: #000;  
+}
