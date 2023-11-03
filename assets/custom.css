@@ -1921,4 +1921,5 @@ label.variant__label.custom_label{
 
 .bold_option_dropdown .bold_option_element{
     display: block;
+    padding-bottom: 10px;
 }
