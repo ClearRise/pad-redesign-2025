@@ -1923,7 +1923,7 @@ label.variant__label.custom_label{
     display: block;
     padding-bottom: 10px;
 }
-.custom_dropbtn{
+.variant-wrapper.custom_dropbtn{
   width: 100%;
   display: inline-block;
 }
