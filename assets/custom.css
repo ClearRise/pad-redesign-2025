@@ -1937,3 +1937,6 @@ label.variant__label.custom_label{
 .custom-select select{
   width: 100%;
 }
+.custom_tooltip.tootip_icon{
+  margin-bottom: -3px;
+}
