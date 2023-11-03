@@ -1940,3 +1940,7 @@ label.variant__label.custom_label{
 .custom_tooltip.tootip_icon{
   margin-bottom: -3px;
 }
+.btn{
+  background: #ffa500;
+  color: #000;
+}
