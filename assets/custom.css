@@ -1918,3 +1918,7 @@ label.variant__label.custom_label{
     border-color: #000!important;
     border-width: 2px;
 }
+
+.bold_option_dropdown .bold_option_element{
+    display: block;
+}
