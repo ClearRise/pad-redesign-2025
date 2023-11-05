@@ -9658,8 +9658,9 @@ html[dir=rtl] .background-media-text__text{
   }
 
 .type-advanced .promo-grid__content:not(.promo-grid__content--boxed):not(.promo-grid__content--sale) a,.type-simple .promo-grid__content:not(.promo-grid__content--boxed):not(.promo-grid__content--sale) a{
-/*       color:{{ settings.color_image_text | default: "#fff" }}; */
-      color:var(--colorHeroText);
+/*       color:{{ settings.color_image_text | default: "#fff" }}; 
+      color:var(--colorHeroText); */
+      color:{{ settings.color_image_alink_text | default: "#fff" }};
       border-bottom:2px solid;
 /*       border-bottom-color:{{ settings.color_image_text | default: "#fff" }}; */
       border-bottom-color:var(--colorHeroText)
