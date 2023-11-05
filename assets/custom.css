@@ -566,7 +566,7 @@ img.h_auto[data-sizes=auto]{
 }
 
 label span.bold_option_element{
- 	display: inline-block;
+ 	/* display: inline-block; */
 }
 
 label span.bold_option_element input{
