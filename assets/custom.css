@@ -566,7 +566,7 @@ img.h_auto[data-sizes=auto]{
 }
 
 label span.bold_option_element{
- 	/* display: inline-block; */
+ 	display: inline-block;
 }
 
 label span.bold_option_element input{
@@ -1173,8 +1173,8 @@ button.upsell-add-to-cart.disabled{
 
 .gift_box .upsell-collection .upsell-product .upsell-product-info .upsell-add-to-cart {
     /* background: #138f7e !important;
-      color: #fff!important;
-} */
+      color: #fff!important; */
+} 
 
 .drawer .btn{
 /*       background: #111!important; */
