@@ -1941,10 +1941,10 @@ label.variant__label.custom_label{
   margin-bottom: -3px;
 }
 .btn{
-  background: #ffa500;
-  color: #000;
+  /* background: #ffa500;
+  color: #000; */
 }
 .custom_btn{
-  background-color: #ffa500;
-  color: #000;  
+  /* background-color: #ffa500;
+  color: #000;   */
 }
