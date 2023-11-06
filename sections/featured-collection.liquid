@@ -86,7 +86,13 @@
 
             {%- if section.settings.rows > 1 -%}{%- endif -%}
               <div class="grid__item text-center{% if section.settings.mobile_scrollable %} small--hide{% endif %}">
-                <a href="{{ collections[section.settings.home_featured_products].url }}" class="btn">{{ 'collections.general.all_of_collection' | t }}</a>
+                <a href="{{ collections[section.settings.home_featured_products].url }}" class="btn">
+                  {% if section.settings.btn_txt != "View all" %} 
+                    {{ section.settings.btn_txt }}
+                  {% else %}
+                    {{ 'collections.general.all_of_collection' | t }}
+                  {% endif %}
+                </a>
               </div>
             
 
