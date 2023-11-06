@@ -84,11 +84,11 @@
 
           {%- if section.settings.view_all -%}
 
-            {%- if section.settings.rows > 1 -%}
+            {%- if section.settings.rows > 1 -%}{%- endif -%}
               <div class="grid__item text-center{% if section.settings.mobile_scrollable %} small--hide{% endif %}">
                 <a href="{{ collections[section.settings.home_featured_products].url }}" class="btn">{{ 'collections.general.all_of_collection' | t }}</a>
               </div>
-            {%- endif -%}
+            
 
             {%- if section.settings.mobile_scrollable -%}
               <div class="grid__item grid__item--view-all text-center {{ grid_item_width }} medium-up--hide">
