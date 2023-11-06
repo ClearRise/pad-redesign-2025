@@ -208,6 +208,7 @@
       "block_order": [
         "030c2399-07ee-414a-ac43-064bae3829fa"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
