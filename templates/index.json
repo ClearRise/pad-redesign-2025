@@ -190,6 +190,7 @@
         "rows": 1,
         "mobile_scrollable": false,
         "view_all": true,
+        "btn_txt": "shop all bestsellers",
         "divider": false
       }
     },
