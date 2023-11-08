@@ -349,7 +349,7 @@
           "type": "image",
           "settings": {
             "top_subheading": "Black Friday Special",
-            "title": "Get a Free Gift\nWith Your Order",
+            "title": "Get a Free Gift With Your Order",
             "title_size": 50,
             "subheading": "Spend $210+ and get a free Gold Burl Carbon Fiber Ring or Pendant only during the month of November.",
             "link": "",
@@ -357,9 +357,15 @@
             "link_2": "",
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify:\/\/shop_images\/gold-burl-carbon-fiber-ring_1800x1800_243196b5-8ede-4a44-9256-0f64bd82d7b7.webp",
-            "image_mobile": "shopify:\/\/shop_images\/gold-burl-carbon-fiber-ring_1800x1800_243196b5-8ede-4a44-9256-0f64bd82d7b7.webp",
+            "textblock_align": "custom_top t_center",
+            "text_align": "horizontal-center",
+            "txt_width": "750",
+            "top_padding": 50,
+            "bottom_padding": 50,
+            "left_padding": 50,
+            "right_padding": 50,
+            "image": "shopify:\/\/shop_images\/no_text.png",
+            "image_mobile": "shopify:\/\/shop_images\/no_text.png",
             "overlay_opacity": 0,
             "focal_point": "top center"
           }
