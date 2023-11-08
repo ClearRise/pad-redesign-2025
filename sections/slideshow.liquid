@@ -2,7 +2,7 @@
 
 .hero .hero__text-wrap{
     position: absolute;
-    max-width: 450px;
+    /* max-width: 450px; */
     height: auto;
     z-index: 10;
 }
@@ -240,9 +240,39 @@
                 {%- if link_slide -%}
                   <a href="{{ block.settings.link }}" class="hero__slide-link" aria-hidden="true"></a>
                 {%- endif -%}
-  
                 {%- if hero_text -%}
-                  <div class="hero__text-wrap {{ block.settings.textblock_align }}">
+
+<style>
+  .block_{{ forloop.index }}{
+       max-width: {{block.settings.txt_width}}px;           
+  }                
+  .block_{{ forloop.index }} .custom_center{
+      top: 50%;
+      transform: translateY(-50%);
+  } 
+  
+  .block_{{ forloop.index }} .custom_bottom{
+      bottom: {{block.settings.bottom_padding}}px;
+  }  
+  
+  .block_{{ forloop.index }} .custom_top{
+      top: {{block.settings.top_padding}}px;
+  }  
+    
+  .block_{{ forloop.index }} .t_center{
+      left: calc(50vw - {{block.settings.txt_width}}px /2 );  
+  }
+    
+  .block_{{ forloop.index }} .t_left{
+      left: {{block.settings.left_padding}}px;
+  }  
+  
+  .block_{{ forloop.index }} .t_right{
+      right: {{block.settings.right_padding}}px;
+  }                
+</style> 
+
+                  <div class="hero__text-wrap block_{{ forloop.index }} {{ block.settings.textblock_align }}">
                     <div class="page-width">
                       <div class="hero__text-content {{ block.settings.text_align }}">
                         <div class="hero__text-shadow">
@@ -743,6 +773,51 @@
             "label": "Buttons",
             "default": "rgba(0,0,0,0)"
           },
+          {
+            "type": "text",
+            "id": "txt_width",
+            "label": "Text Block width"
+          },
+          {
+            "type": "range",
+            "id": "top_padding",
+            "label": "Top padding",
+            "default": 50,
+            "min": 20,
+            "max": 350,
+            "step": 10,
+            "unit": "px"
+          },
+          {
+            "type": "range",
+            "id": "bottom_padding",
+            "label": "Bottom padding",
+            "default": 50,
+            "min": 20,
+            "max": 350,
+            "step": 10,
+            "unit": "px"
+          },
+          {
+            "type": "range",
+            "id": "left_padding",
+            "label": "Left padding",
+            "default": 50,
+            "min": 20,
+            "max": 350,
+            "step": 10,
+            "unit": "px"
+          },
+          {
+            "type": "range",
+            "id": "right_padding",
+            "label": "Right padding",
+            "default": 50,
+            "min": 20,
+            "max": 350,
+            "step": 10,
+            "unit": "px"
+          },         
           {
             "type": "select",
             "id": "textblock_align",
