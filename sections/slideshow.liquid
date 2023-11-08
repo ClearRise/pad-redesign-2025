@@ -218,7 +218,7 @@
                 {%- if hero_text -%}
 
 <style>
-@media screen and (min-width: 768px){                  
+               
   .block_{{ forloop.index }}{
        max-width: {{block.settings.txt_width}}px;           
   }                
@@ -246,7 +246,9 @@
   .block_{{ forloop.index }}.t_right{
       right: {{block.settings.right_padding}}px;
   }
-}
+
+/*
+@media screen and (min-width: 768px){   }
 @media screen and (max-width: 767px){
    .hero__text-wrap.block_{{ forloop.index }}{
       width: 100%;           
@@ -254,6 +256,7 @@
       transform: translateY(-50%);                  
    }               
 }                  
+*/
 </style> 
 
                   <div class="hero__text-wrap block_{{ forloop.index }} {{ block.settings.textblock_align }}">
