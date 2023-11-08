@@ -8,6 +8,15 @@
     max-width: 450px;
     z-index: 10;
 }
+
+.custom_center_center{
+    position: absolute;
+    top: 50%;
+    left: calc(50vw - 225px);
+    transform: translateY(-50%);
+    max-width: 450px;
+    z-index: 10;
+}  
   
 </style>
 <div
@@ -724,42 +733,42 @@
             "type": "select",
             "id": "textblock_align",
             "label": "Text Block alignment",
-            "default": "custom_center_left",
+            "default": "custom_center t_left",
             "options": [
               {
-                "value": "custom_center_left",
+                "value": "custom_center t_left",
                 "label": "Center left"
               },
               {
-                "value": "custom_center_center",
+                "value": "custom_center t_center",
                 "label": "Center"
               },
               {
-                "value": "custom_center_right",
+                "value": "custom_center t_right",
                 "label": "Center right"
               },
               {
-                "value": "custom_bottom_left",
+                "value": "custom_bottom t_left",
                 "label": "Bottom left"
               },
               {
-                "value": "custom_bottom_center",
+                "value": "custom_bottom t_center",
                 "label": "Bottom center"
               },
               {
-                "value": "custom_bottom_right",
+                "value": "custom_bottom t_right",
                 "label": "Bottom right"
               },
               {
-                "value": "custom_top_left",
+                "value": "custom_top t_left",
                 "label": "Top left"
               },
               {
-                "value": "custom_top_center",
+                "value": "custom_top t_center",
                 "label": "Top center"
               },
               {
-                "value": "custom_top_right",
+                "value": "custom_top t_right",
                 "label": "Top right"
               }
             ]
