@@ -382,7 +382,7 @@ img.h_auto[data-sizes=auto]{
 }
 
 .btn{
-	border: 2px solid #000000!important;
+	/* border: 2px solid #000000!important; */
 }
 
 .grid-product {
