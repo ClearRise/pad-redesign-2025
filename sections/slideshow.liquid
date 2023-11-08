@@ -7,7 +7,7 @@
     z-index: 10;
 }
 
-.custom_center{
+/* .custom_center{
     top: 50%;
     transform: translateY(-50%);
 } 
@@ -30,7 +30,7 @@
 
 .t_right{
     right: 100px;
-}  
+}   */
   
 </style>
 <div
@@ -246,28 +246,28 @@
   .block_{{ forloop.index }}{
        max-width: {{block.settings.txt_width}}px;           
   }                
-  .block_{{ forloop.index }} .custom_center{
+  .block_{{ forloop.index }}.custom_center{
       top: 50%;
       transform: translateY(-50%);
   } 
   
-  .block_{{ forloop.index }} .custom_bottom{
+  .block_{{ forloop.index }}.custom_bottom{
       bottom: {{block.settings.bottom_padding}}px;
   }  
   
-  .block_{{ forloop.index }} .custom_top{
+  .block_{{ forloop.index }}.custom_top{
       top: {{block.settings.top_padding}}px;
   }  
     
-  .block_{{ forloop.index }} .t_center{
+  .block_{{ forloop.index }}.t_center{
       left: calc(50vw - {{block.settings.txt_width}}px /2 );  
   }
     
-  .block_{{ forloop.index }} .t_left{
+  .block_{{ forloop.index }}.t_left{
       left: {{block.settings.left_padding}}px;
   }  
   
-  .block_{{ forloop.index }} .t_right{
+  .block_{{ forloop.index }}.t_right{
       right: {{block.settings.right_padding}}px;
   }                
 </style> 
