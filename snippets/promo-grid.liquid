@@ -80,7 +80,7 @@
           {%- assign accent_exists = true -%}
           .flex-grid__item--{{ block.id }} .btn {
             background: {{ block.settings.color_accent }} !important;
-            border: none !important;
+            /* border: none !important; */
 
             {%- assign accent_brightness = block.settings.color_accent | color_extract: 'lightness' -%}
 
@@ -93,7 +93,7 @@
             .flex-grid__item--{{ block.id }} .btn:before,
             .flex-grid__item--{{ block.id }} .btn:after {
               background: {{ block.settings.color_accent }} !important;
-              border: none !important;
+              /* border: none !important; */
             }
           {% endif %}
         {% endunless %}
