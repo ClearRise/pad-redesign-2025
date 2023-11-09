@@ -245,6 +245,7 @@
    color:var(--colorBtnPrimaryText); 
 /*   background:{{ settings.color_button | default: "#000" }}; */
   background:var(--colorBtnPrimary);
+  border: 2px solid var(--colorBtnBorder);
   border-radius:50%
 }
 
@@ -1790,7 +1791,8 @@ button[disabled],html input[disabled]{
 {% comment %}   color:{{ settings.color_button_text | default: "#fff" }}; {% endcomment %}
   color:var(--colorBtnPrimaryText);
 /*   background:{{ settings.color_button | default: "#000" }}; */
-  background:var(--colorBtnPrimary)
+  background:var(--colorBtnPrimary);
+  border: 2px solid var(--colorBtnBorder);
 }
 
 @media only screen and (max-width:768px){
@@ -1807,6 +1809,7 @@ button[disabled],html input[disabled]{
     color:var(--colorBtnPrimaryText);
 /*     background-color:{{ settings.color_button | default: "#000" }}; */
     background-color:var(--colorBtnPrimary);
+    border: 2px solid var(--colorBtnBorder);
   }
 
 .btn.disabled,.btn[disabled],.rte .btn.disabled,.rte .btn[disabled],.shopify-payment-button .shopify-payment-button__button--unbranded.disabled,.shopify-payment-button .shopify-payment-button__button--unbranded[disabled],.spr-container .spr-button.disabled,.spr-container .spr-button[disabled],.spr-container .spr-summary-actions a.disabled,.spr-container .spr-summary-actions a[disabled]{
@@ -1893,6 +1896,7 @@ button[disabled],html input[disabled]{
 {% comment %}         background:{{ settings.color_button | default: "#000" }}; {% endcomment %}
         background:var(--colorBtnPrimary);
         transition-delay:0s;
+        border: 2px solid var(--colorBtnBorder);
       }
 
 .shopify-payment-button .shopify-payment-button__button--unbranded:hover:not([disabled]){
@@ -1900,6 +1904,7 @@ button[disabled],html input[disabled]{
   color:var(--colorBtnPrimaryText);
 {% comment %}   background-color:{{ settings.color_button | default: "#000" }}; {% endcomment %}
   background-color:var(--colorBtnPrimary);
+  border: 2px solid var(--colorBtnBorder);
 }
 
 .shopify-payment-button__more-options{
@@ -2013,7 +2018,7 @@ button[disabled],html input[disabled]{
 {% comment %}   background:{{ settings.color_button | default: "#000" }}; {% endcomment %}
   background:var(--colorBtnPrimary);
 /*   border-color:{{ settings.color_button | default: "#000" }}; */
-  border-color:var(--colorBtnPrimary)
+  border: 2px solid var(--colorBtnBorder);
 }
 
 .btn--tertiary-active:hover{
@@ -2021,6 +2026,7 @@ button[disabled],html input[disabled]{
     color:var(--colorBtnPrimaryText);
 /*     background:{{ settings.color_button | default: "#000" }}; */
     background:var(--colorBtnPrimary);
+    border: 2px solid var(--colorBtnBorder);
   }
 
 .btn--body{
@@ -3996,7 +4002,8 @@ form+.footer__social{
 /*     background:{{ settings.color_button | default: "#000" }}; */
     background:var(--colorBtnPrimary);
     width:43px;
-    margin:0 10px
+    margin:0 10px;
+    border: 1px solid var(--colorBtnBorder);
   }
 
 @media only screen and (max-width:768px){
@@ -8052,7 +8059,8 @@ html[dir=rtl] .grid-product__content{
   cursor:pointer;
   opacity:0;
   transform:translateY(5px);
-  transition:opacity 0.25s ease,transform 0.25s ease-out,background 0.4s ease
+  transition:opacity 0.25s ease,transform 0.25s ease-out,background 0.4s ease;
+  border: 2px solid var(--colorBtnBorder);
 }
 
 .no-js .quick-product__btn{
@@ -11381,4 +11389,5 @@ float:right;
 .gift_box .upsell-collection .upsell-product .upsell-product-info .upsell-add-to-cart{
     color: var(--colorBtnPrimaryText);
     background: var(--colorBtnPrimary);
+    border: 2px solid var(--colorBtnBorder);
 }  
