@@ -58,6 +58,12 @@
       },
       {
         "type": "color",
+        "id": "btn_border",
+        "label": "button border",
+        "default": "#000"
+      },
+      {
+        "type": "color",
         "id": "color_sale_tag",
         "label": "Sale tags",
         "default": "#1c1d1d"
