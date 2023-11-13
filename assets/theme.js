@@ -4296,6 +4296,7 @@ Bold:POv2*/
   
     function searchDrawer() {
       document.querySelectorAll(selectors.searchBtn).forEach(btn => {
+        console.log("click search");
         btn.addEventListener('click', openSearchDrawer);
       });
   
