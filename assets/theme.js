@@ -4305,20 +4305,23 @@ Bold:POv2*/
     function openSearchDrawer(evt) {
       evt.preventDefault();
       evt.stopImmediatePropagation();
-      var container = document.querySelector(selectors.searchContainer);
-      theme.utils.prepareTransition(container, function() {
-        container.classList.add('is-active');
-      }.bind(this));
+      var containers = document.querySelector(selectors.searchContainer);
+      containers.forEach(container => {
+        theme.utils.prepareTransition(container, function() {
+          container.classList.add('is-active');
+        }.bind(this));  
+      });
+      
   
       document.documentElement.classList.add('js-drawer-open', 'js-drawer-open--search');
   
-      setTimeout(function() {
-        theme.a11y.trapFocus({
-          container: container,
-          namespace: 'header_search',
-          elementToFocus: container.querySelector('.site-header__search-input')
-        });
-      }, 100);
+      // setTimeout(function() {
+      //   theme.a11y.trapFocus({
+      //     container: container,
+      //     namespace: 'header_search',
+      //     elementToFocus: container.querySelector('.site-header__search-input')
+      //   });
+      // }, 100);
   
       // If sticky is enabled, scroll to top on mobile when close to it
       // so you don't get an invisible search box
