@@ -4307,12 +4307,13 @@ Bold:POv2*/
       evt.stopImmediatePropagation();
       var container = document.querySelectorAll(selectors.searchContainer);
       theme.utils.prepareTransition(container, function() {
-          if (container.length) {
+          if (Array.isArray(container)) {
               container.forEach(c => {
                 c.classList.add('is-active');
             } 
-          }        
-        //container.classList.add('is-active');
+          }
+          else
+            container.classList.add('is-active');
       }.bind(this));
   
       document.documentElement.classList.add('js-drawer-open', 'js-drawer-open--search');
