@@ -4365,7 +4365,7 @@ Bold:POv2*/
         document.documentElement.classList.remove('js-drawer-closing');
       }.bind(this), 500);
   
-      var container = document.querySelectorAll(selectors.searchContainer);
+      var containers = document.querySelectorAll(selectors.searchContainer);
       containers.forEach(container => {
         theme.utils.prepareTransition(container, function() {
           container.classList.remove('is-active');
