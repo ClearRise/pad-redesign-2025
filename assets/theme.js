@@ -108,6 +108,7 @@ lazySizesConfig.expFactor = 4;
     },
   
     prepareTransition: function(el, callback) {
+      // if (Array.isArray(el)) {
       el.addEventListener('transitionend', removeClass);
   
       function removeClass(evt) {
