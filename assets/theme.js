@@ -4309,7 +4309,8 @@ Bold:POv2*/
       var container = document.querySelector(selectors.searchContainer);
       theme.utils.prepareTransition(container, function() {
         container.classList.add('is-active');
-      }.bind(this));
+      }.bind(this));  
+      
   
       document.documentElement.classList.add('js-drawer-open', 'js-drawer-open--search');
   
