@@ -4315,13 +4315,15 @@ Bold:POv2*/
   
       document.documentElement.classList.add('js-drawer-open', 'js-drawer-open--search');
   
-      // setTimeout(function() {
-      //   theme.a11y.trapFocus({
-      //     container: container,
-      //     namespace: 'header_search',
-      //     elementToFocus: container.querySelector('.site-header__search-input')
-      //   });
-      // }, 100);
+      setTimeout(function() {
+        containers.forEach(container => {
+          theme.a11y.trapFocus({
+            container: container,
+            namespace: 'header_search',
+            elementToFocus: container.querySelector('.site-header__search-input')
+          });
+        });
+      }, 100);
   
       // If sticky is enabled, scroll to top on mobile when close to it
       // so you don't get an invisible search box
@@ -4363,16 +4365,18 @@ Bold:POv2*/
         document.documentElement.classList.remove('js-drawer-closing');
       }.bind(this), 500);
   
-      var container = document.querySelector(selectors.searchContainer);
-      theme.utils.prepareTransition(container, function() {
-        container.classList.remove('is-active');
-      }.bind(this));
-  
-      theme.a11y.removeTrapFocus({
-        container: container,
-        namespace: 'header_search'
+      var container = document.querySelectorAll(selectors.searchContainer);
+      containers.forEach(container => {
+        theme.utils.prepareTransition(container, function() {
+          container.classList.remove('is-active');
+        }.bind(this));
+      
+        theme.a11y.removeTrapFocus({
+          container: container,
+          namespace: 'header_search'
+        });
       });
-  
+      
       theme.a11y.unlockMobileScrolling(config.namespace);
   
       unbindSearchEvents();
