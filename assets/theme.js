@@ -4305,7 +4305,7 @@ Bold:POv2*/
     function openSearchDrawer(evt) {
       evt.preventDefault();
       evt.stopImmediatePropagation();
-      var container = document.querySelector(selectors.searchContainer);
+      var container = document.querySelectorAll(selectors.searchContainer);
       theme.utils.prepareTransition(container, function() {
           if (container.length) {
               container.forEach(c => {
