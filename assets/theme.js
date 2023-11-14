@@ -108,32 +108,16 @@ lazySizesConfig.expFactor = 4;
     },
   
     prepareTransition: function(el, callback) {
-      if (Array.isArray(el)) {
-           el.forEach(c => {
-                c.addEventListener('transitionend', removeClass);
-          
-                c.addEventListener('transitionend', removeClass);
-            
-                function removeClass(evt) {
-                  c.classList.remove('is-transitioning');
-                  c.removeEventListener('transitionend', removeClass);
-                }
-            
-                c.classList.add('is-transitioning');
-                c.offsetWidth; // check offsetWidth to force the style rendering
-           }
+      el.addEventListener('transitionend', removeClass);
+  
+      function removeClass(evt) {
+        el.classList.remove('is-transitioning');
+        el.removeEventListener('transitionend', removeClass);
       }
-      else{
-        el.addEventListener('transitionend', removeClass);
-    
-        function removeClass(evt) {
-          el.classList.remove('is-transitioning');
-          el.removeEventListener('transitionend', removeClass);
-        }
-    
-        el.classList.add('is-transitioning');
-        el.offsetWidth; // check offsetWidth to force the style rendering
-      }   
+  
+      el.classList.add('is-transitioning');
+      el.offsetWidth; // check offsetWidth to force the style rendering
+  
       if (typeof callback === 'function') {
         callback();
       }
@@ -4321,15 +4305,9 @@ Bold:POv2*/
     function openSearchDrawer(evt) {
       evt.preventDefault();
       evt.stopImmediatePropagation();
-      var container = document.querySelectorAll(selectors.searchContainer);
+      var container = document.querySelector(selectors.searchContainer);
       theme.utils.prepareTransition(container, function() {
-          if (Array.isArray(container)) {
-              container.forEach(c => {
-                c.classList.add('is-active');
-            } 
-          }
-          else
-            container.classList.add('is-active');
+        container.classList.add('is-active');
       }.bind(this));
   
       document.documentElement.classList.add('js-drawer-open', 'js-drawer-open--search');
