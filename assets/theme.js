@@ -108,17 +108,32 @@ lazySizesConfig.expFactor = 4;
     },
   
     prepareTransition: function(el, callback) {
-      // if (Array.isArray(el)) {
-      el.addEventListener('transitionend', removeClass);
-  
-      function removeClass(evt) {
-        el.classList.remove('is-transitioning');
-        el.removeEventListener('transitionend', removeClass);
+      if (Array.isArray(el)) {
+           el.forEach(c => {
+                c.addEventListener('transitionend', removeClass);
+          
+                c.addEventListener('transitionend', removeClass);
+            
+                function removeClass(evt) {
+                  c.classList.remove('is-transitioning');
+                  c.removeEventListener('transitionend', removeClass);
+                }
+            
+                c.classList.add('is-transitioning');
+                c.offsetWidth; // check offsetWidth to force the style rendering
+           }
       }
-  
-      el.classList.add('is-transitioning');
-      el.offsetWidth; // check offsetWidth to force the style rendering
-  
+      else{
+        el.addEventListener('transitionend', removeClass);
+    
+        function removeClass(evt) {
+          el.classList.remove('is-transitioning');
+          el.removeEventListener('transitionend', removeClass);
+        }
+    
+        el.classList.add('is-transitioning');
+        el.offsetWidth; // check offsetWidth to force the style rendering
+      }   
       if (typeof callback === 'function') {
         callback();
       }
