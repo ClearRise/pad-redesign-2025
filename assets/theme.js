@@ -4305,23 +4305,19 @@ Bold:POv2*/
     function openSearchDrawer(evt) {
       evt.preventDefault();
       evt.stopImmediatePropagation();
-      var containers = document.querySelectorAll(selectors.searchContainer);
-      containers.forEach(container => {
-        theme.utils.prepareTransition(container, function() {
-          container.classList.add('is-active');
-        }.bind(this));  
-      });
+      var container = document.querySelector(selectors.searchContainer);
+      theme.utils.prepareTransition(container, function() {
+        container.classList.add('is-active');
+      }.bind(this));  
       
   
       document.documentElement.classList.add('js-drawer-open', 'js-drawer-open--search');
   
       setTimeout(function() {
-        containers.forEach(container => {
-          theme.a11y.trapFocus({
-            container: container,
-            namespace: 'header_search',
-            elementToFocus: container.querySelector('.site-header__search-input')
-          });
+        theme.a11y.trapFocus({
+          container: container,
+          namespace: 'header_search',
+          elementToFocus: container.querySelector('.site-header__search-input')
         });
       }, 100);
   
@@ -4365,18 +4361,16 @@ Bold:POv2*/
         document.documentElement.classList.remove('js-drawer-closing');
       }.bind(this), 500);
   
-      var containers = document.querySelectorAll(selectors.searchContainer);
-      containers.forEach(container => {
-        theme.utils.prepareTransition(container, function() {
-          container.classList.remove('is-active');
-        }.bind(this));
-      
-        theme.a11y.removeTrapFocus({
-          container: container,
-          namespace: 'header_search'
-        });
+      var container = document.querySelector(selectors.searchContainer);
+      theme.utils.prepareTransition(container, function() {
+        container.classList.remove('is-active');
+      }.bind(this));
+  
+      theme.a11y.removeTrapFocus({
+        container: container,
+        namespace: 'header_search'
       });
-      
+  
       theme.a11y.unlockMobileScrolling(config.namespace);
   
       unbindSearchEvents();
