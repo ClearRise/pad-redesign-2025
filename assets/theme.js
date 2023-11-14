@@ -4305,7 +4305,7 @@ Bold:POv2*/
     function openSearchDrawer(evt) {
       evt.preventDefault();
       evt.stopImmediatePropagation();
-      var containers = document.querySelector(selectors.searchContainer);
+      var containers = document.querySelectorAll(selectors.searchContainer);
       containers.forEach(container => {
         theme.utils.prepareTransition(container, function() {
           container.classList.add('is-active');
