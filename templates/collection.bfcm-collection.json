@@ -1,7 +1,72 @@
 {
   "sections": {
+    "438e0cbd-241b-4675-92a5-cdc322bda3f3": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14669504184402__438e0cbd-241b-4675-92a5-cdc322bda3f3-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/Desktop_test.png",
+            "image_mobile": "shopify:\/\/shop_images\/Test.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14669504184402__438e0cbd-241b-4675-92a5-cdc322bda3f3-image-1"
+      ],
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "02747987-eb13-41e5-ac1c-5ca10f2cc8b1": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14669504184402__02747987-eb13-41e5-ac1c-5ca10f2cc8b1-heading-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Jewelry That's One-of-a-kind. Just Like The Men Who Wear It."
+          }
+        },
+        "template--14669504184402__02747987-eb13-41e5-ac1c-5ca10f2cc8b1-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3>Exotic and Unique. Just Like the Men Who Wear Them.<\/h3><p>Since 2015, we've been handcrafting artisan rings using the most uncommon luxury materials. <\/p><p>Whether it's hand-forged Damascus steel from Nevada, fossilized mammoth tooth from Siberia, or metorite pulled from the Arctic Circle, you'll find a story in every ring. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14669504184402__02747987-eb13-41e5-ac1c-5ca10f2cc8b1-heading-1",
+        "template--14669504184402__02747987-eb13-41e5-ac1c-5ca10f2cc8b1-text-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "0f2c6960-1b01-4239-be13-fb428a5adc40": {
       "type": "replo-flash-sale-timer",
+      "disabled": true,
       "settings": {
       }
     },
@@ -19,19 +84,19 @@
       "blocks": {
         "banner": {
           "type": "banner",
-          "disabled": true,
           "settings": {
             "heading": "",
-            "text": "",
+            "text": "<b>30% OFF <\/b> Sitewide with code BLACKFRIDAY30",
             "link": "",
             "label": "",
-            "color_tint": "#e95454",
-            "color_tint_opacity": 8,
+            "color_tint": "#000000",
+            "color_tint_opacity": 6,
             "framed": false
           }
         },
         "advanced": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "Limited time",
             "heading": "Announce your promotion",
@@ -57,11 +122,10 @@
         "banner",
         "advanced"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "gutter_size": 20,
-        "space_above": true,
+        "space_above": false,
         "space_below": false
       }
     },
@@ -70,6 +134,7 @@
       "blocks": {
         "collection_description": {
           "type": "collection_description",
+          "disabled": true,
           "settings": {
           }
         },
@@ -104,6 +169,8 @@
     }
   },
   "order": [
+    "438e0cbd-241b-4675-92a5-cdc322bda3f3",
+    "02747987-eb13-41e5-ac1c-5ca10f2cc8b1",
     "0f2c6960-1b01-4239-be13-fb428a5adc40",
     "collection-header",
     "promo-grid",
