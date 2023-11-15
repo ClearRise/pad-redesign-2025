@@ -376,6 +376,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="{{ 'storeifyapps-formbuilder-script.js' | asset_url }}" defer></script>
 {% endif %}  
 
+<!--  Intelligems Template Testing Script -->
+
+    <script>
+    window._template = {
+        directory: "{{ template.directory }}",
+        name: "{{ template.name }}",
+        suffix: "{{ template.suffix }}"
+    }
+  </script> 
+
   
 <script src="https://cdn.intelligems.io/36720b0810aa.js"></script>
   
