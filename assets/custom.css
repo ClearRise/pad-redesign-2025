@@ -1903,6 +1903,12 @@ label.variant__label.custom_label{
       padding-left: 8px;
       letter-spacing: 0.1px;
   }
+  .collapsible-trigger__icon{
+      right: 10px;
+  }
+  .collapsible-trigger-btn{
+      padding: 15px 10px 15px 10px;
+  }
 }
 
 .custom-product-blocK{
