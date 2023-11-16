@@ -1909,6 +1909,9 @@ label.variant__label.custom_label{
   .collapsible-trigger-btn{
       padding: 15px 10px 15px 10px;
   }
+  .filter-form{
+      padding: 0 10px;
+  }
 }
 
 .custom-product-blocK{
