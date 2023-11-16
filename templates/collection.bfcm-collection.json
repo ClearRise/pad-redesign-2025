@@ -50,7 +50,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<h3>Exotic and Unique. Just Like the Men Who Wear Them.<\/h3><p>Since 2015, we've been handcrafting artisan rings using the most uncommon luxury materials. <\/p><p>Whether it's hand-forged Damascus steel from Nevada, fossilized mammoth tooth from Siberia, or metorite pulled from the Arctic Circle, you'll find a story in every ring. <\/p>"
+            "text": "<h3>Exotic and Unique. Just Like the Men Who Wear Them.<\/h3><p>Since 2015, we've been handcrafting artisan rings using the most uncommon luxury materials. <\/p><p>Whether it's hand-forged Damascus steel from Nevada, fossilized mammoth tooth from Siberia, or meteorite pulled from the Arctic Circle, you'll find a story in every ring. <\/p>"
           }
         }
       },
@@ -86,7 +86,7 @@
           "type": "banner",
           "settings": {
             "heading": "",
-            "text": "<b>30% OFF <\/b> Sitewide with code BLACKFRIDAY30",
+            "text": "<b>30% OFF<\/b>  Sitewide with code <b>BLACKFRIDAY30<\/b>",
             "link": "",
             "label": "",
             "color_tint": "#000000",
