@@ -283,63 +283,64 @@
             "boxed": false,
             "framed": false
           }
+        },
+        "23cb1e6f-c68e-42f1-86d5-0fcd36aa25df": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Glowstone™",
+            "textarea": "Real gemstones and other exotic materials combined with a proprietary chemical blend to create stunning designs for the day and night.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/edited.png",
+            "video_url": "",
+            "width": "100",
+            "height": 800,
+            "text_size": 120,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "632801c0-84ff-4994-b91a-ed0154b1f707": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Black Friday Special",
+            "heading": "Free Gift",
+            "textarea": "Spend $210 and get a Free Forged Carbon Fiber Ring or Pendant",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/no_text.png",
+            "video_url": "",
+            "width": "100",
+            "height": 800,
+            "text_size": 120,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
         }
       },
       "block_order": [
         "template--14630908985426__d8f01d1f-ebab-4c21-91d4-cd234e7faca4-advanced-1",
         "template--14630908985426__d8f01d1f-ebab-4c21-91d4-cd234e7faca4-advanced-2",
-        "d92ac671-ec91-4aa3-81ab-e3eaeff43452"
+        "d92ac671-ec91-4aa3-81ab-e3eaeff43452",
+        "23cb1e6f-c68e-42f1-86d5-0fcd36aa25df",
+        "632801c0-84ff-4994-b91a-ed0154b1f707"
       ],
       "settings": {
         "full_width": false,
         "gutter_size": 20,
         "space_above": true,
         "space_below": true
-      }
-    },
-    "edb31de5-46f4-431c-bc58-646bc57f485a": {
-      "type": "background-image-text",
-      "settings": {
-        "subtitle": "",
-        "title": "Glowstone",
-        "text": "<p>Talk about Glowstone Stuff Talk about Glowstone Stuff Talk about Glowstone Stuff Talk about Glowstone Stuff Talk about Glowstone Stuff Talk about Glowstone Stuff<\/p>",
-        "button_label": "",
-        "button_link": "",
-        "image": "shopify:\/\/shop_images\/P1040357.00_00_33_46.Still004.png",
-        "focal_point": "center",
-        "layout": "left",
-        "height": 750,
-        "framed": false,
-        "parallax": false
-      }
-    },
-    "ae5a5e09-35e0-4fc5-9ff7-dd17c4e29f8f": {
-      "type": "advanced-content",
-      "blocks": {
-        "template--14630908985426__ae5a5e09-35e0-4fc5-9ff7-dd17c4e29f8f-image-1": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "width": "100%",
-            "alignment": "center"
-          }
-        },
-        "template--14630908985426__ae5a5e09-35e0-4fc5-9ff7-dd17c4e29f8f-liquid-1": {
-          "type": "liquid",
-          "settings": {
-            "code": "<h2>Custom content<\/h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.<\/p>",
-            "width": "50%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "template--14630908985426__ae5a5e09-35e0-4fc5-9ff7-dd17c4e29f8f-image-1",
-        "template--14630908985426__ae5a5e09-35e0-4fc5-9ff7-dd17c4e29f8f-liquid-1"
-      ],
-      "settings": {
-        "full_width": false,
-        "space_around": true
       }
     },
     "90846cdf-809b-4b26-8f9a-a5a66aec37e4": {
@@ -351,7 +352,7 @@
             "top_subheading": "Black Friday Special",
             "title": "Get a Free Gift With Your Order",
             "title_size": 50,
-            "subheading": "Spend $210+ and get a free Gold Burl Carbon Fiber Ring or Pendant only during the month of November.",
+            "subheading": "",
             "link": "",
             "link_text": "",
             "link_2": "",
@@ -374,6 +375,7 @@
       "block_order": [
         "template--14630908985426__90846cdf-809b-4b26-8f9a-a5a66aec37e4-image-1"
       ],
+      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "100vh",
@@ -388,23 +390,6 @@
       "type": "replo-ethos",
       "disabled": true,
       "settings": {
-      }
-    },
-    "a3d488da-2f1e-4a5f-9e0f-767d9e97d233": {
-      "type": "background-image-text",
-      "disabled": true,
-      "settings": {
-        "subtitle": "",
-        "title": "100M+ Viewers and Counting",
-        "text": "<p>all of our rings have been handcrafted by artisans using the most uncommon luxury materials. <\/p><p>Along the way, we've documented the process on YouTube to 100M+ viewers.<\/p>",
-        "button_label": "",
-        "button_link": "",
-        "image": "shopify:\/\/shop_images\/Patrick_Deep_Photo.jpg",
-        "focal_point": "center",
-        "layout": "left",
-        "height": 550,
-        "framed": false,
-        "parallax": false
       }
     },
     "product_img_with_txt": {
@@ -467,34 +452,6 @@
         "padding_bottom": 5
       }
     },
-    "1646853684b754aedd": {
-      "type": "rich-text",
-      "blocks": {
-        "164685368492299ea2-0": {
-          "type": "heading",
-          "settings": {
-            "title": "The Unrivaled Process"
-          }
-        },
-        "164685368492299ea2-1": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>{{ product.metafields.global.unrivaled_process | metafield_tag }}<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "164685368492299ea2-0",
-        "164685368492299ea2-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
-      }
-    },
     "sub": {
       "type": "product-full-width",
       "blocks": {
@@ -555,14 +512,10 @@
   "order": [
     "main",
     "d8f01d1f-ebab-4c21-91d4-cd234e7faca4",
-    "edb31de5-46f4-431c-bc58-646bc57f485a",
-    "ae5a5e09-35e0-4fc5-9ff7-dd17c4e29f8f",
     "90846cdf-809b-4b26-8f9a-a5a66aec37e4",
     "6f7799dc-494e-401d-8737-8e9ae2a498c8",
-    "a3d488da-2f1e-4a5f-9e0f-767d9e97d233",
     "product_img_with_txt",
     "product_how_to_work",
-    "1646853684b754aedd",
     "sub",
     "164740826566424b78",
     "product-recommendations",
