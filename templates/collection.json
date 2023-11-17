@@ -1,8 +1,65 @@
 {
   "sections": {
-    "0f2c6960-1b01-4239-be13-fb428a5adc40": {
-      "type": "replo-flash-sale-timer",
+    "29fa578d-0626-4fc9-ad4a-0ab5675dc1ff": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14630908723282__29fa578d-0626-4fc9-ad4a-0ab5675dc1ff-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "textblock_align": "custom_center t_left",
+            "text_align": "horizontal-center",
+            "txt_width": "",
+            "top_padding": 50,
+            "bottom_padding": 50,
+            "left_padding": 50,
+            "right_padding": 50,
+            "image": "shopify:\/\/shop_images\/Desktop_test.png",
+            "image_mobile": "shopify:\/\/shop_images\/Test.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14630908723282__29fa578d-0626-4fc9-ad4a-0ab5675dc1ff-image-1"
+      ],
       "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "0e2dd0bc-d688-4021-bb1d-edb301ab13b3": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14630908723282__0e2dd0bc-d688-4021-bb1d-edb301ab13b3-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3>Exotic and Unique. Just Like the Men Who Wear Them.<\/h3><p>Since 2015, we've been handcrafting artisan rings using the most uncommon luxury materials. <\/p><p>Whether it's hand-forged Damascus steel from Nevada, fossilized mammoth tooth from Siberia, or meteorite pulled from the Arctic Circle, you'll find a story in every ring. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14630908723282__0e2dd0bc-d688-4021-bb1d-edb301ab13b3-text-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
       }
     },
     "collection-header": {
@@ -104,7 +161,8 @@
     }
   },
   "order": [
-    "0f2c6960-1b01-4239-be13-fb428a5adc40",
+    "29fa578d-0626-4fc9-ad4a-0ab5675dc1ff",
+    "0e2dd0bc-d688-4021-bb1d-edb301ab13b3",
     "collection-header",
     "promo-grid",
     "main-collection"
