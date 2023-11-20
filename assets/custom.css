@@ -1983,3 +1983,7 @@ label.variant__label.custom_label{
     margin: 0;
     padding: 0;
 }
+
+::-webkit-scrollbar {
+  width: 1px; /* Set the width of the scrollbar */
+}
