@@ -1969,7 +1969,7 @@ label.variant__label.custom_label{
 #homepage-scroll-navigation a.active:after {
     content: "";
     position: absolute;
-    bottom: 8px;
+    bottom: 2px;
     left: 0;
     height: 2px;
     width: 100%;
