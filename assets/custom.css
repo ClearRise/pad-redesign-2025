@@ -1940,3 +1940,32 @@ label.variant__label.custom_label{
     padding: 0 1.6rem;
     gap: 2rem;
 }
+
+#homepage-scroll-navigation a.active {
+    opacity: 1;
+    font-weight: 600;
+    color: #000;
+}
+
+#homepage-scroll-navigation :is(a:link,a:visited) {
+    color: #afafaf;
+}
+
+#homepage-scroll-navigation a {
+    position: relative;
+    display: block;
+    flex: 0 0 auto;
+    padding: 0.8rem 0;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+#homepage-scroll-navigation a.active:after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+}
