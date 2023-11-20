@@ -139,10 +139,34 @@
               "desktop_logo_width": 100,
               "mobile_logo_width": 60
             }
+          },
+          "5d52f8ac-5743-4bb3-8f8c-b605d39edb41": {
+            "type": "scroll_navi_mobile",
+            "settings": {
+              "sub_menu": "Men's Rings",
+              "link_submenu": "shopify:\/\/collections\/promise-rings"
+            }
+          },
+          "75208edc-9df1-4a0f-93e3-95660800d197": {
+            "type": "scroll_navi_mobile",
+            "settings": {
+              "sub_menu": "Wedding Bands",
+              "link_submenu": "shopify:\/\/collections\/wedding-ring-sets"
+            }
+          },
+          "5e7dd7e3-e74f-4ac0-9134-363386300ddb": {
+            "type": "scroll_navi_mobile",
+            "settings": {
+              "sub_menu": "Custom Rings",
+              "link_submenu": "shopify:\/\/collections\/custom-rings"
+            }
           }
         },
         "block_order": [
-          "1524770014057"
+          "1524770014057",
+          "5d52f8ac-5743-4bb3-8f8c-b605d39edb41",
+          "75208edc-9df1-4a0f-93e3-95660800d197",
+          "5e7dd7e3-e74f-4ac0-9134-363386300ddb"
         ],
         "settings": {
           "main_menu_link_list": "05-16-23-lewis-main-menu",
