@@ -1984,6 +1984,15 @@ label.variant__label.custom_label{
     padding: 0;
 }
 
+#homepage-scroll-navigation::-webkit-scrollbar {
+  display: none;
+}
+
+#homepage-scroll-navigation{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 @media screen and (max-width: 767px){
   .site-header{
       padding: 2px 0;
