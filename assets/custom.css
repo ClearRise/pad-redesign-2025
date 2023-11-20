@@ -1984,6 +1984,11 @@ label.variant__label.custom_label{
     padding: 0;
 }
 
-::-webkit-scrollbar {
-  width: 1px; /* Set the width of the scrollbar */
+@media screen and (max-width: 767px){
+  .site-header{
+      padding: 2px 0;
+  } 
+  .site-header__logo{
+    margin: 3px 0;
+  }
 }
