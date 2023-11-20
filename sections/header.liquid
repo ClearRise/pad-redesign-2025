@@ -221,11 +221,11 @@
     </div>
   </div>
   <div id="homepage-scroll-navigation">
+    {% assign _flag = true %}
     {%- for block in section.blocks -%}
       {%- if block.type == 'scroll_navi_mobile' -%}
         {%- if block.settings.link_submenu != blank -%}
-          {% assign _flag = true %}
-          {% if _flag %}
+          {% if _flag and request.path == '/' %}
             <a href="{{ block.settings.link_submenu }}" class="active" >{{ block.settings.sub_menu }}</a>
             {% assign _flag = false %}
           {% else %}  
