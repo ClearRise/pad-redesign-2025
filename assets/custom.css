@@ -1945,8 +1945,8 @@ label.variant__label.custom_label{
     position: relative;
     display: block;
     flex: 0 0 auto;
-    padding: 0.8rem 0;
-    font-size: 1.3rem;
+    padding: 0.3rem 0;
+    font-size: 1rem;
     text-decoration: none;
 }
 #homepage-scroll-navigation :is(a:link,a:visited) {
