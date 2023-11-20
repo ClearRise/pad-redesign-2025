@@ -224,7 +224,8 @@
     {%- for block in section.blocks -%}
       {%- if block.type == 'scroll_navi_mobile' -%}
         {%- if block.settings.link_submenu != blank -%}
-          {% if request.path =="/" %}
+          {{ request.path }}
+          {% if forloop.first %}
             <a href="{{ block.settings.link_submenu }}" class="active" >{{ block.settings.sub_menu }}</a>
           {% else %}  
             <a href="{{ block.settings.link_submenu }}" {% if request.path == block.settings.link_submenu %} class="active" {% endif %}>{{ block.settings.sub_menu }}</a>
