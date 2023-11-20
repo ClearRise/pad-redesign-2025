@@ -1941,16 +1941,6 @@ label.variant__label.custom_label{
     gap: 2rem;
 }
 
-#homepage-scroll-navigation a.active {
-    opacity: 1;
-    font-weight: 600;
-    color: #000;
-}
-
-#homepage-scroll-navigation :is(a:link,a:visited) {
-    color: #afafaf;
-}
-
 #homepage-scroll-navigation a {
     position: relative;
     display: block;
@@ -1960,6 +1950,15 @@ label.variant__label.custom_label{
     text-decoration: none;
 }
 
+#homepage-scroll-navigation a.active {
+    opacity: 1;
+    font-weight: 600;
+    color: #000;
+}
+
+#homepage-scroll-navigation :is(a:link,a:visited) {
+    color: #afafaf;
+}
 #homepage-scroll-navigation a.active:after {
     content: "";
     position: absolute;
