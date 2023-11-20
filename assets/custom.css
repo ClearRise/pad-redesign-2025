@@ -1932,13 +1932,19 @@ label.variant__label.custom_label{
 }
 /* homepage-scroll-navigation on mobile */
 #homepage-scroll-navigation {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    width: 100%;
-    border-top: 1px solid #D9D9D9;
-    padding: 0 1.6rem;
-    gap: 2rem;
+  display: none;
+}
+
+@media screen and (max-width: 767px){
+  #homepage-scroll-navigation {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      width: 100%;
+      border-top: 1px solid #D9D9D9;
+      padding: 0 1.6rem;
+      gap: 2rem;
+  }
 }
 
 #homepage-scroll-navigation a {
