@@ -1949,6 +1949,9 @@ label.variant__label.custom_label{
     font-size: 1.3rem;
     text-decoration: none;
 }
+#homepage-scroll-navigation :is(a:link,a:visited) {
+    color: #afafaf;
+}
 
 #homepage-scroll-navigation a.active {
     opacity: 1;
@@ -1956,9 +1959,7 @@ label.variant__label.custom_label{
     color: #000;
 }
 
-#homepage-scroll-navigation :is(a:link,a:visited) {
-    color: #afafaf;
-}
+
 #homepage-scroll-navigation a.active:after {
     content: "";
     position: absolute;
