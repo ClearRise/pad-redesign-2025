@@ -1969,3 +1969,11 @@ label.variant__label.custom_label{
     width: 100%;
     background-color: #000;
 }
+
+#homepage-scroll-navigation ul {
+    text-transform: uppercase;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
