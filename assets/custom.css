@@ -1989,6 +1989,9 @@ label.variant__label.custom_label{
       padding: 2px 0;
   } 
   .site-header__logo{
-    margin: 3px 0;
+    margin: 1px 0;
+  }
+  .site-header__logo a {
+    width: 50px;
   }
 }
