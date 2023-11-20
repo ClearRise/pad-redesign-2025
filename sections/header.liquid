@@ -221,10 +221,13 @@
     </div>
   </div>
   <div id="homepage-scroll-navigation">
-    <a href="#" class=" active ">Men's Rings</a>
-    <a href="#">Wedding Bands</a>
-    <a href="#">Custom Rings</a>
-    
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'scroll_navi_mobile' -%}
+        {%- if block.settings.link_submenu != blank -%}
+          <a href="{{ block.settings.link_submenu }}" >{{ block.settings.sub_menu }}</a>
+        {%- endif -%}  
+      {%- endif -%}
+    {%- endfor -%}            
   </div>
 {% if section.settings.show_menu_img %}
   {% if section.settings.menu_img != blank %}
