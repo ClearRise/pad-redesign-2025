@@ -1974,7 +1974,7 @@ label.variant__label.custom_label{
       width: 100%;
       border-top: 1px solid #D9D9D9;
       padding: 0 1.6rem;
-      gap: 2rem;
+      gap: 20px;
   }
 }
 
