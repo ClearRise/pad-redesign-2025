@@ -1,7 +1,7 @@
 {
   "sections": {
-    "0f2c6960-1b01-4239-be13-fb428a5adc40": {
-      "type": "replo-flash-sale-timer",
+    "6e7f16ab-8df4-4f43-b59f-898aad0d81c4": {
+      "type": "replo-sitewide-sale-bf",
       "settings": {
       }
     },
@@ -104,7 +104,7 @@
     }
   },
   "order": [
-    "0f2c6960-1b01-4239-be13-fb428a5adc40",
+    "6e7f16ab-8df4-4f43-b59f-898aad0d81c4",
     "collection-header",
     "promo-grid",
     "main-collection"
