@@ -139,10 +139,34 @@
               "desktop_logo_width": 100,
               "mobile_logo_width": 130
             }
+          },
+          "30d9274d-f502-4710-bb39-866381456103": {
+            "type": "scroll_navi_mobile",
+            "settings": {
+              "sub_menu": "All Rings",
+              "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/all-products?filter.p.m.custom.product_type=Ring&view=bfcm-collection"
+            }
+          },
+          "966bc6e1-31db-4261-b34d-773ca4a79259": {
+            "type": "scroll_navi_mobile",
+            "settings": {
+              "sub_menu": "Wedding Bands",
+              "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/best-selling-wedding-bands-v1"
+            }
+          },
+          "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56": {
+            "type": "scroll_navi_mobile",
+            "settings": {
+              "sub_menu": "All Necklaces",
+              "link_submenu": "shopify:\/\/collections\/necklaces"
+            }
           }
         },
         "block_order": [
-          "1524770014057"
+          "1524770014057",
+          "30d9274d-f502-4710-bb39-866381456103",
+          "966bc6e1-31db-4261-b34d-773ca4a79259",
+          "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56"
         ],
         "settings": {
           "main_menu_link_list": "05-16-23-lewis-main-menu",
