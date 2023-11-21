@@ -139,34 +139,10 @@
               "desktop_logo_width": 100,
               "mobile_logo_width": 130
             }
-          },
-          "2b1f4bb8-dd98-4517-99ab-1d7893999c87": {
-            "type": "scroll_navi_mobile",
-            "settings": {
-              "sub_menu": "Men's Rings",
-              "link_submenu": "\/collections\/all-products?filter.p.m.custom.product_type=Ring"
-            }
-          },
-          "e42ed0e4-3e63-4d62-9637-33ed6f27aaba": {
-            "type": "scroll_navi_mobile",
-            "settings": {
-              "sub_menu": "Wedding Bands",
-              "link_submenu": "\/collections\/mens-wedding-bands"
-            }
-          },
-          "4b25ed32-8302-4809-9508-f9ac7127f217": {
-            "type": "scroll_navi_mobile",
-            "settings": {
-              "sub_menu": "Custom Rings",
-              "link_submenu": "shopify:\/\/collections\/custom-rings"
-            }
           }
         },
         "block_order": [
-          "1524770014057",
-          "2b1f4bb8-dd98-4517-99ab-1d7893999c87",
-          "e42ed0e4-3e63-4d62-9637-33ed6f27aaba",
-          "4b25ed32-8302-4809-9508-f9ac7127f217"
+          "1524770014057"
         ],
         "settings": {
           "main_menu_link_list": "05-16-23-lewis-main-menu",
