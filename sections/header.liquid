@@ -220,7 +220,26 @@
       </header>
     </div>
   </div>
+                  
+{% if request.path == '/' %}                  
+  <div id="homepage-scroll-navigation">
+    {% assign _flag = true %}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'scroll_navi_mobile' -%}
+        {%- if block.settings.link_submenu != blank -%}
+          {% if _flag %}
+            <a href="{{ block.settings.link_submenu }}" class="active" >{{ block.settings.sub_menu }}</a>
+            {% assign _flag = false %}
+          {% else %}  
+            <a href="{{ block.settings.link_submenu }}" {% if request.path == block.settings.link_submenu %} class="active" {% endif %}>{{ block.settings.sub_menu }}</a>
+         {% endif %}
+        {%- endif -%}  
+      {%- endif -%}
+    {%- endfor -%}            
+  </div>
+{%- endif -%}
 
+                  
 {% if section.settings.show_menu_img %}
   {% if section.settings.menu_img != blank %}
 <script>
@@ -498,7 +517,26 @@
             "label": "Link"
           }
         ]
-      }
+      },
+      {
+        "type": "scroll_navi_mobile",
+        "name": "scroll navi for mobile",
+        "limit": 6,
+        "settings": [
+          {
+            "type": "text",
+            "id": "sub_menu",
+            "label": "sub menu",
+            "default": "menu item"
+          },
+
+          {
+            "type": "url",
+            "id": "link_submenu",
+            "label": "Link"
+          }
+        ]
+      }      
     ],
     "default": {
       "settings": {}
