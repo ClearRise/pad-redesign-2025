@@ -1993,7 +1993,7 @@ label.variant__label.custom_label{
 
 #homepage-scroll-navigation a.active {
     opacity: 1;
-    font-weight: 600;
+    /* font-weight: 600; */
     color: #000;
 }
 
