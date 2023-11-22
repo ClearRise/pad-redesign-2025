@@ -1986,6 +1986,22 @@ label.variant__label.custom_label{
     font-size: 0.9rem;
     text-decoration: none;
 }
+
+/* 
+#homepage-scroll-navigation a {
+    position: relative;
+    display: block;
+    flex: 0 0 auto;
+    margin: 0.2rem 0 0.3rem;
+    font-size: .9rem;
+    text-decoration: none;
+    outline: 1px solid #d3d3d3;
+    padding: 0 0.2rem 0.1rem;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+} 
+*/
+
 #homepage-scroll-navigation :is(a:link,a:visited) {
     /* color: #afafaf; */
   color: #000;
