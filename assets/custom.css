@@ -1987,7 +1987,8 @@ label.variant__label.custom_label{
     text-decoration: none;
 }
 #homepage-scroll-navigation :is(a:link,a:visited) {
-    color: #afafaf;
+    /* color: #afafaf; */
+  color: #000;
 }
 
 #homepage-scroll-navigation a.active {
@@ -2002,7 +2003,7 @@ label.variant__label.custom_label{
     position: absolute;
     bottom: 2px;
     left: 0;
-    height: 2px;
+    /* height: 2px; */
     width: 100%;
     background-color: #000;
 }
