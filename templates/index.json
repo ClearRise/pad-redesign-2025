@@ -23,31 +23,11 @@
             "focal_point": "center center"
           }
         },
-        "9d53635d-e750-4862-8e8a-dda68303d8c8": {
+        "57aca77d-9816-4b92-80ab-3938cf7ecd69": {
           "type": "image",
           "settings": {
             "top_subheading": "",
             "title": "",
-            "title_size": 80,
-            "subheading": "",
-            "link": "shopify:\/\/collections\/all-products",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/ends_in_hours_dektop.png",
-            "image_mobile": "shopify:\/\/shop_images\/ends_in_hours.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "57aca77d-9816-4b92-80ab-3938cf7ecd69": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "",
-            "title": "BF Extended (delete)",
             "title_size": 80,
             "subheading": "",
             "link": "shopify:\/\/collections\/all-products",
@@ -105,7 +85,6 @@
       },
       "block_order": [
         "slideshow-0",
-        "9d53635d-e750-4862-8e8a-dda68303d8c8",
         "57aca77d-9816-4b92-80ab-3938cf7ecd69",
         "14123d7d-fcf1-42c6-b9fa-86318e20a4a9",
         "37d00a71-421d-4933-a411-8210f7f16d7d"
