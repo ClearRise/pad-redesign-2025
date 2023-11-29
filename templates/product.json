@@ -284,28 +284,6 @@
             "framed": false
           }
         },
-        "23cb1e6f-c68e-42f1-86d5-0fcd36aa25df": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "Glowstone™",
-            "textarea": "Real gemstones and other exotic materials combined with a proprietary chemical blend to create stunning designs for the day and night.",
-            "cta_text1": "",
-            "cta_link1": "",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/edited.png",
-            "video_url": "",
-            "width": "100",
-            "height": 800,
-            "text_size": 120,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
         "632801c0-84ff-4994-b91a-ed0154b1f707": {
           "type": "advanced",
           "settings": {
@@ -333,7 +311,6 @@
         "template--14630908985426__d8f01d1f-ebab-4c21-91d4-cd234e7faca4-advanced-1",
         "template--14630908985426__d8f01d1f-ebab-4c21-91d4-cd234e7faca4-advanced-2",
         "d92ac671-ec91-4aa3-81ab-e3eaeff43452",
-        "23cb1e6f-c68e-42f1-86d5-0fcd36aa25df",
         "632801c0-84ff-4994-b91a-ed0154b1f707"
       ],
       "settings": {
