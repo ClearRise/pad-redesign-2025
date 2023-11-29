@@ -2,11 +2,121 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
+      }
+    },
+    "d85bc3a7-fd8d-47e1-96ea-6e11429dde6c": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14688191053906__d85bc3a7-fd8d-47e1-96ea-6e11429dde6c-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Endless\npossibilities.",
+            "title_size": 80,
+            "subheading": "Bring your brand to life",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/Christmas_Large_f37d6320-69bd-43ac-b40a-de52c9fd421f.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14688191053906__d85bc3a7-fd8d-47e1-96ea-6e11429dde6c-image-1"
+      ],
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "100vh",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "7ec74fcf-2168-461f-b123-687a58d987ce": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best Sellers (30-50% Off)",
+        "home_featured_products": "best-sellers",
+        "per_row": 4,
+        "rows": 2,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "d577c540-556e-41f3-9203-ae44f38ea7c0": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "50% Off",
+            "heading": "Glowstone <br>Series",
+            "textarea": "Limited Time Only",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Glowstone_Ring_2-_flipped_091974d9-dead-4efa-8f3b-b86399fcdcaf.png",
+            "video_url": "",
+            "width": "50",
+            "height": 600,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-2": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "35% Off",
+            "heading": "Solid<br> Meteorite <br>  Rings",
+            "textarea": "Limited Time Only",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Meteorite_Stack_Square.png",
+            "video_url": "",
+            "width": "50",
+            "height": 600,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-1",
+        "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-2"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "d85bc3a7-fd8d-47e1-96ea-6e11429dde6c",
+    "7ec74fcf-2168-461f-b123-687a58d987ce",
+    "d577c540-556e-41f3-9203-ae44f38ea7c0"
   ]
 }
