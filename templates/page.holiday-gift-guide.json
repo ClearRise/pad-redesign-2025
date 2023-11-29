@@ -14,15 +14,16 @@
           "settings": {
             "top_subheading": "",
             "title": "Give a Gift as Unique as They Are",
-            "title_size": 80,
+            "title_size": 59,
             "subheading": "Save 30-50% During our Holiday Gift Event",
             "link": "shopify:\/\/collections\/all",
             "link_text": "SHOP ALL RINGS",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#138f7e",
-            "text_align": "vertical-center horizontal-center",
+            "text_align": "vertical-bottom horizontal-center",
             "image": "shopify:\/\/shop_images\/Christmas_Large_f37d6320-69bd-43ac-b40a-de52c9fd421f.png",
+            "image_mobile": "shopify:\/\/shop_images\/hero1_713564a8-7654-477c-a504-ec1c0d559da7.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -41,11 +42,11 @@
         "autoplay_speed": 5
       }
     },
-    "7ec74fcf-2168-461f-b123-687a58d987ce": {
+    "4723b2e9-d4f7-4fe5-a08b-be5b858c1816": {
       "type": "featured-collection",
       "settings": {
-        "title": "Save 30-50% on These Best Sellers",
-        "home_featured_products": "best-sellers",
+        "title": "",
+        "home_featured_products": "the-glowstone-series",
         "per_row": 4,
         "rows": 1,
         "mobile_scrollable": false,
@@ -60,7 +61,7 @@
           "type": "advanced",
           "settings": {
             "subheading": "50% Off",
-            "heading": "Glowstone <br>Series",
+            "heading": "Glowstone Series",
             "textarea": "Limited Time Only",
             "cta_text1": "",
             "cta_link1": "",
@@ -68,55 +69,19 @@
             "cta_link2": "",
             "image": "shopify:\/\/shop_images\/Glowstone_Ring_2-_flipped_091974d9-dead-4efa-8f3b-b86399fcdcaf.png",
             "video_url": "",
-            "width": "50",
-            "height": 600,
+            "width": "100",
+            "height": 400,
             "text_size": 100,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
-            "framed": false
-          }
-        },
-        "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-2": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "35% Off",
-            "heading": "Solid<br> Meteorite <br>  Rings",
-            "textarea": "Limited Time Only",
-            "cta_text1": "",
-            "cta_link1": "",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Meteorite_Stack_Square.png",
-            "video_url": "",
-            "width": "50",
-            "height": 600,
-            "text_size": 100,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "7c06ff75-dad6-43a2-a29c-6fb51e31f06e": {
-          "type": "banner",
-          "settings": {
-            "heading": "Holiday Special",
-            "text": "Save 30-50% Sitewide",
-            "link": "shopify:\/\/collections\/all-products",
-            "label": "Shop Now",
-            "color_tint": "#000000",
-            "color_tint_opacity": 8,
             "framed": false
           }
         }
       },
       "block_order": [
-        "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-1",
-        "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-2",
-        "7c06ff75-dad6-43a2-a29c-6fb51e31f06e"
+        "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-1"
       ],
       "settings": {
         "full_width": false,
@@ -125,21 +90,91 @@
         "space_below": false
       }
     },
-    "263c65b4-2149-4b43-9aa1-8c421123c68d": {
+    "7ec74fcf-2168-461f-b123-687a58d987ce": {
       "type": "featured-collection",
       "settings": {
-        "title": "Gifts Under $200",
-        "home_featured_products": "test-200",
-        "per_row": 5,
-        "rows": 4,
+        "title": "Best Sellers",
+        "home_featured_products": "best-sellers",
+        "per_row": 4,
+        "rows": 1,
         "mobile_scrollable": false,
-        "view_all": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "8dcd1e21-a51f-4071-b3f3-ac27cd43ef96": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--14688191053906__8dcd1e21-a51f-4071-b3f3-ac27cd43ef96-advanced-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "35% OFF",
+            "heading": "Solid  <br> Meteorite <br>  Rings",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Meteorite_Stack_Square.png",
+            "video_url": "",
+            "width": "100",
+            "height": 400,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14688191053906__8dcd1e21-a51f-4071-b3f3-ac27cd43ef96-advanced-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false
+      }
+    },
+    "3bcdecdd-10e2-4cb9-b410-086e21702c1f": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "home_featured_products": "meteorite-jewelry",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
         "divider": false
       }
     },
     "7d48d57a-31d7-4fcf-bcfe-04268ace52bb": {
       "type": "promo-grid",
       "blocks": {
+        "6ea4272b-0125-43c0-8d38-5253c73c2921": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Limited Time Deals",
+            "heading": "Shop Gifts Under $200",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Group_Shot.png",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
         "template--14688191053906__7d48d57a-31d7-4fcf-bcfe-04268ace52bb-advanced-1": {
           "type": "advanced",
           "settings": {
@@ -198,6 +233,7 @@
         }
       },
       "block_order": [
+        "6ea4272b-0125-43c0-8d38-5253c73c2921",
         "template--14688191053906__7d48d57a-31d7-4fcf-bcfe-04268ace52bb-advanced-1",
         "template--14688191053906__7d48d57a-31d7-4fcf-bcfe-04268ace52bb-advanced-2",
         "a1d64d17-b654-48f4-a356-1024331aae02"
@@ -227,28 +263,17 @@
         "full_width": false,
         "space_around": true
       }
-    },
-    "3bcdecdd-10e2-4cb9-b410-086e21702c1f": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "",
-        "home_featured_products": "meteorite-jewelry",
-        "per_row": 4,
-        "rows": 1,
-        "mobile_scrollable": false,
-        "view_all": false,
-        "divider": false
-      }
     }
   },
   "order": [
     "main",
     "d85bc3a7-fd8d-47e1-96ea-6e11429dde6c",
-    "7ec74fcf-2168-461f-b123-687a58d987ce",
+    "4723b2e9-d4f7-4fe5-a08b-be5b858c1816",
     "d577c540-556e-41f3-9203-ae44f38ea7c0",
-    "263c65b4-2149-4b43-9aa1-8c421123c68d",
+    "7ec74fcf-2168-461f-b123-687a58d987ce",
+    "8dcd1e21-a51f-4071-b3f3-ac27cd43ef96",
+    "3bcdecdd-10e2-4cb9-b410-086e21702c1f",
     "7d48d57a-31d7-4fcf-bcfe-04268ace52bb",
-    "1701288569bb5bef2b",
-    "3bcdecdd-10e2-4cb9-b410-086e21702c1f"
+    "1701288569bb5bef2b"
   ]
 }
