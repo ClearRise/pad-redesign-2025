@@ -13,14 +13,14 @@
           "type": "image",
           "settings": {
             "top_subheading": "",
-            "title": "Endless\npossibilities.",
+            "title": "Give a Gift as Unique as They Are",
             "title_size": 80,
-            "subheading": "Bring your brand to life",
-            "link": "",
-            "link_text": "Optional button",
+            "subheading": "Save 30-50% During our Holiday Gift Event",
+            "link": "shopify:\/\/collections\/all",
+            "link_text": "SHOP ALL RINGS",
             "link_2": "",
             "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
+            "color_accent": "#138f7e",
             "text_align": "vertical-center horizontal-center",
             "image": "shopify:\/\/shop_images\/Christmas_Large_f37d6320-69bd-43ac-b40a-de52c9fd421f.png",
             "overlay_opacity": 0,
@@ -99,17 +99,133 @@
             "boxed": false,
             "framed": false
           }
+        },
+        "7c06ff75-dad6-43a2-a29c-6fb51e31f06e": {
+          "type": "banner",
+          "settings": {
+            "heading": "Holiday Special",
+            "text": "Save 30-50% Sitewide",
+            "link": "shopify:\/\/collections\/all-products",
+            "label": "Shop Now",
+            "color_tint": "#000000",
+            "color_tint_opacity": 8,
+            "framed": false
+          }
         }
       },
       "block_order": [
         "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-1",
-        "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-2"
+        "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-2",
+        "7c06ff75-dad6-43a2-a29c-6fb51e31f06e"
       ],
       "settings": {
         "full_width": false,
         "gutter_size": 20,
         "space_above": false,
-        "space_below": true
+        "space_below": false
+      }
+    },
+    "263c65b4-2149-4b43-9aa1-8c421123c68d": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Gifts Under $200",
+        "home_featured_products": "test-200",
+        "per_row": 5,
+        "rows": 4,
+        "mobile_scrollable": false,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "7d48d57a-31d7-4fcf-bcfe-04268ace52bb": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--14688191053906__7d48d57a-31d7-4fcf-bcfe-04268ace52bb-advanced-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "30% Off",
+            "heading": "Pendants",
+            "textarea": "Free Black Stainless<br> Steel Box Chain",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Pendant_56ae5f17-8dbc-4305-8aaa-5db6424d04ce.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "template--14688191053906__7d48d57a-31d7-4fcf-bcfe-04268ace52bb-advanced-2": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Buy One <br>Get One Free",
+            "heading": "Earrings",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/earrings.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "a1d64d17-b654-48f4-a356-1024331aae02": {
+          "type": "banner",
+          "settings": {
+            "heading": "HOLIDAY SPECIAL",
+            "text": "Save Up to 50% Sitewide",
+            "link": "shopify:\/\/collections\/all-products",
+            "label": "Shop now",
+            "color_tint": "#000000",
+            "color_tint_opacity": 8,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14688191053906__7d48d57a-31d7-4fcf-bcfe-04268ace52bb-advanced-1",
+        "template--14688191053906__7d48d57a-31d7-4fcf-bcfe-04268ace52bb-advanced-2",
+        "a1d64d17-b654-48f4-a356-1024331aae02"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false
+      }
+    },
+    "1701288569bb5bef2b": {
+      "type": "apps",
+      "blocks": {
+        "d3cce40d-ef5c-423b-a044-c1a75de28f6f": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "d3cce40d-ef5c-423b-a044-c1a75de28f6f"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
       }
     }
   },
@@ -117,6 +233,9 @@
     "main",
     "d85bc3a7-fd8d-47e1-96ea-6e11429dde6c",
     "7ec74fcf-2168-461f-b123-687a58d987ce",
-    "d577c540-556e-41f3-9203-ae44f38ea7c0"
+    "d577c540-556e-41f3-9203-ae44f38ea7c0",
+    "263c65b4-2149-4b43-9aa1-8c421123c68d",
+    "7d48d57a-31d7-4fcf-bcfe-04268ace52bb",
+    "1701288569bb5bef2b"
   ]
 }
