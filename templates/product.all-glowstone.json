@@ -1,0 +1,525 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "7a40c00f-33ab-4e69-b17f-4b0da4e6853a": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "b047ed15-dc42-4347-8714-40bc82419a5a": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.discount_text.value }}"
+          }
+        },
+        "71160726-c2e7-4e18-bcb9-e14abb7b42b0": {
+          "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "locale_option": "geolocation",
+            "locale_fallback": "",
+            "theme": "light",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "size_chart": "",
+            "variant_labels": true,
+            "picker_type": "dropdown",
+            "color_swatches": false,
+            "custom_variant_comment": false
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true,
+            "enable_tooltip": false,
+            "tooltip_header": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>",
+            "tooltip_content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>"
+          }
+        },
+        "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
+          "type": "free_gifts",
+          "settings": {
+            "gift_box_title": "",
+            "gift_included": ""
+          }
+        },
+        "7621462d-9edd-432d-a525-b5bcbfe07deb": {
+          "type": "tab",
+          "settings": {
+            "title": "<b>Premium Protection Plan<\/b>",
+            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "07bdb91c-b9ed-4326-8127-0098675d0092": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "checkmark",
+            "text": "Handcrafted in Utah, USA",
+            "url": ""
+          }
+        },
+        "87272cff-cc16-40a9-b501-c6f3b9acd243": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "heart",
+            "text": "Made to order just for you",
+            "url": ""
+          }
+        },
+        "f1a8f2b3-4268-4aa9-bef1-6bee30df3005": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "shield",
+            "text": "Lifetime Warranty",
+            "url": ""
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "globe",
+            "text": "Free US Shipping",
+            "url": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "7cf22f7b-2877-4d38-a231-95946286cc18": {
+          "type": "tab",
+          "settings": {
+            "title": "Sizing Information",
+            "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
+          "type": "tab",
+          "settings": {
+            "title": "Lifetime Warranty",
+            "content": "<p>{{ product.metafields.global.lifetime_warranty | metafield_tag }}<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
+          "type": "tab",
+          "settings": {
+            "title": "Description",
+            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
+          "type": "tab",
+          "settings": {
+            "title": "How To Care",
+            "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        }
+      },
+      "block_order": [
+        "7a40c00f-33ab-4e69-b17f-4b0da4e6853a",
+        "price",
+        "b047ed15-dc42-4347-8714-40bc82419a5a",
+        "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
+        "separator",
+        "variant_picker",
+        "inventory_status",
+        "buy_buttons",
+        "6992c020-3994-4f22-9eb2-ca8e26cbda06",
+        "7621462d-9edd-432d-a525-b5bcbfe07deb",
+        "07bdb91c-b9ed-4326-8127-0098675d0092",
+        "87272cff-cc16-40a9-b501-c6f3b9acd243",
+        "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
+        "sales_point",
+        "description",
+        "7cf22f7b-2877-4d38-a231-95946286cc18",
+        "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86",
+        "67cf22ff-76d8-4ad2-91e5-80b67524f841",
+        "e15f8d39-327a-449c-ae3e-f545ea35c05e",
+        "tab",
+        "contact"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": true,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "d8f01d1f-ebab-4c21-91d4-cd234e7faca4": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--14630908985426__d8f01d1f-ebab-4c21-91d4-cd234e7faca4-advanced-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Handcrafted <br> in the USA",
+            "textarea": "Every ring is handmade<br>  by trade artisans <br>in Utah, USA.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Handcrafted_V2.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "template--14630908985426__d8f01d1f-ebab-4c21-91d4-cd234e7faca4-advanced-2": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Uncommon <br> Materials",
+            "textarea": "Go beyond silver and <br> gold and find something <br>that's truly you.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Glowing_Vial.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "d92ac671-ec91-4aa3-81ab-e3eaeff43452": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Every Ring <br>  is Unique",
+            "textarea": "Your ring is made to <br>order just for you. <br>No two rings are <br> the same.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Meteorite_Stack_Square.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "23cb1e6f-c68e-42f1-86d5-0fcd36aa25df": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Glowstone™",
+            "textarea": "Real gemstones and other exotic materials combined with a proprietary chemical blend to create stunning designs for the day and night.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/edited.png",
+            "video_url": "",
+            "width": "100",
+            "height": 800,
+            "text_size": 120,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "632801c0-84ff-4994-b91a-ed0154b1f707": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Black Friday Special",
+            "heading": "Free Gift",
+            "textarea": "Spend $210 and get a Free Forged Carbon Fiber Ring or Pendant",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/no_text.png",
+            "video_url": "",
+            "width": "100",
+            "height": 800,
+            "text_size": 120,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14630908985426__d8f01d1f-ebab-4c21-91d4-cd234e7faca4-advanced-1",
+        "template--14630908985426__d8f01d1f-ebab-4c21-91d4-cd234e7faca4-advanced-2",
+        "d92ac671-ec91-4aa3-81ab-e3eaeff43452",
+        "23cb1e6f-c68e-42f1-86d5-0fcd36aa25df",
+        "632801c0-84ff-4994-b91a-ed0154b1f707"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true
+      }
+    },
+    "90846cdf-809b-4b26-8f9a-a5a66aec37e4": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14630908985426__90846cdf-809b-4b26-8f9a-a5a66aec37e4-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Black Friday Special",
+            "title": "Get a Free Gift With Your Order",
+            "title_size": 50,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "textblock_align": "custom_top t_center",
+            "text_align": "horizontal-center",
+            "txt_width": "400",
+            "top_padding": 20,
+            "bottom_padding": 50,
+            "left_padding": 50,
+            "right_padding": 50,
+            "image": "shopify:\/\/shop_images\/no_text.png",
+            "image_mobile": "shopify:\/\/shop_images\/no_text.png",
+            "overlay_opacity": 0,
+            "focal_point": "top center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14630908985426__90846cdf-809b-4b26-8f9a-a5a66aec37e4-image-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "100vh",
+        "mobile_height": "500px",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "6f7799dc-494e-401d-8737-8e9ae2a498c8": {
+      "type": "replo-ethos",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "product_img_with_txt": {
+      "type": "product_img_with_txt",
+      "disabled": true,
+      "settings": {
+        "sub_title1": "Handcrafted in the USA",
+        "image_1": "shopify:\/\/shop_images\/img2.jpg",
+        "text_1": "Every ring is handmade by trade artisans in Utah, USA.",
+        "url_1": "",
+        "sub_title2": "Uncommon materials",
+        "image_2": "shopify:\/\/shop_images\/img1.jpg",
+        "text_2": "Go beyond silver and gold and find something that’s truly you.",
+        "url_2": "",
+        "sub_title3": "Every ring is unique",
+        "image_3": "shopify:\/\/shop_images\/img3.jpg",
+        "text_3": "Your ring is made to order just for you. No two rings are the same.",
+        "url_3": ""
+      }
+    },
+    "product_how_to_work": {
+      "type": "product_how_to_work",
+      "blocks": {
+        "93e02dd1-0098-4d81-bb47-a37e47aeb0c1": {
+          "type": "text",
+          "settings": {
+            "sub_title": "Place your order",
+            "text": "Unsure of your size? Select “unsure – send ring sizer first” and we’ll post you a free ring sizer",
+            "image_1": "shopify:\/\/shop_images\/how-it-works-11.jpg",
+            "image_2": "shopify:\/\/shop_images\/how-it-works-22.jpg"
+          }
+        },
+        "0669e6bd-9d26-4ae4-b380-ce53681e452e": {
+          "type": "text",
+          "settings": {
+            "sub_title": "Confirm your ring size",
+            "text": "After using the sizer, simply send us your size via email"
+          }
+        },
+        "ba8bc2a1-afb2-4a08-8837-4ae3795928a4": {
+          "type": "text",
+          "settings": {
+            "sub_title": "We handcraft your ring",
+            "text": "Your order hits the workshop and our trained artisans start crafting your new ring"
+          }
+        }
+      },
+      "block_order": [
+        "93e02dd1-0098-4d81-bb47-a37e47aeb0c1",
+        "0669e6bd-9d26-4ae4-b380-ce53681e452e",
+        "ba8bc2a1-afb2-4a08-8837-4ae3795928a4"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "title": "Find Your Ring Size",
+        "title_size": 21,
+        "bg_color": "#000000",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "46cc26fb-adef-48ef-adb5-d7706819bd7b": {
+          "type": "text",
+          "settings": {
+            "text": "fasfdasdfsadfsadfsadfsdafsadfsdafsd"
+          }
+        }
+      },
+      "block_order": [
+        "46cc26fb-adef-48ef-adb5-d7706819bd7b"
+      ],
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "164740826566424b78": {
+      "type": "apps",
+      "blocks": {
+        "0b2c4db0-68a2-468e-890c-52a77263cb09": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "combined_widget"
+          }
+        }
+      },
+      "block_order": [
+        "0b2c4db0-68a2-468e-890c-52a77263cb09"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": false,
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d8f01d1f-ebab-4c21-91d4-cd234e7faca4",
+    "90846cdf-809b-4b26-8f9a-a5a66aec37e4",
+    "6f7799dc-494e-401d-8737-8e9ae2a498c8",
+    "product_img_with_txt",
+    "product_how_to_work",
+    "sub",
+    "164740826566424b78",
+    "product-recommendations",
+    "recently-viewed",
+    "collection-return"
+  ]
+}
