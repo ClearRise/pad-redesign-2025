@@ -44,12 +44,12 @@
     "7ec74fcf-2168-461f-b123-687a58d987ce": {
       "type": "featured-collection",
       "settings": {
-        "title": "Best Sellers (30-50% Off)",
+        "title": "Save 30-50% on These Best Sellers",
         "home_featured_products": "best-sellers",
         "per_row": 4,
-        "rows": 2,
-        "mobile_scrollable": true,
-        "view_all": true,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
         "divider": false
       }
     },
@@ -227,6 +227,18 @@
         "full_width": false,
         "space_around": true
       }
+    },
+    "3bcdecdd-10e2-4cb9-b410-086e21702c1f": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "home_featured_products": "meteorite-jewelry",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
     }
   },
   "order": [
@@ -236,6 +248,7 @@
     "d577c540-556e-41f3-9203-ae44f38ea7c0",
     "263c65b4-2149-4b43-9aa1-8c421123c68d",
     "7d48d57a-31d7-4fcf-bcfe-04268ace52bb",
-    "1701288569bb5bef2b"
+    "1701288569bb5bef2b",
+    "3bcdecdd-10e2-4cb9-b410-086e21702c1f"
   ]
 }
