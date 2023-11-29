@@ -42,11 +42,11 @@
         "autoplay_speed": 5
       }
     },
-    "4723b2e9-d4f7-4fe5-a08b-be5b858c1816": {
+    "7ec74fcf-2168-461f-b123-687a58d987ce": {
       "type": "featured-collection",
       "settings": {
-        "title": "",
-        "home_featured_products": "the-glowstone-series",
+        "title": "Best Sellers",
+        "home_featured_products": "best-sellers",
         "per_row": 4,
         "rows": 1,
         "mobile_scrollable": false,
@@ -90,11 +90,11 @@
         "space_below": false
       }
     },
-    "7ec74fcf-2168-461f-b123-687a58d987ce": {
+    "4723b2e9-d4f7-4fe5-a08b-be5b858c1816": {
       "type": "featured-collection",
       "settings": {
-        "title": "Best Sellers",
-        "home_featured_products": "best-sellers",
+        "title": "",
+        "home_featured_products": "the-glowstone-series",
         "per_row": 4,
         "rows": 1,
         "mobile_scrollable": false,
@@ -268,9 +268,9 @@
   "order": [
     "main",
     "d85bc3a7-fd8d-47e1-96ea-6e11429dde6c",
-    "4723b2e9-d4f7-4fe5-a08b-be5b858c1816",
-    "d577c540-556e-41f3-9203-ae44f38ea7c0",
     "7ec74fcf-2168-461f-b123-687a58d987ce",
+    "d577c540-556e-41f3-9203-ae44f38ea7c0",
+    "4723b2e9-d4f7-4fe5-a08b-be5b858c1816",
     "8dcd1e21-a51f-4071-b3f3-ac27cd43ef96",
     "3bcdecdd-10e2-4cb9-b410-086e21702c1f",
     "7d48d57a-31d7-4fcf-bcfe-04268ace52bb",
