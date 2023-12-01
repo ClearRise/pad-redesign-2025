@@ -1,10 +1,5 @@
 {
   "sections": {
-    "6e7f16ab-8df4-4f43-b59f-898aad0d81c4": {
-      "type": "replo-sitewide-sale-bf",
-      "settings": {
-      }
-    },
     "collection-header": {
       "type": "collection-header",
       "disabled": true,
@@ -12,6 +7,41 @@
         "enable": true,
         "collection_image_enable": false,
         "parallax": true
+      }
+    },
+    "dcdeca2b-ab2e-4516-9d5d-edbc1ebcd719": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14695019905106__dcdeca2b-ab2e-4516-9d5d-edbc1ebcd719-image-2": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/holiday_sale_pog.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14695019905106__dcdeca2b-ab2e-4516-9d5d-edbc1ebcd719-image-2"
+      ],
+      "settings": {
+        "use_img_banner": false,
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
       }
     },
     "promo-grid": {
@@ -29,33 +59,10 @@
             "color_tint_opacity": 8,
             "framed": false
           }
-        },
-        "advanced": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "Limited time",
-            "heading": "Announce your promotion",
-            "textarea": "Include the smaller details of your promotion in text below the title.",
-            "cta_text1": "Shop This",
-            "cta_link1": "",
-            "cta_text2": "Shop All",
-            "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Ring_Main_Focus_Shot.jpg",
-            "video_url": "",
-            "width": "100",
-            "height": 500,
-            "text_size": 120,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
         }
       },
       "block_order": [
-        "banner",
-        "advanced"
+        "banner"
       ],
       "disabled": true,
       "settings": {
@@ -104,8 +111,8 @@
     }
   },
   "order": [
-    "6e7f16ab-8df4-4f43-b59f-898aad0d81c4",
     "collection-header",
+    "dcdeca2b-ab2e-4516-9d5d-edbc1ebcd719",
     "promo-grid",
     "main-collection"
   ]
