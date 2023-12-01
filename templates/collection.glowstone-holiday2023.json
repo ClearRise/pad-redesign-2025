@@ -36,9 +36,9 @@
       ],
       "settings": {
         "use_img_banner": false,
-        "section_height": "650px",
-        "mobile_height": "auto",
-        "parallax": true,
+        "section_height": "450px",
+        "mobile_height": "250px",
+        "parallax": false,
         "style": "bars",
         "autoplay": true,
         "autoplay_speed": 5
