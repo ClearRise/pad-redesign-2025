@@ -1,8 +1,39 @@
 {
   "sections": {
-    "6e7f16ab-8df4-4f43-b59f-898aad0d81c4": {
-      "type": "replo-sitewide-sale-bf",
+    "17347204-928a-46d1-8166-ac8c007f382d": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14574612086866__17347204-928a-46d1-8166-ac8c007f382d-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/up_to_50_website_banner.png",
+            "image_mobile": "shopify:\/\/shop_images\/upto50_mobile_website.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14574612086866__17347204-928a-46d1-8166-ac8c007f382d-image-1"
+      ],
       "settings": {
+        "use_img_banner": false,
+        "section_height": "450px",
+        "mobile_height": "250px",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 5
       }
     },
     "collection-header": {
@@ -104,7 +135,7 @@
     }
   },
   "order": [
-    "6e7f16ab-8df4-4f43-b59f-898aad0d81c4",
+    "17347204-928a-46d1-8166-ac8c007f382d",
     "collection-header",
     "promo-grid",
     "main-collection"

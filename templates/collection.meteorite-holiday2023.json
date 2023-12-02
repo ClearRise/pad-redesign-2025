@@ -25,8 +25,8 @@
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/fixed_size_banner.png",
-            "image_mobile": "shopify:\/\/shop_images\/fixed_size_mobile.png",
+            "image": "shopify:\/\/shop_images\/meteorite_fixed.png",
+            "image_mobile": "shopify:\/\/shop_images\/Meteorite_Mobile_Website.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -37,11 +37,11 @@
       ],
       "settings": {
         "use_img_banner": false,
-        "section_height": "natural",
+        "section_height": "450px",
         "mobile_height": "250px",
         "parallax": false,
         "style": "bars",
-        "autoplay": true,
+        "autoplay": false,
         "autoplay_speed": 5
       }
     },
