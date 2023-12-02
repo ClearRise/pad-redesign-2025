@@ -23,31 +23,11 @@
             "focal_point": "center center"
           }
         },
-        "14123d7d-fcf1-42c6-b9fa-86318e20a4a9": {
+        "37d00a71-421d-4933-a411-8210f7f16d7d": {
           "type": "image",
           "settings": {
             "top_subheading": "",
             "title": "",
-            "title_size": 80,
-            "subheading": "",
-            "link": "shopify:\/\/collections\/all-products",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/Cyber_week.png",
-            "image_mobile": "shopify:\/\/shop_images\/cyber_week_mobile.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "37d00a71-421d-4933-a411-8210f7f16d7d": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "",
-            "title": "CW ending soon (delete)",
             "title_size": 80,
             "subheading": "",
             "link": "shopify:\/\/collections\/all-products",
@@ -85,7 +65,6 @@
       },
       "block_order": [
         "slideshow-0",
-        "14123d7d-fcf1-42c6-b9fa-86318e20a4a9",
         "37d00a71-421d-4933-a411-8210f7f16d7d",
         "0d93a6af-7c47-4b52-819d-50a7119e00de"
       ],
