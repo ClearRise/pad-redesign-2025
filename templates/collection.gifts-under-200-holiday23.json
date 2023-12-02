@@ -16,6 +16,8 @@
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/giftsunder_website_banner_glowstone.png",
+            "image_mobile": "shopify:\/\/shop_images\/gifts_under.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -26,9 +28,9 @@
       ],
       "settings": {
         "use_img_banner": false,
-        "section_height": "650px",
-        "mobile_height": "auto",
-        "parallax": true,
+        "section_height": "450px",
+        "mobile_height": "250px",
+        "parallax": false,
         "style": "bars",
         "autoplay": true,
         "autoplay_speed": 5
