@@ -170,10 +170,9 @@
           },
           "0b7071d9-7d1f-4b7c-84b6-f339558fe3b5": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "HOLIDAY SALE",
-              "link_text": "Shop the sale to save 30-50%",
+              "link_text": "SAVE 30-50%",
               "link": "shopify:\/\/collections\/all-products"
             }
           }
