@@ -27,7 +27,7 @@
         "template--14574612086866__17347204-928a-46d1-8166-ac8c007f382d-image-1"
       ],
       "settings": {
-        "use_img_banner": false,
+        "use_img_banner": true,
         "section_height": "450px",
         "mobile_height": "250px",
         "parallax": false,
