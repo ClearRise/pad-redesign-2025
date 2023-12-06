@@ -36,8 +36,8 @@
         "template--14695019905106__dcdeca2b-ab2e-4516-9d5d-edbc1ebcd719-image-2"
       ],
       "settings": {
-        "use_img_banner": false,
-        "section_height": "450px",
+        "use_img_banner": true,
+        "section_height": "natural",
         "mobile_height": "250px",
         "parallax": false,
         "style": "bars",
