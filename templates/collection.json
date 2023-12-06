@@ -28,8 +28,8 @@
       ],
       "settings": {
         "use_img_banner": true,
-        "section_height": "450px",
-        "mobile_height": "250px",
+        "section_height": "natural",
+        "mobile_height": "auto",
         "parallax": false,
         "style": "bars",
         "autoplay": false,
