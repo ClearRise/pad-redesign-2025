@@ -29,7 +29,7 @@
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
-        "mobile_height": "auto",
+        "mobile_height": "250px",
         "parallax": false,
         "style": "bars",
         "autoplay": false,
