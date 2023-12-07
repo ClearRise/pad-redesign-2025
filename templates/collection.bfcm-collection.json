@@ -3,7 +3,7 @@
     "438e0cbd-241b-4675-92a5-cdc322bda3f3": {
       "type": "slideshow",
       "blocks": {
-        "template--14669504184402__438e0cbd-241b-4675-92a5-cdc322bda3f3-image-1": {
+        "150d05e0-d7b2-4c46-bfb8-41f1425eca20": {
           "type": "image",
           "settings": {
             "top_subheading": "",
@@ -16,15 +16,15 @@
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/Desktop_test.png",
-            "image_mobile": "shopify:\/\/shop_images\/Test.png",
+            "image": "shopify:\/\/shop_images\/up_to_50_website_banner.png",
+            "image_mobile": "shopify:\/\/shop_images\/upto50_mobile_website.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "template--14669504184402__438e0cbd-241b-4675-92a5-cdc322bda3f3-image-1"
+        "150d05e0-d7b2-4c46-bfb8-41f1425eca20"
       ],
       "settings": {
         "use_img_banner": true,
@@ -34,40 +34,6 @@
         "style": "bars",
         "autoplay": true,
         "autoplay_speed": 5
-      }
-    },
-    "02747987-eb13-41e5-ac1c-5ca10f2cc8b1": {
-      "type": "rich-text",
-      "blocks": {
-        "template--14669504184402__02747987-eb13-41e5-ac1c-5ca10f2cc8b1-heading-1": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "title": "Jewelry That's One-of-a-kind. Just Like The Men Who Wear It."
-          }
-        },
-        "template--14669504184402__02747987-eb13-41e5-ac1c-5ca10f2cc8b1-text-1": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": false,
-            "text": "<h3>Exotic and Unique. Just Like the Men Who Wear Them.<\/h3><p>Since 2015, we've been handcrafting artisan rings using the most uncommon luxury materials. <\/p><p>Whether it's hand-forged Damascus steel from Nevada, fossilized mammoth tooth from Siberia, or meteorite pulled from the Arctic Circle, you'll find a story in every ring. <\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--14669504184402__02747987-eb13-41e5-ac1c-5ca10f2cc8b1-heading-1",
-        "template--14669504184402__02747987-eb13-41e5-ac1c-5ca10f2cc8b1-text-1"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
-      }
-    },
-    "0f2c6960-1b01-4239-be13-fb428a5adc40": {
-      "type": "replo-flash-sale-timer",
-      "disabled": true,
-      "settings": {
       }
     },
     "collection-header": {
@@ -82,18 +48,6 @@
     "promo-grid": {
       "type": "promo-grid",
       "blocks": {
-        "banner": {
-          "type": "banner",
-          "settings": {
-            "heading": "",
-            "text": "<b>30% OFF<\/b>  Sitewide with code <b>BLACKFRIDAY30<\/b>",
-            "link": "",
-            "label": "",
-            "color_tint": "#000000",
-            "color_tint_opacity": 6,
-            "framed": false
-          }
-        },
         "advanced": {
           "type": "advanced",
           "disabled": true,
@@ -119,7 +73,6 @@
         }
       },
       "block_order": [
-        "banner",
         "advanced"
       ],
       "settings": {
@@ -138,12 +91,6 @@
           "settings": {
           }
         },
-        "subcollections": {
-          "type": "subcollections",
-          "settings": {
-            "subcollections_per_row": 5
-          }
-        },
         "product_grid": {
           "type": "product_grid",
           "settings": {
@@ -156,7 +103,6 @@
       },
       "block_order": [
         "collection_description",
-        "subcollections",
         "product_grid"
       ],
       "settings": {
@@ -170,8 +116,6 @@
   },
   "order": [
     "438e0cbd-241b-4675-92a5-cdc322bda3f3",
-    "02747987-eb13-41e5-ac1c-5ca10f2cc8b1",
-    "0f2c6960-1b01-4239-be13-fb428a5adc40",
     "collection-header",
     "promo-grid",
     "main-collection"
