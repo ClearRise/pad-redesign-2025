@@ -76,7 +76,7 @@
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
           "type": "tab",
           "settings": {
-            "title": "<b>Premium Protection Plan<\/b>",
+            "title": "Premium Protection Plan",
             "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
             "page": "",
             "enable_readmore": false,
@@ -86,8 +86,8 @@
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
           "type": "sales_point",
           "settings": {
-            "icon": "checkmark",
-            "text": "Handcrafted in Utah, USA",
+            "icon": "gift",
+            "text": "Handmade in Utah",
             "url": ""
           }
         },
@@ -95,24 +95,24 @@
           "type": "sales_point",
           "settings": {
             "icon": "heart",
-            "text": "Made to order just for you",
+            "text": "Made to order",
             "url": ""
           }
         },
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005": {
           "type": "sales_point",
           "settings": {
-            "icon": "shield",
-            "text": "Lifetime Warranty",
+            "icon": "truck",
+            "text": "Worldwide Shipping",
             "url": ""
           }
         },
         "sales_point": {
           "type": "sales_point",
           "settings": {
-            "icon": "globe",
-            "text": "Free US Shipping",
-            "url": ""
+            "icon": "tag",
+            "text": "Find Your Size",
+            "url": "https:\/\/patrickadairdesigns.com\/pages\/how-to-use-a-ring-sizer"
           }
         },
         "description": {
