@@ -17,7 +17,7 @@
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
           "type": "text",
           "settings": {
-            "text": "<b><font color=\"RED\">Early Access Pricing | 72 Hours Only<\/font><\/b>"
+            "text": "{{ product.metafields.custom.discount_text.value }}"
           }
         },
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0": {
@@ -122,16 +122,6 @@
             "is_tab": false
           }
         },
-        "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
-          "type": "tab",
-          "settings": {
-            "title": "Additional Details",
-            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p><\/p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": ""
-          }
-        },
         "7cf22f7b-2877-4d38-a231-95946286cc18": {
           "type": "tab",
           "settings": {
@@ -147,6 +137,16 @@
           "settings": {
             "title": "Lifetime Warranty",
             "content": "<p>{{ product.metafields.global.lifetime_warranty | metafield_tag }}<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
+          "type": "tab",
+          "settings": {
+            "title": "Additional Details",
+            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -196,9 +196,9 @@
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
         "sales_point",
         "description",
-        "67cf22ff-76d8-4ad2-91e5-80b67524f841",
         "7cf22f7b-2877-4d38-a231-95946286cc18",
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86",
+        "67cf22ff-76d8-4ad2-91e5-80b67524f841",
         "e15f8d39-327a-449c-ae3e-f545ea35c05e",
         "tab",
         "contact"
