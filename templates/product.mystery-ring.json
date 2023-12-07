@@ -269,8 +269,8 @@
         "title": "Find Your Ring Size",
         "title_size": 21,
         "bg_color": "#000000",
-        "padding_top": 5,
-        "padding_bottom": 5
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "1646853684b754aedd": {
