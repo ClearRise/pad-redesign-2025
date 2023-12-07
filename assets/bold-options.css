@@ -185,8 +185,44 @@ bold-options.css version 6
     height: 1px;
 }
 
-.bold_option label {
-    display: inline;
+.bold_option > label {
+    display: flex;
+    gap: 5px;
+    margin: 0;
+}
+.bold_option_checkbox label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+}
+.bold_option_value label {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    gap: 5px;
+}
+.bold_option_value {
+    display: flex;
+}
+.bold_option_textboxmulti .bold_option_element{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.bold_option_checkboxmulti .bold_option_element, .bold_option_radio .bold_option_element{
+    display: flex;
+}
+
+.option-set-option-preview .option-preview-container{
+    overflow-x: auto;
+}
+.option-set-option-preview fieldset > div {
+    width: max-content !important;
+}
+.option-set-option-preview fieldset > .bold_option_displaytext {
+    width: 250px !important;
 }
 
 .bold_option input[name="qty[]"] {
