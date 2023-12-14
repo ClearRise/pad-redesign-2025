@@ -163,8 +163,10 @@
        {% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times:100 %}
     {% endif %}
 
+  
+    {% assign new_total_price = cart.total_price | minus: hide_price %}
    
-  {% if settings.show_gift_box and cart.total_price >= FirstTierAmountRaw and cart.total_price < SecondTierMinRaw %}
+  {% if settings.show_gift_box and new_total_price >= FirstTierAmountRaw and new_total_price < SecondTierMinRaw %}
       <!-- gift box -->
       {% assign GiftBoxAmount = settings.cart_threshold_amount %}
       {% assign GiftBoxAmountRaw = settings.cart_threshold_amount | times:100 %}
@@ -191,7 +193,7 @@
         {% endfor %}
       {% endif %}
 
-    {% if cart.total_price < GiftBoxAmountRaw %}
+    {% if new_total_price < GiftBoxAmountRaw %}
      
 <!--       <h4 class="" style="border-top: 1px solid;padding-top: 10px;margin-bottom: 0px;height: 14px; color: #000;font-size: 17px; letter-spacing: 0.1px;">{{ settings.spend_progress }}</h4> -->
       <p class="gift_box_title_empty">{{ settings.empty_cart_text1 }}</p>
@@ -199,7 +201,7 @@
       <p class="gift_box_title_empty">{{ settings.empty_cart_text3 }}</p>
     {% endif %}
     
-      {% if cart.total_price >= GiftBoxAmountRaw %}
+      {% if new_total_price >= GiftBoxAmountRaw %}
   
       <div class="gift_box  ffffffffffff">
         {% if first_product_found == false or second_product_found == false %}
@@ -292,10 +294,10 @@
       {% endif %}
     {% endif %}
 
-   {% if settings.second_show_gift_box and cart.total_price >= SecondTierMinRaw and cart.total_price < SecondTierMaxRaw  %}
+   {% if settings.second_show_gift_box and new_total_price >= SecondTierMinRaw and new_total_price < SecondTierMaxRaw  %}
       {% render 'secondtiergift' %}
     {% endif %}
-    {% if settings.third_show_gift_box and cart.total_price >= ThirdTierAmountRaw %}
+    {% if settings.third_show_gift_box and new_total_price >= ThirdTierAmountRaw %}
       {% render 'thirdtiergift' %}
     {% endif %}
 
@@ -325,7 +327,7 @@
     {% endfor %}
 {% endfor %}
 {% if settings.show_fbt %}
-   {% if cart.total_price < FirstTierAmountRaw %}
+   {% if new_total_price < FirstTierAmountRaw %}
  <div class="upsell_box"> 
     {% unless col_products == '' %}
       <h4 class="upsell-heading upsell-product-heading" style="color:black;">{{ upsellTitle }}</h4>
