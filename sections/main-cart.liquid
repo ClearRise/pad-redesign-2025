@@ -29,7 +29,17 @@
       <div class="cart__page">
         <div data-products class="cart__page-col">
           {% assign intelligems_total = 0 %}
+          {% assign cart_total_exclude_gift = 0 %}
+
+          
 {% for item in cart.items %}
+
+         {% if item.product.metafields.custom.hide_free_gift.value == true %}
+             {% assign cart_total_exclude_gift = cart_total_exclude_gift | plus: item.final_price  | times: item.quantity %}
+         {% endif %}
+
+         
+          
     {% case item.properties._igLineItemDiscount %}
       {% when "0" or nil or blank %}
         {% assign intelligems_discount = 0 %}
@@ -44,9 +54,10 @@
   {%- endif -%}
 {%- render 'cart-item', product: item, line: forloop.index, intelligems_discount: intelligems_discount -%}
           {%- endfor -%}
+
         </div>
         <div class="cart__page-col">
-          {% render 'dg-cart-upsells' %}
+          {% render 'dg-cart-upsells',  hide_price: cart_total_exclude_gift %}
           {% if settings.cart_notes_enable %}
             <div>
               <label for="CartNote">{{ 'cart.general.note' | t }}</label>
