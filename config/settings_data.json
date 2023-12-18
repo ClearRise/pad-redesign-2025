@@ -167,14 +167,6 @@
               "sub_menu": "Custom Rings",
               "link_submenu": "shopify:\/\/collections\/custom-rings"
             }
-          },
-          "0b7071d9-7d1f-4b7c-84b6-f339558fe3b5": {
-            "type": "announcement",
-            "settings": {
-              "text": "HOLIDAY SALE ENDS THIS WEEK",
-              "link_text": "SAVE 30-50% Sitewide",
-              "link": "shopify:\/\/collections\/all-products"
-            }
           }
         },
         "block_order": [
@@ -182,8 +174,7 @@
           "30d9274d-f502-4710-bb39-866381456103",
           "966bc6e1-31db-4261-b34d-773ca4a79259",
           "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56",
-          "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc",
-          "0b7071d9-7d1f-4b7c-84b6-f339558fe3b5"
+          "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc"
         ],
         "settings": {
           "main_menu_link_list": "05-16-23-lewis-main-menu",
