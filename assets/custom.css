@@ -133,7 +133,7 @@ img.h_auto[data-sizes=auto]{
 }
 
 .drawer--right.drawer--is-open{
-  z-index: 30000000;
+  z-index: 99999999999999999;
 }
 
 .cart-shippingThreshold__bar{
