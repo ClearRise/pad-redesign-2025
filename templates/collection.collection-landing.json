@@ -1,1 +1,180 @@
-{"sections":{"16578339481aee3813":{"type":"slideshow","blocks":{"1657833948beb2f3f4-0":{"type":"image","settings":{"top_subheading":"","title":"","title_size":80,"subheading":"","link":"","link_text":"","link_2":"","link_text_2":"","color_accent":"rgba(0,0,0,0)","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/PANA8408_Large_4f6a7389-a70f-431f-a24d-b1abe42cd922.png","image_mobile":"shopify:\/\/shop_images\/The_Hyper_Ring_-_Hero.png","overlay_opacity":0,"focal_point":"center center"}},"1657833948beb2f3f4-1":{"type":"image","disabled":true,"settings":{"top_subheading":"","title":"Two line\ntitle slide.","title_size":80,"subheading":"And big, beautiful imagery","link":"","link_text":"Optional button","link_2":"","link_text_2":"","color_accent":"rgba(0,0,0,0)","text_align":"vertical-center horizontal-center","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["1657833948beb2f3f4-0","1657833948beb2f3f4-1"],"settings":{"section_height":"650px","mobile_height":"400px","parallax":false,"style":"bars","autoplay":true,"autoplay_speed":5}},"1657835705dc8e3e56":{"type":"text-and-image","settings":{"image":"shopify:\/\/shop_images\/Vertical_Race_Track_Photo.png","image2":"shopify:\/\/shop_images\/box_1.png","image_width":700,"subtitle":"From the Track to Your Finger:","title":"The Hyper Ring","text":"<p>Every ring tells stories. This ring tells legends. <br\/><br\/>From 267 MPH in Germany to the first ever aluminum wheels, this ring embodies  hypercar performance:<br\/><br\/>The heart of every Hyper Ring is a genuine almuminum core taken from an OEM 12 Spoke Aluminum Bugatti Wheel. Each ring can remain solid aluminum or have your choice of forged carbon fiber, gold, or platinum accents added. <br\/><br\/>There will only ever be 50 of these rings made. <\/p><p>Discover yours today. <\/p>","button_label":"","button_link":"","button_style":"primary","align_text":"center","layout":"right","divider":false}},"165230290793d156d0":{"type":"rich-text","disabled":true,"blocks":{"16523029064ae93e4d-0":{"type":"heading","settings":{"title":"The Hyper Ring"}}},"block_order":["16523029064ae93e4d-0"],"settings":{"align_text":"center","narrow_column":true,"divider":false}},"1657914295b31c2814":{"type":"featured-collection","settings":{"title":"The Hyper Rings","home_featured_products":"hyper-rings","per_row":4,"rows":1,"mobile_scrollable":true,"view_all":false,"divider":false}},"main-collection":{"type":"main-collection","disabled":true,"blocks":{"product_grid":{"type":"product_grid","settings":{"enable_collection_count":true,"per_row":4,"rows_per_page":7,"mobile_flush_grid":false}}},"block_order":["product_grid"],"settings":{"enable_sidebar":true,"collapsed":true,"filter_style":"sidebar","enable_color_swatches":false,"enable_sort":true}},"1657835431f938f165":{"type":"hero-video","settings":{"title":"Step Inside the Process","title_size":80,"subheading":"","link_text":"Discover How It's Made","link":"https:\/\/www.youtube.com\/watch?v=3ObMlrqnVfM","color_accent":"#138f7e","text_align":"vertical-center horizontal-center","video_url":"https:\/\/www.youtube.com\/watch?v=3ObMlrqnVfM","overlay_opacity":0,"section_height":"650px","mobile_height":"300px"}},"1657835397c8761ce9":{"type":"featured-video","disabled":true,"settings":{"title":"Journey Behind the Process","video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","divider":false}},"165230307852582c62":{"type":"featured-collection","disabled":true,"settings":{"title":"Popular Picks - Malachite Jewelry","home_featured_products":"malachite-rings","per_row":5,"rows":1,"mobile_scrollable":true,"view_all":false,"divider":false}}},"order":["16578339481aee3813","1657835705dc8e3e56","165230290793d156d0","1657914295b31c2814","main-collection","1657835431f938f165","1657835397c8761ce9","165230307852582c62"]}
+{
+  "sections": {
+    "16578339481aee3813": {
+      "type": "slideshow",
+      "blocks": {
+        "1657833948beb2f3f4-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/PANA8408_Large_4f6a7389-a70f-431f-a24d-b1abe42cd922.png",
+            "image_mobile": "shopify:\/\/shop_images\/The_Hyper_Ring_-_Hero.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        },
+        "1657833948beb2f3f4-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "",
+            "title": "Two line\ntitle slide.",
+            "title_size": 80,
+            "subheading": "And big, beautiful imagery",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "1657833948beb2f3f4-0",
+        "1657833948beb2f3f4-1"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "400px",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "1657835705dc8e3e56": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Vertical_Race_Track_Photo.png",
+        "image2": "shopify:\/\/shop_images\/box_1.png",
+        "image_width": 700,
+        "subtitle": "From the Track to Your Finger:",
+        "title": "The Hyper Ring",
+        "text": "<p>Every ring tells stories. This ring tells legends. <br\/><br\/>From 267 MPH in Germany to the first ever aluminum wheels, this ring embodies  hypercar performance:<br\/><br\/>The heart of every Hyper Ring is a genuine almuminum core taken from an OEM 12 Spoke Aluminum Bugatti Wheel. Each ring can remain solid aluminum or have your choice of forged carbon fiber, gold, or platinum accents added. <br\/><br\/>There will only ever be 50 of these rings made. <\/p><p>Discover yours today. <\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "165230290793d156d0": {
+      "type": "rich-text",
+      "blocks": {
+        "16523029064ae93e4d-0": {
+          "type": "heading",
+          "settings": {
+            "title": "The Hyper Ring"
+          }
+        }
+      },
+      "block_order": [
+        "16523029064ae93e4d-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1657914295b31c2814": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "The Hyper Rings",
+        "home_featured_products": "hyper-rings",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 7,
+            "mobile_flush_grid": false
+          }
+        }
+      },
+      "block_order": [
+        "product_grid"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true
+      }
+    },
+    "1657835431f938f165": {
+      "type": "hero-video",
+      "settings": {
+        "title": "Step Inside the Process",
+        "title_size": 80,
+        "subheading": "",
+        "link_text": "Discover How It's Made",
+        "link": "https:\/\/www.youtube.com\/watch?v=3ObMlrqnVfM",
+        "color_accent": "#138f7e",
+        "text_align": "vertical-center horizontal-center",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=3ObMlrqnVfM",
+        "overlay_opacity": 0,
+        "section_height": "650px",
+        "mobile_height": "300px"
+      }
+    },
+    "1657835397c8761ce9": {
+      "type": "featured-video",
+      "disabled": true,
+      "settings": {
+        "title": "Journey Behind the Process",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "divider": false
+      }
+    },
+    "165230307852582c62": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Popular Picks - Malachite Jewelry",
+        "home_featured_products": "malachite-rings",
+        "per_row": 5,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "16578339481aee3813",
+    "1657835705dc8e3e56",
+    "165230290793d156d0",
+    "1657914295b31c2814",
+    "main-collection",
+    "1657835431f938f165",
+    "1657835397c8761ce9",
+    "165230307852582c62"
+  ]
+}

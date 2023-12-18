@@ -1,1 +1,162 @@
-{"sections":{"collection-header":{"type":"collection-header","settings":{"enable":true,"collection_image_enable":false,"parallax":true}},"191b416d-3567-43ff-b27c-83def49e192c":{"type":"rich-text","blocks":{"template--14413989478482__191b416d-3567-43ff-b27c-83def49e192c-1664915906735c4bba-1":{"type":"text","settings":{"enlarge_text":false,"text":"<p>{{ collection.metafields.custom.hero_paragraph | metafield_tag }}<\/p>"}}},"block_order":["template--14413989478482__191b416d-3567-43ff-b27c-83def49e192c-1664915906735c4bba-1"],"settings":{"align_text":"center","narrow_column":true,"divider":false}},"main-collection":{"type":"main-collection","disabled":true,"blocks":{"collection_description":{"type":"collection_description","settings":{}},"subcollections":{"type":"subcollections","settings":{"subcollections_per_row":5}},"product_grid":{"type":"product_grid","settings":{"enable_collection_count":true,"per_row":3,"rows_per_page":20,"mobile_flush_grid":true}}},"block_order":["collection_description","subcollections","product_grid"],"settings":{"enable_sidebar":true,"collapsed":true,"filter_style":"sidebar","enable_color_swatches":false,"enable_sort":true}},"da0373dd-0d80-4268-9b6d-8ff62e09111b":{"type":"featured-product","blocks":{"template--14413989478482__da0373dd-0d80-4268-9b6d-8ff62e09111b-16649159383bcc85b6-0":{"type":"price","settings":{}},"42d3189f-be93-4a9a-84dc-fc2f7ca4333a":{"type":"shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e","settings":{"data_key":"credit-promotion-badge","locale_option":"geolocation","locale_fallback":"","theme":"light","topPadding":"0","bottomPadding":"0"}},"template--14413989478482__da0373dd-0d80-4268-9b6d-8ff62e09111b-16649159383bcc85b6-1":{"type":"description","settings":{"is_tab":false}},"0b6fd272-2631-4a35-9794-97ba8fd1960f":{"type":"tab","settings":{"title":"<b>Additional Details<\/b>","content":"<p>•{{ section.settings.featured_product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_6 | metafield_tag }}<\/p>","page":""}},"template--14413989478482__da0373dd-0d80-4268-9b6d-8ff62e09111b-16649159383bcc85b6-3":{"type":"buy_buttons","settings":{"show_dynamic_checkout":false,"surface_pickup_enable":false}}},"block_order":["template--14413989478482__da0373dd-0d80-4268-9b6d-8ff62e09111b-16649159383bcc85b6-0","42d3189f-be93-4a9a-84dc-fc2f7ca4333a","template--14413989478482__da0373dd-0d80-4268-9b6d-8ff62e09111b-16649159383bcc85b6-1","0b6fd272-2631-4a35-9794-97ba8fd1960f","template--14413989478482__da0373dd-0d80-4268-9b6d-8ff62e09111b-16649159383bcc85b6-3"],"settings":{"featured_product":"solar-system-glowstone-ring","divider":false,"sku_enable":false,"image_position":"left","image_size":"small","product_zoom_enable":false,"thumbnail_position":"below","thumbnail_arrows":false,"mobile_layout":"full","enable_video_looping":true,"product_video_style":"muted"}},"06fd2875-dee4-4a96-acdc-5c97472d4af7":{"type":"featured-collection","settings":{"title":"Boundless Celestial Bodies","home_featured_products":"celestial-bodies-boundless-glowstone-subseries","per_row":3,"rows":1,"mobile_scrollable":false,"view_all":false,"divider":false}},"0f33767c-6517-4610-a1b5-056128cabdf5":{"type":"featured-collection","settings":{"title":"Meteorite Accessories","home_featured_products":"meteorite-accessories","per_row":4,"rows":1,"mobile_scrollable":false,"view_all":true,"divider":false}}},"order":["collection-header","191b416d-3567-43ff-b27c-83def49e192c","main-collection","da0373dd-0d80-4268-9b6d-8ff62e09111b","06fd2875-dee4-4a96-acdc-5c97472d4af7","0f33767c-6517-4610-a1b5-056128cabdf5"]}
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": true,
+        "collection_image_enable": false,
+        "parallax": true
+      }
+    },
+    "191b416d-3567-43ff-b27c-83def49e192c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14413989478482__191b416d-3567-43ff-b27c-83def49e192c-1664915906735c4bba-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>{{ collection.metafields.custom.hero_paragraph | metafield_tag }}<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14413989478482__191b416d-3567-43ff-b27c-83def49e192c-1664915906735c4bba-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
+        },
+        "subcollections": {
+          "type": "subcollections",
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 3,
+            "rows_per_page": 20,
+            "mobile_flush_grid": true
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "subcollections",
+        "product_grid"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true
+      }
+    },
+    "da0373dd-0d80-4268-9b6d-8ff62e09111b": {
+      "type": "featured-product",
+      "blocks": {
+        "template--14413989478482__da0373dd-0d80-4268-9b6d-8ff62e09111b-16649159383bcc85b6-0": {
+          "type": "price",
+          "settings": {}
+        },
+        "42d3189f-be93-4a9a-84dc-fc2f7ca4333a": {
+          "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "locale_option": "geolocation",
+            "locale_fallback": "",
+            "theme": "light",
+            "topPadding": "0",
+            "bottomPadding": "0"
+          }
+        },
+        "template--14413989478482__da0373dd-0d80-4268-9b6d-8ff62e09111b-16649159383bcc85b6-1": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "0b6fd272-2631-4a35-9794-97ba8fd1960f": {
+          "type": "tab",
+          "settings": {
+            "title": "<b>Additional Details<\/b>",
+            "content": "<p>•{{ section.settings.featured_product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "template--14413989478482__da0373dd-0d80-4268-9b6d-8ff62e09111b-16649159383bcc85b6-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14413989478482__da0373dd-0d80-4268-9b6d-8ff62e09111b-16649159383bcc85b6-0",
+        "42d3189f-be93-4a9a-84dc-fc2f7ca4333a",
+        "template--14413989478482__da0373dd-0d80-4268-9b6d-8ff62e09111b-16649159383bcc85b6-1",
+        "0b6fd272-2631-4a35-9794-97ba8fd1960f",
+        "template--14413989478482__da0373dd-0d80-4268-9b6d-8ff62e09111b-16649159383bcc85b6-3"
+      ],
+      "settings": {
+        "featured_product": "solar-system-glowstone-ring",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "small",
+        "product_zoom_enable": false,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": false,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "06fd2875-dee4-4a96-acdc-5c97472d4af7": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Boundless Celestial Bodies",
+        "home_featured_products": "celestial-bodies-boundless-glowstone-subseries",
+        "per_row": 3,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "0f33767c-6517-4610-a1b5-056128cabdf5": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Meteorite Accessories",
+        "home_featured_products": "meteorite-accessories",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "191b416d-3567-43ff-b27c-83def49e192c",
+    "main-collection",
+    "da0373dd-0d80-4268-9b6d-8ff62e09111b",
+    "06fd2875-dee4-4a96-acdc-5c97472d4af7",
+    "0f33767c-6517-4610-a1b5-056128cabdf5"
+  ]
+}
