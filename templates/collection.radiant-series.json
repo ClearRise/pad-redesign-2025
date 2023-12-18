@@ -1,1 +1,131 @@
-{"sections":{"16578339481aee3813":{"type":"slideshow","blocks":{"1657833948beb2f3f4-0":{"type":"image","settings":{"top_subheading":"","title":"","title_size":80,"subheading":"","link":"","link_text":"","link_2":"","link_text_2":"","color_accent":"rgba(0,0,0,0)","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/radiant_website_desktop_6847b90b-858b-4ed2-8418-2facfd816469.png","image_mobile":"shopify:\/\/shop_images\/radiant_website_mobile.png","overlay_opacity":0,"focal_point":"center center"}},"1657833948beb2f3f4-1":{"type":"image","disabled":true,"settings":{"top_subheading":"","title":"Two line\ntitle slide.","title_size":80,"subheading":"And big, beautiful imagery","link":"","link_text":"Optional button","link_2":"","link_text_2":"","color_accent":"rgba(0,0,0,0)","text_align":"vertical-center horizontal-center","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["1657833948beb2f3f4-0","1657833948beb2f3f4-1"],"settings":{"section_height":"650px","mobile_height":"400px","parallax":false,"style":"bars","autoplay":true,"autoplay_speed":5}},"1657835705dc8e3e56":{"type":"text-and-image","settings":{"image":"shopify:\/\/shop_images\/radiant-stardust-ring.png","image2":"shopify:\/\/shop_images\/radiant-meteorite-ring-2.png","image_width":700,"subtitle":"All That Glitters is gold","title":"The Radiant Series","text":"<p>The Radiant Series combines some of our best selling designs with metallic resin powder. The result is a glistening Glowstone Ring housed in a durable and scratch-resistant band.<\/p><p><\/p><p>Discover yours today. <\/p>","button_label":"","button_link":"","button_style":"primary","align_text":"center","layout":"right","divider":false}},"aaf2e797-03ba-427c-a70a-3e0a0c77174a":{"type":"featured-collection","settings":{"title":"NEW Releases","home_featured_products":"new-radiant-series","per_row":5,"rows":1,"mobile_scrollable":false,"view_all":false,"divider":false}},"1657914295b31c2814":{"type":"featured-collection","settings":{"title":"Shop The Rest of the Collection","home_featured_products":"the-radiant-series","per_row":5,"rows":1,"mobile_scrollable":false,"view_all":false,"divider":false}},"main-collection":{"type":"main-collection","disabled":true,"blocks":{"product_grid":{"type":"product_grid","settings":{"enable_collection_count":true,"per_row":4,"rows_per_page":7,"mobile_flush_grid":false}}},"block_order":["product_grid"],"settings":{"enable_sidebar":true,"collapsed":true,"filter_style":"sidebar","enable_color_swatches":false,"enable_sort":true}}},"order":["16578339481aee3813","1657835705dc8e3e56","aaf2e797-03ba-427c-a70a-3e0a0c77174a","1657914295b31c2814","main-collection"]}
+{
+  "sections": {
+    "16578339481aee3813": {
+      "type": "slideshow",
+      "blocks": {
+        "1657833948beb2f3f4-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/radiant_website_desktop_6847b90b-858b-4ed2-8418-2facfd816469.png",
+            "image_mobile": "shopify:\/\/shop_images\/radiant_website_mobile.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        },
+        "1657833948beb2f3f4-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "",
+            "title": "Two line\ntitle slide.",
+            "title_size": 80,
+            "subheading": "And big, beautiful imagery",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "1657833948beb2f3f4-0",
+        "1657833948beb2f3f4-1"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "400px",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "1657835705dc8e3e56": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/radiant-stardust-ring.png",
+        "image2": "shopify:\/\/shop_images\/radiant-meteorite-ring-2.png",
+        "image_width": 700,
+        "subtitle": "All That Glitters is gold",
+        "title": "The Radiant Series",
+        "text": "<p>The Radiant Series combines some of our best selling designs with metallic resin powder. The result is a glistening Glowstone Ring housed in a durable and scratch-resistant band.<\/p><p><\/p><p>Discover yours today. <\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "aaf2e797-03ba-427c-a70a-3e0a0c77174a": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "NEW Releases",
+        "home_featured_products": "new-radiant-series",
+        "per_row": 5,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "1657914295b31c2814": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop The Rest of the Collection",
+        "home_featured_products": "the-radiant-series",
+        "per_row": 5,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 7,
+            "mobile_flush_grid": false
+          }
+        }
+      },
+      "block_order": [
+        "product_grid"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true
+      }
+    }
+  },
+  "order": [
+    "16578339481aee3813",
+    "1657835705dc8e3e56",
+    "aaf2e797-03ba-427c-a70a-3e0a0c77174a",
+    "1657914295b31c2814",
+    "main-collection"
+  ]
+}

@@ -15,7 +15,6 @@
     },
     "featured-collections": {
       "type": "featured-collections",
-      "disabled": true,
       "blocks": {
         "collection1": {
           "type": "collection",
@@ -56,6 +55,7 @@
         "collection3",
         "collection4"
       ],
+      "disabled": true,
       "settings": {
         "title": "You may also like",
         "divider": false,
