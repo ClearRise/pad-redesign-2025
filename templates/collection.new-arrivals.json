@@ -1,1 +1,165 @@
-{"sections":{"collection-header":{"type":"collection-header","settings":{"enable":true,"collection_image_enable":false,"parallax":true}},"166440098189c391bc":{"type":"rich-text","blocks":{"1664400981eaf4e3ed-1":{"type":"text","settings":{"enlarge_text":false,"text":"<p>We are constantly striving to release unique, innovative pieces while documenting the process over on our YouTube channel. Check out our Newest Arrivals below.<\/p>"}}},"block_order":["1664400981eaf4e3ed-1"],"settings":{"align_text":"center","narrow_column":true,"divider":false}},"main-collection":{"type":"main-collection","disabled":true,"blocks":{"collection_description":{"type":"collection_description","settings":{}},"subcollections":{"type":"subcollections","settings":{"subcollections_per_row":5}},"product_grid":{"type":"product_grid","disabled":true,"settings":{"enable_collection_count":true,"per_row":3,"rows_per_page":20,"mobile_flush_grid":true}}},"block_order":["collection_description","subcollections","product_grid"],"settings":{"enable_sidebar":true,"collapsed":true,"filter_style":"sidebar","enable_color_swatches":false,"enable_sort":true}},"166440089479c7a286":{"type":"featured-product","blocks":{"166440089321fa7b99-0":{"type":"price","settings":{}},"f8de3f53-a67d-4044-b8e0-0fd60073e01d":{"type":"shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e","settings":{"data_key":"credit-promotion-badge","locale_option":"geolocation","locale_fallback":"","theme":"light","topPadding":"0","bottomPadding":"0"}},"166440089321fa7b99-1":{"type":"description","settings":{"is_tab":false}},"7e8634de-b4c7-411a-bad0-80573b1a5429":{"type":"tab","settings":{"title":"<b>Additional Details<\/b>","content":"<p>•{{ section.settings.featured_product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_6 | metafield_tag }}<\/p>","page":""}},"166440089321fa7b99-3":{"type":"buy_buttons","settings":{"show_dynamic_checkout":false,"surface_pickup_enable":false}}},"block_order":["166440089321fa7b99-0","f8de3f53-a67d-4044-b8e0-0fd60073e01d","166440089321fa7b99-1","7e8634de-b4c7-411a-bad0-80573b1a5429","166440089321fa7b99-3"],"settings":{"featured_product":"forged-carbon-fiber-and-meteorite-dog-tag-pendant","divider":false,"sku_enable":false,"image_position":"left","image_size":"small","product_zoom_enable":false,"thumbnail_position":"below","thumbnail_arrows":false,"mobile_layout":"full","enable_video_looping":true,"product_video_style":"muted"}},"166440095854b3dfcf":{"type":"featured-collection","settings":{"title":"Matching Wedding Ring Sets","home_featured_products":"wedding-ring-sets","per_row":4,"rows":1,"mobile_scrollable":false,"view_all":true,"divider":false}},"16644021421fd55f09":{"type":"background-video-text","settings":{"subtitle":"","title":"Birthstone Series","text":"<p>Check out our collection of unique glowstone rings made with birthstones from every single month.<\/p>","button_label":"SHOP NOW","button_link":"shopify:\/\/collections\/birthstone-series","video_url":"https:\/\/www.youtube.com\/watch?v=-7aBWg2Mq34","color_border":"#f4f4f4","layout":"right","height":550}}},"order":["collection-header","166440098189c391bc","main-collection","166440089479c7a286","166440095854b3dfcf","16644021421fd55f09"]}
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": true,
+        "collection_image_enable": false,
+        "parallax": true
+      }
+    },
+    "166440098189c391bc": {
+      "type": "rich-text",
+      "blocks": {
+        "1664400981eaf4e3ed-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>We are constantly striving to release unique, innovative pieces while documenting the process over on our YouTube channel. Check out our Newest Arrivals below.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1664400981eaf4e3ed-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
+        },
+        "subcollections": {
+          "type": "subcollections",
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "disabled": true,
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 3,
+            "rows_per_page": 20,
+            "mobile_flush_grid": true
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "subcollections",
+        "product_grid"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true
+      }
+    },
+    "166440089479c7a286": {
+      "type": "featured-product",
+      "blocks": {
+        "166440089321fa7b99-0": {
+          "type": "price",
+          "settings": {}
+        },
+        "f8de3f53-a67d-4044-b8e0-0fd60073e01d": {
+          "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "locale_option": "geolocation",
+            "locale_fallback": "",
+            "theme": "light",
+            "topPadding": "0",
+            "bottomPadding": "0"
+          }
+        },
+        "166440089321fa7b99-1": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "7e8634de-b4c7-411a-bad0-80573b1a5429": {
+          "type": "tab",
+          "settings": {
+            "title": "<b>Additional Details<\/b>",
+            "content": "<p>•{{ section.settings.featured_product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>•{{ section.settings.featured_product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "166440089321fa7b99-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false
+          }
+        }
+      },
+      "block_order": [
+        "166440089321fa7b99-0",
+        "f8de3f53-a67d-4044-b8e0-0fd60073e01d",
+        "166440089321fa7b99-1",
+        "7e8634de-b4c7-411a-bad0-80573b1a5429",
+        "166440089321fa7b99-3"
+      ],
+      "settings": {
+        "featured_product": "forged-carbon-fiber-and-meteorite-dog-tag-pendant",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "small",
+        "product_zoom_enable": false,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": false,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "166440095854b3dfcf": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Matching Wedding Ring Sets",
+        "home_featured_products": "wedding-ring-sets",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "16644021421fd55f09": {
+      "type": "background-video-text",
+      "settings": {
+        "subtitle": "",
+        "title": "Birthstone Series",
+        "text": "<p>Check out our collection of unique glowstone rings made with birthstones from every single month.<\/p>",
+        "button_label": "SHOP NOW",
+        "button_link": "shopify:\/\/collections\/birthstone-series",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=-7aBWg2Mq34",
+        "color_border": "#f4f4f4",
+        "layout": "right",
+        "height": 550
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "166440098189c391bc",
+    "main-collection",
+    "166440089479c7a286",
+    "166440095854b3dfcf",
+    "16644021421fd55f09"
+  ]
+}
