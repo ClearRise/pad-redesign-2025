@@ -163,7 +163,7 @@
        {% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times:100 %}
     {% endif %}
 
-  
+    <script>console.log({{hide_price | json}})</script>
     {% assign new_total_price = cart.total_price | minus: hide_price %}
    
   {% if settings.show_gift_box and new_total_price >= FirstTierAmountRaw and new_total_price < SecondTierMinRaw %}
