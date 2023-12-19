@@ -30,29 +30,24 @@
         <div data-products class="cart__page-col">
           {% assign intelligems_total = 0 %}
           {% assign cart_total_exclude_gift = 0 %}
+          {% for item in cart.items %}
+            {% if item.product.metafields.custom.hide_free_gift.value == true %}
+                {% assign cart_total_exclude_gift = cart_total_exclude_gift | plus: item.final_price  | times: item.quantity %}
+            {% endif %}
 
-          
-{% for item in cart.items %}
-
-         {% if item.product.metafields.custom.hide_free_gift.value == true %}
-             {% assign cart_total_exclude_gift = cart_total_exclude_gift | plus: item.final_price  | times: item.quantity %}
-         {% endif %}
-
-         
-          
-    {% case item.properties._igLineItemDiscount %}
-      {% when "0" or nil or blank %}
-        {% assign intelligems_discount = 0 %}
-      {% else %}
-        {% assign intelligems_discount = item.properties._igLineItemDiscount | plus: 0 %}
-        {% assign intelligems_total = intelligems_total | plus: item.properties._igLineItemDiscount | times: item.quantity %}
-    {% endcase %} 
+            {% case item.properties._igLineItemDiscount %}
+              {% when "0" or nil or blank %}
+                {% assign intelligems_discount = 0 %}
+              {% else %}
+                {% assign intelligems_discount = item.properties._igLineItemDiscount | plus: 0 %}
+                {% assign intelligems_total = intelligems_total | plus: item.properties._igLineItemDiscount | times: item.quantity %}
+            {% endcase %} 
             {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
-  {%- if item.properties._boldBuilderId  and item.properties._boldVariantIds == null -%}
-      <input type="hidden" name="updates[]" id="updates_{{- item.key -}}" class="bold_hidden_input cart__product-qty" value="{{- item.quantity -}}" min="0" data-id="{{- item.key -}}">
-      {%- continue -%}
-  {%- endif -%}
-{%- render 'cart-item', product: item, line: forloop.index, intelligems_discount: intelligems_discount -%}
+            {%- if item.properties._boldBuilderId  and item.properties._boldVariantIds == null -%}
+              <input type="hidden" name="updates[]" id="updates_{{- item.key -}}" class="bold_hidden_input cart__product-qty" value="{{- item.quantity -}}" min="0" data-id="{{- item.key -}}">
+              {%- continue -%}
+            {%- endif -%}
+            {%- render 'cart-item', product: item, line: forloop.index, intelligems_discount: intelligems_discount -%}
           {%- endfor -%}
 
         </div>
