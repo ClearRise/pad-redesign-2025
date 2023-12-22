@@ -11,30 +11,7 @@
     },
     "dcdeca2b-ab2e-4516-9d5d-edbc1ebcd719": {
       "type": "slideshow",
-      "blocks": {
-        "template--14695019905106__dcdeca2b-ab2e-4516-9d5d-edbc1ebcd719-image-2": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "title": "",
-            "title_size": 80,
-            "subheading": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/holiday_website_fixed.png",
-            "image_mobile": "shopify:\/\/shop_images\/mobile_2.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "template--14695019905106__dcdeca2b-ab2e-4516-9d5d-edbc1ebcd719-image-2"
-      ],
+      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
