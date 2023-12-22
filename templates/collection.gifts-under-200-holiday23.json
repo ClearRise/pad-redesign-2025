@@ -1,41 +1,5 @@
 {
   "sections": {
-    "fd1637f7-e9c4-4b0d-9ca8-90117a9531b4": {
-      "type": "slideshow",
-      "blocks": {
-        "9f7ef188-8bd7-4f1c-9cab-1480786ac291": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "title": "",
-            "title_size": 80,
-            "subheading": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/giftsunder_website_banner_glowstone.png",
-            "image_mobile": "shopify:\/\/shop_images\/gifts_under.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "9f7ef188-8bd7-4f1c-9cab-1480786ac291"
-      ],
-      "settings": {
-        "use_img_banner": true,
-        "section_height": "natural",
-        "mobile_height": "250px",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": true,
-        "autoplay_speed": 5
-      }
-    },
     "collection-header": {
       "type": "collection-header",
       "disabled": true,
@@ -122,7 +86,6 @@
     }
   },
   "order": [
-    "fd1637f7-e9c4-4b0d-9ca8-90117a9531b4",
     "collection-header",
     "promo-grid",
     "main-collection"
