@@ -5,7 +5,6 @@
       "blocks": {
         "0ef975a6-05bd-4ac8-88ad-8e7b5954f4ed": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "",
             "title": "",
@@ -25,6 +24,7 @@
         },
         "slideshow-0": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "title": "",
