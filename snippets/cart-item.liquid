@@ -349,7 +349,7 @@
             <span class="bcpo-cart-item-price" data-key="{{product.key}}">{{ product.final_price | money }}</span>
           </span>
         {% else %}
-          <span class="cart__price  black_txt"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" style="display:none !important;"></span>
+          <span class="cart__price  black_txt"><span class="" style="display:none !important;"></span>
             <span class="bcpo-cart-item-original-price" data-key="{{product.key}}">
             {% if intelligems_discount == 0 %}
               {{ product.original_price | money }}
