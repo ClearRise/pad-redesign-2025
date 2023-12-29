@@ -1519,11 +1519,11 @@ lazySizesConfig.expFactor = 4;
       .then(function(response) {return response.text()});
     },
   
-    changeItem: function(key, qty) {
+    changeItem: function(line, qty) {
       return this._updateCart({
         url: ''.concat(theme.routes.cartChange, '?t=').concat(Date.now()),
         data: JSON.stringify({
-          line: key,
+          line: line,
           quantity: qty
         })
       })
