@@ -102,6 +102,7 @@
         </div>
       {%- endif -%}
       {%- assign property_size = product.properties | size -%}
+      <span class="bold_load_cart_item_properties black_txt"></span>
       {% assign found_engrave = false %}
       {% assign found_protection = false %}
       {% if property_size > 0 %}
@@ -194,6 +195,30 @@
           {% endif %}
         {% endfor %}
 
+        {% comment %}
+           BOLD hidden properties
+                  {% for p in product.properties %}
+                    {%- assign first_character_in_key = p.first | truncate: 1, '' -%}
+                    {% unless p.last == blank or first_character_in_key == '_' %}
+                      <div>
+                        {{ p.first }}:
+                        {% if p.last contains '/uploads/' %}
+                          <a href="{{ p.last }}">
+          {% assign file_type = p.last | split: '.' | last | downcase %}
+          {% assign file_types = 'jpg,jpeg,webp,gif,png,apng,avif,svg,bmp,ico,tiff' | split: ',' %}
+          {% if file_types contains file_type %}
+            <div class="bcpo-cart-file"><img src="{{ p.last }}" style="max-width: 50px; height: auto;"></div>
+          {% else %}
+            <span class="bcpo-cart-file">Uploaded file</span>
+          {% endif %}
+          </a>
+                        {% else %}
+                          {{ p.last }}
+                        {% endif %}
+                      </div>
+                    {% endunless %}
+                  {% endfor %}
+        {% endcomment %}
       {% endif %}
       {% unless found_engrave %}
      {% if settings.show_engraving and settings['product-engraving'] and product.product.type == 'Ring' %} 
@@ -242,8 +267,19 @@
           tabindex="0"
           data-product-title="{{ protection_product.title }}" 
           data-protection="{{ first_protection_product_id_var }}"
-          >Add Premium Protection Plan <span class=""><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span></a>
+          >Add Premium Protection Plan <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span></a>
 
+      {% comment %}
+          <div class="">
+             <label class="protection_div">
+             <span class="bold_option_element">
+               <input data-quantity="{{ product.quantity }}" data-line="{{ line }}" data-key="{{ product.key }}" type="checkbox" class="add-protection-plan" data-product-title={{ protection_product.title }} data-protection="{{ first_protection_product_id_var }}">
+             </span>
+             <span class="">Add Premium Protection Plan</span>
+             <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span>
+             </label>
+          </div> 
+    {% endcomment %}
       {% endif %} 
 {% endunless %} 
 
@@ -313,7 +349,7 @@
             <span class="bcpo-cart-item-price" data-key="{{product.key}}">{{ product.final_price | money }}</span>
           </span>
         {% else %}
-          <span class="cart__price  black_txt"><span class="" style="display:none !important;"></span>
+          <span class="cart__price  black_txt"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" style="display:none !important;"></span>
             <span class="bcpo-cart-item-original-price" data-key="{{product.key}}">
             {% if intelligems_discount == 0 %}
               {{ product.original_price | money }}
