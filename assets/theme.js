@@ -1519,11 +1519,11 @@ lazySizesConfig.expFactor = 4;
       .then(function(response) {return response.text()});
     },
   
-    changeItem: function(line, qty) {
+    changeItem: function(key, qty) {
       return this._updateCart({
         url: ''.concat(theme.routes.cartChange, '?t=').concat(Date.now()),
         data: JSON.stringify({
-          line: line,
+          line: key,
           quantity: qty
         })
       })
@@ -1745,7 +1745,7 @@ lazySizesConfig.expFactor = 4;
         var key = evt.detail[0];
         var qty = evt.detail[1];
         var el = evt.detail[2];
-        
+  
         if (!key || !qty) {
           return;
         }
@@ -1755,7 +1755,7 @@ lazySizesConfig.expFactor = 4;
           el.classList.add('is-loading');
         }
   
-        theme.cart.changeItem(line, qty)
+        theme.cart.changeItem(key, qty)
           .then(function(cart) {
             if (cart.item_count > 0) {
               this.wrapper.classList.remove('is-empty');
@@ -3026,7 +3026,7 @@ Bold:POv2*/
   
         if (this.options.isCart) {
           document.dispatchEvent(new CustomEvent('cart:quantity' + this.options.namespace, {
-              detail: [this.options.key, qty, this.wrapper, this.options.line,]
+              detail: [this.options.key, qty, this.wrapper]
           }));
         }
       }
