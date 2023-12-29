@@ -1745,7 +1745,6 @@ lazySizesConfig.expFactor = 4;
         var key = evt.detail[0];
         var qty = evt.detail[1];
         var el = evt.detail[2];
-        var line = evt.detail[3];
         
         if (!key || !qty) {
           return;
