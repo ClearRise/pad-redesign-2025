@@ -194,30 +194,6 @@
           {% endif %}
         {% endfor %}
 
-        {% comment %}
-           BOLD hidden properties
-                  {% for p in product.properties %}
-                    {%- assign first_character_in_key = p.first | truncate: 1, '' -%}
-                    {% unless p.last == blank or first_character_in_key == '_' %}
-                      <div>
-                        {{ p.first }}:
-                        {% if p.last contains '/uploads/' %}
-                          <a href="{{ p.last }}">
-          {% assign file_type = p.last | split: '.' | last | downcase %}
-          {% assign file_types = 'jpg,jpeg,webp,gif,png,apng,avif,svg,bmp,ico,tiff' | split: ',' %}
-          {% if file_types contains file_type %}
-            <div class="bcpo-cart-file"><img src="{{ p.last }}" style="max-width: 50px; height: auto;"></div>
-          {% else %}
-            <span class="bcpo-cart-file">Uploaded file</span>
-          {% endif %}
-          </a>
-                        {% else %}
-                          {{ p.last }}
-                        {% endif %}
-                      </div>
-                    {% endunless %}
-                  {% endfor %}
-        {% endcomment %}
       {% endif %}
       {% unless found_engrave %}
      {% if settings.show_engraving and settings['product-engraving'] and product.product.type == 'Ring' %} 
@@ -266,19 +242,8 @@
           tabindex="0"
           data-product-title="{{ protection_product.title }}" 
           data-protection="{{ first_protection_product_id_var }}"
-          >Add Premium Protection Plan <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span></a>
+          >Add Premium Protection Plan <span class=""><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span></a>
 
-      {% comment %}
-          <div class="">
-             <label class="protection_div">
-             <span class="bold_option_element">
-               <input data-quantity="{{ product.quantity }}" data-line="{{ line }}" data-key="{{ product.key }}" type="checkbox" class="add-protection-plan" data-product-title={{ protection_product.title }} data-protection="{{ first_protection_product_id_var }}">
-             </span>
-             <span class="">Add Premium Protection Plan</span>
-             <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span>
-             </label>
-          </div> 
-    {% endcomment %}
       {% endif %} 
 {% endunless %} 
 
