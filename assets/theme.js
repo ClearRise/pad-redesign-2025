@@ -1742,7 +1742,6 @@ lazySizesConfig.expFactor = 4;
       },
   
       quantityChanged: function(evt) {
-        console.log(evt)
         var key = evt.detail[0];
         var qty = evt.detail[1];
         var el = evt.detail[2];
