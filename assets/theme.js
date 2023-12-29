@@ -3027,7 +3027,7 @@ Bold:POv2*/
   
         if (this.options.isCart) {
           document.dispatchEvent(new CustomEvent('cart:quantity' + this.options.namespace, {
-              detail: [this.options.key, qty, this.wrapper]
+              detail: [this.options.key, qty, this.wrapper, this.options.line,]
           }));
         }
       }
