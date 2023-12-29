@@ -3027,7 +3027,6 @@ Bold:POv2*/
         console.log(this.wrapper);
   
         if (this.options.isCart) {
-          console.log(this)
           document.dispatchEvent(new CustomEvent('cart:quantity' + this.options.namespace, {
               detail: [this.options.key, qty, this.wrapper, this.options.line,]
           }));
