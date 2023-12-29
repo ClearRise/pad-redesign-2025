@@ -29,24 +29,24 @@
       <div class="cart__page">
         <div data-products class="cart__page-col">
           {% assign intelligems_total = 0 %}
-{% for item in cart.items %}
-    {% case item.properties._igLineItemDiscount %}
-      {% when "0" or nil or blank %}
-        {% assign intelligems_discount = 0 %}
-      {% else %}
-        {% assign intelligems_discount = item.properties._igLineItemDiscount | plus: 0 %}
-        {% assign intelligems_total = intelligems_total | plus: item.properties._igLineItemDiscount | times: item.quantity %}
-    {% endcase %} 
-            {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
-  {%- if item.properties._boldBuilderId  and item.properties._boldVariantIds == null -%}
-      <input type="hidden" name="updates[]" id="updates_{{- item.key -}}" class="bold_hidden_input cart__product-qty" value="{{- item.quantity -}}" min="0" data-id="{{- item.key -}}">
-      {%- continue -%}
-  {%- endif -%}
-{%- render 'cart-item', product: item, line: forloop.index, intelligems_discount: intelligems_discount -%}
+          {% for item in cart.items %}
+              {% case item.properties._igLineItemDiscount %}
+                {% when "0" or nil or blank %}
+                  {% assign intelligems_discount = 0 %}
+                {% else %}
+                  {% assign intelligems_discount = item.properties._igLineItemDiscount | plus: 0 %}
+                  {% assign intelligems_total = intelligems_total | plus: item.properties._igLineItemDiscount | times: item.quantity %}
+              {% endcase %} 
+                      {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
+            {%- if item.properties._boldBuilderId  and item.properties._boldVariantIds == null -%}
+                <input type="hidden" name="updates[]" id="updates_{{- item.key -}}" class="bold_hidden_input cart__product-qty" value="{{- item.quantity -}}" min="0" data-id="{{- item.key -}}">
+                {%- continue -%}
+            {%- endif -%}
+          {%- render 'cart-item', product: item, line: forloop.index, intelligems_discount: intelligems_discount -%}
           {%- endfor -%}
         </div>
         <div class="cart__page-col">
-<p class="right" style="color:red;">Use code <span style="font-weight: 800;">CHRISTMAS20</span> at checkout for 20% off your order.</p>           {% render 'dg-cart-upsells' %}
+          <p class="right" style="color:red;">Use code <span style="font-weight: 800;">CHRISTMAS20</span> at checkout for 20% off your order.</p>           {% render 'dg-cart-upsells' %}
           {% if settings.cart_notes_enable %}
             <div>
               <label for="CartNote">{{ 'cart.general.note' | t }}</label>
