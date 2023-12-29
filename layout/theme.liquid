@@ -121,12 +121,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
   {% if template == 'product' and product.metafields.inventory.ShappifyHidden or product.type contains '_HIDDEN_' %}<meta name='robots' content='noindex'>{% endif %}
 
-{% if request.path contains  '/products' or request.path contains '/collections/luxury-rings' or request.path contains '/collections/the-celestial-series-space-themed-jewelry-from-patrick-adair-designs' or request.path contains '/cart' %} 
-  {%- render 'bold-options-hybrid' -%}
-  {%- render 'bold-common' -%}
-  {%- render 'sc-includes' -%}
-{% endif %}
-
 
 <script src="{{ 'vendor-scripts-v11.js' | asset_url | split: '?' | first }}" defer></script>
 
