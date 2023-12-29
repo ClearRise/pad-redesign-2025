@@ -58,7 +58,8 @@
 <div
   class="cart__item rm_border{% if match_engraving_product %} hide{% endif %}{% if product.product.tags contains 'hidden' %} hide{% endif %}{% if match_gift_product %} hide{% endif %}"
   data-quantity="{{ product.quantity }}"
-  data-key="{{ product.key }}"
+  data-key="{{ product.key }}" 
+  data-line="{{ line }}"
   data-handle="{{ product.product.handle }}"
 >
   {%- assign img_url = product | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
