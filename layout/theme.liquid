@@ -135,31 +135,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   {%- endif -%}
   
 
-{%- if template.name == “product” -%}
-<script>
-  BOLD.common.eventEmitter.on('BOLD_OPTIONS_option_products_loaded', function(event){
-    var optionsDiv = document.querySelector('.bold_options_loaded');
-    if(optionsDiv.children.length != 0){
-      var buyItNow = document.querySelectorAll('.shopify-payment-button');
-console.log(buyItNow);
-      buyItNow.forEach(function(button){
-        button.remove();
-      })
-      }
-    });
-</script>
 
- {% endif %}
-
-
-{% if request.path contains  '/products' or request.path contains '/collections/luxury-rings' or request.path contains '/collections/the-celestial-series-space-themed-jewelry-from-patrick-adair-designs' or request.path contains '/cart' %} 
-  {% if false %}
-    {{ 'bold.css' | asset_url | stylesheet_tag }}
-  {% else %}  
-    <link rel="preload" href="{{ 'bold.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ 'bold.css' | asset_url }}"></noscript>
-  {% endif %}  
-{% endif %}  
 
 {% if request.path contains '/pages/contact-us' or request.path contains '/collections/custom-rings' %}    
   {% if false %}
