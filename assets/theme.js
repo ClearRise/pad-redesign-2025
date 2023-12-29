@@ -1746,7 +1746,8 @@ lazySizesConfig.expFactor = 4;
         var key = evt.detail[0];
         var qty = evt.detail[1];
         var el = evt.detail[2];
-  
+        var line = evt.detail[3];
+        
         if (!key || !qty) {
           return;
         }
@@ -1756,7 +1757,7 @@ lazySizesConfig.expFactor = 4;
           el.classList.add('is-loading');
         }
   
-        theme.cart.changeItem(key, qty)
+        theme.cart.changeItem(line, qty)
           .then(function(cart) {
             if (cart.item_count > 0) {
               this.wrapper.classList.remove('is-empty');
