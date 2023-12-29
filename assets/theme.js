@@ -1523,7 +1523,7 @@ lazySizesConfig.expFactor = 4;
       return this._updateCart({
         url: ''.concat(theme.routes.cartChange, '?t=').concat(Date.now()),
         data: JSON.stringify({
-          id: key,
+          line: key,
           quantity: qty
         })
       })
