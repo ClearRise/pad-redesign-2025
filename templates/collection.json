@@ -37,6 +37,7 @@
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
             "image": "shopify:\/\/shop_images\/fixed_website_banners.png",
+            "image_mobile": "shopify:\/\/shop_images\/no_button.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
