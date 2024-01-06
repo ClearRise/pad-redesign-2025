@@ -168,6 +168,7 @@
           },
           "4b6625bc-0b9f-45d6-8325-94e760d068c1": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Buy One Get One FREE  | ENDS THIS WEEKEND",
               "link_text": "",
