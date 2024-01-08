@@ -15,7 +15,7 @@
             "top_subheading": "",
             "title": "Give a Gift as Unique as They Are",
             "title_size": 60,
-            "subheading": "Save 30-50% During our Holiday Gift Event",
+            "subheading": "Save up to 30% During our Valentines Day EVent",
             "link": "shopify:\/\/collections\/all",
             "link_text": "SHOP ALL RINGS",
             "link_2": "",
@@ -60,7 +60,7 @@
         "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-1": {
           "type": "advanced",
           "settings": {
-            "subheading": "50% Off",
+            "subheading": "Up to 30% OFF",
             "heading": "Glowstone Series",
             "textarea": "Limited Time Only",
             "cta_text1": "",
@@ -108,7 +108,7 @@
         "template--14688191053906__8dcd1e21-a51f-4071-b3f3-ac27cd43ef96-advanced-1": {
           "type": "advanced",
           "settings": {
-            "subheading": "35% OFF",
+            "subheading": "20% OFF",
             "heading": "Solid   Meteorite   Rings",
             "textarea": "",
             "cta_text1": "",
@@ -178,7 +178,7 @@
         "template--14688191053906__7d48d57a-31d7-4fcf-bcfe-04268ace52bb-advanced-1": {
           "type": "advanced",
           "settings": {
-            "subheading": "30% Off",
+            "subheading": "20% Off",
             "heading": "Pendants",
             "textarea": "Free Black Stainless<br> Steel Box Chain",
             "cta_text1": "",
@@ -223,7 +223,7 @@
           "type": "banner",
           "settings": {
             "heading": "HOLIDAY SPECIAL",
-            "text": "Save Up to 50% Sitewide",
+            "text": "Save Up to 30% Sitewide",
             "link": "shopify:\/\/collections\/all-products",
             "label": "Shop now",
             "color_tint": "#000000",
