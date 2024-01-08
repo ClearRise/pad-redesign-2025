@@ -15,7 +15,7 @@
             "top_subheading": "",
             "title": "Give a Gift as Unique as They Are",
             "title_size": 60,
-            "subheading": "Save up to 30% During our Valentines Day EVent",
+            "subheading": "Save up to 30% During our Valentines Day Event",
             "link": "shopify:\/\/collections\/all",
             "link_text": "SHOP ALL RINGS",
             "link_2": "",
@@ -62,7 +62,7 @@
           "settings": {
             "subheading": "Up to 30% OFF",
             "heading": "Glowstone Series",
-            "textarea": "Limited Time Only",
+            "textarea": "<u> <b>SHOP ALL<\/b><\/u>",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/the-glowstone-series",
             "cta_text2": "",
@@ -110,7 +110,7 @@
           "settings": {
             "subheading": "20% OFF",
             "heading": "Solid   Meteorite   Rings",
-            "textarea": "",
+            "textarea": "<u> <b>SHOP ALL<\/b><\/u>",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/meteorite-jewelry",
             "cta_text2": "",
