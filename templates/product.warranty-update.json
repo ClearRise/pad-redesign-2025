@@ -68,7 +68,6 @@
         },
         "e4a07dea-36b2-4d5b-8915-ed9e7d1959ed": {
           "type": "free_gifts",
-          "disabled": true,
           "settings": {
             "gift_box_title": "",
             "gift_included": ""
