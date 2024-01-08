@@ -85,12 +85,12 @@
     "upsell_box_title": "You May Also Like",
     "show_gift_box": false,
     "first_tier_progress": "You've unlocked a free gift!",
-    "gift_box_title": "Choose One Free Gift!",
-    "cart_threshold_amount": 150,
+    "gift_box_title": "You've unlocked a mystery gift!",
+    "cart_threshold_amount": 200,
     "spend_progress": "",
-    "product-handle-1": "permafrost-carbon-fiber-glow-ring-1",
+    "product-handle-1": "mystery-ring-1",
     "product-handle-2": "malachite-trustone-and-gold-pendant-1",
-    "hide_gift_2": false,
+    "hide_gift_2": true,
     "second_show_gift_box": false,
     "second_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
     "gift_box_title_second": "Choose One Free Gift",
@@ -165,14 +165,6 @@
               "sub_menu": "Custom Rings",
               "link_submenu": "shopify:\/\/collections\/custom-rings"
             }
-          },
-          "4b6625bc-0b9f-45d6-8325-94e760d068c1": {
-            "type": "announcement",
-            "settings": {
-              "text": "Buy One Get One FREE | ENDS AT MIDNIGHT",
-              "link_text": "applied automatically at checkout",
-              "link": ""
-            }
           }
         },
         "block_order": [
@@ -180,8 +172,7 @@
           "30d9274d-f502-4710-bb39-866381456103",
           "966bc6e1-31db-4261-b34d-773ca4a79259",
           "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56",
-          "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc",
-          "4b6625bc-0b9f-45d6-8325-94e760d068c1"
+          "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc"
         ],
         "settings": {
           "main_menu_link_list": "05-16-23-lewis-main-menu",
