@@ -84,7 +84,7 @@
     "empty_cart_text3": "",
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
-    "show_gift_box": false,
+    "show_gift_box": true,
     "first_tier_progress": "You've unlocked a free gift!",
     "gift_box_title": "You've unlocked a mystery gift!",
     "cart_threshold_amount": 200,
