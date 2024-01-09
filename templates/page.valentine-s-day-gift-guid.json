@@ -12,18 +12,18 @@
         "template--14688191053906__d85bc3a7-fd8d-47e1-96ea-6e11429dde6c-image-1": {
           "type": "image",
           "settings": {
-            "top_subheading": "",
-            "title": "Give a Gift as Unique as They Are",
+            "top_subheading": "Up to 30% Off",
+            "title": "Gifts as Unique as They Are",
             "title_size": 60,
-            "subheading": "Save up to 30% During our Valentines Day Event",
+            "subheading": "",
             "link": "shopify:\/\/collections\/all",
-            "link_text": "SHOP ALL RINGS",
+            "link_text": "SHOP ALL",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#138f7e",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/holiday_website_banners_green_5079095a-9474-4a53-a148-5860f3bc40e1.png",
-            "image_mobile": "shopify:\/\/shop_images\/valentines_daymobile_website_collection_banners_green_869a62aa-aeaf-4251-b53b-65a50888661f.png",
+            "image": "shopify:\/\/shop_images\/blank.png",
+            "image_mobile": "shopify:\/\/shop_images\/blank2.png",
             "overlay_opacity": 24,
             "focal_point": "center center"
           }
@@ -60,7 +60,7 @@
         "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-1": {
           "type": "advanced",
           "settings": {
-            "subheading": "Up to 30% OFF",
+            "subheading": "",
             "heading": "Glowstone Series",
             "textarea": "<u> <b>SHOP ALL<\/b><\/u>",
             "cta_text1": "",
@@ -108,7 +108,7 @@
         "template--14688191053906__8dcd1e21-a51f-4071-b3f3-ac27cd43ef96-advanced-1": {
           "type": "advanced",
           "settings": {
-            "subheading": "20% OFF",
+            "subheading": "",
             "heading": "Solid   Meteorite   Rings",
             "textarea": "<u> <b>SHOP ALL<\/b><\/u>",
             "cta_text1": "",
@@ -178,7 +178,7 @@
         "template--14688191053906__7d48d57a-31d7-4fcf-bcfe-04268ace52bb-advanced-1": {
           "type": "advanced",
           "settings": {
-            "subheading": "20% Off",
+            "subheading": "",
             "heading": "Pendants",
             "textarea": "Free Black Stainless<br> Steel Box Chain",
             "cta_text1": "",
@@ -200,7 +200,7 @@
         "template--14688191053906__7d48d57a-31d7-4fcf-bcfe-04268ace52bb-advanced-2": {
           "type": "advanced",
           "settings": {
-            "subheading": "20% OFF",
+            "subheading": "",
             "heading": "Earrings",
             "textarea": "",
             "cta_text1": "",
@@ -222,9 +222,9 @@
         "a1d64d17-b654-48f4-a356-1024331aae02": {
           "type": "banner",
           "settings": {
-            "heading": "HOLIDAY SPECIAL",
-            "text": "Save Up to 30% Sitewide",
-            "link": "shopify:\/\/collections\/all-products",
+            "heading": "VALENTINES SPECIAL",
+            "text": "Save Up to 30%",
+            "link": "shopify:\/\/collections\/flash-sale-collection",
             "label": "Shop now",
             "color_tint": "#000000",
             "color_tint_opacity": 8,
