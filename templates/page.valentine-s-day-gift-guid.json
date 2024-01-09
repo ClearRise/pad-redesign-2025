@@ -22,9 +22,9 @@
             "link_text_2": "",
             "color_accent": "#138f7e",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/Christmas_Large_f37d6320-69bd-43ac-b40a-de52c9fd421f.png",
-            "image_mobile": "shopify:\/\/shop_images\/hero1_713564a8-7654-477c-a504-ec1c0d559da7.png",
-            "overlay_opacity": 0,
+            "image": "shopify:\/\/shop_images\/holiday_website_banners_green_5079095a-9474-4a53-a148-5860f3bc40e1.png",
+            "image_mobile": "shopify:\/\/shop_images\/valentines_daymobile_website_collection_banners_green_869a62aa-aeaf-4251-b53b-65a50888661f.png",
+            "overlay_opacity": 24,
             "focal_point": "center center"
           }
         }
@@ -34,8 +34,8 @@
       ],
       "settings": {
         "use_img_banner": true,
-        "section_height": "650px",
-        "mobile_height": "400px",
+        "section_height": "natural",
+        "mobile_height": "auto",
         "parallax": false,
         "style": "bars",
         "autoplay": true,
