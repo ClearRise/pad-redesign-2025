@@ -1,5 +1,10 @@
 {
   "sections": {
+    "b8d22411-c31c-4c87-973d-490e88a5b2d0": {
+      "type": "replo-sitewide-sale-bf",
+      "settings": {
+      }
+    },
     "collection-header": {
       "type": "collection-header",
       "disabled": true,
@@ -8,10 +13,6 @@
         "collection_image_enable": false,
         "parallax": true
       }
-    },
-    "3e3e29e8-1c39-4a0b-bba4-49d53de8bace": {
-      "type": "replo-flash-sale-timer",
-      "settings": {}
     },
     "promo-grid": {
       "type": "promo-grid",
@@ -70,7 +71,8 @@
         "collection_description": {
           "type": "collection_description",
           "disabled": true,
-          "settings": {}
+          "settings": {
+          }
         },
         "subcollections": {
           "type": "subcollections",
@@ -103,8 +105,8 @@
     }
   },
   "order": [
+    "b8d22411-c31c-4c87-973d-490e88a5b2d0",
     "collection-header",
-    "3e3e29e8-1c39-4a0b-bba4-49d53de8bace",
     "promo-grid",
     "main-collection"
   ]
