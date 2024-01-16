@@ -82,17 +82,13 @@ if tag contains '_label_'
         {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money }}{%- endcapture -%}
         {%- capture saved_percent -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
         {% assign saved_percent = saved_percent | plus: 0 %}
-        {% if saved_percent > 0 %}
+        {% if saved_amount > 0 %}
           <div class="grid-product__tag grid-product__tag--sale"  data-product-id="{{ product.id }}">
-              {% if saved_percent < 20 %}
-                <div class="igSavingsPrice" style="display: block !important;">
-                  {{ saved_amount }} Off
-                </div>
-              {% else %}
+              
                 <div class="igSavingsPercentage">
                 {{ saved_percent }}% Off
                 </div>
-              {% endif %}  
+              
           </div>
         {%- endif -%}    
       {%- endif -%}
