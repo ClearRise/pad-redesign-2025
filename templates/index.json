@@ -191,7 +191,7 @@
             "cta_link1": "shopify:\/\/collections\/all-products",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Jan_Free_Gift_Zoomed_Out_2.png",
+            "image": "shopify:\/\/shop_images\/Group_Shot.png",
             "video_url": "",
             "width": "100",
             "height": 660,
@@ -383,7 +383,7 @@
       "type": "apps",
       "blocks": {
         "d29f7c33-7e89-45f4-9d2f-1628a524400d": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": ""
           }
