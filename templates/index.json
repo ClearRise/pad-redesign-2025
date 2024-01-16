@@ -16,8 +16,8 @@
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/valentines_day_sale_banner_desktop_green.png",
-            "image_mobile": "shopify:\/\/shop_images\/valentines_day_sale_banner_mobile_green.png",
+            "image": "shopify:\/\/shop_images\/free_gift_plain.png",
+            "image_mobile": "shopify:\/\/shop_images\/free_gift_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
