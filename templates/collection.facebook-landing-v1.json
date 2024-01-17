@@ -1,80 +1,9 @@
 {
   "sections": {
-    "17347204-928a-46d1-8166-ac8c007f382d": {
-      "type": "slideshow",
-      "blocks": {
-        "e7321c8d-7671-46ab-ba0a-e8be7d3cf79f": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "title": "",
-            "title_size": 80,
-            "subheading": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/free_gift_collection_desktop_final.png",
-            "image_mobile": "shopify:\/\/shop_images\/free_gift_collection_mobile.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "e7321c8d-7671-46ab-ba0a-e8be7d3cf79f"
-      ],
-      "settings": {
-        "use_img_banner": true,
-        "section_height": "natural",
-        "mobile_height": "250px",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": false,
-        "autoplay_speed": 5
-      }
-    },
     "replo_trust_icons_X3qmYh": {
       "type": "replo-trust-icons",
       "disabled": true,
       "settings": {
-      }
-    },
-    "rich_text_qjkimi": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_rKYyfT": {
-          "type": "heading",
-          "settings": {
-            "title": "Your Ring Should be More than Just Jewelry"
-          }
-        },
-        "text_VM6LfU": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": false,
-            "text": "<p>Every ring is handcrafted from the most exotic materials on earth. Worked on from start to finish by a trained artisan in Salt Lake City, Utah. <\/p><p>Whether you're looking for a fashion accessory, wedding band, or a gift,  you'll find a story in every ring. <\/p>"
-          }
-        },
-        "button_qyWMQw": {
-          "type": "button",
-          "settings": {
-            "link": "shopify:\/\/collections\/all",
-            "link_text": "Shop All Rings"
-          }
-        }
-      },
-      "block_order": [
-        "heading_rKYyfT",
-        "text_VM6LfU",
-        "button_qyWMQw"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
       }
     },
     "collection-header": {
@@ -84,6 +13,11 @@
         "enable": true,
         "collection_image_enable": false,
         "parallax": true
+      }
+    },
+    "replo_collection_page_hero_AL68Ud": {
+      "type": "replo-collection-page-hero",
+      "settings": {
       }
     },
     "main-collection": {
@@ -117,10 +51,9 @@
     }
   },
   "order": [
-    "17347204-928a-46d1-8166-ac8c007f382d",
     "replo_trust_icons_X3qmYh",
-    "rich_text_qjkimi",
     "collection-header",
+    "replo_collection_page_hero_AL68Ud",
     "main-collection",
     "replo_bottom_lp_container_TYdbxG"
   ]
