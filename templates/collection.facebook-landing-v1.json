@@ -36,6 +36,47 @@
         "autoplay_speed": 5
       }
     },
+    "replo_trust_icons_X3qmYh": {
+      "type": "replo-trust-icons",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "rich_text_qjkimi": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rKYyfT": {
+          "type": "heading",
+          "settings": {
+            "title": "Rings As Unique as You Are"
+          }
+        },
+        "text_VM6LfU": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Handcrafted rings from the rarest materials. You're guaranteed to find a story in every one. <\/p><ul><li>Handmade in USA<\/li><li>Made to Order<\/li><li>Perfectly Sized<\/li><li>Satisfaction Guaranteed<\/li><\/ul>"
+          }
+        },
+        "button_qyWMQw": {
+          "type": "button",
+          "settings": {
+            "link": "shopify:\/\/collections\/all",
+            "link_text": "Shop All Rings"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rKYyfT",
+        "text_VM6LfU",
+        "button_qyWMQw"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "collection-header": {
       "type": "collection-header",
       "disabled": true,
@@ -136,6 +177,8 @@
   },
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
+    "replo_trust_icons_X3qmYh",
+    "rich_text_qjkimi",
     "collection-header",
     "promo-grid",
     "main-collection"
