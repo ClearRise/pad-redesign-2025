@@ -15,8 +15,8 @@
         "parallax": true
       }
     },
-    "replo_collection_page_hero_AL68Ud": {
-      "type": "replo-collection-page-hero",
+    "replo_collection_page_hero_2_wcHhVi": {
+      "type": "replo-collection-page-hero-2",
       "settings": {
       }
     },
@@ -43,18 +43,12 @@
         "enable_color_swatches": false,
         "enable_sort": true
       }
-    },
-    "replo_bottom_lp_container_TYdbxG": {
-      "type": "replo-bottom-lp-container",
-      "settings": {
-      }
     }
   },
   "order": [
     "replo_trust_icons_X3qmYh",
     "collection-header",
-    "replo_collection_page_hero_AL68Ud",
-    "main-collection",
-    "replo_bottom_lp_container_TYdbxG"
+    "replo_collection_page_hero_2_wcHhVi",
+    "main-collection"
   ]
 }
