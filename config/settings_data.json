@@ -132,6 +132,14 @@
       "header": {
         "type": "header",
         "blocks": {
+          "d6256397-4cc6-4f30-8e67-be7073667b8a": {
+            "type": "announcement",
+            "settings": {
+              "text": "Ring in the New Year",
+              "link_text": "20% Off Sitewide",
+              "link": ""
+            }
+          },
           "1524770014057": {
             "type": "logo",
             "settings": {
@@ -145,13 +153,6 @@
             "settings": {
               "sub_menu": "Shop Rings",
               "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/all-products?filter.p.m.custom.product_type=Ring"
-            }
-          },
-          "scroll_navi_mobile_zRWDNN": {
-            "type": "scroll_navi_mobile",
-            "settings": {
-              "sub_menu": "Gifts Under $200",
-              "link_submenu": "shopify:\/\/collections\/gifts-under-200"
             }
           },
           "966bc6e1-31db-4261-b34d-773ca4a79259": {
@@ -168,30 +169,29 @@
               "link_submenu": "shopify:\/\/collections\/necklaces"
             }
           },
+          "scroll_navi_mobile_zRWDNN": {
+            "type": "scroll_navi_mobile",
+            "settings": {
+              "sub_menu": "Gifts Under $200",
+              "link_submenu": "shopify:\/\/collections\/gifts-under-200"
+            }
+          },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "Custom Rings",
               "link_submenu": "shopify:\/\/collections\/custom-rings"
             }
-          },
-          "d6256397-4cc6-4f30-8e67-be7073667b8a": {
-            "type": "announcement",
-            "settings": {
-              "text": "Ring in the New Year",
-              "link_text": "20% Off Sitewide",
-              "link": ""
-            }
           }
         },
         "block_order": [
+          "d6256397-4cc6-4f30-8e67-be7073667b8a",
           "1524770014057",
           "30d9274d-f502-4710-bb39-866381456103",
-          "scroll_navi_mobile_zRWDNN",
           "966bc6e1-31db-4261-b34d-773ca4a79259",
           "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56",
-          "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc",
-          "d6256397-4cc6-4f30-8e67-be7073667b8a"
+          "scroll_navi_mobile_zRWDNN",
+          "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc"
         ],
         "settings": {
           "main_menu_link_list": "05-16-23-lewis-main-menu",
@@ -204,7 +204,7 @@
           "sticky_index": false,
           "sticky_collection": false,
           "announcement_compact": true,
-          "announcement_above_header": false,
+          "announcement_above_header": true,
           "toolbar_menu": "top-menu",
           "toolbar_social": true,
           "show_locale_selector": true,
