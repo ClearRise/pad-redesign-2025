@@ -1314,20 +1314,13 @@ button.upsell-add-to-cart.disabled{
  }
 
 @media screen and (max-width: 767px) {
-  ._b_upsell-collection ._b_upsell-product {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
   ._b_upsell-collection ._b_upsell-product ._b_upsell-product-info {
-    width: 100%;
-    flex-basis: 100%;
-    padding-left: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
     display: inline-block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-basis: 60%;
+    padding-left: 10px;
   }
   .dci-title{
       font-size: 14px;
