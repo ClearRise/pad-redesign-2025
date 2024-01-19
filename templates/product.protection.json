@@ -310,6 +310,12 @@
         "max_width": true
       }
     },
+    "section_custom_liquid_6RdNXb": {
+      "type": "section-custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\">\n     <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>\n<\/div>"
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -341,12 +347,6 @@
       "type": "collection-return",
       "settings": {
       }
-    },
-    "section_custom_liquid_6RdNXb": {
-      "type": "section-custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n     <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>\n<\/div>"
-      }
     }
   },
   "order": [
@@ -355,10 +355,10 @@
     "product_how_to_work",
     "1646853684b754aedd",
     "sub",
+    "section_custom_liquid_6RdNXb",
     "product-recommendations",
     "recently-viewed",
     "66dec11e-cf0f-416f-adc5-ffc9063ead6c",
-    "collection-return",
-    "section_custom_liquid_6RdNXb"
+    "collection-return"
   ]
 }
