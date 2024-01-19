@@ -306,6 +306,12 @@
         "divider": false
       }
     },
+    "section_custom_liquid_qbxtBa": {
+      "type": "section-custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\">\n     <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>\n<\/div>"
+      }
+    },
     "sub": {
       "type": "product-full-width",
       "blocks": {
@@ -321,12 +327,6 @@
       ],
       "settings": {
         "max_width": true
-      }
-    },
-    "section_custom_liquid_qbxtBa": {
-      "type": "section-custom-liquid",
-      "settings": {
-        "custom_liquid": ""
       }
     },
     "product-recommendations": {
@@ -356,8 +356,8 @@
     "product_how_to_work",
     "1646853684b754aedd",
     "2a17ff04-e874-4d0d-8550-f78df3ba83ee",
-    "sub",
     "section_custom_liquid_qbxtBa",
+    "sub",
     "product-recommendations",
     "recently-viewed",
     "collection-return"
