@@ -50,6 +50,18 @@
             "inventory_transfers_enable": true
           }
         },
+        "engraving_tgci8A": {
+          "type": "engraving",
+          "settings": {
+          }
+        },
+        "8b562356-ae61-4e76-9d41-a70561a3c483": {
+          "type": "free_gifts",
+          "settings": {
+            "gift_box_title": "",
+            "gift_included": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -58,13 +70,6 @@
             "enable_tooltip": false,
             "tooltip_header": "<h3>Premium Protection<\/h3>",
             "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
-          }
-        },
-        "8b562356-ae61-4e76-9d41-a70561a3c483": {
-          "type": "free_gifts",
-          "settings": {
-            "gift_box_title": "",
-            "gift_included": ""
           }
         },
         "8a3bfed3-a948-43a2-a499-59b043673565": {
@@ -191,8 +196,9 @@
         "separator",
         "variant_picker",
         "inventory_status",
-        "buy_buttons",
+        "engraving_tgci8A",
         "8b562356-ae61-4e76-9d41-a70561a3c483",
+        "buy_buttons",
         "8a3bfed3-a948-43a2-a499-59b043673565",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
