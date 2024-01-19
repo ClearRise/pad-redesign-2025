@@ -1333,7 +1333,7 @@ button.upsell-add-to-cart.disabled{
     justify-content: center;
     align-items: center;
     flex-basis: 60%;
-    padding-left: 10px;
+    padding-left: 20px;
     grid-area: text;
   }
   .dci-title{
