@@ -1316,12 +1316,13 @@ button.upsell-add-to-cart.disabled{
 @media screen and (max-width: 767px) {
   ._b_upsell-collection ._b_upsell-product {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-areas:  'image1 text' 
                           'image2 text';
   }
   ._b_upsell-product-image {
     grid-area: image1;
+    margin-right: 0;
   }
   ._b_upsell-product-image + ._b_upsell-product-image {
     grid-area: image2;
@@ -1336,10 +1337,12 @@ button.upsell-add-to-cart.disabled{
     grid-area: text;
   }
   .dci-title{
-      font-size: 14px;
+    font-size: 24px;
+    line-height: 28px;
   }
   ._b_txt{
-      font-size: 12px;
+    font-size: 16px;
+    line-height: 22px;
   }
   ._b_product-title-link {
     margin-bottom: 2px;
