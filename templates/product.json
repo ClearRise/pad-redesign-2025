@@ -4,7 +4,7 @@
       "type": "main-product",
       "blocks": {
         "7a40c00f-33ab-4e69-b17f-4b0da4e6853a": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
           }
@@ -56,6 +56,13 @@
             "inventory_transfers_enable": true
           }
         },
+        "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
+          "type": "free_gifts",
+          "settings": {
+            "gift_box_title": "",
+            "gift_included": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -64,13 +71,6 @@
             "enable_tooltip": false,
             "tooltip_header": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>",
             "tooltip_content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>"
-          }
-        },
-        "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
-          "type": "free_gifts",
-          "settings": {
-            "gift_box_title": "",
-            "gift_included": ""
           }
         },
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
@@ -188,8 +188,8 @@
         "separator",
         "variant_picker",
         "inventory_status",
-        "buy_buttons",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
+        "buy_buttons",
         "7621462d-9edd-432d-a525-b5bcbfe07deb",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
@@ -321,7 +321,7 @@
       "type": "apps",
       "blocks": {
         "0b2c4db0-68a2-468e-890c-52a77263cb09": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}",
             "widget_type": "combined_widget"
