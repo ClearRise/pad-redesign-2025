@@ -402,6 +402,7 @@
                           {%- endif -%}
                         {%- endfor -%}
                       {%- endunless -%}
+                      <div class="bold_options" data-product-id="{{ product.id }}"></div>
                     </div>
                   {% when 'engraving' %}
                     <div class="product-block" {{ block.shopify_attributes }}>
