@@ -148,7 +148,10 @@
                     {% assign already_added =  'Included' %}
 
                       {% if product.price >= GiftBoxAmountRaw %}
-                       <div class="_b_giftbox_title">{{ block.settings.gift_box_title }}</div> 
+                        {% if block.settings.gift_box_title != blank %}
+                        <div class="_b_giftbox_title">{{ block.settings.gift_box_title }}</div> 
+                        {% endif %}
+                       
                        <div class="_b_upsell-collection _b_dgCartUpsellCont _b_gift-products"> 
 
                         {% if settings.product1-img1 %}
