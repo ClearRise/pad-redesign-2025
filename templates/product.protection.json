@@ -4,7 +4,7 @@
       "type": "main-product",
       "blocks": {
         "7a40c00f-33ab-4e69-b17f-4b0da4e6853a": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
           }
@@ -56,6 +56,18 @@
             "inventory_transfers_enable": true
           }
         },
+        "engraving_Nk4Lwr": {
+          "type": "engraving",
+          "settings": {
+          }
+        },
+        "b529d1fd-9fad-4bb5-b4cf-36506d8b43bd": {
+          "type": "free_gifts",
+          "settings": {
+            "gift_box_title": "",
+            "gift_included": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -74,13 +86,6 @@
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
-          }
-        },
-        "b529d1fd-9fad-4bb5-b4cf-36506d8b43bd": {
-          "type": "free_gifts",
-          "settings": {
-            "gift_box_title": "",
-            "gift_included": ""
           }
         },
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
@@ -188,9 +193,10 @@
         "separator",
         "variant_picker",
         "inventory_status",
+        "engraving_Nk4Lwr",
+        "b529d1fd-9fad-4bb5-b4cf-36506d8b43bd",
         "buy_buttons",
         "6d00747b-6035-4fa5-afc1-37a35e449385",
-        "b529d1fd-9fad-4bb5-b4cf-36506d8b43bd",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
@@ -321,7 +327,7 @@
       "type": "apps",
       "blocks": {
         "0b2c4db0-68a2-468e-890c-52a77263cb09": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}",
             "widget_type": "combined_widget"
