@@ -1322,7 +1322,7 @@ button.upsell-add-to-cart.disabled{
   }
   ._b_upsell-product-image {
     grid-area: image1;
-    margin-right: 0;
+    margin-right: 0!important;
   }
   ._b_upsell-product-image + ._b_upsell-product-image {
     grid-area: image2;
