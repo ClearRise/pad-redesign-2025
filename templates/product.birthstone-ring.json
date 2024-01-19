@@ -368,6 +368,12 @@
       "type": "collection-return",
       "settings": {
       }
+    },
+    "section_custom_liquid_emyGpb": {
+      "type": "section-custom-liquid",
+      "settings": {
+        "custom_liquid": "<div>reviews<\/div>"
+      }
     }
   },
   "order": [
@@ -381,6 +387,7 @@
     "product-recommendations",
     "534c70bd-1de0-44e8-978e-a489c47944be",
     "recently-viewed",
-    "collection-return"
+    "collection-return",
+    "section_custom_liquid_emyGpb"
   ]
 }
