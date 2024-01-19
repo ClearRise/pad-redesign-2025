@@ -66,31 +66,11 @@
         "enable_color_swatches": false,
         "enable_sort": true
       }
-    },
-    "16565224843948356c": {
-      "type": "rich-text",
-      "blocks": {
-        "1656522484879291dc-0": {
-          "type": "heading",
-          "settings": {
-            "title": "See What Our Customers Are Saying"
-          }
-        }
-      },
-      "block_order": [
-        "1656522484879291dc-0"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
-      }
     }
   },
   "order": [
     "collection-header",
     "16547143010b0fc992",
-    "main-collection",
-    "16565224843948356c"
+    "main-collection"
   ]
 }
