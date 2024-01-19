@@ -1314,10 +1314,6 @@ button.upsell-add-to-cart.disabled{
  }
 
 @media screen and (max-width: 767px) {
-  ._b_product-title-link {
-    width: 100%;
-    margin-bottom: 10px;
-  }
   ._b_upsell-collection ._b_upsell-product {
     flex-wrap: wrap;
     justify-content: flex-start;
