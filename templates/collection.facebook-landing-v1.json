@@ -3,7 +3,8 @@
     "replo_trust_icons_X3qmYh": {
       "type": "replo-trust-icons",
       "disabled": true,
-      "settings": {}
+      "settings": {
+      }
     },
     "collection-header": {
       "type": "collection-header",
@@ -16,7 +17,8 @@
     },
     "replo_collection_page_hero_2_wcHhVi": {
       "type": "replo-collection-page-hero-2",
-      "settings": {}
+      "settings": {
+      }
     },
     "main-collection": {
       "type": "main-collection",
