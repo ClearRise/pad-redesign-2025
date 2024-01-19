@@ -1314,6 +1314,12 @@ button.upsell-add-to-cart.disabled{
  }
 
 @media screen and (max-width: 767px) {
+  ._b_upsell-collection ._b_upsell-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:  image text 
+                          image text;
+  }
   ._b_upsell-collection ._b_upsell-product ._b_upsell-product-info {
     display: inline-block;
     flex-direction: column;
