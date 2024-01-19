@@ -1319,7 +1319,7 @@ button.upsell-add-to-cart.disabled{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-basis: 60%;
+    flex-basis: 100%;
     padding-left: 10px;
   }
   .dci-title{
