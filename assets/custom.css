@@ -1286,6 +1286,20 @@ button.upsell-add-to-cart.disabled{
   padding-left: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  ._b_upsell-collection ._b_upsell-product {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  ._b_upsell-collection ._b_upsell-product ._b_upsell-product-info {
+    width: 100%;
+    flex-basis: 100%;
+    padding-left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
 ._b_product-title-link {
   margin-bottom: 3px;
   text-align: left;
