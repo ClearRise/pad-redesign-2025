@@ -1336,6 +1336,9 @@ button.upsell-add-to-cart.disabled{
     padding-left: 20px;
     grid-area: text;
   }
+  ._b_product-title-link {
+    margin-bottom: 10px;
+  }
   .dci-title{
     font-size: 24px;
     line-height: 28px;
@@ -1345,7 +1348,7 @@ button.upsell-add-to-cart.disabled{
     line-height: 22px;
   }
   ._b_product-title-link {
-    margin-bottom: 2px;
+    margin-bottom: 10px;
   }
   .drawer--left.drawer--is-open{
     z-index: 1000000!important;
