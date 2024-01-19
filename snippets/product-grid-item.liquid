@@ -79,11 +79,7 @@ if tag contains '_label_'
         </div>
       {%- endunless -%}
       {%- if on_sale and product.available -%}
-<<<<<<< HEAD
         {% assign saved_amount_value = product.compare_at_price | minus: product.price %}
-=======
-      {% assign saved_amount_value = product.compare_at_price | minus: product.price %}
->>>>>>> c865994c311d239e39622e04a29c144cf90b4cf6
         {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money  }}{%- endcapture -%}
         {%- capture saved_percent -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
         {% assign saved_percent = saved_percent | plus: 0 %}
