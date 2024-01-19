@@ -337,6 +337,12 @@
         "divider": false
       }
     },
+    "section_custom_liquid_emyGpb": {
+      "type": "section-custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>"
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -368,12 +374,6 @@
       "type": "collection-return",
       "settings": {
       }
-    },
-    "section_custom_liquid_emyGpb": {
-      "type": "section-custom-liquid",
-      "settings": {
-        "custom_liquid": "<div>reviews<\/div>"
-      }
     }
   },
   "order": [
@@ -384,10 +384,10 @@
     "1646853684b754aedd",
     "sub",
     "16602466454a97b1e9",
+    "section_custom_liquid_emyGpb",
     "product-recommendations",
     "534c70bd-1de0-44e8-978e-a489c47944be",
     "recently-viewed",
-    "collection-return",
-    "section_custom_liquid_emyGpb"
+    "collection-return"
   ]
 }
