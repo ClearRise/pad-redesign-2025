@@ -345,7 +345,7 @@
     "section_custom_liquid_6RdNXb": {
       "type": "section-custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"shopify-section product-full-width\">\n     <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>\n<\/div>"
+        "custom_liquid": "<div class=\"shopify-section index-section\">\n     <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>\n<\/div>"
       }
     }
   },
