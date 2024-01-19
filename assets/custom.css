@@ -1317,11 +1317,14 @@ button.upsell-add-to-cart.disabled{
   ._b_upsell-collection ._b_upsell-product {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:  'image text' 
-                          'image text';
+    grid-template-areas:  'image1 text' 
+                          'image2 text';
   }
   ._b_upsell-product-image {
-    grid-area: image;
+    grid-area: image1;
+  }
+  ._b_upsell-product-image + ._b_upsell-product-image {
+    grid-area: image2;
   }
   ._b_upsell-collection ._b_upsell-product ._b_upsell-product-info {
     display: inline-block;
