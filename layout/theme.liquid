@@ -112,7 +112,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       themeVersion: "5.5.0"
     };
   </script>
-
+  
+<script>
+window._Sendlane = window._Sendlane || [];
+_Sendlane.push({
+    event_id: 'bggDbJj1RgPoU'
+});
+</script>
+<script src="https://sendlane.com/scripts/pusher.js" async></script>
+  
 {% comment %} {% render 'header-scripts.zipifypages', renderctx: 'thm' %}  {% endcomment %}
 
 <!--  content for header  ------------------------------------------------------------------->   
@@ -187,7 +195,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       engraving_var_id: {{ engraving_product_id_var }}
     };
   </script>
-<script src="{{ 'engravingx.js' | asset_url }}"></script>
+  
+{% comment %} <script src="{{ 'engravingx.js' | asset_url }}"></script>{% endcomment %}
 {% endif %}
 
 {% comment %}        {% include 'analyzify-gtm-body' %}  {% endcomment %}
@@ -208,8 +217,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'AW-796784713');
 </script>
+
 {% endcomment %}
 
   
@@ -340,6 +351,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {% if request.path contains '/pages/contact-us' or request.path contains '/collections/custom-rings' %}  
   <script src="{{ 'storeifyapps-formbuilder-script.js' | asset_url }}" defer></script>
 {% endif %}  
+
+<!--  Intelligems Template Testing Script -->
+
+    <script>
+    window._template = {
+        directory: "{{ template.directory }}",
+        name: "{{ template.name }}",
+        suffix: "{{ template.suffix }}"
+    }
+  </script> 
 
   
 <script src="https://cdn.intelligems.io/36720b0810aa.js"></script>

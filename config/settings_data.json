@@ -28,8 +28,8 @@
     "color_image_overlay_opacity": 10,
     "color_image_overlay_text_shadow": 10,
     "type_header_font_family": "sans-serif",
-    "type_header_spacing": "100",
-    "type_header_base_size": 45,
+    "type_header_spacing": "50",
+    "type_header_base_size": 38,
     "type_header_line_height": 1.5,
     "type_header_capitalize": false,
     "type_headers_align_text": true,
@@ -65,11 +65,11 @@
     "collection_grid_tint": "#000000",
     "collection_grid_opacity": 10,
     "collection_grid_gutter": true,
-    "product_threshold_amount": 210,
-    "product1-img1": "shopify:\/\/shop_images\/lava-carbon-fiber-glow-ring_85f6bfd9-20e1-41ec-874e-9d9698a2aaaa.jpg",
-    "product1-img2": "shopify:\/\/shop_images\/carbon-fiber-glow-pendant-2_0c7c1e8f-4a40-4a20-a00b-f3969517ea5a.png",
-    "product1-title": "Free Gift Offer",
-    "product1-text": "Spend $210+ and get a free <b>Lava Radiance Carbon Fiber Glow Ring<\/b> or <b>Carbon Fiber Glow Pendant<\/b>. <br><br>This Month Only.",
+    "product_threshold_amount": 150,
+    "product1-img1": "shopify:\/\/shop_images\/phantom-radiance-carbon-fiber-glow-ring-10_ac774d96-f777-44c4-aaa2-bc9daf03e801.png",
+    "product1-img2": "shopify:\/\/shop_images\/Meteorite_Pendant_Thumbnail_1383230f-f91f-4855-a577-29605a5ed975.png",
+    "product1-title": "<b>FREE GIFT WITH PURCHASE<\/b>",
+    "product1-text": "Spend $150+ and get a free Phantom Radiance Carbon Fiber Glow Ring or Meteorite Pendant",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -80,18 +80,18 @@
     "product-engraving": "laser-engraving-text",
     "cart_type": "page",
     "empty_menu_link_list": "empty-cart-menu",
-    "empty_cart_text1": ".",
-    "empty_cart_text2": ".",
-    "empty_cart_text3": ".",
+    "empty_cart_text1": "",
+    "empty_cart_text2": "",
+    "empty_cart_text3": "",
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
     "show_gift_box": true,
     "first_tier_progress": "You've unlocked a free gift!",
-    "gift_box_title": "Choose One Free Gift!",
-    "cart_threshold_amount": 395,
+    "gift_box_title": "You've unlocked a Free Gift!",
+    "cart_threshold_amount": 150,
     "spend_progress": "",
-    "product-handle-1": "lava-radiance-carbon-fiber-glow-ring-1",
-    "product-handle-2": "carbon-fiber-glow-pendant-1",
+    "product-handle-1": "phantom-radiance-carbon-fiber-glow-ring-4",
+    "product-handle-2": "meteorite-necklace-circular-meteorite-pendant-2",
     "hide_gift_2": false,
     "second_show_gift_box": false,
     "second_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
@@ -132,29 +132,51 @@
       "header": {
         "type": "header",
         "blocks": {
+          "d6256397-4cc6-4f30-8e67-be7073667b8a": {
+            "type": "announcement",
+            "settings": {
+              "text": "Ring in the New Year with 20% OFF Sitewide",
+              "link_text": "SHOP NOW",
+              "link": "shopify:\/\/collections\/all-products"
+            }
+          },
           "1524770014057": {
             "type": "logo",
             "settings": {
-              "logo": "shopify:\/\/shop_images\/115807_VectorLogoPad_082517_1c2d4277-9c34-4d89-84ce-b712a5990a93.png",
+              "logo": "shopify:\/\/shop_images\/3Asset_2.png",
               "desktop_logo_width": 100,
-              "mobile_logo_width": 60
+              "mobile_logo_width": 130
             }
           },
-          "5d52f8ac-5743-4bb3-8f8c-b605d39edb41": {
+          "30d9274d-f502-4710-bb39-866381456103": {
             "type": "scroll_navi_mobile",
             "settings": {
-              "sub_menu": "Men's Rings",
-              "link_submenu": "\/collections\/all-products?filter.p.m.custom.product_type=Ring"
+              "sub_menu": "Shop Rings",
+              "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/all-products?filter.p.m.custom.product_type=Ring"
             }
           },
-          "75208edc-9df1-4a0f-93e3-95660800d197": {
+          "966bc6e1-31db-4261-b34d-773ca4a79259": {
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "Wedding Bands",
-              "link_submenu": "\/collections\/mens-wedding-bands"
+              "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/best-selling-wedding-bands-v1"
             }
           },
-          "5e7dd7e3-e74f-4ac0-9134-363386300ddb": {
+          "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56": {
+            "type": "scroll_navi_mobile",
+            "settings": {
+              "sub_menu": "All Necklaces",
+              "link_submenu": "shopify:\/\/collections\/necklaces"
+            }
+          },
+          "scroll_navi_mobile_zRWDNN": {
+            "type": "scroll_navi_mobile",
+            "settings": {
+              "sub_menu": "Gifts Under $200",
+              "link_submenu": "shopify:\/\/collections\/gifts-under-200"
+            }
+          },
+          "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "Custom Rings",
@@ -163,10 +185,13 @@
           }
         },
         "block_order": [
+          "d6256397-4cc6-4f30-8e67-be7073667b8a",
           "1524770014057",
-          "5d52f8ac-5743-4bb3-8f8c-b605d39edb41",
-          "75208edc-9df1-4a0f-93e3-95660800d197",
-          "5e7dd7e3-e74f-4ac0-9134-363386300ddb"
+          "30d9274d-f502-4710-bb39-866381456103",
+          "966bc6e1-31db-4261-b34d-773ca4a79259",
+          "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56",
+          "scroll_navi_mobile_zRWDNN",
+          "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc"
         ],
         "settings": {
           "main_menu_link_list": "05-16-23-lewis-main-menu",
@@ -174,12 +199,12 @@
           "show_menu_img": true,
           "menu_img": "shopify:\/\/shop_images\/carbon-fiber-ring.jpg",
           "main_menu_alignment": "left",
-          "main_menu_alignment_mobile": "center-left",
+          "main_menu_alignment_mobile": "center-split",
           "header_style": "normal",
           "sticky_index": false,
           "sticky_collection": false,
           "announcement_compact": true,
-          "announcement_above_header": false,
+          "announcement_above_header": true,
           "toolbar_menu": "top-menu",
           "toolbar_social": true,
           "show_locale_selector": true,
@@ -294,6 +319,12 @@
       "1877152918344802950": {
         "type": "shopify:\/\/apps\/intelligems-a-b-testing\/blocks\/intelligems-script\/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
         "disabled": true,
+        "settings": {
+        }
+      },
+      "2728461494843721857": {
+        "type": "shopify:\/\/apps\/amped-email-sms-popups\/blocks\/app-embed\/d9d8f140-4443-4f6c-a16a-95357ecc2125",
+        "disabled": false,
         "settings": {
         }
       }

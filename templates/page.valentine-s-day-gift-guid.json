@@ -1,0 +1,279 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "d85bc3a7-fd8d-47e1-96ea-6e11429dde6c": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14688191053906__d85bc3a7-fd8d-47e1-96ea-6e11429dde6c-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Up to 30% Off",
+            "title": "Gifts as Unique as They Are",
+            "title_size": 60,
+            "subheading": "",
+            "link": "shopify:\/\/collections\/all",
+            "link_text": "SHOP ALL",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#138f7e",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/blank.png",
+            "image_mobile": "shopify:\/\/shop_images\/blank2.png",
+            "overlay_opacity": 16,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14688191053906__d85bc3a7-fd8d-47e1-96ea-6e11429dde6c-image-1"
+      ],
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "7ec74fcf-2168-461f-b123-687a58d987ce": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best Sellers",
+        "home_featured_products": "best-sellers",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "d577c540-556e-41f3-9203-ae44f38ea7c0": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Glowstone Series",
+            "textarea": "<u> <b>SHOP ALL<\/b><\/u>",
+            "cta_text1": "",
+            "cta_link1": "shopify:\/\/collections\/the-glowstone-series",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Glowstone_Ring_2-_flipped_091974d9-dead-4efa-8f3b-b86399fcdcaf.png",
+            "video_url": "",
+            "width": "100",
+            "height": 400,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14688191053906__d577c540-556e-41f3-9203-ae44f38ea7c0-advanced-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false
+      }
+    },
+    "4723b2e9-d4f7-4fe5-a08b-be5b858c1816": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "home_featured_products": "the-glowstone-series",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "8dcd1e21-a51f-4071-b3f3-ac27cd43ef96": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--14688191053906__8dcd1e21-a51f-4071-b3f3-ac27cd43ef96-advanced-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Solid   Meteorite   Rings",
+            "textarea": "<u> <b>SHOP ALL<\/b><\/u>",
+            "cta_text1": "",
+            "cta_link1": "shopify:\/\/collections\/meteorite-jewelry",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Meteorite_Stack_Square.png",
+            "video_url": "",
+            "width": "100",
+            "height": 400,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14688191053906__8dcd1e21-a51f-4071-b3f3-ac27cd43ef96-advanced-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false
+      }
+    },
+    "3bcdecdd-10e2-4cb9-b410-086e21702c1f": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "home_featured_products": "meteorite-jewelry",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "7d48d57a-31d7-4fcf-bcfe-04268ace52bb": {
+      "type": "promo-grid",
+      "blocks": {
+        "6ea4272b-0125-43c0-8d38-5253c73c2921": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Limited Time Deals",
+            "heading": "Shop Gifts Under $200",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https:\/\/patrickadairdesigns.com\/collections\/gifts-under-200",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Group_Shot.png",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "template--14688191053906__7d48d57a-31d7-4fcf-bcfe-04268ace52bb-advanced-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Pendants",
+            "textarea": "Free Black Stainless<br> Steel Box Chain",
+            "cta_text1": "",
+            "cta_link1": "shopify:\/\/collections\/necklaces",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Pendant_56ae5f17-8dbc-4305-8aaa-5db6424d04ce.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "template--14688191053906__7d48d57a-31d7-4fcf-bcfe-04268ace52bb-advanced-2": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Earrings",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify:\/\/collections\/earrings",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/earrings.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "a1d64d17-b654-48f4-a356-1024331aae02": {
+          "type": "banner",
+          "settings": {
+            "heading": "VALENTINES SPECIAL",
+            "text": "Save Up to 30%",
+            "link": "shopify:\/\/collections\/flash-sale-collection",
+            "label": "Shop now",
+            "color_tint": "#000000",
+            "color_tint_opacity": 8,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "6ea4272b-0125-43c0-8d38-5253c73c2921",
+        "template--14688191053906__7d48d57a-31d7-4fcf-bcfe-04268ace52bb-advanced-1",
+        "template--14688191053906__7d48d57a-31d7-4fcf-bcfe-04268ace52bb-advanced-2",
+        "a1d64d17-b654-48f4-a356-1024331aae02"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false
+      }
+    },
+    "1701288569bb5bef2b": {
+      "type": "apps",
+      "blocks": {
+        "d3cce40d-ef5c-423b-a044-c1a75de28f6f": {
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "d3cce40d-ef5c-423b-a044-c1a75de28f6f"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d85bc3a7-fd8d-47e1-96ea-6e11429dde6c",
+    "7ec74fcf-2168-461f-b123-687a58d987ce",
+    "d577c540-556e-41f3-9203-ae44f38ea7c0",
+    "4723b2e9-d4f7-4fe5-a08b-be5b858c1816",
+    "8dcd1e21-a51f-4071-b3f3-ac27cd43ef96",
+    "3bcdecdd-10e2-4cb9-b410-086e21702c1f",
+    "7d48d57a-31d7-4fcf-bcfe-04268ace52bb",
+    "1701288569bb5bef2b"
+  ]
+}
