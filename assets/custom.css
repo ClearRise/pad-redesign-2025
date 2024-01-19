@@ -1322,8 +1322,8 @@ button.upsell-add-to-cart.disabled{
     width: 100%;
     flex-basis: 100%;
     padding-left: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     display: inline-block;
     flex-direction: column;
     justify-content: center;
