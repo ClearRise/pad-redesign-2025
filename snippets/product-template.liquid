@@ -126,6 +126,8 @@
               {%- endif -%}
             </div>
 
+            <div class="sendlane-reviews" sl-product-id="{{product.id}}" sl-type="mini"></div>
+            
             <div data-product-blocks>
               {%- capture form_id -%}AddToCartForm-{{ section_id }}-{{ product.id }}{%- endcapture -%}
               {%- for block in blocks -%}
