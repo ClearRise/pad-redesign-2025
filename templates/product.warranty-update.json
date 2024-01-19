@@ -341,6 +341,12 @@
       "type": "collection-return",
       "settings": {
       }
+    },
+    "section_custom_liquid_LzzjCG": {
+      "type": "section-custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\">\n     <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>\n<\/div>"
+      }
     }
   },
   "order": [
@@ -352,6 +358,7 @@
     "product-recommendations",
     "recently-viewed",
     "ce1d4691-0e47-4f60-b7bf-2ceb7a0aa480",
-    "collection-return"
+    "collection-return",
+    "section_custom_liquid_LzzjCG"
   ]
 }
