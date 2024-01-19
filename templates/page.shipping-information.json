@@ -3,8 +3,7 @@
     "main": {
       "type": "main-page",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "6403731b-871d-448b-b44f-86ebc0092e9c": {
       "type": "rich-text",
@@ -48,7 +47,7 @@
           "type": "question",
           "settings": {
             "title": "Glowstone Rings",
-            "text": "<p>Glowstone rings are currently taking approx. <strong>6 weeks to ship<\/strong>.<\/p><p>The below rings are shipping in approx.<strong> 2-4 weeks<\/strong>.<\/p><ul><li>Star Dust™ Ring in Black Ceramic<\/li><li>Star Dust™ Ring in White Ceramic<\/li><li>Star Dust™ Stackable Ring<\/li><li>Star Dust™ Ring on Tungsten<\/li><li>Matching Star Dust™ Wedding Ring Set in Tungsten<\/li><li>Radiant Star Dust™ Ring<\/li><li>Hexagon Star Dust™ Ring<\/li><li>Hexagon Crimson Star Dust™ Ring<\/li><li>Lavender Star Dust™ Ring<\/li><li>Hexagon Lavender Star Dust™ Ring<\/li><li>Custom Titanium Glowstone Ring<\/li><li>Custom Tungsten Glowstone Ring<\/li><li>Custom Ceramic Glowstone Ring<\/li><li>Lavender Opal Glowstone Ring<\/li><li>Lavender Opal Glowstone Stackable Ring<\/li><li>Radiant Lavender Opal Glowstone Ring<\/li><li>Matching Lavender Opal Glowstone Wedding Ring Set in Black Ceramic<\/li><li>Black Fire Opal Glowstone Ring<\/li><li>Radiant Black Fire Opal Glowstone Ring<\/li><li>Matching Black Fire Opal Glowstone Wedding Ring Set<\/li><li>Winter's Howl Glowstone Ring<\/li><li>Matching Winter's Howl <\/li><li>Hexagon Winter's Howl Glowstone Ring<\/li><li>Glowstone Wedding Ring Set in Tungsten<\/li><li>The Ember Glowstone Ring<\/li><li>Ember Glowstone Stackable Ring<\/li><li>Matching Ember Glowstone Wedding Ring Set<\/li><li>Sunken Artifact Glowstone Ring<\/li><li>Matching Sunken Artifact Glowstone Wedding Ring Set in Tungsten<\/li><li>Area 51 Glowstone Ring<\/li><li>Matching Area 51 Glowstone Wedding Ring Set<\/li><li>Glowstone Cremation Ring with Ashes<\/li><li>Kaiju Glowstone Ring<\/li><li>Black Emerald Opal Glowstone Ring<\/li><li>Dragon Scale Opal Glowstone Ring<\/li><li>Cosmic Glowstone Ring<\/li><li>Radiant Cosmic Glowstone Ring<\/li><\/ul>"
+            "text": "<p>We are currently experiencing longer than normal production timelines for our Glowstone Rings due to the Holiday Season and order volume. Glowstone rings are currently taking approx. <strong>8 weeks to ship. <\/strong><\/p><p>The <a href=\"https:\/\/patrickadairdesigns.com\/products\/star-dust-ring\"><span style=\"text-decoration:underline\"><strong>Star Dust™ Ring<\/strong><\/span><\/a> is shipping in <strong>1 business DAY<\/strong>.<\/p>"
           }
         },
         "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2": {
@@ -69,35 +68,35 @@
           "type": "question",
           "settings": {
             "title": "Carbon Fiber Rings",
-            "text": "<p>Carbon Fiber Rings are currently taking approx. <strong>1-2 weeks to ship<\/strong>.<\/p><p>If the Carbon Fiber Ring also contains other materials (e.g. a liner, accents, inlay) then it will ship in approx <strong>2-4 weeks to ship.<\/strong><\/p>"
+            "text": "<p>Carbon Fiber Rings are currently taking approx.<strong>4-6<\/strong> <strong>weeks to ship<\/strong>.<\/p>"
           }
         },
         "f04d8342-18cb-44cd-8612-a1fdf4afc09b": {
           "type": "question",
           "settings": {
             "title": "Opal Rings",
-            "text": "<p>All solid opal rings are currently taking approx. <strong>4 weeks to ship.<\/strong><\/p>"
+            "text": "<p>All solid opal rings are currently taking approx. <strong>4-6 weeks to ship.<\/strong><\/p>"
           }
         },
         "56c40efd-9201-4a79-86d6-f829d8584f99": {
           "type": "question",
           "settings": {
             "title": "Misc. Rings",
-            "text": "<ul><li>Mokume Gane Rings: 2-4 weeks<\/li><li>Timascus Rings: 2-4 weeks<\/li><li>Reptilian Damascus Steel Ring: 4-6 weeks<\/li><li>Spirograph Damascus Steel Ring: 4-6 weeks<\/li><li>Superconductor Rings: 4-6 weeks<\/li><\/ul>"
+            "text": "<ul><li>Mokume Gane Rings: 4-6weeks<\/li><li>Timascus Rings: 4-6weeks<\/li><li>Reptilian Damascus Steel Ring: 4-6 weeks<\/li><li>Spirograph Damascus Steel Ring: 4-6 weeks<\/li><li>Superconductor Rings: 4-6 weeks<\/li><\/ul>"
           }
         },
         "e9488b45-be9e-41c3-afb4-b05cfa7c0070": {
           "type": "question",
           "settings": {
             "title": "Pendants",
-            "text": "<p>All pendants are handmade in batches with differing timelines based on material (excluding Glowstone pendants, which are made to order). Since they are made in batches, most pendants are in stock and ready to ship in 2-3 business days.<\/p>"
+            "text": "<p>All pendants are handmade in batches with differing timelines based on material (excluding Glowstone pendants, which are made to order). Since they are made in batches, most pendants are in stock and ready to ship in 2-3 business days. Please refer to the Shipping Information Tab on the product page of each pendant to see specifics.<\/p><p><strong>﻿<\/strong>﻿Glowstone Pendants are currently expected to take <strong>﻿8+ weeks to ship<\/strong>﻿ and will not ship until 2024<\/p>"
           }
         },
         "24f90d41-4f8a-413c-ad3a-f4197b96f670": {
           "type": "question",
           "settings": {
             "title": "Glowstone Earrings",
-            "text": "<p>All Glowstone Earrings are currently estimated to take 4 weeks to ship<\/p>"
+            "text": "<p>All Glowstone Earrings are currently estimated to take <strong>6-8 <\/strong>weeks to ship<\/p>"
           }
         },
         "caf44b84-4f9b-4c8d-9e94-aa908c58814c": {

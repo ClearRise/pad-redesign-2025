@@ -1,5 +1,9 @@
 {
   "sections": {
+    "replo_flash_sale_timer_HwE8Gy": {
+      "type": "replo-flash-sale-timer",
+      "settings": {}
+    },
     "collection-header": {
       "type": "collection-header",
       "disabled": true,
@@ -8,10 +12,6 @@
         "collection_image_enable": false,
         "parallax": true
       }
-    },
-    "3e3e29e8-1c39-4a0b-bba4-49d53de8bace": {
-      "type": "replo-flash-sale-timer",
-      "settings": {}
     },
     "promo-grid": {
       "type": "promo-grid",
@@ -103,8 +103,8 @@
     }
   },
   "order": [
+    "replo_flash_sale_timer_HwE8Gy",
     "collection-header",
-    "3e3e29e8-1c39-4a0b-bba4-49d53de8bace",
     "promo-grid",
     "main-collection"
   ]

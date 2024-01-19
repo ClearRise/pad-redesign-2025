@@ -1,1 +1,104 @@
-{"sections":{"main":{"type":"list-collections-template","blocks":{"df2b5118-f750-4a66-b5fc-977f448b2939":{"type":"collection","settings":{"collection":"best-sellers"}},"035c9f6d-11a0-4b99-8d29-ab215047cd60":{"type":"collection","settings":{"collection":"birthstone-series"}},"fd53356c-d27f-4ec8-b521-61dd3956da03":{"type":"collection","settings":{"collection":"the-boundless-series"}},"6870eb46-f8fa-48c9-aa8b-efc2e72f9fb6":{"type":"collection","settings":{"collection":"the-classic-series"}},"7af2e05e-cd19-4be1-8a1e-7a7a15be49e1":{"type":"collection","settings":{"collection":"the-collectors-series"}},"b710422e-3838-4eed-9e59-ab68a0b0cf51":{"type":"collection","settings":{"collection":"the-glowstone-series"}},"8225cf87-8cbb-44b8-a129-6165af6fa048":{"type":"collection","settings":{"collection":"necklaces"}},"334b6384-9f4b-4e15-97bb-18b300366687":{"type":"collection","settings":{"collection":"the-obsidian-series"}},"7bf7abd4-ae3e-438a-8d42-991061eb9d6e":{"type":"collection","settings":{"collection":"opal-glowstone-rings"}},"80b90257-70b2-4b4a-9e09-5d13f365e1d5":{"type":"collection","settings":{"collection":"the-radiant-series"}},"2a74a7bf-795c-4ac8-a3b5-fddc5c823a4a":{"type":"collection","settings":{"collection":"the-signature-series-v2"}},"a3d005b3-c151-435a-b06e-409d009b6574":{"type":"collection","settings":{"collection":"wedding-ring-sets"}}},"block_order":["df2b5118-f750-4a66-b5fc-977f448b2939","035c9f6d-11a0-4b99-8d29-ab215047cd60","fd53356c-d27f-4ec8-b521-61dd3956da03","6870eb46-f8fa-48c9-aa8b-efc2e72f9fb6","7af2e05e-cd19-4be1-8a1e-7a7a15be49e1","b710422e-3838-4eed-9e59-ab68a0b0cf51","8225cf87-8cbb-44b8-a129-6165af6fa048","334b6384-9f4b-4e15-97bb-18b300366687","7bf7abd4-ae3e-438a-8d42-991061eb9d6e","80b90257-70b2-4b4a-9e09-5d13f365e1d5","2a74a7bf-795c-4ac8-a3b5-fddc5c823a4a","a3d005b3-c151-435a-b06e-409d009b6574"],"settings":{"title_enable":false,"display_type":"selected","sort":"alphabetical","grid":"2"}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "list-collections-template",
+      "blocks": {
+        "df2b5118-f750-4a66-b5fc-977f448b2939": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "035c9f6d-11a0-4b99-8d29-ab215047cd60": {
+          "type": "collection",
+          "settings": {
+            "collection": "birthstone-series"
+          }
+        },
+        "fd53356c-d27f-4ec8-b521-61dd3956da03": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-boundless-series"
+          }
+        },
+        "6870eb46-f8fa-48c9-aa8b-efc2e72f9fb6": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-classic-series"
+          }
+        },
+        "7af2e05e-cd19-4be1-8a1e-7a7a15be49e1": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-collectors-series"
+          }
+        },
+        "b710422e-3838-4eed-9e59-ab68a0b0cf51": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-glowstone-series"
+          }
+        },
+        "8225cf87-8cbb-44b8-a129-6165af6fa048": {
+          "type": "collection",
+          "settings": {
+            "collection": "necklaces"
+          }
+        },
+        "334b6384-9f4b-4e15-97bb-18b300366687": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-obsidian-series"
+          }
+        },
+        "7bf7abd4-ae3e-438a-8d42-991061eb9d6e": {
+          "type": "collection",
+          "settings": {
+            "collection": "opal-glowstone-rings"
+          }
+        },
+        "80b90257-70b2-4b4a-9e09-5d13f365e1d5": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-radiant-series"
+          }
+        },
+        "2a74a7bf-795c-4ac8-a3b5-fddc5c823a4a": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-signature-series-v2"
+          }
+        },
+        "a3d005b3-c151-435a-b06e-409d009b6574": {
+          "type": "collection",
+          "settings": {
+            "collection": "wedding-ring-sets"
+          }
+        }
+      },
+      "block_order": [
+        "df2b5118-f750-4a66-b5fc-977f448b2939",
+        "035c9f6d-11a0-4b99-8d29-ab215047cd60",
+        "fd53356c-d27f-4ec8-b521-61dd3956da03",
+        "6870eb46-f8fa-48c9-aa8b-efc2e72f9fb6",
+        "7af2e05e-cd19-4be1-8a1e-7a7a15be49e1",
+        "b710422e-3838-4eed-9e59-ab68a0b0cf51",
+        "8225cf87-8cbb-44b8-a129-6165af6fa048",
+        "334b6384-9f4b-4e15-97bb-18b300366687",
+        "7bf7abd4-ae3e-438a-8d42-991061eb9d6e",
+        "80b90257-70b2-4b4a-9e09-5d13f365e1d5",
+        "2a74a7bf-795c-4ac8-a3b5-fddc5c823a4a",
+        "a3d005b3-c151-435a-b06e-409d009b6574"
+      ],
+      "settings": {
+        "title_enable": false,
+        "display_type": "selected",
+        "sort": "alphabetical",
+        "grid": "2"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

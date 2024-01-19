@@ -22,8 +22,7 @@
     "main": {
       "type": "main-page",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "51d605d7-6af7-41f0-aefd-959e1fe51de0": {
       "type": "faq",

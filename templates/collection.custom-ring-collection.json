@@ -1,1 +1,133 @@
-{"sections":{"collection-header":{"type":"collection-header","settings":{"enable":false,"collection_image_enable":false,"parallax":true}},"16547143010b0fc992":{"type":"rich-text","blocks":{"165471430186318dbb-0":{"type":"heading","disabled":true,"settings":{"title":"Looking for something custom?"}},"165471430186318dbb-1":{"type":"text","settings":{"enlarge_text":true,"text":"<p><strong>Looking for something custom?<br\/><\/strong><br\/>1. Browse the images below and click one that has the base shape and style you want. <br\/><br\/>2. Get the opportunity to customize the ring 100% to your liking. <br\/><br\/>3. We hand make it for you.<br\/><br\/>And if you still need a little extra help, <a href=\"https:\/\/patrickadairdesigns.com\/pages\/custom-design-consultation\" title=\"https:\/\/patrickadairdesigns.com\/pages\/custom-design-consultation\"><strong>Book an Appointment<\/strong><\/a> with a product specialist or fill out the contact information at the bottom of the page<\/p>"}}},"block_order":["165471430186318dbb-0","165471430186318dbb-1"],"settings":{"align_text":"center","narrow_column":true,"divider":false}},"main-collection":{"type":"main-collection","blocks":{"collection_description":{"type":"collection_description","disabled":true,"settings":{}},"product_grid":{"type":"product_grid","settings":{"enable_collection_count":true,"per_row":3,"rows_per_page":20,"mobile_flush_grid":true}}},"block_order":["collection_description","product_grid"],"settings":{"enable_sidebar":true,"collapsed":true,"filter_style":"sidebar","enable_color_swatches":false,"enable_sort":true}},"16565224843948356c":{"type":"rich-text","blocks":{"1656522484879291dc-0":{"type":"heading","settings":{"title":"See What Our Customers Are Saying"}}},"block_order":["1656522484879291dc-0"],"settings":{"align_text":"center","narrow_column":true,"divider":false}},"1654714608fb29f83d":{"type":"apps","blocks":{"7b2d798a-249f-49d9-9f59-14bcf2d41e38":{"type":"shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29","settings":{"product":"custom-premium-opal-glowstone-ring"}}},"block_order":["7b2d798a-249f-49d9-9f59-14bcf2d41e38"],"settings":{"full_width":false,"space_around":true}},"16547145783eb596e9":{"type":"contact-form","disabled":true,"settings":{"title":"Get Help from a Specialist","text":"<p>If you didn't see something that fits what your looking for, don't worry. We can make anything you want. <br\/><br\/>So what now? <br\/><br\/>You can:<br\/><br\/>1. Filling out the form below and one of our specialists will contact you via email. <br\/><br\/>2. Give us a call at 385-381-8939 and get help over the phone<br\/><br\/>3. Click the message bubble on the bottom of your screen and have someone help you with your design through live chat. <\/p>","show_phone":false,"narrow_column":true}},"16565205109d2a16ed":{"type":"apps","settings":{"full_width":false,"space_around":true}}},"order":["collection-header","16547143010b0fc992","main-collection","16565224843948356c","1654714608fb29f83d","16547145783eb596e9","16565205109d2a16ed"]}
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": false,
+        "collection_image_enable": false,
+        "parallax": true
+      }
+    },
+    "16547143010b0fc992": {
+      "type": "rich-text",
+      "blocks": {
+        "165471430186318dbb-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Looking for something custom?"
+          }
+        },
+        "165471430186318dbb-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p><strong>Looking for something custom?<br\/><\/strong><br\/>1. Browse the images below and click one that has the base shape and style you want. <br\/><br\/>2. Get the opportunity to customize the ring 100% to your liking. <br\/><br\/>3. We hand make it for you.<br\/><br\/>And if you still need a little extra help, <a href=\"https:\/\/patrickadairdesigns.com\/pages\/custom-design-consultation\" title=\"https:\/\/patrickadairdesigns.com\/pages\/custom-design-consultation\"><strong>Book an Appointment<\/strong><\/a> with a product specialist or fill out the contact information at the bottom of the page<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "165471430186318dbb-0",
+        "165471430186318dbb-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "disabled": true,
+          "settings": {}
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 3,
+            "rows_per_page": 20,
+            "mobile_flush_grid": true
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "product_grid"
+      ],
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true
+      }
+    },
+    "16565224843948356c": {
+      "type": "rich-text",
+      "blocks": {
+        "1656522484879291dc-0": {
+          "type": "heading",
+          "settings": {
+            "title": "See What Our Customers Are Saying"
+          }
+        }
+      },
+      "block_order": [
+        "1656522484879291dc-0"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1654714608fb29f83d": {
+      "type": "apps",
+      "blocks": {
+        "7b2d798a-249f-49d9-9f59-14bcf2d41e38": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "custom-premium-opal-glowstone-ring"
+          }
+        }
+      },
+      "block_order": [
+        "7b2d798a-249f-49d9-9f59-14bcf2d41e38"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "16547145783eb596e9": {
+      "type": "contact-form",
+      "disabled": true,
+      "settings": {
+        "title": "Get Help from a Specialist",
+        "text": "<p>If you didn't see something that fits what your looking for, don't worry. We can make anything you want. <br\/><br\/>So what now? <br\/><br\/>You can:<br\/><br\/>1. Filling out the form below and one of our specialists will contact you via email. <br\/><br\/>2. Give us a call at 385-381-8939 and get help over the phone<br\/><br\/>3. Click the message bubble on the bottom of your screen and have someone help you with your design through live chat. <\/p>",
+        "show_phone": false,
+        "narrow_column": true
+      }
+    },
+    "16565205109d2a16ed": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "16547143010b0fc992",
+    "main-collection",
+    "16565224843948356c",
+    "1654714608fb29f83d",
+    "16547145783eb596e9",
+    "16565205109d2a16ed"
+  ]
+}

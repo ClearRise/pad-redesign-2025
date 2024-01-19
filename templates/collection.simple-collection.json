@@ -1,1 +1,110 @@
-{"sections":{"collection-header":{"type":"collection-header","settings":{"enable":true,"collection_image_enable":true,"parallax":false}},"main-collection":{"type":"main-collection","blocks":{"collection_description":{"type":"collection_description","settings":{}},"subcollections":{"type":"subcollections","settings":{"subcollections_per_row":5}},"product_grid":{"type":"product_grid","settings":{"enable_collection_count":true,"per_row":3,"rows_per_page":20,"mobile_flush_grid":true}}},"block_order":["collection_description","subcollections","product_grid"],"settings":{"enable_sidebar":true,"collapsed":true,"filter_style":"sidebar","enable_color_swatches":false,"enable_sort":true}},"165229216603245327":{"type":"rich-text","blocks":{"165229216667420bc5-0":{"type":"heading","settings":{"title":"{{ collection.metafields.my_fields.header_1.value }}"}},"165229216667420bc5-1":{"type":"text","settings":{"enlarge_text":false,"text":"<p>{{ collection.metafields.my_fields.body_1.value }}<\/p>"}},"09d8eea6-7e4e-4736-b088-c87f72a4fdb4":{"type":"heading","settings":{"title":"{{ collection.metafields.my_fields.header_2.value }}"}},"4659c2b7-492e-4d16-ba14-5882cb455c75":{"type":"text","settings":{"enlarge_text":false,"text":"<p>{{ collection.metafields.my_fields.body_2.value }}<\/p>"}},"903f4b77-bede-4067-98ef-45a3cda640b5":{"type":"heading","settings":{"title":"{{ collection.metafields.my_fields.header_3.value }}"}},"7dd62d48-96ab-4be0-80c7-d6aa7d2e6c05":{"type":"text","settings":{"enlarge_text":false,"text":"<p>{{ collection.metafields.my_fields.body_3.value }}<\/p>"}}},"block_order":["165229216667420bc5-0","165229216667420bc5-1","09d8eea6-7e4e-4736-b088-c87f72a4fdb4","4659c2b7-492e-4d16-ba14-5882cb455c75","903f4b77-bede-4067-98ef-45a3cda640b5","7dd62d48-96ab-4be0-80c7-d6aa7d2e6c05"],"settings":{"align_text":"left","narrow_column":true,"divider":false}}},"order":["collection-header","main-collection","165229216603245327"]}
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": true,
+        "collection_image_enable": true,
+        "parallax": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
+        },
+        "subcollections": {
+          "type": "subcollections",
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 3,
+            "rows_per_page": 20,
+            "mobile_flush_grid": true
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "subcollections",
+        "product_grid"
+      ],
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true
+      }
+    },
+    "165229216603245327": {
+      "type": "rich-text",
+      "blocks": {
+        "165229216667420bc5-0": {
+          "type": "heading",
+          "settings": {
+            "title": "{{ collection.metafields.my_fields.header_1.value }}"
+          }
+        },
+        "165229216667420bc5-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>{{ collection.metafields.my_fields.body_1.value }}<\/p>"
+          }
+        },
+        "09d8eea6-7e4e-4736-b088-c87f72a4fdb4": {
+          "type": "heading",
+          "settings": {
+            "title": "{{ collection.metafields.my_fields.header_2.value }}"
+          }
+        },
+        "4659c2b7-492e-4d16-ba14-5882cb455c75": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>{{ collection.metafields.my_fields.body_2.value }}<\/p>"
+          }
+        },
+        "903f4b77-bede-4067-98ef-45a3cda640b5": {
+          "type": "heading",
+          "settings": {
+            "title": "{{ collection.metafields.my_fields.header_3.value }}"
+          }
+        },
+        "7dd62d48-96ab-4be0-80c7-d6aa7d2e6c05": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>{{ collection.metafields.my_fields.body_3.value }}<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "165229216667420bc5-0",
+        "165229216667420bc5-1",
+        "09d8eea6-7e4e-4736-b088-c87f72a4fdb4",
+        "4659c2b7-492e-4d16-ba14-5882cb455c75",
+        "903f4b77-bede-4067-98ef-45a3cda640b5",
+        "7dd62d48-96ab-4be0-80c7-d6aa7d2e6c05"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "main-collection",
+    "165229216603245327"
+  ]
+}

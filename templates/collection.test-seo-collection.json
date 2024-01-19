@@ -1,1 +1,92 @@
-{"sections":{"16553159476067a32b":{"type":"rich-text","blocks":{"16553159477399f67a-0":{"type":"heading","settings":{"title":"{{ collection.title }}"}}},"block_order":["16553159477399f67a-0"],"settings":{"align_text":"center","narrow_column":true,"divider":false}},"main-collection":{"type":"main-collection","blocks":{"collection_description":{"type":"collection_description","settings":{}},"product_grid":{"type":"product_grid","settings":{"enable_collection_count":true,"per_row":4,"rows_per_page":7,"mobile_flush_grid":false}}},"block_order":["collection_description","product_grid"],"settings":{"enable_sidebar":true,"collapsed":true,"filter_style":"sidebar","enable_color_swatches":false,"enable_sort":true}},"165530859073460ade":{"type":"rich-text","blocks":{"1655308590c7c1278b-0":{"type":"heading","settings":{"title":"{{ collection.metafields.my_fields.header_1.value }}"}},"1655308590c7c1278b-1":{"type":"text","settings":{"enlarge_text":false,"text":"<p>{{ collection.metafields.my_fields.body_1.value }}<\/p>"}}},"block_order":["1655308590c7c1278b-0","1655308590c7c1278b-1"],"settings":{"align_text":"center","narrow_column":true,"divider":false}},"165531133911e8bdf1":{"type":"apps","settings":{"full_width":false,"space_around":true}}},"order":["16553159476067a32b","main-collection","165530859073460ade","165531133911e8bdf1"]}
+{
+  "sections": {
+    "16553159476067a32b": {
+      "type": "rich-text",
+      "blocks": {
+        "16553159477399f67a-0": {
+          "type": "heading",
+          "settings": {
+            "title": "{{ collection.title }}"
+          }
+        }
+      },
+      "block_order": [
+        "16553159477399f67a-0"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 7,
+            "mobile_flush_grid": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "product_grid"
+      ],
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true
+      }
+    },
+    "165530859073460ade": {
+      "type": "rich-text",
+      "blocks": {
+        "1655308590c7c1278b-0": {
+          "type": "heading",
+          "settings": {
+            "title": "{{ collection.metafields.my_fields.header_1.value }}"
+          }
+        },
+        "1655308590c7c1278b-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>{{ collection.metafields.my_fields.body_1.value }}<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1655308590c7c1278b-0",
+        "1655308590c7c1278b-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "165531133911e8bdf1": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "16553159476067a32b",
+    "main-collection",
+    "165530859073460ade",
+    "165531133911e8bdf1"
+  ]
+}

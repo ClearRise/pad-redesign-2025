@@ -11,13 +11,12 @@
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "d6ad76eb-921a-4ffc-8b29-f7ffd62621d6": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.custom.ready_to_ship_text.value }}"
+            "text": "{{ product.metafields.custom.discount_text.value }}"
           }
         },
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0": {
@@ -35,8 +34,7 @@
         "separator": {
           "type": "separator",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "inventory_status": {
           "type": "inventory_status",
@@ -366,8 +364,7 @@
     },
     "collection-return": {
       "type": "collection-return",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

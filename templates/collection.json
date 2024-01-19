@@ -1,7 +1,44 @@
 {
   "sections": {
+    "17347204-928a-46d1-8166-ac8c007f382d": {
+      "type": "slideshow",
+      "blocks": {
+        "e7321c8d-7671-46ab-ba0a-e8be7d3cf79f": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/free_gift_collection_desktop_final.png",
+            "image_mobile": "shopify:\/\/shop_images\/free_gift_collection_mobile.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "e7321c8d-7671-46ab-ba0a-e8be7d3cf79f"
+      ],
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "250px",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
     "collection-header": {
       "type": "collection-header",
+      "disabled": true,
       "settings": {
         "enable": true,
         "collection_image_enable": false,
@@ -97,6 +134,7 @@
     }
   },
   "order": [
+    "17347204-928a-46d1-8166-ac8c007f382d",
     "collection-header",
     "promo-grid",
     "main-collection"

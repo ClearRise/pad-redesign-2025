@@ -46,6 +46,7 @@
         "1657833948beb2f3f4-1"
       ],
       "settings": {
+        "use_img_banner": true,
         "section_height": "650px",
         "mobile_height": "400px",
         "parallax": false,

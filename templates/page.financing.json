@@ -22,8 +22,7 @@
     "main": {
       "type": "main-page",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "7a2b3a56-846c-45be-8e1b-0905980b4eb3": {
       "type": "text-and-image",

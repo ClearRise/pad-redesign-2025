@@ -2,8 +2,7 @@
   "sections": {
     "f4ccb977-157f-457d-a856-9ee6a557102b": {
       "type": "replo-all-products-lander-hero",
-      "settings": {
-      }
+      "settings": {}
     },
     "collection-header": {
       "type": "collection-header",
@@ -20,8 +19,7 @@
         "collection_description": {
           "type": "collection_description",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "subcollections": {
           "type": "subcollections",
@@ -55,8 +53,7 @@
     },
     "0964b319-67f6-40eb-a52e-abccce122d6e": {
       "type": "replo-bottom-lp-container",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

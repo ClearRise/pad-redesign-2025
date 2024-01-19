@@ -11,14 +11,18 @@
         },
         "price": {
           "type": "price",
+          "settings": {}
+        },
+        "2d4ea7c8-d0c2-43e2-b8fd-402e0d7048be": {
+          "type": "text",
           "settings": {
+            "text": "<font color=\"#ff0000\"><b>Buy One Get One Free on ALL Earrings<\/b><\/font>"
           }
         },
         "separator": {
           "type": "separator",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -26,7 +30,8 @@
             "size_chart": "",
             "variant_labels": true,
             "picker_type": "dropdown",
-            "color_swatches": false
+            "color_swatches": false,
+            "custom_variant_comment": false
           }
         },
         "inventory_status": {
@@ -60,8 +65,8 @@
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
           "type": "sales_point",
           "settings": {
-            "icon": "checkmark",
-            "text": "Handcrafted in Utah, USA",
+            "icon": "gift",
+            "text": "Handmade in Utah",
             "url": ""
           }
         },
@@ -69,24 +74,24 @@
           "type": "sales_point",
           "settings": {
             "icon": "heart",
-            "text": "Made to order just for you",
+            "text": "Made to order",
             "url": ""
           }
         },
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005": {
           "type": "sales_point",
           "settings": {
-            "icon": "shield",
-            "text": "Lifetime Warranty",
+            "icon": "truck",
+            "text": "Worldwide Shipping",
             "url": ""
           }
         },
         "sales_point": {
           "type": "sales_point",
           "settings": {
-            "icon": "globe",
-            "text": "Worldwide shipping",
-            "url": ""
+            "icon": "tag",
+            "text": "Find Your Size",
+            "url": "https:\/\/patrickadairdesigns.com\/pages\/how-to-use-a-ring-sizer"
           }
         },
         "description": {
@@ -157,6 +162,7 @@
       "block_order": [
         "7a40c00f-33ab-4e69-b17f-4b0da4e6853a",
         "price",
+        "2d4ea7c8-d0c2-43e2-b8fd-402e0d7048be",
         "separator",
         "variant_picker",
         "inventory_status",
@@ -234,7 +240,7 @@
         "ba8bc2a1-afb2-4a08-8837-4ae3795928a4"
       ],
       "settings": {
-        "enable": true,
+        "enable": false,
         "title": "Find Your Bracelet Size",
         "title_size": 21,
         "bg_color": "#000000",
@@ -248,7 +254,7 @@
         "164685368492299ea2-0": {
           "type": "heading",
           "settings": {
-            "title": "Meteorite Bracelet"
+            "title": "Glowstone Earrings"
           }
         },
         "164685368492299ea2-1": {
@@ -321,8 +327,7 @@
     },
     "collection-return": {
       "type": "collection-return",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

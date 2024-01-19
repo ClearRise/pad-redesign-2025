@@ -3,8 +3,7 @@
     "main": {
       "type": "main-page",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "6403731b-871d-448b-b44f-86ebc0092e9c": {
       "type": "rich-text",

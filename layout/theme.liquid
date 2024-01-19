@@ -112,7 +112,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       themeVersion: "5.5.0"
     };
   </script>
-
+  
+<script>
+window._Sendlane = window._Sendlane || [];
+_Sendlane.push({
+    event_id: 'bggDbJj1RgPoU'
+});
+</script>
+<script src="https://sendlane.com/scripts/pusher.js" async></script>
+  
 {% comment %} {% render 'header-scripts.zipifypages', renderctx: 'thm' %}  {% endcomment %}
 
 <!--  content for header  ------------------------------------------------------------------->   
@@ -120,6 +128,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!---- end content for header --------------------------------------------------------------->
   
   {% if template == 'product' and product.metafields.inventory.ShappifyHidden or product.type contains '_HIDDEN_' %}<meta name='robots' content='noindex'>{% endif %}
+
+{% if request.path contains  '/products' or request.path contains '/collections/luxury-rings' or request.path contains '/collections/the-celestial-series-space-themed-jewelry-from-patrick-adair-designs' or request.path contains '/cart' %} 
+  {%- render 'bold-options-hybrid' -%}
+  {%- render 'bold-common' -%}
+  {%- render 'sc-includes' -%}
+{% endif %}
 
 
 <script src="{{ 'vendor-scripts-v11.js' | asset_url | split: '?' | first }}" defer></script>
@@ -135,7 +149,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   {%- endif -%}
   
 
+{%- if template.name == “product” -%}
+<script>
+  BOLD.common.eventEmitter.on('BOLD_OPTIONS_option_products_loaded', function(event){
+    var optionsDiv = document.querySelector('.bold_options_loaded');
+    if(optionsDiv.children.length != 0){
+      var buyItNow = document.querySelectorAll('.shopify-payment-button');
+console.log(buyItNow);
+      buyItNow.forEach(function(button){
+        button.remove();
+      })
+      }
+    });
+</script>
 
+ {% endif %}
+
+
+{% if request.path contains  '/products' or request.path contains '/collections/luxury-rings' or request.path contains '/collections/the-celestial-series-space-themed-jewelry-from-patrick-adair-designs' or request.path contains '/cart' %} 
+  {% if false %}
+    {{ 'bold.css' | asset_url | stylesheet_tag }}
+  {% else %}  
+    <link rel="preload" href="{{ 'bold.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ 'bold.css' | asset_url }}"></noscript>
+  {% endif %}  
+{% endif %}  
 
 {% if request.path contains '/pages/contact-us' or request.path contains '/collections/custom-rings' %}    
   {% if false %}
@@ -187,7 +225,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       engraving_var_id: {{ engraving_product_id_var }}
     };
   </script>
-<script src="{{ 'engravingx.js' | asset_url }}"></script>
+  
+{% comment %} <script src="{{ 'engravingx.js' | asset_url }}"></script>{% endcomment %}
 {% endif %}
 
 {% comment %}        {% include 'analyzify-gtm-body' %}  {% endcomment %}
@@ -208,15 +247,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'AW-796784713');
 </script>
+
 {% endcomment %}
 
   
 </head>
         
 
-<body asdfasdfasdsadfasf class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %}" data-center-text="{{ settings.type_body_align_text }}" data-button_style="{{ settings.button_style }}" data-type_header_capitalize="{{ settings.type_header_capitalize }}" data-type_headers_align_text="{{ settings.type_headers_align_text }}" data-type_product_capitalize="{{ settings.type_product_capitalize }}" data-swatch_style="{{ settings.swatch_style }}" {% if settings.disable_animations %}data-disable-animations="true"{% endif %}>
+<body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %}" data-center-text="{{ settings.type_body_align_text }}" data-button_style="{{ settings.button_style }}" data-type_header_capitalize="{{ settings.type_header_capitalize }}" data-type_headers_align_text="{{ settings.type_headers_align_text }}" data-type_product_capitalize="{{ settings.type_product_capitalize }}" data-swatch_style="{{ settings.swatch_style }}" {% if settings.disable_animations %}data-disable-animations="true"{% endif %}>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTQ4FQ74"
@@ -235,6 +276,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
       console.log("autoconvert_ref", window.localStorage.getItem("autoconvert_ref"));
 </script>
+
+
 
 
 
@@ -340,6 +383,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {% if request.path contains '/pages/contact-us' or request.path contains '/collections/custom-rings' %}  
   <script src="{{ 'storeifyapps-formbuilder-script.js' | asset_url }}" defer></script>
 {% endif %}  
+
+<!--  Intelligems Template Testing Script -->
+
+    <script>
+    window._template = {
+        directory: "{{ template.directory }}",
+        name: "{{ template.name }}",
+        suffix: "{{ template.suffix }}"
+    }
+  </script> 
 
   
 <script src="https://cdn.intelligems.io/36720b0810aa.js"></script>

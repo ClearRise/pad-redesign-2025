@@ -11,7 +11,12 @@
         },
         "price": {
           "type": "price",
+          "settings": {}
+        },
+        "80e82f04-c28f-454c-9254-88bc266ea187": {
+          "type": "text",
           "settings": {
+            "text": "{{ product.metafields.custom.discount_text.value }}"
           }
         },
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0": {
@@ -29,8 +34,7 @@
         "separator": {
           "type": "separator",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -38,7 +42,8 @@
             "size_chart": "",
             "variant_labels": true,
             "picker_type": "dropdown",
-            "color_swatches": false
+            "color_swatches": false,
+            "custom_variant_comment": false
           }
         },
         "inventory_status": {
@@ -176,6 +181,7 @@
       "block_order": [
         "7a40c00f-33ab-4e69-b17f-4b0da4e6853a",
         "price",
+        "80e82f04-c28f-454c-9254-88bc266ea187",
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
         "separator",
         "variant_picker",
@@ -357,8 +363,7 @@
     },
     "collection-return": {
       "type": "collection-return",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
