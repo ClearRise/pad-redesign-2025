@@ -292,7 +292,7 @@
     "section_custom_liquid_dDW8W6": {
       "type": "section-custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n     <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>\n<\/div>"
+        "custom_liquid": "<style>\n    .slr-review {\n        font-family: brandon-grotesque, sans-serif;\n    }\n<\/style>\n\n<div class=\"page-width\">\n    <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>\n<\/div>"
       }
     },
     "product-recommendations": {
