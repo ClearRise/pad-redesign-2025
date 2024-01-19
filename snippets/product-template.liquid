@@ -153,28 +153,28 @@
                         {% endif %}
                        
                        <div class="_b_upsell-collection _b_dgCartUpsellCont _b_gift-products"> 
-                        
+
                         {% if settings.product1-img1 %}
                           <div  class="_b_upsell-product-inner _b_gift-product show" >
                             <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border">
                               <div class="_b_upsell-product-image" style="margin-right: 5px;">
                                 <img class="dci-image" src="{{ settings.product1-img1 | img_url: '100x100' }}" alt="{{ settings.product1-title | escape }}">     
                               </div>
-                            {% if settings.product1-img2 %}
+                          {% if settings.product1-img2 %}
                               <div class="_b_upsell-product-image">
                                 <img class="dci-image" src="{{ settings.product1-img2 | img_url: '100x100' }}" alt="{{ settings.product1-title | escape }}">     
                               </div>
                             {% endif %}
                               <div class="_b_upsell-product-info">
-                                <div class="_b_product-title-link small--hide">
+                                <div class="_b_product-title-link">
                                     <strong class="dci-title">{{ settings.product1-title}}</strong>
                                 </div>
-                                <div class="_b_cart__item-sub">
-                                  <div >
-                                      <p class="_b_txt">{{ settings.product1-text}}</p>
-                                  </div>
-                                </div>    
-                              </div>
+                              <div class="_b_cart__item-sub">
+                                <div >
+                                    <p class="_b_txt">{{ settings.product1-text}}</p>
+                                </div>
+                              </div>    
+                          </div>
                             </div>
                           </div>
                         {% endif %}
