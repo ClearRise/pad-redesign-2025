@@ -4303,6 +4303,7 @@ Bold:POv2*/
     }
   
     function openSearchDrawer(evt) {
+        console.log("click search");
       evt.preventDefault();
       evt.stopImmediatePropagation();
       var container = document.querySelector(selectors.searchContainer);

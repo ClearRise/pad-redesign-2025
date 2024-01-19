@@ -14,10 +14,22 @@
           "settings": {
           }
         },
-        "2d4ea7c8-d0c2-43e2-b8fd-402e0d7048be": {
+        "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
           "type": "text",
           "settings": {
-            "text": "<font color=\"#ff0000\"><b>Buy One Get One Free on ALL Earrings<\/b><\/font>"
+            "text": "{{ product.metafields.custom.discount_text.value }}"
+          }
+        },
+        "71160726-c2e7-4e18-bcb9-e14abb7b42b0": {
+          "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "locale_option": "geolocation",
+            "locale_fallback": "",
+            "theme": "light",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
           }
         },
         "separator": {
@@ -54,11 +66,18 @@
             "tooltip_content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>"
           }
         },
-        "a1f32824-d0c0-4637-9f69-562bde50bc77": {
+        "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
+          "type": "free_gifts",
+          "settings": {
+            "gift_box_title": "",
+            "gift_included": ""
+          }
+        },
+        "7621462d-9edd-432d-a525-b5bcbfe07deb": {
           "type": "tab",
           "settings": {
-            "title": "<b>Premium Protection<\/b>",
-            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/warranty-and-return-information\" title=\"Lifetime Warranty and Return Policy\">Premium Protection Plan<\/a> covers your bracelet for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
+            "title": "<b>Premium Protection Plan<\/b>",
+            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -103,6 +122,16 @@
             "is_tab": false
           }
         },
+        "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
+          "type": "tab",
+          "settings": {
+            "title": "Additional Details",
+            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
         "7cf22f7b-2877-4d38-a231-95946286cc18": {
           "type": "tab",
           "settings": {
@@ -118,16 +147,6 @@
           "settings": {
             "title": "Lifetime Warranty",
             "content": "<p>{{ product.metafields.global.lifetime_warranty | metafield_tag }}<\/p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": ""
-          }
-        },
-        "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
-          "type": "tab",
-          "settings": {
-            "title": "Additional Details",
-            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -164,20 +183,22 @@
       "block_order": [
         "7a40c00f-33ab-4e69-b17f-4b0da4e6853a",
         "price",
-        "2d4ea7c8-d0c2-43e2-b8fd-402e0d7048be",
+        "94c49419-9d53-4cfe-8c63-edaf9a145c94",
+        "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
         "separator",
         "variant_picker",
         "inventory_status",
         "buy_buttons",
-        "a1f32824-d0c0-4637-9f69-562bde50bc77",
+        "6992c020-3994-4f22-9eb2-ca8e26cbda06",
+        "7621462d-9edd-432d-a525-b5bcbfe07deb",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
         "sales_point",
         "description",
+        "67cf22ff-76d8-4ad2-91e5-80b67524f841",
         "7cf22f7b-2877-4d38-a231-95946286cc18",
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86",
-        "67cf22ff-76d8-4ad2-91e5-80b67524f841",
         "e15f8d39-327a-449c-ae3e-f545ea35c05e",
         "tab",
         "contact"
@@ -188,7 +209,7 @@
         "image_size": "medium",
         "product_zoom_enable": true,
         "thumbnail_position": "below",
-        "thumbnail_arrows": false,
+        "thumbnail_arrows": true,
         "mobile_layout": "full",
         "enable_video_looping": true,
         "product_video_style": "muted"
@@ -217,22 +238,24 @@
         "93e02dd1-0098-4d81-bb47-a37e47aeb0c1": {
           "type": "text",
           "settings": {
-            "sub_title": "Measure Your Wrist",
-            "text": "Find your wrist measurement with a flexible tape measure or a piece of string."
+            "sub_title": "Place your order",
+            "text": "Unsure of your size? Select “unsure – send ring sizer first” and we’ll post you a free ring sizer",
+            "image_1": "shopify:\/\/shop_images\/how-it-works-11.jpg",
+            "image_2": "shopify:\/\/shop_images\/how-it-works-22.jpg"
           }
         },
         "0669e6bd-9d26-4ae4-b380-ce53681e452e": {
           "type": "text",
           "settings": {
-            "sub_title": "Place Your Order",
-            "text": "After using the sizer, find the corresponding size for your wrist and place your order."
+            "sub_title": "Confirm your ring size",
+            "text": "After using the sizer, simply send us your size via email"
           }
         },
         "ba8bc2a1-afb2-4a08-8837-4ae3795928a4": {
           "type": "text",
           "settings": {
-            "sub_title": "We Handmake Your Bracelet",
-            "text": "Your order hits the workshop and our trained artisans start crafting your bracelet."
+            "sub_title": "We handcraft your ring",
+            "text": "Your order hits the workshop and our trained artisans start crafting your new ring"
           }
         }
       },
@@ -242,8 +265,8 @@
         "ba8bc2a1-afb2-4a08-8837-4ae3795928a4"
       ],
       "settings": {
-        "enable": false,
-        "title": "Find Your Bracelet Size",
+        "enable": true,
+        "title": "Find Your Ring Size",
         "title_size": 21,
         "bg_color": "#000000",
         "padding_top": 5,
@@ -256,7 +279,7 @@
         "164685368492299ea2-0": {
           "type": "heading",
           "settings": {
-            "title": "Glowstone Earrings"
+            "title": "Mystery Ring"
           }
         },
         "164685368492299ea2-1": {
