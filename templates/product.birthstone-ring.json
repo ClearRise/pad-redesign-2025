@@ -339,9 +339,8 @@
     },
     "section_custom_liquid_emyGpb": {
       "type": "section-custom-liquid",
-      "disabled": true,
       "settings": {
-        "custom_liquid": "<div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>"
+        "custom_liquid": "<div class=\"page-width\">\n     <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>\n<\/div>"
       }
     },
     "product-recommendations": {
