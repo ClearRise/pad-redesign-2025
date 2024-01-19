@@ -4,7 +4,7 @@
       "type": "main-product",
       "blocks": {
         "7a40c00f-33ab-4e69-b17f-4b0da4e6853a": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
           }
@@ -56,6 +56,18 @@
             "custom_variant_comment": true
           }
         },
+        "engraving_3enxAH": {
+          "type": "engraving",
+          "settings": {
+          }
+        },
+        "8b562356-ae61-4e76-9d41-a70561a3c483": {
+          "type": "free_gifts",
+          "settings": {
+            "gift_box_title": "",
+            "gift_included": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -64,13 +76,6 @@
             "enable_tooltip": false,
             "tooltip_header": "<h3>Premium Protection<\/h3>",
             "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
-          }
-        },
-        "8b562356-ae61-4e76-9d41-a70561a3c483": {
-          "type": "free_gifts",
-          "settings": {
-            "gift_box_title": "",
-            "gift_included": ""
           }
         },
         "458f6ce8-d05a-4939-b43c-1df6cf9c4e3d": {
@@ -189,8 +194,9 @@
         "separator",
         "inventory_status",
         "variant_picker",
-        "buy_buttons",
+        "engraving_3enxAH",
         "8b562356-ae61-4e76-9d41-a70561a3c483",
+        "buy_buttons",
         "458f6ce8-d05a-4939-b43c-1df6cf9c4e3d",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
@@ -334,7 +340,7 @@
       "type": "apps",
       "blocks": {
         "0b2c4db0-68a2-468e-890c-52a77263cb09": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}",
             "widget_type": "combined_widget"
