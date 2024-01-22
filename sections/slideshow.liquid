@@ -91,10 +91,20 @@
                 {%- style -%}
                   .image--{{ block.id }} .hero__title {
                     font-size: {{ block.settings.title_size | times: 0.5 }}px;
+                    color: {{block.settings.base_text_color}};
+                  }
+                  .image--{{ block.id }} .hero__subtitle {
+                    font-size: {{ block.settings.base_text_size | times: 0.5 }}px;
+                    color: {{block.settings.base_text_color}};
                   }
                   @media only screen and (min-width: 769px) {
                     .image--{{ block.id }} .hero__title {
                       font-size: {{ block.settings.title_size }}px;
+                      color: {{block.settings.base_text_color}};
+                    }
+                    .image--{{ block.id }} .hero__subtitle {
+                      font-size: {{ block.settings.base_text_size }}px;
+                      color: {{block.settings.base_text_color}};
                     }
                   }
   
