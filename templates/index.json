@@ -61,17 +61,38 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
+        },
+        "image_gpixrB": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "20-30% Off Sitewide",
+            "title": "VALENTINE'S DAY SALE",
+            "title_size": 72,
+            "subheading": "PLUS get a Free Mystery Gift on Orders $195+",
+            "link": "",
+            "link_text": "SHOP NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ff0000",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/Valentine_s_Day_V1_71e5df64-a3aa-4dae-a2e9-cbd42dc4cf75.png",
+            "image_mobile": "shopify:\/\/shop_images\/Valentine_s_Day_V3.png",
+            "overlay_opacity": 0,
+            "focal_point": "bottom center"
+          }
         }
       },
       "block_order": [
         "f6dc5aa7-870b-4fb4-b472-cc63f723a382",
         "image_zLVB7G",
-        "slideshow-0"
+        "slideshow-0",
+        "image_gpixrB"
       ],
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
-        "mobile_height": "auto",
+        "mobile_height": "400px",
         "parallax": false,
         "style": "bars",
         "autoplay": true,
