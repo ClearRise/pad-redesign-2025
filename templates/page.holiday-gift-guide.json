@@ -3,7 +3,8 @@
     "main": {
       "type": "main-page",
       "disabled": true,
-      "settings": {}
+      "settings": {
+      }
     },
     "d85bc3a7-fd8d-47e1-96ea-6e11429dde6c": {
       "type": "slideshow",
@@ -14,7 +15,7 @@
             "top_subheading": "",
             "title": "Give a Gift as Unique as They Are",
             "title_size": 60,
-            "subheading": "Save 30-50% During our Holiday Gift Event",
+            "subheading": "<p>Save 30-50% During our Holiday Gift Event<\/p>",
             "link": "shopify:\/\/collections\/all",
             "link_text": "SHOP ALL RINGS",
             "link_2": "",
