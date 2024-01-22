@@ -16,8 +16,8 @@
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/free_gift_collection_desktop_final.png",
-            "image_mobile": "shopify:\/\/shop_images\/free_gift_collection_mobile.png",
+            "image": "shopify:\/\/shop_images\/Valentine_s_Day_V1_71e5df64-a3aa-4dae-a2e9-cbd42dc4cf75.png",
+            "image_mobile": "shopify:\/\/shop_images\/Collection_Background_Image.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -101,7 +101,8 @@
       "blocks": {
         "collection_description": {
           "type": "collection_description",
-          "settings": {}
+          "settings": {
+          }
         },
         "subcollections": {
           "type": "subcollections",
