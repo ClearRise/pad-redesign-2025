@@ -9,7 +9,6 @@
             "top_subheading": "",
             "title": "",
             "title_size": 80,
-            "subheading": "",
             "link": "",
             "link_text": "",
             "link_2": "",
@@ -88,7 +87,8 @@
         "collection_description": {
           "type": "collection_description",
           "disabled": true,
-          "settings": {}
+          "settings": {
+          }
         },
         "product_grid": {
           "type": "product_grid",
