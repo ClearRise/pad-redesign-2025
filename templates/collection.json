@@ -7,10 +7,11 @@
           "type": "image",
           "settings": {
             "top_subheading": "",
-            "title": "<strong>FREE GIFT<\/strong>",
+            "title": "<em><strong>FREE GIFT<\/strong><\/em>",
             "title_size": 80,
+            "special_title_color": "#ef240f",
             "subheading": "<h3><strong>ON ORDERS <\/strong><em><strong>$150+<\/strong><\/em><\/h3><p><strong>METEORITER PERNDANT<\/strong><\/p><p>OR <em>PHANTOM RADIANCE RING<\/em><\/p>",
-            "special_text_color": "#b30000",
+            "special_text_color": "#ef240f",
             "link": "",
             "link_text": "",
             "link_2": "",
