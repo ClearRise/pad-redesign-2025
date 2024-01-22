@@ -230,9 +230,11 @@
                           {%- if block.settings.subheading or block.settings.link or block.settings.link_2 -%}
                             {%- unless block.settings.subheading == blank -%}
                               <div class="hero__subtitle">
-                                <div class="animation-cropper"><div class="animation-contents">
-                                  {{ block.settings.subheading }}
-                                </div></div>
+                                <div class="animation-cropper">
+                                  <div class="animation-contents" style="--special_text_color: {{block.settings.special_text_color}}">
+                                    {{ block.settings.subheading }}
+                                  </div>
+                                </div>
                               </div>
                             {%- endunless -%}
                             {%- if block.settings.link_text != blank or block.settings.link_text_2 != blank -%}
