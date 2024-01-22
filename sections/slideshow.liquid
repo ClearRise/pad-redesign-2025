@@ -361,14 +361,14 @@
                     font-size: {{ block.settings.title_size | times: 0.5 }}px;
                   }
                   .slideshow__slide--{{ block.id }} .hero__subtitle {
-                    font-size: {{ block.settings.title_size | times: 0.5 }}px;
+                    font-size: {{ block.settings.base_text_size | times: 0.5 }}px;
                   }
                   @media only screen and (min-width: 769px) {
                     .slideshow__slide--{{ block.id }} .hero__title {
                       font-size: {{ block.settings.title_size }}px;
                     }
                     .slideshow__slide--{{ block.id }} .hero__subtitle {
-                      font-size: {{ block.settings.title_size }}px;
+                      font-size: {{ block.settings.base_text_size }}px;
                     }
                   }
   
@@ -823,6 +823,12 @@
             "content": "color settings"
           },
           {
+            "type": "color",
+            "id": "base_text_color",
+            "label": "Base text color",
+            "default": "#ffffff"
+          },
+          {
             "type": "range",
             "id": "title_size",
             "label": "Heading text size",
@@ -830,12 +836,6 @@
             "min": 40,
             "max": 100,
             "unit": "px"
-          },
-          {
-            "type": "color",
-            "id": "base_text_color",
-            "label": "Base text color",
-            "default": "#ffffff"
           },
           {
             "type": "range",
