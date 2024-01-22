@@ -360,8 +360,14 @@
                   .slideshow__slide--{{ block.id }} .hero__title {
                     font-size: {{ block.settings.title_size | times: 0.5 }}px;
                   }
+                  .slideshow__slide--{{ block.id }} .hero__subtitle {
+                    font-size: {{ block.settings.title_size | times: 0.5 }}px;
+                  }
                   @media only screen and (min-width: 769px) {
                     .slideshow__slide--{{ block.id }} .hero__title {
+                      font-size: {{ block.settings.title_size }}px;
+                    }
+                    .slideshow__slide--{{ block.id }} .hero__subtitle {
                       font-size: {{ block.settings.title_size }}px;
                     }
                   }
