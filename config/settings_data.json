@@ -30,7 +30,7 @@
     "type_header_font_family": "sans-serif",
     "type_header_spacing": "50",
     "type_header_base_size": 38,
-    "type_header_line_height": 1.5,
+    "type_header_line_height": 1.2,
     "type_header_capitalize": false,
     "type_headers_align_text": true,
     "type_base_font_family": "sans-serif",
