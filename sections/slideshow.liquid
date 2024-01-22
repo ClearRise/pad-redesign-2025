@@ -221,7 +221,7 @@
                           {%- unless block.settings.title == blank -%}
                             <h2 class="h1 hero__title">
                               <div class="animation-cropper">
-                                <div class="animation-contents">
+                                <div class="animation-contents" style="--title_color: {{block.settings.title_color}}">
                                 {{ block.settings.title | newline_to_br }}
                                 </div>
                               </div>
