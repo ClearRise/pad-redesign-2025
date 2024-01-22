@@ -248,7 +248,7 @@
       "type": "apps",
       "blocks": {
         "d3cce40d-ef5c-423b-a044-c1a75de28f6f": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "",
             "widget_type": "reviews_widget"
