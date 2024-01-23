@@ -371,16 +371,17 @@
             "heading": "Virtual <br> Appointments",
             "textarea": "Book a virtual video <br>consultation to <br>hand-pick (or design) <br>your perfect piece",
             "cta_text1": "Book Now",
-            "cta_link1": "",
-            "cta_text2": "Shop All",
+            "cta_link1": "https:\/\/patrickadairdesigns.com\/pages\/custom-design-consultation",
+            "cta_text2": "",
             "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Lifestyle_Zoomed_Out_Shot.png",
             "video_url": "",
             "width": "100",
-            "height": 500,
+            "height": 700,
             "text_size": 120,
-            "text_align": "vertical-center horizontal-center",
+            "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
-            "color_accent": "rgba(0,0,0,0)",
+            "color_accent": "#ffa500",
             "boxed": false,
             "framed": false
           }
@@ -404,13 +405,13 @@
         "1646694979babf5da2-0": {
           "type": "heading",
           "settings": {
-            "title": "Customer Testimonials"
+            "title": "See What Customers Are Saying"
           }
         },
         "1646694979babf5da2-1": {
           "type": "text",
           "settings": {
-            "enlarge_text": true,
+            "enlarge_text": false,
             "text": "<p>“I love this ring. Every step of the process from sizing to delivery was amazing.”<\/p><p>- Brett P.<\/p><p>“I couldn’t have asked for a better ring. PAD did an amazing job and was very communicative through the whole process and was done in a timely manner!”<\/p><p>- Amber A<\/p><p>“Feels and looks like anything you’d buy from the highest-end jewelers stores without the high-end prices.”<\/p><p>- Ben<\/p><p><\/p><p><a href=\"https:\/\/patrickadairdesigns.com\/pages\/reviews\" title=\"https:\/\/patrickadairdesigns.com\/pages\/reviews\"><span style=\"text-decoration:underline\">See more reviews<\/span><\/a><\/p>"
           }
         }
@@ -422,13 +423,13 @@
       "settings": {
         "align_text": "center",
         "narrow_column": true,
-        "divider": false
+        "divider": true
       }
     },
-    "1647409114af22e67c": {
+    "1706048898f59b8062": {
       "type": "apps",
       "blocks": {
-        "d29f7c33-7e89-45f4-9d2f-1628a524400d": {
+        "okendo_media_carousel_ANbhPQ": {
           "type": "shopify:\/\/apps\/okendo\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": ""
@@ -436,198 +437,42 @@
         }
       },
       "block_order": [
-        "d29f7c33-7e89-45f4-9d2f-1628a524400d"
+        "okendo_media_carousel_ANbhPQ"
       ],
       "settings": {
         "full_width": false,
         "space_around": true
       }
     },
-    "featured-collections": {
-      "type": "featured-collections",
+    "newsletter_Jc3gnM": {
+      "type": "newsletter",
       "blocks": {
-        "featured-collections-0": {
-          "type": "collection",
+        "title_Q8rMBd": {
+          "type": "title",
           "settings": {
-            "collection": "the-classic-series",
-            "title": "",
-            "focal_point": "center center"
+            "title": "Sign Up For Our Newsletter"
           }
         },
-        "featured-collections-1": {
-          "type": "collection",
+        "text_iNPYjn": {
+          "type": "text",
           "settings": {
-            "collection": "the-glowstone-series",
-            "title": "",
-            "focal_point": "center center"
+            "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>"
           }
         },
-        "featured-collections-2": {
-          "type": "collection",
+        "form_LWVM43": {
+          "type": "form",
           "settings": {
-            "collection": "the-obsidian-series",
-            "title": "",
-            "focal_point": "center center"
-          }
-        },
-        "featured-collections-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "the-signature-series-v2",
-            "title": "",
-            "focal_point": "center center"
-          }
-        },
-        "8232be18-c1e0-4ac8-9c19-c24ab0e02edd": {
-          "type": "collection",
-          "settings": {
-            "collection": "the-boundless-series",
-            "title": "The Boundless Series",
-            "focal_point": "center center"
-          }
-        },
-        "a95a8e0e-63a8-4e27-ac68-37c8678d7e65": {
-          "type": "collection",
-          "settings": {
-            "collection": "obsidian-opal-series",
-            "title": "The Opal Series",
-            "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "featured-collections-0",
-        "featured-collections-1",
-        "featured-collections-2",
-        "featured-collections-3",
-        "8232be18-c1e0-4ac8-9c19-c24ab0e02edd",
-        "a95a8e0e-63a8-4e27-ac68-37c8678d7e65"
+        "title_Q8rMBd",
+        "text_iNPYjn",
+        "form_LWVM43"
       ],
       "settings": {
-        "title": "SHOP BY SERIES",
-        "divider": false,
-        "per_row": 2,
-        "enable_gutter": true
-      }
-    },
-    "16466952397d45f287": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/img2.jpg",
-        "image2": "shopify:\/\/shop_images\/82139302_566280807302856_2281391060317896704_o.jpg",
-        "image_width": 700,
-        "subtitle": "",
-        "title": "Get a Custom Ring",
-        "text": "<p>We pride ourselves on our ability to make intricate, handmade custom rings made from exotic materials.<\/p>",
-        "button_label": "Learn More",
-        "button_link": "shopify:\/\/collections\/custom-rings",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "left",
-        "divider": false
-      }
-    },
-    "1646695257dcd29238": {
-      "type": "logo-list",
-      "blocks": {
-        "74cd7a8f-eac7-4f17-b13d-81ef7dab01d8": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Brides_Logo.jpg",
-            "link": ""
-          }
-        },
-        "1646695257b3b83b78-0": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Pewdiepie.png",
-            "link": ""
-          }
-        },
-        "1646695257b3b83b78-1": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/awesomer.png",
-            "link": ""
-          }
-        },
-        "1646695257b3b83b78-2": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Vinwiki_black.png",
-            "link": ""
-          }
-        },
-        "1646695257b3b83b78-3": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Strad-Logo_2C_864x_82c0b21f-b2de-42f1-ba44-102b06edc5fc.webp",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "74cd7a8f-eac7-4f17-b13d-81ef7dab01d8",
-        "1646695257b3b83b78-0",
-        "1646695257b3b83b78-1",
-        "1646695257b3b83b78-2",
-        "1646695257b3b83b78-3"
-      ],
-      "settings": {
-        "title": "AS SEEN ON",
-        "logo_opacity": 100,
-        "divider": false
-      }
-    },
-    "16466952952773af78": {
-      "type": "rich-text",
-      "blocks": {
-        "164669529537272836-0": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "title": "and 84M views and counting on YouTube"
-          }
-        }
-      },
-      "block_order": [
-        "164669529537272836-0"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
-      }
-    },
-    "1646695630466c29fc": {
-      "type": "advanced-content",
-      "blocks": {
-        "1646695630c9a9076b-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/how-it-works-22.jpg",
-            "link": "",
-            "width": "50%",
-            "alignment": "center"
-          }
-        },
-        "1646695630c9a9076b-1": {
-          "type": "liquid",
-          "settings": {
-            "code": "<h2>1.<\/h2><p>Unsure of your size? Select \"unsure - send ring sizer first\" and we'll post you a free ring sizer<\/p>\n<h2>2.<\/h2><p>After using the sizer, simply email us your size<\/p>\n\n<h2>3.<\/h2><p>Your order hits the workshop and our trained artisans start crafting your ring<\/p>",
-            "width": "50%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "1646695630c9a9076b-0",
-        "1646695630c9a9076b-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "space_around": true
+        "color_background": "#f9f9f9",
+        "color_text": "#1c1d1d"
       }
     }
   },
@@ -640,11 +485,7 @@
     "featured_collections_gQFdAi",
     "promo_grid_xDgbKX",
     "1646694979441d8438",
-    "1647409114af22e67c",
-    "featured-collections",
-    "16466952397d45f287",
-    "1646695257dcd29238",
-    "16466952952773af78",
-    "1646695630466c29fc"
+    "1706048898f59b8062",
+    "newsletter_Jc3gnM"
   ]
 }
