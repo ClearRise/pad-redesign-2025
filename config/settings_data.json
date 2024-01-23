@@ -26,7 +26,7 @@
     "color_modal_overlays": "#ffa500",
     "color_image_text": "#ffffff",
     "color_image_overlay": "#000000",
-    "color_image_alink_text": "#000000",
+    "color_image_alink_text": "#ffffff",
     "color_image_overlay_opacity": 10,
     "color_image_overlay_text_shadow": 10,
     "type_header_font_family": "mono",
