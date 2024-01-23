@@ -359,6 +359,27 @@
             "text_size": 100,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "color_accent": "#ffa500",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_UwxcV8": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "1-on-1",
+            "heading": "Virtual <br> Appointments",
+            "textarea": "Book a virtual video <br>consultation to <br>hand-pick (or design) <br>your perfect piece",
+            "cta_text1": "Book Now",
+            "cta_link1": "",
+            "cta_text2": "Shop All",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -367,7 +388,8 @@
       },
       "block_order": [
         "advanced_WYthwz",
-        "advanced_ehq8pY"
+        "advanced_ehq8pY",
+        "advanced_UwxcV8"
       ],
       "settings": {
         "full_width": false,
