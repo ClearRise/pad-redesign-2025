@@ -19,6 +19,12 @@
             "text": "{{ product.metafields.custom.discount_text.value }}"
           }
         },
+        "80e82f04-c28f-454c-9254-88bc266ea187": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.discount_text.value }}"
+          }
+        },
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0": {
           "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
@@ -54,6 +60,18 @@
             "inventory_transfers_enable": true
           }
         },
+        "engraving_Nk4Lwr": {
+          "type": "engraving",
+          "settings": {
+          }
+        },
+        "b529d1fd-9fad-4bb5-b4cf-36506d8b43bd": {
+          "type": "free_gifts",
+          "settings": {
+            "gift_box_title": "",
+            "gift_included": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -72,13 +90,6 @@
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
-          }
-        },
-        "b529d1fd-9fad-4bb5-b4cf-36506d8b43bd": {
-          "type": "free_gifts",
-          "settings": {
-            "gift_box_title": "",
-            "gift_included": ""
           }
         },
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
@@ -186,9 +197,10 @@
         "separator",
         "variant_picker",
         "inventory_status",
+        "engraving_Nk4Lwr",
+        "b529d1fd-9fad-4bb5-b4cf-36506d8b43bd",
         "buy_buttons",
         "6d00747b-6035-4fa5-afc1-37a35e449385",
-        "b529d1fd-9fad-4bb5-b4cf-36506d8b43bd",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",

@@ -3,23 +3,53 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "f6dc5aa7-870b-4fb4-b472-cc63f723a382": {
+        "image_gpixrB": {
           "type": "image",
           "settings": {
+            "top_subheading": "20-30% Off Sitewide",
+            "top_subheading_color": "",
+            "title": "VALENTINE'S DAY SALE",
+            "special_title_color": "",
+            "subheading": "<p>PLUS get a Free Mystery Gift on Orders $195+<\/p>",
+            "special_text_color": "",
+            "link": "shopify:\/\/collections\/all-products",
+            "link_text": "SHOP NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ff0000",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/Valentine_s_Day_V1_71e5df64-a3aa-4dae-a2e9-cbd42dc4cf75.png",
+            "image_mobile": "shopify:\/\/shop_images\/Valentine_s_Day_V3.png",
+            "overlay_opacity": 0,
+            "focal_point": "bottom center",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24
+          }
+        },
+        "image_zLVB7G": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
             "top_subheading": "",
+            "top_subheading_color": "",
             "title": "",
-            "title_size": 80,
+            "special_title_color": "",
             "subheading": "",
+            "special_text_color": "",
             "link": "shopify:\/\/collections\/all-products",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/free_gift_plain.png",
-            "image_mobile": "shopify:\/\/shop_images\/free_gift_mobile.png",
+            "image": "shopify:\/\/shop_images\/Desktop_hero.png",
+            "image_mobile": "shopify:\/\/shop_images\/Moible_hero.png",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24
           }
         },
         "slideshow-0": {
@@ -27,9 +57,11 @@
           "disabled": true,
           "settings": {
             "top_subheading": "",
+            "top_subheading_color": "",
             "title": "",
-            "title_size": 50,
+            "special_title_color": "",
             "subheading": "",
+            "special_text_color": "",
             "link": "shopify:\/\/collections\/all-products",
             "link_text": "",
             "link_2": "",
@@ -39,12 +71,16 @@
             "image": "shopify:\/\/shop_images\/Orange_Banner_2_fixed_compressed.png",
             "image_mobile": "shopify:\/\/shop_images\/Mobile_-_Orange_Hero_-_Compressed_1x_Medium_e7aeb1ff-9271-40c7-b867-2491171db495.png",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 50,
+            "base_text_size": 24
           }
         }
       },
       "block_order": [
-        "f6dc5aa7-870b-4fb4-b472-cc63f723a382",
+        "image_gpixrB",
+        "image_zLVB7G",
         "slideshow-0"
       ],
       "settings": {
@@ -184,14 +220,14 @@
         "2e50058a-8bc8-46f4-880f-08ed48490db6": {
           "type": "advanced",
           "settings": {
-            "subheading": "New Year Special",
-            "heading": "FREE GIFT",
-            "textarea": "Choose Between one of these gifts when you spend $150+",
+            "subheading": "LIMITED TIME OFFER",
+            "heading": "MYSTERY GIFT",
+            "textarea": "Orders $195+ come with a FREE Mystery Gift worth $200-$600",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/all-products",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Dimmed.webp",
+            "image": "shopify:\/\/shop_images\/Group_Shot.png",
             "video_url": "",
             "width": "100",
             "height": 660,

@@ -19,6 +19,12 @@
             "text": "{{ product.metafields.custom.discount_text.value }}"
           }
         },
+        "6c6ed7a9-c0b4-471b-ae53-bd5b6b15dbf6": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.discount_text.value }}"
+          }
+        },
         "separator": {
           "type": "separator",
           "disabled": true,
@@ -42,6 +48,18 @@
             "inventory_transfers_enable": true
           }
         },
+        "engraving_iF3zL8": {
+          "type": "engraving",
+          "settings": {
+          }
+        },
+        "f567edcb-e92a-47b5-908b-bd1cbb6c479c": {
+          "type": "free_gifts",
+          "settings": {
+            "gift_box_title": "",
+            "gift_included": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -50,13 +68,6 @@
             "enable_tooltip": false,
             "tooltip_header": "<h4>Premium Protection<\/h4>",
             "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
-          }
-        },
-        "f567edcb-e92a-47b5-908b-bd1cbb6c479c": {
-          "type": "free_gifts",
-          "settings": {
-            "gift_box_title": "",
-            "gift_included": ""
           }
         },
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
@@ -193,8 +204,9 @@
         "separator",
         "variant_picker",
         "inventory_status",
-        "buy_buttons",
+        "engraving_iF3zL8",
         "f567edcb-e92a-47b5-908b-bd1cbb6c479c",
+        "buy_buttons",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",

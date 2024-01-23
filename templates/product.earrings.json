@@ -19,6 +19,12 @@
             "text": "<font color=\"#ff0000\"><b>Buy One Get One Free on ALL Earrings<\/b><\/font>"
           }
         },
+        "2d4ea7c8-d0c2-43e2-b8fd-402e0d7048be": {
+          "type": "text",
+          "settings": {
+            "text": "<font color=\"#ff0000\"><b>Buy One Get One Free on ALL Earrings<\/b><\/font>"
+          }
+        },
         "separator": {
           "type": "separator",
           "disabled": true,

@@ -3,15 +3,15 @@
     "17347204-928a-46d1-8166-ac8c007f382d": {
       "type": "slideshow",
       "blocks": {
-        "e7321c8d-7671-46ab-ba0a-e8be7d3cf79f": {
+        "image_hfMiqN": {
           "type": "image",
           "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "#138f7e",
-            "title": "<em><strong>FREE GIFT<\/strong><\/em>",
-            "special_title_color": "#ef240f",
-            "subheading": "<h2><strong>ON ORDERS <\/strong><em><strong>$150+<\/strong><\/em><\/h2><p><strong>METEORITER PERNDANT<\/strong><\/p><p>OR <em>PHANTOM RADIANCE RING<\/em><\/p>",
-            "special_text_color": "#ef240f",
+            "top_subheading": "20-30% Off Sitewide",
+            "top_subheading_color": "",
+            "title": "Valentine's Day Sale",
+            "special_title_color": "",
+            "subheading": "<p>Free Mystery Gift ($200-600 MSRP) on Orders $195+<\/p>",
+            "special_text_color": "",
             "link": "",
             "link_text": "",
             "link_2": "",
@@ -22,19 +22,70 @@
             "image_mobile": "shopify:\/\/shop_images\/Collection_Background_Image.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
-            "base_text_color": "#cf7208",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24
+          }
+        },
+        "image_DzJVAm": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/Desktop_collection_banners.png",
+            "image_mobile": "shopify:\/\/shop_images\/valentines_day_mobile_website_collection_banner.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24
+          }
+        },
+        "e7321c8d-7671-46ab-ba0a-e8be7d3cf79f": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/free_gift_collection_desktop_final.png",
+            "image_mobile": "shopify:\/\/shop_images\/free_gift_collection_mobile.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
             "title_size": 80,
             "base_text_size": 24
           }
         }
       },
       "block_order": [
+        "image_hfMiqN",
+        "image_DzJVAm",
         "e7321c8d-7671-46ab-ba0a-e8be7d3cf79f"
       ],
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
-        "mobile_height": "250px",
+        "mobile_height": "auto",
         "parallax": false,
         "style": "bars",
         "autoplay": false,

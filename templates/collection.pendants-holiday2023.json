@@ -1,5 +1,41 @@
 {
   "sections": {
+    "slideshow_wxKgFQ": {
+      "type": "slideshow",
+      "blocks": {
+        "image_eEK7NL": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "20-30% off Pendants",
+            "title": "Valentine's Day Sale",
+            "title_size": 60,
+            "subheading": "Free Mystery Gift ($200-600 MSRP) on Orders $195+",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/Valentine_s_Day_V1_71e5df64-a3aa-4dae-a2e9-cbd42dc4cf75.png",
+            "image_mobile": "shopify:\/\/shop_images\/Collection_Background_Image.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_eEK7NL"
+      ],
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
     "collection-header": {
       "type": "collection-header",
       "disabled": true,
@@ -63,6 +99,7 @@
     }
   },
   "order": [
+    "slideshow_wxKgFQ",
     "collection-header",
     "promo-grid",
     "main-collection"

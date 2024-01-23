@@ -30,7 +30,7 @@
     "type_header_font_family": "sans-serif",
     "type_header_spacing": "50",
     "type_header_base_size": 38,
-    "type_header_line_height": 1.5,
+    "type_header_line_height": 1.2,
     "type_header_capitalize": false,
     "type_headers_align_text": true,
     "type_base_font_family": "sans-serif",
@@ -67,9 +67,8 @@
     "collection_grid_gutter": true,
     "product_threshold_amount": 150,
     "product1-img1": "shopify:\/\/shop_images\/IMG_1925.png",
-    "product1-img2": "shopify:\/\/shop_images\/Meteorite_Pendant_Thumbnail_1383230f-f91f-4855-a577-29605a5ed975.png",
     "product1-title": "<b>FREE GIFT WITH PURCHASE<\/b>",
-    "product1-text": "Spend $150+ and get a free Phantom Radiance Carbon Fiber Glow Ring or Meteorite Pendant",
+    "product1-text": "Spend $195+ and get a Free Mystery Gift ($200-$600 MSRP).",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -86,13 +85,13 @@
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
     "show_gift_box": true,
-    "first_tier_progress": "You've unlocked a free gift!",
-    "gift_box_title": "You've unlocked a Free Gift!",
-    "cart_threshold_amount": 150,
+    "first_tier_progress": "You've unlocked a a Mystery Gift!",
+    "gift_box_title": "You've unlocked a Mystery Gift!",
+    "cart_threshold_amount": 195,
     "spend_progress": "",
-    "product-handle-1": "phantom-radiance-carbon-fiber-glow-ring-4",
-    "product-handle-2": "meteorite-necklace-circular-meteorite-pendant-2",
-    "hide_gift_2": false,
+    "product-handle-1": "mystery-gift",
+    "product-handle-2": "24k-gold-leaf-ring-on-black-ceramic",
+    "hide_gift_2": true,
     "second_show_gift_box": false,
     "second_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
     "gift_box_title_second": "Choose One Free Gift",
@@ -135,7 +134,7 @@
           "d6256397-4cc6-4f30-8e67-be7073667b8a": {
             "type": "announcement",
             "settings": {
-              "text": "Ring in the New Year with 20% OFF Sitewide",
+              "text": "Valentine's Day Sale - Up to 30% Off",
               "link_text": "SHOP NOW",
               "link": "shopify:\/\/collections\/all-products"
             }
@@ -162,18 +161,18 @@
               "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/best-selling-wedding-bands-v1"
             }
           },
-          "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56": {
-            "type": "scroll_navi_mobile",
-            "settings": {
-              "sub_menu": "All Necklaces",
-              "link_submenu": "shopify:\/\/collections\/necklaces"
-            }
-          },
           "scroll_navi_mobile_zRWDNN": {
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "Gifts Under $200",
               "link_submenu": "shopify:\/\/collections\/gifts-under-200"
+            }
+          },
+          "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56": {
+            "type": "scroll_navi_mobile",
+            "settings": {
+              "sub_menu": "All Necklaces",
+              "link_submenu": "shopify:\/\/collections\/necklaces"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
@@ -189,8 +188,8 @@
           "1524770014057",
           "30d9274d-f502-4710-bb39-866381456103",
           "966bc6e1-31db-4261-b34d-773ca4a79259",
-          "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56",
           "scroll_navi_mobile_zRWDNN",
+          "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56",
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc"
         ],
         "settings": {

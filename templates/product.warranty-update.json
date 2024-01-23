@@ -19,6 +19,12 @@
             "text": "{{ product.metafields.custom.discount_text.value }}"
           }
         },
+        "2dfd3a07-cec3-4b74-996c-e78ac4deeed5": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.discount_text.value }}"
+          }
+        },
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0": {
           "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {

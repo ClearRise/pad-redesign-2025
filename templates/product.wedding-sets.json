@@ -19,6 +19,12 @@
             "text": "{{ product.metafields.custom.discount_text.value }}"
           }
         },
+        "c33a2665-bb5e-49d6-8b65-2dbeb841275d": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.discount_text.value }}"
+          }
+        },
         "separator": {
           "type": "separator",
           "disabled": true,

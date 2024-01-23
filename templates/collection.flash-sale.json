@@ -2,7 +2,8 @@
   "sections": {
     "replo_flash_sale_timer_HwE8Gy": {
       "type": "replo-flash-sale-timer",
-      "settings": {}
+      "settings": {
+      }
     },
     "collection-header": {
       "type": "collection-header",
@@ -70,7 +71,8 @@
         "collection_description": {
           "type": "collection_description",
           "disabled": true,
-          "settings": {}
+          "settings": {
+          }
         },
         "subcollections": {
           "type": "subcollections",

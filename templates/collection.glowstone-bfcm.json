@@ -2,7 +2,8 @@
   "sections": {
     "7024ab8b-622b-4958-815e-7f0e96b2df2f": {
       "type": "replo-flash-sale-timer",
-      "settings": {}
+      "settings": {
+      }
     },
     "collection-header": {
       "type": "collection-header",
@@ -69,7 +70,8 @@
       "blocks": {
         "collection_description": {
           "type": "collection_description",
-          "settings": {}
+          "settings": {
+          }
         },
         "subcollections": {
           "type": "subcollections",

@@ -11,7 +11,8 @@
         },
         "price": {
           "type": "price",
-          "settings": {}
+          "settings": {
+          }
         },
         "fa13a906-8f35-4826-9c29-8c36bab9d1db": {
           "type": "text",
@@ -22,7 +23,8 @@
         "separator": {
           "type": "separator",
           "disabled": true,
-          "settings": {}
+          "settings": {
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -40,6 +42,18 @@
           "settings": {
             "inventory_threshold": 10,
             "inventory_transfers_enable": true
+          }
+        },
+        "engraving_jR7cGk": {
+          "type": "engraving",
+          "settings": {
+          }
+        },
+        "d2bfdc2f-2cae-43b1-91ed-390419b7a7d8": {
+          "type": "free_gifts",
+          "settings": {
+            "gift_box_title": "",
+            "gift_included": ""
           }
         },
         "buy_buttons": {
@@ -60,13 +74,6 @@
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
-          }
-        },
-        "d2bfdc2f-2cae-43b1-91ed-390419b7a7d8": {
-          "type": "free_gifts",
-          "settings": {
-            "gift_box_title": "",
-            "gift_included": ""
           }
         },
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
@@ -183,9 +190,10 @@
         "separator",
         "variant_picker",
         "inventory_status",
+        "engraving_jR7cGk",
+        "d2bfdc2f-2cae-43b1-91ed-390419b7a7d8",
         "buy_buttons",
         "aee49288-aed2-447a-9362-0e6b1ca600d1",
-        "d2bfdc2f-2cae-43b1-91ed-390419b7a7d8",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
@@ -390,7 +398,8 @@
     },
     "collection-return": {
       "type": "collection-return",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [

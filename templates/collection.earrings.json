@@ -11,7 +11,8 @@
     },
     "d6959d1f-04b7-41ed-8eb4-84036f4fad4d": {
       "type": "replo-bogo-earrings-bf",
-      "settings": {}
+      "settings": {
+      }
     },
     "promo-grid": {
       "type": "promo-grid",
@@ -69,7 +70,8 @@
       "blocks": {
         "collection_description": {
           "type": "collection_description",
-          "settings": {}
+          "settings": {
+          }
         },
         "subcollections": {
           "type": "subcollections",
