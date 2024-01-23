@@ -60,6 +60,11 @@
   --color-body:{{ settings.color_body_bg | default: "#fff" }};
   --color-bg:{{ settings.color_body_bg | default: "#fff" }};
 }
+@media only screen and (max-width:768px){
+  #gorgias-chat-container #chat-button {
+    left: 20px!important;
+  }
+}
 
 @media only screen and (min-width:769px){
   :root{
