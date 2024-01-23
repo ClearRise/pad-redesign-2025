@@ -15,10 +15,12 @@
         "image_gJmRR3": {
           "type": "image",
           "settings": {
-            "top_subheading": "20-25% off Glowstone Series",
-            "title": "Valentine's Day Sale",
-            "title_size": 60,
-            "subheading": "Free Mystery Gift ($200-600 MSRP) on Orders $195+",
+            "top_subheading": "Valentine's Sale <",
+            "top_subheading_color": "",
+            "title": "20% Off",
+            "special_title_color": "",
+            "subheading": "<p>Free Mystery Gift ($200-600 MSRP) on Orders $195+<\/p>",
+            "special_text_color": "",
             "link": "",
             "link_text": "",
             "link_2": "",
@@ -26,9 +28,12 @@
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
             "image": "shopify:\/\/shop_images\/Valentine_s_Day_V1_71e5df64-a3aa-4dae-a2e9-cbd42dc4cf75.png",
-            "image_mobile": "shopify:\/\/shop_images\/Collection_Background_Image.png",
+            "image_mobile": "shopify:\/\/shop_images\/Glowstone_Collection.png",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24
           }
         }
       },
