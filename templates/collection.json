@@ -6,11 +6,11 @@
         "image_hfMiqN": {
           "type": "image",
           "settings": {
-            "top_subheading": "20-30% Off Sitewide",
+            "top_subheading": "Valentine's Day Sale",
             "top_subheading_color": "",
-            "title": "Valentine's Day Sale",
+            "title": "<strong>20-35% Off<\/strong>",
             "special_title_color": "",
-            "subheading": "<p>Free Mystery Gift ($200-600 value) on Orders $195+<\/p>",
+            "subheading": "<p>Rings as Unique as You Are<\/p>",
             "special_text_color": "",
             "link": "",
             "link_text": "",
@@ -90,6 +90,11 @@
         "style": "bars",
         "autoplay": false,
         "autoplay_speed": 5
+      }
+    },
+    "replo_trust_icons_fy9XYw": {
+      "type": "replo-trust-icons",
+      "settings": {
       }
     },
     "collection-header": {
@@ -192,6 +197,7 @@
   },
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
+    "replo_trust_icons_fy9XYw",
     "collection-header",
     "promo-grid",
     "main-collection"
