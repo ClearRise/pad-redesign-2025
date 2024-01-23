@@ -17,7 +17,7 @@
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ff0000",
-            "text_align": "vertical-center horizontal-center",
+            "text_align": "vertical-top horizontal-center",
             "image": "shopify:\/\/shop_images\/Valentine_s_Day_V1_71e5df64-a3aa-4dae-a2e9-cbd42dc4cf75.png",
             "image_mobile": "shopify:\/\/shop_images\/Valentine_s_Day_Generic_Collection.png",
             "overlay_opacity": 20,
@@ -93,59 +93,9 @@
         "autoplay_speed": 7
       }
     },
-    "16466920156dc1f06b": {
-      "type": "advanced-content",
-      "blocks": {
-        "1646692015dc9bcd88-1": {
-          "type": "liquid",
-          "settings": {
-            "code": "<div class=\"one-third-column\">\n<center>Made to Order<\/center>\n<\/div>\n<div class=\"one-third-column\">\n<center>Satisfaction Guarantee<\/center>\n<\/div>\n<div class=\"one-third-column-last\">\n<center>Worldwide Shipping<\/center>\n<\/div>\n<div style=\"clear:both;\" >\n<\/div>",
-            "width": "100%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "1646692015dc9bcd88-1"
-      ],
+    "replo_trust_icons_RKNtHa": {
+      "type": "replo-trust-icons",
       "settings": {
-        "full_width": false,
-        "space_around": true
-      }
-    },
-    "rich-text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": "Most jewelry looks the same"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>Express yourself with something truly unique.<\/p><p>Since 2015, we’ve been handcrafting artisan rings using the most uncommon luxury materials.<\/p><p>Whether it’s hand-forged Damascus steel from Nevada, fossilized mammoth tooth from Siberia, or meteorite pulled from the Arctic Circle you’ll find a story in every ring<\/p>"
-          }
-        },
-        "6608bf6f-85b6-4b98-80ce-d2b158c1626a": {
-          "type": "button",
-          "settings": {
-            "link": "https:\/\/patrickadairdesigns.com\/collections\/all-products?filter.p.m.custom.product_type=Ring",
-            "link_text": "Discover Yours"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "6608bf6f-85b6-4b98-80ce-d2b158c1626a"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
       }
     },
     "1646694183f97c4822": {
@@ -155,7 +105,7 @@
           "type": "advanced",
           "settings": {
             "subheading": "20-30% Off",
-            "heading": "METEORITE RINGS",
+            "heading": "METEORITE <br>RINGS",
             "textarea": "",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/meteorite-jewelry",
@@ -164,8 +114,8 @@
             "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
             "video_url": "",
             "width": "33",
-            "height": 300,
-            "text_size": 105,
+            "height": 260,
+            "text_size": 120,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
             "color_accent": "rgba(0,0,0,0)",
@@ -176,8 +126,8 @@
         "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
           "type": "advanced",
           "settings": {
-            "subheading": "20% Off",
-            "heading": "GLOWSTONE SERIES",
+            "subheading": "20-25% Off",
+            "heading": "GLOWSTONE <br>SERIES",
             "textarea": "",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/the-glowstone-series",
@@ -186,8 +136,8 @@
             "image": "shopify:\/\/shop_images\/Glowstone_Ring_2-_flipped_9f85184e-0502-4a6b-9d57-22cf5248aef4.png",
             "video_url": "",
             "width": "33",
-            "height": 300,
-            "text_size": 105,
+            "height": 260,
+            "text_size": 120,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
             "color_accent": "rgba(0,0,0,0)",
@@ -199,7 +149,7 @@
           "type": "advanced",
           "settings": {
             "subheading": "20-30% Off",
-            "heading": "WEDDING BANDS",
+            "heading": "WEDDING <br>BANDS",
             "textarea": "",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/best-selling-wedding-bands-v1",
@@ -208,8 +158,8 @@
             "image": "shopify:\/\/shop_images\/DSC00620_1080x_6ddf52d5-a3e7-426e-9b80-09cd6807f3e2.png",
             "video_url": "",
             "width": "33",
-            "height": 300,
-            "text_size": 105,
+            "height": 260,
+            "text_size": 120,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
             "color_accent": "rgba(0,0,0,0)",
@@ -223,18 +173,18 @@
             "subheading": "LIMITED TIME OFFER",
             "heading": "MYSTERY GIFT",
             "textarea": "Orders $195+ come with a FREE Mystery Gift worth $200-$600",
-            "cta_text1": "",
+            "cta_text1": "Shop All Rings",
             "cta_link1": "shopify:\/\/collections\/all-products",
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify:\/\/shop_images\/Group_Shot.png",
             "video_url": "",
             "width": "100",
-            "height": 660,
-            "text_size": 105,
-            "text_align": "vertical-top horizontal-center",
+            "height": 420,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
-            "color_accent": "rgba(0,0,0,0)",
+            "color_accent": "#ffa500",
             "boxed": false,
             "framed": false
           }
@@ -255,7 +205,7 @@
             "width": "50",
             "height": 400,
             "text_size": 105,
-            "text_align": "vertical-center horizontal-left",
+            "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
@@ -295,27 +245,10 @@
         "672a52df-0901-41df-bfcc-f5c1e4da1a77"
       ],
       "settings": {
-        "full_width": false,
-        "gutter_size": 20,
+        "full_width": true,
+        "gutter_size": 5,
         "space_above": false,
         "space_below": false
-      }
-    },
-    "164755740363a75745": {
-      "type": "home_img_with_txt",
-      "settings": {
-        "sub_title1": "Handcrafted in the USA",
-        "image_1": "shopify:\/\/shop_images\/img2.jpg",
-        "text_1": "Every ring is handmade by trade artisans in Utah, USA.",
-        "url_1": "",
-        "sub_title2": "Uncommon materials",
-        "image_2": "shopify:\/\/shop_images\/img1.jpg",
-        "text_2": "Go beyond silver and gold and find something that’s truly you.",
-        "url_2": "",
-        "sub_title3": "Every ring is unique",
-        "image_3": "shopify:\/\/shop_images\/met_rings_group_photo_for_sale_1_Medium_6c7b5d12-c012-4184-aeb3-917e318100b1.png",
-        "text_3": "Your ring is made to order just for you. No two rings are the same.",
-        "url_3": ""
       }
     },
     "featured-collection": {
@@ -323,71 +256,65 @@
       "settings": {
         "title": "Best Sellers",
         "home_featured_products": "best-sellers",
-        "per_row": 5,
-        "rows": 2,
+        "per_row": 4,
+        "rows": 1,
         "mobile_scrollable": false,
         "view_all": true,
         "divider": false
       }
     },
-    "1646695572d73bfd5a": {
-      "type": "rich-text",
-      "blocks": {
-        "164669557254083090-0": {
-          "type": "heading",
-          "settings": {
-            "title": "Need to find your ring size?"
-          }
-        }
-      },
-      "block_order": [
-        "164669557254083090-0"
-      ],
+    "replo_ethos_nHLRp7": {
+      "type": "replo-ethos",
       "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
       }
     },
-    "1647557717e099d38f": {
-      "type": "index_how_to_work",
+    "featured_collections_gQFdAi": {
+      "type": "featured-collections",
       "blocks": {
-        "df9da119-3ecd-4da4-8621-695a8ea6d85f": {
-          "type": "text",
+        "collection_eXYnW9": {
+          "type": "collection",
           "settings": {
-            "sub_title": "Place your order",
-            "text": "Unsure of your size? Select “unsure – send ring sizer first” and we’ll post you a free ring sizer",
-            "image_1": "shopify:\/\/shop_images\/how-it-works-11.jpg",
-            "image_2": "shopify:\/\/shop_images\/how-it-works-22.jpg"
+            "collection": "meteorite-jewelry",
+            "title": "Meteorite",
+            "focal_point": "center center"
           }
         },
-        "eaf7d4d7-8304-48a3-90e3-8b53e73c2e32": {
-          "type": "text",
+        "collection_fB6BtG": {
+          "type": "collection",
           "settings": {
-            "sub_title": "Confirm your ring size",
-            "text": "After using the sizer, simply send us your size via email"
+            "collection": "the-glowstone-series",
+            "title": "Glowstone",
+            "focal_point": "center center"
           }
         },
-        "6d049a6c-e799-432f-b3fc-561a00a683bf": {
-          "type": "text",
+        "collection_XXVFNR": {
+          "type": "collection",
           "settings": {
-            "sub_title": "We handcraft your ring",
-            "text": "Once we get your ring size, we begin making your ring."
+            "collection": "opal-rings",
+            "title": "Opal",
+            "focal_point": "center center"
+          }
+        },
+        "collection_RaKw33": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "df9da119-3ecd-4da4-8621-695a8ea6d85f",
-        "eaf7d4d7-8304-48a3-90e3-8b53e73c2e32",
-        "6d049a6c-e799-432f-b3fc-561a00a683bf"
+        "collection_eXYnW9",
+        "collection_fB6BtG",
+        "collection_XXVFNR",
+        "collection_RaKw33"
       ],
       "settings": {
-        "enable": true,
-        "title": "How it Works",
-        "title_size": 21,
-        "bg_color": "#111111",
-        "padding_top": 5,
-        "padding_bottom": 5
+        "title": "Shop By Material",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
       }
     },
     "1646694979441d8438": {
@@ -625,13 +552,11 @@
   },
   "order": [
     "slideshow",
-    "16466920156dc1f06b",
-    "rich-text",
+    "replo_trust_icons_RKNtHa",
     "1646694183f97c4822",
-    "164755740363a75745",
     "featured-collection",
-    "1646695572d73bfd5a",
-    "1647557717e099d38f",
+    "replo_ethos_nHLRp7",
+    "featured_collections_gQFdAi",
     "1646694979441d8438",
     "1647409114af22e67c",
     "featured-collections",
