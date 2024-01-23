@@ -69,7 +69,7 @@ $(document).ready(function () {
    
     let engravingValue = engravingInput.val();
     console.log(engravingValue)
-    if (engravingValue !==''){
+    if (engravingValue !=='' && engravingValue != undefined){
       $.ajax({
         type: "POST",
         url: "/cart/add.js",
