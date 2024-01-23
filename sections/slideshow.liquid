@@ -91,20 +91,10 @@
                 {%- style -%}
                   .image--{{ block.id }} .hero__title {
                     font-size: {{ block.settings.title_size | times: 0.5 }}px;
-                    color: {{block.settings.base_text_color}};
-                  }
-                  .image--{{ block.id }} .hero__subtitle {
-                    font-size: {{ block.settings.base_text_size | times: 0.8 }}px;
-                    color: {{block.settings.base_text_color}};
                   }
                   @media only screen and (min-width: 769px) {
                     .image--{{ block.id }} .hero__title {
                       font-size: {{ block.settings.title_size }}px;
-                      color: {{block.settings.base_text_color}};
-                    }
-                    .image--{{ block.id }} .hero__subtitle {
-                      font-size: {{ block.settings.base_text_size }}px;
-                      color: {{block.settings.base_text_color}};
                     }
                   }
   
@@ -223,30 +213,24 @@
                         <div class="hero__text-shadow">
                           {%- unless block.settings.top_subheading == blank -%}
                             <div class="hero__top-subtitle">
-                              <div class="animation-cropper">
-                                <div class="animation-contents" style="color: {{block.settings.top_subheading_color}}">
-                                  {{ block.settings.top_subheading | escape }}
-                                </div>
-                              </div>
+                              <div class="animation-cropper"><div class="animation-contents">
+                                {{ block.settings.top_subheading | escape }}
+                              </div></div>
                             </div>
                           {%- endunless -%}
                           {%- unless block.settings.title == blank -%}
                             <h2 class="h1 hero__title">
-                              <div class="animation-cropper">
-                                <div class="animation-contents" style="--special_title_color: {{block.settings.special_title_color}}">
-                                {{ block.settings.title | newline_to_br }}
-                                </div>
-                              </div>
+                              <div class="animation-cropper"><div class="animation-contents">
+                              {{ block.settings.title | newline_to_br }}
+                              </div></div>
                             </h2>
                           {%- endunless -%}
                           {%- if block.settings.subheading or block.settings.link or block.settings.link_2 -%}
                             {%- unless block.settings.subheading == blank -%}
                               <div class="hero__subtitle">
-                                <div class="animation-cropper">
-                                  <div class="animation-contents" style="--special_text_color: {{block.settings.special_text_color}}">
-                                    {{ block.settings.subheading }}
-                                  </div>
-                                </div>
+                                <div class="animation-cropper"><div class="animation-contents">
+                                  {{ block.settings.subheading | escape }}
+                                </div></div>
                               </div>
                             {%- endunless -%}
                             {%- if block.settings.link_text != blank or block.settings.link_text_2 != blank -%}
@@ -371,20 +355,10 @@
                 {%- style -%}
                   .slideshow__slide--{{ block.id }} .hero__title {
                     font-size: {{ block.settings.title_size | times: 0.5 }}px;
-                    color: {{block.settings.base_text_color}};
-                  }
-                  .slideshow__slide--{{ block.id }} .hero__subtitle {
-                    font-size: {{ block.settings.base_text_size | times: 0.5 }}px;
-                    color: {{block.settings.base_text_color}};
                   }
                   @media only screen and (min-width: 769px) {
                     .slideshow__slide--{{ block.id }} .hero__title {
                       font-size: {{ block.settings.title_size }}px;
-                      color: {{block.settings.base_text_color}};
-                    }
-                    .slideshow__slide--{{ block.id }} .hero__subtitle {
-                      font-size: {{ block.settings.base_text_size }}px;
-                      color: {{block.settings.base_text_color}};
                     }
                   }
   
@@ -499,11 +473,9 @@
                         <div class="hero__text-shadow">
                           {%- unless block.settings.top_subheading == blank -%}
                             <div class="hero__top-subtitle">
-                              <div class="animation-cropper">
-                                <div class="animation-contents" style="color: {{block.settings.top_subheading_color}}">
-                                  {{ block.settings.top_subheading | escape }}
-                                </div>
-                              </div>
+                              <div class="animation-cropper"><div class="animation-contents">
+                                {{ block.settings.top_subheading | escape }}
+                              </div></div>
                             </div>
                           {%- endunless -%}
                           {%- unless block.settings.title == blank -%}
@@ -516,11 +488,9 @@
                           {%- if block.settings.subheading or block.settings.link or block.settings.link_2 -%}
                             {%- unless block.settings.subheading == blank -%}
                               <div class="hero__subtitle">
-                                <div class="animation-cropper">
-                                  <div class="animation-contents" style="--special_text_color: {{block.settings.special_text_color}}">
-                                    {{ block.settings.subheading }}
-                                  </div>
-                                </div>
+                                <div class="animation-cropper"><div class="animation-contents">
+                                  {{ block.settings.subheading | escape }}
+                                </div></div>
                               </div>
                             {%- endunless -%}
                             {%- if block.settings.link_text != blank or block.settings.link_text_2 != blank -%}
@@ -691,30 +661,25 @@
             "label": "Subheading"
           },
           {
-            "type": "color",
-            "id": "top_subheading_color",
-            "label": "Subheading color"
-          },
-          {
-            "type": "inline_richtext",
+            "type": "textarea",
             "id": "title",
             "label": "Heading",
             "default": "Two line\ntitle slide."
           },
           {
-            "type": "color",
-            "id": "special_title_color",
-            "label": "Special title color"
+            "type": "range",
+            "id": "title_size",
+            "label": "Heading text size",
+            "default": 80,
+            "min": 40,
+            "max": 100,
+            "unit": "px"
           },
           {
-            "type": "richtext",
+            "type": "text",
             "id": "subheading",
-            "label": "Text"
-          },
-          {
-            "type": "color",
-            "id": "special_text_color",
-            "label": "Special text color"
+            "label": "Text",
+            "default": "And optional subtext"
           },
           {
             "type": "url",
@@ -840,35 +805,6 @@
                 "label": "Bottom right"
               }
             ]
-          },
-          {
-            "type": "header",
-            "content": "color settings"
-          },
-          {
-            "type": "color",
-            "id": "base_text_color",
-            "label": "Base text color",
-            "default": "#ffffff"
-          },
-          {
-            "type": "range",
-            "id": "title_size",
-            "label": "Heading text size",
-            "default": 80,
-            "min": 40,
-            "max": 100,
-            "unit": "px"
-          },
-          {
-            "type": "range",
-            "id": "base_text_size",
-            "label": "Base text size",
-            "unit": "px",
-            "min": 1,
-            "max": 100,
-            "step": 1,
-            "default": 24
           }
         ]
       }
@@ -884,14 +820,14 @@
           "type": "image",
           "settings": {
             "title": "Endless\npossibilities.",
-            "subheading": "<p>Bring your brand to life</p>"
+            "subheading": "Bring your brand to life"
           }
         },
         {
           "type": "image",
           "settings": {
             "title": "Two line\ntitle slide.",
-            "subheading": "<p>And big, beautiful imagery</p>"
+            "subheading": "And big, beautiful imagery"
           }
         }
       ]
