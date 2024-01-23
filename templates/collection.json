@@ -7,9 +7,11 @@
           "type": "image",
           "settings": {
             "top_subheading": "20-30% Off Sitewide",
-            "title": "Valentine's Day Sale",
-            "title_size": 60,
-            "subheading": "Free Mystery Gift ($200-600 MSRP) on Orders $195+",
+            "top_subheading_color": "#b30000",
+            "title": "<em><strong>Valentine's Day Sale<\/strong><\/em>",
+            "special_title_color": "#df2b2b",
+            "subheading": "<p>Free Mystery Gift ($200-600 MSRP) on<em><strong> Orders $195+<\/strong><\/em><\/p>",
+            "special_text_color": "#cf7208",
             "link": "",
             "link_text": "",
             "link_2": "",
@@ -19,7 +21,10 @@
             "image": "shopify:\/\/shop_images\/Valentine_s_Day_V1_71e5df64-a3aa-4dae-a2e9-cbd42dc4cf75.png",
             "image_mobile": "shopify:\/\/shop_images\/Collection_Background_Image.png",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24
           }
         },
         "image_DzJVAm": {
@@ -27,9 +32,11 @@
           "disabled": true,
           "settings": {
             "top_subheading": "",
+            "top_subheading_color": "",
             "title": "",
-            "title_size": 80,
+            "special_title_color": "",
             "subheading": "",
+            "special_text_color": "",
             "link": "",
             "link_text": "",
             "link_2": "",
@@ -39,16 +46,21 @@
             "image": "shopify:\/\/shop_images\/Desktop_collection_banners.png",
             "image_mobile": "shopify:\/\/shop_images\/valentines_day_mobile_website_collection_banner.png",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24
           }
         },
         "e7321c8d-7671-46ab-ba0a-e8be7d3cf79f": {
           "type": "image",
           "settings": {
             "top_subheading": "",
+            "top_subheading_color": "",
             "title": "",
-            "title_size": 80,
+            "special_title_color": "",
             "subheading": "",
+            "special_text_color": "",
             "link": "",
             "link_text": "",
             "link_2": "",
@@ -58,7 +70,10 @@
             "image": "shopify:\/\/shop_images\/free_gift_collection_desktop_final.png",
             "image_mobile": "shopify:\/\/shop_images\/free_gift_collection_mobile.png",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24
           }
         }
       },
