@@ -1276,13 +1276,13 @@ button.upsell-add-to-cart.disabled{
 
 ._b_upsell-collection ._b_upsell-product ._b_upsell-product-image img {
   width: 100%;
+  min-width: 100px;
 }
 ._b_upsell-collection ._b_upsell-product ._b_upsell-product-info {
   display: inline-block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-basis: 80%;
   padding-left: 10px;
 }
 
@@ -1319,7 +1319,7 @@ button.upsell-add-to-cart.disabled{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-basis: 60%;
+    flex-basis: 100%;
     padding-left: 10px;
   }
   .dci-title{
