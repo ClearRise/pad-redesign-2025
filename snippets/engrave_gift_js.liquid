@@ -68,7 +68,7 @@ $(document).ready(function () {
     event.preventDefault();
    
     let engravingValue = engravingInput.val();
-
+    console.log(engravingValue)
     if (engravingValue !==''){
       $.ajax({
         type: "POST",
