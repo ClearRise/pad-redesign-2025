@@ -155,7 +155,7 @@
             "cta_link1": "shopify:\/\/collections\/best-selling-wedding-bands-v1",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/DSC00620_1080x_6ddf52d5-a3e7-426e-9b80-09cd6807f3e2.png",
+            "image": "shopify:\/\/shop_images\/Sterling_Silver.png",
             "video_url": "",
             "width": "33",
             "height": 260,
@@ -298,8 +298,8 @@
         "collection_RaKw33": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": "",
+            "collection": "gold-rings",
+            "title": "Gold",
             "focal_point": "center center"
           }
         }
