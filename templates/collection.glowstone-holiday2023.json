@@ -19,7 +19,7 @@
             "top_subheading_color": "",
             "title": "<strong>20-25% Off <\/strong>",
             "special_title_color": "",
-            "subheading": "<h2><strong>The Glowstone Series<\/strong><\/h2><p><\/p>",
+            "subheading": "<h2><strong>Glowstone Collection<\/strong><\/h2><p>Rings as Unique as You Are<\/p><p><\/p>",
             "special_text_color": "",
             "link": "",
             "link_text": "",
@@ -48,6 +48,32 @@
         "style": "bars",
         "autoplay": true,
         "autoplay_speed": 5
+      }
+    },
+    "replo_trust_icons_Rz3min": {
+      "type": "replo-trust-icons",
+      "settings": {
+      }
+    },
+    "advanced_content_Ctay8B": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_zL8Yrk": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div style=\"display: flex; justify-content: center; text-align: center;\">\n    <div style=\"flex: 1; padding: 10px 0; font-weight: bold;\">Handmade to Order<\/div>\n    <div style=\"flex: 1; padding: 10px 0; font-weight: bold;\">Exotic Materials<\/div>\n    <div style=\"flex: 1; padding: 10px 0; font-weight: bold;\">Hundreds of Designs<\/div>\n<\/div>\n<div style=\"clear:both;\"><\/div>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_zL8Yrk"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "space_around": false
       }
     },
     "promo-grid": {
@@ -106,6 +132,8 @@
   "order": [
     "collection-header",
     "dcdeca2b-ab2e-4516-9d5d-edbc1ebcd719",
+    "replo_trust_icons_Rz3min",
+    "advanced_content_Ctay8B",
     "promo-grid",
     "main-collection"
   ]
