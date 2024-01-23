@@ -204,6 +204,7 @@
         },
         "2e50058a-8bc8-46f4-880f-08ed48490db6": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "New Year Special",
             "heading": "FREE GIFT",
