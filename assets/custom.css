@@ -1257,7 +1257,6 @@ button.upsell-add-to-cart.disabled{
   width: 100% !important;
 }
 ._b_upsell-collection ._b_upsell-product {
-  justify-content: space-between;
   align-items: flex-start;
   background: #f3f3f3;
   margin: .3rem 0;
