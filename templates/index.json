@@ -7,9 +7,11 @@
           "type": "image",
           "settings": {
             "top_subheading": "20-30% Off Sitewide",
+            "top_subheading_color": "",
             "title": "VALENTINE'S DAY SALE",
-            "title_size": 72,
-            "subheading": "PLUS get a Free Mystery Gift on Orders $195+",
+            "special_title_color": "",
+            "subheading": "<p>PLUS get a Free Mystery Gift on Orders $195+<\/p>",
+            "special_text_color": "",
             "link": "shopify:\/\/collections\/all-products",
             "link_text": "SHOP NOW",
             "link_2": "",
@@ -19,7 +21,10 @@
             "image": "shopify:\/\/shop_images\/Valentine_s_Day_V1_71e5df64-a3aa-4dae-a2e9-cbd42dc4cf75.png",
             "image_mobile": "shopify:\/\/shop_images\/Valentine_s_Day_V3.png",
             "overlay_opacity": 0,
-            "focal_point": "bottom center"
+            "focal_point": "bottom center",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24
           }
         },
         "image_zLVB7G": {
@@ -27,9 +32,11 @@
           "disabled": true,
           "settings": {
             "top_subheading": "",
+            "top_subheading_color": "",
             "title": "",
-            "title_size": 80,
+            "special_title_color": "",
             "subheading": "",
+            "special_text_color": "",
             "link": "shopify:\/\/collections\/all-products",
             "link_text": "",
             "link_2": "",
@@ -39,7 +46,10 @@
             "image": "shopify:\/\/shop_images\/Desktop_hero.png",
             "image_mobile": "shopify:\/\/shop_images\/Moible_hero.png",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24
           }
         },
         "slideshow-0": {
@@ -47,9 +57,11 @@
           "disabled": true,
           "settings": {
             "top_subheading": "",
+            "top_subheading_color": "",
             "title": "",
-            "title_size": 50,
+            "special_title_color": "",
             "subheading": "",
+            "special_text_color": "",
             "link": "shopify:\/\/collections\/all-products",
             "link_text": "",
             "link_2": "",
@@ -59,7 +71,10 @@
             "image": "shopify:\/\/shop_images\/Orange_Banner_2_fixed_compressed.png",
             "image_mobile": "shopify:\/\/shop_images\/Mobile_-_Orange_Hero_-_Compressed_1x_Medium_e7aeb1ff-9271-40c7-b867-2491171db495.png",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 50,
+            "base_text_size": 24
           }
         }
       },
