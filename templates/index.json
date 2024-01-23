@@ -33,7 +33,7 @@
           "type": "image",
           "settings": {
             "top_subheading": "",
-            "title": "",
+            "title": "asdfasdfasdf",
             "title_size": 80,
             "subheading": "",
             "link": "shopify:\/\/collections\/all-products",
@@ -41,7 +41,7 @@
             "link_2": "",
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
-            "textblock_align": "custom_top t_right",
+            "textblock_align": "custom_center t_center",
             "text_align": "horizontal-center",
             "txt_width": "450",
             "top_padding": 60,
@@ -83,7 +83,7 @@
             "subheading": "Up to 30% Off",
             "heading": "Sale Rings",
             "textarea": "Limited time Only",
-            "cta_text1": "",
+            "cta_text1": "asdfasdf",
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
@@ -499,7 +499,7 @@
       "type": "apps",
       "blocks": {
         "18994950-d2ce-4421-958d-eedc10fe5cce": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "lavender-opal-glowstone-ring"
           }
