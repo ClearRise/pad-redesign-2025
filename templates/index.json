@@ -317,6 +317,65 @@
         "enable_gutter": true
       }
     },
+    "promo_grid_xDgbKX": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_WYthwz": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Pendants",
+            "textarea": "Unique Pieces from <br> Exotic Materials",
+            "cta_text1": "Shop Pendants",
+            "cta_link1": "shopify:\/\/collections\/necklaces",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Pendant_56ae5f17-8dbc-4305-8aaa-5db6424d04ce.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "#ffa500",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_ehq8pY": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Earrings",
+            "textarea": "Glowstone inlaid <br>into Titanium Settings",
+            "cta_text1": "Shop Earrings",
+            "cta_link1": "shopify:\/\/collections\/earrings",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/earrings.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "advanced_WYthwz",
+        "advanced_ehq8pY"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false
+      }
+    },
     "1646694979441d8438": {
       "type": "rich-text",
       "blocks": {
@@ -557,6 +616,7 @@
     "featured-collection",
     "replo_ethos_nHLRp7",
     "featured_collections_gQFdAi",
+    "promo_grid_xDgbKX",
     "1646694979441d8438",
     "1647409114af22e67c",
     "featured-collections",
