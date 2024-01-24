@@ -15,20 +15,25 @@
         "image_gJmRR3": {
           "type": "image",
           "settings": {
-            "top_subheading": "20-25% off Glowstone Series",
-            "title": "Valentine's Day Sale",
-            "title_size": 60,
-            "subheading": "Free Mystery Gift ($200-600 MSRP) on Orders $195+",
+            "top_subheading": "Valentine's Sale",
+            "top_subheading_color": "",
+            "title": "<strong>20-25% Off <\/strong>",
+            "special_title_color": "",
+            "subheading": "<h2><strong>Glowstone Collection<\/strong><\/h2><p>Rings as Unique as You Are<\/p>",
+            "special_text_color": "",
             "link": "",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-center",
+            "text_align": "vertical-top horizontal-center",
             "image": "shopify:\/\/shop_images\/Valentine_s_Day_V1_71e5df64-a3aa-4dae-a2e9-cbd42dc4cf75.png",
-            "image_mobile": "shopify:\/\/shop_images\/Collection_Background_Image.png",
+            "image_mobile": "shopify:\/\/shop_images\/Glowstone_Collection.png",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24
           }
         }
       },
@@ -43,6 +48,32 @@
         "style": "bars",
         "autoplay": true,
         "autoplay_speed": 5
+      }
+    },
+    "replo_trust_icons_Rz3min": {
+      "type": "replo-trust-icons",
+      "settings": {
+      }
+    },
+    "advanced_content_Ctay8B": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_zL8Yrk": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div style=\"display: flex; justify-content: center; text-align: center;\">\n    <div style=\"flex: 1; padding: 10px 0; font-weight: bold;\">Handmade to Order<\/div>\n    <div style=\"flex: 1; padding: 10px 0; font-weight: bold;\">Exotic Materials<\/div>\n    <div style=\"flex: 1; padding: 10px 0; font-weight: bold;\">Hundreds of Designs<\/div>\n<\/div>\n<div style=\"clear:both;\"><\/div>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_zL8Yrk"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "space_around": false
       }
     },
     "promo-grid": {
@@ -101,6 +132,8 @@
   "order": [
     "collection-header",
     "dcdeca2b-ab2e-4516-9d5d-edbc1ebcd719",
+    "replo_trust_icons_Rz3min",
+    "advanced_content_Ctay8B",
     "promo-grid",
     "main-collection"
   ]
