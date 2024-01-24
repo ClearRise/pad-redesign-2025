@@ -14,8 +14,7 @@
           "settings": {
             "top_subheading": "",
             "title": "Give a Gift as Unique as They Are",
-            "title_size": 60,
-            "subheading": "Save 30-50% During our Holiday Gift Event",
+            "subheading": "<p>Save 30-50% During our Holiday Gift Event<\/p>",
             "link": "shopify:\/\/collections\/all",
             "link_text": "SHOP ALL RINGS",
             "link_2": "",
@@ -25,7 +24,8 @@
             "image": "shopify:\/\/shop_images\/Christmas_Large_f37d6320-69bd-43ac-b40a-de52c9fd421f.png",
             "image_mobile": "shopify:\/\/shop_images\/hero1_713564a8-7654-477c-a504-ec1c0d559da7.png",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "center center",
+            "title_size": 60
           }
         }
       },
@@ -249,7 +249,7 @@
       "type": "apps",
       "blocks": {
         "d3cce40d-ef5c-423b-a044-c1a75de28f6f": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "",
             "widget_type": "reviews_widget"
