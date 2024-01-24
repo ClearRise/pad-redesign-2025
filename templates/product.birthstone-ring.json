@@ -3,12 +3,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "7a40c00f-33ab-4e69-b17f-4b0da4e6853a": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -184,7 +178,6 @@
         }
       },
       "block_order": [
-        "7a40c00f-33ab-4e69-b17f-4b0da4e6853a",
         "price",
         "fa13a906-8f35-4826-9c29-8c36bab9d1db",
         "separator",
@@ -350,23 +343,10 @@
         "divider": false
       }
     },
-    "164740826566424b78": {
-      "type": "apps",
-      "blocks": {
-        "0b2c4db0-68a2-468e-890c-52a77263cb09": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}",
-            "widget_type": "combined_widget"
-          }
-        }
-      },
-      "block_order": [
-        "0b2c4db0-68a2-468e-890c-52a77263cb09"
-      ],
+    "section_custom_liquid_emyGpb": {
+      "type": "section-custom-liquid",
       "settings": {
-        "full_width": false,
-        "space_around": true
+        "custom_liquid": "<div class=\"page-width\">\n     <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>\n<\/div>"
       }
     },
     "product-recommendations": {
@@ -410,7 +390,7 @@
     "1646853684b754aedd",
     "sub",
     "16602466454a97b1e9",
-    "164740826566424b78",
+    "section_custom_liquid_emyGpb",
     "product-recommendations",
     "534c70bd-1de0-44e8-978e-a489c47944be",
     "recently-viewed",
