@@ -84,7 +84,8 @@
             {%- for block in section.blocks -%}
               <div
                 {{ block.shopify_attributes }}
-                class="image--{{ block.id }}"
+                class="image--{{ block.id }}" 
+                style="height: 100%;"
                 data-index="{{ forloop.index0 }}"
                 data-id="{{ block.id }}">
   
@@ -772,6 +773,18 @@
               {
                 "value": "vertical-bottom horizontal-right",
                 "label": "Bottom right"
+              },
+              {
+                "value": "vertical-top horizontal-left",
+                "label": "Top left"
+              },
+              {
+                "value": "vertical-top horizontal-center",
+                "label": "Top center"
+              },
+              {
+                "value": "vertical-top horizontal-right",
+                "label": "Top right"
               }
             ]
           },
