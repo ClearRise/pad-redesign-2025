@@ -25,7 +25,7 @@
     "color_drawer_button_text": "#ffffff",
     "color_modal_overlays": "#138f7e",
     "color_image_overlay": "#000000",
-    "color_image_overlay_opacity": 10,
+    "color_image_overlay_opacity": 0,
     "color_image_overlay_text_shadow": 10,
     "type_header_font_family": "sans-serif",
     "type_header_spacing": "50",
