@@ -3,7 +3,7 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "content_display": true
+        "content_display": false
       }
     }
   },
