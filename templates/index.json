@@ -84,7 +84,7 @@
         "slideshow-0"
       ],
       "settings": {
-        "use_img_banner": false,
+        "use_img_banner": true,
         "section_height": "450px",
         "mobile_height": "400px",
         "parallax": false,
