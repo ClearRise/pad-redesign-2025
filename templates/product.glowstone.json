@@ -3,12 +3,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "7a40c00f-33ab-4e69-b17f-4b0da4e6853a": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -190,7 +184,6 @@
         }
       },
       "block_order": [
-        "7a40c00f-33ab-4e69-b17f-4b0da4e6853a",
         "price",
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
         "separator",
@@ -327,23 +320,10 @@
         "max_width": true
       }
     },
-    "164740826566424b78": {
-      "type": "apps",
-      "blocks": {
-        "0b2c4db0-68a2-468e-890c-52a77263cb09": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}",
-            "widget_type": "combined_widget"
-          }
-        }
-      },
-      "block_order": [
-        "0b2c4db0-68a2-468e-890c-52a77263cb09"
-      ],
+    "section_custom_liquid_9yfB8j": {
+      "type": "section-custom-liquid",
       "settings": {
-        "full_width": false,
-        "space_around": true
+        "custom_liquid": "<style>\n    .slr-review {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n    }\n    .slr-main-title {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n        font-size: 32.3px;\n        font-weight: 400;\n    }\n    .slr-write-review__button, .slr-create-review__form__submit, .slr-no-reviews-message__button, .slr-create-review__form__cancel {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n        text-transform: uppercase;\n    }\n<\/style>\n\n<div class=\"page-width\">\n    <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>\n<\/div>"
       }
     },
     "product-recommendations": {
@@ -385,7 +365,7 @@
     "product_how_to_work",
     "1646853684b754aedd",
     "sub",
-    "164740826566424b78",
+    "section_custom_liquid_9yfB8j",
     "product-recommendations",
     "recently-viewed",
     "2a17ff04-e874-4d0d-8550-f78df3ba83ee",
