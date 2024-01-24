@@ -325,14 +325,6 @@ Organization and Website Schema Markup
 "ratingValue": {{ product.metafields.alireviews.seo_rating_review_key_script | split: '"ratingValue": "' | last | split: '"' | first | plus: 0 }}
 }
 {%- endif -%}
-{%- elsif prs == 'okendo' -%}
-{%- if product.metafields.okendo.RatingAndReviewAverageValue and product.metafields.okendo.RatingAndReviewAverageValue != "0" -%}
-,"aggregateRating": {
-"@type": "AggregateRating",
-"reviewCount": {{ product.metafields.okendo.RatingAndReviewCount }},
-"ratingValue": {{ product.metafields.okendo.RatingAndReviewAverageValue }}
-}
-{%- endif -%}
 {%- elsif prs == 'egg_views' -%}
 {%- if product.metafields.eggviews.reviews_count and product.metafields.eggviews.reviews_count != "0" -%}
 ,"aggregateRating": {
@@ -503,13 +495,7 @@ Organization and Website Schema Markup
 "ratingValue": {{ product.metafields.orankl.rating }}
 }
 {%- endif -%}
-{%- if product.metafields.okendo.RatingAndReviewAverageValue and product.metafields.okendo.RatingAndReviewAverageValue != "0" -%}
-,"aggregateRating": {
-"@type": "AggregateRating",
-"reviewCount": {{ product.metafields.okendo.RatingAndReviewCount }},
-"ratingValue": {{ product.metafields.okendo.RatingAndReviewAverageValue }}
-}
-{%- endif -%}
+
 {%- if product.metafields.vnreviews.reviewCount and product.metafields.vnreviews.reviewCount != "0" -%}
 ,"aggregateRating": {
 "@type": "AggregateRating",
