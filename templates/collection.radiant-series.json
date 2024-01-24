@@ -8,7 +8,6 @@
           "settings": {
             "top_subheading": "",
             "title": "",
-            "title_size": 80,
             "subheading": "",
             "link": "",
             "link_text": "",
@@ -19,7 +18,8 @@
             "image": "shopify:\/\/shop_images\/radiant_website_desktop_6847b90b-858b-4ed2-8418-2facfd816469.png",
             "image_mobile": "shopify:\/\/shop_images\/radiant_website_mobile.png",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "center center",
+            "title_size": 80
           }
         },
         "1657833948beb2f3f4-1": {
@@ -28,8 +28,7 @@
           "settings": {
             "top_subheading": "",
             "title": "Two line\ntitle slide.",
-            "title_size": 80,
-            "subheading": "And big, beautiful imagery",
+            "subheading": "<p>And big, beautiful imagery<\/p>",
             "link": "",
             "link_text": "Optional button",
             "link_2": "",
@@ -37,7 +36,8 @@
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "center center",
+            "title_size": 80
           }
         }
       },
