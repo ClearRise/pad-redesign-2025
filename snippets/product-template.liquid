@@ -125,7 +125,22 @@
                 </p>
               {%- endif -%}
             </div>
+            <style>
+              .slr-widget--mini .slr-stars svg {
+                width: 20px;
+                height: 20px;
+              }
+              .slr-widget--mini .slr-stars-score__total {
+                font-size: 14.5px;
+                font-weight: 400;
+              }
+              .slr-stars-score__total {
+                font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+              }
+            </style>
 
+            <div class="sendlane-reviews" sl-product-id="{{product.id}}" sl-type="mini"></div>
+            
             <div data-product-blocks>
               {%- form 'product', product, id: form_id, class: 'product-single__form' -%}
               {%- capture form_id -%}AddToCartForm-{{ section_id }}-{{ product.id }}{%- endcapture -%}
