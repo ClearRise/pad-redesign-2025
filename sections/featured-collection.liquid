@@ -72,7 +72,7 @@
 
           {%- for product in collections[section.settings.home_featured_products].products limit: product_limit -%}
             {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
-{%- render 'product-grid-item',
+            {%- render 'product-grid-item',
               product: product,
               collection: collection,
               per_row: per_row,
