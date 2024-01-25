@@ -260,7 +260,8 @@
         "rows": 1,
         "mobile_scrollable": false,
         "view_all": true,
-        "divider": false
+        "divider": false,
+        "product_grid_image_size": "portrait"
       }
     },
     "replo_ethos_nHLRp7": {
