@@ -4,7 +4,7 @@
     <h1 class="section-header__title">{{ page.title }}</h1>
   </header>
 
-  <div class="rte rte--nomargin">
+  <div class="{% if section.settings.content_display %}rte{% endif %} rte--nomargin">
     {{ page.content }}
   </div>
 </div>
@@ -12,6 +12,14 @@
 {% schema %}
 {
   "name": "Page",
-  "tag": "section"
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "content_display",
+      "label": "Content display",
+      "default": true
+    }
+  ]
 }
 {% endschema %}
