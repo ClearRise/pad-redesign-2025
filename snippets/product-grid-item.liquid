@@ -101,8 +101,15 @@ if tag contains '_label_'
     {%- endif -%}
 
     {%- liquid
+
+      if section.settings.product_grid_image_size != blank
+        assign product_grid_image_size = section.settings.product_grid_image_size
+      else 
+        assign product_grid_image_size = settings.product_grid_image_size
+      endif
+
       assign fixed_aspect_ratio = false
-      unless settings.product_grid_image_size == 'natural'
+      unless product_grid_image_size == 'natural'
         assign fixed_aspect_ratio = true
       endunless
 
@@ -119,7 +126,7 @@ if tag contains '_label_'
         {%- endif -%}
         {%- if fixed_aspect_ratio -%}
           <div
-            class="grid__image-ratio grid__image-ratio--{{ settings.product_grid_image_size }}">
+            class="grid__image-ratio grid__image-ratio--{{ product_grid_image_size }}">
             <img class="lazyload{% unless settings.product_grid_image_fill %} grid__image-contain{% endunless %}"
               data-src="{{ img_url }}"
               data-widths="[360, 540, 720, 900, 1080]"
