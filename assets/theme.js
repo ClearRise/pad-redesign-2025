@@ -1719,7 +1719,7 @@ lazySizesConfig.expFactor = 4;
           Shopify.StorefrontExpressButtons.initialize();
         }
         (typeof window.BOLD !== 'undefined' && typeof window.BOLD.common !== 'undefined' && typeof window.BOLD.common.eventEmitter !== 'undefined' && typeof window.BOLD.common.eventEmitter.emit !== 'undefined' && (BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded')));
-},
+      },
   
       updateCartDiscounts: function(markup) {
         if (!this.discounts) {
@@ -1745,7 +1745,12 @@ lazySizesConfig.expFactor = 4;
         var key = evt.detail[0];
         var qty = evt.detail[1];
         var el = evt.detail[2];
-  
+        
+        var quantityInput = el.querySelector('.js-qty__num');
+        var dataEngravingValue = quantityInput.getAttribute('data-engraving');
+        var dataProtectionValue = quantityInput.getAttribute('data-protection');
+        var comp_val =  qty - parseInt(quantityInput.getAttribute('data-quantity'));
+
         if (!key || !qty) {
           return;
         }
@@ -1754,15 +1759,23 @@ lazySizesConfig.expFactor = 4;
         if (el) {
           el.classList.add('is-loading');
         }
-  
-        theme.cart.changeItem(key, qty)
+        if (dataEngravingValue && dataProtectionValue) {
+          this.updateOtherProductQuantity(key, qty, dataEngravingValue, dataProtectionValue, comp_val);
+        }
+        else if (dataEngravingValue) {
+          this.updateOtherProductQuantity(key, qty, dataEngravingValue, false, comp_val);
+        }
+        else if (dataProtectionValue) {
+          this.updateOtherProductQuantity(key, qty, false, dataProtectionValue, comp_val);
+        } else {
+          theme.cart.changeItem(key, qty)
           .then(function(cart) {
             if (cart.item_count > 0) {
               this.wrapper.classList.remove('is-empty');
             } else {
               this.wrapper.classList.add('is-empty');
             }
-  
+            
             this.buildCart();
   
             document.dispatchEvent(new CustomEvent('cart:updated', {
@@ -1772,6 +1785,51 @@ lazySizesConfig.expFactor = 4;
             }));
           }.bind(this))
           .catch(function(XMLHttpRequest){});
+        }
+      },
+
+      updateOtherProductQuantity: function (key, qty, dataEngravingValue, dataProtectionValue, comp_val) {
+        var $this = this;
+        theme.cart.getCart().then(function (cartData) {
+          var engravingProduct = cartData.items.find(item => item.variant_id == dataEngravingValue);
+          var protectionProduct = cartData.items.find(item => item.variant_id == dataProtectionValue);
+          var requestData = {
+            updates: {}
+          };
+  
+          if (key) {
+            requestData.updates[key] = qty;
+          }
+  
+          if (dataEngravingValue) {
+            requestData.updates[dataEngravingValue] = engravingProduct.quantity + comp_val;
+          }
+          
+          if (dataProtectionValue) {
+            requestData.updates[dataProtectionValue] = protectionProduct.quantity + comp_val;
+          }         
+  
+          console.log(requestData)
+          theme.cart._updateCart({
+            url: ''.concat('/cart/update.js', '?t=').concat(Date.now()),
+            data: JSON.stringify(requestData)
+          }).then(function(cart) {
+            if (cart.item_count > 0) {
+              $this.wrapper.classList.remove('is-empty');
+            } else {
+              $this.wrapper.classList.add('is-empty');
+            }
+            
+            $this.buildCart();
+  
+            document.dispatchEvent(new CustomEvent('cart:updated', {
+              detail: {
+                cart: cart
+              }
+            }));
+          }.bind($this))
+          .catch(function(XMLHttpRequest){});
+        });
       },
   
       /*============================================================================
@@ -3022,7 +3080,7 @@ Bold:POv2*/
   
         this.input.value = qty;
 
-        console.log(this.wrapper);
+        console.log(this.options.isCart);
   
         if (this.options.isCart) {
           document.dispatchEvent(new CustomEvent('cart:quantity' + this.options.namespace, {
