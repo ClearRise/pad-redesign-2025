@@ -71,8 +71,8 @@ Snippet Arguments
   <div class="grid grid--uniform{% if mobile_flush_grid %} small--grid--flush{% endif %}"{% unless enable_collection_count %} data-scroll-to{% endunless %}>
     {%- for item in items -%}
       {%- if item.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
-{%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
-{%- if item.object_type == 'product' -%}
+      {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
+      {%- if item.object_type == 'product' -%}
         {%- render 'product-grid-item',
           product: item,
           per_row: per_row,
