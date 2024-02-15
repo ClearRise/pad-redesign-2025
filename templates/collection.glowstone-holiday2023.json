@@ -14,6 +14,7 @@
       "blocks": {
         "image_gJmRR3": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "Valentine's Sale",
             "top_subheading_color": "",
@@ -35,10 +36,35 @@
             "title_size": 60,
             "base_text_size": 24
           }
+        },
+        "image_DdzAMt": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/Desktop_collection_banners.png",
+            "image_mobile": "shopify:\/\/shop_images\/valentines_day_mobile_website_collection_banner.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24
+          }
         }
       },
       "block_order": [
-        "image_gJmRR3"
+        "image_gJmRR3",
+        "image_DdzAMt"
       ],
       "settings": {
         "use_img_banner": true,
