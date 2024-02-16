@@ -14,9 +14,8 @@
       "blocks": {
         "image_gJmRR3": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "top_subheading": "Valentine's Sale",
+            "top_subheading": "Presidents Day Sale",
             "top_subheading_color": "",
             "title": "<strong>20-25% Off <\/strong>",
             "special_title_color": "",
@@ -28,8 +27,8 @@
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-top horizontal-center",
-            "image": "shopify:\/\/shop_images\/Desktop_Hero_Quick_V1_2e53390f-2cf2-4b4b-8dba-084f070be9f3.png",
-            "image_mobile": "shopify:\/\/shop_images\/Glowstone_Collection.png",
+            "image": "shopify:\/\/shop_images\/1231213123.png",
+            "image_mobile": "shopify:\/\/shop_images\/PRESIDAY_mobile_COLLECTION2_1.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -39,6 +38,7 @@
         },
         "image_DdzAMt": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
