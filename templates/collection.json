@@ -20,7 +20,7 @@
             "text_align": "vertical-top horizontal-center",
             "image": "shopify:\/\/shop_images\/1231213123.png",
             "image_mobile": "shopify:\/\/shop_images\/PRESIDAY_mobile_COLLECTION2_1.png",
-            "overlay_opacity": 0,
+            "overlay_opacity": 10,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
             "title_size": 60,
