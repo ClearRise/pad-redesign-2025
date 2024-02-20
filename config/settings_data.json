@@ -156,8 +156,8 @@
           "scroll_navi_mobile_zRWDNN": {
             "type": "scroll_navi_mobile",
             "settings": {
-              "sub_menu": "Gifts Under $200",
-              "link_submenu": "shopify:\/\/collections\/gifts-under-200"
+              "sub_menu": "Flash Sale",
+              "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/flash-sale-collection"
             }
           },
           "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56": {
