@@ -1,6 +1,6 @@
 {
   "sections": {
-    "replo_flash_sale_timer_HwE8Gy": {
+    "replo_flash_sale_timer_BdXnmX": {
       "type": "replo-flash-sale-timer",
       "disabled": true,
       "settings": {
@@ -106,7 +106,7 @@
     }
   },
   "order": [
-    "replo_flash_sale_timer_HwE8Gy",
+    "replo_flash_sale_timer_BdXnmX",
     "collection-header",
     "promo-grid",
     "main-collection"
