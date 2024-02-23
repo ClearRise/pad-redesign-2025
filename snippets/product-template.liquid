@@ -256,7 +256,7 @@
                         .block--{{block.id}} .perorder-content {
                           background: {{block.settings.background}};
                         }
-                        .block--{{block.id}}.product-block .perorder-content p {
+                        .block--{{block.id}}.product-block .perorder-content p, .custom_gift_block span {
                           color: {{block.settings.color}};
                         }
                         .block--{{block.id}}.product-block .perorder-content ul li.disable {
@@ -270,6 +270,13 @@
                         .block--{{block.id}}.product-block .perorder-content ul li.normal {
                           background: {{block.settings.third_bg}};
                           color: {{block.settings.third_color}};
+                        }
+                        .block--{{block.id}}.product-block .perorder-content ._b_upsell-product {
+                          background: {{block.settings.gift_bg}};
+                          color: {{block.settings.gift_text}};
+                        }
+                        .block--{{block.id}}.product-block .perorder-content ._b_upsell-product ._b_txt {
+                          color: {{block.settings.gift_text}};
                         }
                       {% endstyle %}
                   
