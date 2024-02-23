@@ -388,12 +388,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!--  Intelligems Template Testing Script -->
 
-    <script>
+  <script>
     window._template = {
         directory: "{{ template.directory }}",
         name: "{{ template.name }}",
         suffix: "{{ template.suffix }}"
     }
+    window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
   </script> 
 
   
