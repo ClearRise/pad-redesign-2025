@@ -1,0 +1,67 @@
+.product-block {
+  margin-bottom: 10px;
+  &#custom-engraving {
+    .custom-engraving-text {
+      label {
+        .label-content {
+          font-family: var(--typeBasePrimary),var(--typeBaseFallback);
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 2px;
+        }
+      }
+    }
+    .premium-protection-plan {
+      .gpo-checkbox {
+        label {
+          span {
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+  .perorder-content {
+    background: var(--colorBtnPrimaryLight);
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    border: 2px solid black;
+    p {
+      color: white;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    ul {
+      margin: 0;
+      list-style: none;
+      li {
+        display: flex;
+        background: white;
+        padding: 10px;
+        justify-content: space-between;
+        &.bold {
+          font-weight: bold;
+        }
+      }
+    }
+    .custom_gift_block {
+      ._b_upsell-product {
+        padding: 0;
+        ._b_upsell-product-image {
+          line-height: 0;
+        }
+        ._b_upsell-product-info {
+          padding-top: 10px;
+          ._b_txt {
+            color: black;
+          }
+        }
+      }
+      span {
+        color: white;
+      }
+    }
+  }
+}
