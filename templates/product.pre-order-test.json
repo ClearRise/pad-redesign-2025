@@ -49,11 +49,19 @@
           "settings": {
           }
         },
-        "8b562356-ae61-4e76-9d41-a70561a3c483": {
-          "type": "free_gifts",
+        "pre_free_gifts_arzLR3": {
+          "type": "pre_free_gifts",
           "settings": {
             "gift_box_title": "",
-            "gift_included": ""
+            "gift_included": "",
+            "background": "#dbf4f1",
+            "color": "#000000",
+            "first_bg": "#b6b6b6",
+            "first_color": "#505050",
+            "second_bg": "#ffffff",
+            "second_color": "#000000",
+            "third_bg": "#ffffff",
+            "third_color": "#000000"
           }
         },
         "buy_buttons": {
@@ -190,7 +198,7 @@
         "variant_picker",
         "inventory_status",
         "engraving_NnfXYR",
-        "8b562356-ae61-4e76-9d41-a70561a3c483",
+        "pre_free_gifts_arzLR3",
         "buy_buttons",
         "8a3bfed3-a948-43a2-a499-59b043673565",
         "07bdb91c-b9ed-4326-8127-0098675d0092",

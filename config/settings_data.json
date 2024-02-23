@@ -68,7 +68,7 @@
     "product_threshold_amount": 150,
     "product1-img1": "shopify:\/\/shop_images\/MysteryProductThumbnailSLower_f1fde3c6-9dd9-42b7-ad92-6627dce64266.gif",
     "product1-title": "<b>FREE GIFT WITH PURCHASE<\/b>",
-    "product1-text": "Spend $195+ and get a Free Mystery Gift. Guaranteed to be a ring or pendant valued between $200 to $600 MSRP.",
+    "product1-text": "Spend $195+ and get a Free Mystery Gift. Guaranteed to be a ring or pendant valued from $200-$600 MSRP.",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -314,12 +314,6 @@
       },
       "2728461494843721857": {
         "type": "shopify:\/\/apps\/amped-email-sms-popups\/blocks\/app-embed\/d9d8f140-4443-4f6c-a16a-95357ecc2125",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "4981902369724952902": {
-        "type": "shopify:\/\/apps\/variant-option-product-options\/blocks\/embed-block\/430cbd7b-bd20-4c16-ba41-db6f4c645164",
         "disabled": false,
         "settings": {
         }
