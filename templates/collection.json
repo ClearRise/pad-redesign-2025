@@ -18,8 +18,8 @@
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/worth_200_desktop_collection_banner.png",
-            "image_mobile": "shopify:\/\/shop_images\/fixed.png",
+            "image": "shopify:\/\/shop_images\/free_gift_website_collction_banners_desktop.png",
+            "image_mobile": "shopify:\/\/shop_images\/free_gift_website_collction_banners_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -83,7 +83,6 @@
         "e7321c8d-7671-46ab-ba0a-e8be7d3cf79f",
         "image_hfMiqN"
       ],
-      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
