@@ -58,9 +58,16 @@
         }
         ._b_upsell-product-info {
           padding: 10px;
-          .dci-title {
-            color: inherit;
+          ._b_product-title-link {
+            line-height: 14px;
+            margin-bottom: 7px;
+            .dci-title {
+              color: inherit;
+              font-size: 13px;
+  
+            }
           }
+          
         }
       }
     }

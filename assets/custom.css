@@ -1321,11 +1321,18 @@ button.upsell-add-to-cart.disabled{
     flex-basis: 100%;
     padding-left: 10px;
   }
+  ._b_upsell-product {
+    flex-wrap: wrap;
+  }
+  ._b_upsell-product-image {
+    width: calc(50% - 3px);
+  }
   .dci-title{
       font-size: 14px;
   }
   ._b_txt{
       font-size: 12px;
+      line-height: 17px;
   }
   ._b_product-title-link {
     margin-bottom: 2px;
