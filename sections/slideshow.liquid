@@ -219,8 +219,8 @@
   
                 {%- if hero_text -%}
                   <div class="hero__text-wrap">
-                    <div class="page-width">
-                      <div class="hero__text-content {{ block.settings.text_align }}">
+                    <div class="page-width hero__text-content--wrapper {{ block.settings.text_position }} {{ block.settings.mobile_text_position }}">
+                      <div class="hero__text-content text-{{ block.settings.text_align }} mobile-text-{{ block.settings.mobile_text_align }}">
                         <div class="hero__text-shadow">
                           {%- unless block.settings.top_subheading == blank -%}
                             <div class="hero__top-subtitle">
@@ -495,8 +495,8 @@
   
                 {%- if hero_text -%}
                   <div class="hero__text-wrap">
-                    <div class="page-width">
-                      <div class="hero__text-content {{ block.settings.text_align }}">
+                    <div class="page-width {{ block.settings.text_position }} {{ block.settings.mobile_text_position }}">
+                      <div class="hero__text-content text-{{ block.settings.text_align }} mobile-text-{{ block.settings.mobile_text_align }}">
                         <div class="hero__text-shadow">
                           {%- unless block.settings.top_subheading == blank -%}
                             <div class="hero__top-subtitle">
@@ -746,8 +746,8 @@
           },
           {
             "type": "select",
-            "id": "text_align",
-            "label": "Text alignment",
+            "id": "text_position",
+            "label": "Text Position",
             "default": "vertical-center horizontal-center",
             "options": [
               {
@@ -785,6 +785,64 @@
               {
                 "value": "vertical-top horizontal-right",
                 "label": "Top right"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "text_align",
+            "label": "Text align",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "center",
+                "label": "Center"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "mobile_text_position",
+            "label": "Mobile Text Position",
+            "default": "mobile-vertical-center mobile-horizontal-center",
+            "options": [
+              {
+                "value": "mobile-vertical-center mobile-horizontal-center",
+                "label": "Center"
+              },
+              {
+                "value": "mobile-vertical-bottom mobile-horizontal-center",
+                "label": "Bottom"
+              },
+              {
+                "value": "mobile-vertical-top mobile-horizontal-center",
+                "label": "Top"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "mobile_text_align",
+            "label": "Mobile Text align",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "center",
+                "label": "Center"
+              },
+              {
+                "value": "right",
+                "label": "Right"
               }
             ]
           },
