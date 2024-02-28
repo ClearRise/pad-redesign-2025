@@ -214,8 +214,110 @@
         "product_video_style": "muted"
       }
     },
+    "promo_grid_DXNbjz": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_ymBeYC": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "HANDCRAFTED",
+            "textarea": "Every ring is handcrafted by expert jewelers with extensive precious metal experience",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_GfPLz6": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "SUPERIOR QUALITY",
+            "textarea": "Using contemporary material science we can get you best in class quality for a fraction of the cost.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_tcCBaK": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "ETHICALLY SOURCED",
+            "textarea": "Every Diamond and precious gemstone is lab-sourced from leading laboratories. This means there are no ethical conflicts,",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_UX3mMk": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "EVERY RING IS UNIQUE",
+            "heading": "",
+            "textarea": "Your ring is made to order and fully customized just for you. No two rings are the same",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "advanced_ymBeYC",
+        "advanced_GfPLz6",
+        "advanced_tcCBaK",
+        "advanced_UX3mMk"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true
+      }
+    },
     "product_img_with_txt": {
       "type": "product_img_with_txt",
+      "disabled": true,
       "settings": {
         "sub_title1": "Handcrafted in the USA",
         "image_1": "shopify:\/\/shop_images\/img2.jpg",
@@ -263,6 +365,7 @@
         "0669e6bd-9d26-4ae4-b380-ce53681e452e",
         "ba8bc2a1-afb2-4a08-8837-4ae3795928a4"
       ],
+      "disabled": true,
       "settings": {
         "enable": true,
         "title": "Find Your Ring Size",
@@ -293,6 +396,7 @@
         "164685368492299ea2-0",
         "164685368492299ea2-1"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
@@ -312,6 +416,7 @@
       "block_order": [
         "46cc26fb-adef-48ef-adb5-d7706819bd7b"
       ],
+      "disabled": true,
       "settings": {
         "max_width": true
       }
@@ -338,6 +443,7 @@
   },
   "order": [
     "main",
+    "promo_grid_DXNbjz",
     "product_img_with_txt",
     "product_how_to_work",
     "1646853684b754aedd",
