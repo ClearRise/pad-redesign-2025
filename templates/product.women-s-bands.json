@@ -214,6 +214,33 @@
         "product_video_style": "muted"
       }
     },
+    "1646853684b754aedd": {
+      "type": "rich-text",
+      "blocks": {
+        "164685368492299ea2-0": {
+          "type": "heading",
+          "settings": {
+            "title": "You Wedding Ring is More than Just Jewelry"
+          }
+        },
+        "164685368492299ea2-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>It's a handcrafted celebration of your love that tells your story. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "164685368492299ea2-0",
+        "164685368492299ea2-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
     "promo_grid_DXNbjz": {
       "type": "promo-grid",
       "blocks": {
@@ -304,18 +331,41 @@
             "boxed": false,
             "framed": false
           }
+        },
+        "advanced_gLBXQE": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "15-Point Inspection",
+            "textarea": "Your ring should take your breath away. That's why after we inspect your ring we inspect your ring (again).",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/MSR-1234_5.jpg",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-bottom horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
         }
       },
       "block_order": [
         "advanced_ymBeYC",
         "advanced_GfPLz6",
         "advanced_tcCBaK",
-        "advanced_UX3mMk"
+        "advanced_UX3mMk",
+        "advanced_gLBXQE"
       ],
       "settings": {
         "full_width": false,
         "gutter_size": 20,
-        "space_above": true,
+        "space_above": false,
         "space_below": true
       }
     },
@@ -379,34 +429,6 @@
         "padding_bottom": 5
       }
     },
-    "1646853684b754aedd": {
-      "type": "rich-text",
-      "blocks": {
-        "164685368492299ea2-0": {
-          "type": "heading",
-          "settings": {
-            "title": "The Unrivaled Process"
-          }
-        },
-        "164685368492299ea2-1": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>{{ product.metafields.global.unrivaled_process | metafield_tag }}<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "164685368492299ea2-0",
-        "164685368492299ea2-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
-      }
-    },
     "sub": {
       "type": "product-full-width",
       "blocks": {
@@ -447,10 +469,10 @@
   },
   "order": [
     "main",
+    "1646853684b754aedd",
     "promo_grid_DXNbjz",
     "product_img_with_txt",
     "product_how_to_work",
-    "1646853684b754aedd",
     "sub",
     "product-recommendations",
     "recently-viewed",
