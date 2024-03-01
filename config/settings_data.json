@@ -179,8 +179,8 @@
           "announcement_FkMJza": {
             "type": "announcement",
             "settings": {
-              "text": "Free Green BURL GLOW RING",
-              "link_text": "ON ORDERS $195+",
+              "text": "",
+              "link_text": "FREE GLOW BURL RING ON ORDERS $195+",
               "link": "shopify:\/\/collections\/all-products"
             }
           }
