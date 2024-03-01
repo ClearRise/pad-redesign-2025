@@ -227,7 +227,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>It's a handcrafted celebration of your love that tells your story. <\/p>"
+            "text": "<p>It's a handcrafted celebration of your love that tells your story. <\/p><p><\/p>"
           }
         }
       },
@@ -334,6 +334,7 @@
         },
         "advanced_gLBXQE": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "",
             "heading": "15-Point Inspection",
@@ -342,7 +343,7 @@
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/MSR-1234_5.jpg",
+            "image": "shopify:\/\/shop_images\/MSR-1234_3.jpg",
             "video_url": "",
             "width": "100",
             "height": 500,
