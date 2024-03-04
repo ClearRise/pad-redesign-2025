@@ -178,6 +178,7 @@
           },
           "announcement_FkMJza": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "",
               "link_text": "FREE GLOW BURL RING ON ORDERS $195+",
