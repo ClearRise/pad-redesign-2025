@@ -1,0 +1,304 @@
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "collection_image_enable": false,
+        "parallax": true
+      }
+    },
+    "7d09f40a-919a-4742-9876-07faef16b904": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14479573778514__7d09f40a-919a-4742-9876-07faef16b904-1673459276b267a082-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Find Your Wedding Band"
+          }
+        },
+        "template--14479573778514__7d09f40a-919a-4742-9876-07faef16b904-1673459276b267a082-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Every couple is unique. We strive to provide a wide selection of bands suitable for every style and every budget. <br\/><br\/>Feel free to shop by category or keep scrolling to see our current best selling wedding bands. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14479573778514__7d09f40a-919a-4742-9876-07faef16b904-1673459276b267a082-0",
+        "template--14479573778514__7d09f40a-919a-4742-9876-07faef16b904-1673459276b267a082-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "5cc00264-bdfc-4629-82de-0a4ca9789451": {
+      "type": "promo-grid",
+      "blocks": {
+        "4be0376d-8c07-42cf-9418-c3c7e2f4798c": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "SHOP MEN'S BANDs",
+            "cta_link2": "shopify:\/\/collections\/mens-wedding-bands",
+            "image": "shopify:\/\/shop_images\/Hyper-Ring-2_1.png",
+            "video_url": "",
+            "width": "33",
+            "height": 220,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "Shop Matching Bands",
+            "cta_link2": "shopify:\/\/collections\/wedding-ring-sets",
+            "image": "shopify:\/\/shop_images\/winters-howl-glowstone-matching-set-3_8b85a073-5b8a-4a36-8941-36db7d05c79a.png",
+            "video_url": "",
+            "width": "33",
+            "height": 260,
+            "text_size": 85,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "Shop Women's Bands",
+            "cta_link2": "shopify:\/\/collections\/womens-wedding-bands",
+            "image": "shopify:\/\/shop_images\/diamond-womens-wedding-band_1800x1800_1a91a34a-512b-4b38-a7b7-353501ecba3c.webp",
+            "video_url": "",
+            "width": "33",
+            "height": 220,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "4be0376d-8c07-42cf-9418-c3c7e2f4798c",
+        "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-0",
+        "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 10,
+        "space_above": false,
+        "space_below": false
+      }
+    },
+    "96e55e5c-0b72-4487-bfd9-ec42f287e3a3": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14479573778514__96e55e5c-0b72-4487-bfd9-ec42f287e3a3-1673485919af1c695c-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Best Selling Wedding Bands"
+          }
+        },
+        "template--14479573778514__96e55e5c-0b72-4487-bfd9-ec42f287e3a3-1673485919af1c695c-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14479573778514__96e55e5c-0b72-4487-bfd9-ec42f287e3a3-1673485919af1c695c-0",
+        "template--14479573778514__96e55e5c-0b72-4487-bfd9-ec42f287e3a3-1673485919af1c695c-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "promo-grid": {
+      "type": "promo-grid",
+      "blocks": {
+        "banner": {
+          "type": "banner",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "text": "",
+            "link": "",
+            "label": "",
+            "color_tint": "#e95454",
+            "color_tint_opacity": 8,
+            "framed": false
+          }
+        },
+        "advanced": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Limited time",
+            "heading": "Announce your promotion",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "cta_text1": "Shop This",
+            "cta_link1": "",
+            "cta_text2": "Shop All",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Ring_Main_Focus_Shot.jpg",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "banner",
+        "advanced"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {
+          }
+        },
+        "subcollections": {
+          "type": "subcollections",
+          "disabled": true,
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 3,
+            "rows_per_page": 20,
+            "mobile_flush_grid": true
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "subcollections",
+        "product_grid"
+      ],
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true
+      }
+    },
+    "74dc11d1-f3ed-49b0-8dab-4b4ad9848163": {
+      "type": "rich-text",
+      "blocks": {
+        "67cca518-613c-4125-8f35-889babb16c1c": {
+          "type": "button",
+          "settings": {
+            "link": "https:\/\/patrickadairdesigns.com\/collections\/all-products?filter.p.m.custom.product_type=Ring",
+            "link_text": "Shop All Wedding Bands"
+          }
+        }
+      },
+      "block_order": [
+        "67cca518-613c-4125-8f35-889babb16c1c"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "834e47de-6d43-486f-aed3-1747601a6a4c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14479573778514__834e47de-6d43-486f-aed3-1747601a6a4c-1673473790ec6d6db9-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Looking for Something One-of-a-kind?"
+          }
+        },
+        "template--14479573778514__834e47de-6d43-486f-aed3-1747601a6a4c-1673473790ec6d6db9-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Schedule a design consultation or fill out an inquiry form, and our team will help you design a custom one of one wedding band. <\/p>"
+          }
+        },
+        "524b2cc6-7a8a-4491-b3cd-8a8f8f70ff3d": {
+          "type": "button",
+          "settings": {
+            "link": "https:\/\/patrickadairdesigns.com\/pages\/design-consultation",
+            "link_text": "Talk to a Product Specialist"
+          }
+        }
+      },
+      "block_order": [
+        "template--14479573778514__834e47de-6d43-486f-aed3-1747601a6a4c-1673473790ec6d6db9-0",
+        "template--14479573778514__834e47de-6d43-486f-aed3-1747601a6a4c-1673473790ec6d6db9-1",
+        "524b2cc6-7a8a-4491-b3cd-8a8f8f70ff3d"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "7d09f40a-919a-4742-9876-07faef16b904",
+    "5cc00264-bdfc-4629-82de-0a4ca9789451",
+    "96e55e5c-0b72-4487-bfd9-ec42f287e3a3",
+    "promo-grid",
+    "main-collection",
+    "74dc11d1-f3ed-49b0-8dab-4b4ad9848163",
+    "834e47de-6d43-486f-aed3-1747601a6a4c"
+  ]
+}
