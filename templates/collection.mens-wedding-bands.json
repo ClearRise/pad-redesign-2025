@@ -22,7 +22,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>Every couple is unique. We strive to provide a wide selection of bands suitable for every style and every budget. <br\/><br\/>Feel free to shop by category or keep scrolling to see our current best selling wedding bands. <\/p>"
+            "text": "<p>Every couple is unique. We strive to provide a wide selection of bands suitable for every style and every budget. <br\/><br\/>Feel free to shop by category or keep scrolling to see our current best selling Men's Wedding Bands. <\/p>"
           }
         }
       },
@@ -39,28 +39,6 @@
     "5cc00264-bdfc-4629-82de-0a4ca9789451": {
       "type": "promo-grid",
       "blocks": {
-        "4be0376d-8c07-42cf-9418-c3c7e2f4798c": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "",
-            "cta_text2": "SHOP MEN'S BANDs",
-            "cta_link2": "shopify:\/\/collections\/mens-wedding-bands",
-            "image": "shopify:\/\/shop_images\/Hyper-Ring-2_1.png",
-            "video_url": "",
-            "width": "33",
-            "height": 220,
-            "text_size": 120,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff",
-            "boxed": false,
-            "framed": false
-          }
-        },
         "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-0": {
           "type": "advanced",
           "settings": {
@@ -107,12 +85,11 @@
         }
       },
       "block_order": [
-        "4be0376d-8c07-42cf-9418-c3c7e2f4798c",
         "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-0",
         "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-1"
       ],
       "settings": {
-        "full_width": false,
+        "full_width": true,
         "gutter_size": 10,
         "space_above": false,
         "space_below": false
@@ -124,7 +101,7 @@
         "template--14479573778514__96e55e5c-0b72-4487-bfd9-ec42f287e3a3-1673485919af1c695c-0": {
           "type": "heading",
           "settings": {
-            "title": "Best Selling Wedding Bands"
+            "title": "Men's Wedding Bands"
           }
         },
         "template--14479573778514__96e55e5c-0b72-4487-bfd9-ec42f287e3a3-1673485919af1c695c-1": {
@@ -202,6 +179,7 @@
       "blocks": {
         "collection_description": {
           "type": "collection_description",
+          "disabled": true,
           "settings": {
           }
         },
