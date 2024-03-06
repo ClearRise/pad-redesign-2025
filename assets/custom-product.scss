@@ -72,4 +72,19 @@
       }
     }
   }
+  &.custom_gift_block {
+    ._b_upsell-product {
+      &.inline-box {
+        flex-wrap: nowrap;
+        ._b_upsell-product-image {
+          width: fit-content;
+        }
+      }
+      ._b_upsell-product-image {
+        img {
+          max-width: 100px;
+        }
+      }
+    }
+  }
 }
