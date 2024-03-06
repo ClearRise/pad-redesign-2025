@@ -173,7 +173,7 @@
 
                         {% if settings.product1-img1 %}
                           <div  class="_b_upsell-product-inner _b_gift-product show" >
-                            <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border">
+                            <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border {% if settings.product1-img2 == blank %}inline-box{% endif %}">
                               <div class="_b_upsell-product-image" style="margin-right: 5px;">
                                 <img class="dci-image" src="{{ settings.product1-img1 | img_url: '200x' }}" alt="{{ settings.product1-title | escape }}">     
                               </div>
@@ -186,19 +186,19 @@
                                 <div class="_b_product-title-link">
                                     <strong class="dci-title">{{ settings.product1-title}}</strong>
                                 </div>
-                              <div class="_b_cart__item-sub">
-                                <div >
-                                    <p class="_b_txt">{{ settings.product1-text}}</p>
-                                </div>
-                              </div>    
-                          </div>
+                                <div class="_b_cart__item-sub">
+                                  <div >
+                                      <p class="_b_txt">{{ settings.product1-text}}</p>
+                                  </div>
+                                </div>    
+                              </div>
                             </div>
                           </div>
                         {% endif %}
               
                         {% if settings.product2-img1 %}
                           <div  class="_b_upsell-product-inner _b_gift-product show">
-                            <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border">
+                            <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border {% if settings.product2-img2 == blank %}inline-box{% endif %}">
                               <div class="_b_upsell-product-image" style="margin-right: 5px;">
                                 <img class="dci-image" src="{{ settings.product2-img1 | img_url: '200x' }}" alt="{{ settings.product2-title | escape }}">     
                               </div>
@@ -223,7 +223,7 @@
               
                          {% if settings.product3-img1 %}
                           <div  class="_b_upsell-product-inner _b_gift-product show">
-                            <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border">
+                            <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border {% if settings.product3-img2 == blank %}inline-box{% endif %}">
                               <div class="_b_upsell-product-image" style="margin-right: 5px;">
                                 <img class="dci-image" src="{{ settings.product3-img1 | img_url: '200x' }}" alt="{{ settings.product3-title | escape }}">     
                               </div>
@@ -307,7 +307,7 @@
         
                                 {% if settings.product1-img1 %}
                                   <div  class="_b_upsell-product-inner _b_gift-product show" >
-                                    <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border">
+                                    <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border {% if settings.product1-img2 == blank %}inline-box{% endif %}">
                                       <div class="_b_upsell-product-image" style="margin-right: 5px;">
                                         <img class="dci-image" src="{{ settings.product1-img1 | img_url: '200x' }}" alt="{{ settings.product1-title | escape }}">     
                                       </div>
@@ -332,7 +332,7 @@
                       
                                 {% if settings.product2-img1 %}
                                   <div  class="_b_upsell-product-inner _b_gift-product show">
-                                    <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border">
+                                    <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border  {% if settings.product2-img2 == blank %}inline-box{% endif %}">
                                       <div class="_b_upsell-product-image" style="margin-right: 5px;">
                                         <img class="dci-image" src="{{ settings.product2-img1 | img_url: '200x' }}" alt="{{ settings.product2-title | escape }}">     
                                       </div>
@@ -357,7 +357,7 @@
                       
                                  {% if settings.product3-img1 %}
                                   <div  class="_b_upsell-product-inner _b_gift-product show">
-                                    <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border">
+                                    <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border {% if settings.product3-img2 == blank %}inline-box{% endif %}">
                                       <div class="_b_upsell-product-image" style="margin-right: 5px;">
                                         <img class="dci-image" src="{{ settings.product3-img1 | img_url: '200x' }}" alt="{{ settings.product3-title | escape }}">     
                                       </div>
