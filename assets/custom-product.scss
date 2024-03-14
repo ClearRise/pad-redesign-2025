@@ -53,6 +53,12 @@
         &._b_custom_border {
           border: none!important;
         }
+        &.inline-box {
+          flex-wrap: nowrap;
+          ._b_upsell-product-image {
+            width: fit-content;
+          }
+        }
         ._b_upsell-product-image {
           line-height: 0;
         }
