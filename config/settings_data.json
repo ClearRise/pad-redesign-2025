@@ -177,10 +177,9 @@
           },
           "announcement_FkMJza": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "",
-              "link_text": "FREE GLOW BURL RING ON ORDERS $195+",
+              "link_text": "FREE MYSTERY BOX ($200-600 Value) on Orders $195+",
               "link": "shopify:\/\/collections\/all-products"
             }
           }
