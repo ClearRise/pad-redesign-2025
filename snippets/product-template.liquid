@@ -378,7 +378,7 @@
                 
                   
                   {%- when 'variant_picker' -%}
-                    <div class="product-block custom-product-blocK" {{ block.shopify_attributes }}>
+                    <div class="product-block custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }}>
                       {%- unless product.has_only_default_variant -%}
                         {%- for option in product.options_with_values -%}
                           {%- liquid
