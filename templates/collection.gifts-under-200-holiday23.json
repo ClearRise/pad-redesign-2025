@@ -6,11 +6,11 @@
         "image_8TFpeg": {
           "type": "image",
           "settings": {
-            "top_subheading": "Valentine's Sale",
+            "top_subheading": "Presidents Day Sale",
             "top_subheading_color": "",
             "title": "<strong>Gifts under $200<\/strong>",
             "special_title_color": "",
-            "subheading": "<h2><strong>Glowstone Collection<\/strong><\/h2><p>Rings as Unique as You Are<\/p>",
+            "subheading": "<h2><\/h2><p>Rings as Unique as You Are<\/p>",
             "special_text_color": "",
             "link": "",
             "link_text": "",
@@ -18,18 +18,44 @@
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/Valentine_s_Day_V1_71e5df64-a3aa-4dae-a2e9-cbd42dc4cf75.png",
-            "image_mobile": "shopify:\/\/shop_images\/Glowstone_Collection.png",
+            "image": "shopify:\/\/shop_images\/1231213123.png",
+            "image_mobile": "shopify:\/\/shop_images\/PRESIDAY_mobile_COLLECTION2_1.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
             "title_size": 60,
             "base_text_size": 24
           }
+        },
+        "image_7CtE4e": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/worth_200_desktop_collection_banner_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/fixed.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24
+          }
         }
       },
       "block_order": [
-        "image_8TFpeg"
+        "image_8TFpeg",
+        "image_7CtE4e"
       ],
       "settings": {
         "use_img_banner": true,

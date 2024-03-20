@@ -58,6 +58,23 @@
             "gift_included": ""
           }
         },
+        "pre_free_gifts_6td8NK": {
+          "type": "pre_free_gifts",
+          "settings": {
+            "gift_box_title": "INCLUDED IN THIS KIT:",
+            "gift_included": "FREE",
+            "background": "#19bca6",
+            "color": "#ffffff",
+            "first_bg": "#d3dbe2",
+            "first_color": "#000000",
+            "second_bg": "#ffffff",
+            "second_color": "#000000",
+            "third_bg": "#ffffff",
+            "third_color": "#000000",
+            "gift_bg": "#ffffff",
+            "gift_text": "#000000"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -193,6 +210,7 @@
         "inventory_status",
         "engraving_NnfXYR",
         "8b562356-ae61-4e76-9d41-a70561a3c483",
+        "pre_free_gifts_6td8NK",
         "buy_buttons",
         "8a3bfed3-a948-43a2-a499-59b043673565",
         "07bdb91c-b9ed-4326-8127-0098675d0092",

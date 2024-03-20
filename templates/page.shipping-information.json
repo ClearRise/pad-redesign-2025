@@ -4,6 +4,7 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
+        "content_display": true
       }
     },
     "6403731b-871d-448b-b44f-86ebc0092e9c": {
@@ -48,21 +49,21 @@
           "type": "question",
           "settings": {
             "title": "Glowstone Rings",
-            "text": "<p>We are currently experiencing longer than normal production timelines for our Glowstone Rings due to the Holiday Season and order volume. Glowstone rings are currently taking approx. <strong>8 weeks to ship. <\/strong><\/p><p>The <a href=\"https:\/\/patrickadairdesigns.com\/products\/star-dust-ring\"><span style=\"text-decoration:underline\"><strong>Star Dust™ Ring<\/strong><\/span><\/a> is shipping in <strong>1 business DAY<\/strong>.<\/p>"
+            "text": "<p>We are currently experiencing longer than normal production timelines for our Glowstone Rings due to the Holiday Season and order volume. Glowstone rings are currently taking approx. <strong>8-10 weeks to ship.<\/strong><\/p><p>The following rings are shipping in <strong>1-2 weeks:<\/strong><\/p><ul><li>Star Dust Ring<\/li><li>Radiant Star Dust Ring<\/li><li>Star Dust Ring on Tungsten<\/li><li>Star Dust Ring on Black Ceramic<\/li><li>Star Dust Ring on White Ceramic<\/li><li>Star Dust Stackable Ring<\/li><li>Hexagon Star Dust Ring<\/li><li>Hexagon Lavender Star Dust Ring<\/li><li>Lavender Star Dust Ring<\/li><li>Matching Star Dust Wedding Ring Set on Tungsten<\/li><\/ul><p>The following rings are shipping in <strong>4 weeks:<\/strong><\/p><ul><li>Black Fire Opal Glowstone Ring<\/li><li>Radiant Pearl Opal Glowstone Ring<\/li><li>24K Gold Leaf Ring on Black Ceramic<\/li><li>Black Emerald Opal Glowstone Ring<\/li><li>Matching Black Emerald Opal Glowstone Wedding Ring Set<\/li><li>Crimson Flare Glowstone Ring<\/li><li>Dragon Scale Opal Glowstone Ring<\/li><li>The Winter's Howl | Tungsten Glowstone Ring<\/li><\/ul>"
           }
         },
         "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2": {
           "type": "question",
           "settings": {
             "title": "Meteorite Rings",
-            "text": "<p>Any ring containing solid meteorite is currently taking approx. <strong>2-6 weeks to ship<\/strong>.<\/p>"
+            "text": "<p>Any ring containing solid meteorite is currently taking approx.<strong> 6-8 weeks to ship<\/strong>.<\/p>"
           }
         },
         "9edaa1a8-e6fc-401d-be5e-7b9412d62dc0": {
           "type": "question",
           "settings": {
             "title": "Gold Rings",
-            "text": "<p>Any ring containing solid gold is currently taking approx <strong>4-6 weeks to ship<\/strong>.<\/p>"
+            "text": "<p>Any ring containing solid gold is currently taking approx <strong>6-8 weeks to ship<\/strong>.<\/p>"
           }
         },
         "8bd5b863-fcb1-43ae-bde3-7333f20f183b": {
@@ -76,7 +77,7 @@
           "type": "question",
           "settings": {
             "title": "Opal Rings",
-            "text": "<p>All solid opal rings are currently taking approx. <strong>4-6 weeks to ship.<\/strong><\/p>"
+            "text": "<p>All solid opal rings are currently taking approx. <strong>6-8 weeks to ship.<\/strong><\/p>"
           }
         },
         "56c40efd-9201-4a79-86d6-f829d8584f99": {
