@@ -177,6 +177,7 @@
           },
           "announcement_FkMJza": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "",
               "link_text": "FREE MYSTERY BOX ($200-600 Value) on Orders $195+",
