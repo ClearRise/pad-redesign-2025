@@ -105,84 +105,6 @@ $(document).ready(function () {
       }
     }
   });
-
-  
-  // $(document).on("click", ".cart__remove a", function (event) {
-  //   event.preventDefault();
-  //   var $this = $(this);
-  //   var $remove_url = $(this).attr("href");
-  //   var $productId = '';
-
-  //    if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
-       
-  //    }
-  //    else if ($(this).parents(".cart__item").find(".engraving_p").val() == "true") {
-  //      $productId = engravingProductID;
-  //    }
-  //    else if ($(this).parents(".cart__item").find(".Protection_p").val() == "true") {
-  //      console.log('inside');
-  //      $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
-  //    }
-  //   else {
-  //     $productId = '';
-  //   }
-
-    
-  //   if ($productId != '') {
-
-  //     console.log($productId);
-  //     // Get the current cart items
-  //     $.ajax({
-  //       type: "GET",
-  //       url: "/cart.js",
-  //       dataType: "json",
-  //       success: function (cartData) {
-
-  //         console.log(cartData);
-  //         // Find the item with the engraving product ID in the cart
-  //         var itemToUpdate = cartData.items.find(function (item) {
-  //           return item.variant_id === parseInt($productId);
-  //         });
-
-  //         console.log(itemToUpdate);
-          
-  //         if (itemToUpdate) {
-  //           // Decrease the quantity of the engraving product by 1
-  //           var newQuantity = itemToUpdate.quantity - 1;
-
-  //           // Make an AJAX request to update the quantity of the engraving product
-  //           $.ajax({
-  //             type: "POST",
-  //             url: "/cart/change.js",
-  //             data: {
-  //               quantity: newQuantity,
-  //               id: itemToUpdate.id,
-  //             },
-  //             dataType: "json",
-  //             success: function (data) {
-  //               window.location.href = $remove_url;
-  //             },
-  //             error: function (error) {
-  //               Swal.fire({
-  //                 icon: "error",
-  //                 title: "Oops...",
-  //                 text: "Error!",
-  //               });
-  //             },
-  //           });
-  //         }
-  //       },
-  //       error: function (error) {
-  //         // Handle error if needed
-  //         console.error("Error fetching cart data:", error);
-  //       },
-  //     });
-  //   } else {
-  //     window.location.href = $remove_url;
-  //   }
-  // });
-
- 
   
   $(document).on("click", ".add-engraving-inline-button", function (e) {
     e.preventDefault();
@@ -1140,114 +1062,6 @@ function remove_auto_gift($prod_id){
           document.dispatchEvent(new CustomEvent('cart:build'));
       });
   }
-  
-//
-
-
-
-
-  
-
-  document.addEventListener('DOMContentLoaded', function () {
-  document.addEventListener('cart:quantity.cart-page', function (evt) {
-    
-    var key = evt.detail[0];
-    var qty = evt.detail[1];
-    var el = evt.detail[2];
-    var quantityInput = el.querySelector('.js-qty__num');
-    var prevQty = parseInt(quantityInput.getAttribute('value'));
-    if(prevQty > qty) {
-      var action = 'minus';
-    }
-    else {
-      var action = 'plus';
-    }
-    var comp_qty = parseInt(qty - prevQty);
-
-    updatedgCartUpsell();
-  
-    var dataEngravingValue = quantityInput.getAttribute('data-engraving');
-    var dataProtectionValue = quantityInput.getAttribute('data-protection');
-  
-    if (dataEngravingValue && dataProtectionValue) {
-      updateOtherProductQuantity(qty, dataEngravingValue, dataProtectionValue, action, comp_qty);
-    }
-    else if (dataEngravingValue) {
-      updateOtherProductQuantity(qty, dataEngravingValue, false, action, comp_qty);
-    }
-    else if (dataProtectionValue) {
-      updateOtherProductQuantity(qty, false, dataProtectionValue, action, comp_qty);
-    }
-  });
-
-  // Function to update the quantity of the other product
-  function updateOtherProductQuantity(quantity, dataEngravingValue, dataProtectionValue, action, comp_qty) {
-    var requestData = {
-      updates: {}
-    };
-  
-    $('.overlay').show();
-  
-    // Fetch current cart information
-    $.ajax({
-      type: 'GET',
-      url: '/cart.js',
-      dataType: 'json',
-      success: function (cartData) {
-        // Get current quantities of EngravingProductId and ProtectionProductId
-        var engravingProduct = cartData.items.find(item => item.variant_id == dataEngravingValue);
-        var protectionProduct = cartData.items.find(item => item.variant_id == dataProtectionValue);
-         console.log(protectionProduct);
-        if (engravingProduct) {
-          if(action == 'minus'){
-            requestData.updates[dataEngravingValue] = engravingProduct.quantity + comp_qty;
-            requestData.updates[dataEngravingValue].properties = engravingProduct.properties;
-          }
-          else {
-            requestData.updates[dataEngravingValue] = engravingProduct.quantity + comp_qty;
-            requestData.updates[dataEngravingValue].properties = engravingProduct.properties;
-          }
-        }
-        
-        if (protectionProduct) {
-          if(action == 'minus'){
-            requestData.updates[dataProtectionValue] = protectionProduct.quantity + comp_qty;
-            requestData.updates[dataProtectionValue].properties = protectionProduct.properties;
-          }
-          else {
-            requestData.updates[dataProtectionValue] = protectionProduct.quantity + comp_qty;
-            requestData.updates[dataProtectionValue].properties = protectionProduct.properties;
-          }
-        }         
-        
-        // Update cart quantities
-        setTimeout(function(){
-          $.ajax({
-            type: 'POST',
-            url: '/cart/update.js',
-            data: requestData,
-            dataType: 'json',
-            success: function (data) {
-              document.dispatchEvent(new CustomEvent('ajaxProduct:added'));
-              document.dispatchEvent(new CustomEvent('cart:build'));
-            //  window.location.reload();
-            //  document.dispatchEvent(new CustomEvent("cart:build"));
-              $('.overlay').hide();
-            },
-            error: function (error) {
-              // Handle error
-              console.error('Error updating other product quantity:', error);
-            }
-          });
-        }, 1500);
-      },
-      error: function (error) {
-        // Handle error
-        console.error('Error fetching cart data:', error);
-      }
-    });
-  }
-});
 
 
 
@@ -1256,9 +1070,6 @@ function remove_auto_gift($prod_id){
   
     event.preventDefault();
     var $this = $(this);
-    // var $remove_url = $(this).attr("href");
-    // var $productId = '';
-    // var itemQuantity = $(this).parents(".cart__item").attr('data-quantity');
     var engravingProductID = theme.engraving.engraving_var_id;
     var $this = $(this);
     var $remove_url = $(this).attr("href");
@@ -1280,17 +1091,7 @@ function remove_auto_gift($prod_id){
      }
     else {       
        remove_all($remove_url);
-    } 
-    
-    
-//  $('.overlay').show();   
- //  console.log('testing delete');
-      
-    // setTimeout(function(){
-    //   $('.overlay').hide();
-    //   window.location.href = $remove_url;
-    // }, 2000);
-   
+    }    
   });
 
 
@@ -1305,11 +1106,12 @@ function bothRemoveEngrageShippingItems($productId, engraveId, $remove_url, item
           success: function (cartData) {
             
             console.log(cartData);
+            console.log($productId);
             // Find the item with the engraving product ID in the cart
             var itemToUpdate = cartData.items.find(function (item) {
               return item.variant_id === parseInt($productId);
             });
-            
+            console.log(itemToUpdate);
             if (itemToUpdate) {
               // Decrease the quantity of the engraving product by 1
               var newQuantity = itemToUpdate.quantity - 1*itemQuantity;
@@ -1373,7 +1175,7 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
             return item.variant_id === parseInt($productId);
           });
           
-          if (itemToUpdate) {
+          if (itemToUpdate != undefined) {
             // Decrease the quantity of the engraving product by 1
             var newQuantity = itemToUpdate.quantity - 1*itemQuantity;
 
@@ -1399,6 +1201,8 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
                 });
               },
             });
+          } else {
+            remove_all($remove_url);
           }
         },
         error: function (error) {
