@@ -1450,6 +1450,12 @@ button.upsell-add-to-cart.disabled{
     font-weight: 600;
 }
 
+.grid-product__tag--sale.display-price {
+  .igSavingsPercentage {
+    display: none!important;
+  }
+}
+
 .custom_gift_txt{
     font-size: 14px;
     text-align: left;
