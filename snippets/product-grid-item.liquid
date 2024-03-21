@@ -85,17 +85,13 @@ if tag contains '_label_'
         {% assign saved_percent = saved_percent | plus: 0 %}
         {% assign saved_amount_cents = product.compare_at_price | minus: product.price | plus: 0 %}
         {% if saved_amount_cents > 0 %}
-          <div class="grid-product__tag grid-product__tag--sale igSavingsPercentage"  data-product-id="{{ product.id }}">
-            {% if saved_amount_value > 10000 %}
-              <div class="igSavingsPrice" style="display: block !important;">
-                {{ saved_amount }} Off
-              </div>
-            {% else %}
-              <div class="igSavingsPercentage">
+          <div class="grid-product__tag grid-product__tag--sale igSavingsPercentage {% if saved_amount_value > 10000 %}{% else %}{% endif %}"  data-product-id="{{ product.id }}">
+            <div class="igSavingsPrice">
+              {{ saved_amount }} Off
+            </div>
+            <div class="igSavingsPercentage">
               {{ saved_percent }}% Off
-              </div>
-            {% endif %} 
-            <span class="hidden">{{saved_percent}}</span> 
+            </div>
           </div>
         {%- endif -%}    
       {%- endif -%}
