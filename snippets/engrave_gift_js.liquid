@@ -606,10 +606,10 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
       {% assign second_gift_product_id = second_gift_product.id %}
       {% assign second_gift_product_id_var = second_gift_product.selected_or_first_available_variant.id %}
   
-      var first_gift_product = {{ first_gift_product_id }};
-      var second_gift_product = {{ second_gift_product_id }};
-      var first_gift_product_var = {{ first_gift_product_id_var }};
-      var second_gift_product_var = {{ second_gift_product_id_var }};
+      var first_gift_product = "{{ first_gift_product_id }}";
+      var second_gift_product = "{{ second_gift_product_id }}";
+      var first_gift_product_var = "{{ first_gift_product_id_var }}";
+      var second_gift_product_var = "{{ second_gift_product_id_var }}";
 
   {% endif %}  
 
