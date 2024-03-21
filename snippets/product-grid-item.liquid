@@ -86,10 +86,10 @@ if tag contains '_label_'
         {% assign saved_amount_cents = product.compare_at_price | minus: product.price | plus: 0 %}
         {% if saved_amount_cents > 0 %}
           <div class="grid-product__tag grid-product__tag--sale igSavingsPercentage {% if saved_amount_value > 10000 %}display-price{% else %}display-percent{% endif %}"  data-product-id="{{ product.id }}">
-            <div class="igSavingsPrice">
+            <div class="price">
               {{ saved_amount }} Off
             </div>
-            <div class="igSavingsPercentage">
+            <div class="percent">
               {{ saved_percent }}% Off
             </div>
           </div>
