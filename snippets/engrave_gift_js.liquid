@@ -638,10 +638,10 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
       {% assign thirdtier_second_gift_product_id = thirdtier_second_gift_product.id %}
       {% assign thirdtier_second_gift_product_id_var = thirdtier_second_gift_product.selected_or_first_available_variant.id %}
     
-      var thirdtier_first_gift_product = {{ thirdtier_first_gift_product_id }};
-      var thirdtier_second_gift_product = {{ thirdtier_second_gift_product_id }};
-      var thirdtier_first_gift_product_var = {{ thirdtier_first_gift_product_id_var }};
-      var thirdtier_second_gift_product_var = {{ thirdtier_second_gift_product_id_var }};
+      var thirdtier_first_gift_product = "{{ thirdtier_first_gift_product_id }}";
+      var thirdtier_second_gift_product = "{{ thirdtier_second_gift_product_id }}";
+      var thirdtier_first_gift_product_var = "{{ thirdtier_first_gift_product_id_var }}";
+      var thirdtier_second_gift_product_var = "{{ thirdtier_second_gift_product_id_var }}";
   
     {% endif %}
       
