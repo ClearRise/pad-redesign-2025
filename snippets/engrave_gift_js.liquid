@@ -643,7 +643,21 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
     },
   });
 }
+
+
+      var first_gift_product = '';
+      var second_gift_product = '';
+      var first_gift_product_var = '';
+      var second_gift_product_var = '';
+      var secondtier_first_gift_product = '';
+      var secondtier_second_gift_product = '';
+      var secondtier_first_gift_product_var = '';
+      var secondtier_second_gift_product_var = '';
   
+      var thirdtier_first_gift_product = '';
+      var thirdtier_second_gift_product = '';
+      var thirdtier_first_gift_product_var = '';
+      var thirdtier_second_gift_product_var = '';
   
   {% if settings.show_gift_box %}    
       {% assign first_gift_product = settings.product-handle-1 %}
@@ -657,6 +671,7 @@ function removeProtectionProduct(productId, itemKey, itemLine, itemQuantity) {
       var second_gift_product = {{ second_gift_product_id }};
       var first_gift_product_var = {{ first_gift_product_id_var }};
       var second_gift_product_var = {{ second_gift_product_id_var }};
+
   {% endif %}  
 
   {% if settings.second_show_gift_box %}
