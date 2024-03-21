@@ -1656,14 +1656,12 @@ lazySizesConfig.expFactor = 4;
       onSubmit: function(evt) {
         console.log('yesss');
         this.submitBtn.classList.add(classes.btnLoading);
-        //$('.add-to-cart-loader-cart').show();
         if (config.requiresTerms) {
           if (this.termsCheckbox.checked) {
             // continue to checkout
           } else {
             alert(theme.strings.cartTermsConfirmation);
             this.submitBtn.classList.remove(classes.btnLoading)
-            //$('.add-to-cart-loader-cart').hide();
             evt.preventDefault();
             return false;
           }
