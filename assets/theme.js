@@ -1663,7 +1663,7 @@ lazySizesConfig.expFactor = 4;
           } else {
             alert(theme.strings.cartTermsConfirmation);
             this.submitBtn.classList.remove(classes.btnLoading)
-             $('.add-to-cart-loader-cart').hide();
+            //$('.add-to-cart-loader-cart').hide();
             evt.preventDefault();
             return false;
           }
