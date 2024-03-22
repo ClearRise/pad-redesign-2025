@@ -27,7 +27,8 @@
             "variant_labels": true,
             "picker_type": "dropdown",
             "color_swatches": false,
-            "custom_variant_comment": false
+            "custom_variant_comment": false,
+            "collapse_options": false
           }
         },
         "inventory_status": {
@@ -45,6 +46,7 @@
         },
         "d2bfdc2f-2cae-43b1-91ed-390419b7a7d8": {
           "type": "free_gifts",
+          "disabled": true,
           "settings": {
             "gift_box_title": "",
             "gift_included": ""
