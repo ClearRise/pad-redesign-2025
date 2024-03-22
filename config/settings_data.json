@@ -178,8 +178,8 @@
           "announcement_FkMJza": {
             "type": "announcement",
             "settings": {
-              "text": "BUY ONE GET ONE FREE",
-              "link_text": "SHOP NOW",
+              "text": "BUY ONE GET ONE FREE | LImited Time",
+              "link_text": "",
               "link": "shopify:\/\/collections\/all-products"
             }
           }
