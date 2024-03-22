@@ -163,9 +163,9 @@
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
+            "subheading": "Buy one get one free",
             "heading": "Meteorite Rings",
-            "textarea": "",
+            "textarea": "<u> SHOP NOW <\/u>",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/meteorite-rings",
             "cta_text2": "",
@@ -185,9 +185,9 @@
         "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
+            "subheading": "Buy one get one free",
             "heading": "GLOWSTONE SERIES",
-            "textarea": "",
+            "textarea": "<u> SHOP NOW <\/u>",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/the-glowstone-series",
             "cta_text2": "",
@@ -207,9 +207,9 @@
         "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
+            "subheading": "Buy one get one free",
             "heading": "WEDDING BANDS",
-            "textarea": "",
+            "textarea": "<u> SHOP NOW <\/u>",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/best-selling-wedding-bands-v1",
             "cta_text2": "",
@@ -229,10 +229,10 @@
         "2e50058a-8bc8-46f4-880f-08ed48490db6": {
           "type": "advanced",
           "settings": {
-            "subheading": "Limited Time Only",
-            "heading": "Buy One Get One Free Sitewide",
-            "textarea": "Add two items to your cart and get the cheaper one for FREE",
-            "cta_text1": "SHOP NOW",
+            "subheading": "SPRING SPECIAL",
+            "heading": "SHOP THE SALE",
+            "textarea": "BUY ONE GET ONE FREE",
+            "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/all-products",
             "cta_text2": "",
             "cta_link2": "",
