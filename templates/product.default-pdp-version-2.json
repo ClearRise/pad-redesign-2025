@@ -76,7 +76,6 @@
         },
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
           "type": "tab",
-          "disabled": true,
           "settings": {
             "title": "Premium Protection Plan",
             "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",

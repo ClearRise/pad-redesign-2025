@@ -231,7 +231,7 @@
         "heading_NxTmtK": {
           "type": "heading",
           "settings": {
-            "title": "A RING SHOULD BE MORE THAN JUST JEWELRY:"
+            "title": "MORE THAN JUST A RING:"
           }
         },
         "text_YrxFDm": {
@@ -322,6 +322,28 @@
             "framed": false
           }
         },
+        "advanced_QDK7nA": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "GLOWSTONE™",
+            "textarea": "Real gemstones and other exotic materials combined to look stunning both day and night.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/edited.png",
+            "video_url": "",
+            "width": "100",
+            "height": 600,
+            "text_size": 120,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
         "advanced_eReELk": {
           "type": "advanced",
           "settings": {
@@ -335,7 +357,7 @@
             "image": "shopify:\/\/shop_images\/BOGO_1ad22304-9dc6-4a8c-aa06-7960583eb1a0.png",
             "video_url": "",
             "width": "100",
-            "height": 700,
+            "height": 600,
             "text_size": 120,
             "text_align": "vertical-bottom horizontal-center",
             "focal_point": "center",
@@ -349,6 +371,7 @@
         "advanced_nqeHQA",
         "advanced_hEMdLL",
         "advanced_TwEqdf",
+        "advanced_QDK7nA",
         "advanced_eReELk"
       ],
       "settings": {
