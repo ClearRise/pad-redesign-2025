@@ -225,38 +225,31 @@
       "settings": {
       }
     },
-    "rich_text_zd3AyU": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_NxTmtK": {
-          "type": "heading",
-          "settings": {
-            "title": "MORE THAN JUST A RING:"
-          }
-        },
-        "text_YrxFDm": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "enlarge_text": false,
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_NxTmtK",
-        "text_YrxFDm"
-      ],
-      "disabled": true,
-      "settings": {
-        "align_text": "left",
-        "narrow_column": false,
-        "divider": false
-      }
-    },
     "promo_grid_QUweUP": {
       "type": "promo-grid",
       "blocks": {
+        "advanced_6yRXJg": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "DESIGNED BY YOU  CRAFTED BY US",
+            "textarea": "You design the ring of <br> your dreams, and we'll <br>make it come to life.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/prod-img-1.jpg",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
         "advanced_nqeHQA": {
           "type": "advanced",
           "settings": {
@@ -366,37 +359,15 @@
             "boxed": false,
             "framed": false
           }
-        },
-        "advanced_6yRXJg": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "DESIGNED BY YOU <br> CRAFTED BY US",
-            "textarea": "You design the ring of your dreams, and we'll make it come to life.",
-            "cta_text1": "",
-            "cta_link1": "",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/carbon-fiber-and-meteorite-ring-3.jpg",
-            "video_url": "",
-            "width": "100",
-            "height": 660,
-            "text_size": 120,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
         }
       },
       "block_order": [
+        "advanced_6yRXJg",
         "advanced_nqeHQA",
         "advanced_hEMdLL",
         "advanced_TwEqdf",
         "advanced_QDK7nA",
-        "advanced_eReELk",
-        "advanced_6yRXJg"
+        "advanced_eReELk"
       ],
       "settings": {
         "full_width": false,
@@ -513,7 +484,6 @@
   "order": [
     "main",
     "replo_trust_icons_white_backg_AnTLaL",
-    "rich_text_zd3AyU",
     "promo_grid_QUweUP",
     "product_img_with_txt",
     "product_how_to_work",
