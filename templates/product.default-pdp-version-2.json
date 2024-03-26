@@ -14,18 +14,6 @@
             "text": "{{ product.metafields.custom.discount_text.value }}"
           }
         },
-        "71160726-c2e7-4e18-bcb9-e14abb7b42b0": {
-          "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "settings": {
-            "data_key": "credit-promotion-badge",
-            "locale_option": "geolocation",
-            "locale_fallback": "",
-            "theme": "light",
-            "topPadding": "0",
-            "bottomPadding": "0",
-            "messagePrefix": ""
-          }
-        },
         "separator": {
           "type": "separator",
           "disabled": true,
@@ -72,6 +60,18 @@
             "enable_tooltip": false,
             "tooltip_header": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>",
             "tooltip_content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>"
+          }
+        },
+        "71160726-c2e7-4e18-bcb9-e14abb7b42b0": {
+          "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-auto-size",
+            "locale_option": "geolocation",
+            "locale_fallback": "",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "10",
+            "messagePrefix": ""
           }
         },
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
@@ -184,13 +184,13 @@
       "block_order": [
         "price",
         "94c49419-9d53-4cfe-8c63-edaf9a145c94",
-        "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
         "separator",
         "variant_picker",
         "inventory_status",
         "engraving_YpGMkM",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
         "buy_buttons",
+        "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
         "7621462d-9edd-432d-a525-b5bcbfe07deb",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
@@ -218,6 +218,7 @@
     },
     "product_img_with_txt": {
       "type": "product_img_with_txt",
+      "disabled": true,
       "settings": {
         "sub_title1": "Handcrafted in the USA",
         "image_1": "shopify:\/\/shop_images\/img2.jpg",
@@ -236,6 +237,13 @@
     "product_how_to_work": {
       "type": "product_how_to_work",
       "blocks": {
+        "text_ArBeaC": {
+          "type": "text",
+          "settings": {
+            "sub_title": "sub title",
+            "text": "item"
+          }
+        },
         "93e02dd1-0098-4d81-bb47-a37e47aeb0c1": {
           "type": "text",
           "settings": {
@@ -261,44 +269,19 @@
         }
       },
       "block_order": [
+        "text_ArBeaC",
         "93e02dd1-0098-4d81-bb47-a37e47aeb0c1",
         "0669e6bd-9d26-4ae4-b380-ce53681e452e",
         "ba8bc2a1-afb2-4a08-8837-4ae3795928a4"
       ],
+      "disabled": true,
       "settings": {
-        "enable": true,
+        "enable": false,
         "title": "Find Your Ring Size",
         "title_size": 21,
         "bg_color": "#000000",
         "padding_top": 5,
         "padding_bottom": 5
-      }
-    },
-    "1646853684b754aedd": {
-      "type": "rich-text",
-      "blocks": {
-        "164685368492299ea2-0": {
-          "type": "heading",
-          "settings": {
-            "title": "The Unrivaled Process"
-          }
-        },
-        "164685368492299ea2-1": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>{{ product.metafields.global.unrivaled_process | metafield_tag }}<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "164685368492299ea2-0",
-        "164685368492299ea2-1"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
       }
     },
     "sub": {
@@ -342,7 +325,6 @@
     "main",
     "product_img_with_txt",
     "product_how_to_work",
-    "1646853684b754aedd",
     "sub",
     "product-recommendations",
     "recently-viewed",
