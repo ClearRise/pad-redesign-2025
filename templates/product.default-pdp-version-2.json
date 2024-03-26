@@ -216,8 +216,8 @@
         "product_video_style": "muted"
       }
     },
-    "replo_trust_icons_a6WR4X": {
-      "type": "replo-trust-icons",
+    "replo_trust_icons_white_backg_AnTLaL": {
+      "type": "replo-trust-icons-white-backg",
       "settings": {
       }
     },
@@ -461,7 +461,7 @@
   },
   "order": [
     "main",
-    "replo_trust_icons_a6WR4X",
+    "replo_trust_icons_white_backg_AnTLaL",
     "rich_text_zd3AyU",
     "promo_grid_QUweUP",
     "product_img_with_txt",
