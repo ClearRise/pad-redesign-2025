@@ -136,7 +136,7 @@
           "type": "tab",
           "settings": {
             "title": "Lifetime Warranty",
-            "content": "<p>{{ product.metafields.global.lifetime_warranty | metafield_tag }}<\/p>",
+            "content": "<p>Each Women's Wedding Band comes with a <a href=\"https:\/\/patrickadairdesigns.com\/pages\/limited-lifetime-warranty-and-return-policy\" target=\"_blank\" title=\"https:\/\/patrickadairdesigns.com\/pages\/limited-lifetime-warranty-and-return-policy\"><strong>limited lifetime warranty<\/strong><\/a>. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
