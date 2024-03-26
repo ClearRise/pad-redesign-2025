@@ -220,18 +220,13 @@
         "product_video_style": "muted"
       }
     },
-    "replo_trust_icons_white_backg_AnTLaL": {
-      "type": "replo-trust-icons-white-backg",
-      "settings": {
-      }
-    },
     "rich_text_zd3AyU": {
       "type": "rich-text",
       "blocks": {
         "heading_NxTmtK": {
           "type": "heading",
           "settings": {
-            "title": "MORE THAN JUST A RING:"
+            "title": "MORE THAN JUST A RING"
           }
         },
         "text_YrxFDm": {
@@ -247,10 +242,16 @@
         "heading_NxTmtK",
         "text_YrxFDm"
       ],
+      "disabled": true,
       "settings": {
-        "align_text": "left",
+        "align_text": "center",
         "narrow_column": false,
         "divider": false
+      }
+    },
+    "replo_trust_icons_white_backg_AnTLaL": {
+      "type": "replo-trust-icons-white-backg",
+      "settings": {
       }
     },
     "promo_grid_QUweUP": {
@@ -465,8 +466,8 @@
   },
   "order": [
     "main",
-    "replo_trust_icons_white_backg_AnTLaL",
     "rich_text_zd3AyU",
+    "replo_trust_icons_white_backg_AnTLaL",
     "promo_grid_QUweUP",
     "product_img_with_txt",
     "product_how_to_work",
