@@ -39,7 +39,8 @@
             "variant_labels": true,
             "picker_type": "dropdown",
             "color_swatches": false,
-            "custom_variant_comment": false
+            "custom_variant_comment": false,
+            "collapse_options": false
           }
         },
         "inventory_status": {
@@ -125,7 +126,7 @@
           "type": "tab",
           "settings": {
             "title": "Sizing Information",
-            "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
+            "content": "<p>Each Women's Wedding Band is made with real precious metals and is custom made for each order. We want to ensure you are ordering the correct size and each order will come with a complimentary sizer to confirm your size before we begin production on your ring. This ring is NOT eligible for a free size exchange. If you are needing a new size post-delivery, please reach out to us via email for options.<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
