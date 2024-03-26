@@ -122,6 +122,16 @@
             "is_tab": false
           }
         },
+        "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
+          "type": "tab",
+          "settings": {
+            "title": "Ring Details",
+            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
         "7cf22f7b-2877-4d38-a231-95946286cc18": {
           "type": "tab",
           "settings": {
@@ -142,16 +152,6 @@
             "size_chart": ""
           }
         },
-        "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
-          "type": "tab",
-          "settings": {
-            "title": "Ring Details",
-            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": ""
-          }
-        },
         "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
           "type": "tab",
           "settings": {
@@ -166,7 +166,7 @@
           "type": "tab",
           "settings": {
             "title": "Shipping information",
-            "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
+            "content": "<p>Each Women's Wedding Band is made to order. Once your size is confirmed, we expect it to be made and shipped within 2-4 weeks.<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -196,9 +196,9 @@
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
         "sales_point",
         "description",
+        "67cf22ff-76d8-4ad2-91e5-80b67524f841",
         "7cf22f7b-2877-4d38-a231-95946286cc18",
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86",
-        "67cf22ff-76d8-4ad2-91e5-80b67524f841",
         "e15f8d39-327a-449c-ae3e-f545ea35c05e",
         "tab",
         "contact"
