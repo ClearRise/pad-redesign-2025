@@ -8,12 +8,6 @@
           "settings": {
           }
         },
-        "c33a2665-bb5e-49d6-8b65-2dbeb841275d": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.custom.discount_text.value }}"
-          }
-        },
         "separator": {
           "type": "separator",
           "disabled": true,
@@ -27,7 +21,8 @@
             "variant_labels": true,
             "picker_type": "dropdown",
             "color_swatches": false,
-            "custom_variant_comment": false
+            "custom_variant_comment": false,
+            "collapse_options": false
           }
         },
         "inventory_status": {
@@ -165,7 +160,6 @@
       },
       "block_order": [
         "price",
-        "c33a2665-bb5e-49d6-8b65-2dbeb841275d",
         "separator",
         "variant_picker",
         "inventory_status",
