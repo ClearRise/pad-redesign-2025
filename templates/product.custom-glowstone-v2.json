@@ -366,6 +366,28 @@
             "boxed": false,
             "framed": false
           }
+        },
+        "advanced_6yRXJg": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "DESIGNED BY YOU <br> CRAFTED BY US",
+            "textarea": "You design the ring of your dreams, and we'll make it come to life.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/carbon-fiber-and-meteorite-ring-3.jpg",
+            "video_url": "",
+            "width": "100",
+            "height": 660,
+            "text_size": 120,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
         }
       },
       "block_order": [
@@ -373,7 +395,8 @@
         "advanced_hEMdLL",
         "advanced_TwEqdf",
         "advanced_QDK7nA",
-        "advanced_eReELk"
+        "advanced_eReELk",
+        "advanced_6yRXJg"
       ],
       "settings": {
         "full_width": false,
