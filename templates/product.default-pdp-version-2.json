@@ -216,6 +216,110 @@
         "product_video_style": "muted"
       }
     },
+    "promo_grid_QUweUP": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_nqeHQA": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "HANDCRAFTED",
+            "textarea": "This ring is handmade<br>  by trade artisans <br>in Utah, USA.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Handcrafted_V2.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_hEMdLL": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "EXOTIC <br>MATERIALS",
+            "textarea": "Go beyond silver and <br> gold and find something <br>that's truly you.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Glowing_Vial.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_TwEqdf": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "EVERY RING  IS UNIQUE",
+            "textarea": "Your ring is made to <br>order just for you. <br>No two rings are <br> the same.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Meteorite_Stack_Square.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_eReELk": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "SPRING SALE SPECIAL",
+            "heading": "BUY ONE GET ONE FREE",
+            "textarea": "Buy one ring and get a second ring of equal or lesser value free",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "100",
+            "height": 700,
+            "text_size": 120,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "advanced_nqeHQA",
+        "advanced_hEMdLL",
+        "advanced_TwEqdf",
+        "advanced_eReELk"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true
+      }
+    },
     "product_img_with_txt": {
       "type": "product_img_with_txt",
       "disabled": true,
@@ -323,6 +427,7 @@
   },
   "order": [
     "main",
+    "promo_grid_QUweUP",
     "product_img_with_txt",
     "product_how_to_work",
     "sub",
