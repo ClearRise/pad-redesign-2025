@@ -77,7 +77,7 @@
           "type": "tab",
           "settings": {
             "title": "Premium Protection Plan",
-            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
+            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p><p>1. Excludes repair and replacement of diamonds\/gemstones.<\/p><p>2. Resizing up or down two sizes.<\/p><p>3. Costs may vary depending on specific service and material type.<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
