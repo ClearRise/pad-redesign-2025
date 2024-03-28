@@ -1,4 +1,4 @@
-<div class="page-width page-content">
+<div data-section-type="cart" class="page-width page-content">
 
   {%- render 'breadcrumbs' -%}
 
@@ -9,7 +9,7 @@
       </div>
       <div class="Message">Checking out...</div>
    </div>
-</div>
+  </div>
   
   <header class="section-header text-center{% if cart.item_count == 0 %} section-header--404{% endif %}">
     <h1 class="section-header__title">{{ 'cart.general.title' | t }}</h1>
