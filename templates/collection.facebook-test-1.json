@@ -246,7 +246,7 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "WEDDING <br>BANDS",
+            "heading": "WEDDING BANDS",
             "textarea": "<u> SHOP NOW<\/u>",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/mens-wedding-bands",
@@ -256,7 +256,7 @@
             "video_url": "",
             "width": "100",
             "height": 260,
-            "text_size": 100,
+            "text_size": 120,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
             "color_accent": "rgba(0,0,0,0)",
@@ -271,9 +271,9 @@
         "advanced_9YitmP"
       ],
       "settings": {
-        "full_width": false,
+        "full_width": true,
         "gutter_size": 20,
-        "space_above": true,
+        "space_above": false,
         "space_below": true
       }
     }
