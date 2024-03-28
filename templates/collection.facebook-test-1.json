@@ -31,6 +31,31 @@
             "base_text_size": 24
           }
         },
+        "image_FcXrmq": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "Two line\ntitle slide.",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24
+          }
+        },
         "e7321c8d-7671-46ab-ba0a-e8be7d3cf79f": {
           "type": "image",
           "settings": {
@@ -61,6 +86,7 @@
       },
       "block_order": [
         "image_DzJVAm",
+        "image_FcXrmq",
         "e7321c8d-7671-46ab-ba0a-e8be7d3cf79f"
       ],
       "settings": {
@@ -198,28 +224,6 @@
     "promo_grid_8k3KVd": {
       "type": "promo-grid",
       "blocks": {
-        "advanced_wM6GWG": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "METEORITE  RINGS",
-            "textarea": "<u> SHOP NOW<\/u>",
-            "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/meteorite-jewelry",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 260,
-            "text_size": 100,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
         "advanced_URLDAp": {
           "type": "advanced",
           "settings": {
@@ -231,6 +235,28 @@
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify:\/\/shop_images\/Glowstone_Ring_2-_flipped_9f85184e-0502-4a6b-9d57-22cf5248aef4.png",
+            "video_url": "",
+            "width": "33",
+            "height": 260,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_wM6GWG": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "METEORITE <br> RINGS",
+            "textarea": "<u> SHOP NOW<\/u>",
+            "cta_text1": "",
+            "cta_link1": "shopify:\/\/collections\/meteorite-jewelry",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
             "video_url": "",
             "width": "33",
             "height": 260,
@@ -266,8 +292,8 @@
         }
       },
       "block_order": [
-        "advanced_wM6GWG",
         "advanced_URLDAp",
+        "advanced_wM6GWG",
         "advanced_9YitmP"
       ],
       "settings": {
