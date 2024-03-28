@@ -444,6 +444,12 @@
         "max_width": true
       }
     },
+    "section_custom_liquid_RiHndb": {
+      "type": "section-custom-liquid",
+      "settings": {
+        "custom_liquid": ""
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -472,6 +478,7 @@
     "product_img_with_txt",
     "product_how_to_work",
     "sub",
+    "section_custom_liquid_RiHndb",
     "product-recommendations",
     "recently-viewed",
     "collection-return"
