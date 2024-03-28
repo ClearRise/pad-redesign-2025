@@ -31,31 +31,6 @@
             "base_text_size": 24
           }
         },
-        "image_FcXrmq": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "Two line\ntitle slide.",
-            "special_title_color": "",
-            "subheading": "",
-            "special_text_color": "",
-            "link": "",
-            "link_text": "Optional button",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_position": "vertical-center horizontal-center",
-            "text_align": "left",
-            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
-            "mobile_text_align": "left",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 80,
-            "base_text_size": 24
-          }
-        },
         "e7321c8d-7671-46ab-ba0a-e8be7d3cf79f": {
           "type": "image",
           "settings": {
@@ -75,7 +50,7 @@
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
             "image": "shopify:\/\/shop_images\/desktop_collection_banner.png",
-            "image_mobile": "shopify:\/\/shop_images\/mobile_collection_banner.png",
+            "image_mobile": "shopify:\/\/shop_images\/Facebook_Lander.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -86,13 +61,12 @@
       },
       "block_order": [
         "image_DzJVAm",
-        "image_FcXrmq",
         "e7321c8d-7671-46ab-ba0a-e8be7d3cf79f"
       ],
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
-        "mobile_height": "250px",
+        "mobile_height": "auto",
         "parallax": false,
         "style": "bars",
         "autoplay": false,
@@ -102,6 +76,33 @@
     "replo_trust_icons_white_backg_zYMnyn": {
       "type": "replo-trust-icons-white-backg",
       "settings": {
+      }
+    },
+    "rich_text_zMwWiy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_x9aN4b": {
+          "type": "heading",
+          "settings": {
+            "title": "Most Jewelry Looks The Same"
+          }
+        },
+        "text_8twYXy": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Express yourself with something truly unique.<\/p><p>Since 2015, we’ve been handcrafting artisan rings using the most uncommon luxury materials. Whether it's 4.5 billion year old meteorite or hand forged damascus steel, you'll find a story in every ring. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_x9aN4b",
+        "text_8twYXy"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
       }
     },
     "collection-header": {
@@ -307,6 +308,7 @@
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
     "replo_trust_icons_white_backg_zYMnyn",
+    "rich_text_zMwWiy",
     "collection-header",
     "promo-grid",
     "main-collection",
