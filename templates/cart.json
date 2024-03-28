@@ -2,7 +2,45 @@
   "sections": {
     "main": {
       "type": "main-cart",
+      "blocks": {
+        "icon_WwDjfA": {
+          "type": "icon",
+          "settings": {
+            "icon": "gift",
+            "title": "Handmade"
+          }
+        },
+        "icon_hWVrkb": {
+          "type": "icon",
+          "settings": {
+            "icon": "heart",
+            "title": "Made to order"
+          }
+        },
+        "icon_FHk4QB": {
+          "type": "icon",
+          "settings": {
+            "icon": "truck",
+            "title": "Free Shipping"
+          }
+        },
+        "icon_8h9qxy": {
+          "type": "icon",
+          "settings": {
+            "icon": "leaf",
+            "title": "Exotic Materials"
+          }
+        }
+      },
+      "block_order": [
+        "icon_WwDjfA",
+        "icon_hWVrkb",
+        "icon_FHk4QB",
+        "icon_8h9qxy"
+      ],
       "settings": {
+        "text_1": "Add two items to your cart and get the cheaper one for FREE",
+        "text_2": "Add another item to your cart and get the cheaper one for Free"
       }
     },
     "recently-viewed": {
