@@ -151,7 +151,7 @@
           "type": "tab",
           "settings": {
             "title": "Lifetime Warranty",
-            "content": "<p>{{ product.metafields.global.lifetime_warranty | metafield_tag }}<\/p>",
+            "content": "<p>At Patrick Adair Designs, all products come with a <a href=\"\/pages\/warranty-and-return-information\" title=\"Limited Lifetime Warranty and Return Policy\"><strong>Limited Lifetime Warranty<\/strong><\/a> by default. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
