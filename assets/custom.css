@@ -2069,4 +2069,45 @@ label.variant__label.custom_label{
   .site-header__logo a {
     width: 50px;
   }
+
+  [data-section-type="cart"] .section-header {
+    margin-bottom: 0;
+  }
+  .cart__item {
+    margin-bottom: 0;
+  }
+  .cart__checkout-wrapper {
+    padding-top: 72.33px;
+  }
+
+  .sticky-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    background: white;
+    z-index: 9999999999;
+  }
+  
+  .cart__checkout-wrapper.active {
+    position: relative;
+  }
+  
+  .cart__checkout-wrapper.active .sticky-bar {
+    position: absolute;
+    padding: 0;
+    bottom: auto;
+    top: 0;
+    z-index: initial;
+  }
 }
+
+[data-section-type="cart"] .section-header .cart-sales-points {
+  display: flex;
+  margin-top: 20px;
+  max-width: 500px;
+  justify-content: space-between;
+  margin: auto;
+}
+
