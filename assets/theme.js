@@ -1681,6 +1681,7 @@ lazySizesConfig.expFactor = 4;
       },
   
       buildCart: function() {
+        window.location.reload();
         theme.cart.getCartProductMarkup().then(this.cartMarkup.bind(this));
       },
   
