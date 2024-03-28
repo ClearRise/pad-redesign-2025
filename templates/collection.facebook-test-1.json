@@ -66,15 +66,15 @@
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
-        "mobile_height": "auto",
+        "mobile_height": "250px",
         "parallax": false,
         "style": "bars",
         "autoplay": false,
         "autoplay_speed": 5
       }
     },
-    "replo_trust_icons_fy9XYw": {
-      "type": "replo-trust-icons",
+    "replo_trust_icons_white_backg_zYMnyn": {
+      "type": "replo-trust-icons-white-backg",
       "settings": {
       }
     },
@@ -157,7 +157,7 @@
           "settings": {
             "enable_collection_count": true,
             "per_row": 3,
-            "rows_per_page": 20,
+            "rows_per_page": 5,
             "mobile_flush_grid": true
           }
         }
@@ -178,7 +178,7 @@
   },
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
-    "replo_trust_icons_fy9XYw",
+    "replo_trust_icons_white_backg_zYMnyn",
     "collection-header",
     "promo-grid",
     "main-collection"
