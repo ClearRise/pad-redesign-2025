@@ -303,6 +303,11 @@
         "space_above": false,
         "space_below": true
       }
+    },
+    "replo_trust_icons_white_backg_7Jffit": {
+      "type": "replo-trust-icons-white-backg",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -313,6 +318,7 @@
     "promo-grid",
     "main-collection",
     "rich_text_GHKdwf",
-    "promo_grid_8k3KVd"
+    "promo_grid_8k3KVd",
+    "replo_trust_icons_white_backg_7Jffit"
   ]
 }
