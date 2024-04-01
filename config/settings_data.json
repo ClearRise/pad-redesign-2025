@@ -177,6 +177,7 @@
           },
           "announcement_FkMJza": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "BUY ONE GET ONE FREE | LImited Time",
               "link_text": "",
