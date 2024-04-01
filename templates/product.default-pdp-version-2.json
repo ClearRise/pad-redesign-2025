@@ -447,7 +447,7 @@
     "section_custom_liquid_RiHndb": {
       "type": "section-custom-liquid",
       "settings": {
-        "custom_liquid": ""
+        "custom_liquid": "<style>\n    .slr-review {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n    }\n    .slr-main-title {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n        font-size: 32.3px;\n        font-weight: 400;\n    }\n    .slr-write-review__button, .slr-create-review__form__submit, .slr-no-reviews-message__button, .slr-create-review__form__cancel {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n        text-transform: uppercase;\n    }\n<\/style>\n\n<div class=\"page-width\">\n    <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>\n<\/div>"
       }
     },
     "product-recommendations": {
