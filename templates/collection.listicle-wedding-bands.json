@@ -1,8 +1,107 @@
 {
   "sections": {
-    "f4ccb977-157f-457d-a856-9ee6a557102b": {
-      "type": "replo-all-products-lander-hero",
+    "text_and_image_LWcTaf": {
+      "type": "text-and-image",
       "settings": {
+        "image": "shopify:\/\/shop_images\/test_1.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Most Wedding Bands Look the Same. Ours Don't.",
+        "text": "<p>You deserve a wedding band as unique as you are. Every ring is handcrafted from exotic and luxury materials. You'll find a story in every ring.<\/p>",
+        "button_label": "Learn More",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "replo_trust_icons_white_backg_WjtKCT": {
+      "type": "replo-trust-icons-white-backg",
+      "settings": {
+      }
+    },
+    "rich_text_pm48aQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Aywhg6": {
+          "type": "heading",
+          "settings": {
+            "title": "5 Reasons to Buy Your Wedding Band from Patrick Adair Designs"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Aywhg6"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "text_and_image_GaNiE8": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/test_1.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "text_and_image_xYCfXG": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/test_1.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "text_and_image_9XTPrK": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/test_1.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "text_and_image_ciVTF9": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/test_1.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
       }
     },
     "collection-header": {
@@ -53,16 +152,38 @@
         "enable_sort": true
       }
     },
-    "0964b319-67f6-40eb-a52e-abccce122d6e": {
-      "type": "replo-bottom-lp-container",
+    "text_and_image_NJ76bR": {
+      "type": "text-and-image",
+      "settings": {
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "replo_trust_icons_white_backg_f8LLfG": {
+      "type": "replo-trust-icons-white-backg",
       "settings": {
       }
     }
   },
   "order": [
-    "f4ccb977-157f-457d-a856-9ee6a557102b",
+    "text_and_image_LWcTaf",
+    "replo_trust_icons_white_backg_WjtKCT",
+    "rich_text_pm48aQ",
+    "text_and_image_GaNiE8",
+    "text_and_image_xYCfXG",
+    "text_and_image_9XTPrK",
+    "text_and_image_ciVTF9",
     "collection-header",
     "main-collection",
-    "0964b319-67f6-40eb-a52e-abccce122d6e"
+    "text_and_image_NJ76bR",
+    "replo_trust_icons_white_backg_f8LLfG"
   ]
 }
