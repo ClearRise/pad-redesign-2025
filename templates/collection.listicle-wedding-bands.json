@@ -34,8 +34,8 @@
           "type": "product_grid",
           "settings": {
             "enable_collection_count": true,
-            "per_row": 4,
-            "rows_per_page": 5,
+            "per_row": 3,
+            "rows_per_page": 3,
             "mobile_flush_grid": true
           }
         }
