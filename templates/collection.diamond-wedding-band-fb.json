@@ -22,14 +22,14 @@
         "heading_Aywhg6": {
           "type": "heading",
           "settings": {
-            "title": "Most wedding bands look the same. Ours don't."
+            "title": "Most jewelry looks the same. Ours doesn't."
           }
         },
         "text_YRAGkj": {
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>Express yourself with something truly unique.<\/p><p>Since 2015, we’ve been handcrafting artisan rings using the most uncommon luxury materials.<\/p>"
+            "text": "<p>Express yourself with something truly unique. Since 2015, we’ve been handcrafting artisan rings using the most uncommon luxury materials.<\/p>"
           }
         }
       },
@@ -59,9 +59,9 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "Shop Men's Bands",
+            "heading": "",
             "textarea": "",
-            "cta_text1": "Shop Collection",
+            "cta_text1": "Shop Men's Bands",
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
@@ -70,9 +70,9 @@
             "width": "50",
             "height": 500,
             "text_size": 100,
-            "text_align": "vertical-bottom horizontal-right",
+            "text_align": "vertical-bottom horizontal-center",
             "focal_point": "center",
-            "color_accent": "rgba(0,0,0,0)",
+            "color_accent": "#ffffff",
             "boxed": false,
             "framed": false
           }
@@ -81,9 +81,9 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "Shop Matching Bands",
+            "heading": "",
             "textarea": "",
-            "cta_text1": "Shop Collection",
+            "cta_text1": "Shop Matching Bands",
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
@@ -92,9 +92,9 @@
             "width": "50",
             "height": 500,
             "text_size": 100,
-            "text_align": "vertical-bottom horizontal-right",
+            "text_align": "vertical-bottom horizontal-center",
             "focal_point": "center",
-            "color_accent": "rgba(0,0,0,0)",
+            "color_accent": "#ffffff",
             "boxed": false,
             "framed": false
           }
@@ -116,7 +116,7 @@
             "text_size": 100,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
-            "color_accent": "rgba(0,0,0,0)",
+            "color_accent": "#ffffff",
             "boxed": false,
             "framed": false
           }
@@ -130,7 +130,7 @@
       "settings": {
         "full_width": false,
         "gutter_size": 20,
-        "space_above": true,
+        "space_above": false,
         "space_below": true
       }
     },
