@@ -52,44 +52,86 @@
         "parallax": true
       }
     },
-    "featured_collections_BhHjhB": {
-      "type": "featured-collections",
+    "promo_grid_mknpQG": {
+      "type": "promo-grid",
       "blocks": {
-        "collection_nVbBMF": {
-          "type": "collection",
+        "advanced_TiMXR7": {
+          "type": "advanced",
           "settings": {
-            "collection": "womens-wedding-bands",
-            "title": "",
-            "focal_point": "center center"
+            "subheading": "",
+            "heading": "Shop Men's Bands",
+            "textarea": "",
+            "cta_text1": "Shop Collection",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Frame_2065.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-bottom horizontal-right",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
           }
         },
-        "collection_TkjwEK": {
-          "type": "collection",
+        "advanced_PkVnc4": {
+          "type": "advanced",
           "settings": {
-            "collection": "mens-wedding-bands",
-            "title": "",
-            "focal_point": "center center"
+            "subheading": "",
+            "heading": "Shop Matching Bands",
+            "textarea": "",
+            "cta_text1": "Shop Collection",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Frame_2055.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-bottom horizontal-right",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
           }
         },
-        "collection_jcKtPU": {
-          "type": "collection",
+        "advanced_J9pVFD": {
+          "type": "advanced",
           "settings": {
-            "collection": "best-sellers",
-            "title": "",
-            "focal_point": "center center"
+            "subheading": "",
+            "heading": "Shop Women's Wedding Bands",
+            "textarea": "",
+            "cta_text1": "Shop Collection",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/MS-414_R_5.png",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
           }
         }
       },
       "block_order": [
-        "collection_nVbBMF",
-        "collection_TkjwEK",
-        "collection_jcKtPU"
+        "advanced_TiMXR7",
+        "advanced_PkVnc4",
+        "advanced_J9pVFD"
       ],
       "settings": {
-        "title": "Shop by Collection",
-        "divider": false,
-        "per_row": 3,
-        "enable_gutter": false
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true
       }
     },
     "main-collection": {
@@ -152,7 +194,7 @@
     "text_and_image_LWcTaf",
     "rich_text_pm48aQ",
     "collection-header",
-    "featured_collections_BhHjhB",
+    "promo_grid_mknpQG",
     "main-collection",
     "text_and_image_NJ76bR"
   ]
