@@ -2,7 +2,6 @@
   "sections": {
     "replo_flash_sale_timer_BdXnmX": {
       "type": "replo-flash-sale-timer",
-      "disabled": true,
       "settings": {
       }
     },
