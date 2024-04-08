@@ -170,9 +170,8 @@
           },
           "announcement_FkMJza": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "BUY ONE GET ONE FREE | LImited Time",
+              "text": "FREE MYSTERY GIFT ($200-600 Value Ring or Pendant) On Orders $195+",
               "link_text": "",
               "link": "shopify:\/\/collections\/all-products"
             }
