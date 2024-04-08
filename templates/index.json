@@ -3,36 +3,8 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "image_E7pHjb": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "",
-            "special_title_color": "",
-            "subheading": "",
-            "special_text_color": "",
-            "link": "shopify:\/\/collections\/all-products",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_position": "vertical-center horizontal-center",
-            "text_align": "left",
-            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
-            "mobile_text_align": "left",
-            "image": "shopify:\/\/shop_images\/bogo_even_smaller_test_36145757-6ec0-4323-88e4-291818aec772.png",
-            "image_mobile": "shopify:\/\/shop_images\/small_mobile.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 80,
-            "base_text_size": 24
-          }
-        },
         "image_zLVB7G": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -88,7 +60,6 @@
         }
       },
       "block_order": [
-        "image_E7pHjb",
         "image_zLVB7G",
         "slideshow-0"
       ],
@@ -163,11 +134,11 @@
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
           "type": "advanced",
           "settings": {
-            "subheading": "Buy one get one free",
-            "heading": "METEORITE RINGS",
+            "subheading": "20-30% off",
+            "heading": "FLASH SALE",
             "textarea": "<u> SHOP NOW <\/u>",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/meteorite-rings",
+            "cta_link1": "shopify:\/\/collections\/flash-sale-collection",
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
@@ -185,7 +156,7 @@
         "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
           "type": "advanced",
           "settings": {
-            "subheading": "Buy one get one free",
+            "subheading": "",
             "heading": "GLOWSTONE SERIES",
             "textarea": "<u> SHOP NOW <\/u>",
             "cta_text1": "",
@@ -207,7 +178,7 @@
         "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
           "type": "advanced",
           "settings": {
-            "subheading": "Buy one get one free",
+            "subheading": "",
             "heading": "WEDDING BANDS",
             "textarea": "<u> SHOP NOW <\/u>",
             "cta_text1": "",
@@ -229,9 +200,9 @@
         "2e50058a-8bc8-46f4-880f-08ed48490db6": {
           "type": "advanced",
           "settings": {
-            "subheading": "SPRING SPECIAL",
-            "heading": "SHOP THE SALE",
-            "textarea": "BUY ONE GET ONE FREE",
+            "subheading": "",
+            "heading": "FREE GIFT OFFER",
+            "textarea": "Get a Free Mystery Gift on all orders $195+",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/all-products",
             "cta_text2": "",
