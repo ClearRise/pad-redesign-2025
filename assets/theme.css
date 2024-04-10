@@ -7773,7 +7773,7 @@ label.tag__checkbox-wrapper{
 
 .variant-input-wrap input[type=radio]:checked+label{
 /*     box-shadow:0 0 0 2px #111111; */
-    box-shadow:0 0 0 2px var(--colorTextBody);
+    box-shadow: 0 0 0 2px #138F7E;
   }
 
 .variant-input{
