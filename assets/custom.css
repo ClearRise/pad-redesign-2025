@@ -1931,9 +1931,10 @@ label.variant__label.custom_label{
   }
 }
 
-.custom-product-blocK{
+.custom-product-blocK, .shopify-app-block{
   margin-bottom: 12px!important;
 }
+
 
 .bold_option_title{
   font-weight: 700!important;
