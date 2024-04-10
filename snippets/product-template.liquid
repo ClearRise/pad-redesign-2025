@@ -567,11 +567,13 @@
                                 assign is_color = true
                               elsif swatch_trigger == 'color' and downcased_option contains 'colour'
                                 assign is_color = true
+                              elsif downcased_option contains 'metal'
+                                assign is_color = true
                               endif
                             endif
                           -%}
 
-                          {%- if block.settings.picker_type == 'button' -%}
+                          {%- if block.settings.picker_type == 'button' or downcased_option contains 'metal' -%}
                             {%- render 'variant-button',
                               block: block,
                               product: product,
