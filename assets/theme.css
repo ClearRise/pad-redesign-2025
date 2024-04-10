@@ -1478,9 +1478,10 @@ pre{
 }
 
 .label,label:not(.variant__button-label):not(.text-label){
-  text-transform:uppercase;
-  letter-spacing:0.3em;
-  font-size:0.8em;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: var(--typeBaseSpacing);
 }
 
 label{
@@ -6692,15 +6693,7 @@ input[type=image]{
 }
 
 .product-block{
-  margin-bottom:12px
-}
-
-.product-block.engraving {
-  margin-bottom: 0;
-}
-
-.product-block.engraving .bold_option {
-  margin-bottom: 0;
+  margin-bottom:25px
 }
 
 .product-block hr{
@@ -6708,7 +6701,7 @@ input[type=image]{
   }
 
 .product-block--tab+.product-block--tab{
-  margin-top:-12px;
+  margin-top: -10px;
 }
 
 .product-block--sales-point+.product-block--sales-point{
@@ -7814,7 +7807,6 @@ select .variant-input{
 
 .variant__label-info{
   text-transform:none;
-  font-weight:400;
   letter-spacing:0;
 }
 
