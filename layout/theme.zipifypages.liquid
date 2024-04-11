@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="{{ request.locale.iso_code }}">
   <head>
+    <script>
+    window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
+    window._template = {
+        directory: "{{ template.directory }}",
+        name: "{{ template.name }}",
+        suffix: "{{ template.suffix }}"
+    }
+  </script> 
+                            <script src="https://cdn.intelligems.io/36720b0810aa.js"></script>
 <link rel='preconnect dns-prefetch' href='https://api.config-security.com/' crossorigin />
 <link rel='preconnect dns-prefetch' href='https://conf.config-security.com/' crossorigin />
 <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin />
