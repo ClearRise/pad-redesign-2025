@@ -394,47 +394,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="{{ 'storeifyapps-formbuilder-script.js' | asset_url }}" defer></script>
 {% endif %}  
 
-var observer = new MutationObserver(function(mutations) {
-    if (document.querySelector('#gorgias-chat-container iframe#chat-button')) {
-        
-        observer.disconnect(); 
-        const iframe = document.querySelector('#gorgias-chat-container iframe#chat-button');
-        if(screen.width < 850){
-          iframe.classList.add("custom_iframe_chat_btn");
-        }  
-        iframe.addEventListener('load', async function() {
-
-         while(1) {
-           var elmnt = iframe.contentWindow.document.querySelector('button#gorgias-chat-messenger-button');
-           if(elmnt) {
-             if(screen.width < 850){
-               elmnt.style.width = "35px";
-               elmnt.style.height = "35px"
-               var _div = iframe.contentWindow.document.querySelector('button#gorgias-chat-messenger-button div:nth-child(2)');
-               if(_div){
-                 console.log("screen width: " + screen.width);
-                 _div.style.width = "20px";
-                 _div.style.height = "20px"               
-               }
-             }
-             break;
-           }
-           await new Promise(function(resolve) {setTimeout(resolve, 100)});
-         }
-
-      });
-                
-    }
-});
-
-// Start observing
-observer.observe(document.body, { //document.body is node target to observe
-    childList: true, //This is a must have for the observer with subtree
-    subtree: true //Set to true if changes must also be observed in descendants.
-});  
-  
-</script>    
-
 </body>
 </html>
 
