@@ -230,11 +230,12 @@
                     <div class="product-title-link">
                         <strong class="dci-title">{{ first_gift_product.title }}</strong>
                     </div>
-           {% comment %}
+                    {% if first_gift_product.metafields.custom.description != blank %}
                     <p class="description">
-                        {{ first_gift_product.description | truncate: 100, ". . . " }}
+                      {{ first_gift_product.metafields.custom.description | truncate: 100, ". . . " }}
                     </p>
-           {% endcomment %}
+                    {% endif %}
+                    
                <div class="cart__item-sub">
                  <div class="upsell-product-price aaaaaaaaa">
                       {% if first_gift_product.price == 0 %}
@@ -270,11 +271,11 @@
                     <div class="product-title-link">
                         <strong class="dci-title">{{ second_gift_product.title }}</strong>
                     </div>
-                 {% comment %}
+                    {% if second_gift_product.metafields.custom.description != blank %}
                     <p class="description">
-                        {{ second_gift_product.description | truncate: 100, ". . . " }}
+                      {{ second_gift_product.metafields.custom.description | truncate: 100, ". . . " }}
                     </p>
-                 {% endcomment %} 
+                    {% endif %}
                   <div class="cart__item-sub">
                     <div class="upsell-product-price bbbbbbbbb">
                       {% if second_gift_product.price == 0 %}
@@ -361,11 +362,11 @@
                                     <div class="product-title-link">
                                         <strong class="dci-title">{{ product.title }}</strong>
                                     </div>
-                                  {% comment %}
-                                    <div class="description">
-                                        {{ product.description | truncate: 150, "..." }}
-                                    </div>
-                                {% endcomment %}
+                                    {% if product.metafields.custom.description != blank %}
+                                    <p class="description">
+                                      {{ product.metafields.custom.description | truncate: 100, ". . . " }}
+                                    </p>
+                                    {% endif %}
                                   <div  class="cart__item-sub">
                                     <div class="upsell-product-price cccccccc">
                                       
@@ -386,10 +387,10 @@
                                         <span id="ComparePriceA11y" class="visually-hidden" aria-hidden="true">{{ 'products.general.sale_price' | t }}</span>
                                     {%- endif -%}
                                   </div>
-  {% if product.selected_or_first_available_variant.inventory_quantity < 1 %}
-          {% assign quick_buy_text = 'product.buttons.sold_out' | t %}
-          {% assign quick_buy_classes = quick_buy_classes | append: ' disabled' %}
-  {% endif %}                
+                    {% if product.selected_or_first_available_variant.inventory_quantity < 1 %}
+                            {% assign quick_buy_text = 'product.buttons.sold_out' | t %}
+                            {% assign quick_buy_classes = quick_buy_classes | append: ' disabled' %}
+                    {% endif %}                
                   <div style="display:none;">{{ product.selected_or_first_available_variant.inventory_quantity }}</div>
                                 {% if product.selected_or_first_available_variant.inventory_quantity < 1 %}
                                     <button data-product-id="{{ product_id }}" class="upsell_button_gtm upsell-add-to-cart disabled" disabled>SOLD OUT</button>
