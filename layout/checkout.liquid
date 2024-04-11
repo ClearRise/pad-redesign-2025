@@ -34,8 +34,15 @@
       }      
     </style>
 {% comment %}  {% include 'analyzify-gtm-checkout' %}  {% endcomment %}
-<script src="https://cdn.intelligems.io/36720b0810aa.js"></script>
-</head>
+<script>
+    window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
+    window._template = {
+        directory: "{{ template.directory }}",
+        name: "{{ template.name }}",
+        suffix: "{{ template.suffix }}"
+    }
+  </script> 
+                            <script src="https://cdn.intelligems.io/36720b0810aa.js"></script></head>
   <body>
 {% comment %}  
 {% endcomment %}         
