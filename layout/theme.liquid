@@ -394,16 +394,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="{{ 'storeifyapps-formbuilder-script.js' | asset_url }}" defer></script>
 {% endif %}  
 
-<!--  Intelligems Template Testing Script -->
-
-  <script>
-    window._template = {
-        directory: "{{ template.directory }}",
-        name: "{{ template.name }}",
-        suffix: "{{ template.suffix }}"
-    }
-    window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
-  </script> 
 var observer = new MutationObserver(function(mutations) {
     if (document.querySelector('#gorgias-chat-container iframe#chat-button')) {
         
