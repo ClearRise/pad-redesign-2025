@@ -254,7 +254,16 @@ console.log(buyItNow);
 </script>
 
 {% endcomment %}
-
+  
+<script>
+    window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
+    window._template = {
+        directory: "{{ template.directory }}",
+        name: "{{ template.name }}",
+        suffix: "{{ template.suffix }}"
+    }
+  </script> 
+                            <script src="https://cdn.intelligems.io/36720b0810aa.js"></script>
   
 </head>
         
@@ -396,11 +405,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
   </script> 
-
-  
-<script src="https://cdn.intelligems.io/36720b0810aa.js"></script>
-  
-<script>  
 var observer = new MutationObserver(function(mutations) {
     if (document.querySelector('#gorgias-chat-container iframe#chat-button')) {
         
