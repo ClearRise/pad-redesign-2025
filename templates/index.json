@@ -131,17 +131,17 @@
     "1646694183f97c4822": {
       "type": "promo-grid",
       "blocks": {
-        "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
+        "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
           "type": "advanced",
           "settings": {
-            "subheading": "20-30% off",
-            "heading": "FLASH SALE",
+            "subheading": "",
+            "heading": "WEDDING BANDS",
             "textarea": "<u> SHOP NOW <\/u>",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/flash-sale-collection",
+            "cta_link1": "shopify:\/\/collections\/best-selling-wedding-bands-v1",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
+            "image": "shopify:\/\/shop_images\/Sterling_Silver.png",
             "video_url": "",
             "width": "33",
             "height": 300,
@@ -175,19 +175,42 @@
             "framed": false
           }
         },
-        "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
+        "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
-            "heading": "WEDDING BANDS",
+            "subheading": "20-30% off",
+            "heading": "FLASH SALE",
             "textarea": "<u> SHOP NOW <\/u>",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/best-selling-wedding-bands-v1",
+            "cta_link1": "shopify:\/\/collections\/flash-sale-collection",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/DSC00620_1080x_6ddf52d5-a3e7-426e-9b80-09cd6807f3e2.png",
+            "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
             "video_url": "",
             "width": "33",
+            "height": 300,
+            "text_size": 105,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_PrzWAG": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "NEW",
+            "heading": "Diamond <br>Wedding Bands",
+            "textarea": "<u> Shop Now <\/u>",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Womens_Band_Home_page_v4.png",
+            "video_url": "",
+            "width": "50",
             "height": 300,
             "text_size": 105,
             "text_align": "vertical-center horizontal-left",
@@ -200,21 +223,21 @@
         "2e50058a-8bc8-46f4-880f-08ed48490db6": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
-            "heading": "FREE GIFT OFFER",
-            "textarea": "Get a Free Mystery Gift on all orders $195+",
-            "cta_text1": "",
+            "subheading": "LIMITED TIME OFFER",
+            "heading": "MYSTERY GIFT",
+            "textarea": "Get a Free Mystery Gift ($200-600 Value)  on all orders $195+",
+            "cta_text1": "SHOP ALL RINGS",
             "cta_link1": "shopify:\/\/collections\/all-products",
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify:\/\/shop_images\/Group_Shot.png",
             "video_url": "",
             "width": "100",
-            "height": 660,
+            "height": 420,
             "text_size": 105,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
-            "color_accent": "#ff0000",
+            "color_accent": "#ffa500",
             "boxed": false,
             "framed": false
           }
@@ -267,9 +290,10 @@
         }
       },
       "block_order": [
-        "8fd2c38f-76d2-4ebe-87c5-e072122f3d02",
-        "2f6050a5-96b7-4f7d-b405-7b5952c82699",
         "85a12c0c-6ee7-4aba-a660-0e12f6bdc907",
+        "2f6050a5-96b7-4f7d-b405-7b5952c82699",
+        "8fd2c38f-76d2-4ebe-87c5-e072122f3d02",
+        "advanced_PrzWAG",
         "2e50058a-8bc8-46f4-880f-08ed48490db6",
         "8f48b383-f1c5-4d34-a6cd-eab1f6f524b0",
         "672a52df-0901-41df-bfcc-f5c1e4da1a77"
