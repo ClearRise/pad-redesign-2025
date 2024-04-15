@@ -58,6 +58,33 @@
         "parallax": true
       }
     },
+    "rich_text_xKhRde": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_aBQkH9": {
+          "type": "heading",
+          "settings": {
+            "title": "Automotive History on Your Finger"
+          }
+        },
+        "text_eNKTEG": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Wear a piece of the true hyper car on your finger. Each Hyper Glowstone Ring contains an inlay packed with shaved aluminum from a genuine Bugatti Veyron. <strong>Only 30 available<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_aBQkH9",
+        "text_eNKTEG"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "main-collection": {
       "type": "main-collection",
       "blocks": {
@@ -136,6 +163,7 @@
     "17347204-928a-46d1-8166-ac8c007f382d",
     "replo_trust_icons_fy9XYw",
     "collection-header",
+    "rich_text_xKhRde",
     "main-collection",
     "promo-grid"
   ]
