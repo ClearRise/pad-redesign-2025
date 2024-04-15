@@ -344,6 +344,28 @@
             "framed": false
           }
         },
+        "advanced_pwHrje": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "BUGATTI™",
+            "textarea": "Every Hyper Glowstone ring contains authentic pieces of a Bugatti.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/edited.png",
+            "video_url": "",
+            "width": "100",
+            "height": 660,
+            "text_size": 120,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
         "advanced_eReELk": {
           "type": "advanced",
           "settings": {
@@ -372,6 +394,7 @@
         "advanced_hEMdLL",
         "advanced_TwEqdf",
         "advanced_QDK7nA",
+        "advanced_pwHrje",
         "advanced_eReELk"
       ],
       "settings": {
