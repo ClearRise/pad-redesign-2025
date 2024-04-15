@@ -3,6 +3,7 @@
     for="SingleOptionSelector-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
     {{ option.name }}
   </label>
+  {% if option.name != 'Style' and product.metafields.custom.hide_style_tooltip %}
   <span class="custom_tooltip tootip_icon">
     <span class="custom_tooltip_label">   
       {% if custom_variant_comment %}
@@ -25,6 +26,7 @@
        {% endif %} 
       </span>
   </span>
+  {% endif %} 
 
   <div class="variant-input-wrap custom-select" data-index="option{{ forloop.index }}" data-handle="{{ option.name | handleize }}">
     <select
