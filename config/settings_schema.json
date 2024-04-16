@@ -1034,6 +1034,12 @@
         "info": "Add Gift box title for cart drawer"
       },
       {
+        "type": "textarea",
+        "id": "gift_box_text",
+        "label": "Gift Box Text",
+        "default": "Ring or Pendant valued from $200-$600"
+      },
+      {
         "type": "range",
         "id": "cart_threshold_amount",
         "label": "Cart Threshold Amount",
