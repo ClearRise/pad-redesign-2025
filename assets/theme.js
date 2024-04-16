@@ -6572,9 +6572,49 @@ var image = theme.buildProductImage(product, imageSize);
           this.initProductSlider();
           this.customMediaListners();
           this.addIdToRecentlyViewed();
+          this.boldOptions();
         }
       },
-  
+      
+      boldOptions: function () {
+        BOLD.common.eventEmitter.on('BOLD_OPTIONS_option_products_loaded', function(event){
+          document.querySelectorAll('.bold_option_set .bold_option_swatch').forEach(element => {
+            console.log(element)
+            if (element.querySelector('.bold_option_title .bold_option_value_title') != null) {
+              element.querySelector('.bold_option_title .bold_option_value_title').remove();
+            }
+            if (element.querySelector('.bold_option_title .bold_option_value_price') != null) {
+              element.querySelector('.bold_option_title .bold_option_value_price').remove();
+            }
+            if (element.querySelector('.bold_option_title') != undefined) {
+              element.querySelector('.bold_option_title').innerHTML = element.querySelector('.bold_option_title').innerHTML + element.querySelector('.bold_option_value .bold_option_swatch_title').innerHTML
+            }
+            
+          });
+          document.addEventListener('click', function (e) {
+            if (e.target.closest(".bold_option_value") != undefined) {
+              console.log(e.target.closest(".bold_option").classList.contains('bold_option_swatch'))
+              console.log(e.target.closest(".bold_option_value"))
+              console.log(e.target.closest(".bold_option"))
+              var targetWrapper = e.target.closest(".bold_option");
+              var targetValue = e.target.closest(".bold_option_value");
+              if (targetWrapper.querySelector('.bold_option_title .bold_option_value_title') != null) {
+                targetWrapper.querySelector('.bold_option_title .bold_option_value_title').remove();
+              }
+              if (targetWrapper.querySelector('.bold_option_title .bold_option_value_price') != null) {
+                targetWrapper.querySelector('.bold_option_title .bold_option_value_price').remove();
+              }
+              var targetWrapperTitle = targetWrapper.querySelector('.bold_option_title').innerHTML;
+              var targetValueTitle = targetValue.querySelector('.bold_option_swatch_title').innerHTML;
+              var newTitle = targetWrapperTitle + targetValueTitle;
+              targetWrapper.querySelector('.bold_option_title').innerHTML = newTitle;
+            }
+            
+          }).bind(this);
+         
+        });
+      },
+
       cacheElements: function() {
         this.cache = {
           form: this.container.querySelector(this.selectors.form),
