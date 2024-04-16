@@ -7785,7 +7785,7 @@ label.tag__checkbox-wrapper{
   }
 
 .variant-input{
-  display:inline-block
+  display:inline-block;
 }
 
 select .variant-input{
@@ -8244,18 +8244,33 @@ html[dir=rtl] .grid-product__content{
 
 .color-swatch{
   position:relative;
-  display:block;
+  display:block!important;
   text-indent:-9999px;
   overflow:hidden;
-  margin:0 4px 4px;
+  margin:0 auto 4px!important;
   background-position:50%;
   background-size:cover;
   background-repeat:no-repeat;
-  height:40px;
-  width:40px;
+  height:45px;
+  width:45px;
 /*   box-shadow:0 0 0 1px #111111; */
   box-shadow:0 0 0 1px var(--colorBorder);
   transition:box-shadow 0.2s ease
+}
+
+.variant-input-wrap.swatch .variant-input {
+  margin-right: 2px;
+  margin-bottom: 10px;
+}
+
+.swatch-txt {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: normal;
+  max-width: 60px;
+  height: 30px;
 }
 
 [data-swatch_style=round] .color-swatch{
