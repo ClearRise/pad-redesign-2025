@@ -110,9 +110,9 @@
         "sales_point": {
           "type": "sales_point",
           "settings": {
-            "icon": "tag",
-            "text": "Find Your Size",
-            "url": "https:\/\/patrickadairdesigns.com\/pages\/how-to-use-a-ring-sizer"
+            "icon": "leaf",
+            "text": "Sustainable Practices",
+            "url": ""
           }
         },
         "description": {
@@ -154,6 +154,7 @@
         },
         "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "title": "Ethically Sourced",
             "content": "<p>Every Gemstone is ethically sourced from a cutting edge laboratory. <\/p><p>Each one is chemically and molecularly identical to a mined gemstone without the ethical dillema. <\/p><p>On top of the ethical benefit, we also are able to offer higher quality gemstones for a significantly lower price than earth mined counterparts. <\/p>",
@@ -250,7 +251,7 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "HANDCRAFTED",
+            "heading": "HANDCRAFTED <br> WITH CARE",
             "textarea": "Every ring is handcrafted <br>by expert jewelers",
             "cta_text1": "",
             "cta_link1": "",
@@ -273,7 +274,7 @@
           "settings": {
             "subheading": "",
             "heading": "SUPERIOR  QUALITY",
-            "textarea": "Ethically sourced lab grown <br>gemstones let us provide best in <br> class quality",
+            "textarea": "From Gold to Platinum, and lab-grown diamonds to superior rubies. You get best in class quality without breaking the bank.",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
@@ -316,8 +317,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "EVERY RING <br>IS UNIQUE",
-            "textarea": "Your ring is made to order <br>and fully customized just for you. <br> No two rings are the same",
+            "heading": "EVERY RING IS UNIQUE",
+            "textarea": "Your ring is made to order <br>and fully customized just for you. <br> Your ring. Your story.",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
