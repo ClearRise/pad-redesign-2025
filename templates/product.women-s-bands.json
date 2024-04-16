@@ -206,7 +206,10 @@
         "contact"
       ],
       "custom_css": [
-        ".bold_option_value_swatch {width: 45px !important; height: 45px !important;}"
+        ".bold_option_value_swatch {width: 40px !important; height: 40px !important;}",
+        ".bold_option_swatch .bold_option_value {width: auto !important;}",
+        ".bold_option_swatch_title {display: none;}",
+        ".bold_option_swatch .bold_option_value_element {margin-right: 0 !important;}"
       ],
       "settings": {
         "sku_enable": false,
