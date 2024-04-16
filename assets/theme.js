@@ -3581,20 +3581,21 @@ Bold:POv2*/
           group.querySelector('option[value="'+ value +'"]').disabled = false;
         } else {
           var buttonGroup = group.querySelector('.variant-input[data-value="'+ value +'"]');
-          var input = buttonGroup.querySelector('input');
-          var label = buttonGroup.querySelector('label');
-  
-          // Variant exists - enable & show variant
-          input.classList.remove(classes.disabled);
-          label.classList.remove(classes.disabled);
-  
-          // Variant sold out - cross out option (remains selectable)
-          if (obj.soldOut) {
-            input.classList.add(classes.disabled);
-            label.classList.add(classes.disabled);
-  
-            if (value !== selectedValue) {
-              input.checked = false
+          console.log(buttonGroup)
+          if (buttonGroup != null) {
+            var input = buttonGroup.querySelector('input');
+            var label = buttonGroup.querySelector('label');
+            // Variant exists - enable & show variant
+            input.classList.remove(classes.disabled);
+            label.classList.remove(classes.disabled);
+            // Variant sold out - cross out option (remains selectable)
+            if (obj.soldOut) {
+              input.classList.add(classes.disabled);
+              label.classList.add(classes.disabled);
+    
+              if (value !== selectedValue) {
+                input.checked = false
+              }
             }
           }
         }
