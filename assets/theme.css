@@ -7706,8 +7706,16 @@ label.tag__checkbox-wrapper{
   border:0;
   padding:0;
   margin:0 0 -12px;
-  position:relative
+  position:relative;
+  
 }
+
+.variant-input-wrap.swatch {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 
 .variant-input-wrap input{
     clip:rect(0, 0, 0, 0);
