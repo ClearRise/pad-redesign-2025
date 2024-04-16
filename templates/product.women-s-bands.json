@@ -10,6 +10,7 @@
         },
         "text_BLakNm": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Carat Weight (avg): 3.6 ct"
           }
