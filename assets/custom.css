@@ -1396,20 +1396,18 @@ button.upsell-add-to-cart.disabled{
   .bold_option_swatch .bold_option_value {
     display: inline-block!important;
     clear: left;
-    width: 76px!important;
     margin-right: 3px;
 }
 
 .bold_option_swatch .bold_option_value_element {
     display: block!important;
-    float: left;
-    margin-right: 10px!important;
-    margin-bottom: 5px!important;
-    margin-top: 8px!important;
+    float: none;
+    margin: 5px auto 10px;
+  width: fit-content;
 }
 
 .bold_option_swatch_title {
-    line-height: 15px!important;
+    line-height: 11px!important;
     letter-spacing: 0.5px!important;
     font-size: 10px!important;
     text-align: center;
@@ -1418,7 +1416,7 @@ button.upsell-add-to-cart.disabled{
     opacity: 1;
     background-color: white;
     color: black;
-    display: inline-block;
+    display: block;
     height: auto!important;
 }
 .bold_option_swatch_title .bold_option_value_price{
@@ -1429,7 +1427,7 @@ button.upsell-add-to-cart.disabled{
 } 
 
 .bold_option_swatch_title .bold_option_value_title{
-  line-height: initial;
+  line-height: inherit;
   height: auto!important;
   margin-bottom: 10px;
 } 
