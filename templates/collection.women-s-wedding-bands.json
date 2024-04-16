@@ -78,13 +78,13 @@
     "text_and_image_NJ76bR": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Frame_2056.png",
+        "image": "shopify:\/\/shop_images\/Women_s_Group_Shot_-_Beige_Back_Ground_v2.png",
         "image_width": 700,
         "subtitle": "",
         "title": "Looking for Something Custom?",
         "text": "<p>Designed by You. Crafted by Us.<\/p>",
         "button_label": "Design Your Dream Wedding Ring",
-        "button_link": "",
+        "button_link": "shopify:\/\/pages\/custom-design-consultation",
         "button_style": "secondary",
         "align_text": "left",
         "layout": "right",
