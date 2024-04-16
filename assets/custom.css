@@ -1401,7 +1401,7 @@ button.upsell-add-to-cart.disabled{
   .bold_option_swatch .bold_option_value {
     display: inline-block!important;
     clear: left;
-    margin-right: 5px;
+    margin-right: 2px;
 }
 
 .bold_option_swatch .bold_option_value_element {
