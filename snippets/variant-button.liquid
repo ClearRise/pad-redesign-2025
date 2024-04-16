@@ -85,6 +85,7 @@
           >
             {{ value | escape }}
           </label>
+          <span class="swatch-txt" >{{ value | escape }}</span>
         {%- else -%}
           <label
             for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
