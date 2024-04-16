@@ -205,6 +205,9 @@
         "tab",
         "contact"
       ],
+      "custom_css": [
+        ".bold_option_value_swatch {width: 45px !important; height: 45px !important;}"
+      ],
       "settings": {
         "sku_enable": false,
         "image_position": "left",
