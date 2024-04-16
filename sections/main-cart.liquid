@@ -62,6 +62,7 @@
           {% assign intelligems_total = 0 %}
           {% assign cart_total_exclude_gift = 0 %}
           {% for item in cart.items %}
+          
             {% if item.product.metafields.custom.hide_free_gift.value == true %}
                 {% assign cart_total_exclude_gift = cart_total_exclude_gift | plus: item.final_price  | times: item.quantity %}
             {% endif %}
