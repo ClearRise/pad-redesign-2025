@@ -2,11 +2,14 @@
   "sections": {
     "text_and_image_LWcTaf": {
       "type": "text-and-image",
+      "custom_css": [
+        "h1{font-size: 16px;}"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Frame_2059.png",
         "image_width": 700,
         "subtitle": "",
-        "title": "Most Wedding Bands Look the Same. Ours Don't.",
+        "title": "Wedding Bands Should be One-of-a-kind Just Like You",
         "text": "<p>You & your significant other deserve a wedding band as unique as you are. Every ring is handcrafted just for you.<\/p>",
         "button_label": "Wear Your Story",
         "button_link": "",

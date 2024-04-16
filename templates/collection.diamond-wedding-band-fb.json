@@ -6,11 +6,12 @@
         "heading_Aywhg6": {
           "type": "heading",
           "settings": {
-            "title": "Luxury Wedding Bands"
+            "title": "Women's Wedding Bands"
           }
         },
         "text_YRAGkj": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "enlarge_text": false,
             "text": "<p>Handcrafted, fully customizable, and using luxury grade ethically sourced materials. <\/p>"
