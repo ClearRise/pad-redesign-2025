@@ -3,16 +3,16 @@
     "text_and_image_LWcTaf": {
       "type": "text-and-image",
       "custom_css": [
-        "h1{font-size: 16px;}"
+        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Frame_2059.png",
+        "image": "shopify:\/\/shop_images\/Women_s_Ring_Hero.png",
         "image_width": 700,
         "subtitle": "",
-        "title": "Wedding Bands Should be One-of-a-kind Just Like You",
-        "text": "<p>You & your significant other deserve a wedding band as unique as you are. Every ring is handcrafted just for you.<\/p>",
-        "button_label": "Wear Your Story",
-        "button_link": "",
+        "title": "Your Ring. Your Story.",
+        "text": "<p>Your wedding band should be one-of-a-kind just like you. Every ring is handcrafted and fully customizable from sustainably sourced materials. <\/p>",
+        "button_label": "Find Your Ring",
+        "button_link": "shopify:\/\/collections\/womens-wedding-bands",
         "button_style": "primary",
         "align_text": "left",
         "layout": "right",
@@ -37,6 +37,7 @@
       "block_order": [
         "heading_Aywhg6"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
@@ -45,12 +46,16 @@
     },
     "text_and_image_GaNiE8": {
       "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
+        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Frame_2064.png",
+        "image": "shopify:\/\/shop_images\/Women_s_Rings_on_red_background.png",
         "image_width": 700,
         "subtitle": "#1",
-        "title": "2000+ Five Star Reviews",
-        "text": "<p>Over 100,000 happy ring owners trust us for a reason.<\/p>",
+        "title": "You dream it. We Make it.",
+        "text": "<p>Every wedding band from Patrick Adair Designs is fully customizable. That means you are guaranteed to get <\/p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -61,12 +66,16 @@
     },
     "text_and_image_xYCfXG": {
       "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
+        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Frame_2066.png",
+        "image": "shopify:\/\/shop_images\/Group_Shot_d3dec58d-44ce-4568-9648-13e1dd7ba31e.png",
         "image_width": 700,
         "subtitle": "#2",
-        "title": "Perfect Fit. Every Time.",
-        "text": "<p>Don't know your size? We'll send you a free sizing kit before making your ring.<\/p>",
+        "title": "Superior Quality at a Better Price",
+        "text": "<p>Every ring is made to luxury jeweler standards using Solid Gold, Solid Platinum, and ethically sourced lab diamonds (and other gemstones). You get world-class quality without excess mark-up. <\/p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -77,12 +86,16 @@
     },
     "text_and_image_9XTPrK": {
       "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
+        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Frame_2058.png",
+        "image": "shopify:\/\/shop_images\/Hand_Crafted.png",
         "image_width": 700,
         "subtitle": "#3",
-        "title": "Handcrafted Just for You",
-        "text": "<p>One-of-a-kind every time! Infinite options available. Design your perfect band.<\/p>",
+        "title": "Handcrafted with Love",
+        "text": "<p>Every piece is handcrafted by artisans using ethically and sustainably sourced materials. <\/p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -93,12 +106,16 @@
     },
     "text_and_image_ciVTF9": {
       "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
+        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Frame_2062.png",
+        "image": "shopify:\/\/shop_images\/Group_Shot_a35d53b1-4f15-4e3a-8e7c-d5dcd325442c.png",
         "image_width": 700,
         "subtitle": "#4",
-        "title": "Built to last a Lifetime",
-        "text": "<p>Made to Order. Made to Last. Lifetime Satisfaction Guarantee.<\/p>",
+        "title": "Sustainably Sourced",
+        "text": "<p>We use ethically sourced lab grown Diamonds. This means every gemstone we sell is chemically identical to its mined counterpart <strong>but guaranteed to be conflict free<\/strong>. <\/p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -109,12 +126,16 @@
     },
     "text_and_image_HeDYVD": {
       "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
+        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Frame_2063.png",
+        "image": "shopify:\/\/shop_images\/Ring_on_Hand.png",
         "image_width": 700,
         "subtitle": "#5",
-        "title": "Free Shipping to US & Canada",
-        "text": "<p>True quality is priceless...but shipping should be free in our opinion.<\/p>",
+        "title": "The Perfect Fit. Every Time.",
+        "text": "<p>We offer free sizing kits with your order, so if you don't know your size, no stress. We'll help you find it for free. <\/p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -179,7 +200,7 @@
     "text_and_image_NJ76bR": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Frame_2056.png",
+        "image": "shopify:\/\/shop_images\/Women_s_Group_Shot_-_Beige_Back_Ground_v2.png",
         "image_width": 700,
         "subtitle": "",
         "title": "Looking for Something Custom?",
