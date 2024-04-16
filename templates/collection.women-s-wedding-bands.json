@@ -1,41 +1,25 @@
 {
   "sections": {
-    "text_and_image_LWcTaf": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Frame_2069_1a4e228c-acd7-4b9e-8e2b-87239f66cf09.png",
-        "image_width": 700,
-        "subtitle": "",
-        "title": "Shop Diamond Wedding Bands",
-        "text": "<p>You deserve a wedding band as unique as you are. Every ring is handcrafted just for you.<\/p>",
-        "button_label": "SHOP DIAMOND WEDDING BANDS",
-        "button_link": "",
-        "button_style": "secondary",
-        "align_text": "left",
-        "layout": "right",
-        "divider": false
-      }
-    },
-    "rich_text_pm48aQ": {
+    "rich_text_RyLK4F": {
       "type": "rich-text",
       "blocks": {
-        "heading_Aywhg6": {
+        "heading_yCgfjY": {
           "type": "heading",
           "settings": {
-            "title": "Most jewelry looks the same. Ours doesn't."
+            "title": "{{ collection.title }}"
           }
         },
-        "text_YRAGkj": {
+        "text_tGqmHW": {
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>Express yourself with something truly unique. Since 2015, we’ve been handcrafting artisan rings using the most uncommon luxury materials.<\/p>"
+            "text": "<p>Handcrafted Wedding Bands that are fully customizable featuring sustainable and conflict-free materials. <\/p>"
           }
         }
       },
       "block_order": [
-        "heading_Aywhg6",
-        "text_YRAGkj"
+        "heading_yCgfjY",
+        "text_tGqmHW"
       ],
       "settings": {
         "align_text": "center",
@@ -168,8 +152,7 @@
     }
   },
   "order": [
-    "text_and_image_LWcTaf",
-    "rich_text_pm48aQ",
+    "rich_text_RyLK4F",
     "collection-header",
     "main-collection",
     "text_and_image_NJ76bR",
