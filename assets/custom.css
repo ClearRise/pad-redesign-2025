@@ -282,6 +282,10 @@ img.h_auto[data-sizes=auto]{
     height: 70px;
 }
 
+.bold_option_checkbox .bold_option_element {
+  position: relative;
+  top: 2px;
+}
 .pswp__ui {
   	display: block!important;
     top: 20px!important;
@@ -760,6 +764,7 @@ label span.bold_option_element input{
     font-size: 12px;
     letter-spacing: 0.1px;
   }
+ 
   .upsell-collection .upsell-product {
     margin: 0.3rem 0;
     padding: 0.3rem 0.3rem!important;
@@ -1938,6 +1943,28 @@ label.variant__label.custom_label{
 .bold_option_title{
   font-weight: 700!important;
   display: inline-block;
+}
+
+.bold_option_title .bold_option_value_title:before {
+  content: " - ";
+}
+
+.bold_option_title .bold_option_value_price {
+  content: " (+";
+  font-weight: 700;
+  font-size: inherit;
+}
+
+.bold_option_title .bold_option_value_price .money {
+  margin-right: -3px;
+}
+
+.bold_option_title .bold_option_value_price:before {
+  content: " (+";
+}
+
+.bold_option_title .bold_option_value_price:after {
+  content: ")";
 }
 
 .custom-product-blocK select{
