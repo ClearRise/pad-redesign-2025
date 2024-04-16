@@ -83,7 +83,7 @@
             class="variant__button-label color-swatch color-swatch--{{ value | handle }}{% unless product_available %} disabled{% endunless %}"
             style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}"
           >
-            {{ value | escape }}
+            <span>{{ value | escape }}</span>
           </label>
           <span class="swatch-txt" >{{ value | escape }}</span>
         {%- else -%}
