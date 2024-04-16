@@ -52,88 +52,6 @@
         "parallax": true
       }
     },
-    "promo_grid_mknpQG": {
-      "type": "promo-grid",
-      "blocks": {
-        "advanced_TiMXR7": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "Shop Men's Bands",
-            "cta_link1": "",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Frame_2065.png",
-            "video_url": "",
-            "width": "50",
-            "height": 500,
-            "text_size": 100,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_PkVnc4": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "Shop Matching Bands",
-            "cta_link1": "",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Frame_2055.png",
-            "video_url": "",
-            "width": "50",
-            "height": 500,
-            "text_size": 100,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_J9pVFD": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "Shop Women's Wedding Bands",
-            "textarea": "",
-            "cta_text1": "Shop Collection",
-            "cta_link1": "",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/MS-414_R_5.png",
-            "video_url": "",
-            "width": "100",
-            "height": 500,
-            "text_size": 100,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff",
-            "boxed": false,
-            "framed": false
-          }
-        }
-      },
-      "block_order": [
-        "advanced_TiMXR7",
-        "advanced_PkVnc4",
-        "advanced_J9pVFD"
-      ],
-      "settings": {
-        "full_width": false,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": true
-      }
-    },
     "main-collection": {
       "type": "main-collection",
       "blocks": {
@@ -188,14 +106,73 @@
         "layout": "right",
         "divider": false
       }
+    },
+    "promo_grid_mknpQG": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_TiMXR7": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "Shop Men's Bands",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Frame_2065.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_PkVnc4": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "Shop Matching Bands",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Frame_2055.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "advanced_TiMXR7",
+        "advanced_PkVnc4"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true
+      }
     }
   },
   "order": [
     "text_and_image_LWcTaf",
     "rich_text_pm48aQ",
     "collection-header",
-    "promo_grid_mknpQG",
     "main-collection",
-    "text_and_image_NJ76bR"
+    "text_and_image_NJ76bR",
+    "promo_grid_mknpQG"
   ]
 }
