@@ -238,6 +238,11 @@ bold-options.css version 6
     border:3px solid #fff;
 }
 
+.bold_option_value_element, .bold_option_value_swatch {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 .bold_swatch_selected.bold_option_value_element {
     box-shadow:0 0 0 1px #B3B3B3;
     border:3px solid #B3B3B3;
