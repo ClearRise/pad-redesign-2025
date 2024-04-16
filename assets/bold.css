@@ -8,7 +8,8 @@
 
 .bold_option_title, .bold_option_value_price {
     font-weight: 600;
-  font-size: 14px;
+  font-size: 11px;
+  margin-top: 3px;
 }
 
 
