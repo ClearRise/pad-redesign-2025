@@ -1306,7 +1306,7 @@ button.upsell-add-to-cart.disabled{
   align-items: center;
   justify-content: center;
   display: flex;
-  color: #000;
+  color: inherit;
 }
 
 ._b_cart__item-sub > div:first-child {
