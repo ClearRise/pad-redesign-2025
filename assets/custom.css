@@ -1405,6 +1405,12 @@ button.upsell-add-to-cart.disabled{
     width: 76px;
 }
 
+@media screen and (max-width: 480px) {
+  .bold_option_swatch .bold_option_value {
+    width: 21vw;
+  }
+}
+
 .bold_option_swatch .bold_option_value_element {
     display: block!important;
     float: none;
