@@ -618,7 +618,7 @@
                           <div class="product-page-section-header">CUSTOM ENGRAVING 
                             {% for variant in engrave_product.variants %}
                               {% if variant.id == first_gift_product_id_var %}
-                                <span class="pdp-engraving-disclaimer">(+{{ variant.price | money_without_trailing_zeros }})</span>
+                                <span class="pdp-engraving-disclaimer">(+{{ variant.price | money_without_trailing_zeros | remove: ' ' }})</span>
                               {% endif %}
                             {% endfor %} 
                           </div>
