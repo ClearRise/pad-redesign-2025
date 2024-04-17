@@ -135,7 +135,7 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "WEDDING BANDS",
+            "heading": "WEDDING <br>BANDS",
             "textarea": "<u> SHOP NOW <\/u>",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/best-selling-wedding-bands-v1",
@@ -157,7 +157,7 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "GLOWSTONE SERIES",
+            "heading": "GLOWSTONE <br>SERIES",
             "textarea": "<u> SHOP NOW <\/u>",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/the-glowstone-series",
@@ -179,7 +179,7 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "METEORITE RINGS",
+            "heading": "METEORITE <br> RINGS",
             "textarea": "<u> SHOP NOW <\/u>",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/meteorite-rings",
@@ -202,13 +202,13 @@
           "disabled": true,
           "settings": {
             "subheading": "NEW",
-            "heading": "Diamond <br>Wedding Bands",
+            "heading": "DIAMOND <br>WEDDING BANDS",
             "textarea": "<u> Shop Now <\/u>",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Womens_Band_Home_page_v4.png",
+            "image": "shopify:\/\/shop_images\/Single_womens_band_2_5ad37730-f518-47e6-82fc-c39e22b95ab3.png",
             "video_url": "",
             "width": "50",
             "height": 300,
@@ -297,6 +297,9 @@
         "2e50058a-8bc8-46f4-880f-08ed48490db6",
         "8f48b383-f1c5-4d34-a6cd-eab1f6f524b0",
         "672a52df-0901-41df-bfcc-f5c1e4da1a77"
+      ],
+      "custom_css": [
+        ".promo-grid-overlay {background-color: rgba(0, 0, 0, 0.2); \/* Adjust color and opacity here *\/}"
       ],
       "settings": {
         "full_width": false,
