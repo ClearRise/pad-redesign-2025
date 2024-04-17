@@ -55,7 +55,10 @@
           "type": "free_gifts",
           "settings": {
             "gift_box_title": "",
-            "gift_included": ""
+            "gift_included": "",
+            "border_color": "",
+            "bg_color": "",
+            "text_color": ""
           }
         },
         "buy_buttons": {
@@ -214,8 +217,8 @@
         "contact"
       ],
       "custom_css": [
-        ".bold_option_value_swatch {width: 40px !important; height: 40px !important;}",
-        ".bold_option_swatch .bold_option_value {width: auto !important;}",
+        ".bold_option_value_swatch {max-width: 40px !important; max-height: 40px !important;}",
+        ".bold_option_swatch .bold_option_value {width: auto !important; max-width: 40px; max-height: 40px;}",
         ".bold_option_swatch_title {display: none;}",
         ".bold_option_swatch .bold_option_value_element {margin-right: 0 !important;}"
       ],
