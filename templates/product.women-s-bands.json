@@ -56,9 +56,9 @@
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
-            "border_color": "",
-            "bg_color": "",
-            "text_color": ""
+            "border_color": "#ffffff",
+            "bg_color": "#ffffff",
+            "text_color": "#000000"
           }
         },
         "buy_buttons": {
