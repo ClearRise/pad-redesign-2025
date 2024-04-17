@@ -1424,6 +1424,9 @@ button.upsell-add-to-cart.disabled{
   float: none;
   margin: 5px auto 10px;
   width: 100%;
+  aspect-ratio: 1;
+  max-width: 70px;
+  max-height: 70px;
 }
 
 .bold_option_swatch_title {
