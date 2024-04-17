@@ -278,8 +278,11 @@ img.h_auto[data-sizes=auto]{
 }
 
 .bold_options .bold_option_swatch .bold_option_value_element .bold_option_value_swatch {
-    width: 70px;
-    height: 70px;
+  max-width: 70px;
+  max-height: 70px;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
 }
 
 .bold_option_checkbox .bold_option_element {
