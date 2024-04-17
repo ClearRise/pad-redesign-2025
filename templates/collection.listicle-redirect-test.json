@@ -6,7 +6,7 @@
         "heading_yCgfjY": {
           "type": "heading",
           "settings": {
-            "title": "{{ collection.title }}"
+            "title": "Women's Diamond Wedding Bands"
           }
         },
         "text_tGqmHW": {
@@ -111,6 +111,7 @@
             "text_size": 100,
             "text_align": "vertical-bottom horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "#ffffff",
             "boxed": false,
             "framed": false
@@ -133,6 +134,7 @@
             "text_size": 100,
             "text_align": "vertical-bottom horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "#ffffff",
             "boxed": false,
             "framed": false
