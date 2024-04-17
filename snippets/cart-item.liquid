@@ -196,6 +196,7 @@
           {% endif %}
         {% endfor %}
       {% endif %}
+      <div class="bold_edit_in_cart"></div>
       {% unless found_engrave %}
      {% if settings.show_engraving and settings['product-engraving'] and product.product.type == 'Ring' %} 
         {% paginate collections.all.products by 1000 %}
