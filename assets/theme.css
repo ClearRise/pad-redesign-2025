@@ -9697,7 +9697,11 @@ html[dir=rtl] .background-media-text__text{
       border-color:var(--colorHeroText);
     }
 
-.type-advanced .promo-grid__content:not(.promo-grid__content--boxed):not(.promo-grid__content--sale):after,.type-simple .promo-grid__content:not(.promo-grid__content--boxed):not(.promo-grid__content--sale):after{
+.bold_edit_in_cart {
+  display: none!important;
+}
+
+.type-simple .promo-grid__content:not(.promo-grid__content--boxed):not(.promo-grid__content--sale):after{
       content:"";
       position:absolute;
       top:0;
@@ -9706,7 +9710,7 @@ html[dir=rtl] .background-media-text__text{
       left:0;
 /*       z-index:auto; */
 /*       background:radial-gradient(rgba(0,0,0,0.1) 0%, transparent 60%); */
-      background:transparent;
+      background:radial-gradient(rgba(0,0,0,var(--colorImageOverlayTextShadow)) 0%, transparent 60%);
       margin:-100px -200px -100px -200px;
       z-index:2;
     }
