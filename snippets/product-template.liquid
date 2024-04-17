@@ -23,7 +23,7 @@
       assign product_description_width = 'medium-up--two-fifths'
       assign product_image_size = '740x'
   endcase
-
+  assign free_gift_index = 0
   assign product_img_structure = product.featured_media | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
 -%}
 
@@ -165,8 +165,8 @@
                     }
                     {% endstyle %}
                     <div class="product-block product-block-gifts custom_gift_block" {{ block.shopify_attributes }}>
-                    {% assign GiftBoxAmount = settings.product_threshold_amount %}
-                    {% assign GiftBoxAmountRaw = settings.product_threshold_amount | times:100 %}
+                    {% assign GiftBoxAmount = section.settings.product_threshold_amount | default: settings.product_threshold_amount %}
+                    {% assign GiftBoxAmountRaw = section.settings.product_threshold_amount | default: settings.product_threshold_amount | times:100 %}
                     {% assign GiftBoxAmountMoney = GiftBoxAmountRaw | abs | money %}
                     {% assign already_added =  'Included' %}
 
@@ -176,83 +176,43 @@
                         {% endif %}
                        
                        <div class="_b_upsell-collection _b_dgCartUpsellCont _b_gift-products"> 
+                        {% for i in (1..3) %}
+                          {% assign image_1 = 'product' | append: i | append: '-img1' %}
+                          {% assign image_2 = 'product' | append: i | append: '-img2' %}
+                          {% assign title = 'product' | append: i | append: '-title' %}
+                          {% assign text = 'product' | append: i | append: '-text' %}
 
-                        {% if settings.product1-img1 %}
-                          <div  class="_b_upsell-product-inner _b_gift-product show" >
-                            <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border {% if settings.product1-img2 == blank %}inline-box{% endif %}">
-                              <div class="_b_upsell-product-image" style="margin-right: 5px;">
-                                <img class="dci-image" src="{{ settings.product1-img1 | img_url: '200x' }}" alt="{{ settings.product1-title | escape }}">     
-                              </div>
-                              {% if settings.product1-img2 %}
-                                <div class="_b_upsell-product-image">
-                                  <img class="dci-image" src="{{ settings.product1-img2 | img_url: '200x' }}" alt="{{ settings.product1-title | escape }}">     
+                          {% assign image1 = block.settings[image_1] | default: settings[image_1] %}
+                          {% assign image2 = block.settings[image_2] | default: settings[image_2] %}
+                          {% assign title = block.settings[title] | default: settings[title] %}
+                          {% assign text = block.settings[text] | default: settings[text] %}
+
+                          {% if image1 %}
+                            <div  class="_b_upsell-product-inner _b_gift-product show" >
+                              <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border {% if image2 == blank %}inline-box{% endif %}">
+                                <div class="_b_upsell-product-image" style="margin-right: 5px;">
+                                  <img class="dci-image" src="{{ image1 | img_url: '200x' }}" alt="{{ title | escape }}">     
                                 </div>
-                              {% endif %}
-                              <div class="_b_upsell-product-info">
-                                <div class="_b_product-title-link">
-                                    <strong class="dci-title">{{ settings.product1-title}}</strong>
-                                </div>
-                                <div class="_b_cart__item-sub">
-                                  <div >
-                                      <p class="_b_txt">{{ settings.product1-text}}</p>
+                                {% if image2 %}
+                                  <div class="_b_upsell-product-image">
+                                    <img class="dci-image" src="{{ image2 | img_url: '200x' }}" alt="{{ title | escape }}">     
                                   </div>
-                                </div>    
-                              </div>
-                            </div>
-                          </div>
-                        {% endif %}
-              
-                        {% if settings.product2-img1 %}
-                          <div  class="_b_upsell-product-inner _b_gift-product show">
-                            <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border {% if settings.product2-img2 == blank %}inline-box{% endif %}">
-                              <div class="_b_upsell-product-image" style="margin-right: 5px;">
-                                <img class="dci-image" src="{{ settings.product2-img1 | img_url: '200x' }}" alt="{{ settings.product2-title | escape }}">     
-                              </div>
-                              {% if settings.product2-img2 %}
-                              <div class="_b_upsell-product-image">
-                                <img class="dci-image" src="{{ settings.product2-img2 | img_url: '200x' }}" alt="{{ settings.product2-title | escape }}">     
-                              </div>
-                              {% endif %}
-                              <div class="_b_upsell-product-info">
-                                <div class="_b_product-title-link">
-                                  <strong class="dci-title">{{ settings.product2-title}}</strong>
-                                </div>
-                                <div class="_b_cart__item-sub">
-                                  <div >
-                                    <p class="_b_txt">{{ settings.product2-text}}</p>
-                                  </div>
-                                </div>    
-                              </div>
-                            </div>
-                          </div>
-                        {% endif %}
-              
-                         {% if settings.product3-img1 %}
-                          <div  class="_b_upsell-product-inner _b_gift-product show">
-                            <div class="_b_upsell-product _b_dgCartUpsellInner _b_custom_border {% if settings.product3-img2 == blank %}inline-box{% endif %}">
-                              <div class="_b_upsell-product-image" style="margin-right: 5px;">
-                                <img class="dci-image" src="{{ settings.product3-img1 | img_url: '200x' }}" alt="{{ settings.product3-title | escape }}">     
-                              </div>
-                           {% if settings.product3-img2 %}
-                              <div class="_b_upsell-product-image">
-                                <img class="dci-image" src="{{ settings.product3-img2 | img_url: '200x' }}" alt="{{ settings.product3-title | escape }}">     
-                              </div>
-                           {% endif %}
-                              <div class="_b_upsell-product-info">
+                                {% endif %}
+                                <div class="_b_upsell-product-info">
                                   <div class="_b_product-title-link">
-                                      <strong class="dci-title">{{ settings.product3-title}}</strong>
+                                      <strong class="dci-title">{{ title }}</strong>
                                   </div>
-                             <div class="_b_cart__item-sub">
-                               <div >
-                                    <p class="_b_txt">{{ settings.product3-text}}</p>
+                                  <div class="_b_cart__item-sub">
+                                    <div >
+                                        <p class="_b_txt">{{ text }}</p>
+                                    </div>
+                                  </div>    
                                 </div>
-                              </div>    
-                         </div>
+                              </div>
                             </div>
-                          </div>
-                        {% endif %}             
-                        
-                         <span style="font-size:12px;">Selection made during checkout process</span>    
+                          {% endif %}
+                        {% endfor %}
+                        <span style="font-size:12px;">Selection made during checkout process</span>    
                        </div>   
                       {% endif %}
                     </div>
