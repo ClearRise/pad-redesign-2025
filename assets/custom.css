@@ -1420,10 +1420,10 @@ button.upsell-add-to-cart.disabled{
 }
 
 .bold_option_swatch .bold_option_value_element {
-    display: block!important;
-    float: none;
-    margin: 5px auto 10px;
-  width: fit-content;
+  display: block!important;
+  float: none;
+  margin: 5px auto 10px;
+  width: 100%;
 }
 
 .bold_option_swatch_title {
