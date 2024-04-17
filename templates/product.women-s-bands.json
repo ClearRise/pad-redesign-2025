@@ -10,9 +10,8 @@
         },
         "text_BLakNm": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "Carat Weight (avg): 3.6 ct"
+            "text": ""
           }
         },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
@@ -136,7 +135,7 @@
           "type": "tab",
           "settings": {
             "title": "Ring Details",
-            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
+            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
