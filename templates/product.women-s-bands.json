@@ -56,6 +56,15 @@
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
+            "product_threshold_amount": 150,
+            "product1-title": "FREE Mens Band with Purchase",
+            "product1-text": "Get any Glowstone ring under $400 free with purchase of a Diamond Wedding Band",
+            "product2-title": "",
+            "product2-text": "",
+            "product3-title": "",
+            "product3-text": "",
+            "product-1": "",
+            "product-2": "",
             "border_color": "#ffffff",
             "bg_color": "#ffffff",
             "text_color": "#000000"
@@ -281,6 +290,7 @@
             "text_size": 100,
             "text_align": "vertical-bottom horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -303,6 +313,7 @@
             "text_size": 100,
             "text_align": "vertical-bottom horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -325,6 +336,7 @@
             "text_size": 100,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -347,6 +359,7 @@
             "text_size": 100,
             "text_align": "vertical-bottom horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -370,6 +383,7 @@
             "text_size": 100,
             "text_align": "vertical-bottom horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false

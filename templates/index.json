@@ -148,6 +148,7 @@
             "text_size": 105,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -170,6 +171,7 @@
             "text_size": 105,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -192,6 +194,7 @@
             "text_size": 105,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -215,6 +218,7 @@
             "text_size": 105,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 0,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -237,6 +241,7 @@
             "text_size": 105,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "#ffa500",
             "boxed": false,
             "framed": false
@@ -260,6 +265,7 @@
             "text_size": 105,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -283,6 +289,7 @@
             "text_size": 105,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
