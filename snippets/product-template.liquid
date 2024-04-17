@@ -157,7 +157,13 @@
                       {{ block.settings.text }}
                     </div>
                   {%- when 'free_gifts' -%}
-
+                    {% style %}
+                    .custom_gift_block ._b_upsell-product {
+                      background: {{block.settings.bg_color}};
+                      color: {{block.settings.text_color}};
+                      border-color: {{block.settings.border_color}}!important;
+                    }
+                    {% endstyle %}
                     <div class="product-block product-block-gifts custom_gift_block" {{ block.shopify_attributes }}>
                     {% assign GiftBoxAmount = settings.product_threshold_amount %}
                     {% assign GiftBoxAmountRaw = settings.product_threshold_amount | times:100 %}
