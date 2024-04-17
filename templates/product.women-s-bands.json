@@ -11,7 +11,7 @@
         "text_BLakNm": {
           "type": "text",
           "settings": {
-            "text": ""
+            "text": "Total Carat Weight (avg): {{ product.metafields.custom.carat_weight.value }}"
           }
         },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
