@@ -1412,7 +1412,7 @@ button.upsell-add-to-cart.disabled{
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
   .bold_option_swatch .bold_option_element {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
