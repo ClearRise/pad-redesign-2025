@@ -9706,7 +9706,7 @@ html[dir=rtl] .background-media-text__text{
       left:0;
 /*       z-index:auto; */
 /*       background:radial-gradient(rgba(0,0,0,0.1) 0%, transparent 60%); */
-      background:radial-gradient(rgba(0,0,0,var(--colorImageOverlayTextShadow)) 0%, transparent 60%);
+      background:transparent;
       margin:-100px -200px -100px -200px;
       z-index:2;
     }
