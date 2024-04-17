@@ -43,7 +43,11 @@
 <div class="promo-grid{% if section.settings.space_above %} promo-grid--space-top{% endif %}{% if section.settings.space_below %} promo-grid--space-bottom{% endif %}">
   <div class="flex-grid flex-grid--gutters flex-grid--{{ section.id }}">
     {%- for block in section.blocks -%}
-
+      <style>
+        .flex-grid__item--{{ block.id }} {
+          --colorImageOverlayOpacity: {{block.settings.dark_overlay}}%;
+        }
+      </style>
       {%- if collection_page -%}
         {%- if block.settings.promo_collection != blank -%}
           {%- if block.settings.promo_collection != collection.handle -%}
