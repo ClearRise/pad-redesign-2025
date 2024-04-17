@@ -4,7 +4,7 @@
   {%- unless section.settings.full_width -%}
     <div class="page-width">
   {%- endunless -%}
-
+  
   {%- render 'promo-grid', section: section, collection_page: false -%}
 
   {%- if section.blocks.size == 0 -%}
@@ -269,6 +269,16 @@
           {
             "type": "header",
             "content": "Design"
+          },
+          {
+            "type": "range",
+            "id": "dark_overlay",
+            "label": "Dark overlay",
+            "unit": "%",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 10 
           },
           {
             "type": "color",
