@@ -145,6 +145,7 @@
             
             <div data-product-blocks>
               {%- form 'product', product, id: form_id, class: 'product-single__form' -%}
+                <div class="bold_options" data-product-id="{{ product.id }}"></div>
               {%- capture form_id -%}AddToCartForm-{{ section_id }}-{{ product.id }}{%- endcapture -%}
               {%- for block in blocks -%}
                 {%- case block.type -%}
