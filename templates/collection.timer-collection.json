@@ -44,8 +44,13 @@
         "autoplay_speed": 5
       }
     },
-    "replo_trust_icons_fy9XYw": {
-      "type": "replo-trust-icons",
+    "replo_trust_icons_white_backg_iXGBJK": {
+      "type": "replo-trust-icons-white-backg",
+      "settings": {
+      }
+    },
+    "replo_flash_sale_timer_zLRkeU": {
+      "type": "replo-flash-sale-timer",
       "settings": {
       }
     },
@@ -91,6 +96,7 @@
             "text_size": 120,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -149,7 +155,8 @@
   },
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
-    "replo_trust_icons_fy9XYw",
+    "replo_trust_icons_white_backg_iXGBJK",
+    "replo_flash_sale_timer_zLRkeU",
     "collection-header",
     "promo-grid",
     "main-collection"
