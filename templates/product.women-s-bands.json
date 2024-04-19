@@ -35,11 +35,6 @@
             "inventory_transfers_enable": true
           }
         },
-        "bold_option_4TpV9E": {
-          "type": "bold_option",
-          "settings": {
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -49,6 +44,11 @@
             "color_swatches": true,
             "custom_variant_comment": false,
             "collapse_options": false
+          }
+        },
+        "bold_option_4TpV9E": {
+          "type": "bold_option",
+          "settings": {
           }
         },
         "engraving_YpGMkM": {
@@ -62,6 +62,7 @@
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
+            "bottom_text": "Selection made during checkout process",
             "product_threshold_amount": 150,
             "product1-title": "FREE Mens Band with Purchase",
             "product1-text": "Get any Glowstone ring free with purchase of a Diamond Wedding Band",
@@ -213,8 +214,8 @@
         "94c49419-9d53-4cfe-8c63-edaf9a145c94",
         "separator",
         "inventory_status",
-        "bold_option_4TpV9E",
         "variant_picker",
+        "bold_option_4TpV9E",
         "engraving_YpGMkM",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
         "buy_buttons",
