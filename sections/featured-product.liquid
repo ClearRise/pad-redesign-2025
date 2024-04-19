@@ -19,16 +19,6 @@
 
 {%- if section.settings.divider -%}</div>{%- endif -%}
 
-{% if request.path contains '/collections/luxury-rings' %}
-  <script>
-    $( document ).ready(function() {
-        $(".product-block .collapsibles-wrapper button").addClass("is-open");
-        $(".product-block .collapsibles-wrapper button").attr("aria-expanded", "true");
-        $(".product-block .collapsibles-wrapper div.collapsible-content").addClass("is-open");
-    });
-  </script>
-{% endif %}       
-
 {% schema %}
   {
     "name": "Featured product",
