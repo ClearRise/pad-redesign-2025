@@ -220,6 +220,10 @@
         ]
       },
       {
+        "type": "bold_option",
+        "name": "Bold options"
+      },
+      {
         "type": "description",
         "name": "Description",
         "limit": 1,
@@ -235,7 +239,21 @@
         "type": "engraving",
         "name": "Customer Envgraving",
         "settings": [
-          
+          {
+            "type": "select",
+            "id": "style",
+            "label": "Display style",
+            "options": [
+              {
+                "value": "inline",
+                "label": "Inline"
+              },
+              {
+                "value": "popup",
+                "label": "Popup"
+              }
+            ]
+          }
         ]
       },
       {
