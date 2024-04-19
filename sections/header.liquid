@@ -238,17 +238,7 @@
     {%- endfor -%}            
   </div>
 {%- endif -%}
-
-                  
-{% if section.settings.show_menu_img %}
-  {% if section.settings.menu_img != blank %}
-<script>
-  //   $(document).ready(function(){
-  //   $('.shop-all-rings').append('<img src="{{ section.settings.menu_img | img_url: '400x'}}">');
-  // });
-</script>
-    {% endif %}
-{%- endif -%}                 
+            
   {%- unless overlay_header or section.settings.announcement_above_header -%}
     {%- render 'announcement-bar', section: section -%}
   {%- endunless -%}
