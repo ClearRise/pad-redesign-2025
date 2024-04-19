@@ -6564,6 +6564,11 @@ var image = theme.buildProductImage(product, imageSize);
           document.addEventListener('modalOpen.QuickShopModal-' + this.productId, this.openModalProduct.bind(this));
           document.addEventListener('modalClose.QuickShopModal-' + this.productId, this.closeModalProduct.bind(this));
         }
+
+        if(document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper button').textContent.includes("Premium Protection")){
+          document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper button').classList.add('is-open');
+          document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper .collapsible-content').classList.add('is-open');
+        } 
   
         if (!this.inModal) {
           this.formSetup();
@@ -6573,6 +6578,7 @@ var image = theme.buildProductImage(product, imageSize);
           this.customMediaListners();
           this.addIdToRecentlyViewed();
           this.boldOptions();
+          this.engravingPopup();
         }
       },
       
@@ -6619,13 +6625,43 @@ var image = theme.buildProductImage(product, imageSize);
                 if (targetWrapper.querySelector('.bold_option_title .bold_option_value_price') != null) {
                   targetWrapper.querySelector('.bold_option_title .bold_option_value_price').remove();
                 }
+              } 
+            }
+          });
+        });
+      },
+
+      engravingPopup: function () {
+        this.container.querySelector('.add-engraving-button').addEventListener('click', function (e) {
+          e.preventDefault();
+
+          Swal.fire({
+            input: "text",
+            inputLabel: "Engraving Text",
+            inputValue: document.querySelector('.product-page-engraving-input').value,
+            inputPlaceholder: "20 characters or less",
+            inputAttributes: {
+              maxlength: 20,
+            },
+            showCancelButton: true,
+            confirmButtonText: "Save",
+          }).then((result) => {
+            console.log(result)
+            if (result.isConfirmed) {
+              console.log(result)
+              document.querySelector('.product-page-engraving-input').value = result.value
+              if (result.value != "" ) {
+                document.querySelector('.add-engraving-button span').innerHTML = 'Edit Engraving';
+                document.querySelector('.engraving-preview span').innerHTML = result.value;
+                document.querySelector('.engraving-preview').classList.remove('hide');
+              } else {
+                document.querySelector('.add-engraving-button span').innerHTML = 'Add an engraving';
+                document.querySelector('.engraving-preview').classList.add('hide');
               }
-              
             }
             
-          }).bind(this);
-         
-        });
+          });          
+        })
       },
 
       cacheElements: function() {
