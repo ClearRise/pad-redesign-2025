@@ -35,6 +35,11 @@
             "inventory_transfers_enable": true
           }
         },
+        "bold_option_4TpV9E": {
+          "type": "bold_option",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -49,6 +54,7 @@
         "engraving_YpGMkM": {
           "type": "engraving",
           "settings": {
+            "style": "popup"
           }
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
@@ -207,6 +213,7 @@
         "94c49419-9d53-4cfe-8c63-edaf9a145c94",
         "separator",
         "inventory_status",
+        "bold_option_4TpV9E",
         "variant_picker",
         "engraving_YpGMkM",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
