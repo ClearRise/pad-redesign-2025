@@ -518,7 +518,10 @@
                         {% endstyle %}
                       </div>
                 
-                  
+                  {% when 'bold_option' %}
+                    <div class="product-block custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }}>
+                      <div class="bold_options" data-product-id="{{ product.id }}"></div>
+                    </div>
                   {%- when 'variant_picker' -%}
                     <div class="product-block custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }}>
                       {%- unless product.has_only_default_variant -%}
@@ -566,13 +569,11 @@
                           {%- endif -%}
                         {%- endfor -%}
                       {%- endunless -%}
-                      <div class="bold_options" data-product-id="{{ product.id }}"></div>
                     </div>
                   {% when 'engraving' %}
                     <div class="product-block engraving" {{ block.shopify_attributes }}>
                       {%- unless product.empty? -%}
                       {% if settings['product-engraving'] and settings.show_engraving %}
-
                         <div
                           class="engraving_div"
                           {% if product.tags contains 'hide_engrave' or product.type != 'Ring'%}
@@ -582,22 +583,34 @@
                           {% assign engrave_product = settings['product-engraving'] %}
                           {% assign engrave_product_id = engrave_product.id %}
                           {% assign first_gift_product_id_var = engrave_product.selected_or_first_available_variant.id %}
-                          <div class="product-page-section-header">CUSTOM ENGRAVING 
-                            {% for variant in engrave_product.variants %}
-                              {% if variant.id == first_gift_product_id_var %}
-                                <span class="pdp-engraving-disclaimer">(+{{ variant.price | money_without_trailing_zeros | remove: ' ' }})</span>
-                              {% endif %}
-                            {% endfor %} 
-                          </div>
-                          <div>
-                            <input
-                              maxlength="20"
-                              class="product-page-engraving-input"
-                              type="text"
-                              placeholder="Enter your engraving text here"
-                              name="properties[engraving]"
-                            >
-                          </div>
+
+                          {% for variant in engrave_product.variants %}
+                            {% if variant.id == first_gift_product_id_var %}
+                              {% assign price =  variant.price %}
+                            {% endif %}
+                          {% endfor %} 
+
+                          {% if block.settings.style == 'inline' %}
+                            <div class="product-page-section-header">CUSTOM ENGRAVING 
+                              <span class="pdp-engraving-disclaimer">(+{{ price | money_without_trailing_zeros }})</span>
+                            </div>
+                            
+                            <div>
+                              <input
+                                maxlength="20"
+                                class="product-page-engraving-input"
+                                type="text"
+                                placeholder="Enter your engraving text here"
+                                name="properties[engraving]"
+                              >
+                            </div>
+                          {% else %}
+                          <a class="add-engraving-button" title="Add an engraving" role="button" tabindex="0" data-title="CUSTOM ENGRAVING (+{{price | money_without_trailing_zeros }})">
+                            {% render 'icon-edit' %} <span>Add an engraving</span> (+{{ price | money_without_trailing_zeros }})
+                          </a>
+                          <p class="engraving-preview hide">Engraving Text: <span></span></p>
+                          <input maxlength="20" class="product-page-engraving-input" type="hidden" placeholder="Enter your engraving text here" name="properties[engraving]">
+                          {% endif %}
                         </div>
                       {% endif %}
 
@@ -773,18 +786,3 @@
     </div>
   </div>
 </div>
-<script>
-
-document.addEventListener("DOMContentLoaded", function(event) {
-//  document.querySelector('div[data-product-blocks] > div.product-block--tab:nth-of-type(1)');
-  if(document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper button').textContent.includes("Premium Protection")){
-    document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper button').classList.add('is-open');
-    document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper .collapsible-content').classList.add('is-open');
-   } 
-});
-
-</script>
-
-<style>
-  
-</style>
