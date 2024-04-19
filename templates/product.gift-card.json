@@ -23,6 +23,11 @@
             "color_swatches": false
           }
         },
+        "bold_option_agdenj": {
+          "type": "bold_option",
+          "settings": {
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -43,6 +48,7 @@
         "description",
         "separator",
         "variant_picker",
+        "bold_option_agdenj",
         "buy_buttons",
         "share"
       ],
