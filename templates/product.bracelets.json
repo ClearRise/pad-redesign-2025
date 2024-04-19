@@ -24,6 +24,11 @@
             "custom_variant_comment": false
           }
         },
+        "bold_option_agdenj": {
+          "type": "bold_option",
+          "settings": {
+          }
+        },
         "inventory_status": {
           "type": "inventory_status",
           "disabled": true,
@@ -166,6 +171,7 @@
         "price",
         "separator",
         "variant_picker",
+        "bold_option_agdenj",
         "inventory_status",
         "engraving_zRgG3T",
         "fedeed79-9cb7-4600-875e-825d3d9456ad",
