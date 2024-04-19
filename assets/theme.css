@@ -9697,9 +9697,7 @@ html[dir=rtl] .background-media-text__text{
       border-color:var(--colorHeroText);
     }
 
-.bold_edit_in_cart {
-  display: none!important;
-}
+
 
 .type-simple .promo-grid__content:not(.promo-grid__content--boxed):not(.promo-grid__content--sale):after{
       content:"";
