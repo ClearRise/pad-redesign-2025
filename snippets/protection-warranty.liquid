@@ -34,31 +34,6 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
   
 </div>
 
- <!-- <script>
-jQuery(document).ready(function($) {	
-    $("#gift-wrapping").on("change",function(){
-        console.log('checkbox clicked')
-        if($(this).is(":checked")) {
-            console.log('checked')
-            setGiftWrap(); 
-            // $(this).val("1");
-            $('#gift-wrapping').prop('checked', true);
-            // $('#gift-note-container').css('display', 'block')
-            $('.gift-note-input').show()
-            
-
-        } else {
-            console.log('unchecked')
-            hideGiftWrap()
-            $('#gift-wrapping').prop('checked', false);
-            // $('#gift-note-container').css('display', 'none')
-            // $(this).val("0");
-            $('.gift-note-input').hide()
-        }
-    });
-});
-</script> -->
-
 {% assign id = linklists.gift-wrapping.links.first.object.variants.first.id
 %} {% assign gift_wraps_in_cart = 0 %} {% for item in cart.items %} {% if
 item.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif %}
