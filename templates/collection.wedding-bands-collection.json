@@ -56,6 +56,7 @@
             "text_size": 120,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "#ffffff",
             "boxed": false,
             "framed": false
@@ -78,6 +79,7 @@
             "text_size": 85,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "#ffffff",
             "boxed": false,
             "framed": false
@@ -93,13 +95,14 @@
             "cta_link1": "",
             "cta_text2": "Shop Women's Bands",
             "cta_link2": "shopify:\/\/collections\/womens-wedding-bands",
-            "image": "shopify:\/\/shop_images\/diamond-womens-wedding-band_1800x1800_1a91a34a-512b-4b38-a7b7-353501ecba3c.webp",
+            "image": "shopify:\/\/shop_images\/Women_s_Rings_on_red_background.png",
             "video_url": "",
             "width": "33",
             "height": 220,
             "text_size": 100,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "#ffffff",
             "boxed": false,
             "framed": false
@@ -179,6 +182,7 @@
             "text_size": 120,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -202,7 +206,8 @@
       "blocks": {
         "collection_description": {
           "type": "collection_description",
-          "settings": {}
+          "settings": {
+          }
         },
         "subcollections": {
           "type": "subcollections",
