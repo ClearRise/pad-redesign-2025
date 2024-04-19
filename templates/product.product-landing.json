@@ -147,6 +147,11 @@
             "color_swatches": false
           }
         },
+        "bold_option_agdenj": {
+          "type": "bold_option",
+          "settings": {
+          }
+        },
         "sales_point": {
           "type": "sales_point",
           "settings": {
@@ -199,6 +204,7 @@
         "price",
         "separator",
         "variant_picker",
+        "bold_option_agdenj",
         "sales_point",
         "inventory_status",
         "buy_buttons",
