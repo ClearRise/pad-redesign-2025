@@ -1525,7 +1525,21 @@ span.bold_line_property {
   cursor: pointer;
   margin-left: 5px;
 }
-a.add-engraving-inline-button , a.add-protection-inline-button {
+.add-engraving-button {
+  margin-bottom: 10px;
+  letter-spacing: normal;
+  text-decoration: none !important;
+  border-bottom: 1px solid;
+  width: fit-content !important;
+}
+.engraving-preview {
+  font-size: 14px;
+}
+.engraving-preview span {
+  border-bottom: 1px dashed;
+}
+
+a.add-engraving-button, a.add-engraving-inline-button , a.add-protection-inline-button {
   font-size: 14px;
   cursor: pointer;
   text-decoration: underline;
@@ -1534,12 +1548,12 @@ input#swal2-input {
     text-transform: unset;
 }
 /* end engrave feature css*/
-a.add-engraving-inline-button , a.add-protection-inline-button{
+a.add-engraving-button, a.add-engraving-inline-button , a.add-protection-inline-button{
     font-size: 16px;    
 }
 
 @media only screen and (max-width: 1024px){
-  a.add-engraving-inline-button, a.add-protection-inline-button{
+  a.add-engraving-button, a.add-engraving-inline-button, a.add-protection-inline-button{
       font-size: 16px;    
   }
 }
@@ -1548,7 +1562,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
       font-size: 12px;
       letter-spacing: .1px;
   }
-  a.add-engraving-inline-button, a.add-protection-inline-button{
+  a.add-engraving-button, a.add-engraving-inline-button, a.add-protection-inline-button{
       font-size: 12px;    
   }
   .product__main-photos{
@@ -1568,7 +1582,7 @@ a.add-engraving-inline-button , a.add-protection-inline-button{
   gap: 1rem
 }
 
-.add-engraving-inline-button , .add-protection-inline-button{
+a.add-engraving-button, .add-engraving-inline-button , .add-protection-inline-button{
   display: inline-block;
       width: 100%;
 }
@@ -2012,6 +2026,11 @@ label.variant__label.custom_label{
 .product-single__form .bold_options{
   margin-bottom: 0px;
 }
+
+.product-single__form .bold_options .bold_option_total > div {
+  padding-left: 0;
+}
+
 /* homepage-scroll-navigation on mobile */
 #homepage-scroll-navigation {
   display: none;
