@@ -23,6 +23,11 @@
             "color_swatches": false
           }
         },
+        "bold_option_agdenj": {
+          "type": "bold_option",
+          "settings": {
+          }
+        },
         "inventory_status": {
           "type": "inventory_status",
           "disabled": true,
@@ -172,6 +177,7 @@
         "price",
         "separator",
         "variant_picker",
+        "bold_option_agdenj",
         "inventory_status",
         "buy_buttons",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
