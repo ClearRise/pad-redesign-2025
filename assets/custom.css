@@ -1509,6 +1509,9 @@ button.upsell-add-to-cart.disabled{
   font-size: 15px;
   padding-bottom: 5px;
 }
+.bold_cart_edit_button  {
+  display: none!important;
+}
 
 .product-page-engraving-input {
   width: 100%;
