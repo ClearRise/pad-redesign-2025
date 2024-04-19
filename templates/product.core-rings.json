@@ -51,6 +51,11 @@
             "collapse_options": false
           }
         },
+        "bold_option_agdenj": {
+          "type": "bold_option",
+          "settings": {
+          }
+        },
         "engraving_3enxAH": {
           "type": "engraving",
           "settings": {
@@ -189,6 +194,7 @@
         "separator",
         "inventory_status",
         "variant_picker",
+        "bold_option_agdenj",
         "engraving_3enxAH",
         "8b562356-ae61-4e76-9d41-a70561a3c483",
         "buy_buttons",
