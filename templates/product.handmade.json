@@ -31,6 +31,11 @@
             "collapse_options": false
           }
         },
+        "bold_option_agdenj": {
+          "type": "bold_option",
+          "settings": {
+          }
+        },
         "inventory_status": {
           "type": "inventory_status",
           "disabled": true,
@@ -173,6 +178,7 @@
         "a19dbe3d-a2be-4402-942e-7aca0ca227fd",
         "separator",
         "variant_picker",
+        "bold_option_agdenj",
         "inventory_status",
         "engraving_f7btnA",
         "f913fa62-4c78-411b-aeaf-8c3aa3d0f21d",
