@@ -937,6 +937,11 @@ label span.bold_option_element input{
   column-gap: 5px;
 }
 
+.upsell-collection .upsell-product .upsell-product-info .upsell-product-price s {
+  margin-left: 5px;
+  color: red;
+}
+
   .upsell-collection .upsell-product .upsell-product-image img {
     width: 100%;
   }
