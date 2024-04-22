@@ -4359,7 +4359,7 @@ form+.footer__social{
 
 .header-sticky-wrapper{
   position:relative;
-  z-index:28
+  z-index:9999
 }
 
 .js-drawer-open:not(.js-drawer-open--search) .header-sticky-wrapper{
