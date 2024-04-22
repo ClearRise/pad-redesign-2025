@@ -49,56 +49,56 @@
           "type": "question",
           "settings": {
             "title": "Glowstone Rings",
-            "text": "<p>We are currently experiencing longer than normal production timelines for our Glowstone Rings due to the Holiday Season and order volume. Glowstone rings are currently taking approx. <strong>8-10 weeks to ship.<\/strong><\/p><p>The following rings are shipping in <strong>1-2 weeks:<\/strong><\/p><ul><li>Star Dust Ring<\/li><li>Radiant Star Dust Ring<\/li><li>Star Dust Ring on Tungsten<\/li><li>Star Dust Ring on Black Ceramic<\/li><li>Star Dust Ring on White Ceramic<\/li><li>Star Dust Stackable Ring<\/li><li>Hexagon Star Dust Ring<\/li><li>Hexagon Lavender Star Dust Ring<\/li><li>Lavender Star Dust Ring<\/li><li>Matching Star Dust Wedding Ring Set on Tungsten<\/li><\/ul><p>The following rings are shipping in <strong>4 weeks:<\/strong><\/p><ul><li>Black Fire Opal Glowstone Ring<\/li><li>Radiant Pearl Opal Glowstone Ring<\/li><li>24K Gold Leaf Ring on Black Ceramic<\/li><li>Black Emerald Opal Glowstone Ring<\/li><li>Matching Black Emerald Opal Glowstone Wedding Ring Set<\/li><li>Crimson Flare Glowstone Ring<\/li><li>Dragon Scale Opal Glowstone Ring<\/li><li>The Winter's Howl | Tungsten Glowstone Ring<\/li><\/ul>"
-          }
-        },
-        "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2": {
-          "type": "question",
-          "settings": {
-            "title": "Meteorite Rings",
-            "text": "<p>Any ring containing solid meteorite is currently taking approx.<strong> 2-4 weeks to ship.<\/strong><\/p>"
+            "text": "<p>We are currently experiencing longer than normal production timelines for our Glowstone Rings due to order volume. Glowstone rings are currently taking approx. <strong>8-10 weeks to ship.<\/strong><\/p><p>The following rings are shipping in <strong>1-2 weeks:<\/strong><\/p><ul><li>Star Dust Ring<\/li><li>Radiant Star Dust Ring<\/li><li>Star Dust Ring on Tungsten<\/li><li>Star Dust Ring on Black Ceramic<\/li><li>Star Dust Ring on White Ceramic<\/li><li>Star Dust Stackable Ring<\/li><li>Hexagon Star Dust Ring<\/li><li>Hexagon Lavender Star Dust Ring<\/li><li>Lavender Star Dust Ring<\/li><li>Matching Star Dust Wedding Ring Set on Tungsten<\/li><\/ul>"
           }
         },
         "9edaa1a8-e6fc-401d-be5e-7b9412d62dc0": {
           "type": "question",
           "settings": {
             "title": "Gold Rings",
-            "text": "<p>Any ring containing solid gold is currently taking approx <strong>6-8 weeks to ship<\/strong>.<\/p>"
+            "text": "<p>Most rings containing solid gold is currently taking approx <strong>2-4 weeks to ship.<\/strong><\/p>"
+          }
+        },
+        "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2": {
+          "type": "question",
+          "settings": {
+            "title": "Meteorite Rings",
+            "text": "<p>Most rings containing solid meteorite is currently taking approx.<strong> 2-4 weeks to ship.<\/strong><\/p>"
           }
         },
         "8bd5b863-fcb1-43ae-bde3-7333f20f183b": {
           "type": "question",
           "settings": {
             "title": "Carbon Fiber Rings",
-            "text": "<p>Carbon Fiber Rings are currently taking approx.<strong>4-6<\/strong> <strong>weeks to ship<\/strong>.<\/p>"
+            "text": "<p>Most Carbon Fiber Rings are currently taking approx. <strong>2-6<\/strong> <strong>weeks to ship<\/strong>.<\/p><p>These Carbon Fiber rings are shipping in <strong>2-4 weeks<\/strong>.<\/p><p><\/p>"
+          }
+        },
+        "question_XntpWA": {
+          "type": "question",
+          "settings": {
+            "title": "Wood Rings",
+            "text": "<p>Most Carbon Fiber Rings are currently taking approx. <strong>2-4<\/strong> <strong>weeks to ship<\/strong>.<\/p>"
           }
         },
         "f04d8342-18cb-44cd-8612-a1fdf4afc09b": {
           "type": "question",
           "settings": {
             "title": "Opal Rings",
-            "text": "<p>All solid opal rings are currently taking approx. <strong>6-8 weeks to ship.<\/strong><\/p>"
+            "text": "<p>All solid opal rings are currently taking approx. <strong>6 weeks to ship.<\/strong><\/p>"
           }
         },
         "56c40efd-9201-4a79-86d6-f829d8584f99": {
           "type": "question",
           "settings": {
             "title": "Misc. Rings",
-            "text": "<ul><li>Mokume Gane Rings: 4-6weeks<\/li><li>Timascus Rings: 4-6weeks<\/li><li>Reptilian Damascus Steel Ring: 4-6 weeks<\/li><li>Spirograph Damascus Steel Ring: 4-6 weeks<\/li><li>Superconductor Rings: 4-6 weeks<\/li><\/ul>"
+            "text": "<ul><li>Mokume Gane Rings: 8 weeks<\/li><li>Timascus Rings: 8 weeks<\/li><li>Reptilian Damascus Steel Ring: 8 weeks<\/li><li>Spirograph Damascus Steel Ring: 8 weeks<\/li><li>Superconductor Rings: 8 weeks<\/li><\/ul>"
           }
         },
         "e9488b45-be9e-41c3-afb4-b05cfa7c0070": {
           "type": "question",
           "settings": {
             "title": "Pendants",
-            "text": "<p>All pendants are handmade in batches with differing timelines based on material (excluding Glowstone pendants, which are made to order). Since they are made in batches, most pendants are in stock and ready to ship in 2-3 business days. Please refer to the Shipping Information Tab on the product page of each pendant to see specifics.<\/p><p><strong>﻿<\/strong>﻿Glowstone Pendants are currently expected to take <strong>﻿8+ weeks to ship<\/strong>﻿ and will not ship until 2024<\/p>"
-          }
-        },
-        "24f90d41-4f8a-413c-ad3a-f4197b96f670": {
-          "type": "question",
-          "settings": {
-            "title": "Glowstone Earrings",
-            "text": "<p>All Glowstone Earrings are currently estimated to take <strong>6-8 <\/strong>weeks to ship<\/p>"
+            "text": "<p>All pendants are handmade in batches with differing timelines based on material (excluding Glowstone pendants, which are made to order). Since they are made in batches, most pendants are in stock and ready to ship in 2-3 business days. Please refer to the Shipping Information Tab on the product page of each pendant to see specifics.<\/p>"
           }
         },
         "caf44b84-4f9b-4c8d-9e94-aa908c58814c": {
@@ -114,13 +114,13 @@
         "2c920b74-e75b-4448-b0e0-f2ddb7e698bf",
         "e6ad0d02-2a01-41e5-9002-3fa3c4796bb2",
         "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-1",
-        "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2",
         "9edaa1a8-e6fc-401d-be5e-7b9412d62dc0",
+        "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2",
         "8bd5b863-fcb1-43ae-bde3-7333f20f183b",
+        "question_XntpWA",
         "f04d8342-18cb-44cd-8612-a1fdf4afc09b",
         "56c40efd-9201-4a79-86d6-f829d8584f99",
         "e9488b45-be9e-41c3-afb4-b05cfa7c0070",
-        "24f90d41-4f8a-413c-ad3a-f4197b96f670",
         "caf44b84-4f9b-4c8d-9e94-aa908c58814c"
       ],
       "settings": {
