@@ -239,7 +239,7 @@
                <div class="cart__item-sub">
                  <div class="upsell-product-price aaaaaaaaa">
                       {% if first_gift_product.price == 0 %}
-                        FREE
+                        FREE <s>{{first_gift_product.compare_at_price | money }}</s>
                       {% else %}
                         {{ first_gift_product.price | money }}
                       {% endif %}
