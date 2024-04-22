@@ -30,69 +30,11 @@
         "template--14479573778514__7d09f40a-919a-4742-9876-07faef16b904-1673459276b267a082-0",
         "template--14479573778514__7d09f40a-919a-4742-9876-07faef16b904-1673459276b267a082-1"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
         "divider": false
-      }
-    },
-    "5cc00264-bdfc-4629-82de-0a4ca9789451": {
-      "type": "promo-grid",
-      "blocks": {
-        "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-0": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "",
-            "cta_text2": "Shop Matching Bands",
-            "cta_link2": "shopify:\/\/collections\/wedding-ring-sets",
-            "image": "shopify:\/\/shop_images\/winters-howl-glowstone-matching-set-3_8b85a073-5b8a-4a36-8941-36db7d05c79a.png",
-            "video_url": "",
-            "width": "33",
-            "height": 260,
-            "text_size": 85,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-1": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "",
-            "cta_text2": "Shop Women's Bands",
-            "cta_link2": "shopify:\/\/collections\/womens-wedding-bands",
-            "image": "shopify:\/\/shop_images\/diamond-womens-wedding-band_1800x1800_1a91a34a-512b-4b38-a7b7-353501ecba3c.webp",
-            "video_url": "",
-            "width": "33",
-            "height": 220,
-            "text_size": 100,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff",
-            "boxed": false,
-            "framed": false
-          }
-        }
-      },
-      "block_order": [
-        "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-0",
-        "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-1"
-      ],
-      "settings": {
-        "full_width": true,
-        "gutter_size": 10,
-        "space_above": false,
-        "space_below": false
       }
     },
     "96e55e5c-0b72-4487-bfd9-ec42f287e3a3": {
@@ -156,6 +98,7 @@
             "text_size": 120,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -213,24 +156,65 @@
         "enable_sort": true
       }
     },
-    "74dc11d1-f3ed-49b0-8dab-4b4ad9848163": {
-      "type": "rich-text",
+    "5cc00264-bdfc-4629-82de-0a4ca9789451": {
+      "type": "promo-grid",
       "blocks": {
-        "67cca518-613c-4125-8f35-889babb16c1c": {
-          "type": "button",
+        "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-0": {
+          "type": "advanced",
           "settings": {
-            "link": "https:\/\/patrickadairdesigns.com\/collections\/all-products?filter.p.m.custom.product_type=Ring",
-            "link_text": "Shop All Wedding Bands"
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "Shop Matching Bands",
+            "cta_link2": "shopify:\/\/collections\/wedding-ring-sets",
+            "image": "shopify:\/\/shop_images\/winters-howl-glowstone-matching-set-3_8b85a073-5b8a-4a36-8941-36db7d05c79a.png",
+            "video_url": "",
+            "width": "33",
+            "height": 260,
+            "text_size": 85,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "#ffffff",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "Shop Women's Bands",
+            "cta_link2": "shopify:\/\/collections\/womens-wedding-bands",
+            "image": "shopify:\/\/shop_images\/diamond-womens-wedding-band_1800x1800_1a91a34a-512b-4b38-a7b7-353501ecba3c.webp",
+            "video_url": "",
+            "width": "33",
+            "height": 220,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "#ffffff",
+            "boxed": false,
+            "framed": false
           }
         }
       },
       "block_order": [
-        "67cca518-613c-4125-8f35-889babb16c1c"
+        "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-0",
+        "template--14479573778514__5cc00264-bdfc-4629-82de-0a4ca9789451-167345927675233d26-1"
       ],
       "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
+        "full_width": false,
+        "gutter_size": 10,
+        "space_above": false,
+        "space_below": false
       }
     },
     "834e47de-6d43-486f-aed3-1747601a6a4c": {
@@ -272,11 +256,10 @@
   "order": [
     "collection-header",
     "7d09f40a-919a-4742-9876-07faef16b904",
-    "5cc00264-bdfc-4629-82de-0a4ca9789451",
     "96e55e5c-0b72-4487-bfd9-ec42f287e3a3",
     "promo-grid",
     "main-collection",
-    "74dc11d1-f3ed-49b0-8dab-4b4ad9848163",
+    "5cc00264-bdfc-4629-82de-0a4ca9789451",
     "834e47de-6d43-486f-aed3-1747601a6a4c"
   ]
 }
