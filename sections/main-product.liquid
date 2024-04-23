@@ -216,12 +216,29 @@
             "type": "checkbox",
             "id": "collapse_options",
             "label": "Collapse bold options"
-          }        
+          }
         ]
       },
       {
         "type": "bold_option",
-        "name": "Bold options"
+        "name": "Bold options",
+        "settings": [
+          {
+            "type": "select",
+            "id": "option_type",
+            "label": "Option type",
+            "options": [
+              {
+                "value": "Default",
+                "label": "Default"
+              },
+              {
+                "value": "Test",
+                "label": "A/B test"
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "description",
