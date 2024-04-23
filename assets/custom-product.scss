@@ -148,5 +148,11 @@
       }
     }
   }
-  
+  .bold_options {
+    .bold_option_set {
+      .bold_option:first-child {
+        display: none;
+      }
+    }
+  }
 }
