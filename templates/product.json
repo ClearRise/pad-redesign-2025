@@ -46,6 +46,7 @@
         "bold_option_agdenj": {
           "type": "bold_option",
           "settings": {
+            "option_type": "Test"
           }
         },
         "inventory_status": {
@@ -59,13 +60,27 @@
         "engraving_YpGMkM": {
           "type": "engraving",
           "settings": {
+            "style": "popup"
           }
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
           "settings": {
             "gift_box_title": "",
-            "gift_included": ""
+            "gift_included": "",
+            "bottom_text": "Selection made during checkout process",
+            "product_threshold_amount": 150,
+            "product1-title": "",
+            "product1-text": "",
+            "product2-title": "",
+            "product2-text": "",
+            "product3-title": "",
+            "product3-text": "",
+            "product-1": "",
+            "product-2": "",
+            "border_color": "",
+            "bg_color": "",
+            "text_color": ""
           }
         },
         "buy_buttons": {
