@@ -6583,9 +6583,9 @@ var image = theme.buildProductImage(product, imageSize);
       },
       
       boldOptions: function () {
+        var $this = this
         BOLD.common.eventEmitter.on('BOLD_OPTIONS_option_products_loaded', function(event){
           document.querySelectorAll('.bold_option_set .bold_option_swatch').forEach(element => {
-            console.log(element.querySelector('.bold_option_value_element input'))
             if (element.querySelector('.bold_option_value_element input') != undefined) {
               if ( element.querySelector('.bold_option_value_element input').checked) {
                 if (element.querySelector('.bold_option_title .bold_option_value_title') != null) {
@@ -6602,7 +6602,6 @@ var image = theme.buildProductImage(product, imageSize);
           });
           document.addEventListener('click', function (e) {
             if (e.target.closest(".bold_option_value") != undefined) {
-              console.log(e.target)
               if (e.target.checked) {
                 var targetWrapper = e.target.closest(".bold_option");
                 var targetValue = e.target.closest(".bold_option_value");
@@ -6628,40 +6627,50 @@ var image = theme.buildProductImage(product, imageSize);
               } 
             }
           });
+          var optionType = document.querySelector('.bold_options').dataset.optionType;
+          var targetElement = document.querySelector(`input[name="properties[${optionType}]"]`).closest(".bold_option").querySelector('input[type="checkbox"]')
+          console.log(targetElement)
+          if (!targetElement.checked) {
+            targetElement.click();
+          }
+          
         });
       },
 
       engravingPopup: function () {
-        this.container.querySelector('.add-engraving-button').addEventListener('click', function (e) {
-          e.preventDefault();
-
-          Swal.fire({
-            input: "text",
-            inputLabel: "Engraving Text",
-            inputValue: document.querySelector('.product-page-engraving-input').value,
-            inputPlaceholder: "20 characters or less",
-            inputAttributes: {
-              maxlength: 20,
-            },
-            showCancelButton: true,
-            confirmButtonText: "Save",
-          }).then((result) => {
-            console.log(result)
-            if (result.isConfirmed) {
+        if (this.container.querySelector('.add-engraving-button') != undefined ) {
+          this.container.querySelector('.add-engraving-button').addEventListener('click', function (e) {
+            e.preventDefault();
+  
+            Swal.fire({
+              input: "text",
+              inputLabel: "Engraving Text",
+              inputValue: document.querySelector('.product-page-engraving-input').value,
+              inputPlaceholder: "20 characters or less",
+              inputAttributes: {
+                maxlength: 20,
+              },
+              showCancelButton: true,
+              confirmButtonText: "Save",
+            }).then((result) => {
               console.log(result)
-              document.querySelector('.product-page-engraving-input').value = result.value
-              if (result.value != "" ) {
-                document.querySelector('.add-engraving-button span').innerHTML = 'Edit Engraving';
-                document.querySelector('.engraving-preview span').innerHTML = result.value;
-                document.querySelector('.engraving-preview').classList.remove('hide');
-              } else {
-                document.querySelector('.add-engraving-button span').innerHTML = 'Add an engraving';
-                document.querySelector('.engraving-preview').classList.add('hide');
+              if (result.isConfirmed) {
+                console.log(result)
+                document.querySelector('.product-page-engraving-input').value = result.value
+                if (result.value != "" ) {
+                  document.querySelector('.add-engraving-button span').innerHTML = 'Edit Engraving';
+                  document.querySelector('.engraving-preview span').innerHTML = result.value;
+                  document.querySelector('.engraving-preview').classList.remove('hide');
+                } else {
+                  document.querySelector('.add-engraving-button span').innerHTML = 'Add an engraving';
+                  document.querySelector('.engraving-preview').classList.add('hide');
+                }
               }
-            }
-            
-          });          
-        })
+              
+            });          
+          })
+        }
+        
       },
 
       cacheElements: function() {
