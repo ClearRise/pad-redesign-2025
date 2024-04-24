@@ -929,6 +929,7 @@ lazySizesConfig.expFactor = 4;
         this._updatePrice(variant);
         this._updateUnitPrice(variant);
         this._updateSKU(variant);
+        this._protection_plan(variant);
         this.currentVariant = variant;
   
         if (this.enableHistoryState) {
@@ -949,6 +950,18 @@ lazySizesConfig.expFactor = 4;
             variant: variant
           }
         }));
+      },
+
+      _protection_plan: function (variant) {
+        if (this.container.querySelector('.bold_options.bold_options_loaded').dataset.selection == 'product-protection') {
+          this.container.querySelector('input[name="properties[protection_status]"][data-option_value_key="1"]').click();
+        } else if (variant["protection plan"] != null) {
+          this.container.querySelector('.bold_options.bold_options_loaded').dataset.selection = 'variant-protection';
+          this.container.querySelector('input[name="properties[protection_status]"][data-option_value_key="2"]').click();
+        } else {
+          this.container.querySelector('.bold_options.bold_options_loaded').dataset.selection = 'no-protection'
+          this.container.querySelector('input[name="properties[protection_status]"][data-option_value_key="0"]').click();
+        }
       },
   
       _updatePrice: function(variant) {
@@ -1631,7 +1644,9 @@ lazySizesConfig.expFactor = 4;
     CartForm.prototype = Object.assign({}, CartForm.prototype, {
       init: function() {
         this.initQtySelectors();
-  
+        BOLD.common.eventEmitter.on('BOLD_OPTIONS_option_products_loaded', function(event){
+          console.log("asdfasdf")
+        });
         document.addEventListener('cart:quantity' + this.namespace, this.quantityChanged.bind(this));
   
         this.form.on('submit' + this.namespace, this.onSubmit.bind(this));
@@ -6472,7 +6487,7 @@ var image = theme.buildProductImage(product, imageSize);
       blocks: '[data-product-blocks]',
       blocksHolder: '[data-blocks-holder]'
     };
-  
+    
     function Product(container) {
       this.container = container;
       var sectionId = this.sectionId = container.getAttribute('data-section-id');
@@ -6585,6 +6600,20 @@ var image = theme.buildProductImage(product, imageSize);
       boldOptions: function () {
         var $this = this
         BOLD.common.eventEmitter.on('BOLD_OPTIONS_option_products_loaded', function(event){
+          if (document.querySelector('.bold_options.bold_options_loaded').dataset.engravingStatus && document.querySelector('input[name="properties[engraving_status]"][data-option_value_key="0"]') != undefined) {
+            document.querySelector('input[name="properties[engraving_status]"][data-option_value_key="0"]').click();
+          }
+          if (document.querySelector('input[name="properties[protection_status]"]') != undefined) {
+            if (document.querySelector('.bold_options.bold_options_loaded').dataset.selection == 'product-protection') {
+              document.querySelector('input[name="properties[protection_status]"][data-option_value_key="1"]').click();
+            } else if (document.querySelector('.bold_options.bold_options_loaded').dataset.selection == 'variant-protection') {
+              document.querySelector('input[name="properties[protection_status]"][data-option_value_key="2"]').click();
+            } else {
+              document.querySelector('input[name="properties[protection_status]"][data-option_value_key="0"]').click();
+            }
+          }
+          
+
           document.querySelectorAll('.bold_option_set .bold_option_swatch').forEach(element => {
             if (element.querySelector('.bold_option_value_element input') != undefined) {
               if ( element.querySelector('.bold_option_value_element input').checked) {
@@ -6600,33 +6629,58 @@ var image = theme.buildProductImage(product, imageSize);
               }
             }
           });
+          if (document.querySelector('.bold_option_element input[name="properties[protection_status]"]') != undefined) {
+            document.querySelector('.bold_option_element input[name="properties[protection_status]"]').closest(".bold_option_set").classList.add('engraving-option')
+          }
+          
+
+          document.addEventListener('keyup', function (e) {
+            console.log(e.target.getAttribute('name'));
+            if (e.target.getAttribute('name') == "properties[CUSTOM ENGRAVING (+$50)]" ) {
+              console.log(e.target.value);
+              if (e.target.value != "" && e.target.closest(".bold_option").nextElementSibling.querySelector('input[type="checkbox"]').checked == false) {
+                e.target.closest(".bold_option").nextElementSibling.querySelector('input[type="checkbox"]').click();
+              } else if (e.target.value == "" && e.target.closest(".bold_option").nextElementSibling.querySelector('input[type="checkbox"]').checked == true) {
+                e.target.closest(".bold_option").nextElementSibling.querySelector('input[type="checkbox"]').click();
+              }
+            }
+            
+          });
+
           document.addEventListener('click', function (e) {
+
             if (e.target.closest(".bold_option_value") != undefined) {
               if (e.target.checked) {
-                var targetWrapper = e.target.closest(".bold_option");
+                var targetWrapper = e.target.closest(".bold_option.bold_option_swatch");
                 var targetValue = e.target.closest(".bold_option_value");
-                if (targetWrapper.querySelector('.bold_option_title .bold_option_value_title') != null) {
-                  targetWrapper.querySelector('.bold_option_title .bold_option_value_title').remove();
+                if (targetWrapper != undefined) {
+                  if (targetWrapper.querySelector('.bold_option_title .bold_option_value_title') != null) {
+                    targetWrapper.querySelector('.bold_option_title .bold_option_value_title').remove();
+                  }
+                  if (targetWrapper.querySelector('.bold_option_title .bold_option_value_price') != null) {
+                    targetWrapper.querySelector('.bold_option_title .bold_option_value_price').remove();
+                  }
+                  var targetWrapperTitle = targetWrapper.querySelector('.bold_option_title').innerHTML;
+                  var targetValueTitle = targetValue.querySelector('.bold_option_swatch_title').innerHTML;
+                  var newTitle = targetWrapperTitle + targetValueTitle;
+                  targetWrapper.querySelector('.bold_option_title').innerHTML = newTitle;
                 }
-                if (targetWrapper.querySelector('.bold_option_title .bold_option_value_price') != null) {
-                  targetWrapper.querySelector('.bold_option_title .bold_option_value_price').remove();
-                }
-                var targetWrapperTitle = targetWrapper.querySelector('.bold_option_title').innerHTML;
-                var targetValueTitle = targetValue.querySelector('.bold_option_swatch_title').innerHTML;
-                var newTitle = targetWrapperTitle + targetValueTitle;
-                targetWrapper.querySelector('.bold_option_title').innerHTML = newTitle;
+                
               } else {
-                var targetWrapper = e.target.closest(".bold_option");
-                var targetValue = e.target.closest(".bold_option_value");
-                if (targetWrapper.querySelector('.bold_option_title .bold_option_value_title') != null) {
-                  targetWrapper.querySelector('.bold_option_title .bold_option_value_title').remove();
-                }
-                if (targetWrapper.querySelector('.bold_option_title .bold_option_value_price') != null) {
-                  targetWrapper.querySelector('.bold_option_title .bold_option_value_price').remove();
+                var targetWrapper = e.target.closest(".bold_option.bold_option_swatch");
+                if (targetWrapper != undefined) {
+                  var targetValue = e.target.closest(".bold_option_value");
+                  if (targetWrapper.querySelector('.bold_option_title .bold_option_value_title') != null) {
+                    targetWrapper.querySelector('.bold_option_title .bold_option_value_title').remove();
+                  }
+                  if (targetWrapper.querySelector('.bold_option_title .bold_option_value_price') != null) {
+                    targetWrapper.querySelector('.bold_option_title .bold_option_value_price').remove();
+                  }
                 }
               } 
             }
           });
+
           var optionType = document.querySelector('.bold_options').dataset.optionType;
           if (document.querySelector(`input[name="properties[${optionType}]"]`).closest(".bold_option").querySelector('input[type="checkbox"]') != undefined) {
             var targetElement = document.querySelector(`input[name="properties[${optionType}]"]`).closest(".bold_option").querySelector('input[type="checkbox"]')
