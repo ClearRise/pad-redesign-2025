@@ -32,17 +32,6 @@
           "settings": {
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "size_chart": "",
-            "variant_labels": true,
-            "picker_type": "dropdown",
-            "color_swatches": false,
-            "custom_variant_comment": false,
-            "collapse_options": false
-          }
-        },
         "bold_option_agdenj": {
           "type": "bold_option",
           "settings": {
@@ -81,6 +70,17 @@
             "border_color": "",
             "bg_color": "",
             "text_color": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "size_chart": "",
+            "variant_labels": true,
+            "picker_type": "dropdown",
+            "color_swatches": false,
+            "custom_variant_comment": false,
+            "collapse_options": false
           }
         },
         "buy_buttons": {
@@ -212,11 +212,11 @@
         "94c49419-9d53-4cfe-8c63-edaf9a145c94",
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
         "separator",
-        "variant_picker",
         "bold_option_agdenj",
         "inventory_status",
         "engraving_YpGMkM",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
+        "variant_picker",
         "buy_buttons",
         "7621462d-9edd-432d-a525-b5bcbfe07deb",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
