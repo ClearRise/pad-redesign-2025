@@ -1515,7 +1515,9 @@ button.upsell-add-to-cart.disabled{
   padding-bottom: 5px;
 }
 .bold_cart_edit_button  {
-  display: none!important;
+  background-color: #138f7e;
+  padding: 5px;
+  color: white;
 }
 
 .product-page-engraving-input {
