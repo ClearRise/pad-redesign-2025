@@ -1515,9 +1515,7 @@ button.upsell-add-to-cart.disabled{
   padding-bottom: 5px;
 }
 .bold_cart_edit_button  {
-  background-color: #138f7e;
-  padding: 5px;
-  color: white;
+  display: none!important;
 }
 
 .product-page-engraving-input {
@@ -2036,9 +2034,11 @@ label.variant__label.custom_label{
 .product-single__form .bold_options{
   margin-bottom: 0px;
 }
+
 .product-single__form .bold_options .bold_option_total > div {
   padding-left: 0;
 }
+
 /* homepage-scroll-navigation on mobile */
 #homepage-scroll-navigation {
   display: none;
