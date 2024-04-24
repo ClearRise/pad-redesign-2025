@@ -153,6 +153,25 @@
       .bold_option:first-child {
         display: none;
       }
+      &.engraving-option {
+        .bold_option {
+          &:nth-child(3), &:nth-child(5) {
+            display: none;
+          }
+          &.bold_option_textbox {
+            .bold_option_title {
+              display: block;
+            }
+            .bold_option_element {
+              display: block;
+              width: 100%;
+              input {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
