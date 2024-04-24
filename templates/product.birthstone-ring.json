@@ -20,20 +20,10 @@
           "settings": {
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "size_chart": "",
-            "variant_labels": true,
-            "picker_type": "dropdown",
-            "color_swatches": false,
-            "custom_variant_comment": false,
-            "collapse_options": false
-          }
-        },
         "bold_option_agdenj": {
           "type": "bold_option",
           "settings": {
+            "option_type": "Default"
           }
         },
         "inventory_status": {
@@ -47,13 +37,38 @@
         "engraving_jR7cGk": {
           "type": "engraving",
           "settings": {
+            "style": "popup"
           }
         },
         "d2bfdc2f-2cae-43b1-91ed-390419b7a7d8": {
           "type": "free_gifts",
           "settings": {
             "gift_box_title": "",
-            "gift_included": ""
+            "gift_included": "",
+            "bottom_text": "Selection made during checkout process",
+            "product_threshold_amount": 150,
+            "product1-title": "",
+            "product1-text": "",
+            "product2-title": "",
+            "product2-text": "",
+            "product3-title": "",
+            "product3-text": "",
+            "product-1": "",
+            "product-2": "",
+            "border_color": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "size_chart": "",
+            "variant_labels": true,
+            "picker_type": "dropdown",
+            "color_swatches": false,
+            "custom_variant_comment": false,
+            "collapse_options": false
           }
         },
         "buy_buttons": {
@@ -69,6 +84,7 @@
         "aee49288-aed2-447a-9362-0e6b1ca600d1": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "<b>Premium Protection Plan<\/b>",
             "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
             "page": "",
@@ -118,6 +134,7 @@
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Additional Details",
             "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
             "page": "",
@@ -128,6 +145,7 @@
         "7cf22f7b-2877-4d38-a231-95946286cc18": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Sizing Information",
             "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
             "page": "",
@@ -138,6 +156,7 @@
         "tab": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Shipping information",
             "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
             "page": "",
@@ -148,6 +167,7 @@
         "0858aa42-4ab1-4194-814a-990ffd086efc": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "HOW THE GLOW WORKS",
             "content": "<p>Our glowstone rings contain an odorless, non-flammable glow powder called <strong>strontium aluminate<\/strong>. To get your ring to glow, expose it to a UV light source (such as the sun) to charge it and take it into the dark shortly after. There are many factors that affect the strength of the glow which are detailed on this helpful <a href=\"https:\/\/patrickadairdesigns.com\/blogs\/blog\/how-do-i-get-my-glow-ring-to-glow\" title=\"How The Glow Works\"><strong>page<\/strong><\/a>.<\/p>",
             "page": "",
@@ -158,6 +178,7 @@
         "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "How To Care",
             "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
             "page": "",
@@ -168,6 +189,7 @@
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Lifetime Warranty",
             "content": "<p>At Patrick Adair Designs, all products come with a <a href=\"\/pages\/warranty-and-return-information\" title=\"Limited Lifetime Warranty and Return Policy\"><strong>Limited Lifetime Warranty<\/strong><\/a> by default. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.<\/p>",
             "page": "",
@@ -187,11 +209,11 @@
         "price",
         "fa13a906-8f35-4826-9c29-8c36bab9d1db",
         "separator",
-        "variant_picker",
         "bold_option_agdenj",
         "inventory_status",
         "engraving_jR7cGk",
         "d2bfdc2f-2cae-43b1-91ed-390419b7a7d8",
+        "variant_picker",
         "buy_buttons",
         "aee49288-aed2-447a-9362-0e6b1ca600d1",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
