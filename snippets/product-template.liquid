@@ -531,6 +531,7 @@
                     <div class="product-block custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }}>
                       {%- unless product.has_only_default_variant -%}
                         {%- for option in product.options_with_values -%}
+                          {% unless option.name == 'Size' %}
                           {%- liquid
                             if block.settings.color_swatches
                               assign is_color = false
@@ -572,6 +573,7 @@
                               custom_variant_comment: block.settings.custom_variant_comment
                             -%}
                           {%- endif -%}
+                          {% endunless %}
                         {%- endfor -%}
                       {%- endunless -%}
                     </div>
