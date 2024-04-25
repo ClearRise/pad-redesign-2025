@@ -6684,13 +6684,16 @@ var image = theme.buildProductImage(product, imageSize);
           });
 
           var optionType = document.querySelector('.bold_options').dataset.optionType;
-          if (document.querySelector(`input[name="properties[${optionType}]"]`).closest(".bold_option").querySelector('input[type="checkbox"]') != undefined) {
-            var targetElement = document.querySelector(`input[name="properties[${optionType}]"]`).closest(".bold_option").querySelector('input[type="checkbox"]')
-            console.log(targetElement)
-            if (!targetElement.checked) {
-              targetElement.click();
+          if (document.querySelector(`input[name="properties[${optionType}]"]`) != undefined) {
+            if (document.querySelector(`input[name="properties[${optionType}]"]`).closest(".bold_option").querySelector('input[type="checkbox"]') != undefined) {
+              var targetElement = document.querySelector(`input[name="properties[${optionType}]"]`).closest(".bold_option").querySelector('input[type="checkbox"]')
+              console.log(targetElement)
+              if (!targetElement.checked) {
+                targetElement.click();
+              }
             }
           }
+          
         });
       },
 
