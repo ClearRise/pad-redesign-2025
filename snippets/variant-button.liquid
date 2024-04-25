@@ -78,7 +78,6 @@
             assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
             assign color_swatch_fallback = value | split: ' ' | last | handle
           -%}
-          <script>console.log({{color_file_name | json}});</script>
           <label
             for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
             class="variant__button-label color-swatch color-swatch--{{ value | handle }}{% unless product_available %} disabled{% endunless %}"
