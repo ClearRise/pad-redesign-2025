@@ -953,14 +953,16 @@ lazySizesConfig.expFactor = 4;
       },
 
       _protection_plan: function (variant) {
-        if (this.container.querySelector('.bold_options.bold_options_loaded').dataset.selection == 'product-protection') {
-          this.container.querySelector('input[name="properties[protection_status]"][data-option_value_key="1"]').click();
-        } else if (variant["protection plan"] != null) {
-          this.container.querySelector('.bold_options.bold_options_loaded').dataset.selection = 'variant-protection';
-          this.container.querySelector('input[name="properties[protection_status]"][data-option_value_key="2"]').click();
-        } else {
-          this.container.querySelector('.bold_options.bold_options_loaded').dataset.selection = 'no-protection'
-          this.container.querySelector('input[name="properties[protection_status]"][data-option_value_key="0"]').click();
+        if (this.container.querySelector('input[name="properties[protection_status]"]') != undefined) {
+          if (this.container.querySelector('.bold_options.bold_options_loaded').dataset.selection == 'product-protection') {
+            this.container.querySelector('input[name="properties[protection_status]"][data-option_value_key="1"]').click();
+          } else if (variant["protection plan"] != null) {
+            this.container.querySelector('.bold_options.bold_options_loaded').dataset.selection = 'variant-protection';
+            this.container.querySelector('input[name="properties[protection_status]"][data-option_value_key="2"]').click();
+          } else {
+            this.container.querySelector('.bold_options.bold_options_loaded').dataset.selection = 'no-protection'
+            this.container.querySelector('input[name="properties[protection_status]"][data-option_value_key="0"]').click();
+          }
         }
       },
   
