@@ -565,7 +565,7 @@
                               is_color: is_color,
                               color_option_index: color_option_index
                             -%}
-                          {% elsif is_button %}
+                          {% elsif block.settings.picker_type == 'button' %}
                             {%- render 'variant-button',
                               block: block,
                               product: product,
