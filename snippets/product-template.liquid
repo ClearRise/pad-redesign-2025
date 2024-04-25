@@ -549,7 +549,7 @@
                             endif
                           -%}
 
-                          {%- if block.settings.picker_type == 'button' or downcased_option contains 'metal' -%}
+                          {%- if block.settings.picker_type == 'button' -%}
                             {%- render 'variant-button',
                               block: block,
                               product: product,
