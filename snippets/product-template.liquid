@@ -541,7 +541,7 @@
                               assign downcased_option = option.name | downcase
                               if downcased_option contains swatch_trigger
                                 assign is_color = true
-                              elsif swatch_trigger == 'color' and downcased_option contains 'colour'
+                              elsif downcased_option contains 'colour'
                                 assign is_color = true
                               elsif downcased_option contains 'metal'
                                 assign is_color = true
