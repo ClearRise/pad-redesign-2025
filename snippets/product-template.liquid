@@ -532,6 +532,7 @@
                       {%- unless product.has_only_default_variant -%}
                         {%- for option in product.options_with_values -%}
                           {% unless option.name == 'Size' %}
+                          asdfasdf
                           {%- liquid
                             if block.settings.color_swatches
                               assign is_color = false
