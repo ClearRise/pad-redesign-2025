@@ -34,6 +34,7 @@
       "block_order": [
         "image_DzJVAm"
       ],
+      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
