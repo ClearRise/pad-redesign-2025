@@ -1442,7 +1442,6 @@ button.upsell-add-to-cart.disabled{
     opacity: 1;
     background-color: white;
     color: black;
-    display: block;
     height: auto!important;
 }
 .bold_option_swatch_title .bold_option_value_price{
