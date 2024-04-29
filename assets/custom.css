@@ -277,9 +277,18 @@ img.h_auto[data-sizes=auto]{
     border: 3px solid #138e7e!important;
 }
 
-.bold_options .bold_option_swatch .bold_option_value_element .bold_option_value_swatch {
-    width: 70px;
-    height: 70px;
+.bold_option_value_swatch {
+  width: 40px !important;
+  height: 40px !important;
+}
+.bold_option_swatch .bold_option_value {
+  width: auto !important;
+}
+.bold_option_swatch_title {
+  display: none;
+}
+.bold_option_swatch .bold_option_value_element {
+  margin-right: 0 !important;
 }
 
 .bold_option_checkbox .bold_option_element {
