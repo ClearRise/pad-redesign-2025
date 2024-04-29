@@ -170,6 +170,7 @@
           },
           "announcement_FkMJza": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "FREE MYSTERY GIFT ($200-600 Value Ring or Pendant) On Orders $195+",
               "link_text": "",
