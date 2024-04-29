@@ -104,8 +104,7 @@
       {%- endif -%}
       {%- assign property_size = product.properties | size -%}
       <span class="bold_load_cart_item_properties black_txt"></span>
-      {% assign found_engrave = false %}
-      {% assign found_protection = false %}
+
       {% if property_size > 0 %}
         {% for p in product.properties %}
           {% if product.product.metafields.custom.premium_protection_product %}
@@ -113,36 +112,11 @@
               {% unless p.last == '' or p.last == null %}
                 {% assign protection_product = all_products[product.product.metafields.custom.premium_protection_product] %}
                 {% assign protection_product_id = protection_product.selected_or_first_available_variant.id %}
-
-              {% assign p_product_id = protection_product.selected_or_first_available_variant.id %}
+                {% assign p_product_id = protection_product.selected_or_first_available_variant.id %}
                 
                 <div class="product-option action_icons">
-                
-                      {% for variant in protection_product.variants %}
-                        {% if variant.id == protection_product_id %}
-                         <span class="black_txt en_price">
-                            Protection Plan Price: {{ variant.price | money_without_trailing_zeros }}
-                          </span>
-
-                          <input type="hidden" name="Protection" class="Protection_p" value="true" data-product-id = "{{ protection_product_id }}">
-                        {% endif %}
-                      {% endfor %}
-                <span
-                    id="delete-protection-btn"
-                    data-quantity="{{ product.quantity }}"
-                    data-line="{{ line }}"
-                    data-key="{{ product.key }}"
-                    class="delete-protection-btn engraving-icon protection-remove-icon deleteIconFor{{ product.key }}"
-                    data-id="deleteIconFor{{ product.key }}"
-                    data-protection="{{ protection_product_id }}"
-                  >
-                    {% render 'icon-delete' %}
-                  </span>
-               
-             
+                  <input type="hidden" name="Protection" class="Protection_p" value="true" data-product-id = "{{ protection_product_id }}">
                 </div>
-
-                {% assign found_protection = true %}
               {% endunless %}
             {% endif %}
           {% endif %}
@@ -155,112 +129,14 @@
                 {% assign e_product_id = engrave_product.selected_or_first_available_variant.id %}
                 
                 <div class="product-option action_icons">
-
-                    {% for variant in engrave_product.variants %}
-                      {% if variant.id == first_gift_product_id_var %}
-                        <span class="black_txt en_price">
-                          Engraving Price: {{ variant.price | money_without_trailing_zeros }}
-                        </span>
-                        <input type="hidden" name="engraving" class="engraving_p" value="true">
-                      {% endif %}
-                    {% endfor %}
-                
-                  <span
-                    id="edit-engraving-btn"
-                    data-quantity="{{ product.quantity }}"
-                    data-line="{{ line }}"
-                    data-key="{{ product.key }}"
-                    data-text="{{ p.last }}"
-                    class="edit-engraving-btn engraving-icon engraving-edit-icon desktop_only editIconFor{{ product.key }}"
-                    data-id="editIconFor{{ product.key }}"
-                  >
-                    {% render 'icon-edit' %}
-                  </span>
-                  <span
-                    id="delete-engraving-btn"
-                    data-quantity="{{ product.quantity }}"
-                    data-line="{{ line }}"
-                    data-key="{{ product.key }}"
-                    class="delete-engraving-btn engraving-icon engraving-remove-icon deleteIconFor{{ product.key }}"
-                    data-id="deleteIconFor{{ product.key }}"
-                  >
-                    {% render 'icon-delete' %}
-                  </span>
+                  <input type="hidden" name="engraving" class="engraving_p" value="true">
                 </div>
-
-                
-
-                {% assign found_engrave = true %}
               {% endunless %}
             {% endif %}
           {% endif %}
         {% endfor %}
       {% endif %}
       <div class="bold_edit_in_cart"></div>
-      {% unless found_engrave %}
-     {% if settings.show_engraving and settings['product-engraving'] and product.product.type == 'Ring' %} 
-        {% paginate collections.all.products by 1000 %}
-          {% assign product_id = product.product_id | times: 1 %}
-          {% assign products_obj = collections.all.products | where: 'id', product_id %}
-          {% assign productObj = products_obj[0] %}
-        {% endpaginate %}
-
-        <a
-          data-quantity="{{ product.quantity }}"
-          data-line="{{ line }}"
-          data-key="{{ product.key }}"
-          class="add-engraving-inline-button"
-          title="Add an engraving"
-          role="button"
-          tabindex="0"
-          {% if product.product.tags contains 'hide_engrave' %}
-            style="visibility: hidden; height: 0;"
-          {% endif %}
-          >Add an engraving</a
-        >
-         {% endif %}
-      {% endunless %}
-
-{% unless found_protection %}
-  {% if product.product.metafields.custom.premium_protection_product %}
-        {% liquid
-          assign protection_product = all_products[product.product.metafields.custom.premium_protection_product]
-          assign protection_product_id = protection_product.id
-          assign first_protection_product_id_var = protection_product.selected_or_first_available_variant.id
-          for variant in protection_product.variants
-            if variant.id == first_protection_product_id_var
-              assign  protection_product_price = variant.price | money_without_trailing_zeros
-              endif
-            endfor  
-        %}
-
-        <a
-          data-quantity="{{ product.quantity }}"
-          data-line="{{ line }}"
-          data-key="{{ product.key }}"
-          class="add-protection-inline-button"
-          title="Add Premium Protection Plan"
-          role="button"
-          tabindex="0"
-          data-product-title="{{ protection_product.title }}" 
-          data-protection="{{ first_protection_product_id_var }}"
-          >Add Premium Protection Plan <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span></a>
-
-      {% comment %}
-          <div class="">
-             <label class="protection_div">
-             <span class="bold_option_element">
-               <input data-quantity="{{ product.quantity }}" data-line="{{ line }}" data-key="{{ product.key }}" type="checkbox" class="add-protection-plan" data-product-title={{ protection_product.title }} data-protection="{{ first_protection_product_id_var }}">
-             </span>
-             <span class="">Add Premium Protection Plan</span>
-             <span class="bold_option_value_price"><span class="money">{% if protection_product_price != '' %}{{ protection_product_price }}{% endif %} </span></span>
-             </label>
-          </div> 
-    {% endcomment %}
-      {% endif %} 
-{% endunless %} 
-
-      
     </div>
     <div class="cart__item-sub">
       <div>
@@ -308,7 +184,7 @@
         </div>
 
         <div class="cart__remove">
-          <a href="{{ routes.cart_change_url }}?id={{ product.key }}&amp;quantity=0" class="text-link" alt=" {{ 'cart.general.remove' | t }}">
+          <a href="{{ routes.cart_change_url }}?id={{ product.key }}&amp;quantity=0" data-product-id="{{product.variant_id}}" class="text-link" alt=" {{ 'cart.general.remove' | t }}">
             {% render 'icon-delete' %}
           </a>
         </div>
