@@ -278,8 +278,8 @@ img.h_auto[data-sizes=auto]{
 }
 
 .bold_option_value_swatch {
-  width: 40px !important;
-  height: 40px !important;
+  width: 45px;
+  height: 45px;
 }
 .bold_option_swatch .bold_option_value {
   width: auto !important;
