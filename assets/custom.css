@@ -1982,7 +1982,7 @@ label.variant__label.custom_label{
   display: inline-block;
   text-transform: capitalize;
   font-size: 14px;
-  letter-spacing: var(--typeBaseSpacing);
+  letter-spacing: normal;
 }
 
 .bold_option_title .bold_option_value_title:before {
