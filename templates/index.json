@@ -5,6 +5,7 @@
       "blocks": {
         "image_A7CLyz": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -60,7 +61,6 @@
         },
         "slideshow-0": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
