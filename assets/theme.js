@@ -6602,6 +6602,12 @@ var image = theme.buildProductImage(product, imageSize);
       boldOptions: function () {
         var $this = this
         BOLD.common.eventEmitter.on('BOLD_OPTIONS_option_products_loaded', function(event){
+
+          document.querySelectorAll('.bold_option_title').forEach(title => {
+            title.innerHTML = title.innerHTML.replace(' 1', '');
+          });
+
+
           if (document.querySelector('.bold_options.bold_options_loaded').dataset.engravingStatus && document.querySelector('input[name="properties[engraving_status]"][data-option_value_key="0"]') != undefined) {
             document.querySelector('input[name="properties[engraving_status]"][data-option_value_key="0"]').click();
           }
@@ -6634,6 +6640,8 @@ var image = theme.buildProductImage(product, imageSize);
           if (document.querySelector('.bold_option_element input[name="properties[protection_status]"]') != undefined) {
             document.querySelector('.bold_option_element input[name="properties[protection_status]"]').closest(".bold_option_set").classList.add('engraving-option')
           }
+
+          
           
 
           document.addEventListener('keyup', function (e) {
