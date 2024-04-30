@@ -6603,14 +6603,10 @@ var image = theme.buildProductImage(product, imageSize);
         var $this = this
         BOLD.common.eventEmitter.on('BOLD_OPTIONS_option_products_loaded', function(event){
 
-          document.querySelectorAll('.bold_option_title').forEach(title => {
-            title.innerHTML = title.innerHTML.replace(' 1', '');
-          });
-
-
           if (document.querySelector('.bold_options.bold_options_loaded').dataset.engravingStatus && document.querySelector('input[name="properties[engraving_status]"][data-option_value_key="0"]') != undefined) {
             document.querySelector('input[name="properties[engraving_status]"][data-option_value_key="0"]').click();
           }
+          
           if (document.querySelector('input[name="properties[protection_status]"]') != undefined) {
             if (document.querySelector('.bold_options.bold_options_loaded').dataset.selection == 'product-protection') {
               document.querySelector('input[name="properties[protection_status]"][data-option_value_key="1"]').click();
@@ -6621,6 +6617,9 @@ var image = theme.buildProductImage(product, imageSize);
             }
           }
           
+          document.querySelectorAll('.bold_option_title').forEach(title => {
+            title.innerHTML = title.innerHTML.replace(' 1', '');
+          });
 
           document.querySelectorAll('.bold_option_set .bold_option_swatch').forEach(element => {
             if (element.querySelector('.bold_option_value_element input') != undefined) {
