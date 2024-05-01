@@ -913,89 +913,82 @@ function remove_auto_gift($prod_id){
     var engravingProductID = theme.engraving.engraving_var_id;
     var $this = $(this);
     var $remove_url = $(this).attr("href");
-    var $productId = '';
+    var $productId =  $(this).attr("data-product-id");
     var itemQuantity = $(this).parents(".cart__item").attr('data-quantity');
     $('.overlay').show();
-     if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
-       $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
-       bothRemoveEngrageShippingItems($productId, engravingProductID, $remove_url, itemQuantity);
-      // removeEngrageShippingItems(engravingProductID, $remove_url, itemQuantity);
-     }
-     else if ($(this).parents(".cart__item").find(".engraving_p").val() == "true") {
-       removeEngrageShippingItems(engravingProductID, $remove_url, itemQuantity);
-      
-     }
-     else if ($(this).parents(".cart__item").find(".Protection_p").val() == "true") {
-       $productId = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
-       removeEngrageShippingItems($productId, $remove_url, itemQuantity);
-     }
+    if (($(this).parents(".cart__item").find(".engraving_p").val() == "true") && ($(this).parents(".cart__item").find(".Protection_p").val() == "true")) {
+      $protectionID = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
+      bothRemoveEngrageShippingItems($protectionID, engravingProductID, $productId, itemQuantity);
+    }
+    else if ($(this).parents(".cart__item").find(".engraving_p").val() == "true") {
+      bothRemoveEngrageShippingItems(false, engravingProductID, $productId, itemQuantity);
+    }
+    else if ($(this).parents(".cart__item").find(".Protection_p").val() == "true") {
+      $protectionID = $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id');
+      bothRemoveEngrageShippingItems($protectionID, false, $productId, itemQuantity);
+    }
     else {       
-       remove_all($remove_url);
+      remove_all($remove_url);
     }    
   });
 
 
-function bothRemoveEngrageShippingItems($productId, engraveId, $remove_url, itemQuantity){
-   if ($productId != '') {
-      // Get the current cart items
-      // return new Promise((resolve, reject) => {
-        $.ajax({
-          type: "GET",
-          url: "/cart.js",
-          dataType: "json",
-          success: function (cartData) {
-            
-            console.log(cartData);
-            console.log($productId);
-            // Find the item with the engraving product ID in the cart
-            var itemToUpdate = cartData.items.find(function (item) {
-              return item.variant_id === parseInt($productId);
-            });
-            console.log(itemToUpdate);
-            if (itemToUpdate) {
-              // Decrease the quantity of the engraving product by 1
-              var newQuantity = itemToUpdate.quantity - 1*itemQuantity;
-  
-              // Make an AJAX request to update the quantity of the engraving product
-                $.ajax({
-                  type: "POST",
-                  url: "/cart/change.js",
-                  data: {
-                    quantity: newQuantity,
-                    id: itemToUpdate.id,
-                  },
-                  dataType: "json",
-                  success: function (data) {
-                   if (engraveId != '') {  
-                     removeEngrageShippingItems(engraveId, $remove_url, itemQuantity); 
-                   }
-                    else {
-                      
-                      remove_all($remove_url);
-                      
-                    //  window.location.href = $remove_url;
-                    }                  
-                  },
-                  error: function (error) {
-                    
-                    Swal.fire({
-                      icon: "error",
-                      title: "Oops...",
-                      text: "Error!",
-                    });                   
-                  },
-                });         
-            }
-          },
-          error: function (error) {
-            // Handle error if needed
-            console.error("Error fetching cart data:", error);
-          },
-        });
-      // });
-    } else {
-             remove_all($remove_url);
-    }
+function bothRemoveEngrageShippingItems($protectionID, $engravingProductID, $productId, itemQuantity){
+  $.ajax({
+    type: "GET",
+    url: "/cart.js",
+    dataType: "json",
+    success: function (cartData) {
+      let updates = {};
+      updates[$productId]= 0;
+      console.log(cartData);
+
+      var ProtectionItem = cartData.items.find(function (item) {
+        return item.variant_id === parseInt($protectionID);
+      });
+
+      if (ProtectionItem) {
+        // Decrease the quantity of the engraving product by 1
+        var newQuantity = ProtectionItem.quantity - 1*itemQuantity;
+        updates[ProtectionItem.id] = newQuantity
+      }
+
+      var EngravingItem = cartData.items.find(function (item) {
+        return item.variant_id === parseInt($engravingProductID);
+      });
+
+      if (EngravingItem) {
+        // Decrease the quantity of the engraving product by 1
+        var newQuantity = EngravingItem.quantity - 1*itemQuantity;
+        updates[EngravingItem.id] = newQuantity   
+      }
+      console.log(updates);
+
+
+      
+      fetch(window.Shopify.routes.root + 'cart/update.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ updates })
+      })
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        location.reload();
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+    },
+    error: function (error) {
+      // Handle error if needed
+      console.error("Error fetching cart data:", error);
+    },
+  });
 }
   
 

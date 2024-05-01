@@ -585,7 +585,7 @@
                       {% if settings['product-engraving'] and settings.show_engraving %}
                         <div
                           class="engraving_div"
-                          {% if product.tags contains 'hide_engrave' or product.type != 'Ring'%}
+                          {% if product.tags contains 'hide_engrave' or product.type != 'Ring' %}
                             style="visibility: hidden; height: 0;"
                           {% endif %}
                         >
