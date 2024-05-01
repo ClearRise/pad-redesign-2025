@@ -6692,7 +6692,7 @@ var image = theme.buildProductImage(product, imageSize);
                 targetElement.click();
               }
             }
-          }
+         }
           
         });
       },
