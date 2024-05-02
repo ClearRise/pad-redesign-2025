@@ -565,6 +565,19 @@
                               is_color: is_color,
                               color_option_index: color_option_index
                             -%}
+                          {% elsif block.settings.picker_type == 'button' %}
+                            {%- render 'variant-button',
+                              block: block,
+                              product: product,
+                              form_id: form_id,
+                              section_id: section_id,
+                              option: option,
+                              forloop: forloop,
+                              variant_labels: block.settings.variant_labels,
+                              custom_variant_comment: block.settings.custom_variant_comment, 
+                              is_color: is_color,
+                              color_option_index: color_option_index
+                            -%}
                           {%- else -%}
                             {%- render 'variant-dropdown',
                               product: product,
