@@ -3595,7 +3595,10 @@ Bold:POv2*/
         var value = obj.value.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g,'\\$1');
   
         if (this.type === 'dropdown') {
-          group.querySelector('option[value="'+ value +'"]').disabled = false;
+          if (group.querySelector('option[value="'+ value +'"]') != undefined) {
+            group.querySelector('option[value="'+ value +'"]').disabled = false;
+          }
+          
         } else {
           var buttonGroup = group.querySelector('.variant-input[data-value="'+ value +'"]');
           console.log(buttonGroup)
