@@ -1336,7 +1336,10 @@ button.upsell-add-to-cart.disabled{
     flex-wrap: wrap;
   }
   ._b_upsell-product-image {
-    width: fit-content;
+    width: calc(50% - 5px);
+  }
+  ._b_upsell-product-image img {
+    max-width: 100%!important; 
   }
   .dci-title{
       font-size: 14px;
