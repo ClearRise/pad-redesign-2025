@@ -274,11 +274,7 @@
                     {% endif %}
                   <div class="cart__item-sub">
                     <div class="upsell-product-price bbbbbbbbb">
-                      {% if second_gift_product.price == 0 %}
-                        FREE <s>{{second_gift_product.compare_at_price | money }}</s>
-                      {% else %}
-                        {{ second_gift_product.price | money }}
-                      {% endif %}
+                      FREE <s>{{second_gift_product.compare_at_price | money }}</s>
                   </div>
                     <button {% if second_product_found == false %}data-remove_var="{{ second_gift_product_id }}"{% endif %} data-product-id="{{ second_gift_product_id }}" class="{% if second_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">{% if second_product_found == false %}{{ already_added }}{% else %}{{ upsellAtc }}{% endif %}</button>
                   </div>     
