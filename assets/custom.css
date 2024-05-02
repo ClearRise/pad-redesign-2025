@@ -1323,6 +1323,10 @@ button.upsell-add-to-cart.disabled{
    font-size: 14px;
  }
 
+.cart-widget-container {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
   ._b_upsell-collection ._b_upsell-product ._b_upsell-product-info {
     display: inline-block;
