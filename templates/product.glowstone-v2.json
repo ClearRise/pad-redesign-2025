@@ -25,7 +25,7 @@
           "settings": {
             "size_chart": "",
             "variant_labels": true,
-            "picker_type": "button",
+            "picker_type": "dropdown",
             "color_swatches": true,
             "custom_variant_comment": false,
             "collapse_options": false
