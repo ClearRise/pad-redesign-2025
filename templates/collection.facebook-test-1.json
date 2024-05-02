@@ -49,8 +49,8 @@
             "text_align": "vertical-center horizontal-center",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify:\/\/shop_images\/worth_200_desktop_collection_banner_1.png",
-            "image_mobile": "shopify:\/\/shop_images\/worth_200_moible_collection_banner.png",
+            "image": "shopify:\/\/shop_images\/Desktop_collection_banner_2.png",
+            "image_mobile": "shopify:\/\/shop_images\/mobile_collection_banner_2.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -147,6 +147,7 @@
             "text_size": 120,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -242,6 +243,7 @@
             "text_size": 100,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -264,6 +266,7 @@
             "text_size": 100,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -286,6 +289,7 @@
             "text_size": 120,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
