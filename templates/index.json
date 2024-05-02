@@ -5,7 +5,6 @@
       "blocks": {
         "image_KXxJAp": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -22,8 +21,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify:\/\/shop_images\/Desktop_2.png",
-            "image_mobile": "shopify:\/\/shop_images\/Mobile_2_2cb491c8-a28b-433b-b363-9551ca426793.png",
+            "image": "shopify:\/\/shop_images\/Free_Gift_Hero.png",
+            "image_mobile": "shopify:\/\/shop_images\/Free_Gift_Hero_Mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -256,8 +255,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "LIMITED TIME OFFER",
-            "heading": "SILICONE BAND",
-            "textarea": "Get a Free Silicone Band  on all orders $195+",
+            "heading": "FREE GIFT",
+            "textarea": "Get a Free Malachite Pendant or Lava Radiance Ring on Orders $195+",
             "cta_text1": "SHOP ALL RINGS",
             "cta_link1": "shopify:\/\/collections\/all-products",
             "cta_text2": "",
