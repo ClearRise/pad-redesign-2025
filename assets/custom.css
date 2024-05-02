@@ -1336,7 +1336,7 @@ button.upsell-add-to-cart.disabled{
     flex-wrap: wrap;
   }
   ._b_upsell-product-image {
-    width: calc(50% - 3px);
+    width: fit-content;
   }
   .dci-title{
       font-size: 14px;
