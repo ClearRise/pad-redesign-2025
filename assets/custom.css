@@ -1324,7 +1324,7 @@ button.upsell-add-to-cart.disabled{
  }
 
 .cart-widget-container {
-  display: none;
+  display: none!important;
 }
 
 @media screen and (max-width: 767px) {
