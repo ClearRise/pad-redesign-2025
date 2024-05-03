@@ -136,10 +136,7 @@ _Sendlane.push({
 {% comment %} {% render 'header-scripts.zipifypages', renderctx: 'thm' %}  {% endcomment %}
 
 <!--  content for header  ------------------------------------------------------------------->   
-          <!-- DiscountDuck code, safe to remove if you uninstalled the app -->
-  {% include 'discountduck-loader' %}
-  <!-- DiscountDuck code, safe to remove if you uninstalled the app -->
-{{ content_for_header }}
+  {{ content_for_header }}
 <!---- end content for header --------------------------------------------------------------->
   
   {% if template == 'product' and product.metafields.inventory.ShappifyHidden or product.type contains '_HIDDEN_' %}<meta name='robots' content='noindex'>{% endif %}
