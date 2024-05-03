@@ -1980,6 +1980,31 @@ label.variant__label.custom_label{
 .bold_option_title{
   font-weight: 700!important;
   display: inline-block;
+  text-transform: capitalize;
+  font-size: 14px;
+  letter-spacing: normal;
+}
+
+.bold_option_title .bold_option_value_title:before {
+  content: " - ";
+}
+
+.bold_option_title .bold_option_value_price {
+  content: " (+";
+  font-weight: 700;
+  font-size: inherit;
+}
+
+.bold_option_title .bold_option_value_price .money {
+  margin-right: -3px;
+}
+
+.bold_option_title .bold_option_value_price:before {
+  content: " (+";
+}
+
+.bold_option_title .bold_option_value_price:after {
+  content: ")";
 }
 
 .bold_option_title .bold_option_value_title:before {
