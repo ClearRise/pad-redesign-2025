@@ -1507,12 +1507,13 @@ button.upsell-add-to-cart.disabled{
 
 /*engrave feature css*/
 .product-page-section-header{
-  font-size:18px;
+  font-size:14px;
   display:inline-block;
   justify-content:center;
   align-items:center;
   margin-bottom: 0px;
   font-weight: 700;
+  letter-spacing: normal;
   color: #000;
 }
 
