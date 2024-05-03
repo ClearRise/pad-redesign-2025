@@ -1516,6 +1516,7 @@ button.upsell-add-to-cart.disabled{
   align-items:center;
   margin-bottom: 0px;
   font-weight: 700;
+  letter-spacing: normal;
   color: #000;
 }
 
