@@ -38,6 +38,7 @@
         "bold_option_4TpV9E": {
           "type": "bold_option",
           "settings": {
+            "option_type": "Default"
           }
         },
         "engraving_YpGMkM": {
@@ -53,8 +54,10 @@
             "gift_included": "",
             "bottom_text": "Selection made during checkout process",
             "product_threshold_amount": 150,
+            "product1-img1": "shopify:\/\/shop_images\/IMG-9383.webp",
+            "product1-img2": "shopify:\/\/shop_images\/meteorite-gold.jpg",
             "product1-title": "FREE Mens Band with Purchase",
-            "product1-text": "Get any Glowstone ring free with purchase of a Diamond Wedding Band",
+            "product1-text": "Get any Men's Band free with purchase of a Diamond Wedding Band",
             "product2-title": "",
             "product2-text": "",
             "product3-title": "",
@@ -102,6 +105,7 @@
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Premium Protection Plan",
             "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p><p>1. Excludes repair and replacement of diamonds\/gemstones.<\/p><p>2. Resizing up or down two sizes.<\/p><p>3. Costs may vary depending on specific service and material type.<\/p>",
             "page": "",
@@ -151,6 +155,7 @@
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Ring Details",
             "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
             "page": "",
@@ -161,6 +166,7 @@
         "7cf22f7b-2877-4d38-a231-95946286cc18": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Sizing Information",
             "content": "<p>Each Women's Wedding Band is made with real precious metals and is custom made for each order. We want to ensure you are ordering the correct size and each order will come with a complimentary sizer to confirm your size before we begin production on your ring. This ring is NOT eligible for a free size exchange. If you are needing a new size post-delivery, please reach out to us via email for options.<\/p>",
             "page": "",
@@ -171,6 +177,7 @@
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Lifetime Warranty",
             "content": "<p>Each Women's Wedding Band comes with a <a href=\"https:\/\/patrickadairdesigns.com\/pages\/limited-lifetime-warranty-and-return-policy\" target=\"_blank\" title=\"https:\/\/patrickadairdesigns.com\/pages\/limited-lifetime-warranty-and-return-policy\"><strong>limited lifetime warranty<\/strong><\/a>. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.<\/p>",
             "page": "",
@@ -182,6 +189,7 @@
           "type": "tab",
           "disabled": true,
           "settings": {
+            "expanded": false,
             "title": "Ethically Sourced",
             "content": "<p>Every Gemstone is ethically sourced from a cutting edge laboratory. <\/p><p>Each one is chemically and molecularly identical to a mined gemstone without the ethical dillema. <\/p><p>On top of the ethical benefit, we also are able to offer higher quality gemstones for a significantly lower price than earth mined counterparts. <\/p>",
             "page": "",
@@ -192,6 +200,7 @@
         "tab": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Shipping information",
             "content": "<p>Each Women's Wedding Band is made to order. Once your size is confirmed, we expect it to be made and shipped within 2-4 weeks.<\/p>",
             "page": "",
