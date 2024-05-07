@@ -217,7 +217,7 @@
       ],
       "settings": {
         "full_width": false,
-        "gutter_size": 20,
+        "gutter_size": 15,
         "space_above": false,
         "space_below": false
       }
