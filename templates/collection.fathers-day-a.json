@@ -225,37 +225,9 @@
     "collection-header": {
       "type": "collection-header",
       "settings": {
-        "enable": false,
+        "enable": true,
         "collection_image_enable": false,
         "parallax": true
-      }
-    },
-    "rich_text_aickff": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_p3yemQ": {
-          "type": "heading",
-          "settings": {
-            "title": "Best Sellers"
-          }
-        },
-        "text_9BXcpz": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_p3yemQ",
-        "text_9BXcpz"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
       }
     },
     "main-collection": {
@@ -327,7 +299,6 @@
     "rich_text_zMwWiy",
     "promo_grid_8k3KVd",
     "collection-header",
-    "rich_text_aickff",
     "main-collection",
     "rich_text_GHKdwf",
     "replo_testimonial_v1_3eTibC"
