@@ -119,8 +119,8 @@
         "advanced_9YitmP": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
-            "heading": "WEDDING <br>BANDS",
+            "subheading": "20-30% OFF",
+            "heading": "WEDDING <br> BANDS",
             "textarea": "<u> SHOP NOW<\/u>",
             "cta_text1": "",
             "cta_link1": "shopify:\/\/collections\/mens-wedding-bands",
@@ -142,7 +142,7 @@
         "advanced_URLDAp": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
+            "subheading": "20-30% OFF",
             "heading": "GLOWSTONE <br>SERIES",
             "textarea": "<u> SHOP NOW<\/u>",
             "cta_text1": "",
@@ -165,7 +165,7 @@
         "advanced_wM6GWG": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
+            "subheading": "20-30% OFF",
             "heading": "METEORITE <br> RINGS",
             "textarea": "<u> SHOP NOW<\/u>",
             "cta_text1": "",
@@ -184,18 +184,78 @@
             "boxed": false,
             "framed": false
           }
+        },
+        "advanced_TbYWFx": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Limited time",
+            "heading": "FREE MYSTERY BOX",
+            "textarea": "Orders $150+ receive a free Mystery Box Guaranteed to Contain a Ring Valued between $200-600",
+            "cta_text1": "Shop All Rings",
+            "cta_link1": "shopify:\/\/collections\/all-products",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/Group_Shot.png",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "#cf7208",
+            "boxed": false,
+            "framed": false
+          }
         }
       },
       "block_order": [
         "advanced_9YitmP",
         "advanced_URLDAp",
-        "advanced_wM6GWG"
+        "advanced_wM6GWG",
+        "advanced_TbYWFx"
       ],
       "settings": {
         "full_width": false,
         "gutter_size": 20,
         "space_above": false,
         "space_below": true
+      }
+    },
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": false,
+        "collection_image_enable": false,
+        "parallax": true
+      }
+    },
+    "rich_text_aickff": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_p3yemQ": {
+          "type": "heading",
+          "settings": {
+            "title": "Best Sellers"
+          }
+        },
+        "text_9BXcpz": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_p3yemQ",
+        "text_9BXcpz"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
       }
     },
     "main-collection": {
@@ -215,7 +275,7 @@
         "product_grid": {
           "type": "product_grid",
           "settings": {
-            "enable_collection_count": true,
+            "enable_collection_count": false,
             "per_row": 3,
             "rows_per_page": 5,
             "mobile_flush_grid": true
@@ -228,72 +288,11 @@
         "product_grid"
       ],
       "settings": {
-        "enable_sidebar": true,
+        "enable_sidebar": false,
         "collapsed": true,
         "filter_style": "sidebar",
         "enable_color_swatches": false,
-        "enable_sort": true
-      }
-    },
-    "collection-header": {
-      "type": "collection-header",
-      "disabled": true,
-      "settings": {
-        "enable": true,
-        "collection_image_enable": false,
-        "parallax": true
-      }
-    },
-    "promo-grid": {
-      "type": "promo-grid",
-      "blocks": {
-        "banner": {
-          "type": "banner",
-          "disabled": true,
-          "settings": {
-            "heading": "",
-            "text": "",
-            "link": "",
-            "label": "",
-            "color_tint": "#e95454",
-            "color_tint_opacity": 8,
-            "framed": false
-          }
-        },
-        "advanced": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "Limited time",
-            "heading": "Announce your promotion",
-            "textarea": "Include the smaller details of your promotion in text below the title.",
-            "cta_text1": "Shop This",
-            "cta_link1": "",
-            "cta_text2": "Shop All",
-            "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Ring_Main_Focus_Shot.jpg",
-            "video_url": "",
-            "width": "100",
-            "height": 500,
-            "text_size": 120,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        }
-      },
-      "block_order": [
-        "banner",
-        "advanced"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "gutter_size": 20,
-        "space_above": true,
-        "space_below": false
+        "enable_sort": false
       }
     },
     "rich_text_GHKdwf": {
@@ -316,8 +315,8 @@
         "divider": false
       }
     },
-    "replo_trust_icons_white_backg_7Jffit": {
-      "type": "replo-trust-icons-white-backg",
+    "replo_testimonial_v1_3eTibC": {
+      "type": "replo-testimonial-v1",
       "settings": {
       }
     }
@@ -327,10 +326,10 @@
     "replo_trust_icons_white_backg_zYMnyn",
     "rich_text_zMwWiy",
     "promo_grid_8k3KVd",
-    "main-collection",
     "collection-header",
-    "promo-grid",
+    "rich_text_aickff",
+    "main-collection",
     "rich_text_GHKdwf",
-    "replo_trust_icons_white_backg_7Jffit"
+    "replo_testimonial_v1_3eTibC"
   ]
 }
