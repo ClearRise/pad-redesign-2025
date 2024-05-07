@@ -21,8 +21,8 @@
             "text_align": "vertical-center horizontal-center",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify:\/\/shop_images\/worth_200_desktop_collection_banner_2.png",
-            "image_mobile": "shopify:\/\/shop_images\/fixed.png",
+            "image": "shopify:\/\/shop_images\/fg_no_button.png",
+            "image_mobile": "shopify:\/\/shop_images\/fg_no_button_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -34,7 +34,6 @@
       "block_order": [
         "image_DzJVAm"
       ],
-      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
