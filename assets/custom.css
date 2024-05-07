@@ -8,7 +8,9 @@
 h2{
   line-height: 1.2em;
 }
-
+.cart-widget-container {
+  display: none!important;
+}
 #dynamic-checkout-cart .shopify-cleanslate .p28_J2fRvZNDqyZkZ2H9 {
   display: flex !important;
   flex-direction: column !important;
@@ -1332,10 +1334,6 @@ button.upsell-add-to-cart.disabled{
    font-size: 14px;
  }
 
-.cart-widget-container {
-  display: none!important;
-}
-
 @media screen and (max-width: 767px) {
   ._b_upsell-collection ._b_upsell-product ._b_upsell-product-info {
     display: inline-block;
@@ -1343,16 +1341,13 @@ button.upsell-add-to-cart.disabled{
     justify-content: center;
     align-items: center;
     flex-basis: 100%;
-    padding-left: 0px;
+    padding-left: 10px;
   }
   ._b_upsell-product {
     flex-wrap: wrap;
   }
   ._b_upsell-product-image {
-    width: calc(50% - 5px);
-  }
-  ._b_upsell-product-image img {
-    max-width: 100%!important; 
+    width: calc(50% - 3px);
   }
   .dci-title{
       font-size: 14px;
@@ -1449,7 +1444,6 @@ button.upsell-add-to-cart.disabled{
     opacity: 1;
     background-color: white;
     color: black;
-    display: block;
     height: auto!important;
 }
 .bold_option_swatch_title .bold_option_value_price{
