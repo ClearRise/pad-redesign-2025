@@ -1646,13 +1646,11 @@ lazySizesConfig.expFactor = 4;
     CartForm.prototype = Object.assign({}, CartForm.prototype, {
       init: function() {
         this.initQtySelectors();
-        BOLD.common.eventEmitter.on('BOLD_OPTIONS_option_products_loaded', function(event){
-          console.log("asdfasdf")
-        });
+
         document.addEventListener('cart:quantity' + this.namespace, this.quantityChanged.bind(this));
-  
+        
         this.form.on('submit' + this.namespace, this.onSubmit.bind(this));
-  
+        
         if (this.noteInput) {
           this.noteInput.addEventListener('change', function() {
             var newNote = this.value;
@@ -1774,6 +1772,8 @@ lazySizesConfig.expFactor = 4;
         // Disable qty selector so multiple clicks can't happen while loading
         if (el) {
           el.classList.add('is-loading');
+          const loader = document.querySelector('.overlay');
+          loader.style.display = 'block';
         }
         if (dataEngravingValue && dataProtectionValue) {
           this.updateOtherProductQuantity(key, qty, dataEngravingValue, dataProtectionValue, comp_val);
