@@ -312,6 +312,12 @@
     },
     "replo_testimonial_v1_3eTibC": {
       "type": "replo-testimonial-v1",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "replo_bottom_lp_container_QRGXV3": {
+      "type": "replo-bottom-lp-container",
       "settings": {
       }
     }
@@ -325,6 +331,7 @@
     "rich_text_9zXcrr",
     "main-collection",
     "rich_text_GHKdwf",
-    "replo_testimonial_v1_3eTibC"
+    "replo_testimonial_v1_3eTibC",
+    "replo_bottom_lp_container_QRGXV3"
   ]
 }
