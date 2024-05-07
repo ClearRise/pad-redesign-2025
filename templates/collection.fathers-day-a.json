@@ -219,15 +219,36 @@
         "full_width": false,
         "gutter_size": 20,
         "space_above": false,
-        "space_below": true
+        "space_below": false
       }
     },
     "collection-header": {
       "type": "collection-header",
+      "disabled": true,
       "settings": {
         "enable": true,
         "collection_image_enable": false,
         "parallax": true
+      }
+    },
+    "rich_text_9zXcrr": {
+      "type": "rich-text",
+      "blocks": {
+        "text_MJDDVc": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h1>Shop Best Sellers<\/h1>"
+          }
+        }
+      },
+      "block_order": [
+        "text_MJDDVc"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
       }
     },
     "main-collection": {
@@ -235,11 +256,13 @@
       "blocks": {
         "collection_description": {
           "type": "collection_description",
+          "disabled": true,
           "settings": {
           }
         },
         "subcollections": {
           "type": "subcollections",
+          "disabled": true,
           "settings": {
             "subcollections_per_row": 5
           }
@@ -299,6 +322,7 @@
     "rich_text_zMwWiy",
     "promo_grid_8k3KVd",
     "collection-header",
+    "rich_text_9zXcrr",
     "main-collection",
     "rich_text_GHKdwf",
     "replo_testimonial_v1_3eTibC"
