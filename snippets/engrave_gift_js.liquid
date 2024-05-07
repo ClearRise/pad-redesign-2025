@@ -177,17 +177,17 @@ function _getCart() {
   var thirdtier_second_gift_product_var = "";
 
   {% if settings.show_gift_box %}    
-      {% assign first_gift_product = settings.product-handle-1 %}
-      {% assign first_gift_product_id = first_gift_product.id %} 
-      {% assign first_gift_product_id_var = first_gift_product.selected_or_first_available_variant.id %}
-      {% assign second_gift_product = settings.product-handle-2 %}
-      {% assign second_gift_product_id = second_gift_product.id %}
-      {% assign second_gift_product_id_var = second_gift_product.selected_or_first_available_variant.id %}
+    {% assign first_gift_product = settings.product-handle-1 %}
+    {% assign first_gift_product_id = first_gift_product.id %} 
+    {% assign first_gift_product_id_var = first_gift_product.selected_or_first_available_variant.id %}
+    {% assign second_gift_product = settings.product-handle-2 %}
+    {% assign second_gift_product_id = second_gift_product.id %}
+    {% assign second_gift_product_id_var = second_gift_product.selected_or_first_available_variant.id %}
   
-      var first_gift_product = "{{ first_gift_product_id }}";
-      var second_gift_product = "{{ second_gift_product_id }}";
-      var first_gift_product_var = "{{ first_gift_product_id_var }}";
-      var second_gift_product_var = "{{ second_gift_product_id_var }}";
+    var first_gift_product = "{{ first_gift_product_id }}";
+    var second_gift_product = "{{ second_gift_product_id }}";
+    var first_gift_product_var = "{{ first_gift_product_id_var }}";
+    var second_gift_product_var = "{{ second_gift_product_id_var }}";
 
   {% endif %}  
 
@@ -269,20 +269,9 @@ function _getCart() {
 
   
 
-  function updatedgCartUpsell($remove_this, $remove) {
+function updatedgCartUpsell($remove_this, $remove) {
     const loader = document.querySelector('.overlay');
     loader.style.display = 'block';
-
-  // fetch("".concat(theme.routes.home, "?").concat("timestamp=").concat(Date.now()), {
-  //       credentials: 'same-origin',
-  //       method: 'GET'
-  //     }).then(response => response.text())
-  //   .then((data) =>{
-  //       // console.log(data);
-  //          const new_html1 = new DOMParser().parseFromString(data,'text/html').querySelector('.cart-shipping__wrapper').innerHTML;            
-  //          $('.cart-shipping__wrapper').html(new_html1);   
-  //       } 
-  //    );
 
     fetch("".concat(theme.routes.cartPage, "?").concat("timestamp=").concat(Date.now()), {
         credentials: 'same-origin',
@@ -297,8 +286,6 @@ function _getCart() {
           });
     });
     
-    // progress bar code 
-
      fetch('/cart.js')
       .then(response => response.json())
       .then(cart => {
@@ -307,7 +294,6 @@ function _getCart() {
         {% assign SecondTierMinRaw = settings.min_cart_threshold_amount | times:100 %}
         {% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times:100 %}
         {% assign ThirdTierAmountRaw = settings.cart_threshold_amount_third | times:100 %}
-     //  calculateProgress(cart.total_price, {{GiftBoxAmountRaw}});
 
         console.log(cart.items);
         console.log({{GiftBoxAmountRaw}});
