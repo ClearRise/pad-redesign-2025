@@ -1646,9 +1646,7 @@ lazySizesConfig.expFactor = 4;
     CartForm.prototype = Object.assign({}, CartForm.prototype, {
       init: function() {
         this.initQtySelectors();
-        BOLD.common.eventEmitter.on('BOLD_OPTIONS_option_products_loaded', function(event){
-          console.log("asdfasdf")
-        });
+
         document.addEventListener('cart:quantity' + this.namespace, this.quantityChanged.bind(this));
   
         this.form.on('submit' + this.namespace, this.onSubmit.bind(this));
@@ -1698,9 +1696,9 @@ lazySizesConfig.expFactor = 4;
       },
   
       buildCart: function() {
-        window.location.reload();
         theme.cart.getCartProductMarkup().then(this.cartMarkup.bind(this));
       },
+      
   
       cartMarkup: function(html) {
         var markup = this._parseProductHTML(html);
