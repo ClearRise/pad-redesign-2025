@@ -66,10 +66,9 @@
     "collection_grid_opacity": 10,
     "collection_grid_gutter": true,
     "product_threshold_amount": 150,
-    "product1-img1": "shopify:\/\/shop_images\/lava-carbon-fiber-glow-ring.jpg",
-    "product1-img2": "shopify:\/\/shop_images\/pendant2_1cbd38f2-d522-413e-b2b9-8813db2190cc.png",
+    "product1-img1": "shopify:\/\/shop_images\/MysteryProductThumbnailSLower_fa1b3fe4-945c-4c13-b724-d308cfdbef8a.gif",
     "product1-title": "<b>Purchase Today to lock in your Free Gift<\/b>",
-    "product1-text": "Get a free Lava Radiance Ring or Malachite Pendant on orders $195+",
+    "product1-text": "Get a Free Mystery Gift (valued between $200-$600 MSRP) on all orders $195+",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -91,8 +90,8 @@
     "cart_threshold_amount": 190,
     "spend_progress": "",
     "product-handle-1": "lava-radiance-carbon-fiber-glow-ring-1",
-    "product-handle-2": "malachite-trustone-and-gold-pendant-1",
-    "hide_gift_2": false,
+    "product-handle-2": "24k-gold-leaf-ring-on-black-ceramic",
+    "hide_gift_2": true,
     "second_show_gift_box": false,
     "second_tier_progress": "GET TWO FREE GIFTS",
     "gift_box_title_second": "GET TWO FREE GIFTS",
@@ -159,7 +158,7 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "Sale",
-              "link_submenu": "shopify:\/\/collections\/flash-sale-meteorite"
+              "link_submenu": "shopify:\/\/collections\/all-products"
             }
           },
           "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56": {
