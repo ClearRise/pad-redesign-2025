@@ -10724,6 +10724,13 @@ html[dir=rtl] .product-single__meta .rte{
   white-space:nowrap;
 }
 
+.product__price-savings .save_badge.badge {
+  padding: 0px 12px 3px;
+  background: #bb0e0e;
+  color: white;
+  border-radius: 10px;
+}
+
 .product__quantity label{
     display:block;
     margin-bottom:10px;
