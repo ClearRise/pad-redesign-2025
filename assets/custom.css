@@ -8,7 +8,9 @@
 h2{
   line-height: 1.2em;
 }
-
+.cart-widget-container {
+  display: none!important;
+}
 #dynamic-checkout-cart .shopify-cleanslate .p28_J2fRvZNDqyZkZ2H9 {
   display: flex !important;
   flex-direction: column !important;
@@ -277,9 +279,18 @@ img.h_auto[data-sizes=auto]{
     border: 3px solid #138e7e!important;
 }
 
-.bold_options .bold_option_swatch .bold_option_value_element .bold_option_value_swatch {
-    width: 70px;
-    height: 70px;
+.bold_option_value_swatch {
+  width: 45px;
+  height: 45px;
+}
+.bold_option_swatch .bold_option_value {
+  width: auto !important;
+}
+.bold_option_swatch_title {
+  display: none;
+}
+.bold_option_swatch .bold_option_value_element {
+  margin-right: 0 !important;
 }
 
 .bold_option_checkbox .bold_option_element {
@@ -1440,7 +1451,6 @@ button.upsell-add-to-cart.disabled{
     opacity: 1;
     background-color: white;
     color: black;
-    display: block;
     height: auto!important;
 }
 .bold_option_swatch_title .bold_option_value_price{
@@ -1983,28 +1993,6 @@ label.variant__label.custom_label{
   text-transform: capitalize;
   font-size: 14px;
   letter-spacing: normal;
-}
-
-.bold_option_title .bold_option_value_title:before {
-  content: " - ";
-}
-
-.bold_option_title .bold_option_value_price {
-  content: " (+";
-  font-weight: 700;
-  font-size: inherit;
-}
-
-.bold_option_title .bold_option_value_price .money {
-  margin-right: -3px;
-}
-
-.bold_option_title .bold_option_value_price:before {
-  content: " (+";
-}
-
-.bold_option_title .bold_option_value_price:after {
-  content: ")";
 }
 
 .bold_option_title .bold_option_value_title:before {
