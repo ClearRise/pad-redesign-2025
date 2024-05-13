@@ -27,6 +27,17 @@
           "settings": {
           }
         },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "size_chart": "",
+            "variant_labels": true,
+            "picker_type": "dropdown",
+            "color_swatches": true,
+            "custom_variant_comment": false,
+            "collapse_options": false
+          }
+        },
         "inventory_status": {
           "type": "inventory_status",
           "disabled": true,
@@ -67,17 +78,6 @@
             "border_color": "#ffffff",
             "bg_color": "#ffffff",
             "text_color": "#000000"
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "size_chart": "",
-            "variant_labels": true,
-            "picker_type": "dropdown",
-            "color_swatches": true,
-            "custom_variant_comment": false,
-            "collapse_options": false
           }
         },
         "buy_buttons": {
@@ -222,11 +222,11 @@
         "text_BLakNm",
         "94c49419-9d53-4cfe-8c63-edaf9a145c94",
         "separator",
+        "variant_picker",
         "inventory_status",
         "bold_option_4TpV9E",
         "engraving_YpGMkM",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
-        "variant_picker",
         "buy_buttons",
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
         "7621462d-9edd-432d-a525-b5bcbfe07deb",
