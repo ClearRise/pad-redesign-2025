@@ -126,12 +126,6 @@
                   {%- endif -%}
                 </p>
               {%- endif -%}
-
-              {%- if product.metafields.custom.plan_out_subtitle != blank -%}
-                <p data-sku class="product-single__subtitle">
-                  {{product.metafields.custom.plan_out_subtitle}}
-                </p>
-              {%- endif -%}
             </div>
             <style>
               .slr-widget--mini .slr-stars svg {
@@ -468,6 +462,10 @@
                         <span data-save-price class="product__price-savings{% if hide_sale_price %} hide{% endif %}">
                           {%- unless hide_sale_price -%}
                             {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                            {% if settings.save_badget_text %}
+                            <span class="save_badge {{settings.save_badge_type}}">{{settings.save_badget_text}}</span>
+                            {% endif %}
+                            
                           {%- endunless -%}
                         </span>
                       {%- endif -%}
