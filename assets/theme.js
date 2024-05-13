@@ -1648,9 +1648,9 @@ lazySizesConfig.expFactor = 4;
         this.initQtySelectors();
 
         document.addEventListener('cart:quantity' + this.namespace, this.quantityChanged.bind(this));
-        
+  
         this.form.on('submit' + this.namespace, this.onSubmit.bind(this));
-        
+  
         if (this.noteInput) {
           this.noteInput.addEventListener('change', function() {
             var newNote = this.value;
@@ -3595,7 +3595,10 @@ Bold:POv2*/
         var value = obj.value.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g,'\\$1');
   
         if (this.type === 'dropdown') {
-          group.querySelector('option[value="'+ value +'"]').disabled = false;
+          if (group.querySelector('option[value="'+ value +'"]') != undefined) {
+            group.querySelector('option[value="'+ value +'"]').disabled = false;
+          }
+          
         } else {
           var buttonGroup = group.querySelector('.variant-input[data-value="'+ value +'"]');
           console.log(buttonGroup)
@@ -6602,9 +6605,11 @@ var image = theme.buildProductImage(product, imageSize);
       boldOptions: function () {
         var $this = this
         BOLD.common.eventEmitter.on('BOLD_OPTIONS_option_products_loaded', function(event){
+
           if (document.querySelector('.bold_options.bold_options_loaded').dataset.engravingStatus && document.querySelector('input[name="properties[engraving_status]"][data-option_value_key="0"]') != undefined) {
             document.querySelector('input[name="properties[engraving_status]"][data-option_value_key="0"]').click();
           }
+          
           if (document.querySelector('input[name="properties[protection_status]"]') != undefined) {
             if (document.querySelector('.bold_options.bold_options_loaded').dataset.selection == 'product-protection') {
               document.querySelector('input[name="properties[protection_status]"][data-option_value_key="1"]').click();
@@ -6615,6 +6620,9 @@ var image = theme.buildProductImage(product, imageSize);
             }
           }
           
+          document.querySelectorAll('.bold_option_title').forEach(title => {
+            title.innerHTML = title.innerHTML.replace(' 1', '');
+          });
 
           document.querySelectorAll('.bold_option_set .bold_option_swatch').forEach(element => {
             if (element.querySelector('.bold_option_value_element input') != undefined) {
@@ -6634,6 +6642,8 @@ var image = theme.buildProductImage(product, imageSize);
           if (document.querySelector('.bold_option_element input[name="properties[protection_status]"]') != undefined) {
             document.querySelector('.bold_option_element input[name="properties[protection_status]"]').closest(".bold_option_set").classList.add('engraving-option')
           }
+
+          
           
 
           document.addEventListener('keyup', function (e) {
@@ -6684,15 +6694,16 @@ var image = theme.buildProductImage(product, imageSize);
           });
 
           var optionType = document.querySelector('.bold_options').dataset.optionType;
-           if (document.querySelector(`input[name="properties[${optionType}]"]`) != undefined) {
-              if (document.querySelector(`input[name="properties[${optionType}]"]`).closest(".bold_option").querySelector('input[type="checkbox"]') != undefined) {
-                var targetElement = document.querySelector(`input[name="properties[${optionType}]"]`).closest(".bold_option").querySelector('input[type="checkbox"]')
-                console.log(targetElement)
-                if (!targetElement.checked) {
-                  targetElement.click();
-                }
+          if (document.querySelector(`input[name="properties[${optionType}]"]`) != undefined) {
+            if (document.querySelector(`input[name="properties[${optionType}]"]`).closest(".bold_option").querySelector('input[type="checkbox"]') != undefined) {
+              var targetElement = document.querySelector(`input[name="properties[${optionType}]"]`).closest(".bold_option").querySelector('input[type="checkbox"]')
+              console.log(targetElement)
+              if (!targetElement.checked) {
+                targetElement.click();
               }
-           }
+            }
+          }
+          
         });
       },
 
