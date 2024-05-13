@@ -544,15 +544,32 @@
                               assign downcased_option = option.name | downcase
                               if downcased_option contains swatch_trigger
                                 assign is_color = true
-                              elsif swatch_trigger == 'color' and downcased_option contains 'colour'
+                              elsif downcased_option contains 'colour'
                                 assign is_color = true
                               elsif downcased_option contains 'metal'
+                                assign is_color = true
+                              elsif downcased_option contains 'width'
+                                assign is_color = true
+                              elsif downcased_option contains 'gold type'
                                 assign is_color = true
                               endif
                             endif
                           -%}
-
-                          {%- if block.settings.picker_type == 'button' or downcased_option contains 'metal' -%}
+                          
+                          {%- if is_color -%}
+                            {%- render 'variant-button',
+                              block: block,
+                              product: product,
+                              form_id: form_id,
+                              section_id: section_id,
+                              option: option,
+                              forloop: forloop,
+                              variant_labels: block.settings.variant_labels,
+                              custom_variant_comment: block.settings.custom_variant_comment, 
+                              is_color: is_color,
+                              color_option_index: color_option_index
+                            -%}
+                          {% elsif block.settings.picker_type == 'button' %}
                             {%- render 'variant-button',
                               block: block,
                               product: product,
@@ -673,7 +690,7 @@
                       {% endif %}
                       {%- endunless -%}
                     </div>
-                  {%- when 'buy_buttons' -%}
+                  {%- when 'buy_buttons' -%}  
                     <div class="product-block" {{ block.shopify_attributes }}>
                       {%- unless product.empty? -%}
 
