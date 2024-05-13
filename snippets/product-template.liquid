@@ -126,6 +126,12 @@
                   {%- endif -%}
                 </p>
               {%- endif -%}
+
+              {%- if product.metafields.custom.plan_out_subtitle != blank -%}
+                <p data-sku class="product-single__subtitle">
+                  {{product.metafields.custom.plan_out_subtitle}}
+                </p>
+              {%- endif -%}
             </div>
             <style>
               .slr-widget--mini .slr-stars svg {

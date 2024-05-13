@@ -826,6 +826,31 @@
     ]
   },
   {
+    "name": "Save badge",
+    "settings": [
+      {
+        "type": "text",
+        "id": "save_badget_text",
+        "label": "Save Badge text"
+      },
+      {
+        "type": "select",
+        "id": "save_badge_type",
+        "label": "Save badge type",
+        "options": [
+          {
+            "value": "inline",
+            "label": "Inline text"
+          },
+          {
+            "value": "badge",
+            "label": "Badge"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Price option for gift",
     "settings": [
       {
