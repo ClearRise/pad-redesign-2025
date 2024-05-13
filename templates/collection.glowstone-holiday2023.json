@@ -12,55 +12,8 @@
     "dcdeca2b-ab2e-4516-9d5d-edbc1ebcd719": {
       "type": "slideshow",
       "blocks": {
-        "image_gJmRR3": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "Presidents Day Sale",
-            "top_subheading_color": "",
-            "title": "<strong>20-25% Off <\/strong>",
-            "special_title_color": "",
-            "subheading": "<h2><strong>Glowstone Collection<\/strong><\/h2><p>Rings as Unique as You Are<\/p>",
-            "special_text_color": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-top horizontal-center",
-            "image": "shopify:\/\/shop_images\/1231213123.png",
-            "image_mobile": "shopify:\/\/shop_images\/PRESIDAY_mobile_COLLECTION2_1.png",
-            "overlay_opacity": 10,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 60,
-            "base_text_size": 24
-          }
-        },
-        "image_MRngKz": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "Two linetitle slide.",
-            "special_title_color": "",
-            "subheading": "",
-            "special_text_color": "",
-            "link": "",
-            "link_text": "Optional button",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-center",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 80,
-            "base_text_size": 24
-          }
-        },
         "image_DdzAMt": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -73,9 +26,12 @@
             "link_2": "",
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/worth_200_desktop_collection_banner_1.png",
-            "image_mobile": "shopify:\/\/shop_images\/fixed.png",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "image": "shopify:\/\/shop_images\/fathers_day_desktop_collection_banner_25.png",
+            "image_mobile": "shopify:\/\/shop_images\/mobile_collection_banners_25.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -85,8 +41,6 @@
         }
       },
       "block_order": [
-        "image_gJmRR3",
-        "image_MRngKz",
         "image_DdzAMt"
       ],
       "settings": {
