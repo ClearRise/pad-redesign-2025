@@ -54,7 +54,20 @@
           "type": "free_gifts",
           "settings": {
             "gift_box_title": "",
-            "gift_included": ""
+            "gift_included": "",
+            "bottom_text": "Selection made during checkout process",
+            "product_threshold_amount": 150,
+            "product1-title": "",
+            "product1-text": "",
+            "product2-title": "",
+            "product2-text": "",
+            "product3-title": "",
+            "product3-text": "",
+            "product-1": "",
+            "product-2": "",
+            "border_color": "",
+            "bg_color": "",
+            "text_color": ""
           }
         },
         "buy_buttons": {
@@ -82,6 +95,7 @@
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Premium Protection Plan",
             "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
             "page": "",
@@ -135,6 +149,7 @@
         "7cf22f7b-2877-4d38-a231-95946286cc18": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Sizing Information",
             "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
             "page": "",
@@ -145,6 +160,7 @@
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Lifetime Warranty",
             "content": "<p>{{ product.metafields.global.lifetime_warranty | metafield_tag }}<\/p>",
             "page": "",
@@ -155,6 +171,7 @@
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Additional Details",
             "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
             "page": "",
@@ -165,6 +182,7 @@
         "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "How To Care",
             "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
             "page": "",
@@ -175,6 +193,7 @@
         "tab": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Shipping information",
             "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
             "page": "",
@@ -214,6 +233,12 @@
         "tab",
         "contact"
       ],
+      "custom_css": [
+        ".bold_option_value_swatch {width: 35px !important; height: 35px !important;}",
+        ".bold_option_swatch .bold_option_value {width: auto !important;}",
+        ".bold_option_swatch_title {display: none;}",
+        ".bold_option_swatch .bold_option_value_element {margin-right: 0 !important;}"
+      ],
       "settings": {
         "sku_enable": false,
         "image_position": "left",
@@ -251,6 +276,7 @@
             "text_size": 120,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -273,6 +299,7 @@
             "text_size": 100,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -295,6 +322,7 @@
             "text_size": 100,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -317,6 +345,7 @@
             "text_size": 120,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -339,6 +368,7 @@
             "text_size": 120,
             "text_align": "vertical-bottom horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -361,6 +391,7 @@
             "text_size": 120,
             "text_align": "vertical-bottom horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
