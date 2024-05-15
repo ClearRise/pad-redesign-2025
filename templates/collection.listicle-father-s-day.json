@@ -51,11 +51,11 @@
         ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Women_s_Rings_on_red_background.png",
+        "image": "shopify:\/\/shop_images\/Vertical_Groupshot.png",
         "image_width": 700,
         "subtitle": "#1",
-        "title": "You dream it. We Make it.",
-        "text": "<p>Every wedding band from Patrick Adair Designs is fully customizable. That means you are guaranteed to get a ring that's one-of-a-kind.<\/p>",
+        "title": "One-of-a-Kind Designs",
+        "text": "<p>A ring should be more than just jewelry. That's why we meticulously handcraft every ring to make sure each one is as unique as the men who wear them. <\/p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -72,10 +72,11 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Group_Shot_d3dec58d-44ce-4568-9648-13e1dd7ba31e.png",
+        "image2": "shopify:\/\/shop_images\/Untitled-2.png",
         "image_width": 700,
         "subtitle": "#2",
-        "title": "Superior Quality at a Better Price",
-        "text": "<p>Every ring is made to luxury jeweler standards using Solid Gold, Solid Platinum, and ethically sourced lab diamonds (and other gemstones). You get world-class quality without excess mark-up. <\/p>",
+        "title": "Exotic Materials",
+        "text": "<p>Whether it’s hand-forged Damascus steel from Nevada, fossilized mammoth tooth from Siberia, or meteorite pulled from the Arctic Circle you’ll find a story in every ring<\/p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -91,11 +92,11 @@
         ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Hand_Crafted.png",
+        "image": "shopify:\/\/shop_images\/Glowstone_Groupshot.png",
         "image_width": 700,
         "subtitle": "#3",
-        "title": "Handcrafted with Love",
-        "text": "<p>Every piece is handcrafted by artisans using ethically and sustainably sourced materials. <\/p>",
+        "title": "Hundreds of Customizable Designs",
+        "text": "<p>With hundreds of designs that are all fully customizable, there's a perfect ring for anyone. <\/p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -111,11 +112,11 @@
         ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Group_Shot_a35d53b1-4f15-4e3a-8e7c-d5dcd325442c.png",
+        "image": "shopify:\/\/shop_images\/Perfect_fit.png",
         "image_width": 700,
         "subtitle": "#4",
-        "title": "Sustainably Sourced",
-        "text": "<p>We use ethically sourced lab grown Diamonds. This means every gemstone we sell is chemically identical to its mined counterpart <strong>but guaranteed to be conflict free<\/strong>. <\/p>",
+        "title": "Perfect Fit. Everytime.",
+        "text": "<p>Thanks to our free ring sizing kit, you're guaranteed to get a perfectly sized ring every time. <\/p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -131,11 +132,11 @@
         ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Ring_on_Hand.png",
+        "image": "shopify:\/\/shop_images\/Opal_shot.png",
         "image_width": 700,
         "subtitle": "#5",
-        "title": "The Perfect Fit. Every Time.",
-        "text": "<p>We offer free sizing kits with your order, so if you don't know your size, no stress. We'll help you find it for free. <\/p>",
+        "title": "A Ring That Lasts a Lifetime",
+        "text": "<p>Every ring is rigorously inspected to make sure that it will last. Combined with our 100% satisfaction guarantee, you're literally guaranteed to not be disappointed. <\/p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -199,6 +200,7 @@
     },
     "text_and_image_NJ76bR": {
       "type": "text-and-image",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/Women_s_Group_Shot_-_Beige_Back_Ground_v2.png",
         "image_width": 700,
