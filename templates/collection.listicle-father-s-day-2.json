@@ -1,0 +1,231 @@
+{
+  "sections": {
+    "text_and_image_LWcTaf": {
+      "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Women_s_Ring_Hero.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Your Ring. Your Story.",
+        "text": "<p>Your wedding band should be one-of-a-kind just like you. Every ring is handcrafted and fully customizable from sustainably sourced materials. <\/p>",
+        "button_label": "Find Your Ring",
+        "button_link": "shopify:\/\/collections\/womens-wedding-bands",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "replo_trust_icons_white_backg_WjtKCT": {
+      "type": "replo-trust-icons-white-backg",
+      "settings": {
+      }
+    },
+    "rich_text_pm48aQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Aywhg6": {
+          "type": "heading",
+          "settings": {
+            "title": "5 Reasons to Buy Your Wedding Band from Patrick Adair Designs"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Aywhg6"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "text_and_image_GaNiE8": {
+      "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
+        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Women_s_Rings_on_red_background.png",
+        "image_width": 700,
+        "subtitle": "#1",
+        "title": "You dream it. We Make it.",
+        "text": "<p>Every wedding band from Patrick Adair Designs is fully customizable. That means you are guaranteed to get a ring that's one-of-a-kind.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "text_and_image_xYCfXG": {
+      "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
+        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_Shot_d3dec58d-44ce-4568-9648-13e1dd7ba31e.png",
+        "image_width": 700,
+        "subtitle": "#2",
+        "title": "Superior Quality at a Better Price",
+        "text": "<p>Every ring is made to luxury jeweler standards using Solid Gold, Solid Platinum, and ethically sourced lab diamonds (and other gemstones). You get world-class quality without excess mark-up. <\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "text_and_image_9XTPrK": {
+      "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
+        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Hand_Crafted.png",
+        "image_width": 700,
+        "subtitle": "#3",
+        "title": "Handcrafted with Love",
+        "text": "<p>Every piece is handcrafted by artisans using ethically and sustainably sourced materials. <\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "text_and_image_ciVTF9": {
+      "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
+        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_Shot_a35d53b1-4f15-4e3a-8e7c-d5dcd325442c.png",
+        "image_width": 700,
+        "subtitle": "#4",
+        "title": "Sustainably Sourced",
+        "text": "<p>We use ethically sourced lab grown Diamonds. This means every gemstone we sell is chemically identical to its mined counterpart <strong>but guaranteed to be conflict free<\/strong>. <\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "text_and_image_HeDYVD": {
+      "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
+        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Ring_on_Hand.png",
+        "image_width": 700,
+        "subtitle": "#5",
+        "title": "The Perfect Fit. Every Time.",
+        "text": "<p>We offer free sizing kits with your order, so if you don't know your size, no stress. We'll help you find it for free. <\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "collection-header": {
+      "type": "collection-header",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "collection_image_enable": false,
+        "parallax": true
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "subcollections": {
+          "type": "subcollections",
+          "disabled": true,
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 3,
+            "rows_per_page": 3,
+            "mobile_flush_grid": true
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "subcollections",
+        "product_grid"
+      ],
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true
+      }
+    },
+    "replo_trust_icons_white_backg_f8LLfG": {
+      "type": "replo-trust-icons-white-backg",
+      "settings": {
+      }
+    },
+    "text_and_image_NJ76bR": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Women_s_Group_Shot_-_Beige_Back_Ground_v2.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Looking for Something Custom?",
+        "text": "<p>Designed by You. Crafted by Us.<\/p>",
+        "button_label": "Design Your Dream Wedding Ring",
+        "button_link": "shopify:\/\/pages\/custom-design-consultation",
+        "button_style": "secondary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "text_and_image_LWcTaf",
+    "replo_trust_icons_white_backg_WjtKCT",
+    "rich_text_pm48aQ",
+    "text_and_image_GaNiE8",
+    "text_and_image_xYCfXG",
+    "text_and_image_9XTPrK",
+    "text_and_image_ciVTF9",
+    "text_and_image_HeDYVD",
+    "collection-header",
+    "main-collection",
+    "replo_trust_icons_white_backg_f8LLfG",
+    "text_and_image_NJ76bR"
+  ]
+}
