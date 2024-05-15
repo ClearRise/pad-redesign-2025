@@ -6,12 +6,12 @@
         ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Women_s_Ring_Hero.png",
+        "image": "shopify:\/\/shop_images\/Meteorite_Landscape.png",
         "image_width": 700,
         "subtitle": "",
-        "title": "His Ring. His Story.",
-        "text": "<p>He deserves a ring that's one-of-a-kind just like he is. <br\/><br\/>Every ring is made from <\/p>",
-        "button_label": "Find His Gift",
+        "title": "A Ring That Tells His Story",
+        "text": "<p>Whether it's a fashion piece, an upgrade or his first wedding band, he deserves a ring that's one-of-a-kind just like him.<br\/><br\/>From hand-forged Damascus steel to million year old meteorite, you'll find a story in every ring.<\/p>",
+        "button_label": "Shop All Rings",
         "button_link": "shopify:\/\/collections\/all-products",
         "button_style": "primary",
         "align_text": "left",
