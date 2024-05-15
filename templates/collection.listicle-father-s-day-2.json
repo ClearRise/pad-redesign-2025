@@ -6,8 +6,8 @@
         ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Women_s_Ring_Hero.png",
-        "image_width": 700,
+        "image": "shopify:\/\/shop_images\/Meteorite_Landscape.png",
+        "image_width": 600,
         "subtitle": "",
         "title": "A Ring That Tells His Story",
         "text": "<p>Whether it's a fashion piece, an upgrade, or his first wedding band, he serves a ring that's one-of-a-kind just like him. <\/p><p>From hand-forged Damascus steel to million year old meteorite, you'll find a story in every ring. <\/p>",
@@ -51,7 +51,7 @@
         ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Women_s_Rings_on_red_background.png",
+        "image": "shopify:\/\/shop_images\/Untitled-2.png",
         "image_width": 700,
         "subtitle": "#1",
         "title": "One-of-a-kind Handcrafted Designs",
@@ -71,7 +71,7 @@
         ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Group_Shot_d3dec58d-44ce-4568-9648-13e1dd7ba31e.png",
+        "image": "shopify:\/\/shop_images\/Vertical_Groupshot.png",
         "image_width": 700,
         "subtitle": "#2",
         "title": "Exotic Materials",
@@ -91,7 +91,7 @@
         ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Hand_Crafted.png",
+        "image": "shopify:\/\/shop_images\/Glowstone_Groupshot.png",
         "image_width": 700,
         "subtitle": "#3",
         "title": "Hundreds of Customizable Designs",
@@ -111,7 +111,7 @@
         ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Group_Shot_a35d53b1-4f15-4e3a-8e7c-d5dcd325442c.png",
+        "image": "shopify:\/\/shop_images\/Perfect_fit.png",
         "image_width": 700,
         "subtitle": "#4",
         "title": "The Perfect Size Everytime",
@@ -131,7 +131,7 @@
         ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Ring_on_Hand.png",
+        "image": "shopify:\/\/shop_images\/Opal_shot.png",
         "image_width": 700,
         "subtitle": "#5",
         "title": "A Ring that will Last a Lifetime",
@@ -199,6 +199,7 @@
     },
     "text_and_image_NJ76bR": {
       "type": "text-and-image",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/Women_s_Group_Shot_-_Beige_Back_Ground_v2.png",
         "image_width": 700,
