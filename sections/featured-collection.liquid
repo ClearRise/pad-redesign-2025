@@ -57,6 +57,8 @@
                         {%- capture current -%}{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
                         <div class="image-wrap">{{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
                       </div>
+                      <div class="best-seller__img-reviews review_center">
+                      </div>		
                       <div class="grid-product__meta">
                         <div class="grid-product__title">{{ 'home_page.onboarding.product_title' | t }}</div>
                         <div class="grid-product__price">$29</div>
