@@ -4865,6 +4865,8 @@ var image = theme.buildProductImage(product, imageSize);
               <div class="grid-product__image-mask">
                 ${image}
               </div>
+              <div class="best-seller__img-reviews review_center">
+              </div>		
               <div class="grid-product__meta">
                 <div class="grid-product__title">${product.title}</div>
               </div>
@@ -4966,7 +4968,7 @@ var image = theme.buildProductImage(product, imageSize);
               </div>
             </div>
             <div class="best-seller__img-reviews review_center">
-    </div>		
+            </div>		
             <div class="grid-product__meta">
               ${article.title}
             </div>
