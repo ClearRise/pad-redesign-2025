@@ -177,13 +177,14 @@
       .bold_option_set {
         .bold_option_swatch {
           .bold_option_element {
+            margin: 5px auto;
             .bold_option_value_swatch {
               width: 70px;
               height: 70px;
             }
           }
           .bold_option_swatch_title {
-            display: inline-block;
+            display: block;
           }
         }
       }
