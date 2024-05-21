@@ -528,8 +528,8 @@
                       </div>
                 
                   {% when 'bold_option' %}
-                    <div class="product-block custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }}>
-                      <div class="bold_options" data-product-id="{{ product.id }}" data-option-type="{{block.settings.option_type}}"></div>
+                    <div class="product-block custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }} >
+                      <div class="bold_options" data-product-id="{{ product.id }}" data-option-type="{{block.settings.option_type}}" data-swatch-style="{{block.settings.swatch_style}}"></div>
                     </div>
                   {%- when 'variant_picker' -%}
                     <div class="product-block custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }}>
