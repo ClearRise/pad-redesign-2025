@@ -34,7 +34,8 @@
         "bold_option_xjkNBW": {
           "type": "bold_option",
           "settings": {
-            "option_type": "Test"
+            "option_type": "Test",
+            "swatch_style": "type_2"
           }
         },
         "inventory_status": {
