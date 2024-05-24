@@ -5,7 +5,6 @@
       "blocks": {
         "image_zLVB7G": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -33,6 +32,7 @@
         },
         "image_Jq3n74": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -255,9 +255,9 @@
         "2e50058a-8bc8-46f4-880f-08ed48490db6": {
           "type": "advanced",
           "settings": {
-            "subheading": "FATHER'S DAY OFFER",
-            "heading": "FREE GIFT",
-            "textarea": "Get a Free Mystery Gift (valued between $200-$600 MSRP) on all orders $195+",
+            "subheading": "MEMORIAL DAY OFFER",
+            "heading": "TWO FREE GIFT",
+            "textarea": "Get TWO Free Mystery Gifts (each valued between $200-$600 MSRP) on all orders $195+ through Memorial Day Weekend ONLY.",
             "cta_text1": "SHOP ALL RINGS",
             "cta_link1": "shopify:\/\/collections\/all-products",
             "cta_text2": "",
