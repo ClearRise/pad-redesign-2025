@@ -34,7 +34,8 @@
         "bold_option_agdenj": {
           "type": "bold_option",
           "settings": {
-            "option_type": "Test"
+            "option_type": "Test",
+            "swatch_style": "type_1"
           }
         },
         "inventory_status": {
@@ -380,8 +381,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "FREE GIFT",
-            "textarea": "Get a Free Mystery Gift (valued between $200-$600 MSRP) on all orders $195+",
+            "heading": "TWO FREE GIFTS",
+            "textarea": "Get TWO Free Mystery Gifts (each valued between $200-$600 MSRP) on all orders $195+ through Memorial Day Weekend ONLY.",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
