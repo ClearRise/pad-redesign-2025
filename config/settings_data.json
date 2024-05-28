@@ -14,7 +14,7 @@
     "color_large_image_bg": "#ffffff",
     "color_header": "#d8d8d8",
     "color_header_text": "#111111",
-    "color_announcement": "#138f7e",
+    "color_announcement": "#f68e36",
     "color_announcement_text": "#ffffff",
     "color_footer": "#d8d8d8",
     "color_footer_text": "#111111",
@@ -179,10 +179,9 @@
           },
           "announcement_FkMJza": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "FREE MYSTERY GIFT ($200-600 Value Ring or Pendant) On Orders $195+",
-              "link_text": "",
+              "text": "",
+              "link_text": "Father's Day Sale | 20-30% Off",
               "link": "shopify:\/\/collections\/all-products"
             }
           }
