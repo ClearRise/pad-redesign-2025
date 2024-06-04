@@ -7876,9 +7876,9 @@ html[dir=rtl] .grid-product__content{
     }
 
 .grid-product__title{
-  word-break:break-word;
-  -webkit-hyphens:auto;
-          hyphens:auto;
+  display: block;
+  padding-top: 20px;
+  width: 100%;
 }
 
 .grid-product__subtitle {
