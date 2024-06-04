@@ -7919,14 +7919,13 @@ html[dir=rtl] .grid-product__content{
 }
 
 .grid-product__secondary-image{
-  position:absolute;
-  top:-1px;
-  left:-1px;
-  right:-1px;
-  bottom:-1px;
-  opacity:0;
-/*   background-color:#ffffff; */
-  background-color:var(--colorBody)
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: var(--colorBody);
+  height: 100%;
 }
 
 .grid-product__secondary-image img{
