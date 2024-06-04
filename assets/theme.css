@@ -7923,10 +7923,9 @@ html[dir=rtl] .grid-product__content{
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
   background-color: var(--colorBody);
   height: 100%;
-  z-index: 1;
+  z-index: -1;
 }
 
 .grid-product__secondary-image img{
@@ -7937,7 +7936,7 @@ html[dir=rtl] .grid-product__content{
   }
 
 .grid-product__image-mask:hover .grid-product__secondary-image{
-    animation:fade-in 0.2s cubic-bezier(0.26, 0.54, 0.32, 1) 0s forwards
+  z-index: 0;
 }
 
 @media only screen and (max-width:768px){
