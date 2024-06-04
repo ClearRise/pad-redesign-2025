@@ -7926,6 +7926,7 @@ html[dir=rtl] .grid-product__content{
   opacity: 0;
   background-color: var(--colorBody);
   height: 100%;
+  z-index: 1;
 }
 
 .grid-product__secondary-image img{
