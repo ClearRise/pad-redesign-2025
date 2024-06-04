@@ -7965,16 +7965,7 @@ html[dir=rtl] .grid-product__content{
 .grid-product__color-image.is-active{
     animation:fade-in 0.5s cubic-bezier(0.26, 0.54, 0.32, 1) 0s forwards;
   }
-/* 
-[data-center-text=true] .grid-product__meta{
-    text-align:center
-} */
 
-.grid-product__meta{
-  position:relative;
-  padding: 0;
-  line-height:1.3
-}
 
 @media only screen and (max-width:768px){
 
