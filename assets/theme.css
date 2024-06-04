@@ -8012,9 +8012,8 @@ html[dir=rtl] .grid-product__content{
   right:0;
   line-height:1;
   padding:6px 5px 6px 7px;
-/*   background-color:#138f7e; */
   background-color:var(--colorBtnPrimary);
-/*   color:#ffffff; */
+  letter-spacing: normal;
   color:var(--colorBtnPrimaryText);
   z-index:2;
   transition:opacity 0.4s ease
