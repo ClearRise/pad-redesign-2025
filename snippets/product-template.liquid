@@ -103,16 +103,26 @@
                     {{ product.vendor | link_to_vendor }}
                   {%- endif -%}
                 </div>
+              {% elsif settings.type_enable and product.metafields.custom.set_type != blank %}
+                <div class="grid-product__vendor">{{ product.metafields.custom.set_type }}</div>
               {%- endif -%}
 
               {%- if isModal -%}
                 <p class="h2 product-single__title">
+                  {% if product.metafields.custom.title != blank %}
+                  {{product.metafields.custom.title}}
+                  {% else %}
                   {{ product.title }}
+                  {% endif %}
                 </p>
               {%- else -%}
                 <h1 class="h2 product-single__title">
                   {%- unless product.empty? -%}
-                    {{ product.title }}
+                  {% if product.metafields.custom.title != blank %}
+                  {{product.metafields.custom.title}}
+                  {% else %}
+                  {{ product.title }}
+                  {% endif %}
                   {%- else -%}
                     {{ 'home_page.onboarding.product_title' | t }}
                   {%- endunless -%}
@@ -126,6 +136,13 @@
                   {%- endif -%}
                 </p>
               {%- endif -%}
+
+              {%- if product.metafields.custom.plan_out_subtitle != blank -%}
+              <p data-sku class="product-single__subtitle">
+                {{product.metafields.custom.plan_out_subtitle}}
+              </p>
+              {%- endif -%}
+
             </div>
             <style>
               .slr-widget--mini .slr-stars svg {
