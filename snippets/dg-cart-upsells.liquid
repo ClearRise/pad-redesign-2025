@@ -240,7 +240,7 @@
                  <div class="upsell-product-price aaaaaaaaa">
                       FREE <s>{{first_gift_product.compare_at_price | money }}</s>
                   </div>
-                    <button {% if first_product_found == false %}data-remove_var="{{ first_gift_product_id }}"{% endif %} data-product-id="{{ first_gift_product_id }}" class="{% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">{% if first_product_found == false %}{{ already_added }}{% else %}{{ upsellAtc }}{% endif %}</button>
+                    <button {% if first_product_found == false %}data-remove_var="{{ first_gift_product_id }}"{% endif %} data-product-id="{{ first_gift_product_id }}" class="{% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart" {% if first_gift_product.selected_or_first_available_variant.available == false  %}disabled{% endif %}>{% if first_product_found == false %}{{ already_added }} {% elsif first_gift_product.selected_or_first_available_variant.available == false %}SOLD OUT{% else %}{{ upsellAtc }}{% endif %}</button>
                </div>    
            </div>
               </div>
@@ -276,7 +276,7 @@
                     <div class="upsell-product-price bbbbbbbbb">
                       FREE <s>{{second_gift_product.compare_at_price | money }}</s>
                   </div>
-                    <button {% if second_product_found == false %}data-remove_var="{{ second_gift_product_id }}"{% endif %} data-product-id="{{ second_gift_product_id }}" class="{% if second_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">{% if second_product_found == false %}{{ already_added }}{% else %}{{ upsellAtc }}{% endif %}</button>
+                    <button {% if second_product_found == false %}data-remove_var="{{ second_gift_product_id }}"{% endif %} data-product-id="{{ second_gift_product_id }}" class="{% if second_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart" {% if second_gift_product.selected_or_first_available_variant.available == false  %}disabled{% endif %} >{% if second_product_found == false %}{{ already_added }}{% elsif second_gift_product.selected_or_first_available_variant.available == false %}SOLD OUT{% else %}{{ upsellAtc }}{% endif %}</button>
                   </div>     
                 </div>
               </div>
