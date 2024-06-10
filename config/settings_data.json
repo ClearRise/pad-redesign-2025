@@ -180,6 +180,7 @@
           },
           "announcement_FkMJza": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "",
               "link_text": "SALE ENDING SOON | 20-30% Off",
