@@ -1199,6 +1199,10 @@ button.upsell-add-to-cart.disabled{
       color: #fff!important;
 }
 
+.gift_box .upsell-collection .upsell-product .upsell-product-info .upsell-add-to-cart:disabled {
+  background: #eee !important;
+  color: #000 !important;
+}
 .drawer .btn{
 /*       background: #111!important; */
 /*       color: #fff!important; */
