@@ -330,6 +330,12 @@
         "disabled": true,
         "settings": {
         }
+      },
+      "17174303574952363282": {
+        "type": "shopify:\/\/apps\/fondue-cashback-promotions\/blocks\/caseback-embed\/dcfd972d-99c5-4526-b55b-2d76e990dec8",
+        "disabled": false,
+        "settings": {
+        }
       }
     }
   },
