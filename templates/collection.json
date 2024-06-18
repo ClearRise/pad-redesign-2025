@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "17347204-928a-46d1-8166-ac8c007f382d": {
@@ -120,6 +129,7 @@
         },
         "subcollections": {
           "type": "subcollections",
+          "disabled": true,
           "settings": {
             "subcollections_per_row": 5
           }
