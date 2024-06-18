@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -382,7 +391,7 @@
           "settings": {
             "subheading": "",
             "heading": "FREE GIFT",
-            "textarea": "Get a Free Star Dust Ring when you spend $350+. LIMITED TIME ONLY",
+            "textarea": "Get a Free Star Dust Ring when you spend $295+. LIMITED TIME ONLY",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
