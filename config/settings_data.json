@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "color_body_bg": "#ffffff",
@@ -71,7 +80,7 @@
     "product1-img1": "shopify:\/\/shop_images\/StarDustRing_0427bbca-ddc3-415d-a5ca-3b4e16ac68f5.png",
     "product1-img2": "shopify:\/\/shop_images\/desaturated_stardust_photo3_b8e16ad0-9776-436b-9971-db8325eb474e.jpg",
     "product1-title": "SPECIAL GIFT OFFER",
-    "product1-text": "Get a Free Star Dust Ring on all orders $350+ <br><b>LIMITED TIME ONLY<\/b>",
+    "product1-text": "Get a Free Star Dust Ring on all orders $295+ <br><b>LIMITED TIME ONLY<\/b>",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -90,7 +99,8 @@
     "show_gift_box": true,
     "first_tier_progress": "You've unlocked a Free Gift!",
     "gift_box_title": "SPECIAL GIFT OFFER",
-    "cart_threshold_amount": 350,
+    "gift_box_text": "",
+    "cart_threshold_amount": 295,
     "spend_progress": "",
     "product-handle-1": "star-dust-ring-on-tungsten-1",
     "product-handle-2": "shop-circle-test-product",
