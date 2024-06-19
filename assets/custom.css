@@ -1464,6 +1464,41 @@ button.upsell-add-to-cart.disabled{
     display: none;
 } 
 
+.bold_option_value_price {
+  font-size: 14px;
+  letter-spacing: normal;
+}
+
+
+
+.bold_option_value_price .product__price-savings {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .bold_option_value_price .product__price-savings {
+    display: block;
+    margin-left: 18px;
+  }
+  .bold_option label {
+    line-height: 24px;
+  }
+}
+
+.bold_option_value_price .product__price-savings .save_badge {
+  padding: 0 8px;
+  background: #bb0e0e;
+  color: #fff;
+  border-radius: 10px;
+  margin-left: 5px;
+  font-size: 11px;
+  display: inline-block;
+  letter-spacing: normal;
+  line-height: 20px;
+  position: relative;
+  top: -1px;
+}
+
 .bold_option_swatch_title .bold_option_value_title{
   line-height: inherit;
   height: auto!important;
