@@ -652,13 +652,6 @@
                       {% if product.metafields.custom.premium_protection_product %}
                         {% liquid
                           assign protection_product = all_products[product.metafields.custom.premium_protection_product]
-                          assign protection_product_id = protection_product.id
-                          assign first_protection_product_id_var = protection_product.selected_or_first_available_variant.id
-                          for variant in protection_product.variants
-                            if variant.id == first_protection_product_id_var
-                              assign protection_product_price = variant.price | money_without_trailing_zeros
-                            endif
-                          endfor
                         %}
 
                         {% capture random %}{{ 'now' | date: "%09N" }}{% endcapture %}
@@ -670,7 +663,7 @@
                                 class="protection-plan"
                                 name="properties[Protection Plan]"
                                 value="Yes"
-                                data-protection="{{ first_protection_product_id_var }}"
+                                data-protection="{{ protection_product.selected_or_first_available_variant.id }}"
                               >
                               <input
                                 type="hidden"
@@ -683,11 +676,30 @@
                               -->
                             </span>
                             <span class="bold_option_title">Premium Protection Plan</span>
-                            <span class="bold_option_value_price"
-                              ><span class="money">
-                                {%- if protection_product_price != '' %}+{{ protection_product_price }}{% endif %}
-                              </span></span
-                            >
+                            <span class="bold_option_value_price">
+                              {% if protection_product.selected_or_first_available_variant.price < protection_product.selected_or_first_available_variant.compare_at_price %}
+                              <span class="money">
+                                +{{ protection_product.selected_or_first_available_variant.price | money_without_trailing_zeros }} <s>{{protection_product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros}}</s> 
+                              </span>
+                              {%- if settings.product_save_amount -%}
+                                {%- if settings.product_save_type == 'dollar' -%}
+                                  {%- capture saved_amount -%}{{ protection_product.selected_or_first_available_variant.compare_at_price | minus: protection_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}{%- endcapture -%}
+                                {%- else -%}
+                                  {%- capture saved_amount -%}{{ protection_product.selected_or_first_available_variant.compare_at_price | minus: protection_product.selected_or_first_available_variant.price | times: 100.0 | divided_by: protection_product.selected_or_first_available_variant.compare_at_price | round }}%{%- endcapture -%}
+                                {%- endif -%}
+                                <span class="product__price-savings">
+                                  {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                                  {% if block.settings.save_badge %}
+                                  <span class="save_badge {{settings.save_badge_type}}">{{block.settings.save_badge}}</span>
+                                  {% endif %}
+                                </span>
+                              {%- endif -%}
+                              {% else %}
+                              <span class="money">
+                                +{{ protection_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                              </span>
+                              {% endif %}
+                            </span>
                           </label>
                           <!--
                             <span class="bold_tooltip"><small>Protect your ring for a lifetime. See below tab for details.</small></span>
