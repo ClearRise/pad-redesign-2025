@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -49,7 +58,7 @@
           "type": "question",
           "settings": {
             "title": "Glowstone Rings",
-            "text": "<p>Glowstone rings are currently taking approx. <strong>4-6 weeks to ship<\/strong><\/p><p>The following rings are shipping in <strong>2-4 weeks:<\/strong><\/p><ul><li>Custom Titanium Glowstone Ring<\/li><li>Custom Tungsten Glowstone Ring<\/li><li>Star Dust Ring<\/li><li>Radiant Star Dust Ring<\/li><li>Star Dust Ring on Tungsten<\/li><li>Star Dust Ring on Black Ceramic<\/li><li>Star Dust Ring on White Ceramic<\/li><li>Star Dust Stackable Ring<\/li><li>Hexagon Star Dust Ring<\/li><li>Hexagon Lavender Star Dust Ring<\/li><li>Lavender Star Dust Ring<\/li><li>Matching Star Dust Wedding Ring Set on Tungsten<\/li><li>Lavender Opal Glowstone Ring<\/li><li>Radiant Lavender Opal Glowstone Ring<\/li><li>Lavender Opal Glowstone Stackable Ring<\/li><li>Matching Lavender Opal Glowstone Wedding Ring Set on Black Ceramic<\/li><li>Hexagon Lavender Opal Glowstone Ring<\/li><\/ul>"
+            "text": "<p>Glowstone rings are currently taking approx. <strong>4-6 weeks to ship<\/strong><\/p><p>The following rings are shipping in <strong>1-2 weeks<\/strong>:<\/p><ul><li>Star Dust Ring<\/li><li>Radiant Star Dust Ring<\/li><li>Star Dust Ring on Tungsten<\/li><li>Star Dust Ring on Black Ceramic<\/li><li>Star Dust Ring on White Ceramic<\/li><li>Star Dust Stackable Ring<\/li><li>Hexagon Star Dust Ring<\/li><li>Hexagon Lavender Star Dust Ring<\/li><li>Lavender Star Dust Ring<\/li><li>Matching Star Dust Wedding Ring Set on Tungsten<\/li><\/ul><p>The following rings are shipping in <strong>2-4 weeks:<\/strong><\/p><ul><li>Custom Titanium Glowstone Ring<\/li><li>Custom Tungsten Glowstone Ring<\/li><li>Lavender Opal Glowstone Ring<\/li><li>Radiant Lavender Opal Glowstone Ring<\/li><li>Lavender Opal Glowstone Stackable Ring<\/li><li>Matching Lavender Opal Glowstone Wedding Ring Set on Black Ceramic<\/li><li>Hexagon Lavender Opal Glowstone Ring<\/li><\/ul>"
           }
         },
         "9edaa1a8-e6fc-401d-be5e-7b9412d62dc0": {
