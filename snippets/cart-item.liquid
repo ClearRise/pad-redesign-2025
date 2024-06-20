@@ -247,6 +247,7 @@
         {%- endif -%}
       </div>
     </div>
+     {%- comment -%}
     {%- if product.line_level_discount_allocations != blank -%}
       <div class="custom_discount_wrap">
       {%- for discount_allocation in product.line_level_discount_allocations -%}
@@ -257,7 +258,8 @@
         {% endif %}
       {%- endfor -%}
       </div>
-    {%- endif -%}  
+    {%- endif -%} 
+    {%- endcomment -%} 
   </div>
 </div>
 
