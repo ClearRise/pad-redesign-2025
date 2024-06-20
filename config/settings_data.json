@@ -77,10 +77,10 @@
     "save_badget_text": "For a Limited Time Only",
     "save_badge_type": "badge",
     "product_threshold_amount": 150,
-    "product1-img1": "shopify:\/\/shop_images\/StarDustRing_0427bbca-ddc3-415d-a5ca-3b4e16ac68f5.png",
-    "product1-img2": "shopify:\/\/shop_images\/desaturated_stardust_photo3_b8e16ad0-9776-436b-9971-db8325eb474e.jpg",
+    "product1-img1": "shopify:\/\/shop_images\/LavenderBurlCarbonFiberRing2_017aec93-3a6b-4e0b-b0a3-5bcc95db60ad.jpg",
+    "product1-img2": "shopify:\/\/shop_images\/timascus_pendant_tilted.png",
     "product1-title": "SPECIAL GIFT OFFER",
-    "product1-text": "Get a Free Star Dust Ring on all orders $295+ <br><b>LIMITED TIME ONLY<\/b>",
+    "product1-text": "Get a Free Lavender Burl Carbon Fiber Ring or Timascus Pendant on Orders $195+.<br><b>LIMITED TIME ONLY<\/b>",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -100,11 +100,11 @@
     "first_tier_progress": "You've unlocked a Free Gift!",
     "gift_box_title": "SPECIAL GIFT OFFER",
     "gift_box_text": "",
-    "cart_threshold_amount": 295,
+    "cart_threshold_amount": 195,
     "spend_progress": "",
-    "product-handle-1": "star-dust-ring-on-tungsten-1",
-    "product-handle-2": "shop-circle-test-product",
-    "hide_gift_2": true,
+    "product-handle-1": "lavender-burl-carbon-fiber-ring-1",
+    "product-handle-2": "timascus-bar-pendant-1",
+    "hide_gift_2": false,
     "second_show_gift_box": false,
     "second_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
     "gift_box_title_second": "Choose One Free Gift",
@@ -170,8 +170,8 @@
           "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56": {
             "type": "scroll_navi_mobile",
             "settings": {
-              "sub_menu": "All Necklaces",
-              "link_submenu": "shopify:\/\/collections\/necklaces"
+              "sub_menu": "FLASH SALE",
+              "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/flash-sale-rings"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {

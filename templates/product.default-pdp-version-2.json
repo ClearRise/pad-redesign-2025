@@ -70,7 +70,8 @@
         "engraving_YpGMkM": {
           "type": "engraving",
           "settings": {
-            "style": "inline"
+            "style": "inline",
+            "save_badge": "For Limited Time Only"
           }
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
@@ -368,7 +369,7 @@
           "settings": {
             "subheading": "",
             "heading": "FREE GIFT",
-            "textarea": "Get a Free Star Dust Ring when you spend $295+. LIMITED TIME ONLY",
+            "textarea": "Get a Free Lavender Burl Carbon Fiber Ring or Timascus Pendant on Orders $195+. <br>LIMITED TIME ONLY",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
