@@ -193,12 +193,15 @@
       <div class="cart__item-price-col text-right">
         <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{product.key}}" style="display:none !important;"></span>
         {% if product.original_price != product.final_price and intelligems_discount == 0 %}
+          {%- comment -%}
           <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
-          <small class="cart__price cart__price--strikethrough  black_txt">
-            <span>
-              {{- product.original_price | money -}}
-            </span>
-          </small>
+            <small class="cart__price cart__price--strikethrough  black_txt">
+              <span>
+                {{- product.original_price | money -}}
+              </span>
+            </small>
+          {%- endcomment -%}
+          
           <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
           <span class="cart__price cart__discount black_txt">
             <span class="bcpo-cart-item-price" data-key="{{product.key}}">{{ product.final_price | money }}</span>
