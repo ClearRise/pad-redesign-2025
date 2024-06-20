@@ -10727,7 +10727,7 @@ html[dir=rtl] .product-single__meta .rte{
   white-space:nowrap;
 }
 
-.product__price-savings .save_badge.badge {
+.save_badge.badge {
   padding: 0px 12px 3px;
   background: #bb0e0e;
   color: white;
