@@ -183,11 +183,10 @@
           },
           "announcement_FkMJza": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "",
-              "link_text": "SALE ENDING SOON | 20-30% Off",
-              "link": "shopify:\/\/collections\/all-products"
+              "link_text": "FREE Protection Plans on Rings $650+ ($199-$600 Value)",
+              "link": "shopify:\/\/collections\/free-protection-plan-products"
             }
           }
         },
