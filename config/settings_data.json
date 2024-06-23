@@ -183,11 +183,10 @@
           },
           "announcement_FkMJza": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "TODAY ONLY",
-              "link_text": "FREE Protection Plans on Rings $650+ ($199-$600 Value)",
-              "link": "shopify:\/\/collections\/free-protection-plan-products"
+              "text": "",
+              "link_text": "20-30% Off Select Designs | Today Only",
+              "link": "shopify:\/\/collections\/flash-sale-rings"
             }
           }
         },
