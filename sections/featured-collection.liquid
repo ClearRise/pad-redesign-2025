@@ -72,12 +72,15 @@
 
           {%- for product in collections[section.settings.home_featured_products].products limit: product_limit -%}
             {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
-{%- render 'product-grid-item',
-              product: product,
-              collection: collection,
-              per_row: per_row,
-              quick_shop_enable: settings.quick_shop_enable
-            -%}
+              {%- render 'product-grid-item',
+                product: product,
+                collection: collection,
+                per_row: per_row,
+                quick_shop_enable: settings.quick_shop_enable,
+                subtitle_type: section.settings.subtitle_type,
+                type_enable: section.settings.type_enable,
+                subtitle_enable: section.settings.subtitle_enable
+              -%}
           {%- endfor -%}
 
           {%- if section.settings.view_all -%}
@@ -121,6 +124,22 @@
         "type": "collection",
         "id": "home_featured_products",
         "label": "Collection"
+      },
+      {
+        "type": "select",
+        "id": "subtitle_type",
+        "label": "Subtitle type",
+        "default": "two",
+        "options": [
+          {
+            "value": "two",
+            "label": "Two columns"
+          },
+          {
+            "value": "three",
+            "label": "Three columns"
+          }
+        ]
       },
       {
         "type": "range",
