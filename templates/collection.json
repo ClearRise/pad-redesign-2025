@@ -154,7 +154,10 @@
         "collapsed": true,
         "filter_style": "sidebar",
         "enable_color_swatches": false,
-        "enable_sort": true
+        "enable_sort": true,
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "three"
       }
     }
   },
