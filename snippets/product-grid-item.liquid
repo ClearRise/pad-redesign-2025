@@ -208,7 +208,7 @@ if tag contains '_label_'
         </div>
 
         {%- if subtitle_enable and product.metafields.custom.collection_subtitle -%}
-          {% if subtitle_type == 'two' %}
+          {% if subtitle_type == 'two' and product.metafields.custom.collection_subtitle contains "|" %}
           {% assign subtitle_items = product.metafields.custom.collection_subtitle | split: '|' %}
           <div class="grid-product__subtitle">{{subtitle_items[0]}}|{{subtitle_items[1]}}</div>
           {% else %}
