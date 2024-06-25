@@ -1662,6 +1662,12 @@ lazySizesConfig.expFactor = 4;
         document.addEventListener('cart:build', function() {
           this.buildCart();
         }.bind(this));
+        if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
+  setTimeout(function(){
+        BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
+  },800);
+    }
+
       },
   
       reInit: function() {
