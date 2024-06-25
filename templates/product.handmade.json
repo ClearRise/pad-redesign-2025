@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -6,6 +15,8 @@
         "price": {
           "type": "price",
           "settings": {
+            "enable_badge": false,
+            "custom_badge": ""
           }
         },
         "a19dbe3d-a2be-4402-942e-7aca0ca227fd": {
@@ -34,6 +45,8 @@
         "bold_option_agdenj": {
           "type": "bold_option",
           "settings": {
+            "option_type": "Default",
+            "swatch_style": "type_1"
           }
         },
         "inventory_status": {
@@ -47,13 +60,28 @@
         "engraving_f7btnA": {
           "type": "engraving",
           "settings": {
+            "style": "popup",
+            "save_badge": "For Limited Time Only"
           }
         },
         "f913fa62-4c78-411b-aeaf-8c3aa3d0f21d": {
           "type": "free_gifts",
           "settings": {
             "gift_box_title": "",
-            "gift_included": ""
+            "gift_included": "",
+            "bottom_text": "Selection made during checkout process",
+            "product_threshold_amount": 150,
+            "product1-title": "",
+            "product1-text": "",
+            "product2-title": "",
+            "product2-text": "",
+            "product3-title": "",
+            "product3-text": "",
+            "product-1": "",
+            "product-2": "",
+            "border_color": "",
+            "bg_color": "",
+            "text_color": ""
           }
         },
         "buy_buttons": {
@@ -69,6 +97,7 @@
         "10d1515e-f4f3-4bd5-9ec0-58820668b55d": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "<b>Premium Protection Plan<\/b>",
             "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
             "page": "",
@@ -118,6 +147,7 @@
         "7cf22f7b-2877-4d38-a231-95946286cc18": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Sizing Information",
             "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
             "page": "",
@@ -128,6 +158,7 @@
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Lifetime Warranty",
             "content": "<p>At Patrick Adair Designs, all products come with a <a href=\"\/pages\/warranty-and-return-information\" title=\"Limited Lifetime Warranty and Return Policy\"><strong>Limited Lifetime Warranty<\/strong><\/a> by default. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.<\/p>",
             "page": "",
@@ -138,6 +169,7 @@
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Additional Details",
             "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
             "page": "",
@@ -148,6 +180,7 @@
         "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "How To Care",
             "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
             "page": "",
@@ -158,6 +191,7 @@
         "tab": {
           "type": "tab",
           "settings": {
+            "expanded": false,
             "title": "Shipping information",
             "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
             "page": "",
@@ -198,6 +232,9 @@
       ],
       "settings": {
         "sku_enable": false,
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
         "image_position": "left",
         "image_size": "medium",
         "product_zoom_enable": true,
@@ -272,6 +309,9 @@
       "settings": {
         "title": "Shop Pendants",
         "home_featured_products": "necklaces",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
         "per_row": 4,
         "rows": 1,
         "mobile_scrollable": true,
@@ -334,7 +374,10 @@
       "settings": {
         "show_product_recommendations": false,
         "product_recommendations_heading": "You may also like",
-        "related_count": 5
+        "related_count": 5,
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two"
       }
     },
     "recently-viewed": {
@@ -349,6 +392,9 @@
       "settings": {
         "title": "You May Also Like",
         "home_featured_products": "you-may-also-like",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
         "per_row": 4,
         "rows": 1,
         "mobile_scrollable": false,
