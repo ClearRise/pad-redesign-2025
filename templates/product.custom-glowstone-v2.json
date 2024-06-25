@@ -15,6 +15,8 @@
         "price": {
           "type": "price",
           "settings": {
+            "enable_badge": true,
+            "custom_badge": "For a Limited Time Only"
           }
         },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
