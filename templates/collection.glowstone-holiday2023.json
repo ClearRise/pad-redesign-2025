@@ -139,7 +139,7 @@
         "enable_color_swatches": false,
         "enable_sort": true,
         "type_enable": false,
-        "subtitle_enable": true,
+        "subtitle_enable": false,
         "subtitle_type": "two"
       }
     }
