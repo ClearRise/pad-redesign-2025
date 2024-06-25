@@ -76,7 +76,10 @@ Snippet Arguments
         {%- render 'product-grid-item',
           product: item,
           per_row: per_row,
-          quick_shop_enable: quick_shop_enable
+          quick_shop_enable: quick_shop_enable,
+          subtitle_type: subtitle_type,
+          type_enable: type_enable,
+          subtitle_enable: subtitle_enable
         -%}
       {%- else -%}
         {%- render 'search-grid-item',
