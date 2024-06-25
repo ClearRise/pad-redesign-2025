@@ -58,7 +58,10 @@ if tag contains '_related'
               <div class="grid grid--uniform visually-invisible" aria-hidden="true">
                 {%- render 'product-grid-item',
                   product: product,
-                  quick_shop_enable: settings.quick_shop_enable
+                  quick_shop_enable: settings.quick_shop_enable,
+                  subtitle_type: section.settings.subtitle_type,
+                  type_enable: section.settings.type_enable,
+                  subtitle_enable: section.settings.subtitle_enable
                 -%}
               </div>
             </div>
@@ -110,6 +113,22 @@ if tag contains '_related'
         "min": 2,
         "max": 6,
         "step": 1
+      },
+      {
+        "type": "select",
+        "id": "subtitle_type",
+        "label": "Subtitle type",
+        "default": "two",
+        "options": [
+          {
+            "value": "two",
+            "label": "Two columns"
+          },
+          {
+            "value": "three",
+            "label": "Default"
+          }
+        ]
       }
     ]
   }
