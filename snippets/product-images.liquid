@@ -45,7 +45,7 @@
           </button>
         {%- endif -%}
       </div>
-
+      {%- if product.media.size > 1 -%}
       <div
         data-product-thumbs
         class="product__thumbs product__thumbs--{{ thumbnail_position }} product__thumbs-placement--{{ image_position }}"
@@ -59,7 +59,7 @@
         {%- endif -%}
 
         <div class="product__thumbs--scroller">
-          {%- if product.media.size > 1 -%}
+          
             {%- for media in product.media -%}
               {%- liquid
                 assign image_set = false
@@ -113,7 +113,7 @@
                 </div>
               </div>
             {%- endfor -%}
-          {%- endif -%}
+          
         </div>
 
         {%- if thumbnail_arrows -%}
@@ -122,6 +122,7 @@
           </button>
         {%- endif -%}
       </div>
+      {%- endif -%}
     </div>
   </div>
 
