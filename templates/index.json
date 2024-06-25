@@ -345,6 +345,9 @@
       "settings": {
         "title": "Best Sellers",
         "home_featured_products": "best-sellers",
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
         "per_row": 5,
         "rows": 2,
         "mobile_scrollable": false,
