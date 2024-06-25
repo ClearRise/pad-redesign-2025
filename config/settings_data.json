@@ -183,11 +183,10 @@
           },
           "announcement_FkMJza": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "",
-              "link_text": "20-30% Off Select Designs | Today Only",
-              "link": "shopify:\/\/collections\/flash-sale-rings"
+              "text": "Limited Time Only",
+              "link_text": "Free Premium Inlay Material On Custom Glowstone Rings",
+              "link": "shopify:\/\/collections\/custom-rings"
             }
           }
         },
