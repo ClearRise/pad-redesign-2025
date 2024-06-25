@@ -1,8 +1,18 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "fab5b17c-8c32-4e90-9131-e68172639051": {
       "type": "replo-wedding-bands-hero-v3",
-      "settings": {}
+      "settings": {
+      }
     },
     "collection-header": {
       "type": "collection-header",
@@ -46,6 +56,7 @@
             "text_size": 120,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -69,7 +80,8 @@
       "blocks": {
         "collection_description": {
           "type": "collection_description",
-          "settings": {}
+          "settings": {
+          }
         },
         "subcollections": {
           "type": "subcollections",
@@ -97,12 +109,16 @@
         "collapsed": true,
         "filter_style": "sidebar",
         "enable_color_swatches": false,
-        "enable_sort": true
+        "enable_sort": true,
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two"
       }
     },
     "146eba97-251a-49bd-b8e7-c823663247b4": {
       "type": "replo-testimonial-v1",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
