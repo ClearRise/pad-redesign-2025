@@ -57,7 +57,10 @@
                     enable_collection_count: block.settings.enable_collection_count,
                     per_row: block.settings.per_row,
                     mobile_flush_grid: block.settings.mobile_flush_grid,
-                    quick_shop_enable: settings.quick_shop_enable
+                    quick_shop_enable: settings.quick_shop_enable,
+                    subtitle_type: section.settings.subtitle_type,
+                    type_enable: section.settings.type_enable,
+                    subtitle_enable: section.settings.subtitle_enable
                   %}
                   {%- if paginate.pages > 1 -%}
                     {%- render 'pagination', paginate: paginate -%}
@@ -153,6 +156,22 @@
         "id": "enable_sort",
         "label": "Show sort options",
         "default": true
+      },
+      {
+        "type": "select",
+        "id": "subtitle_type",
+        "label": "Subtitle type",
+        "default": "two",
+        "options": [
+          {
+            "value": "two",
+            "label": "Two columns"
+          },
+          {
+            "value": "three",
+            "label": "Default"
+          }
+        ]
       }
     ],
     "blocks": [
