@@ -10387,6 +10387,7 @@ html[dir=rtl] .product-single__meta .rte{
 
 .product-single__subtitle {
   margin: 5px 0 0;
+  display: block!important;
 }
 
 .product-single__review-link{
