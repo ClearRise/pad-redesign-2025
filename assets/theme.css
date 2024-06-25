@@ -10733,6 +10733,14 @@ html[dir=rtl] .product-single__meta .rte{
   color: white;
   border-radius: 10px;
 }
+@media screen and (max-width: 768px) {
+  .save_badge.custom {
+    display: block;
+    width: fit-content;
+    margin-top: 5px;
+  }
+}
+
 
 .product__quantity label{
     display:block;
