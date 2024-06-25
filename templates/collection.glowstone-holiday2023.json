@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "collection-header": {
@@ -30,8 +39,8 @@
             "text_align": "vertical-center horizontal-center",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify:\/\/shop_images\/fathers_day_desktop_collection_banner_25.png",
-            "image_mobile": "shopify:\/\/shop_images\/mobile_collection_banners_25.png",
+            "image": "shopify:\/\/shop_images\/collectgion_page.png",
+            "image_mobile": "shopify:\/\/shop_images\/collection_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
