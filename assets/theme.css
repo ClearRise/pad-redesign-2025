@@ -7886,6 +7886,13 @@ html[dir=rtl] .grid-product__content{
   font-size: 14px;
 }
 
+@media only screen and (max-width:768px){
+  .grid-product__subtitle {
+    font-size: 12px;
+    letter-spacing: normal;
+  }
+}
+
 .grid-product__link{
   display:block;
 }
