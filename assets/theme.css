@@ -10385,9 +10385,10 @@ html[dir=rtl] .product-single__meta .rte{
   font-weight: 600;
 }
 
-.product-single__subtitle {
+.product-subtitle {
   margin: 5px 0 0;
   display: block!important;
+  opacity: 1!important;
 }
 
 .product-single__review-link{
