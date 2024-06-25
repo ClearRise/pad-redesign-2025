@@ -140,7 +140,7 @@
               {%- endif -%}
 
               {%- if section.settings.subtitle_enable and product.metafields.custom.plan_out_subtitle -%}
-                {% if section.settings.subtitle_type == 'two' %}
+                {% if section.settings.subtitle_type == 'two' and product.metafields.custom.collection_subtitle contains "|" %}
                 {% assign subtitle_items = product.metafields.custom.plan_out_subtitle | split: '|' %}
                 <p class="product-subtitle">{{subtitle_items[0]}}|{{subtitle_items[1]}}</p>
                 {% else %}
