@@ -189,8 +189,12 @@ if tag contains '_label_'
             {%- endif -%}
           {%- endfor -%}
         {%- endif -%}
-      </div>
+      </div>	
       <div class="grid-product__meta">
+        {%- if settings.vendor_enable -%}
+        <div class="grid-product__vendor">{{ product.vendor }}</div>
+        {%- endif -%}
+
         {% if type_enable and product.metafields.custom.set_type != blank %}
         <div class="grid-product__vendor">{{ product.metafields.custom.set_type }}</div>
         {%- endif -%}
