@@ -10737,6 +10737,7 @@ html[dir=rtl] .product-single__meta .rte{
   .save_badge.badge {
     font-size: 13px;
     padding: 0 5px 3px;
+    border-radius: 5px;
   }
   .save_badge.custom {
     display: block;
