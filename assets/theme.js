@@ -1808,6 +1808,12 @@ lazySizesConfig.expFactor = 4;
           }.bind(this))
           .catch(function(XMLHttpRequest){});
         }
+        if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
+  setTimeout(function(){
+        BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
+  },800);
+    }
+
       },
 
       updateOtherProductQuantity: function (key, qty, dataEngravingValue, dataProtectionValue, comp_val) {
