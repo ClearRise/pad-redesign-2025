@@ -111,12 +111,20 @@
 
               {%- if isModal -%}
                 <p class="h2 product-single__title">
+                  {% if product.metafields.custom.title != blank %}
+                  {{product.metafields.custom.title}}
+                  {% else %}
                   {{ product.title }}
+                  {% endif %}
                 </p>
               {%- else -%}
                 <h1 class="h2 product-single__title">
                   {%- unless product.empty? -%}
+                  {% if product.metafields.custom.title != blank %}
+                  {{product.metafields.custom.title}}
+                  {% else %}
                   {{ product.title }}
+                  {% endif %}
                   {%- else -%}
                     {{ 'home_page.onboarding.product_title' | t }}
                   {%- endunless -%}
