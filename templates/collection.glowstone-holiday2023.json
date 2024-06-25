@@ -138,7 +138,8 @@
         "filter_style": "sidebar",
         "enable_color_swatches": false,
         "enable_sort": true,
-        "subtitle_enable": false,
+        "type_enable": false,
+        "subtitle_enable": true,
         "subtitle_type": "two"
       }
     }
