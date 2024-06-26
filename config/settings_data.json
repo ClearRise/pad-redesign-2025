@@ -184,9 +184,9 @@
           "announcement_FkMJza": {
             "type": "announcement",
             "settings": {
-              "text": "Limited Time Only",
-              "link_text": "Free Premium Inlay Material On Custom Glowstone Rings",
-              "link": "shopify:\/\/collections\/custom-rings"
+              "text": "TODAY ONLY",
+              "link_text": "Free Gift on all orders $195+",
+              "link": "shopify:\/\/collections\/all-products"
             }
           }
         },
