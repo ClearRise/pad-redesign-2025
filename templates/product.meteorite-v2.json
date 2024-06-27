@@ -15,6 +15,8 @@
         "price": {
           "type": "price",
           "settings": {
+            "enable_badge": false,
+            "custom_badge": ""
           }
         },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
@@ -248,6 +250,9 @@
       ],
       "settings": {
         "sku_enable": false,
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
         "image_position": "left",
         "image_size": "medium",
         "product_zoom_enable": true,
@@ -363,7 +368,7 @@
           "settings": {
             "subheading": "",
             "heading": "FREE GIFT",
-            "textarea": "Get a Free Lavender Burl Carbon Fiber Ring or Timascus Pendant on Orders $195+. <br>LIMITED TIME ONLY",
+            "textarea": "Get a Free Gold Burl Carbon Fiber Ring or Malachite Pendant on Orders $195+.",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
@@ -492,7 +497,10 @@
       "settings": {
         "show_product_recommendations": false,
         "product_recommendations_heading": "You may also like",
-        "related_count": 5
+        "related_count": 5,
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two"
       }
     },
     "recently-viewed": {
