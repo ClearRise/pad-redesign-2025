@@ -77,10 +77,10 @@
     "save_badget_text": "For a Limited Time Only",
     "save_badge_type": "badge",
     "product_threshold_amount": 150,
-    "product1-img1": "shopify:\/\/shop_images\/LavenderBurlCarbonFiberRing2_017aec93-3a6b-4e0b-b0a3-5bcc95db60ad.jpg",
-    "product1-img2": "shopify:\/\/shop_images\/timascus_pendant_tilted.png",
+    "product1-img1": "shopify:\/\/shop_images\/gold-burl-carbon-fiber-ring-2.png",
+    "product1-img2": "shopify:\/\/shop_images\/pendant2_ee85fbe8-9caf-4d7c-9605-09baeb7585cd.png",
     "product1-title": "SPECIAL GIFT OFFER",
-    "product1-text": "Get a Free Lavender Burl Carbon Fiber Ring or Timascus Pendant on Orders $195+.<br><b>TODAY ONLY<\/b>",
+    "product1-text": "Get a Free Gold Burl Carbon Fiber Ring or Malachite Pendant on Orders $195+.<br><b>LIMITED TIME ONLY<\/b>",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -185,8 +185,8 @@
             "type": "announcement",
             "settings": {
               "text": "TODAY ONLY",
-              "link_text": "Free Gift on all orders $195+",
-              "link": "shopify:\/\/collections\/all-products"
+              "link_text": "Free Premium Inlay Options on Custom Rings",
+              "link": "shopify:\/\/collections\/custom-rings"
             }
           }
         },
