@@ -184,7 +184,7 @@
           "announcement_FkMJza": {
             "type": "announcement",
             "settings": {
-              "text": "TODAY ONLY",
+              "text": "",
               "link_text": "Free Premium Inlay Options on Custom Rings",
               "link": "shopify:\/\/collections\/custom-rings"
             }
