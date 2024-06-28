@@ -190,6 +190,7 @@
         </div>
       </div>
 
+                <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span>
       <div class="cart__item-price-col text-right">
         {% if product.original_price != product.final_price and intelligems_discount == 0 %}
           {%- comment -%}
@@ -209,7 +210,6 @@
             <span class="bcpo-cart-item-price" data-key="{{product.key}}">{{ product.final_price | money }}</span>
           </span>
         {% else %}
-          <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span>
           <span class="cart__price  black_txt">
             <span>
             {% if intelligems_discount == 0 %}
