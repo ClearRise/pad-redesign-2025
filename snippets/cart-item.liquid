@@ -194,12 +194,7 @@
         {% if product.original_price != product.final_price and intelligems_discount == 0 %}
       
           <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
-            <small class="cart__price cart__price--strikethrough  black_txt">
-              <span>
-                  <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>
-                {{- product.original_price | money -}}
-              </span>
-            </small>
+
          
           
           <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
