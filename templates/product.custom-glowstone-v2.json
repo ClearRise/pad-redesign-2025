@@ -15,7 +15,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": true,
+            "enable_badge": false,
             "custom_badge": "Free Premium Inlay Materials - Limited Time Only"
           }
         },
