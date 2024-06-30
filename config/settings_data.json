@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "color_body_bg": "#000000",
@@ -85,7 +94,7 @@
     "first_tier_progress": "You've unlocked a free gift!",
     "cart_threshold_amount": 150,
     "spend_progress": "Spend $150 and get a free gift!",
-    "product-handle-1": "904l-stainless-steel-ring",
+    "product-handle-1": "8mm-beveled-904l-stainless-steel-ring",
     "product-handle-2": "angel-dust-glowstone-ring",
     "hide_gift_2": false,
     "second_show_gift_box": true,
@@ -255,13 +264,6 @@
 
     ],
     "blocks": {
-      "733389323033596483": {
-        "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-        "disabled": false,
-        "settings": {
-          "show_preview_data": false
-        }
-      },
       "1877152918344802950": {
         "type": "shopify:\/\/apps\/intelligems-a-b-testing\/blocks\/intelligems-script\/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
         "disabled": false,
