@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -224,7 +233,7 @@
           "settings": {
             "heading": "VALENTINES SPECIAL",
             "text": "Save Up to 30%",
-            "link": "shopify:\/\/collections\/flash-sale-meteorite",
+            "link": "shopify:\/\/collections\/meteorite-rings-1",
             "label": "Shop now",
             "color_tint": "#000000",
             "color_tint_opacity": 8,
