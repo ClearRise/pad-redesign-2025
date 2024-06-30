@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "text_and_image_LWcTaf": {
@@ -207,7 +216,7 @@
         "title": "Looking for Something Custom?",
         "text": "<p>Designed by You. Crafted by Us.<\/p>",
         "button_label": "Design Your Dream Wedding Ring",
-        "button_link": "shopify:\/\/pages\/custom-design-consultation",
+        "button_link": "shopify:\/\/pages\/concierge-shopping-experience",
         "button_style": "secondary",
         "align_text": "left",
         "layout": "right",
