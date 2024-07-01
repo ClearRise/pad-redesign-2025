@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify:\/\/shop_images\/free_gift_hero_desktop.png",
-            "image_mobile": "shopify:\/\/shop_images\/mobile_hero_1.png",
+            "image": "shopify:\/\/shop_images\/patriot.png",
+            "image_mobile": "shopify:\/\/shop_images\/patriot_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -235,9 +235,9 @@
         "2e50058a-8bc8-46f4-880f-08ed48490db6": {
           "type": "advanced",
           "settings": {
-            "subheading": "SPECIAL OFFER",
+            "subheading": "JULY 4TH OFFER",
             "heading": "FREE GIFT",
-            "textarea": "Get a Free Gold Burl Carbon Fiber Ring or Malachite Pendant on Orders $195+.",
+            "textarea": "Get a Free Patriot Carbon Fiber Glow Ring on all orders $195+",
             "cta_text1": "SHOP ALL RINGS",
             "cta_link1": "shopify:\/\/collections\/all-products",
             "cta_text2": "",
