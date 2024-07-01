@@ -171,7 +171,7 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "FLASH SALE",
-              "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/flash-sale-rings"
+              "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/july-4th-flash-sale"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
@@ -184,9 +184,9 @@
           "announcement_FkMJza": {
             "type": "announcement",
             "settings": {
-              "text": "",
-              "link_text": "Select Designs on Sale This Weekend Only",
-              "link": "shopify:\/\/collections\/flash-sale-rings"
+              "text": "LIMITED TIME ONLY",
+              "link_text": "JULY 4TH FLASH SALE",
+              "link": "https:\/\/patrickadairdesigns.com\/collections\/july-4th-flash-sale"
             }
           }
         },
