@@ -205,14 +205,6 @@
               >
               {%- continue -%}
             {%- endif -%}
-            {% if item.product.handle != 'navidium-shipping-protection' %}
-              {% unless product.product.tags contains 'hidden'
-                or product.product.tags contains 'OPTIONS_HIDDEN_PRODUCT'
-              %}
-                {% assign main_item_count = main_item_count | plus: 1 %}
-              {% endunless %}
-            {% endif %}
-
             {%- render 'cart-item', product: item, line: forloop.index, intelligems_discount: intelligems_discount -%}
           {%- endfor -%}
         </div>
