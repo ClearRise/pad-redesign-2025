@@ -216,7 +216,6 @@
             {%- render 'cart-item', product: item, line: forloop.index, intelligems_discount: intelligems_discount -%}
           {%- endfor -%}
         </div>
-        {{main_item_count}}
         <div class="cart__page-col">
           {% if main_item_count == 1 %}
             <p class="right" style="color:red;">{{ section.settings.text_2 }}</p>
