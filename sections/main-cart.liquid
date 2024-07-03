@@ -205,6 +205,7 @@
               >
               {%- continue -%}
             {%- endif -%}
+
             {% assign match_gift_product = false %}
             {% assign match_engraving_product = false %}
             {% assign match_protection_product = false %}
@@ -217,7 +218,7 @@
               {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
               {% assign second_gift_product = settings['product-handle-2'] %}
               {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
-              {% if first_gift_product_id == product.id or second_gift_product_id == product.id %}
+              {% if first_gift_product_id == item.id or second_gift_product_id == item.id %}
                 {% assign match_gift_product = true %}
               {% endif %}
             {% endif %}
@@ -227,7 +228,7 @@
               {% assign second_tier_first_gift_product_id = second_tier_first_gift_product.selected_or_first_available_variant.id %}
               {% assign second_tier_second_gift_product = settings['second_product-handle-2'] %}
               {% assign second_tier_second_gift_product_id = second_tier_second_gift_product.selected_or_first_available_variant.id %}
-              {% if second_tier_first_gift_product_id == product.id or second_tier_second_gift_product_id == product.id %}
+              {% if second_tier_first_gift_product_id == item.id or second_tier_second_gift_product_id == item.id %}
                 {% assign match_gift_product = true %}
               {% endif %}
             {% endif %}
@@ -236,7 +237,7 @@
               {% assign third_tier_first_gift_product_id = third_tier_first_gift_product.selected_or_first_available_variant.id %}
               {% assign third_tier_second_gift_product = settings['third_product-handle-2'] %}
               {% assign third_tier_second_gift_product_id = third_tier_second_gift_product.selected_or_first_available_variant.id %}
-              {% if third_tier_first_gift_product_id == product.id or third_tier_second_gift_product_id == product.id %}
+              {% if third_tier_first_gift_product_id == item.id or third_tier_second_gift_product_id == item.id %}
                 {% assign match_gift_product = true %}
               {% endif %}
             {% endif %}
@@ -244,22 +245,23 @@
               {% assign engraving_product = settings['product-engraving'] %}
               {% assign engraving_product_id = engraving_product.id %}
               {% assign engraving_product_id_var = engraving_product.selected_or_first_available_variant.id %}
-              {% if engraving_product_id_var == product.id %}
+              {% if engraving_product_id_var == item.id %}
                 {% assign match_engraving_product = true %}
               {% endif %}
             {% endif %}
 
 
-            {% if product.product.metafields.custom.premium_protection_product %}
+            {% if item.product.metafields.custom.premium_protection_product %}
               {% liquid
-                assign protection_product = all_products[product.product.metafields.custom.premium_protection_product]
+                assign protection_product = all_products[item.product.metafields.custom.premium_protection_product]
                 assign protection_product_id = protection_product.id
                 assign first_protection_product_id_var = protection_product.selected_or_first_available_variant.id
-                if first_protection_product_id_var == product.id
+                if first_protection_product_id_var == item.id
                   assign match_protection_product = true
                 endif
               %}
             {% endif %}
+
             {% assign hidden = false %}
             {% if match_engraving_product %} 
               {% assign hidden = true %}
@@ -267,7 +269,7 @@
             {% if match_protection_product %}
               {% assign hidden = true %}
             {% endif %}
-            {% if product.product.tags contains 'hidden' or product.product.tags contains 'OPTIONS_HIDDEN_PRODUCT' %}
+            {% if item.product.tags contains 'hidden' or item.product.tags contains 'OPTIONS_HIDDEN_PRODUCT' %}
               {% assign hidden = true %}
             {% endif %}
             {% if match_gift_product %}
