@@ -263,7 +263,7 @@
             {% endif %}
 
             {% assign hidden = false %}
-            {{match_gift_product}}
+            
             {% if match_engraving_product %} 
               {% assign hidden = true %}
             {% endif %}
@@ -276,7 +276,7 @@
             {% if match_gift_product %}
               {% assign hidden = true %}
             {% endif %}
-            {% if hidden %}
+            {% if hidden == false %}
               {% assign main_item_count = main_item_count | plus: 1 %}
             {% endif %}
 
