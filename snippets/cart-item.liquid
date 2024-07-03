@@ -209,12 +209,13 @@
             <span class="bcpo-cart-item-price" data-key="{{product.key}}">{{ product.final_price | money }}</span>
           </span>
         {% else %}
-          <span class="cart__price123  black_txt">
+          <span class="cart__price  black_txt">
             <span>
+              <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>
             {% if intelligems_discount == 0 %}
               {{ product.original_price | money }}
             {% else %}
-              <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span>
+              <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>
               {{ product.final_price | money }}
             {% endif %}
             </span>
