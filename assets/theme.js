@@ -1542,6 +1542,12 @@ lazySizesConfig.expFactor = 4;
           quantity: qty
         })
       })
+      if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
+  setTimeout(function(){
+        BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
+  },800);
+    }
+
     },
   
     _updateCart: function(params) {
@@ -1558,6 +1564,12 @@ lazySizesConfig.expFactor = 4;
       .then(function(cart) {
         return cart;
       });
+      if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
+  setTimeout(function(){
+        BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
+  },800);
+    }
+
     },
   
     updateAttribute: function(key, value) {
