@@ -52,8 +52,8 @@
         "icon_8h9qxy"
       ],
       "settings": {
-        "text_1": "",
-        "text_2": ""
+        "text_1": "Add two items to your cart and get the cheaper one for FREE",
+        "text_2": "Add another item to your cart and get the cheaper one for FREE"
       }
     },
     "recently-viewed": {
@@ -68,6 +68,9 @@
       "settings": {
         "title": "Gifts to Consider",
         "home_featured_products": "you-might-also-like",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
         "per_row": 4,
         "rows": 1,
         "mobile_scrollable": true,
