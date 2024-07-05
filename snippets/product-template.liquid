@@ -484,14 +484,12 @@
                         <span data-save-price class="product__price-savings{% if hide_sale_price %} hide{% endif %}">
                           {%- unless hide_sale_price -%}
                             {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
-                            {% if settings.save_badget_text %}
-                            <span class="save_badge {{settings.save_badge_type}}">{{settings.save_badget_text}}</span>
-                            {% endif %}
-                            
                           {%- endunless -%}
                         </span>
                         {% if block.settings.enable_badge and block.settings.custom_badge != blank %}
-                        <span class="save_badge {{settings.save_badge_type}} custom">{{block.settings.custom_badge}}</span>
+                          <span class="save_badge {{settings.save_badge_type}} custom">{{block.settings.custom_badge}}</span>
+                        {% elsif settings.save_badget_text and settings.display_save_badge == 'true' %}
+                          <span class="save_badge {{settings.save_badge_type}}">{{settings.save_badget_text}}</span>
                         {% endif %}
                       {%- endif -%}
 
