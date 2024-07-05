@@ -835,6 +835,21 @@
       },
       {
         "type": "select",
+        "id": "display_save_badge",
+        "label": "Display badge",
+        "options": [
+          {
+            "value": "true",
+            "label": "Display"
+          },
+          {
+            "value": "false",
+            "label": "Hide"
+          }
+        ]
+      },
+      {
+        "type": "select",
         "id": "save_badge_type",
         "label": "Save badge type",
         "options": [
