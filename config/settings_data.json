@@ -74,7 +74,7 @@
     "collection_grid_tint": "#000000",
     "collection_grid_opacity": 10,
     "collection_grid_gutter": true,
-    "save_badget_text": "For a Limited Time Only",
+    "save_badget_text": "BUY ONE GET ONE FREE",
     "save_badge_type": "badge",
     "product_threshold_amount": 150,
     "product1-img1": "shopify:\/\/shop_images\/carbon-fiber-glow-ring.png",
@@ -96,7 +96,7 @@
     "empty_cart_text3": "",
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
-    "show_gift_box": true,
+    "show_gift_box": false,
     "first_tier_progress": "You've unlocked a Free Gift!",
     "gift_box_title": "SPECIAL GIFT OFFER",
     "gift_box_text": "",
@@ -167,13 +167,6 @@
               "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/best-selling-wedding-bands-v1"
             }
           },
-          "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56": {
-            "type": "scroll_navi_mobile",
-            "settings": {
-              "sub_menu": "FLASH SALE",
-              "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/july-4th-flash-sale"
-            }
-          },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
             "type": "scroll_navi_mobile",
             "settings": {
@@ -185,8 +178,8 @@
             "type": "announcement",
             "settings": {
               "text": "LIMITED TIME ONLY",
-              "link_text": "JULY 4TH FLASH SALE",
-              "link": "https:\/\/patrickadairdesigns.com\/collections\/july-4th-flash-sale"
+              "link_text": "BUY ONE GET ONE FREE",
+              "link": "shopify:\/\/collections\/all-products"
             }
           }
         },
@@ -194,7 +187,6 @@
           "1524770014057",
           "30d9274d-f502-4710-bb39-866381456103",
           "966bc6e1-31db-4261-b34d-773ca4a79259",
-          "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56",
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc",
           "announcement_FkMJza"
         ],
