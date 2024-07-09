@@ -1,9 +1,19 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
       "type": "main-page",
       "disabled": true,
       "settings": {
+        "content_display": true
       }
     },
     "6403731b-871d-448b-b44f-86ebc0092e9c": {
@@ -54,7 +64,7 @@
           "type": "question",
           "settings": {
             "title": "How does the glow work on your glowstone rings?",
-            "text": "<p>The glow comes from strontium aluminate, which is a natural crystal powder that glows after being charged with a UV light. It is nontoxic and glows brighter and longer than copper activated zinc sulfide, which is one of its most popular competitors. Check out our blog post on <a href=\"https:\/\/patrickadairdesigns.com\/blogs\/blog\/how-do-i-get-my-glow-ring-to-glow\" target=\"_self\"><strong>How Our Glow Rings Glow<\/strong><\/a> for more information on how to charge and how long they glow for.<\/p>"
+            "text": "<p>The glow comes from strontium aluminate, which is a natural crystal powder that glows after being charged with a UV light. It is nontoxic and glows brighter and longer than copper activated zinc sulfide, which is one of its most popular competitors. Check out our blog post on <a href=\"https:\/\/patrickadairdesigns.com\/blogs\/blog\/how-to-get-your-glow-ring-to-glow\" title=\"https:\/\/patrickadairdesigns.com\/blogs\/blog\/how-to-get-your-glow-ring-to-glow\"><strong>How Our Glow Rings Glow<\/strong><\/a> for more information on how to charge and how long they glow for.<\/p>"
           }
         },
         "8bd5b863-fcb1-43ae-bde3-7333f20f183b": {
