@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify:\/\/shop_images\/bogo_collection_Desktop.png",
-            "image_mobile": "shopify:\/\/shop_images\/bogo_collection_mobile.png",
+            "image": "shopify:\/\/shop_images\/collectgion_page.png",
+            "image_mobile": "shopify:\/\/shop_images\/collection_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -53,8 +53,8 @@
         "autoplay_speed": 5
       }
     },
-    "replo_trust_icons_white_backg_F8dVBr": {
-      "type": "replo-trust-icons-white-backg",
+    "replo_trust_icons_fy9XYw": {
+      "type": "replo-trust-icons",
       "settings": {
       }
     },
@@ -154,16 +154,13 @@
         "collapsed": true,
         "filter_style": "sidebar",
         "enable_color_swatches": false,
-        "enable_sort": true,
-        "type_enable": false,
-        "subtitle_enable": true,
-        "subtitle_type": "two"
+        "enable_sort": true
       }
     }
   },
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
-    "replo_trust_icons_white_backg_F8dVBr",
+    "replo_trust_icons_fy9XYw",
     "collection-header",
     "promo-grid",
     "main-collection"
