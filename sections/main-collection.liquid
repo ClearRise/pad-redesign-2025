@@ -13,6 +13,12 @@
 >
   <div id="CollectionAjaxContent">
     <div class="page-width">
+      {% if section.settings.title != blank %}
+      <div class="grid">
+        <h2 class="h1 grid__item one-whole">{{section.settings.title}}</h2>
+      </div>
+      {% endif %}
+      
       <div class="grid">
         <div class="grid__item medium-up--one-fifth grid__item--sidebar">
           {%- render 'collection-grid-filters',
@@ -113,6 +119,11 @@
     "name": "Product grid",
     "settings": [
       {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
         "type": "header",
         "content": "Filtering and sorting"
       },
@@ -182,6 +193,11 @@
             "label": "Default"
           }
         ]
+      },
+      {
+        "type": "checkbox",
+        "id": "load_more",
+        "label": "Load more"
       }
     ],
     "blocks": [
