@@ -2230,4 +2230,6 @@ label.variant__label.custom_label{
   justify-content: space-between;
   margin: auto;
 }
-
+.load-more_wrap {
+  text-align: center;
+}
