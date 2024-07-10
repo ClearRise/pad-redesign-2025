@@ -97,6 +97,7 @@
         "product_grid"
       ],
       "settings": {
+        "title": "Shop All Rings",
         "enable_sidebar": true,
         "collapsed": true,
         "filter_style": "sidebar",
@@ -104,7 +105,8 @@
         "enable_sort": true,
         "type_enable": false,
         "subtitle_enable": true,
-        "subtitle_type": "two"
+        "subtitle_type": "two",
+        "load_more": true
       }
     }
   },
