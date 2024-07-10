@@ -1,0 +1,37 @@
+{{'custom-trending-products.scss.css' | asset_url | stylesheet_tag }}
+{% if collection.metafields.custom.top_brand_products != blank %}
+<div class="trending-products">
+  <div class="page-width">
+    <div class="grid">
+      <h2 class="h1 grid__item one-whole">{{section.settings.header}}</h2>
+    </div>
+    <div class="grid grid--uniform">
+      {%- for product in collection.metafields.custom.top_brand_products.value -%}
+        {%- render 'product-grid-item',
+          product: product,
+          per_row: per_row,
+          quick_shop_enable: quick_shop_enable,
+          subtitle_type: subtitle_type,
+          type_enable: type_enable,
+          subtitle_enable: subtitle_enable
+        -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
+
+{% schema %}
+{
+  "name": "Brand products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header",
+      "label": "header"
+    }
+  ]
+}
+{% endschema %}
