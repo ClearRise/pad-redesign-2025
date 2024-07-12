@@ -556,6 +556,29 @@
                     </div>
                   {%- when 'variant_picker' -%}
                     <div class="product-block custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }}>
+                      {% if product.metafields.custom.custom_option_name != blank %}
+                      {% assign active_option_label = '' %}
+                      {% for custom_option in product.metafields.custom.custom_options.value %}
+                        {% if custom_option.option_product.value.id == product.id %}
+                          {% assign active_option_label = custom_option.option_name %}
+                        {% endif %}
+                      {% endfor %}
+
+                      <div class="variant-wrapper custom">
+                        <label class="custom_label variant__label" for="{{ product.metafields.custom.custom_option_name }}--{{ product.id }}">
+                          {{ product.metafields.custom.custom_option_name }} - {{active_option_label}}
+                        </label>
+                        <fieldset class="variant-input-wrap custom_options" id="{{ product.metafields.custom.custom_option_name }}--{{ product.id }}">
+                          {% for custom_option in product.metafields.custom.custom_options.value %}
+                            <div class="variant-input {% if custom_option.option_product.value.id == product.id %}active{% endif %}">
+                            <a href="{{ custom_option.option_product.value.url }}">
+                              {{ custom_option.option_preview_image | image_url: width: 42 |  image_tag: alt: custom_option.option_name }}
+                            </a>
+                            </div>
+                          {% endfor %}
+                        </fieldset>
+                      </div>
+                      {% endif %}
                       {%- unless product.has_only_default_variant -%}
                         {%- for option in product.options_with_values -%}
                           {%- liquid
