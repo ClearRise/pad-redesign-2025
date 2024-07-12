@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify:\/\/shop_images\/collectgion_page.png",
-            "image_mobile": "shopify:\/\/shop_images\/collection_mobile.png",
+            "image": "shopify:\/\/shop_images\/collection_free_gift_desktop.png",
+            "image_mobile": "shopify:\/\/shop_images\/collection_free_gift_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -43,6 +43,7 @@
       "block_order": [
         "image_Cqte3i"
       ],
+      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
@@ -55,68 +56,14 @@
     },
     "replo_trust_icons_fy9XYw": {
       "type": "replo-trust-icons",
+      "disabled": true,
       "settings": {
       }
     },
-    "collection-header": {
-      "type": "collection-header",
-      "disabled": true,
+    "brand-products": {
+      "type": "brand-products",
       "settings": {
-        "enable": true,
-        "collection_image_enable": false,
-        "parallax": true
-      }
-    },
-    "promo-grid": {
-      "type": "promo-grid",
-      "blocks": {
-        "banner": {
-          "type": "banner",
-          "disabled": true,
-          "settings": {
-            "heading": "",
-            "text": "",
-            "link": "",
-            "label": "",
-            "color_tint": "#e95454",
-            "color_tint_opacity": 8,
-            "framed": false
-          }
-        },
-        "advanced": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "Limited time",
-            "heading": "Announce your promotion",
-            "textarea": "Include the smaller details of your promotion in text below the title.",
-            "cta_text1": "Shop This",
-            "cta_link1": "",
-            "cta_text2": "Shop All",
-            "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Ring_Main_Focus_Shot.jpg",
-            "video_url": "",
-            "width": "100",
-            "height": 500,
-            "text_size": 120,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        }
-      },
-      "block_order": [
-        "banner",
-        "advanced"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "gutter_size": 20,
-        "space_above": true,
-        "space_below": false
+        "header": "Trending"
       }
     },
     "main-collection": {
@@ -150,19 +97,23 @@
         "product_grid"
       ],
       "settings": {
+        "title": "Shop All Rings",
         "enable_sidebar": true,
         "collapsed": true,
         "filter_style": "sidebar",
         "enable_color_swatches": false,
-        "enable_sort": true
+        "enable_sort": true,
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "load_more": true
       }
     }
   },
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
     "replo_trust_icons_fy9XYw",
-    "collection-header",
-    "promo-grid",
+    "brand-products",
     "main-collection"
   ]
 }
