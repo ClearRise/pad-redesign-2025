@@ -212,9 +212,10 @@
         
         <div class="upsell-collection dgCartUpsellCont gift-products pad_10">
           {% if settings.product-handle-1 %}
-            <script>console.log({{settings.product-handle-1.selected_or_first_available_variant | json}})</script>
-            {% assign first_gift_product = settings.product-handle-1 %}
+            
+            {% assign first_gift_product = all_products[settings.product-handle-1] %}
             {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
+            <script>console.log({{first_gift_product.selected_or_first_available_variant | json}})</script>
             {% assign gift_product_found = true %}
             {% for item in cart.items %}
                 {% if item.id == first_gift_product_id %}
