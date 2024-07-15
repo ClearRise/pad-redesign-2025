@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "17347204-928a-46d1-8166-ac8c007f382d": {
@@ -21,8 +30,8 @@
             "text_align": "vertical-center horizontal-center",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify:\/\/shop_images\/mem_fixed_desk.png",
-            "image_mobile": "shopify:\/\/shop_images\/collection_mobile_fixed.png",
+            "image": "shopify:\/\/shop_images\/bogo_collection_Desktop.png",
+            "image_mobile": "shopify:\/\/shop_images\/bogo_collection_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -283,11 +292,16 @@
         "product_grid"
       ],
       "settings": {
+        "title": "",
         "enable_sidebar": false,
         "collapsed": true,
         "filter_style": "sidebar",
         "enable_color_swatches": false,
-        "enable_sort": false
+        "enable_sort": false,
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "load_more": false
       }
     },
     "rich_text_GHKdwf": {
