@@ -260,7 +260,7 @@
             <div product-id="{{ second_gift_product_id }}" class="{% if settings.hide_gift_2 %}product-2 {% endif %} upsell-product-inner gift-product upsell_product-{{ second_gift_product_id }} {% if first_product_found == false %}hide {% else %}show {% endif %}">
               <div class="upsell-product dgCartUpsellInner   border_line mb_10 ">
                 <div class="upsell-product-image">
-                  <img class="dci-image" src="{{ second_gift_product | img_url: '100x100' }}" alt="{{ second_gift_product.title | escape }}">
+                  <img class="dci-image" src="{{ second_gift_product.featured_image | img_url: '100x100' }}" alt="{{ second_gift_product.title | escape }}">
                   
                 </div>
                 <div class="upsell-product-info">
