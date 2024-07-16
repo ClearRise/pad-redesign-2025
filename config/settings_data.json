@@ -172,22 +172,13 @@
               "sub_menu": "Custom Rings",
               "link_submenu": "shopify:\/\/collections\/custom-rings"
             }
-          },
-          "announcement_FkMJza": {
-            "type": "announcement",
-            "settings": {
-              "text": "LIMITED TIME ONLY",
-              "link_text": "BUY ONE GET ONE FREE",
-              "link": "shopify:\/\/collections\/all-products"
-            }
           }
         },
         "block_order": [
           "1524770014057",
           "30d9274d-f502-4710-bb39-866381456103",
           "966bc6e1-31db-4261-b34d-773ca4a79259",
-          "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc",
-          "announcement_FkMJza"
+          "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc"
         ],
         "settings": {
           "main_menu_link_list": "05-16-23-lewis-main-menu",
