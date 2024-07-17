@@ -72,6 +72,10 @@ if tag contains '_label_'
       <div class="grid-product__tag grid-product__tag--custom">
         {{ custom_label }}
       </div>
+    {% elsif section.settings.custom_badge != blank %}
+      <div class="grid-product__tag grid-product__tag--custom">
+        {{ section.settings.custom_badge }}
+      </div>
     {%- else -%}
       {%- unless product.available -%}
         <div class="grid-product__tag grid-product__tag--sold-out">
