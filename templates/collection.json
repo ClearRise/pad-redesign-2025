@@ -188,6 +188,7 @@
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
+        "custom_badge": "Buy One Get One Free",
         "load_more": false
       }
     }
