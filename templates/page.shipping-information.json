@@ -58,14 +58,14 @@
           "type": "question",
           "settings": {
             "title": "Glowstone Rings",
-            "text": "<p>Glowstone rings are currently taking approx. <strong>4-6 weeks to ship<\/strong><\/p><p>The following rings are shipping in <strong>1-2 weeks<\/strong>:<\/p><ul><li>Star Dust Ring<\/li><li>Radiant Star Dust Ring<\/li><li>Star Dust Ring on Tungsten<\/li><li>Star Dust Ring on Black Ceramic<\/li><li>Star Dust Ring on White Ceramic<\/li><li>Star Dust Stackable Ring<\/li><li>Hexagon Star Dust Ring<\/li><li>Hexagon Lavender Star Dust Ring<\/li><li>Lavender Star Dust Ring<\/li><li>Matching Star Dust Wedding Ring Set on Tungsten<\/li><\/ul><p>The following rings are shipping in <strong>2-4 weeks:<\/strong><\/p><ul><li>Custom Titanium Glowstone Ring<\/li><li>Custom Tungsten Glowstone Ring<\/li><li>Lavender Opal Glowstone Ring<\/li><li>Radiant Lavender Opal Glowstone Ring<\/li><li>Lavender Opal Glowstone Stackable Ring<\/li><li>Matching Lavender Opal Glowstone Wedding Ring Set on Black Ceramic<\/li><li>Hexagon Lavender Opal Glowstone Ring<\/li><\/ul>"
+            "text": "<p>Glowstone rings are currently taking approx. <strong>1-4 weeks to ship<\/strong><\/p><p>The following rings are shipping in <strong>1-2 weeks<\/strong>:<\/p><ul><li>Star Dust Ring<\/li><li>Radiant Star Dust Ring<\/li><li>Star Dust Ring on Tungsten<\/li><li>Star Dust Ring on Black Ceramic<\/li><li>Star Dust Ring on White Ceramic<\/li><li>Star Dust Stackable Ring<\/li><li>Hexagon Star Dust Ring<\/li><li>Hexagon Lavender Star Dust Ring<\/li><li>Lavender Star Dust Ring<\/li><li>Matching Star Dust Wedding Ring Set on Tungsten<\/li><li>Hexagon Lavender Opal Glowstone Ring on Titanium<\/li><li>Lavender Opal Glowstone Ring<\/li><li>Lavender Opal Glowstone Stackable Ring<\/li><li>Matching Lavender Opal Glowstone Wedding Ring Set on Black Ceramic<\/li><\/ul>"
           }
         },
         "9edaa1a8-e6fc-401d-be5e-7b9412d62dc0": {
           "type": "question",
           "settings": {
             "title": "Gold Rings",
-            "text": "<p>Most rings containing solid gold is currently taking approx <strong>2-4 weeks to ship.<\/strong><\/p>"
+            "text": "<p>Most rings containing solid gold is currently taking approx <strong>4 weeks to ship.<\/strong><\/p>"
           }
         },
         "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2": {
@@ -79,7 +79,7 @@
           "type": "question",
           "settings": {
             "title": "Carbon Fiber Rings",
-            "text": "<p>Most Carbon Fiber Rings are currently taking approx. <strong>2-6<\/strong> <strong>weeks to ship<\/strong>.<\/p><p>These Carbon Fiber rings are shipping in <strong>2-4 weeks<\/strong>.<\/p><p><\/p>"
+            "text": "<p>Most Carbon Fiber Rings are currently taking approx. <strong>2-4<\/strong> <strong>weeks to ship<\/strong>.<\/p><p><\/p>"
           }
         },
         "question_XntpWA": {
@@ -93,7 +93,7 @@
           "type": "question",
           "settings": {
             "title": "Opal Rings",
-            "text": "<p>All solid opal rings are currently taking approx. <strong>6 weeks to ship.<\/strong><\/p>"
+            "text": "<p>All solid opal rings are currently taking approx. <strong>2-4 weeks to ship.<\/strong><\/p>"
           }
         },
         "56c40efd-9201-4a79-86d6-f829d8584f99": {
