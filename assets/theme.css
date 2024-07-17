@@ -8040,7 +8040,7 @@ html[dir=rtl] .grid-product__content{
 }
   }
 
-.grid-product__tag--sale{
+.grid-product__tag--sale, .grid-product__tag--custom{
 /*   background-color:#990000; */
   background-color:var(--colorSaleTag);
 /*   color:#ffffff; */
