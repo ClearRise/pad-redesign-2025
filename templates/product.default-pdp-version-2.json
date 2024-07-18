@@ -78,6 +78,7 @@
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
+          "disabled": true,
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
@@ -373,8 +374,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "PRIME DAY OFFER",
-            "textarea": "Spend $195+ and get a FREE Mystery Gift with your order (add at checkout)",
+            "heading": "PRIME DAY EXTENDED",
+            "textarea": "Buy one product and get another of equal or lesser value for FREE",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
