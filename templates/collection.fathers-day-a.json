@@ -30,8 +30,8 @@
             "text_align": "vertical-center horizontal-center",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify:\/\/shop_images\/bogo_collection_Desktop.png",
-            "image_mobile": "shopify:\/\/shop_images\/bogo_collection_mobile.png",
+            "image": "shopify:\/\/shop_images\/extended.png",
+            "image_mobile": "shopify:\/\/shop_images\/Collection_mobile_extended.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -301,6 +301,7 @@
         "type_enable": false,
         "subtitle_enable": false,
         "subtitle_type": "two",
+        "custom_badge": "",
         "load_more": false
       }
     },
