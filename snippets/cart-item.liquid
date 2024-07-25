@@ -139,8 +139,8 @@
             <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
             <small class="cart__price cart__price--strikethrough  black_txt">
               <span>
-                  <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price igPrice" data-variant-id="{{ product.id }}" data-item-key="{{item.key}}" style="display:none !important;"></span>
-                {{- product.original_price | money -}}
+                  <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>
+                <span class="igPrice" data-variant-id="{{ product.id }}">{{- product.original_price | money -}}</span>
               </span>
             </small>
           {% else %}
