@@ -144,7 +144,7 @@
               </span>
             </small>
           {% else %}
-          {% unless intelligems_discount == 0 %}
+          {% if intelligems_discount == 0 %}
             <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
               <small class="cart__price cart__price--strikethrough  black_txt">
                 <span>
@@ -152,7 +152,7 @@
                   {{- product.original_price | money -}}
                 </span>
               </small>
-              {% endunless %}
+            {% endif %}
           {% endif %}
          
           
