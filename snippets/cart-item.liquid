@@ -178,9 +178,11 @@
         {% if false %}
         {%- if product.line_level_discount_allocations != blank -%}
           {%- for discount_allocation in product.line_level_discount_allocations -%}
+            {% unless discount_allocation.discount_application.title == "Discount" %}
             <small class="cart__discount">
               {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})</small
             >
+            {% endunless %}
           {%- endfor -%}
         {%- endif -%}
         {% endif %}
