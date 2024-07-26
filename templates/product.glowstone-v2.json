@@ -44,7 +44,6 @@
         },
         "bold_option_agdenj": {
           "type": "bold_option",
-          "disabled": true,
           "settings": {
             "option_type": "Test",
             "swatch_style": "type_1"
