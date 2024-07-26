@@ -15,8 +15,8 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": false,
-            "custom_badge": ""
+            "enable_badge": true,
+            "custom_badge": "LIMITED TIME ONLY"
           }
         },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
@@ -374,8 +374,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "BETTER THAN BLACK FRIDAY",
-            "textarea": "Buy one product and get another of equal or lesser value for FREE",
+            "heading": "LIMITED TIME ONLY",
+            "textarea": "Save $160 on an 8mm Tungsten Ring",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
