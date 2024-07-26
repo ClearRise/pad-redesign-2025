@@ -209,9 +209,11 @@
       <div class="custom_discount_wrap">
       {%- for discount_allocation in product.line_level_discount_allocations -%}
         {% if discount_allocation.amount > 0 %}
-        <small class="cart__discount">
-          {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})
-        </small>
+          {% unless discount_allocation.discount_application.title == "Discount" %}
+            <small class="cart__discount">
+              {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})
+            </small>
+          {% endunless %}
         {% endif %}
       {%- endfor -%}
       </div>
