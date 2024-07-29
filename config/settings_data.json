@@ -177,7 +177,7 @@
             "type": "announcement",
             "settings": {
               "text": "Buy One Ring Get a Second Free",
-              "link_text": "<sup>*Exclusions Apply<\/sup>",
+              "link_text": "",
               "link": ""
             }
           }
