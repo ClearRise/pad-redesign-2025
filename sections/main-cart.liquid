@@ -182,13 +182,13 @@
               %}
             {% endif %}
 
-            {% case item.properties._igLineItemDiscount %}
+            {% case item.properties._igp %}
               {% when '0', null, blank %}
                 {% assign intelligems_discount = 0 %}
               {% else %}
-                {% assign intelligems_discount = item.properties._igLineItemDiscount | plus: 0 %}
+                {% assign intelligems_discount = item.properties._igp | plus: 0 %}
                 {% assign intelligems_total = intelligems_total
-                  | plus: item.properties._igLineItemDiscount
+                  | plus: item.properties._igp
                   | times: item.quantity
                 %}
             {% endcase %}
