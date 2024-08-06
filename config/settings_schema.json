@@ -564,6 +564,46 @@
     "name": "Products",
     "settings": [
       {
+        "type": "header",
+        "content": "variant picker"
+      },
+      {
+        "type": "select",
+        "id": "picker_type",
+        "label": "Type",
+        "options": [
+          {
+            "value": "button",
+            "label": "Buttons"
+          },
+          {
+            "value": "dropdown",
+            "label": "Dropdown"
+          }
+        ],
+        "default": "dropdown"
+      },
+      {
+        "type": "select",
+        "id": "product_swatch_style",
+        "label": "Swatch Style",
+        "options": [
+          {
+            "value": "circle",
+            "label": "Circle"
+          },
+          {
+            "value": "square",
+            "label": "Square"
+          }
+        ],
+        "default": "square"
+      },
+      {
+        "type": "header",
+        "content": "Save badge"
+      },
+      {
         "type": "checkbox",
         "id": "product_save_amount",
         "label": "Show saved amount",
