@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -6,12 +15,15 @@
         "price": {
           "type": "price",
           "settings": {
+            "enable_badge": false,
+            "custom_badge": ""
           }
         },
         "fa13a906-8f35-4826-9c29-8c36bab9d1db": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.custom.discount_text.value }}"
+            "text": "{{ product.metafields.custom.discount_text.value }}",
+            "bold": false
           }
         },
         "separator": {
@@ -25,7 +37,6 @@
           "settings": {
             "size_chart": "",
             "variant_labels": true,
-            "picker_type": "dropdown",
             "color_swatches": false,
             "custom_variant_comment": false,
             "collapse_options": false
@@ -34,7 +45,8 @@
         "bold_option_agdenj": {
           "type": "bold_option",
           "settings": {
-            "option_type": "Default"
+            "option_type": "Default",
+            "swatch_style": "type_1"
           }
         },
         "inventory_status": {
@@ -84,8 +96,8 @@
         "aee49288-aed2-447a-9362-0e6b1ca600d1": {
           "type": "tab",
           "settings": {
-            "expanded": false,
-            "title": "<b>Premium Protection Plan<\/b>",
+            "expanded": true,
+            "title": "Premium Protection Plan",
             "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
             "page": "",
             "enable_readmore": false,

@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -37,7 +46,6 @@
           "settings": {
             "size_chart": "",
             "variant_labels": true,
-            "picker_type": "dropdown",
             "color_swatches": false
           }
         },
@@ -74,6 +82,7 @@
         "458f6ce8-d05a-4939-b43c-1df6cf9c4e3d": {
           "type": "tab",
           "settings": {
+            "expanded": true,
             "title": "<b>Premium Protection Plan<\/b>",
             "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
             "page": "",

@@ -22,7 +22,8 @@
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.custom.discount_text.value }}"
+            "text": "{{ product.metafields.custom.discount_text.value }}",
+            "bold": false
           }
         },
         "separator": {
@@ -36,7 +37,6 @@
           "settings": {
             "size_chart": "",
             "variant_labels": true,
-            "picker_type": "button",
             "color_swatches": true,
             "custom_variant_comment": false,
             "collapse_options": false
@@ -111,6 +111,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
+            "style": "list",
             "title": "Premium Protection Plan",
             "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
             "page": "",
