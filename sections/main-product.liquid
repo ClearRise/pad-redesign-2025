@@ -224,22 +224,6 @@
             "default": true
           },
           {
-            "type": "select",
-            "id": "picker_type",
-            "label": "Type",
-            "options": [
-              {
-                "value": "button",
-                "label": "Buttons"
-              },
-              {
-                "value": "dropdown",
-                "label": "Dropdown"
-              }
-            ],
-            "default": "button"
-          },
-          {
             "type": "checkbox",
             "id": "color_swatches",
             "label": "Enable color swatches",
@@ -406,6 +390,21 @@
         "settings": [
           {
             "type": "select",
+            "id": "style",
+            "label": "Style",
+            "options": [
+              {
+                "value": "grid",
+                "label": "Grid item"
+              },
+              {
+                "value": "list",
+                "label": "List item"
+              }
+            ]
+          },
+          {
+            "type": "select",
             "id": "icon",
             "label": "Icon",
             "default": "globe",
@@ -470,6 +469,31 @@
             "type": "url",
             "id": "url",
             "label": "link"
+          },
+          {
+            "type": "header",
+            "content": "popup"
+          },
+          {
+            "type": "richtext",
+            "id": "popup_text",
+            "label": "Text"
+          },
+          {
+            "type": "page",
+            "id": "popup_page",
+            "label": "Page"
+          }
+        ]
+      },
+      {
+        "type": "richtext",
+        "name": "Rich text",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
           }
         ]
       },
@@ -482,6 +506,11 @@
             "id": "text",
             "default": "Text block",
             "label": "Text"
+          },
+          {
+            "type": "checkbox",
+            "id": "bold",
+            "label": "TItle"
           }
         ]
       },
@@ -813,6 +842,21 @@
             "label": "Automatically expanded"
           },
           {
+            "type": "select",
+            "id": "style",
+            "label": "Style",
+            "options": [
+              {
+                "value": "box",
+                "label": "Box"
+              },
+              {
+                "value": "list",
+                "label": "LIst"
+              }
+            ]
+          },
+          {
             "type": "text",
             "id": "title",
             "label": "Heading",
@@ -836,7 +880,7 @@
             "info": "Read more link enable",
             "default": false
           },
-           {
+          {
             "type": "page",
             "id": "size_chart",
             "label": "Protection Read more popup"
@@ -863,6 +907,21 @@
         "name": "Contact form",
         "limit": 1,
         "settings": [
+          {
+            "type": "select",
+            "id": "style",
+            "label": "Style",
+            "options": [
+              {
+                "value": "box",
+                "label": "Box"
+              },
+              {
+                "value": "list",
+                "label": "LIst"
+              }
+            ]
+          },
           {
             "type": "paragraph",
             "content": "All submissions are sent to the customer email address of your store. [Learn more](https://help.shopify.com/en/manual/using-themes/change-the-layout/add-contact-form#view-contact-form-submissions)."
