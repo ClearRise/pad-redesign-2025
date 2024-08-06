@@ -7756,6 +7756,26 @@ label.tag__checkbox-wrapper{
       margin:0 4px 12px
   }
 
+[data-center-text=true] .variant-input-wrap label:not(.color-swatch){
+  min-width: 81px;
+  text-align: center;
+  margin: 0;
+  display: block;
+}
+[data-center-text=true] .variant-input-wrap [data-value="Unsure - Send Ring Sizer First"] {
+  order: 1;   
+}
+@media only screen and (max-width:768px){
+  [data-center-text=true] .variant-input-wrap label:not(.color-swatch){
+    min-width: calc((100vw / 5) - 14px);
+    padding: 7px 5px;
+  }
+  [data-center-text=true] .variant-input-wrap [data-value="Unsure - Send Ring Sizer First"] label:not(.color-swatch){
+    min-width: calc(((100vw / 4) - 3px) * 3);
+  }
+  
+}
+
 .variant-input-wrap label.disabled{
 /*       color:#111111; */
       color:var(--colorBorder);
