@@ -56,6 +56,7 @@
     "button_style": "square",
     "icon_weight": "5px",
     "icon_linecaps": "miter",
+    "picker_type": "button",
     "product_save_amount": true,
     "product_save_type": "dollar",
     "width_tooltip": "Select the width of your ring (all pictures are of rings in 8mm).",
