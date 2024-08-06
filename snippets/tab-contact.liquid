@@ -1,5 +1,5 @@
 {%- assign contact_form_id = 'contact-' | append: id -%}
-<div class="collapsibles-wrapper collapsibles-wrapper--border-bottom">
+<div class="collapsibles-wrapper collapsibles-wrapper--border-bottom style--{{style}}">
   {%- form 'contact', id: contact_form_id -%}
     <button type="button" class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height" aria-controls="Product-content-{{ id }}">
       {{ block.settings.title }}

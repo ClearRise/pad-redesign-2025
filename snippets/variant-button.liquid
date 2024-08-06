@@ -21,22 +21,28 @@
     {%- if is_size -%}
       <span class="variant__label-info">
         &mdash;
-        {%- if block.settings.size_chart -%}
-          {%- render
-            'tool-tip-trigger',
-            title: size_chart_title,
-            content: block.settings.size_chart.content,
-            context: 'size-chart'
-          -%}
-        {%- endif -%}
+        <span
+          data-variant-color-label
+          data-index="option{{ forloop.index }}"
+          data-option-index="{{ color_option_index }}">
+          {{ option.selected_value }}
+        </span>
       </span>
+      {%- if block.settings.size_chart != blank -%}
+        {%- render
+          'tool-tip-trigger',
+          title: size_chart_title,
+          content: block.settings.size_chart.content,
+          context: 'size-chart'
+        -%}
+      {%- endif -%}
     {%- endif -%}
     {%- if is_color -%}
       <span class="variant__label-info">
         &mdash;
         <span
           data-variant-color-label
-          data-index="{{ forloop.index0 }}"
+          data-index="option{{ forloop.index }}"
           data-option-index="{{ color_option_index }}">
           {{ option.selected_value }}
         </span>

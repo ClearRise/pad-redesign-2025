@@ -177,6 +177,10 @@
                     <div class="product-block"><hr></div>
                   {%- when 'text' -%}
                     <div class="product-block custom_txt_block" {{ block.shopify_attributes }}>
+                      <p class="bold--{{block.settings.bold}}" >{{ block.settings.text }}</p>
+                    </div>
+                  {% when 'richtext' %}
+                    <div class="product-block custom_txt_block" {{ block.shopify_attributes }}>
                       {{ block.settings.text }}
                     </div>
                   {%- when 'free_gifts' -%}
@@ -390,7 +394,8 @@
                         content: tab_content, 
                         readmore: block.settings.enable_readmore,
                         size_chart: block.settings.size_chart,
-                        force_open: block.settings.expanded
+                        force_open: block.settings.expanded,
+                        style: block.settings.style
                       -%}
                     </div>
                   {% when 'preorder' %}
@@ -434,7 +439,7 @@
                   {%- when 'contact' -%}
                     <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
                       {% assign tab_id = block.id | append: product.id %}
-                      {%- render 'tab-contact', id: tab_id, block: block -%}
+                      {%- render 'tab-contact', id: tab_id, block: block, style: block.settings.style -%}
                     </div>
                   {%- when 'description' -%}
                     <div class="product-block{% if block.settings.is_tab %} product-block--tab{% endif %}" {{ block.shopify_attributes }}>
@@ -552,33 +557,10 @@
                 
                   {% when 'bold_option' %}
                     <div class="product-block custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }} >
-                      <div class="bold_options" data-product-id="{{ product.id }}" data-option-type="{{block.settings.option_type}}" data-swatch-style="{{block.settings.swatch_style}}"></div>
+                      <div class="bold_options" data-product-id="{{ product.id }}" data-option-type="{{block.settings.option_type}}" data-swatch-style="{{settings.product_swatch_style}}"></div>
                     </div>
                   {%- when 'variant_picker' -%}
-                    <div class="product-block custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }}>
-                      {% if product.metafields.custom.custom_option_name != blank %}
-                      {% assign active_option_label = '' %}
-                      {% for custom_option in product.metafields.custom.custom_options.value %}
-                        {% if custom_option.option_product.value.id == product.id %}
-                          {% assign active_option_label = custom_option.option_name %}
-                        {% endif %}
-                      {% endfor %}
-
-                      <div class="variant-wrapper custom">
-                        <label class="custom_label variant__label" for="{{ product.metafields.custom.custom_option_name }}--{{ product.id }}">
-                          {{ product.metafields.custom.custom_option_name }} - {{active_option_label}}
-                        </label>
-                        <fieldset class="variant-input-wrap custom_options" id="{{ product.metafields.custom.custom_option_name }}--{{ product.id }}">
-                          {% for custom_option in product.metafields.custom.custom_options.value %}
-                            <div class="variant-input {% if custom_option.option_product.value.id == product.id %}active{% endif %}">
-                            <a href="{{ custom_option.option_product.value.url }}">
-                              {{ custom_option.option_preview_image | image_url: width: 42 |  image_tag: alt: custom_option.option_name }}
-                            </a>
-                            </div>
-                          {% endfor %}
-                        </fieldset>
-                      </div>
-                      {% endif %}
+                    <div class="product-block custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }} data-swatch-style="{{settings.product_swatch_style}}">
                       {%- unless product.has_only_default_variant -%}
                         {%- for option in product.options_with_values -%}
                           {%- liquid
@@ -593,8 +575,6 @@
                               elsif downcased_option contains 'colour'
                                 assign is_color = true
                               elsif downcased_option contains 'metal'
-                                assign is_color = true
-                              elsif downcased_option contains 'width'
                                 assign is_color = true
                               elsif downcased_option contains 'gold type'
                                 assign is_color = true
@@ -615,7 +595,7 @@
                               is_color: is_color,
                               color_option_index: color_option_index
                             -%}
-                          {% elsif block.settings.picker_type == 'button' %}
+                          {% elsif settings.picker_type == 'button' %}
                             {%- render 'variant-button',
                               block: block,
                               product: product,
@@ -779,10 +759,10 @@
                     </div>
                   {%- when 'sales_point' -%}
                     {%- unless block.settings.text == blank -%}
-                      <div class="product-block product-block--sales-point custom_sales_icon_wrap" {{ block.shopify_attributes }}>
+                      <div class="product-block product-block--sales-point custom_sales_icon_wrap style--{{block.settings.style}} {% if block.settings.url == blank %}popup--list{% endif %} " {{ block.shopify_attributes }}>
                         <ul class="sales-points">
                           <li class="sales-point">
-                            <span class="icon-and-text custom_icon_wrap">
+                            <{% if block.settings.popup_page != blank %}a href="#modal--{{block.id}}" {% else %}span{% endif %} class="icon-and-text {% if block.settings.style == 'grid' %}custom_icon_wrap{% endif %}">
                               {% case block.settings.icon %}
                                 {% when 'checkmark' %} <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-circle-checkmark" viewBox="0 0 64 64"><defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M52.68 24.48A22 22 0 1 1 47 15.93M21 32l8.5 8.5L57 13"/></svg>
                                 {% when 'gift' %} <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-gift" viewBox="0 0 64 64"><defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M9 20.23h46v8.68H9zM13.34 28.91h36.89v24.3H13.34zM27.82 20.66v32.98M35.91 20.88v32.98M20.52 11.43a3.73 3.73 0 0 0-.74 2.87 4.57 4.57 0 0 0 .8 2.27C22 18.09 25.15 20 32 20.23a12 12 0 0 0-2.43-7 7.52 7.52 0 0 0-5.66-3.12 4 4 0 0 0-3.39 1.32z"/><path class="a" d="M43.37 11.43a3.73 3.73 0 0 1 .74 2.87 4.48 4.48 0 0 1-.8 2.27c-1.42 1.52-4.57 3.41-11.42 3.66a12.08 12.08 0 0 1 2.43-7A7.56 7.56 0 0 1 40 10.14a4 4 0 0 1 3.37 1.29z"/></svg>
@@ -802,7 +782,17 @@
                               {%- else -%}
                                 <span class="icon_txt">{{ block.settings.text }}</span>
                               {%- endif -%}  
-                            </span>
+                            </{% if block.settings.popup_page != blank %}a{% else %}span{% endif %}>
+                            {% if block.settings.popup_page != blank %}
+                            <div id="modal--{{block.id}}" class="modal">
+                              <div class="modal__content">
+                                <h2>{{block.settings.popup_page.title}}</h2>
+                                {{block.settings.popup_page.content}}
+                                <a href="#" class="modal__close">&times;</a>
+                              </div>
+                            </div>
+                            {% endif %}
+                            
                           </li>
                         </ul>
                       </div>
