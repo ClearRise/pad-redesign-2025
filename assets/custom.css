@@ -251,7 +251,6 @@ img.h_auto[data-sizes=auto]{
     padding-right: 30px!important;
     background-color: #fff!important;
   	border-color: #000!important;
-
 }
 
 .one-third-column, .one-third-column, .one-third-column-last{
@@ -276,7 +275,7 @@ img.h_auto[data-sizes=auto]{
 
 .bold_swatch_selected.bold_option_value_element {
     box-shadow: 0 0 0 1px #138e7e!important;
-    border: 3px solid #138e7e!important;
+    border: 1px solid #138e7e!important;
 }
 
 .bold_option_value_swatch {
@@ -288,9 +287,6 @@ img.h_auto[data-sizes=auto]{
 }
 .bold_option_swatch_title {
   display: none;
-}
-.bold_option_swatch .bold_option_value_element {
-  margin-right: 0 !important;
 }
 
 .bold_option_checkbox .bold_option_element {
@@ -371,18 +367,6 @@ img.h_auto[data-sizes=auto]{
 	color: #000000!important;
 }
 
-.collapsibles-wrapper--border-bottom{
-	border-bottom-color: #31373d!important;
-}
-
-.collapsible-trigger-btn--borders{
-	border-color: #31373d!important;
-}
-
-.collapsible-trigger-btn--borders+.collapsible-content .collapsible-content__inner{
-	border-color: #31373d!important;
-}
-
 .template-product .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount, .template-product .okeReviews.okeReviews--theme .okeReviews-reviewsAggregate, .template-product .okeReviews.okeReviews--theme .okeReviews-review, .template-product .okeReviews.okeReviews--theme .okeReviews-reviewsAggregate-summary-total, .template-product .okeReviews.okeReviews--theme .okeReviews-review-attribute-value, .template-product .okeReviews.okeReviews--theme .okeReviews-sectionedList-list-item, .template-product .okeReviews.okeReviews--theme .okeReviews-review-date, .template-product .okeReviews.okeReviews--theme .okeReviews-review-helpful, .template-product .okeReviews.okeReviews--theme .okeReviews-review-helpful-vote-button, .template-product .okeReviews.okeReviews--theme .okeReviews-reviews-controls-reviewCount, .template-product .okeReviews.okeReviews--theme .okeReviews-reviews-showMore, .template-product .okeReviews.okeReviews--theme .okeReviews-mediaGalleryReviewDialog-review .okeReviews-review-helpful-vote-button{
 	color: #000!important;
 }
@@ -405,9 +389,7 @@ img.h_auto[data-sizes=auto]{
 }
 
 .collapsible-content.is-open{
-	border: 1px solid;
-    border-bottom: 0;
-    height: auto!important;
+  height: auto!important;
 }
 
 .collapsible-trigger-btn--borders+.collapsible-content .collapsible-content__inner{
@@ -1438,31 +1420,15 @@ button.upsell-add-to-cart.disabled{
   }
 }
 
-.bold_option_swatch .bold_option_value_element {
-    display: block!important;
-    float: none;
-    margin: 5px auto 10px;
-  width: fit-content;
+.bold_option_swatch .bold_option_element {
+  margin-top: 10px;
 }
 
-.bold_option_swatch_title {
-    line-height: 11px!important;
-    letter-spacing: 0.5px!important;
-    font-size: 10px!important;
-    text-align: center;
-    width: 100%;
-    position: relative;
-    opacity: 1;
-    background-color: white;
-    color: black;
-    height: auto!important;
+.bold_option_swatch .bold_option_value_element {
+  display: block;
+  margin: 0;
+  margin-bottom: 5px;
 }
-.bold_option_swatch_title .bold_option_value_price{
-  display: block!important;
-}
-.bold_option_swatch_title:after{
-    display: none;
-} 
 
 .bold_option_value_price {
   font-size: 14px;
