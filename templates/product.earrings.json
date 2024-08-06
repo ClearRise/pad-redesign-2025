@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -25,7 +34,6 @@
           "settings": {
             "size_chart": "",
             "variant_labels": true,
-            "picker_type": "dropdown",
             "color_swatches": false,
             "custom_variant_comment": false
           }
@@ -56,6 +64,7 @@
         "a1f32824-d0c0-4637-9f69-562bde50bc77": {
           "type": "tab",
           "settings": {
+            "expanded": true,
             "title": "<b>Premium Protection<\/b>",
             "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/warranty-and-return-information\" title=\"Lifetime Warranty and Return Policy\">Premium Protection Plan<\/a> covers your bracelet for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
             "page": "",
