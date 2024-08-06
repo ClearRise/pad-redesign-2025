@@ -7756,8 +7756,8 @@ label.tag__checkbox-wrapper{
   }
 
 [data-center-text=true] .variant-input-wrap label{
-      margin:0 4px 12px
-  }
+  margin:0 4px 12px
+}
 
 [data-center-text=true] .variant-input-wrap label:not(.color-swatch){
   min-width: 81px;
@@ -8048,6 +8048,8 @@ html[dir=rtl] .grid-product__content{
   transition:opacity 0.4s ease
 }
 
+
+
 .grid-product__tag.grid-product__tag--sold-out{
 /*     background-color:#ffffff; */
     background-color:var(--colorBody);
@@ -8063,7 +8065,14 @@ html[dir=rtl] .grid-product__content{
 }
   }
 
-.grid-product__tag--sale, .grid-product__tag--custom{
+.grid-product__tag--custom{
+  /*   background-color:#990000; */
+    background-color:var(--colorSaleTag);
+  /*   color:#ffffff; */
+    color:var(--colorSaleTagText);
+  }
+
+.grid-product__tag--sale{
 /*   background-color:#990000; */
   background-color:var(--colorSaleTag);
 /*   color:#ffffff; */
