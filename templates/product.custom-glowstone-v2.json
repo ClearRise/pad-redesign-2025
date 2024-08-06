@@ -178,7 +178,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
-            "style": "box",
+            "style": "list",
             "title": "Additional Details",
             "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
             "page": "",
@@ -190,7 +190,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
-            "style": "box",
+            "style": "list",
             "title": "Sizing Information",
             "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
             "page": "",
@@ -202,7 +202,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
-            "style": "box",
+            "style": "list",
             "title": "Lifetime Warranty",
             "content": "<p>{{ product.metafields.global.lifetime_warranty | metafield_tag }}<\/p>",
             "page": "",
@@ -214,7 +214,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
-            "style": "box",
+            "style": "list",
             "title": "How To Care",
             "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
             "page": "",
@@ -226,7 +226,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
-            "style": "box",
+            "style": "list",
             "title": "Shipping information",
             "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
             "page": "",
@@ -237,7 +237,7 @@
         "contact": {
           "type": "contact",
           "settings": {
-            "style": "box",
+            "style": "list",
             "title": "Ask a question",
             "phone": false
           }
