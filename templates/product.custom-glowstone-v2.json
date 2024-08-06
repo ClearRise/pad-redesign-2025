@@ -110,7 +110,7 @@
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
           "type": "tab",
           "settings": {
-            "expanded": false,
+            "expanded": true,
             "style": "list",
             "title": "Premium Protection Plan",
             "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
@@ -123,36 +123,48 @@
           "type": "sales_point",
           "disabled": true,
           "settings": {
+            "style": "grid",
             "icon": "gift",
             "text": "Handmade in Utah",
-            "url": ""
+            "url": "",
+            "popup_text": "",
+            "popup_page": ""
           }
         },
         "87272cff-cc16-40a9-b501-c6f3b9acd243": {
           "type": "sales_point",
           "disabled": true,
           "settings": {
+            "style": "grid",
             "icon": "heart",
             "text": "Made to order",
-            "url": ""
+            "url": "",
+            "popup_text": "",
+            "popup_page": ""
           }
         },
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005": {
           "type": "sales_point",
           "disabled": true,
           "settings": {
+            "style": "grid",
             "icon": "truck",
             "text": "Worldwide Shipping",
-            "url": ""
+            "url": "",
+            "popup_text": "",
+            "popup_page": ""
           }
         },
         "sales_point": {
           "type": "sales_point",
           "disabled": true,
           "settings": {
+            "style": "grid",
             "icon": "tag",
             "text": "Find Your Size",
-            "url": "https:\/\/patrickadairdesigns.com\/pages\/how-to-use-a-ring-sizer"
+            "url": "https:\/\/patrickadairdesigns.com\/pages\/how-to-use-a-ring-sizer",
+            "popup_text": "",
+            "popup_page": ""
           }
         },
         "description": {
@@ -166,6 +178,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
+            "style": "box",
             "title": "Additional Details",
             "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
             "page": "",
@@ -177,6 +190,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
+            "style": "box",
             "title": "Sizing Information",
             "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
             "page": "",
@@ -188,6 +202,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
+            "style": "box",
             "title": "Lifetime Warranty",
             "content": "<p>{{ product.metafields.global.lifetime_warranty | metafield_tag }}<\/p>",
             "page": "",
@@ -199,6 +214,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
+            "style": "box",
             "title": "How To Care",
             "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
             "page": "",
@@ -210,6 +226,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
+            "style": "box",
             "title": "Shipping information",
             "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
             "page": "",
@@ -220,6 +237,7 @@
         "contact": {
           "type": "contact",
           "settings": {
+            "style": "box",
             "title": "Ask a question",
             "phone": false
           }
