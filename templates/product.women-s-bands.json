@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -6,19 +15,23 @@
         "price": {
           "type": "price",
           "settings": {
+            "enable_badge": false,
+            "custom_badge": ""
           }
         },
         "text_BLakNm": {
           "type": "text",
           "settings": {
-            "text": "Total Carat Weight (avg): {{ product.metafields.custom.carat_weight.value }}"
+            "text": "Total Carat Weight (avg): {{ product.metafields.custom.carat_weight.value }}",
+            "bold": false
           }
         },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "{{ product.metafields.custom.discount_text.value }}"
+            "text": "{{ product.metafields.custom.discount_text.value }}",
+            "bold": false
           }
         },
         "separator": {
@@ -32,7 +45,6 @@
           "settings": {
             "size_chart": "",
             "variant_labels": true,
-            "picker_type": "dropdown",
             "color_swatches": true,
             "custom_variant_comment": false,
             "collapse_options": false
@@ -49,7 +61,8 @@
         "bold_option_4TpV9E": {
           "type": "bold_option",
           "settings": {
-            "option_type": "Default"
+            "option_type": "Default",
+            "swatch_style": "type_1"
           }
         },
         "engraving_YpGMkM": {
@@ -105,7 +118,7 @@
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
           "type": "tab",
           "settings": {
-            "expanded": false,
+            "expanded": true,
             "title": "Premium Protection Plan",
             "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p><p>1. Excludes repair and replacement of diamonds\/gemstones.<\/p><p>2. Resizing up or down two sizes.<\/p><p>3. Costs may vary depending on specific service and material type.<\/p>",
             "page": "",
