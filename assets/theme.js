@@ -3631,7 +3631,7 @@ Bold:POv2*/
           
         } else {
           var buttonGroup = group.querySelector('.variant-input[data-value="'+ value +'"]');
-          console.log(buttonGroup)
+          console.log(buttonGroup)    
           if (buttonGroup != null) {
             var input = buttonGroup.querySelector('input');
             var label = buttonGroup.querySelector('label');
@@ -6615,7 +6615,7 @@ var image = theme.buildProductImage(product, imageSize);
           document.addEventListener('modalClose.QuickShopModal-' + this.productId, this.closeModalProduct.bind(this));
         }
 
-        if(document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper button').textContent.includes("Premium Protection")){
+        if(document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper button').classList.contains("default-expand")){
           document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper button').classList.add('is-open');
           document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper .collapsible-content').classList.add('is-open');
         } 
@@ -6877,16 +6877,16 @@ var image = theme.buildProductImage(product, imageSize);
           variants: this.variantsObject
         };
   
-        var swatches = this.container.querySelectorAll(this.selectors.variantColorSwatch);
-        if (swatches.length) {
-          swatches.forEach(swatch => {
-            swatch.addEventListener('change', function(evt) {
-              var color = swatch.dataset.colorName;
-              var index = swatch.dataset.colorIndex;
-              this.updateColorName(color, index);
-            }.bind(this))
-          });
-        }
+        // var swatches = this.container.querySelectorAll(this.selectors.variantColorSwatch);
+        // if (swatches.length) {
+        //   swatches.forEach(swatch => {
+        //     swatch.addEventListener('change', function(evt) {
+        //       var color = swatch.dataset.colorName;
+        //       var index = swatch.dataset.colorIndex;
+        //       this.updateColorName(color, index);
+        //     }.bind(this))
+        //   });
+        // }
   
         this.variants = new theme.Variants(options);
   
@@ -6897,7 +6897,7 @@ var image = theme.buildProductImage(product, imageSize);
           this.storeAvailability.updateContent(variant_id);
           this.container.on('variantChange' + this.settings.namespace, this.updateAvailability.bind(this));
         }
-  
+        this.container.on('variantChange' + this.settings.namespace, this.updateColorName.bind(this));
         this.container.on('variantChange' + this.settings.namespace, this.updateCartButton.bind(this));
         this.container.on('variantImageChange' + this.settings.namespace, this.updateVariantImage.bind(this));
         this.container.on('variantPriceChange' + this.settings.namespace, this.updatePrice.bind(this));
@@ -6962,7 +6962,11 @@ var image = theme.buildProductImage(product, imageSize);
       /*============================================================================
         Variant change methods
       ==============================================================================*/
-      updateColorName: function(color, index) {
+      updateColorName: function(evt) {
+        console.log(evt)
+        var index = evt.detail.index;
+        var color = evt.detail.value;
+        console.log(this.selectors.colorLabel + `[data-index="${index}"`)
         // Updates on radio button change, not variant.js
         this.container.querySelector(this.selectors.colorLabel + `[data-index="${index}"`).textContent = color;
       },
