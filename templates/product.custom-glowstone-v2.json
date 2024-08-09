@@ -37,6 +37,8 @@
           "settings": {
             "size_chart": "",
             "variant_labels": true,
+            "picker_type": "dropdown",
+            "product_swatch_style": "circle",
             "color_swatches": true,
             "custom_variant_comment": false,
             "collapse_options": false
@@ -46,6 +48,7 @@
           "type": "bold_option",
           "settings": {
             "option_type": "Test",
+            "product_swatch_style": "circle",
             "swatch_style": "type_1"
           }
         },
