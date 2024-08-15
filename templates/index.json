@@ -40,6 +40,34 @@
             "base_text_size": 24
           }
         },
+        "image_n7j4wd": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "image": "shopify:\/\/shop_images\/Mobile_Desktop.png",
+            "image_mobile": "shopify:\/\/shop_images\/Mobile_Hero_dfb2aae4-cc6f-4541-b6d9-b75625bd0f49.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24
+          }
+        },
         "image_XKzUBC": {
           "type": "image",
           "settings": {
@@ -98,6 +126,7 @@
       },
       "block_order": [
         "image_EX4eKh",
+        "image_n7j4wd",
         "image_XKzUBC",
         "slideshow-0"
       ],
