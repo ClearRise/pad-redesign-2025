@@ -87,6 +87,27 @@
       "settings": {
       }
     },
+    "rich_text_G9LH7U": {
+      "type": "rich-text",
+      "blocks": {
+        "text_Up6xTw": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2><strong>LIMITED TIME OFFER<\/strong><\/h2><p>Buy One Get One Free (of equal or lesser value) <\/p><p>AND<\/p><p>Spend $250 and get $50 back<\/p><p><strong>This Weekend ONLY<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_Up6xTw"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "collection-header": {
       "type": "collection-header",
       "disabled": true,
@@ -196,6 +217,7 @@
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
     "replo_trust_icons_fy9XYw",
+    "rich_text_G9LH7U",
     "collection-header",
     "promo-grid",
     "main-collection"
