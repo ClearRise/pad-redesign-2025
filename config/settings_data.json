@@ -177,6 +177,7 @@
           },
           "announcement_NiAGJc": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Buy One Ring Get a Second Free",
               "link_text": "",
