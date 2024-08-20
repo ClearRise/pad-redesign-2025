@@ -18,16 +18,16 @@
   <label class="variant__label{% if option.name == 'Default' or option.name == 'Title' %} hidden-label{% endif %}{% unless variant_labels %} hidden-label{% endunless %}"
     for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
     {{ option.name }}
-    {%- if is_size -%}
-      <span class="variant__label-info">
-        &mdash;
-        <span
-          data-variant-color-label
-          data-index="option{{ forloop.index }}"
-          data-option-index="{{ color_option_index }}">
-          {{ option.selected_value }}
-        </span>
+    <span class="variant__label-info">
+      &mdash;
+      <span
+        data-variant-color-label
+        data-index="option{{ forloop.index }}"
+        data-option-index="{{ color_option_index }}">
+        {{ option.selected_value }}
       </span>
+    </span>
+    {%- if is_size -%}
       {%- if block.settings.size_chart != blank -%}
         {%- render
           'tool-tip-trigger',
@@ -36,17 +36,6 @@
           context: 'size-chart'
         -%}
       {%- endif -%}
-    {%- endif -%}
-    {%- if is_color -%}
-      <span class="variant__label-info">
-        &mdash;
-        <span
-          data-variant-color-label
-          data-index="option{{ forloop.index }}"
-          data-option-index="{{ color_option_index }}">
-          {{ option.selected_value }}
-        </span>
-      </span>
     {%- endif -%}
   </label>
   {%- assign option_index = forloop.index -%}
