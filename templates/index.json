@@ -42,7 +42,6 @@
         },
         "image_3yp7eL": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -70,6 +69,7 @@
         },
         "image_XKzUBC": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -293,7 +293,7 @@
         "2e50058a-8bc8-46f4-880f-08ed48490db6": {
           "type": "advanced",
           "settings": {
-            "subheading": "LIMITED TIME ONLY",
+            "subheading": "LABOR DAY SPECIAL OFFER",
             "heading": "BUY ONE GET ONE FREE",
             "textarea": "Buy one product and get another of equal or lesser value for FREE",
             "cta_text1": "SHOP ALL RINGS",
