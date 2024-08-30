@@ -212,7 +212,7 @@
             {% assign e_product_id = '' %}
             {% assign p_product_id = '' %}
 
-
+            
             {% if settings.show_gift_box %}
               {% assign first_gift_product = settings['product-handle-1'] %}
               {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
@@ -249,8 +249,7 @@
                 {% assign match_engraving_product = true %}
               {% endif %}
             {% endif %}
-
-
+            
             {% if item.product.metafields.custom.premium_protection_product %}
               {% liquid
                 assign protection_product = all_products[item.product.metafields.custom.premium_protection_product]
