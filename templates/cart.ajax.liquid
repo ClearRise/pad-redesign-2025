@@ -15,12 +15,75 @@
   data-cart-subtotal="{{ cart.total_price }}">
   {% for item in cart.items %}
     {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
-  {%- if item.properties._boldBuilderId  and item.properties._boldVariantIds == null -%}
+    {%- if item.properties._boldBuilderId  and item.properties._boldVariantIds == null -%}
       <input type="hidden" name="updates[]" id="updates_{{- item.key -}}" class="bold_hidden_input cart__product-qty" value="{{- item.quantity -}}" min="0" data-id="{{- item.key -}}">
       {%- continue -%}
-  {%- endif -%}
- 
-{%- render 'cart-item', product: item, line: forloop.index -%}
+    {%- endif -%}
+
+    {% assign match_gift_product = false %}
+    {% assign match_engraving_product = false %}
+    {% assign match_protection_product = false %}
+    {% assign e_product_id = '' %}
+    {% assign p_product_id = '' %}
+
+
+    {% if settings.show_gift_box %}
+      {% assign first_gift_product = settings['product-handle-1'] %}
+      {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
+      {% assign second_gift_product = settings['product-handle-2'] %}
+      {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
+      {% if first_gift_product_id == item.id or second_gift_product_id == item.id %}
+        {% assign match_gift_product = true %}
+      {% endif %}
+    {% endif %}
+
+    {% if settings.second_show_gift_box %}
+      {% assign second_tier_first_gift_product = settings['second_product-handle-1'] %}
+      {% assign second_tier_first_gift_product_id = second_tier_first_gift_product.selected_or_first_available_variant.id %}
+      {% assign second_tier_second_gift_product = settings['second_product-handle-2'] %}
+      {% assign second_tier_second_gift_product_id = second_tier_second_gift_product.selected_or_first_available_variant.id %}
+      {% if second_tier_first_gift_product_id == item.id or second_tier_second_gift_product_id == item.id %}
+        {% assign match_gift_product = true %}
+      {% endif %}
+    {% endif %}
+
+    {% if settings.third_show_gift_box %}
+      {% assign third_tier_first_gift_product = settings['third_product-handle-1'] %}
+      {% assign third_tier_first_gift_product_id = third_tier_first_gift_product.selected_or_first_available_variant.id %}
+      {% assign third_tier_second_gift_product = settings['third_product-handle-2'] %}
+      {% assign third_tier_second_gift_product_id = third_tier_second_gift_product.selected_or_first_available_variant.id %}
+      {% if third_tier_first_gift_product_id == item.id or third_tier_second_gift_product_id == item.id %}
+        {% assign match_gift_product = true %}
+      {% endif %}
+    {% endif %}
+    {% if settings.show_engraving and settings['product-engraving'] %}
+      {% assign engraving_product = settings['product-engraving'] %}
+      {% assign engraving_product_id = engraving_product.id %}
+      {% assign engraving_product_id_var = engraving_product.selected_or_first_available_variant.id %}
+      {% if engraving_product_id_var == item.id %}
+        {% assign match_engraving_product = true %}
+      {% endif %}
+    {% endif %}
+
+    {% assign hidden = false %}
+            
+    {% if match_engraving_product %} 
+      {% assign hidden = true %}
+    {% endif %}
+    {% if match_protection_product %}
+      {% assign hidden = true %}
+    {% endif %}
+    {% if item.product.tags contains 'hidden' or item.product.tags contains 'OPTIONS_HIDDEN_PRODUCT' %}
+      {% assign hidden = true %}
+    {% endif %}
+    {% if match_gift_product %}
+      {% assign hidden = true %}
+    {% endif %}
+    {% if hidden == false %}
+      {% assign main_item_count = main_item_count | plus: 1 %}
+    {% endif %}
+    
+    {%- render 'cart-item', product: item, line: forloop.index, hidden:hidden -%}
   {% endfor %}
 </div>
 <div class="cart__discounts cart__item-sub cart__item-row {% if cart.cart_level_discount_applications == blank %} hide{% endif %}">
