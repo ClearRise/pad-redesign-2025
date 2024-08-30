@@ -81,7 +81,6 @@
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
-          "disabled": true,
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
@@ -397,7 +396,7 @@
           "settings": {
             "subheading": "",
             "heading": "LABOR DAY SPECIAL OFFER",
-            "textarea": "Buy one product and get another of equal or lesser value for FREE.<br>LIMITED TIME ONLY",
+            "textarea": "Buy one product and get another of equal or lesser value for FREE + get a FREE mystery gift on orders $195+<br>LIMITED TIME ONLY",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
