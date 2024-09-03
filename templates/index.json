@@ -58,8 +58,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify:\/\/shop_images\/Desktop_Hero_2.png",
-            "image_mobile": "shopify:\/\/shop_images\/Mobile_hero_2.png",
+            "image": "shopify:\/\/shop_images\/Desktop_1_bc52776c-f61c-4db3-acb8-dde357aeb9b6.png",
+            "image_mobile": "shopify:\/\/shop_images\/Mobile_1_43f9a012-00e2-4194-8e99-c550f358dfcd.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -293,9 +293,9 @@
         "2e50058a-8bc8-46f4-880f-08ed48490db6": {
           "type": "advanced",
           "settings": {
-            "subheading": "LABOR DAY SPECIAL OFFER",
+            "subheading": "LABOR DAY EXTENDED",
             "heading": "BUY ONE GET ONE FREE",
-            "textarea": "Buy one product and get another of equal or lesser value for FREE + get a FREE mystery gift on orders $195+",
+            "textarea": "Buy one product and get another of equal or lesser value for FREE.",
             "cta_text1": "SHOP ALL RINGS",
             "cta_link1": "shopify:\/\/collections\/all-products",
             "cta_text2": "",
