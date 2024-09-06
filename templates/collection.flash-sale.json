@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify:\/\/shop_images\/Lav_Tim_collection_Desktop.png",
-            "image_mobile": "shopify:\/\/shop_images\/Lav_Tim_collection_mobile.png",
+            "image": "shopify:\/\/shop_images\/mystery_collection.png",
+            "image_mobile": "shopify:\/\/shop_images\/mystery_collection_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -150,11 +150,17 @@
         "product_grid"
       ],
       "settings": {
+        "title": "",
         "enable_sidebar": true,
         "collapsed": true,
         "filter_style": "sidebar",
         "enable_color_swatches": false,
-        "enable_sort": true
+        "enable_sort": true,
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "custom_badge": "",
+        "load_more": false
       }
     }
   },
