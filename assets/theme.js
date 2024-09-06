@@ -6966,7 +6966,7 @@ var image = theme.buildProductImage(product, imageSize);
         console.log(evt)
         var index = evt.detail.index;
         var colorArray = evt.detail.value.split(" ");
-        var color = colorArray[1];
+        var color = colorArray[0];
         console.log(this.selectors.colorLabel + `[data-index="${index}"`)
         // Updates on radio button change, not variant.js
         this.container.querySelector(this.selectors.colorLabel + `[data-index="${index}"`).textContent = color;
