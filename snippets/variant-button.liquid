@@ -24,7 +24,14 @@
         data-variant-color-label
         data-index="option{{ forloop.index }}"
         data-option-index="{{ color_option_index }}">
-        {{ option.selected_value }}
+        {% if is_color %}
+          {%- liquid
+             assign color_swatch_tmp =  option.selected_value | split: ' ' | first | handle
+          -%}
+          {{ color_swatch_tmp }}
+        {% else %}        
+          {{ option.selected_value }}
+        {% endif %}
       </span>
     </span>
     {%- if is_size -%}
