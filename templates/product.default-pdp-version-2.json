@@ -81,7 +81,6 @@
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
-          "disabled": true,
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
@@ -396,8 +395,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "LABOR DAY EXTENDED",
-            "textarea": "Buy one product and get another of equal or lesser value for FREE.<br>LIMITED TIME ONLY",
+            "heading": "LIMITED TIME OFFER",
+            "textarea": "Get a Free Mystery Gift on orders $195+",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",

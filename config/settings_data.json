@@ -74,12 +74,13 @@
     "collection_grid_tint": "#000000",
     "collection_grid_opacity": 10,
     "collection_grid_gutter": true,
-    "save_badget_text": "BUY ONE GET ONE FREE",
+    "save_badget_text": "",
+    "display_save_badge": "false",
     "save_badge_type": "badge",
     "product_threshold_amount": 150,
     "product1-img1": "shopify:\/\/shop_images\/Mystery_Ring_Gif.gif",
-    "product1-title": "LABOR DAY SPECIAL OFFER",
-    "product1-text": "Get a free Mystery gift on all orders $195+. <br><b>LABOR DAY WEEKEND ONLY<\/b>",
+    "product1-title": "LIMITED TIME OFFER",
+    "product1-text": "Get a free Mystery gift on all orders $195+.",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -95,9 +96,9 @@
     "empty_cart_text3": "",
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
-    "show_gift_box": false,
+    "show_gift_box": true,
     "first_tier_progress": "You've unlocked a Free Gift!",
-    "gift_box_title": "LABOR DAY SPECIAL OFFER",
+    "gift_box_title": "LIMITED TIME OFFER",
     "gift_box_text": "",
     "cart_threshold_amount": 195,
     "spend_progress": "",
@@ -157,31 +158,37 @@
           "30d9274d-f502-4710-bb39-866381456103": {
             "type": "scroll_navi_mobile",
             "settings": {
-              "sub_menu": "Shop Rings",
+              "sub_menu": "<u>Shop Rings<\/u>",
               "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/all-products?filter.p.m.custom.product_type=Ring"
             }
           },
           "966bc6e1-31db-4261-b34d-773ca4a79259": {
             "type": "scroll_navi_mobile",
             "settings": {
-              "sub_menu": "Wedding Bands",
+              "sub_menu": "<u>Wedding Bands<\/u>",
               "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/best-selling-wedding-bands-v1"
+            }
+          },
+          "scroll_navi_mobile_yw4tEk": {
+            "type": "scroll_navi_mobile",
+            "settings": {
+              "sub_menu": "<b><u>SALE<\/u><\/b>",
+              "link_submenu": "shopify:\/\/collections\/featured-deals"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
             "type": "scroll_navi_mobile",
             "settings": {
-              "sub_menu": "Custom Rings",
+              "sub_menu": "<u>Custom Rings<\/u>",
               "link_submenu": "shopify:\/\/collections\/custom-rings"
             }
           },
           "announcement_NiAGJc": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "Buy One Ring Get a Second Free",
-              "link_text": "",
-              "link": ""
+              "text": "FEATURED DEALS",
+              "link_text": "UP TO 50% OFF",
+              "link": "shopify:\/\/collections\/featured-deals"
             }
           }
         },
@@ -189,6 +196,7 @@
           "1524770014057",
           "30d9274d-f502-4710-bb39-866381456103",
           "966bc6e1-31db-4261-b34d-773ca4a79259",
+          "scroll_navi_mobile_yw4tEk",
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc",
           "announcement_NiAGJc"
         ],
