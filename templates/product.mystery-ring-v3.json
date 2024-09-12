@@ -180,8 +180,8 @@
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
           "settings": {
-            "expanded": false,
-            "style": "box",
+            "expanded": true,
+            "style": "list",
             "title": "Additional Details",
             "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
             "page": "",
@@ -193,7 +193,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
-            "style": "box",
+            "style": "list",
             "title": "Sizing Information",
             "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
             "page": "",
@@ -205,7 +205,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
-            "style": "box",
+            "style": "list",
             "title": "Lifetime Warranty",
             "content": "<p>At Patrick Adair Designs, all products come with a <a href=\"\/pages\/warranty-and-return-information\" title=\"Limited Lifetime Warranty and Return Policy\"><strong>Limited Lifetime Warranty<\/strong><\/a> by default. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.<\/p>",
             "page": "",
@@ -217,7 +217,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
-            "style": "box",
+            "style": "list",
             "title": "How To Care",
             "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
             "page": "",
@@ -229,7 +229,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
-            "style": "box",
+            "style": "list",
             "title": "Shipping information",
             "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
             "page": "",
