@@ -15,8 +15,8 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": false,
-            "custom_badge": ""
+            "enable_badge": true,
+            "custom_badge": "THIS WEEKEND ONLY"
           }
         },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
@@ -111,6 +111,7 @@
         },
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": true,
             "style": "box",
