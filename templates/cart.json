@@ -12,6 +12,13 @@
     "main": {
       "type": "main-cart",
       "blocks": {
+        "icon_BUBFfH": {
+          "type": "icon",
+          "settings": {
+            "icon": "globe",
+            "title": ""
+          }
+        },
         "icon_WwDjfA": {
           "type": "icon",
           "disabled": true,
@@ -46,6 +53,7 @@
         }
       },
       "block_order": [
+        "icon_BUBFfH",
         "icon_WwDjfA",
         "icon_hWVrkb",
         "icon_FHk4QB",
@@ -70,7 +78,7 @@
       ],
       "settings": {
         "full_width": false,
-        "space_around": true
+        "space_around": false
       }
     },
     "recently-viewed": {
