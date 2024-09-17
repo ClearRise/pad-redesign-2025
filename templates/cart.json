@@ -56,6 +56,23 @@
         "text_2": ""
       }
     },
+    "1726584996fe50afac": {
+      "type": "apps",
+      "blocks": {
+        "fondue_cashback_promotions_cashback_module_taxqfx": {
+          "type": "shopify:\/\/apps\/fondue-cashback-promotions\/blocks\/cashback-module\/dcfd972d-99c5-4526-b55b-2d76e990dec8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "fondue_cashback_promotions_cashback_module_taxqfx"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
     "recently-viewed": {
       "type": "recently-viewed",
       "disabled": true,
@@ -81,6 +98,7 @@
   },
   "order": [
     "main",
+    "1726584996fe50afac",
     "recently-viewed",
     "featured-collection"
   ]
