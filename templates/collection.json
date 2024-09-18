@@ -54,8 +54,17 @@
         "autoplay_speed": 5
       }
     },
+    "replo_trust_icons_white_backg_Wc7kJ7": {
+      "type": "replo-trust-icons-white-backg",
+      "custom_css": [
+        "{padding: 10 px;}"
+      ],
+      "settings": {
+      }
+    },
     "replo_trust_icons_fy9XYw": {
       "type": "replo-trust-icons",
+      "disabled": true,
       "settings": {
       }
     },
@@ -188,6 +197,7 @@
   },
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
+    "replo_trust_icons_white_backg_Wc7kJ7",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
     "collection-header",
