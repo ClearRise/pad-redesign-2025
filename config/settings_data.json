@@ -186,6 +186,7 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Free Burl Carbon Ring on Orders $175+",
               "link_text": "",
