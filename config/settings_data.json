@@ -184,12 +184,12 @@
               "link_submenu": "shopify:\/\/collections\/custom-rings"
             }
           },
-          "announcement_NiAGJc": {
+          "announcement_BNdmQX": {
             "type": "announcement",
             "settings": {
-              "text": "Get Up to 30% Back for a Limited Time",
+              "text": "Free Burl Carbon Ring on Orders $195+",
               "link_text": "",
-              "link": "shopify:\/\/collections\/all-products"
+              "link": ""
             }
           }
         },
@@ -199,7 +199,7 @@
           "966bc6e1-31db-4261-b34d-773ca4a79259",
           "scroll_navi_mobile_yw4tEk",
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc",
-          "announcement_NiAGJc"
+          "announcement_BNdmQX"
         ],
         "settings": {
           "main_menu_link_list": "05-16-23-lewis-main-menu",
