@@ -43,6 +43,7 @@
       "block_order": [
         "image_xUiV8F"
       ],
+      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
