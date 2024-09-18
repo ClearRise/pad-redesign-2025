@@ -174,7 +174,7 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "<b><u>SALE<\/u><\/b>",
-              "link_submenu": "shopify:\/\/collections\/featured-deals"
+              "link_submenu": "shopify:\/\/collections\/all-products"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
