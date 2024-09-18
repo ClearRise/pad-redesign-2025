@@ -14,6 +14,7 @@
       "blocks": {
         "icon_BUBFfH": {
           "type": "icon",
+          "disabled": true,
           "settings": {
             "icon": "globe",
             "title": ""
@@ -69,6 +70,7 @@
       "blocks": {
         "fondue_cashback_promotions_cashback_module_taxqfx": {
           "type": "shopify:\/\/apps\/fondue-cashback-promotions\/blocks\/cashback-module\/dcfd972d-99c5-4526-b55b-2d76e990dec8",
+          "disabled": true,
           "settings": {
           }
         }
