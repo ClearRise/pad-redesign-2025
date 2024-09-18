@@ -82,6 +82,14 @@
         "autoplay_speed": 7
       }
     },
+    "replo_trust_icons_white_backg_VzWd4W": {
+      "type": "replo-trust-icons-white-backg",
+      "custom_css": [
+        "{padding-top: 20px;}"
+      ],
+      "settings": {
+      }
+    },
     "16466920156dc1f06b": {
       "type": "advanced-content",
       "blocks": {
@@ -96,6 +104,10 @@
       },
       "block_order": [
         "1646692015dc9bcd88-1"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "{padding-top: 20px;}"
       ],
       "settings": {
         "full_width": false,
@@ -632,6 +644,7 @@
   },
   "order": [
     "slideshow",
+    "replo_trust_icons_white_backg_VzWd4W",
     "16466920156dc1f06b",
     "rich-text",
     "1646694183f97c4822",
