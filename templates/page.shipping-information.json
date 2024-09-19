@@ -65,35 +65,35 @@
           "type": "question",
           "settings": {
             "title": "Gold Rings",
-            "text": "<p>Most rings containing solid gold is currently taking approx <strong>4 weeks to ship.<\/strong><\/p>"
+            "text": "<p>Most rings containing solid gold is currently taking approx -6<strong> weeks to ship.<\/strong><\/p>"
           }
         },
         "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2": {
           "type": "question",
           "settings": {
             "title": "Meteorite Rings",
-            "text": "<p>Most rings containing solid meteorite is currently taking approx.<strong> 2-4 weeks to ship.<\/strong><\/p>"
+            "text": "<p>Most rings containing solid meteorite is currently taking approx.<strong> 4-6 weeks to ship.<\/strong><\/p>"
           }
         },
         "8bd5b863-fcb1-43ae-bde3-7333f20f183b": {
           "type": "question",
           "settings": {
             "title": "Carbon Fiber Rings",
-            "text": "<p>Most Carbon Fiber Rings are currently taking approx. <strong>2-4<\/strong> <strong>weeks to ship<\/strong>.<\/p><p><\/p>"
+            "text": "<p>Most Carbon Fiber Rings are currently taking approx. <strong>4-6 weeks to ship<\/strong>.<\/p><p><\/p>"
           }
         },
         "question_XntpWA": {
           "type": "question",
           "settings": {
             "title": "Wood Rings",
-            "text": "<p>Most Wood Rings are currently taking approx. <strong>2-4<\/strong> <strong>weeks to ship<\/strong>.<\/p>"
+            "text": "<p>Most Wood Rings are currently taking approx. <strong>4-6<\/strong> <strong>weeks to ship<\/strong>.<\/p>"
           }
         },
         "f04d8342-18cb-44cd-8612-a1fdf4afc09b": {
           "type": "question",
           "settings": {
             "title": "Opal Rings",
-            "text": "<p>All solid opal rings are currently taking approx. <strong>2-4 weeks to ship.<\/strong><\/p>"
+            "text": "<p>All solid opal rings are currently taking approx. <strong>4-6 weeks to ship.<\/strong><\/p>"
           }
         },
         "56c40efd-9201-4a79-86d6-f829d8584f99": {
