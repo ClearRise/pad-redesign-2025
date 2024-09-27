@@ -80,8 +80,8 @@
     "product_threshold_amount": 150,
     "product1-img1": "shopify://shop_images/carbon-fiber-glow-ring_8528cbd7-f541-4a2a-be8b-50ac9409b36e.png",
     "product1-img2": "shopify://shop_images/green-forged-carbon-fiber-ring-6.png",
-    "product1-title": "FREE RING OFFER",
-    "product1-text": "Get a free Patriot Glow Ring or Blue Burl Carbon Fiber Ring on all orders $150+.<br><b>LIMITED TIME ONLY</b>",
+    "product1-title": "TWO FREE RINGS",
+    "product1-text": "Get a free Patriot Glow Ring <b>AND</b> Blue Burl Carbon Fiber Ring on all orders $150+.<br><b>THIS WEEKEND ONLY</b>",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -97,7 +97,7 @@
     "empty_cart_text3": "",
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
-    "show_gift_box": true,
+    "show_gift_box": false,
     "first_tier_progress": "You've unlocked a Free Gift!",
     "gift_box_title": "FREE GIFT OFFER",
     "gift_box_text": "",
@@ -114,13 +114,13 @@
     "second_spend_progress": "",
     "second_product-handle-1": "copper-burl-carbon-fiber-ring-1",
     "second_product-handle-2": "copper-burl-carbon-fiber-bar-pendant-1",
-    "third_show_gift_box": false,
+    "third_show_gift_box": true,
     "third_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
-    "gift_box_title_third": "Choose One Free Gift",
-    "cart_threshold_amount_third": "235",
+    "gift_box_title_third": "TWO FREE GIFTS - LIMITED TIME ONLY",
+    "cart_threshold_amount_third": "150",
     "third_spend_progress": "",
-    "third_product-handle-1": "the-patriot-carbon-fiber-glow-ring-2",
-    "third_product-handle-2": "malachite-trustone-and-gold-pendant-2",
+    "third_product-handle-1": "the-patriot-carbon-fiber-glow-ring-1",
+    "third_product-handle-2": "green-burl-carbon-fiber-ring-1",
     "cart_additional_buttons": true,
     "cart_notes_enable": false,
     "cart_terms_conditions_enable": false,
@@ -186,11 +186,10 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "Free Burl Carbon Ring on Orders $175+",
-              "link_text": "",
-              "link": ""
+              "text": "TWO FREE GIFTS ON ORDERS $150+",
+              "link_text": "THIS WEEKEND ONLY",
+              "link": "shopify://collections/all-products"
             }
           }
         },
