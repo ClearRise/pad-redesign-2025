@@ -82,21 +82,13 @@
         "autoplay_speed": 7
       }
     },
-    "replo_trust_icons_white_backg_VzWd4W": {
-      "type": "replo-trust-icons-white-backg",
-      "custom_css": [
-        "{padding-top: 20px;}"
-      ],
-      "settings": {
-      }
-    },
     "16466920156dc1f06b": {
       "type": "advanced-content",
       "blocks": {
         "1646692015dc9bcd88-1": {
           "type": "liquid",
           "settings": {
-            "code": "<div class=\"one-third-column\">\n<center>Made to Order</center>\n</div>\n<div class=\"one-third-column\">\n<center>Satisfaction Guarantee</center>\n</div>\n<div class=\"one-third-column-last\">\n<center>Worldwide Shipping</center>\n</div>\n<div style=\"clear:both;\" >\n</div>",
+            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 16px; color: #333333;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as unique and storied as the men who wear them</h2>\n  <a href=\"https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring\" style=\"background-color: #000000; color: #ffffff; padding: 15px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"https://patrickadairdesigns.com/pages/our-story\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>",
             "width": "100%",
             "alignment": "center"
           }
@@ -105,13 +97,38 @@
       "block_order": [
         "1646692015dc9bcd88-1"
       ],
-      "disabled": true,
       "custom_css": [
         "{padding-top: 20px;}"
       ],
       "settings": {
         "full_width": false,
-        "space_around": true
+        "space_around": false
+      }
+    },
+    "text_and_image_JhxLxH": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/MysteryProductThumbnailSLower_5a01f438-b5c1-443f-ac1b-9131a5ba31ce.gif",
+        "image2": "shopify://shop_images/mystery_gift_hero_mobile.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "replo_trust_icons_white_backg_VzWd4W": {
+      "type": "replo-trust-icons-white-backg",
+      "disabled": true,
+      "custom_css": [
+        "{padding-top: 20px;}"
+      ],
+      "settings": {
       }
     },
     "rich-text": {
@@ -120,11 +137,12 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "Unique and Storied like the Men We Make them For"
+            "title": "Rings as Unique and Storied as the Men We Make them For"
           }
         },
         "text": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "enlarge_text": true,
             "text": "<p>Whether it's a fashion piece, an upgrade, or a first wedding band, he deserves a ring that's one-of-a-kind just like him.</p><p>Since 2015, we've been handcrafting rings from the most exotic materials on earth. From hand-forged Damascus steel to million year old meteorite, you'll find a story in every ring.</p>"
@@ -132,6 +150,7 @@
         },
         "6608bf6f-85b6-4b98-80ce-d2b158c1626a": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "link": "https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring",
             "link_text": "Discover Yours"
@@ -147,6 +166,57 @@
         "align_text": "center",
         "narrow_column": true,
         "divider": false
+      }
+    },
+    "featured_product_KzhL8x": {
+      "type": "featured-product",
+      "blocks": {
+        "price_jPwXqa": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "description_9PwHMU": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "variant_picker_cGw97V": {
+          "type": "variant_picker",
+          "settings": {
+            "size_chart": "",
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": false
+          }
+        },
+        "buy_buttons_4mmwBk": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true
+          }
+        }
+      },
+      "block_order": [
+        "price_jPwXqa",
+        "description_9PwHMU",
+        "variant_picker_cGw97V",
+        "buy_buttons_4mmwBk"
+      ],
+      "settings": {
+        "featured_product": "mystery-ring",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "small",
+        "product_zoom_enable": false,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
       }
     },
     "1646694183f97c4822": {
@@ -357,8 +427,6 @@
       "settings": {
         "title": "Best Sellers",
         "home_featured_products": "best-sellers",
-        "type_enable": false,
-        "subtitle_enable": true,
         "subtitle_type": "two",
         "per_row": 5,
         "rows": 2,
@@ -644,9 +712,11 @@
   },
   "order": [
     "slideshow",
-    "replo_trust_icons_white_backg_VzWd4W",
     "16466920156dc1f06b",
+    "text_and_image_JhxLxH",
+    "replo_trust_icons_white_backg_VzWd4W",
     "rich-text",
+    "featured_product_KzhL8x",
     "1646694183f97c4822",
     "164755740363a75745",
     "featured-collection",
