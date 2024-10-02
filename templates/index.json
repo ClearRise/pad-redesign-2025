@@ -109,7 +109,7 @@
       "type": "text-and-image",
       "settings": {
         "image": "shopify://shop_images/MysteryProductThumbnailSLower_5a01f438-b5c1-443f-ac1b-9131a5ba31ce.gif",
-        "image2": "shopify://shop_images/mystery_gift_hero_mobile.png",
+        "image2": "shopify://shop_images/mystery_gift_image_for_lewis.png",
         "image_width": 700,
         "subtitle": "This Weekend Only",
         "title": "Mystery Rings Only $95",
@@ -409,6 +409,11 @@
         "padding_bottom": 5
       }
     },
+    "replo_ethos_gb3jME": {
+      "type": "replo-ethos",
+      "settings": {
+      }
+    },
     "1646694979441d8438": {
       "type": "rich-text",
       "blocks": {
@@ -621,11 +626,6 @@
       "settings": {
         "full_width": false,
         "space_around": true
-      }
-    },
-    "replo_ethos_gb3jME": {
-      "type": "replo-ethos",
-      "settings": {
       }
     }
   },
