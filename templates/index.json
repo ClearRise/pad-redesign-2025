@@ -88,7 +88,7 @@
         "1646692015dc9bcd88-1": {
           "type": "liquid",
           "settings": {
-            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 14px; color: #999999;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as unique and storied as the men who wear them</h2>\n  <a href=\"{{ shop_url }}\" style=\"background-color: #000000; color: #ffffff; padding: 15px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"{{ shop_url }}/how-we-do-it\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>\n\n<style>\n  @media only screen and (max-width: 600px) {\n    div {\n      text-align: left;\n      padding-left: 20px;\n      padding-right: 20px;\n    }\n    h2, p {\n      text-align: left;\n    }\n    a {\n      text-align: left;\n      display: block;\n    }\n  }\n</style>",
+            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 16px; color: #333333;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as Unique and Storied as the Men who Wear Them</h2>\n  <a href=\"https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring\" style=\"background-color: #000000; color: #ffffff; padding: 15px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"https://patrickadairdesigns.com/pages/our-story\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>",
             "width": "100%",
             "alignment": "center"
           }
@@ -111,11 +111,11 @@
         "image": "shopify://shop_images/MysteryProductThumbnailSLower_5a01f438-b5c1-443f-ac1b-9131a5ba31ce.gif",
         "image2": "shopify://shop_images/mystery_gift_hero_mobile.png",
         "image_width": 700,
-        "subtitle": "",
-        "title": "Image with text",
-        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
-        "button_label": "",
-        "button_link": "",
+        "subtitle": "This Weekend Only",
+        "title": "Mystery Rings",
+        "text": "<p><strong>Get a Mystery Ring for just $95 </strong>($255+ Value). Every ring is guaranteed to be a ring valued at $200+ on our site. Select winners will get rings worth $1,000+. </p>",
+        "button_label": "Get Your Mystery Ring",
+        "button_link": "shopify://products/mystery-ring",
         "button_style": "primary",
         "align_text": "left",
         "layout": "right",
