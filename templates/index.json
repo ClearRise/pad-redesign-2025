@@ -30,8 +30,8 @@
             "text_align": "center",
             "mobile_text_position": "mobile-vertical-bottom mobile-horizontal-center",
             "mobile_text_align": "center",
-            "image": "shopify://shop_images/desktop_3.png",
-            "image_mobile": "shopify://shop_images/free_gs_ring.png",
+            "image": "shopify://shop_images/desktop_good_74461500-6d47-43fd-aef6-32db265153b7.png",
+            "image_mobile": "shopify://shop_images/fixed_small_smyster.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -88,7 +88,7 @@
         "1646692015dc9bcd88-1": {
           "type": "liquid",
           "settings": {
-            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 16px; color: #333333;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as Unique and Storied as the Men who Wear Them</h2>\n  <a href=\"https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring\" style=\"background-color: #FFA500; color: #00000; padding: 15px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"https://patrickadairdesigns.com/pages/our-story\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>",
+            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 16px; color: #333333;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as Unique and Storied as the Men who Wear Them</h2>\n  <a href=\"https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring\" style=\"background-color: #2F7D8E\n; color: #ffffff; padding: 10px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"https://patrickadairdesigns.com/pages/our-story\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>",
             "width": "100%",
             "alignment": "center"
           }
