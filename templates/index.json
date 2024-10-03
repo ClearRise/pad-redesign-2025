@@ -31,7 +31,7 @@
             "mobile_text_position": "mobile-vertical-bottom mobile-horizontal-center",
             "mobile_text_align": "center",
             "image": "shopify://shop_images/desktop_3.png",
-            "image_mobile": "shopify://shop_images/mystery_glowstone.png",
+            "image_mobile": "shopify://shop_images/free_gs_ring.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
