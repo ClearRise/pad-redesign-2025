@@ -409,11 +409,6 @@
         "padding_bottom": 5
       }
     },
-    "replo_ethos_gb3jME": {
-      "type": "replo-ethos",
-      "settings": {
-      }
-    },
     "1646694979441d8438": {
       "type": "rich-text",
       "blocks": {
@@ -627,6 +622,11 @@
         "full_width": false,
         "space_around": true
       }
+    },
+    "replo_ethos_aV3qfN": {
+      "type": "replo-ethos",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -637,9 +637,9 @@
     "replo_trust_icons_white_backg_VzWd4W",
     "164755740363a75745",
     "featured-collection",
+    "replo_ethos_aV3qfN",
     "1646695572d73bfd5a",
     "1647557717e099d38f",
-    "replo_ethos_gb3jME",
     "1646694979441d8438",
     "16466952397d45f287",
     "featured-collections",
