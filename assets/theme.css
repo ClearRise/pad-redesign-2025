@@ -7,8 +7,8 @@
 
 :root{
   --colorBtnPrimary:#000;
-  --colorBtnPrimaryLight:#19bca6;
-  --colorBtnPrimaryDim:#10786a;
+  --colorBtnPrimaryLight:#111111;
+  --colorBtnPrimaryDim:#111111;
   --colorBtnPrimaryText:#ffffff;
   --colorCartDot:#b30000;
 
@@ -51,7 +51,7 @@
   --colorDrawerBorder:#dddddd;
   --colorDrawerText:#f3f3f3;
   --colorDrawerTextDark:#cdcdcd;
-  --colorDrawerButton:#138f7e;
+  --colorDrawerButton:#111111;
   --colorDrawerButtonText:#ffffff;
 
   --grid-gutter:10px;
