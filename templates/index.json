@@ -25,7 +25,7 @@
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
-            "color_accent": "#138f7e",
+            "color_accent": "#111111",
             "text_position": "vertical-bottom horizontal-center",
             "text_align": "center",
             "mobile_text_position": "mobile-vertical-bottom mobile-horizontal-center",
@@ -88,7 +88,7 @@
         "1646692015dc9bcd88-1": {
           "type": "liquid",
           "settings": {
-            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 16px; color: #333333;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as Unique and Storied as the Men who Wear Them</h2>\n  <a href=\"https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring\" style=\"background-color: #2F7D8E\n; color: #ffffff; padding: 10px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"https://patrickadairdesigns.com/pages/our-story\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>",
+            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 16px; color: #333333;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as Unique and Storied as the Men who Wear Them</h2>\n  <a href=\"https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring\" style=\"background-color: #111111\n; color: #ffffff; padding: 10px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"https://patrickadairdesigns.com/pages/our-story\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>",
             "width": "100%",
             "alignment": "center"
           }
@@ -345,6 +345,11 @@
         "mobile_scrollable": false,
         "view_all": true,
         "divider": false
+      }
+    },
+    "replo_ethos_aV3qfN": {
+      "type": "replo-ethos",
+      "settings": {
       }
     },
     "1646695572d73bfd5a": {
@@ -621,11 +626,6 @@
       "settings": {
         "full_width": false,
         "space_around": true
-      }
-    },
-    "replo_ethos_aV3qfN": {
-      "type": "replo-ethos",
-      "settings": {
       }
     }
   },
