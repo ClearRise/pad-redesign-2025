@@ -13,7 +13,7 @@
 *
 * This file may be updated by the Shopify admin theme editor
 * or related systems. Please exercise caution as any changes
-* made to this file may be overwritten. current
+* made to this file may be overwritten. 2nd
 * ------------------------------------------------------------
 */
 {
@@ -405,7 +405,7 @@
           "settings": {
             "subheading": "",
             "heading": "FREE GIFT OFFER",
-            "textarea": "Spend $275+ and get a Free Mystery Glowstone Ring ($255 value) with your order",
+            "textarea": "Get a free Patriot Glow Ring or Blue Burl Carbon Fiber Ring on all orders $150+.<br><b>LIMITED TIME ONLY</b>",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
