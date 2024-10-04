@@ -235,7 +235,7 @@
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
             "dark_overlay": 10,
-            "color_accent": "#138f7e",
+            "color_accent": "#2f7d8e",
             "boxed": false,
             "framed": false
           }
