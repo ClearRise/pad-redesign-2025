@@ -15,8 +15,8 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": false,
-            "custom_badge": ""
+            "enable_badge": true,
+            "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
@@ -81,6 +81,7 @@
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
+          "disabled": true,
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
