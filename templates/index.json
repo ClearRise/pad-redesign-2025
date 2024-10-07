@@ -82,21 +82,13 @@
         "autoplay_speed": 7
       }
     },
-    "replo_trust_icons_white_backg_VzWd4W": {
-      "type": "replo-trust-icons-white-backg",
-      "custom_css": [
-        "{padding-top: 20px;}"
-      ],
-      "settings": {
-      }
-    },
     "16466920156dc1f06b": {
       "type": "advanced-content",
       "blocks": {
         "1646692015dc9bcd88-1": {
           "type": "liquid",
           "settings": {
-            "code": "<div class=\"one-third-column\">\n<center>Made to Order</center>\n</div>\n<div class=\"one-third-column\">\n<center>Satisfaction Guarantee</center>\n</div>\n<div class=\"one-third-column-last\">\n<center>Worldwide Shipping</center>\n</div>\n<div style=\"clear:both;\" >\n</div>",
+            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 16px; color: #333333;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as Unique and Storied as the Men who Wear Them</h2>\n  <a href=\"https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring\" style=\"background-color: #138f7e\n; color: #ffffff; padding: 10px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"https://patrickadairdesigns.com/pages/our-story\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>",
             "width": "100%",
             "alignment": "center"
           }
@@ -105,13 +97,12 @@
       "block_order": [
         "1646692015dc9bcd88-1"
       ],
-      "disabled": true,
       "custom_css": [
         "{padding-top: 20px;}"
       ],
       "settings": {
         "full_width": false,
-        "space_around": true
+        "space_around": false
       }
     },
     "rich-text": {
@@ -143,6 +134,7 @@
         "text",
         "6608bf6f-85b6-4b98-80ce-d2b158c1626a"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
@@ -178,7 +170,7 @@
         "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "BUY ONE <br>GET ONE FREE",
             "heading": "GLOWSTONE  SERIES",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
@@ -201,8 +193,8 @@
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
-            "heading": "METEORITE RINGS",
+            "subheading": "BUY ONE<br> GET ONE FREE",
+            "heading": "METEORITE <br>RINGS",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
             "cta_link1": "shopify://collections/meteorite-rings-1",
@@ -224,8 +216,8 @@
         "advanced_PrzWAG": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
-            "heading": "HEXAGON  GLOWSTONE",
+            "subheading": "BUY ONE <br> GET ONE FREE",
+            "heading": "HEXAGON <br>  GLOWSTONE",
             "textarea": "<u>SHOP NOW</u>",
             "cta_text1": "",
             "cta_link1": "shopify://collections/hexagon-glowstone-rings",
@@ -333,6 +325,14 @@
         "gutter_size": 20,
         "space_above": false,
         "space_below": false
+      }
+    },
+    "replo_trust_icons_white_backg_VzWd4W": {
+      "type": "replo-trust-icons-white-backg",
+      "custom_css": [
+        "{padding-top: 20px;}"
+      ],
+      "settings": {
       }
     },
     "164755740363a75745": {
@@ -644,10 +644,10 @@
   },
   "order": [
     "slideshow",
-    "replo_trust_icons_white_backg_VzWd4W",
     "16466920156dc1f06b",
     "rich-text",
     "1646694183f97c4822",
+    "replo_trust_icons_white_backg_VzWd4W",
     "164755740363a75745",
     "featured-collection",
     "1646695572d73bfd5a",
