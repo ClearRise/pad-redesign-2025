@@ -337,6 +337,7 @@
     },
     "164755740363a75745": {
       "type": "home_img_with_txt",
+      "disabled": true,
       "settings": {
         "sub_title1": "Handcrafted in the USA",
         "image_1": "shopify://shop_images/img2.jpg",
@@ -380,10 +381,16 @@
       "block_order": [
         "164669557254083090-0"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
         "divider": false
+      }
+    },
+    "replo_ethos_T4hhfr": {
+      "type": "replo-ethos",
+      "settings": {
       }
     },
     "1647557717e099d38f": {
@@ -418,6 +425,7 @@
         "eaf7d4d7-8304-48a3-90e3-8b53e73c2e32",
         "6d049a6c-e799-432f-b3fc-561a00a683bf"
       ],
+      "disabled": true,
       "settings": {
         "enable": true,
         "title": "How it Works",
@@ -523,6 +531,7 @@
     },
     "16466952397d45f287": {
       "type": "text-and-image",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/img2.jpg",
         "image2": "shopify://shop_images/82139302_566280807302856_2281391060317896704_o.jpg",
@@ -651,6 +660,7 @@
     "164755740363a75745",
     "featured-collection",
     "1646695572d73bfd5a",
+    "replo_ethos_T4hhfr",
     "1647557717e099d38f",
     "1646694979441d8438",
     "featured-collections",
