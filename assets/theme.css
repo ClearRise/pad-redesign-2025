@@ -10784,6 +10784,8 @@ html[dir=rtl] .product-single__meta .rte{
     display: inline-block;
     width: fit-content;
     margin-top: 0px;
+    font-size: 15px;
+    padding-top: 3px;
   }
 }
 
