@@ -147,8 +147,8 @@
         "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
-            "heading": "WEDDING  BANDS",
+            "subheading": "BUY ONE <br>GET ONE FREE",
+            "heading": "WEDDING  <br>BANDS",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
             "cta_link1": "shopify://collections/best-selling-wedding-bands-v1",
@@ -170,8 +170,8 @@
         "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE <br>GET ONE FREE",
-            "heading": "GLOWSTONE  SERIES",
+            "subheading": "BUY ONE GET ONE FREE",
+            "heading": "GLOWSTONE <br> SERIES",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
             "cta_link1": "shopify://collections/the-glowstone-series",
