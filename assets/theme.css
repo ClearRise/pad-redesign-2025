@@ -10781,9 +10781,9 @@ html[dir=rtl] .product-single__meta .rte{
     border-radius: 5px;
   }
   .save_badge.custom {
-    display: block;
+    display: inline-block;
     width: fit-content;
-    margin-top: 5px;
+    margin-top: 0px;
   }
 }
 
