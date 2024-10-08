@@ -557,10 +557,10 @@
                 
                   {% when 'bold_option' %}
                     <div class="product-block custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }} >
-                      <div class="bold_options" data-product-id="{{ product.id }}" data-option-type="{{block.settings.option_type}}" data-swatch-style="{{settings.product_swatch_style}}"></div>
+                      <div class="bold_options" data-product-id="{{ product.id }}" data-option-type="{{block.settings.option_type}}" data-swatch-style="{{block.settings.product_swatch_style}}"></div>
                     </div>
                   {%- when 'variant_picker' -%}
-                    <div class="product-block custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }} data-swatch-style="{{settings.product_swatch_style}}">
+                    <div class="product-block custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }} data-swatch-style="{{block.settings.product_swatch_style}}">
                       {%- unless product.has_only_default_variant -%}
                         {%- for option in product.options_with_values -%}
                           {%- liquid
@@ -595,7 +595,7 @@
                               is_color: is_color,
                               color_option_index: color_option_index
                             -%}
-                          {% elsif settings.picker_type == 'button' %}
+                          {% elsif block.settings.picker_type == 'button' %}
                             {%- render 'variant-button',
                               block: block,
                               product: product,
@@ -681,6 +681,7 @@
                                 name="properties[Protection Plan]"
                                 value="Yes"
                                 data-protection="{{ protection_product.selected_or_first_available_variant.id }}"
+                                {% if protection_product.selected_or_first_available_variant.price == 0 %} checked {% endif %}
                               >
                               <input
                                 type="hidden"
@@ -694,28 +695,32 @@
                             </span>
                             <span class="bold_option_title">Premium Protection Plan</span>
                             <span class="bold_option_value_price">
-                              {% if protection_product.selected_or_first_available_variant.price < protection_product.selected_or_first_available_variant.compare_at_price %}
-                              <span class="money">
-                                +{{ protection_product.selected_or_first_available_variant.price | money_without_trailing_zeros }} <s>{{protection_product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros}}</s> 
-                              </span>
-                              {%- if settings.product_save_amount -%}
-                                {%- if settings.product_save_type == 'dollar' -%}
-                                  {%- capture saved_amount -%}{{ protection_product.selected_or_first_available_variant.compare_at_price | minus: protection_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}{%- endcapture -%}
-                                {%- else -%}
-                                  {%- capture saved_amount -%}{{ protection_product.selected_or_first_available_variant.compare_at_price | minus: protection_product.selected_or_first_available_variant.price | times: 100.0 | divided_by: protection_product.selected_or_first_available_variant.compare_at_price | round }}%{%- endcapture -%}
-                                {%- endif -%}
-                                <span class="product__price-savings">
-                                  {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
-                                  {% if block.settings.save_badge %}
-                                  <span class="save_badge {{settings.save_badge_type}}">{{block.settings.save_badge}}</span>
-                                  {% endif %}
+                              {% if protection_product.selected_or_first_available_variant.price > 0 %}                              
+                                {% if protection_product.selected_or_first_available_variant.price < protection_product.selected_or_first_available_variant.compare_at_price %}
+                                <span class="money">
+                                  +{{ protection_product.selected_or_first_available_variant.price | money_without_trailing_zeros }} <s>{{protection_product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros}}</s> 
                                 </span>
-                              {%- endif -%}
-                              {% else %}
-                              <span class="money">
-                                +{{ protection_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
-                              </span>
-                              {% endif %}
+                                {%- if settings.product_save_amount -%}
+                                  {%- if settings.product_save_type == 'dollar' -%}
+                                    {%- capture saved_amount -%}{{ protection_product.selected_or_first_available_variant.compare_at_price | minus: protection_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}{%- endcapture -%}
+                                  {%- else -%}
+                                    {%- capture saved_amount -%}{{ protection_product.selected_or_first_available_variant.compare_at_price | minus: protection_product.selected_or_first_available_variant.price | times: 100.0 | divided_by: protection_product.selected_or_first_available_variant.compare_at_price | round }}%{%- endcapture -%}
+                                  {%- endif -%}
+                                  <span class="product__price-savings">
+                                    {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                                    {% if block.settings.save_badge %}
+                                    <span class="save_badge {{settings.save_badge_type}}">{{block.settings.save_badge}}</span>
+                                    {% endif %}
+                                  </span>
+                                {%- endif -%}
+                                {% else %}
+                                <span class="money">
+                                  +{{ protection_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                                </span>
+                                {% endif %}
+                              {% elsif protection_product.selected_or_first_available_variant.price == 0  %}  
+                                <span class="money" style="color:red;">FREE</span><span style="text-decoration: line-through;padding-left: 6px;">{{ protection_product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }}</span>
+                              {% endif %}                                                             
                             </span>
                           </label>
                           <!--
