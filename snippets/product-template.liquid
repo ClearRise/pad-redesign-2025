@@ -681,7 +681,7 @@
                                 name="properties[Protection Plan]"
                                 value="Yes"
                                 data-protection="{{ protection_product.selected_or_first_available_variant.id }}"
-                                {% if protection_product.selected_or_first_available_variant.price == 0 %} checked {% endif %}
+                                {% if protection_product.selected_or_first_available_variant.price == 0 %}  {% endif %}
                               >
                               {% if protection_product.selected_or_first_available_variant.price == 0 %}
                                 <script>
