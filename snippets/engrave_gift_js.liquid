@@ -28,13 +28,25 @@ $(document).ready(function () {
   }
 
   protectField.click(function () {
+    {% comment %} 
     if ($(this).is(":checked")) {
       protectionInput = $(this).attr("data-protection");
     } else {
       protectionInput = "";
     }
-    console.log(protectionInput);
+    console.log(protectionInput); 
+    {% endcomment %}
   });
+
+  function CheckProtectField() {
+    if ($(protectField).is(":checked")) {
+      protectionInput = $(protectField).attr("data-protection");
+    } else {
+      protectionInput = "";
+    }
+    console.log(protectionInput); 
+  }  
+
 
   function ProtectionPlanAjaxAdd(productId) {
     $.ajax({
@@ -64,7 +76,7 @@ $(document).ready(function () {
     $('.add-to-cart-loader').show();
   
     event.preventDefault();
-   
+    CheckProtectField();
     let engravingValue = engravingInput.val();
     console.log(engravingValue)
     if (engravingValue !=='' && engravingValue != undefined){
