@@ -683,21 +683,6 @@
                                 data-protection="{{ protection_product.selected_or_first_available_variant.id }}"
                                 {% if protection_product.selected_or_first_available_variant.price == 0 %} checked {% endif %}
                               >
-                              {% if protection_product.selected_or_first_available_variant.price == 0 %}
-                                <script>
-                                  // $("input.protection-plan").click(function () {
-                                  //   if ($(this).is(":checked")) {
-                                  //     protectionInput = $(this).attr("data-protection");
-                                  //   } else {
-                                  //     protectionInput = "";
-                                  //   }
-                                  //   console.log("test - "+protectionInput);
-                                  // });
-                                  $(document).ready(function () {
-                                    // $("input.protection-plan").trigger("click");
-                                  });  
-                                </script>
-                              {% endif %}                              
                               <input
                                 type="hidden"
                                 class="hidden_protection_info"
