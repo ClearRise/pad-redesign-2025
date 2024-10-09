@@ -684,7 +684,15 @@
                               >
                               {% if protection_product.selected_or_first_available_variant.price == 0 %}
                                 <script>
-                                   $("input.protection-plan").trigger("click");
+                                  $("input.protection-plan").click(function () {
+                                    if ($(this).is(":checked")) {
+                                      protectionInput = $(this).attr("data-protection");
+                                    } else {
+                                      protectionInput = "";
+                                    }
+                                    console.log(protectionInput);
+                                  });
+                                  // $("input.protection-plan").trigger("click");
                                 </script>
                               {% endif %}                              
                               <input
