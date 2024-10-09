@@ -37,6 +37,11 @@ $(document).ready(function () {
   });
 
   function ProtectionPlanAjaxAdd(productId) {
+    if ($("input.protection-plan").is(":checked")) {
+      productId = $("input.protection-plan").attr("data-protection");
+    } else {
+      productId = "";
+    }    
     $.ajax({
       type: "POST",
       url: "/cart/add.js",
