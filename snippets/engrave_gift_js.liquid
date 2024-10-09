@@ -42,6 +42,7 @@ $(document).ready(function () {
     } else {
       productId = "";
     }    
+    console.log(productId);
     $.ajax({
       type: "POST",
       url: "/cart/add.js",
