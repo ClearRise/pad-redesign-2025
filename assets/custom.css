@@ -2000,8 +2000,11 @@ label.variant__label.custom_label{
   letter-spacing: normal;
 }
 
-.bold_option_title .bold_option_value_title:before {
+.bold_option_title .bold_option_value_title:first-child::before {
   content: " - ";
+}
+.bold_option_title .bold_option_value_title:before {
+  content: " , ";
 }
 
 .bold_option_title .bold_option_value_price {
