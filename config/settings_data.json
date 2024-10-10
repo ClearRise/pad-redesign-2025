@@ -186,10 +186,9 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "TWO FREE GIFTS ON ORDERS $150+",
-              "link_text": "THIS WEEKEND ONLY",
+              "text": "Christmas in October",
+              "link_text": "Buy One Get One Free",
               "link": "shopify://collections/all-products"
             }
           }
