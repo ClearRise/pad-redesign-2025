@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow": {
@@ -170,8 +170,8 @@
         "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
-            "heading": "GLOWSTONE <br> SERIES",
+            "subheading": "BUY ONE GET <br>ONE FREE",
+            "heading": "GLOWSTONE  SERIES",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
             "cta_link1": "shopify://collections/the-glowstone-series",
