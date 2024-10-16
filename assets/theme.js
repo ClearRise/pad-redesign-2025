@@ -6689,89 +6689,81 @@ var image = theme.buildProductImage(product, imageSize);
             
           });
 
-// ----------------------------------------------------------------------------------------------
-          var specialFlag = false;
+// --------------------------------------------------------
           document.addEventListener('click', function (e) {
-            if (!specialFlag) {
-              specialFlag = true;
-              return;
-            }
-            if (e.target.closest(".bold_option_value") != undefined) {
-              if (e.target.checked) {
-                var targetWrapper = e.target.closest(".bold_option.bold_option_swatch");
-                var targetValue = e.target.closest(".bold_option_value");
-                if (targetWrapper != undefined) {
-                  if (targetWrapper.querySelector('.bold_option_title .bold_option_value_title') != null) {
-                    // targetWrapper.querySelector('.bold_option_title .bold_option_value_title').remove();
-                    console.log(targetWrapper.querySelector('.bold_option_title .bold_option_value_title'));
-                    if (targetWrapper.querySelector('.bold_option_title').innerText.indexOf("Glow Color") != -1) {
-                      targetWrapper.querySelector('.bold_option_title .bold_option_value_title').remove();
-                    }
-                  }
-                  if (targetWrapper.querySelector('.bold_option_title .bold_option_value_price') != null) {
-                    targetWrapper.querySelector('.bold_option_title .bold_option_value_price').remove();
-                  }
-                  var targetWrapperTitle = targetWrapper.querySelector('.bold_option_title').innerHTML;
-                  var targetValueTitle = targetValue.querySelector('.bold_option_swatch_title').innerHTML;
-                  var newTitle = targetWrapperTitle + targetValueTitle;
-                  targetWrapper.querySelector('.bold_option_title').innerHTML = newTitle;
-                  // new lines
-                  var boldOptionTitleChildren = targetWrapper.querySelector('.bold_option_title').children;
-                  for (var iiii = 0; iiii < boldOptionTitleChildren.length;) {
-                    var tempFlag = true;
-                    for (var jjjj = 0; jjjj < iiii; jjjj ++) {
-                      if (boldOptionTitleChildren[jjjj].innerText == boldOptionTitleChildren[iiii].innerText) {
-                        tempFlag = false;
-                        break;
-                      }
-                    }
-                    if (!tempFlag) {
-                      boldOptionTitleChildren[iiii].remove();
-                    } else {
-                      iiii ++;
-                    }
-                  }
-                }
-                
-              }
-              else {
-                var targetWrapper = e.target.closest(".bold_option.bold_option_swatch");
-                if (targetWrapper != undefined) {
+            console.log("ooooooooooooo", e.target);
+            if (e.target.type == "checkbox") {
+              if (e.target.closest(".bold_option_value") != undefined) {
+                if (e.target.checked) {
+                  var targetWrapper = e.target.closest(".bold_option.bold_option_swatch");
                   var targetValue = e.target.closest(".bold_option_value");
-                  var targetValueTitle = targetValue.querySelector('.bold_option_value_title');
-                  if (targetWrapper.querySelector('.bold_option_title .bold_option_value_title') != null) {
-                    if (targetWrapper.querySelector('.bold_option_title').innerText.indexOf("Glow Color") != -1) {
+                  if (targetWrapper != undefined) {
+                    if (targetWrapper.querySelector('.bold_option_title .bold_option_value_title') != null) {
                       targetWrapper.querySelector('.bold_option_title .bold_option_value_title').remove();
-                    } else {
-                      var boldOptionTitleChildren = targetWrapper.querySelector('.bold_option_title').children;
-                      console.log(targetValue.querySelector('.bold_option_title'), "targetValue.querySelector('.bold_option_title')");
-                      for (var ijij = 0; ijij < boldOptionTitleChildren.length ;) {
-                        if (boldOptionTitleChildren[ijij].innerText == targetValueTitle.innerText) {
-                          boldOptionTitleChildren[ijij].remove();
-                        } else {
-                           ijij ++
-                        }
-                      }
+                    }
+                    if (targetWrapper.querySelector('.bold_option_title .bold_option_value_price') != null) {
+                      targetWrapper.querySelector('.bold_option_title .bold_option_value_price').remove();
                     }
                   }
-                  if (targetWrapper.querySelector('.bold_option_title .bold_option_value_price') != null) {
-                    targetWrapper.querySelector('.bold_option_title .bold_option_value_price').remove();
+                } else {
+                  var targetWrapper = e.target.closest(".bold_option.bold_option_swatch");
+                  if (targetWrapper != undefined) {
+                    var targetValue = e.target.closest(".bold_option_value");
+                    if (targetWrapper.querySelector('.bold_option_title .bold_option_value_title') != null) {
+                      targetWrapper.querySelector('.bold_option_title .bold_option_value_title').remove();
+                    }
+                    if (targetWrapper.querySelector('.bold_option_title .bold_option_value_price') != null) {
+                      targetWrapper.querySelector('.bold_option_title .bold_option_value_price').remove();
+                    }
                   }
                 }
-              } 
+                var targetWrapper = e.target.closest(".bold_option.bold_option_swatch");
+                if (targetWrapper != undefined) {
+                  var targetWrapperTitle = targetWrapper.querySelector('.bold_option_title').innerHTML;
+                  var tempWrap = targetWrapper.querySelector(".bold_option_element");
+                  var checkboxs = tempWrap.getElementsByTagName("input");
+
+                  //-------------
+                  var items = checkboxs[checkboxs.length -1].value.split(",");
+                  console.log(items);
+                  //-------------
+                  console.log(checkboxs, "checkboxs");
+                  setTimeout(function () {
+                    var targetWrapperTitleText = targetWrapper.querySelector('.bold_option_title').innerText;
+                    console.log(targetWrapperTitleText, "targetWrapperTitleText");
+                    if (targetWrapperTitleText.indexOf("*") != -1) {
+                      targetWrapperTitleText = targetWrapperTitleText.substr(0, targetWrapperTitleText.indexOf("*") + 1);
+                    }
+                    console.log(targetWrapperTitle, "targetWrapperTitle");
+                    
+                    var items = checkboxs[checkboxs.length -1].value.split(",");
+                    // targetWrapper.querySelector('.bold_option_title').innerHTML = targetWrapperTitle;
+                    var tempText = targetWrapperTitleText;
+                    items.forEach(function (item) {
+                      // targetWrapper.querySelector('.bold_option_title').innerHTML += `<span class="bold_option_value_title">${item}</span>`;
+                      tempText += `<span class="bold_option_value_title">${item}</span>`;
+                    });
+                    targetWrapper.querySelector('.bold_option_title').innerHTML = tempText;
+                  }, 100);
+                }
+              }
             }
           });
 
           var optionType = document.querySelector('.bold_options').dataset.optionType;
           if (document.querySelector(`input[name="properties[${optionType}]"]`) != undefined) {
-            var targetElement = document.querySelector(`input[name="properties[${optionType}]"]`).closest(".bold_option").querySelector('input[type="checkbox"]');
-            if (targetElement && !targetElement.checked) {
-              targetElement.click();
+            if (document.querySelector(`input[name="properties[${optionType}]"]`).closest(".bold_option").querySelector('input[type="checkbox"]') != undefined) {
+              var targetElement = document.querySelector(`input[name="properties[${optionType}]"]`).closest(".bold_option").querySelector('input[type="checkbox"]');
+              console.log("->>>>>>>>>>>>>>>>>>>", targetElement);
+              if (!targetElement.checked) {
+                targetElement.click();
+              }
             }
           }
+          
         });
       },
-// --------------------------------------------------------------------------------------------------
+// -----------------------------------------------------
 
       engravingPopup: function () {
         if (this.container.querySelector('.add-engraving-button') != undefined ) {
