@@ -120,7 +120,7 @@
         <!-- gift box -->
         {% assign GiftBoxAmount = settings.cart_threshold_amount %}
         {% assign GiftBoxAmountRaw = settings.cart_threshold_amount | times:100 %}
-        {% assign GiftBoxAmountMoney = GiftBoxAmountRaw | abs | money %}
+        {% assign GiftBoxAmountMoney = GiftBoxAmountRaw | abs | money_without_trailing_zeros %}
         {% assign already_added =  'Already Added!' %}
         {% assign first_product_found = true %}
         {% assign second_product_found = true %}
@@ -166,7 +166,7 @@
                                             {% if first_gift_product.price == 0 %}
                                                 FREE
                                             {% else %}
-                                                {{ first_gift_product.price | money }}
+                                                {{ first_gift_product.price | money_without_trailing_zeros }}
                                             {% endif %}
                                         </div>
                                     </div>
@@ -205,7 +205,7 @@
                                                 {% if second_gift_product.price == 0 %}
                                                     FREE
                                                 {% else %}
-                                                    {{ second_gift_product.price | money }}
+                                                    {{ second_gift_product.price | money_without_trailing_zeros }}
                                                 {% endif %}
                                             </div>
                                         </div>
