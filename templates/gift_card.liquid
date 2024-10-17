@@ -26,7 +26,7 @@
       <div class="h1 giftcard__amount{% if initial_value_size > 6 %} giftcard__amount--medium{% endif %}">
         {% if gift_card.balance != gift_card.initial_value %}
           <span class="tooltip">
-            <span class="tooltip__label">{{ gift_card.balance | money }} <small>left</small></span>
+            <span class="tooltip__label">{{ gift_card.balance | money_without_trailing_zeros }} <small>left</small></span>
           </span>
         {% endif %}
         <strong>{{ formatted_initial_value }}</strong>
