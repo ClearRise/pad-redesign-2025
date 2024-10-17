@@ -140,7 +140,7 @@
             <small class="cart__price cart__price--strikethrough  black_txt">
               <span>
                   <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>
-                <span class="igPrice" data-variant-id="{{ product.id }}">{{- product.original_price | money -}}</span>
+                <span class="igPrice" data-variant-id="{{ product.id }}">{{- product.original_price | money_without_trailing_zeros -}}</span>
               </span>
             </small>
           {% else %}
@@ -149,7 +149,7 @@
               <small class="cart__price cart__price--strikethrough  black_txt">
                 <span>
                     <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>
-                  {{- product.original_price | money -}}
+                  {{- product.original_price | money_without_trailing_zeros -}}
                 </span>
               </small>
             {% endif %}
@@ -158,17 +158,17 @@
           
           <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
           <span class="cart__price cart__discount black_txt">
-            <span class="bcpo-cart-item-price" data-key="{{product.key}}">{{ product.final_price | money }}</span>
+            <span class="bcpo-cart-item-price" data-key="{{product.key}}">{{ product.final_price | money_without_trailing_zeros }}</span>
           </span>
         {% else %}
           <span class="cart__price  black_txt">
             <span>
               <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>
             {% if intelligems_discount == 0 %}
-              {{ product.original_price | money }}
+              {{ product.original_price | money_without_trailing_zeros }}
             {% else %}
               <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>
-              {{ product.final_price | money }}
+              {{ product.final_price | money_without_trailing_zeros }}
             {% endif %}
             </span>
 
@@ -180,7 +180,7 @@
           {%- for discount_allocation in product.line_level_discount_allocations -%}
             {% unless discount_allocation.discount_application.title == "Discount" %}
             <small class="cart__discount">
-              {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})</small
+              {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money_without_trailing_zeros }})</small
             >
             {% endunless %}
           {%- endfor -%}
@@ -200,7 +200,7 @@
             </span>
           {%- endcapture -%}
 
-          <div class="product__unit-price">{{ product.unit_price | money }}/{{ unit_price_base_unit }}</div>
+          <div class="product__unit-price">{{ product.unit_price | money_without_trailing_zeros }}/{{ unit_price_base_unit }}</div>
         {%- endif -%}
       </div>
     </div>
@@ -209,9 +209,11 @@
       <div class="custom_discount_wrap">
       {%- for discount_allocation in product.line_level_discount_allocations -%}
         {% if discount_allocation.amount > 0 %}
-        <small class="cart__discount">
-          {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})
-        </small>
+          {% unless discount_allocation.discount_application.title == "Discount" %}
+            <small class="cart__discount">
+              {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money_without_trailing_zeros }})
+            </small>
+          {% endunless %}
         {% endif %}
       {%- endfor -%}
       </div>
