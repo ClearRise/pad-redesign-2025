@@ -84,7 +84,7 @@ if tag contains '_label_'
       {%- endunless -%}
       {%- if on_sale and product.available -%}
         {% assign saved_amount_value = product.compare_at_price | minus: product.price %}
-        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money  }}{%- endcapture -%}
+        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros  }}{%- endcapture -%}
         {%- capture saved_percent -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
         {% assign saved_percent = saved_percent | plus: 0 %}
         {% assign saved_amount_cents = product.compare_at_price | minus: product.price | plus: 0 %}
@@ -223,19 +223,19 @@ if tag contains '_label_'
         <div class="grid-product__price">
           {%- if on_sale -%}
             <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
-            <span class="grid-product__price--original">{{ product.compare_at_price | money }}</span>
+            <span class="grid-product__price--original">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
             <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
           {%- endif -%}
           {%- if product.price_varies -%}
-            {%- assign price = product.price_min | money -%}
+            {%- assign price = product.price_min | money_without_trailing_zeros -%}
             {{ 'products.general.from_text_html' | t: price: price }}
           {%- else -%}
-            {{ product.price  | money }}
+            {{ product.price  | money_without_trailing_zeros }}
           {%- endif -%}
           {%- if on_sale -%}
             {%- if settings.product_save_amount -%}
               {%- if settings.product_save_type == 'dollar' -%}
-                {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money }}{%- endcapture -%}
+                {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
               {%- else -%}
                 {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
               {%- endif -%}
@@ -257,7 +257,7 @@ if tag contains '_label_'
                 {%- endif -%}
               {%- endcapture -%}
 
-              {{ product_variant.unit_price | money }}/{{ unit_price_base_unit }}
+              {{ product_variant.unit_price | money_without_trailing_zeros }}/{{ unit_price_base_unit }}
             </div>
           {%- endif -%}
         </div>
