@@ -170,7 +170,7 @@
       <!-- gift box -->
       {% assign GiftBoxAmount = settings.cart_threshold_amount %}
       {% assign GiftBoxAmountRaw = settings.cart_threshold_amount | times:100 %}
-      {% assign GiftBoxAmountMoney = GiftBoxAmountRaw | abs | money %}
+      {% assign GiftBoxAmountMoney = GiftBoxAmountRaw | abs | money_without_trailing_zeros %}
       {% assign already_added =  'Change Gift' %}
       {% assign first_product_found = true %}
       {% assign second_product_found = true %}
@@ -238,7 +238,7 @@
                     
                <div class="cart__item-sub">
                  <div class="upsell-product-price aaaaaaaaa">
-                      FREE <s>{{first_gift_product.compare_at_price | money }}</s>
+                      FREE <s>{{first_gift_product.compare_at_price | money_without_trailing_zeros }}</s>
                   </div>
                     <button {% if first_product_found == false %}data-remove_var="{{ first_gift_product_id }}"{% endif %} data-product-id="{{ first_gift_product_id }}" class="{% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart" {% if first_gift_product.selected_or_first_available_variant.available == false  %}disabled{% endif %}>{% if first_product_found == false %}{{ already_added }} {% elsif first_gift_product.selected_or_first_available_variant.available == false %}SOLD OUT{% else %}{{ upsellAtc }}{% endif %}</button>
                </div>    
@@ -274,7 +274,7 @@
                     {% endif %}
                   <div class="cart__item-sub">
                     <div class="upsell-product-price bbbbbbbbb">
-                      FREE <s>{{second_gift_product.compare_at_price | money }}</s>
+                      FREE <s>{{second_gift_product.compare_at_price | money_without_trailing_zeros }}</s>
                   </div>
                     <button {% if second_product_found == false %}data-remove_var="{{ second_gift_product_id }}"{% endif %} data-product-id="{{ second_gift_product_id }}" class="{% if second_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart" {% if second_gift_product.selected_or_first_available_variant.available == false  %}disabled{% endif %} >{% if second_product_found == false %}{{ already_added }}{% elsif second_gift_product.selected_or_first_available_variant.available == false %}SOLD OUT{% else %}{{ upsellAtc }}{% endif %}</button>
                   </div>     
@@ -346,7 +346,7 @@
                                 alt="{{ product.title | escape }}" loading="lazy">
                               {% comment %}
                                     <div class="upsell-product-price">
-                                        {{ product.price | money }}
+                                        {{ product.price | money_without_trailing_zeros }}
                                     </div>
                               {% endcomment %}
                                 </div>
@@ -362,12 +362,12 @@
                                   <div  class="cart__item-sub">
                                     <div class="upsell-product-price cccccccc">
                                       
-                                        {{ product.price | money }}
+                                        {{ product.price | money_without_trailing_zeros }}
                                      {%- if product.compare_at_price > product.price -%}
                                         <span id="PriceA11y" class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
                                         <span class="product-single__price--wrapper" aria-hidden="false" style="margin-left: 10px;">
                                           <span id="ComparePrice" class="product-single__price--compare-at product__price product__price--compare" style="font-size:14px;color:red">
-                                            {{ product.compare_at_price | money }}
+                                            {{ product.compare_at_price | money_without_trailing_zeros }}
                                           </span>
                                         </span>
                                         <span id="ComparePriceA11y" class="visually-hidden" aria-hidden="false">{{ 'products.general.sale_price' | t }}</span>
