@@ -32,7 +32,7 @@
                                         {% for cart_discount in cart.cart_level_discount_applications %}
                                             <div class="cart__discount">
                                                 {{ cart_discount.title }}
-                                                (-{{ cart_discount.total_allocated_amount | money }})
+                                                (-{{ cart_discount.total_allocated_amount | money_without_trailing_zeros }})
                                             </div>
                                         {% endfor %}
                                     </div>
@@ -42,7 +42,7 @@
                         <div class="cart__item-sub cart__item-row">
                             <div class="ajaxcart__subtotal">{{ 'cart.general.subtotal' | t }}</div>
                             <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>
-                            <div data-subtotal class=" black_txt">{{ cart.total_price | money }}</div>
+                            <div data-subtotal class=" black_txt">{{ cart.total_price | money_without_trailing_zeros }}</div>
                         </div>
                         {% if settings.cart_terms_conditions_enable %}
                             <div class="cart__item-row cart__terms">
@@ -85,7 +85,7 @@
                                         {% for cart_discount in cart.cart_level_discount_applications %}
                                             <div class="cart__discount">
                                                 {{ cart_discount.title }}
-                                                (-{{ cart_discount.total_allocated_amount | money }})
+                                                (-{{ cart_discount.total_allocated_amount | money_without_trailing_zeros }})
                                             </div>
                                         {% endfor %}
                                     </div>
@@ -95,7 +95,7 @@
                         <div class="cart__item-sub cart__item-row">
                             <div class="ajaxcart__subtotal">{{ 'cart.general.subtotal' | t }}</div>
                             <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>
-                            <div data-subtotal class=" black_txt">{{ cart.total_price | money }}</div>
+                            <div data-subtotal class=" black_txt">{{ cart.total_price | money_without_trailing_zeros }}</div>
                         </div>
                         {% if settings.cart_terms_conditions_enable %}
                             <div class="cart__item-row cart__terms">
@@ -128,7 +128,7 @@
                                         {% for cart_discount in cart.cart_level_discount_applications %}
                                             <div class="cart__discount">
                                                 {{ cart_discount.title }}
-                                                (-{{ cart_discount.total_allocated_amount | money }})
+                                                (-{{ cart_discount.total_allocated_amount | money_without_trailing_zeros }})
                                             </div>
                                         {% endfor %}
                                     </div>
@@ -138,7 +138,7 @@
                         <div class="cart__item-sub cart__item-row ">
                             <div class="ajaxcart__subtotal">{{ 'cart.general.subtotal' | t }}</div>
                             <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>
-                            <div data-subtotal class=" black_txt">{{ cart.total_price | money }}</div>
+                            <div data-subtotal class=" black_txt">{{ cart.total_price | money_without_trailing_zeros }}</div>
                         </div>
                         <div class="cart__item-row text-center">
                             <small>
