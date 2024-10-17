@@ -171,7 +171,7 @@ Title and Description
 {%-unless booster_title == blank %}
   {%- assign booster_title = booster_title | replace : "[title]", [baType].title -%}
   {%- if baType == 'product' -%}
-    {%- assign formatted_price = product.variants[0].price | money -%}
+    {%- assign formatted_price = product.variants[0].price | money_without_trailing_zeros -%}
     {%- assign booster_title = booster_title | replace: "[price]", formatted_price -%}
     {%- assign booster_title = booster_title | replace : "[product_vendor]", [baType].vendor -%}
     {%- assign booster_title = booster_title | replace : "[product_type]", [baType].type -%}
@@ -191,7 +191,7 @@ Title and Description
 {%- endunless -%}
 
 {%- unless booster_desc == blank -%}
-  {%- assign formatted_price = product.variants[0].price | money -%}
+  {%- assign formatted_price = product.variants[0].price | money_without_trailing_zeros -%}
   {%- assign booster_desc = booster_desc | replace : "[description]", [baType].description -%}
   {%- assign booster_desc = booster_desc | replace : "[price]", formatted_price -%}
   {%- assign booster_desc = booster_desc | replace : "[product_vendor]", [baType].vendor -%}
