@@ -72,7 +72,7 @@
                 {% if first_gift_product.price == 0 %}
                   FREE
                 {% else %}
-                  {{ first_gift_product.price | money }}
+                  {{ first_gift_product.price | money_without_trailing_zeros }}
                 {% endif %}
             </div>
       <button {% if first_product_found == false %}data-remove_var="{{ first_gift_product_id }}"{% endif %} data-product-id="{{ first_gift_product_id }}" class="{% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">{% if first_product_found == false %}{{ already_added }}{% else %}{{ upsellAtc }}{% endif %}</button>
@@ -107,7 +107,7 @@
                 {% if second_gift_product.price == 0 %}
                   FREE
                 {% else %}
-                  {{ second_gift_product.price | money }}
+                  {{ second_gift_product.price | money_without_trailing_zeros }}
                 {% endif %}
             </div>
               <button {% if second_product_found == false %}data-remove_var="{{ second_gift_product_id }}"{% endif %} data-product-id="{{ second_gift_product_id }}" class="{% if second_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">{% if second_product_found == false %}{{ already_added }}{% else %}{{ upsellAtc }}{% endif %}</button>
