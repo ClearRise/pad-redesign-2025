@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "17347204-928a-46d1-8166-ac8c007f382d": {
@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/chirstmas_in_oct_1.png",
-            "image_mobile": "shopify://shop_images/Christmas_in_oct_Banner_mobile_collection.png",
+            "image": "shopify://shop_images/EXTNEDED_CHRISTMAS_IN_OCT_banner_mobile_1.png",
+            "image_mobile": "shopify://shop_images/EXTNEDED_CHRISTMAS_IN_OCT_banner_mobile_2.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
