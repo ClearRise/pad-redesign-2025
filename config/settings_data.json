@@ -78,10 +78,9 @@
     "display_save_badge": "false",
     "save_badge_type": "badge",
     "product_threshold_amount": 150,
-    "product1-img1": "shopify://shop_images/carbon-fiber-glow-ring_8528cbd7-f541-4a2a-be8b-50ac9409b36e.png",
-    "product1-img2": "shopify://shop_images/green-forged-carbon-fiber-ring-6.png",
+    "product1-img1": "shopify://shop_images/MysteryProductThumbnailSLower_f1fde3c6-9dd9-42b7-ad92-6627dce64266.gif",
     "product1-title": "FREE GIFT OFFER",
-    "product1-text": "Get a free Patriot Glow Ring or Blue Burl Carbon Fiber Ring on all orders $150+.<br><b>LIMITED TIME ONLY</b>",
+    "product1-text": "Get a free Mystery Gift on orders $195+.<br><b>LIMITED TIME ONLY</b>",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -97,7 +96,7 @@
     "empty_cart_text3": "",
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
-    "show_gift_box": false,
+    "show_gift_box": true,
     "first_tier_progress": "You've unlocked a Free Gift!",
     "gift_box_title": "FREE GIFT OFFER",
     "gift_box_text": "",
@@ -174,7 +173,7 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "<b><u>SALE</u></b>",
-              "link_submenu": "shopify://collections/all-products"
+              "link_submenu": "https://patrickadairdesigns.com/collections/flash-sale"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
