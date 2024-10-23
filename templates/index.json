@@ -238,6 +238,7 @@
         },
         "2e50058a-8bc8-46f4-880f-08ed48490db6": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "LIMITED TIME ONLY",
             "heading": "FREE MYSTERY GIFT",
@@ -327,12 +328,21 @@
         "space_below": false
       }
     },
-    "replo_trust_icons_white_backg_VzWd4W": {
-      "type": "replo-trust-icons-white-backg",
-      "custom_css": [
-        "{padding-top: 20px;}"
-      ],
+    "text_and_image_JAXUE3": {
+      "type": "text-and-image",
       "settings": {
+        "image": "shopify://shop_images/Mystery_Ring_Gif_cc057da2-4ddc-4819-ac3e-681518e6d19b.gif",
+        "image2": "shopify://shop_images/mystery_gift_image_for_lewis.png",
+        "image_width": 700,
+        "subtitle": "$200+ Ring Guaranteed",
+        "title": "Free Mystery Ring",
+        "text": "<p>Get a Free Mystery Ring with any order over $195.  </p>",
+        "button_label": "Get Yours",
+        "button_link": "shopify://collections/all-products",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "right",
+        "divider": false
       }
     },
     "164755740363a75745": {
@@ -351,6 +361,14 @@
         "image_3": "shopify://shop_images/met_rings_group_photo_for_sale_1_Medium_6c7b5d12-c012-4184-aeb3-917e318100b1.png",
         "text_3": "Your ring is made to order just for you. No two rings are the same.",
         "url_3": ""
+      }
+    },
+    "replo_trust_icons_white_backg_VzWd4W": {
+      "type": "replo-trust-icons-white-backg",
+      "custom_css": [
+        "{padding-top: 20px;}"
+      ],
+      "settings": {
       }
     },
     "featured-collection": {
@@ -656,8 +674,9 @@
     "16466920156dc1f06b",
     "rich-text",
     "1646694183f97c4822",
-    "replo_trust_icons_white_backg_VzWd4W",
+    "text_and_image_JAXUE3",
     "164755740363a75745",
+    "replo_trust_icons_white_backg_VzWd4W",
     "featured-collection",
     "1646695572d73bfd5a",
     "replo_ethos_T4hhfr",
