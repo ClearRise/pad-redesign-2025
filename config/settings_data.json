@@ -185,10 +185,9 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "Christmas in October",
-              "link_text": "Buy One Get One Free",
+              "text": "Free Mystery Ring on Orders $195+ ($245 Value)",
+              "link_text": "",
               "link": "shopify://collections/all-products"
             }
           }
