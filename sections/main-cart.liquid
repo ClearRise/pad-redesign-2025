@@ -286,6 +286,11 @@
           {% if main_item_count == 1 %}
             <p class="right" style="color:red;">{{ section.settings.text_2 }}</p>
           {% endif %}
+          {% if section.settings.show_entry != false %}
+            {% assign total_in_dollars = cart.total_price | divided_by: 100 %}
+            <input type="hidden" id="_multiplier" value="{{ section.settings.multiplier }}">
+            <p class="right" style="color:black;">{{ section.settings.text_entry }} <span id="_entry_val">{{ total_in_dollars | times: section.settings.multiplier }}</span> {% if section.settings.hyper_linklist %}&nbsp;&nbsp;&nbsp; <span><a href="{{ section.settings.hyper_linklist }}" style="font-size: 13px;text-decoration: underline;">{{ section.settings.link_txt }}</a></span>{% endif %}</p>
+          {% endif %}          
           {% render 'dg-cart-upsells', hide_price: cart_total_exclude_gift %}
           {% if settings.cart_notes_enable %}
             <div>
@@ -388,7 +393,41 @@
       "id": "text_2",
       "label": "Text when one item",
       "default": "Add another item to your cart and get the cheaper one for Free"
-    }
+    },
+    {
+      "type": "header",
+      "content":"Entry"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "show_entry",
+      "label": "Show entry",
+      "default": false
+    },    
+    {
+      "type": "text",
+      "id": "text_entry",
+      "label": "Text for entry",
+      "default": "Total Entries:"
+    },
+    {
+      "type": "text",
+      "id": "multiplier",
+      "label": "entry per dollar",
+      "default": "1"
+    },
+    {
+      "type": "text",
+      "id": "link_txt",
+      "label": "Hyperlink text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "hyper_linklist",
+      "label": "Hyper Link"
+    }    
+    
   ],
   "blocks": [
     {

@@ -1845,7 +1845,7 @@ lazySizesConfig.expFactor = 4;
             requestData.updates[dataEngravingValue] = engravingProduct.quantity + comp_val;
           }
           
-          if (dataProtectionValue) {
+          if (dataProtectionValue && protectionProduct) {
             requestData.updates[dataProtectionValue] = protectionProduct.quantity + comp_val;
           }         
   
