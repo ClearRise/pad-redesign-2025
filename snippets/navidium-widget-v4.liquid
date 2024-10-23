@@ -729,7 +729,21 @@
         BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
   },800);
     }
-
+    var moneyElement = document.querySelector('[data-subtotal] .money');
+    if (moneyElement) {
+      var moneyValue = moneyElement.textContent || moneyElement.innerText;
+      var numericPrice = parseFloat(moneyValue.replace(/[$,]/g, ''));
+  // console.log("money = " + moneyValue+" price = " + moneyValue);
+      if (!isNaN(numericPrice) && !(numericPrice == null) && (numericPrice != 0)) {
+        var multipler = document.querySelector("#_multiplier").value;
+        var entry_val = multipler * numericPrice;
+        console.log("multipler = " + multipler+" entry_val = " + entry_val);
+        document.querySelector("#_entry_val").textContent  = entry_val;
+      }
+      else{
+        document.querySelector("#_entry_val").textContent  = 0;
+      }
+    }  
   };
 
   // function to update the line index in dom cart line items
