@@ -62,7 +62,12 @@
       ],
       "settings": {
         "text_1": "",
-        "text_2": ""
+        "text_2": "",
+        "show_entry": true,
+        "text_entry": "Total Entries with Purchase:",
+        "multiplier": "1",
+        "link_txt": "Learn More",
+        "hyper_linklist": "shopify://pages/hawaii-giveaway"
       }
     },
     "1726584996fe50afac": {
