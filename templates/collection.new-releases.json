@@ -9,58 +9,6 @@
  */
 {
   "sections": {
-    "17347204-928a-46d1-8166-ac8c007f382d": {
-      "type": "slideshow",
-      "blocks": {
-        "image_NctG9T": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "",
-            "special_title_color": "",
-            "subheading": "",
-            "special_text_color": "",
-            "link": "https://patrickadairdesigns.com/pages/hawaii-giveaway",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_position": "vertical-center horizontal-center",
-            "text_align": "left",
-            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
-            "mobile_text_align": "left",
-            "image": "shopify://shop_images/Giveaway_banner_collection_desktop.png",
-            "image_mobile": "shopify://shop_images/Giveaway_banner_collection_mobile.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 80,
-            "base_text_size": 24
-          }
-        }
-      },
-      "block_order": [
-        "image_NctG9T"
-      ],
-      "settings": {
-        "use_img_banner": true,
-        "section_height": "natural",
-        "mobile_height": "auto",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": false,
-        "autoplay_speed": 5
-      }
-    },
-    "replo_trust_icons_white_backg_Wc7kJ7": {
-      "type": "replo-trust-icons-white-backg",
-      "custom_css": [
-        "{padding: 10 px;}"
-      ],
-      "settings": {
-      }
-    },
     "replo_trust_icons_fy9XYw": {
       "type": "replo-trust-icons",
       "disabled": true,
@@ -90,11 +38,60 @@
     },
     "collection-header": {
       "type": "collection-header",
-      "disabled": true,
       "settings": {
         "enable": true,
         "collection_image_enable": false,
         "parallax": true
+      }
+    },
+    "featured_product_LCCted": {
+      "type": "featured-product",
+      "blocks": {
+        "price_jL63cJ": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "description_E8pCJW": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "variant_picker_HBAaJd": {
+          "type": "variant_picker",
+          "settings": {
+            "size_chart": "",
+            "variant_labels": true,
+            "color_swatches": false
+          }
+        },
+        "buy_buttons_YEXLtE": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true
+          }
+        }
+      },
+      "block_order": [
+        "price_jL63cJ",
+        "description_E8pCJW",
+        "variant_picker_HBAaJd",
+        "buy_buttons_YEXLtE"
+      ],
+      "settings": {
+        "featured_product": "imperial-eclipse-ring-on-cobalt-chrome",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
       }
     },
     "promo-grid": {
@@ -190,16 +187,16 @@
         "subtitle_enable": true,
         "subtitle_type": "two",
         "custom_badge": "",
+        "saved_amount_option": "basic_logic",
         "load_more": false
       }
     }
   },
   "order": [
-    "17347204-928a-46d1-8166-ac8c007f382d",
-    "replo_trust_icons_white_backg_Wc7kJ7",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
     "collection-header",
+    "featured_product_LCCted",
     "promo-grid",
     "main-collection"
   ]
