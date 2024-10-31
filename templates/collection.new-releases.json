@@ -38,10 +38,30 @@
     },
     "collection-header": {
       "type": "collection-header",
+      "disabled": true,
       "settings": {
-        "enable": true,
+        "enable": false,
         "collection_image_enable": false,
         "parallax": true
+      }
+    },
+    "rich_text_Xd8N8n": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_baLgBQ": {
+          "type": "heading",
+          "settings": {
+            "title": "New Releases"
+          }
+        }
+      },
+      "block_order": [
+        "heading_baLgBQ"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
       }
     },
     "featured_product_LCCted": {
@@ -70,7 +90,7 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
-            "surface_pickup_enable": true
+            "surface_pickup_enable": false
           }
         }
       },
@@ -146,6 +166,25 @@
         "space_below": false
       }
     },
+    "rich_text_K6qUry": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HyjwCg": {
+          "type": "heading",
+          "settings": {
+            "title": "Explore Other New Designs"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HyjwCg"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "main-collection": {
       "type": "main-collection",
       "blocks": {
@@ -164,7 +203,7 @@
         "product_grid": {
           "type": "product_grid",
           "settings": {
-            "enable_collection_count": true,
+            "enable_collection_count": false,
             "per_row": 3,
             "rows_per_page": 20,
             "mobile_flush_grid": true
@@ -178,11 +217,11 @@
       ],
       "settings": {
         "title": "",
-        "enable_sidebar": true,
+        "enable_sidebar": false,
         "collapsed": true,
         "filter_style": "sidebar",
         "enable_color_swatches": false,
-        "enable_sort": true,
+        "enable_sort": false,
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
@@ -196,8 +235,10 @@
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
     "collection-header",
+    "rich_text_Xd8N8n",
     "featured_product_LCCted",
     "promo-grid",
+    "rich_text_K6qUry",
     "main-collection"
   ]
 }
