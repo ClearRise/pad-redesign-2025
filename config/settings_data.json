@@ -79,7 +79,7 @@
     "save_badge_type": "badge",
     "product_threshold_amount": 100,
     "product1-img1": "shopify://shop_images/MysteryProductThumbnailSLower_f1fde3c6-9dd9-42b7-ad92-6627dce64266.gif",
-    "product1-title": "FREE GIFT OFFER",
+    "product1-title": "EARLY BIRD BLACK FRIDAY OFFER",
     "product1-text": "Get a free Mystery Gift on orders $195+.<br><b>LIMITED TIME ONLY</b>",
     "product2-title": "",
     "product2-text": "",
@@ -98,9 +98,9 @@
     "upsell_box_title": "You May Also Like",
     "show_gift_box": true,
     "first_tier_progress": "You've unlocked a Free Gift!",
-    "gift_box_title": "FREE GIFT OFFER",
+    "gift_box_title": "EARLY BIRD BLACK FRIDAY OFFER",
     "gift_box_text": "",
-    "cart_threshold_amount": 195,
+    "cart_threshold_amount": 100,
     "spend_progress": "",
     "product-handle-1": "mystery-ring-1",
     "product-handle-2": "shop-circle-test-product",
@@ -173,7 +173,7 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "<b><u>SALE</u></b>",
-              "link_submenu": "https://patrickadairdesigns.com/collections/flash-sale"
+              "link_submenu": "shopify://collections/all-products"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
