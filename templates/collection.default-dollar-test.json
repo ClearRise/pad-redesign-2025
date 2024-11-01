@@ -190,7 +190,7 @@
         "subtitle_enable": true,
         "subtitle_type": "two",
         "custom_badge": "",
-        "saved_amount_option": "basic_logic",
+        "saved_amount_option": "display_price",
         "load_more": false
       }
     }
