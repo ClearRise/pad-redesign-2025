@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_body_bg": "#ffffff",
@@ -75,9 +75,9 @@
     "collection_grid_opacity": 10,
     "collection_grid_gutter": true,
     "product_threshold_amount": 150,
-    "product1-img1": "shopify:\/\/shop_images\/lava-carbon-fiber-glow-ring.jpg",
-    "product1-img2": "shopify:\/\/shop_images\/pendant2_1cbd38f2-d522-413e-b2b9-8813db2190cc.png",
-    "product1-title": "<b>Purchase Today to Lock-in a Free Gift<\/b>",
+    "product1-img1": "shopify://shop_images/lava-carbon-fiber-glow-ring.jpg",
+    "product1-img2": "shopify://shop_images/pendant2_1cbd38f2-d522-413e-b2b9-8813db2190cc.png",
+    "product1-title": "<b>Purchase Today to Lock-in a Free Gift</b>",
     "product1-text": "Get a free Lava Radiance Ring or Malachite Pendant on orders $195+",
     "product2-title": "",
     "product2-text": "",
@@ -120,12 +120,12 @@
     "cart_additional_buttons": true,
     "cart_notes_enable": false,
     "cart_terms_conditions_enable": false,
-    "favicon": "shopify:\/\/shop_images\/Black_and_White_Version.png",
+    "favicon": "shopify://shop_images/Black_and_White_Version.png",
     "search_enable": true,
     "search_type": "product",
     "predictive_search_enabled": false,
     "show_breadcrumbs": false,
-    "checkout_logo_image": "shopify:\/\/shop_images\/test5.png",
+    "checkout_logo_image": "shopify://shop_images/test5.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "small",
     "checkout_body_background_color": "#ffffff",
@@ -145,7 +145,7 @@
           "1524770014057": {
             "type": "logo",
             "settings": {
-              "logo": "shopify:\/\/shop_images\/3Asset_2.png",
+              "logo": "shopify://shop_images/3Asset_2.png",
               "desktop_logo_width": 100,
               "mobile_logo_width": 130
             }
@@ -154,35 +154,35 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "Shop Rings",
-              "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/all-products?filter.p.m.custom.product_type=Ring"
+              "link_submenu": "https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring"
             }
           },
           "966bc6e1-31db-4261-b34d-773ca4a79259": {
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "Wedding Bands",
-              "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/best-selling-wedding-bands-v1"
+              "link_submenu": "https://patrickadairdesigns.com/collections/best-selling-wedding-bands-v1"
             }
           },
           "scroll_navi_mobile_pA6Xwj": {
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "Sale",
-              "link_submenu": "shopify:\/\/collections\/meteorite-rings-1"
+              "link_submenu": "shopify://collections/meteorite-rings-sort-test"
             }
           },
           "33ac5f33-1b8c-4d2a-8fb4-43efbf509e56": {
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "All Necklaces",
-              "link_submenu": "shopify:\/\/collections\/necklaces"
+              "link_submenu": "shopify://collections/necklaces"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "Custom Rings",
-              "link_submenu": "shopify:\/\/collections\/custom-rings"
+              "link_submenu": "shopify://collections/custom-rings"
             }
           },
           "announcement_FkMJza": {
@@ -191,7 +191,7 @@
             "settings": {
               "text": "FREE MYSTERY GIFT ($200-600 Value Ring or Pendant) On Orders $195+",
               "link_text": "",
-              "link": "shopify:\/\/collections\/all-products"
+              "link": "shopify://collections/all-products"
             }
           }
         },
@@ -208,7 +208,7 @@
           "main_menu_link_list": "05-16-23-lewis-main-menu",
           "mega_menu_images": true,
           "show_menu_img": true,
-          "menu_img": "shopify:\/\/shop_images\/carbon-fiber-ring.jpg",
+          "menu_img": "shopify://shop_images/carbon-fiber-ring.jpg",
           "main_menu_alignment": "left",
           "main_menu_alignment_mobile": "center-split",
           "header_style": "normal",
@@ -247,7 +247,7 @@
             "settings": {
               "show_footer_title": true,
               "title": "Contact Information",
-              "text": "<p>Address: 229 Harris Ave S, Salt Lake City, Utah 84115<\/p><p>E-mail: support@patrickadairdesigns.com<\/p><p><a href=\"https:\/\/patrickadairdesigns.com\/pages\/custom-design-consultation\" title=\"https:\/\/patrickadairdesigns.com\/pages\/custom-design-consultation\">Need Help? Book a Call<\/a><\/p><p>Hours: M-F 8AM - 4PM MST<\/p>",
+              "text": "<p>Address: 229 Harris Ave S, Salt Lake City, Utah 84115</p><p>E-mail: support@patrickadairdesigns.com</p><p><a href=\"https://patrickadairdesigns.com/pages/custom-design-consultation\" title=\"https://patrickadairdesigns.com/pages/custom-design-consultation\">Need Help? Book a Call</a></p><p>Hours: M-F 8AM - 4PM MST</p>",
               "container_width": 20
             }
           },
@@ -264,7 +264,7 @@
             "settings": {
               "show_footer_title": true,
               "title": "Sign up and save",
-              "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
+              "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>",
               "container_width": 20
             }
           }
@@ -292,7 +292,7 @@
           "popup_seconds": 5,
           "popup_days": 30,
           "popup_title": "Sign up and save",
-          "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.<\/p>",
+          "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.</p>",
           "close_text": "No thanks",
           "enable_newsletter": true,
           "button_label": "Optional button",
@@ -321,19 +321,19 @@
     ],
     "blocks": {
       "1877152918344802950": {
-        "type": "shopify:\/\/apps\/intelligems-a-b-testing\/blocks\/intelligems-script\/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
+        "type": "shopify://apps/intelligems-a-b-testing/blocks/intelligems-script/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
         "disabled": true,
         "settings": {
         }
       },
       "2728461494843721857": {
-        "type": "shopify:\/\/apps\/amped-email-sms-popups\/blocks\/app-embed\/d9d8f140-4443-4f6c-a16a-95357ecc2125",
+        "type": "shopify://apps/amped-email-sms-popups/blocks/app-embed/d9d8f140-4443-4f6c-a16a-95357ecc2125",
         "disabled": false,
         "settings": {
         }
       },
       "16881471024131275657": {
-        "type": "shopify:\/\/apps\/searchanise-search-filter\/blocks\/app-embed\/d8f24ada-02b1-458a-bbeb-5bf16d5c921e",
+        "type": "shopify://apps/searchanise-search-filter/blocks/app-embed/d8f24ada-02b1-458a-bbeb-5bf16d5c921e",
         "disabled": true,
         "settings": {
         }
@@ -584,7 +584,7 @@
               "settings": {
                 "text": "Free shipping",
                 "link_text": "On all orders over $100",
-                "link": "shopify:\/\/collections\/all"
+                "link": "shopify://collections/all"
               }
             },
             "1520888647304": {
@@ -592,7 +592,7 @@
               "settings": {
                 "text": "Hassle-free returns",
                 "link_text": "30-day postage paid returns",
-                "link": "shopify:\/\/collections\/all"
+                "link": "shopify://collections/all"
               }
             }
           },
@@ -633,7 +633,7 @@
               "settings": {
                 "show_footer_title": true,
                 "title": "Sign up and save",
-                "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
+                "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>",
                 "container_width": 30
               }
             },
@@ -668,7 +668,7 @@
             "popup_days": 30,
             "popup_title": "Sign up and save",
             "popup_image": "",
-            "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.<\/p>",
+            "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.</p>",
             "close_text": "No thanks",
             "enable_newsletter": true,
             "button_label": "Optional button",
@@ -693,7 +693,7 @@
                 "enable_image": true,
                 "image": "",
                 "title": "Site-wide promotion",
-                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.<\/p>",
+                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
                 "button_label": "Optional button",
                 "button_link": ""
               }
@@ -704,7 +704,7 @@
                 "enable_image": true,
                 "image": "",
                 "title": "Site-wide promotion",
-                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.<\/p>",
+                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
                 "button_label": "Optional button",
                 "button_link": ""
               }
@@ -715,7 +715,7 @@
                 "enable_image": true,
                 "image": "",
                 "title": "Site-wide promotion",
-                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.<\/p>",
+                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
                 "button_label": "Optional button",
                 "button_link": ""
               }
