@@ -185,10 +185,9 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "Free Mystery Ring With Orders $195+ ($250+ Value)",
-              "link_text": "",
+              "text": "Better than Black Friday",
+              "link_text": "Up to 50% Off + Free Mystery Box ($200-600 Value)",
               "link": "shopify://collections/all-products"
             }
           }
