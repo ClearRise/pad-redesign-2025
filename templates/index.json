@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow": {
@@ -19,14 +19,14 @@
             "title": "",
             "title_size": 50,
             "subheading": "",
-            "link": "shopify:\/\/collections\/all-products",
+            "link": "shopify://collections/all-products",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#000000",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify:\/\/shop_images\/Orange_Banner_2_fixed_compressed.png",
-            "image_mobile": "shopify:\/\/shop_images\/Mobile_-_Orange_Hero_-_Compressed_1x_Medium_e7aeb1ff-9271-40c7-b867-2491171db495.png",
+            "image": "shopify://shop_images/Orange_Banner_2_fixed_compressed.png",
+            "image_mobile": "shopify://shop_images/Mobile_-_Orange_Hero_-_Compressed_1x_Medium_e7aeb1ff-9271-40c7-b867-2491171db495.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -51,7 +51,7 @@
         "1646692015dc9bcd88-1": {
           "type": "liquid",
           "settings": {
-            "code": "<div class=\"one-third-column\">\n<center>Made to Order<\/center>\n<\/div>\n<div class=\"one-third-column\">\n<center>Satisfaction Guarantee<\/center>\n<\/div>\n<div class=\"one-third-column-last\">\n<center>Worldwide Shipping<\/center>\n<\/div>\n<div style=\"clear:both;\" >\n<\/div>",
+            "code": "<div class=\"one-third-column\">\n<center>Made to Order</center>\n</div>\n<div class=\"one-third-column\">\n<center>Satisfaction Guarantee</center>\n</div>\n<div class=\"one-third-column-last\">\n<center>Worldwide Shipping</center>\n</div>\n<div style=\"clear:both;\" >\n</div>",
             "width": "100%",
             "alignment": "center"
           }
@@ -78,13 +78,13 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>Express yourself with something truly unique.<\/p><p>Since 2015, we’ve been handcrafting artisan rings using the most uncommon luxury materials.<\/p><p>Whether it’s hand-forged Damascus steel from Nevada, fossilized mammoth tooth from Siberia, or meteorite pulled from the Arctic Circle you’ll find a story in every ring<\/p>"
+            "text": "<p>Express yourself with something truly unique.</p><p>Since 2015, we’ve been handcrafting artisan rings using the most uncommon luxury materials.</p><p>Whether it’s hand-forged Damascus steel from Nevada, fossilized mammoth tooth from Siberia, or meteorite pulled from the Arctic Circle you’ll find a story in every ring</p>"
           }
         },
         "6608bf6f-85b6-4b98-80ce-d2b158c1626a": {
           "type": "button",
           "settings": {
-            "link": "https:\/\/patrickadairdesigns.com\/collections\/all-products?filter.p.m.custom.product_type=Ring",
+            "link": "https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring",
             "link_text": "Discover Yours"
           }
         }
@@ -110,10 +110,10 @@
             "heading": "FLASH SALE",
             "textarea": "LIMITED TIME ONLY",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/meteorite-rings-1",
+            "cta_link1": "shopify://collections/meteorite-rings-sort-test",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
+            "image": "shopify://shop_images/meteorite-ring.jpg",
             "video_url": "",
             "width": "33",
             "height": 300,
@@ -132,10 +132,10 @@
             "heading": "The Glowstone<br> Series",
             "textarea": "",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/the-glowstone-series",
+            "cta_link1": "shopify://collections/the-glowstone-series",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/IMG_3895.jpg",
+            "image": "shopify://shop_images/IMG_3895.jpg",
             "video_url": "",
             "width": "33",
             "height": 300,
@@ -154,10 +154,10 @@
             "heading": "Find Your <br> Wedding Band",
             "textarea": "",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/best-selling-wedding-bands-v1",
+            "cta_link1": "shopify://collections/best-selling-wedding-bands-v1",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/DSC00620.jpg",
+            "image": "shopify://shop_images/DSC00620.jpg",
             "video_url": "",
             "width": "33",
             "height": 300,
@@ -186,15 +186,15 @@
       "type": "home_img_with_txt",
       "settings": {
         "sub_title1": "Handcrafted in the USA",
-        "image_1": "shopify:\/\/shop_images\/img2.jpg",
+        "image_1": "shopify://shop_images/img2.jpg",
         "text_1": "Every ring is handmade by trade artisans in Utah, USA.",
         "url_1": "",
         "sub_title2": "Uncommon materials",
-        "image_2": "shopify:\/\/shop_images\/img1.jpg",
+        "image_2": "shopify://shop_images/img1.jpg",
         "text_2": "Go beyond silver and gold and find something that’s truly you.",
         "url_2": "",
         "sub_title3": "Every ring is unique",
-        "image_3": "shopify:\/\/shop_images\/met_rings_group_photo_for_sale_1_Medium_6c7b5d12-c012-4184-aeb3-917e318100b1.png",
+        "image_3": "shopify://shop_images/met_rings_group_photo_for_sale_1_Medium_6c7b5d12-c012-4184-aeb3-917e318100b1.png",
         "text_3": "Your ring is made to order just for you. No two rings are the same.",
         "url_3": ""
       }
@@ -238,8 +238,8 @@
           "settings": {
             "sub_title": "Place your order",
             "text": "Unsure of your size? Select “unsure – send ring sizer first” and we’ll ship you a free ring sizer",
-            "image_1": "shopify:\/\/shop_images\/how-it-works-11.jpg",
-            "image_2": "shopify:\/\/shop_images\/how-it-works-22.jpg"
+            "image_1": "shopify://shop_images/how-it-works-11.jpg",
+            "image_2": "shopify://shop_images/how-it-works-22.jpg"
           }
         },
         "eaf7d4d7-8304-48a3-90e3-8b53e73c2e32": {
@@ -284,7 +284,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>“I love this ring. Every step of the process from sizing to delivery was amazing.”<\/p><p>- Brett P.<\/p><p>“I couldn’t have asked for a better ring. PAD did an amazing job and was very communicative through the whole process and was done in a timely manner!”<\/p><p>- Amber A<\/p><p>“Feels and looks like anything you’d buy from the highest-end jewelers stores without the high-end prices.”<\/p><p>- Ben<\/p><p><\/p><p><a href=\"https:\/\/patrickadairdesigns.com\/pages\/reviews\" title=\"https:\/\/patrickadairdesigns.com\/pages\/reviews\"><span style=\"text-decoration:underline\">See more reviews<\/span><\/a><\/p>"
+            "text": "<p>“I love this ring. Every step of the process from sizing to delivery was amazing.”</p><p>- Brett P.</p><p>“I couldn’t have asked for a better ring. PAD did an amazing job and was very communicative through the whole process and was done in a timely manner!”</p><p>- Amber A</p><p>“Feels and looks like anything you’d buy from the highest-end jewelers stores without the high-end prices.”</p><p>- Ben</p><p></p><p><a href=\"https://patrickadairdesigns.com/pages/reviews\" title=\"https://patrickadairdesigns.com/pages/reviews\"><span style=\"text-decoration:underline\">See more reviews</span></a></p>"
           }
         }
       },
@@ -375,14 +375,14 @@
     "16466952397d45f287": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify:\/\/shop_images\/img2.jpg",
-        "image2": "shopify:\/\/shop_images\/82139302_566280807302856_2281391060317896704_o.jpg",
+        "image": "shopify://shop_images/img2.jpg",
+        "image2": "shopify://shop_images/82139302_566280807302856_2281391060317896704_o.jpg",
         "image_width": 700,
         "subtitle": "",
         "title": "Get a Custom Ring",
-        "text": "<p>We pride ourselves on our ability to make intricate, handmade custom rings made from exotic materials.<\/p>",
+        "text": "<p>We pride ourselves on our ability to make intricate, handmade custom rings made from exotic materials.</p>",
         "button_label": "Learn More",
-        "button_link": "shopify:\/\/collections\/custom-rings",
+        "button_link": "shopify://collections/custom-rings",
         "button_style": "primary",
         "align_text": "left",
         "layout": "left",
@@ -395,35 +395,35 @@
         "74cd7a8f-eac7-4f17-b13d-81ef7dab01d8": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Brides_Logo.jpg",
+            "image": "shopify://shop_images/Brides_Logo.jpg",
             "link": ""
           }
         },
         "1646695257b3b83b78-0": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Pewdiepie.png",
+            "image": "shopify://shop_images/Pewdiepie.png",
             "link": ""
           }
         },
         "1646695257b3b83b78-1": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/awesomer.png",
+            "image": "shopify://shop_images/awesomer.png",
             "link": ""
           }
         },
         "1646695257b3b83b78-2": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Vinwiki_black.png",
+            "image": "shopify://shop_images/Vinwiki_black.png",
             "link": ""
           }
         },
         "1646695257b3b83b78-3": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Strad-Logo_2C_864x_82c0b21f-b2de-42f1-ba44-102b06edc5fc.webp",
+            "image": "shopify://shop_images/Strad-Logo_2C_864x_82c0b21f-b2de-42f1-ba44-102b06edc5fc.webp",
             "link": ""
           }
         }
@@ -467,7 +467,7 @@
         "1646695630c9a9076b-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/how-it-works-22.jpg",
+            "image": "shopify://shop_images/how-it-works-22.jpg",
             "link": "",
             "width": "50%",
             "alignment": "center"
@@ -476,7 +476,7 @@
         "1646695630c9a9076b-1": {
           "type": "liquid",
           "settings": {
-            "code": "<h2>1.<\/h2><p>Unsure of your size? Select \"unsure - send ring sizer first\" and we'll post you a free ring sizer<\/p>\n<h2>2.<\/h2><p>After using the sizer, simply email us your size<\/p>\n\n<h2>3.<\/h2><p>Your order hits the workshop and our trained artisans start crafting your ring<\/p>",
+            "code": "<h2>1.</h2><p>Unsure of your size? Select \"unsure - send ring sizer first\" and we'll post you a free ring sizer</p>\n<h2>2.</h2><p>After using the sizer, simply email us your size</p>\n\n<h2>3.</h2><p>Your order hits the workshop and our trained artisans start crafting your ring</p>",
             "width": "50%",
             "alignment": "center"
           }
