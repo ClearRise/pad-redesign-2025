@@ -6729,11 +6729,16 @@ var image = theme.buildProductImage(product, imageSize);
                   //-------------
                   // console.log(checkboxs, "checkboxs");
                   setTimeout(function () {
-                    var targetWrapperTitleText = targetWrapper.querySelector('.bold_option_title').innerText;
-                    // console.log(targetWrapperTitleText, "targetWrapperTitleText");
+                    //-- start new code (1/2 -- 2024/11/5)
+                    var targetWrapperTitleText = targetWrapper.querySelector('.bold_option_title').innerHTML;
+                    console.log(targetWrapperTitleText, "targetWrapperTitleText");
                     if (targetWrapperTitleText.indexOf("*") != -1) {
                       targetWrapperTitleText = targetWrapperTitleText.substr(0, targetWrapperTitleText.indexOf("*") + 1);
+                    } else if (targetWrapperTitleText.indexOf(" ") != -1) {
+                      targetWrapperTitleText = targetWrapperTitleText.substr(0, targetWrapperTitleText.indexOf(" ") + 1);
                     }
+                    //-- end
+
                     // console.log(targetWrapperTitle, "targetWrapperTitle");
                     
                     var items = checkboxs[checkboxs.length -1].value.split(",");
@@ -6762,12 +6767,16 @@ var image = theme.buildProductImage(product, imageSize);
                             //-------------
                             // console.log(checkboxs, "checkboxs");
                             //setTimeout(function () {
-                                var targetWrapperTitleText = boldOptionSwatchItem.querySelector('.bold_option_title').innerText;
-                                // console.log(targetWrapperTitleText, "targetWrapperTitleText");
+                          //-- start new code (1/2 -- 2024/11/5)
+                                var targetWrapperTitleText = boldOptionSwatchItem.querySelector('.bold_option_title').innerHTML;
+                                console.log(targetWrapperTitleText, "targetWrapperTitleText");
                                 if (targetWrapperTitleText.indexOf("*") != -1) {
                                     targetWrapperTitleText = targetWrapperTitleText.substr(0, targetWrapperTitleText.indexOf("*") + 1);
+                                } else if (targetWrapperTitleText.indexOf(" ") != -1) {
+                                    targetWrapperTitleText = targetWrapperTitleText.substr(0, targetWrapperTitleText.indexOf(" ") + 1);
                                 }
-                                // console.log(targetWrapperTitle, "targetWrapperTitle");
+                          //-- end
+                                 // console.log(targetWrapperTitle, "targetWrapperTitle");
 
                                 var items = checkboxs[checkboxs.length - 1].value.split(",");
                                 // targetWrapper.querySelector('.bold_option_title').innerHTML = targetWrapperTitle;
