@@ -59,7 +59,7 @@
         "bold_option_agdenj": {
           "type": "bold_option",
           "settings": {
-            "option_type": "Test",
+            "option_type": "Default",
             "product_swatch_style": "square",
             "swatch_style": "type_1"
           }
