@@ -186,6 +186,7 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Better than Black Friday",
               "link_text": "Up to 50% Off + Free Gift On Orders $100+",
