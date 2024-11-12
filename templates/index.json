@@ -331,12 +331,12 @@
     "text_and_image_JAXUE3": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify://shop_images/Mystery_Ring_Gif_cc057da2-4ddc-4819-ac3e-681518e6d19b.gif",
-        "image2": "shopify://shop_images/mystery_gift_image_for_lewis.png",
+        "image": "shopify://shop_images/P1022862_71ddd617-913c-4f06-9132-86fec10e0d97.jpg",
+        "image2": "shopify://shop_images/test_1_3d9361dc-75ee-43c1-8291-12f6c893705f.png",
         "image_width": 700,
-        "subtitle": "$200+ Ring Guaranteed",
-        "title": "Free Mystery Ring",
-        "text": "<p>Get a Free Mystery Ring with any order over $100 </p>",
+        "subtitle": "",
+        "title": "FREE GIFT OFFER",
+        "text": "<p>Get a Free Pure Carbon Fiber Ring or Carbon FIber Bar Pendant with any order over $100 </p>",
         "button_label": "Get Yours",
         "button_link": "shopify://collections/all-products",
         "button_style": "primary",
