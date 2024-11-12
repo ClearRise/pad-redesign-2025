@@ -41,8 +41,7 @@
         "separator": {
           "type": "separator",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -316,8 +315,7 @@
     },
     "replo_trust_icons_white_backg_AnTLaL": {
       "type": "replo-trust-icons-white-backg",
-      "settings": {
-      }
+      "settings": {}
     },
     "promo_grid_QUweUP": {
       "type": "promo-grid",
@@ -396,7 +394,7 @@
           "settings": {
             "subheading": "",
             "heading": "FREE GIFT",
-            "textarea": "Get a FREE Mystery Gift on Orders $100+<br><b>LIMITED TIME ONLY</b>",
+            "textarea": "Get a FREE Pure Carbon Fiber Ring or Carbon Fiber Bar Pendant on orders $100+<br><b>LIMITED TIME ONLY</b>",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
@@ -538,8 +536,7 @@
     },
     "collection-return": {
       "type": "collection-return",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
