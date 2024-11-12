@@ -12,8 +12,7 @@
     "replo_trust_icons_fy9XYw": {
       "type": "replo-trust-icons",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "rich_text_G9LH7U": {
       "type": "rich-text",
@@ -69,8 +68,7 @@
       "blocks": {
         "price_jL63cJ": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "description_E8pCJW": {
           "type": "description",
@@ -101,7 +99,7 @@
         "buy_buttons_YEXLtE"
       ],
       "settings": {
-        "featured_product": "imperial-eclipse-ring-on-cobalt-chrome",
+        "featured_product": "the-patriot-striped-glowstone-ring",
         "divider": false,
         "sku_enable": false,
         "image_position": "left",
@@ -190,8 +188,7 @@
       "blocks": {
         "collection_description": {
           "type": "collection_description",
-          "settings": {
-          }
+          "settings": {}
         },
         "subcollections": {
           "type": "subcollections",
