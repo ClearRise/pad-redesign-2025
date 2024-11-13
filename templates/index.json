@@ -345,30 +345,22 @@
         "divider": false
       }
     },
-    "164755740363a75745": {
-      "type": "home_img_with_txt",
+    "background_image_text_b63KAg": {
+      "type": "background-image-text",
       "disabled": true,
       "settings": {
-        "sub_title1": "Handcrafted in the USA",
-        "image_1": "shopify://shop_images/img2.jpg",
-        "text_1": "Every ring is handmade by trade artisans in Utah, USA.",
-        "url_1": "",
-        "sub_title2": "Uncommon materials",
-        "image_2": "shopify://shop_images/img1.jpg",
-        "text_2": "Go beyond silver and gold and find something that’s truly you.",
-        "url_2": "",
-        "sub_title3": "Every ring is unique",
-        "image_3": "shopify://shop_images/met_rings_group_photo_for_sale_1_Medium_6c7b5d12-c012-4184-aeb3-917e318100b1.png",
-        "text_3": "Your ring is made to order just for you. No two rings are the same.",
-        "url_3": ""
+        "subtitle": "Handcrafted",
+        "title": "NEW WOOD RINGS",
+        "text": "<p>Sustainable Craftsmanship. 100% Satisfaction Guaranteed. </p>",
+        "button_label": "Find Yours",
+        "button_link": "shopify://collections/mens-wood-wedding-bands",
+        "image": "shopify://shop_images/Group_wood_rings_Large_0f57012e-432b-4356-801d-e42746176bb2.png",
+        "focal_point": "bottom",
+        "layout": "right",
+        "height": 550,
+        "framed": false,
+        "parallax": false
       }
-    },
-    "replo_trust_icons_white_backg_VzWd4W": {
-      "type": "replo-trust-icons-white-backg",
-      "custom_css": [
-        "{padding-top: 20px;}"
-      ],
-      "settings": {}
     },
     "featured-collection": {
       "type": "featured-collection",
@@ -383,6 +375,90 @@
         "mobile_scrollable": false,
         "view_all": true,
         "divider": false
+      }
+    },
+    "replo_trust_icons_white_backg_VzWd4W": {
+      "type": "replo-trust-icons-white-backg",
+      "custom_css": [
+        "{padding-top: 20px;}"
+      ],
+      "settings": {}
+    },
+    "featured_collections_UTDNtV": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_cXiL8f": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-glowstone-rings",
+            "title": "Glowstone",
+            "focal_point": "center center"
+          }
+        },
+        "collection_3yGnGa": {
+          "type": "collection",
+          "settings": {
+            "collection": "meteorite-rings",
+            "title": "Meteorite",
+            "focal_point": "center center"
+          }
+        },
+        "collection_MijgYa": {
+          "type": "collection",
+          "settings": {
+            "collection": "gold-rings",
+            "title": "Gold",
+            "focal_point": "center center"
+          }
+        },
+        "collection_piCPB7": {
+          "type": "collection",
+          "settings": {
+            "collection": "tungsten-rings",
+            "title": "Tungsten",
+            "focal_point": "center center"
+          }
+        },
+        "collection_UbV6zd": {
+          "type": "collection",
+          "settings": {
+            "collection": "titanium-rings",
+            "title": "Titanium",
+            "focal_point": "center center"
+          }
+        },
+        "collection_9NTX7D": {
+          "type": "collection",
+          "settings": {
+            "collection": "opal-rings",
+            "title": "Opal",
+            "focal_point": "center center"
+          }
+        },
+        "collection_DpNcFk": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_cXiL8f",
+        "collection_3yGnGa",
+        "collection_MijgYa",
+        "collection_piCPB7",
+        "collection_UbV6zd",
+        "collection_9NTX7D",
+        "collection_DpNcFk"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Shop By Material",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
       }
     },
     "1646695572d73bfd5a": {
@@ -674,9 +750,10 @@
     "rich-text",
     "1646694183f97c4822",
     "text_and_image_JAXUE3",
-    "164755740363a75745",
-    "replo_trust_icons_white_backg_VzWd4W",
+    "background_image_text_b63KAg",
     "featured-collection",
+    "replo_trust_icons_white_backg_VzWd4W",
+    "featured_collections_UTDNtV",
     "1646695572d73bfd5a",
     "replo_ethos_T4hhfr",
     "1647557717e099d38f",
