@@ -217,13 +217,13 @@
           "type": "advanced",
           "settings": {
             "subheading": "UP TO 50% OFF",
-            "heading": "New Releases",
+            "heading": "WOMEN'S BANDS",
             "textarea": "<u>SHOP NOW</u>",
             "cta_text1": "",
-            "cta_link1": "shopify://collections/new-releases",
+            "cta_link1": "shopify://collections/womens-wedding-bands",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/patriot-glowstone-ring.png",
+            "image": "shopify://shop_images/Lavendar_Opal_Ring.png",
             "video_url": "",
             "width": "50",
             "height": 300,
@@ -538,6 +538,7 @@
         "8232be18-c1e0-4ac8-9c19-c24ab0e02edd",
         "a95a8e0e-63a8-4e27-ac68-37c8678d7e65"
       ],
+      "disabled": true,
       "settings": {
         "title": "SHOP BY SERIES",
         "divider": false,
