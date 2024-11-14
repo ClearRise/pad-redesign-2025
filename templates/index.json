@@ -464,7 +464,7 @@
         "title": "Shop By Material",
         "divider": false,
         "per_row": 4,
-        "enable_gutter": true
+        "enable_gutter": false
       }
     },
     "1646695572d73bfd5a": {
