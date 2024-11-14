@@ -330,6 +330,7 @@
     },
     "text_and_image_JAXUE3": {
       "type": "text-and-image",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/P1022862_71ddd617-913c-4f06-9132-86fec10e0d97.jpg",
         "image2": "shopify://shop_images/test_1_3d9361dc-75ee-43c1-8291-12f6c893705f.png",
@@ -347,7 +348,6 @@
     },
     "background_image_text_b63KAg": {
       "type": "background-image-text",
-      "disabled": true,
       "settings": {
         "subtitle": "Handcrafted",
         "title": "NEW WOOD RINGS",
