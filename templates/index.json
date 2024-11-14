@@ -409,6 +409,22 @@
             "focal_point": "center center"
           }
         },
+        "collection_Dtg8dU": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "Ceramic",
+            "focal_point": "center center"
+          }
+        },
+        "collection_9NTX7D": {
+          "type": "collection",
+          "settings": {
+            "collection": "opal-rings",
+            "title": "Opal",
+            "focal_point": "center center"
+          }
+        },
         "collection_piCPB7": {
           "type": "collection",
           "settings": {
@@ -425,11 +441,11 @@
             "focal_point": "center center"
           }
         },
-        "collection_9NTX7D": {
+        "collection_dzTCaH": {
           "type": "collection",
           "settings": {
-            "collection": "opal-rings",
-            "title": "Opal",
+            "collection": "",
+            "title": "Wood",
             "focal_point": "center center"
           }
         }
@@ -438,9 +454,11 @@
         "collection_cXiL8f",
         "collection_3yGnGa",
         "collection_MijgYa",
+        "collection_Dtg8dU",
+        "collection_9NTX7D",
         "collection_piCPB7",
         "collection_UbV6zd",
-        "collection_9NTX7D"
+        "collection_dzTCaH"
       ],
       "settings": {
         "title": "Shop By Material",
