@@ -117,7 +117,7 @@
 }  
 </style>
 
-<div data-section-id="{{ section.id }}" data-section-type="header" {{ template.suffix }}>
+<div data-section-id="{{ section.id }}" data-section-type="header">
   {%- if overlay_header or section.settings.announcement_above_header -%}
     {%- render 'announcement-bar', section: section -%}
   {%- endif -%}
@@ -221,7 +221,7 @@
     </div>
   </div>
                   
-{% if request.path == '/' or template.name == 'home-page-test'%}                  
+{% if request.path == '/' or template.suffix == 'home-page-test'%}                  
   <div id="homepage-scroll-navigation">
     {% assign _flag = true %}
     {%- for block in section.blocks -%}
