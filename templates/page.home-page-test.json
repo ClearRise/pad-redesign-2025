@@ -11,12 +11,399 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "content_display": true
+      }
+    },
+    "slideshow_gQY9qw": {
+      "type": "slideshow",
+      "blocks": {
+        "image_rppjPX": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "shopify://collections/all-products",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "image": "shopify://shop_images/free_gift_on_all_oderes_2.png",
+            "image_mobile": "shopify://shop_images/free_gift_on_all_oders_1.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_rppjPX"
+      ],
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "advanced_content_4NeRHb": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_eRDTEP": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 16px; color: #333333;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as Unique and Storied as the Men who Wear Them</h2>\n  <a href=\"https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring\" style=\"background-color: #138f7e\n; color: #ffffff; padding: 10px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"https://patrickadairdesigns.com/pages/our-story\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_eRDTEP"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "promo_grid_4iW6mW": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_VciUai": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "UP TO 50% OFF",
+            "heading": "WEDDING   BANDS",
+            "textarea": "<u> SHOP NOW </u>",
+            "cta_text1": "",
+            "cta_link1": "https://patrickadairdesigns.com/collections/best-selling-wedding-bands-v1",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Sterling_Silver.png",
+            "video_url": "",
+            "width": "50",
+            "height": 300,
+            "text_size": 105,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_BTL7At": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "UP TO 50% OFF",
+            "heading": "GLOWSTONE SERIES",
+            "textarea": "<u> SHOP NOW </u>",
+            "cta_text1": "",
+            "cta_link1": "https://patrickadairdesigns.com/collections/the-glowstone-series",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Glowstone_Ring_2-_flipped_f2b5db60-8229-40df-aa6f-a3a8827b2809.png",
+            "video_url": "",
+            "width": "50",
+            "height": 300,
+            "text_size": 105,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_AMKHzD": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "UP TO 50% OFF",
+            "heading": "METEORITE RINGS",
+            "textarea": "<u> SHOP NOW </u>",
+            "cta_text1": "",
+            "cta_link1": "https://patrickadairdesigns.com/collections/meteorite-rings-1",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/meteorite-ring.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 300,
+            "text_size": 105,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_Ld8MT9": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "UP TO 50% OFF",
+            "heading": "WOMEN'S BANDS",
+            "textarea": "<u> SHOP NOW </u>",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/womens-wedding-bands",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Lavendar_Opal_Ring.png",
+            "video_url": "",
+            "width": "50",
+            "height": 300,
+            "text_size": 105,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "advanced_VciUai",
+        "advanced_BTL7At",
+        "advanced_AMKHzD",
+        "advanced_Ld8MT9"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true
+      }
+    },
+    "background_image_text_4FTUfW": {
+      "type": "background-image-text",
+      "settings": {
+        "subtitle": "Handcrafted",
+        "title": "NEW WOOD RINGS",
+        "text": "<p>Sustainable Craftsmanship. 100% Satisfaction Guaranteed. </p>",
+        "button_label": "Find Yours",
+        "button_link": "shopify://collections/mens-wood-wedding-bands",
+        "image": "shopify://shop_images/Group_wood_rings_Large_0f57012e-432b-4356-801d-e42746176bb2.png",
+        "focal_point": "bottom",
+        "layout": "right",
+        "height": 550,
+        "framed": false,
+        "parallax": false
+      }
+    },
+    "featured_collection_RTcdPC": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best Sellers",
+        "home_featured_products": "best-sellers",
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "per_row": 5,
+        "rows": 2,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "replo_trust_icons_white_backg_bLLqh7": {
+      "type": "replo-trust-icons-white-backg",
+      "settings": {}
+    },
+    "featured_collections_werMCq": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_69TqBL": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-glowstone-series",
+            "title": "Glowstone",
+            "focal_point": "center center"
+          }
+        },
+        "collection_YVmkcg": {
+          "type": "collection",
+          "settings": {
+            "collection": "meteorite-rings",
+            "title": "Meteorite",
+            "focal_point": "center center"
+          }
+        },
+        "collection_kmMqk9": {
+          "type": "collection",
+          "settings": {
+            "collection": "gold-rings",
+            "title": "Gold",
+            "focal_point": "center center"
+          }
+        },
+        "collection_tigypz": {
+          "type": "collection",
+          "settings": {
+            "collection": "ceramic-rings",
+            "title": "Ceramic",
+            "focal_point": "center center"
+          }
+        },
+        "collection_FaAeJw": {
+          "type": "collection",
+          "settings": {
+            "collection": "opal-rings",
+            "title": "Opal",
+            "focal_point": "center center"
+          }
+        },
+        "collection_KLeFx7": {
+          "type": "collection",
+          "settings": {
+            "collection": "tungsten-rings",
+            "title": "Tungsten",
+            "focal_point": "center center"
+          }
+        },
+        "collection_PEYVaC": {
+          "type": "collection",
+          "settings": {
+            "collection": "titanium-rings",
+            "title": "Titanium",
+            "focal_point": "center center"
+          }
+        },
+        "collection_inHBRn": {
+          "type": "collection",
+          "settings": {
+            "collection": "mens-wood-wedding-bands",
+            "title": "Wood",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_69TqBL",
+        "collection_YVmkcg",
+        "collection_kmMqk9",
+        "collection_tigypz",
+        "collection_FaAeJw",
+        "collection_KLeFx7",
+        "collection_PEYVaC",
+        "collection_inHBRn"
+      ],
+      "settings": {
+        "title": "Shop By Material",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": false
+      }
+    },
+    "replo_ethos_FPf3qh": {
+      "type": "replo-ethos",
+      "settings": {}
+    },
+    "rich_text_JaHgJW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mVKhB4": {
+          "type": "heading",
+          "settings": {
+            "title": "Customer Testimonials"
+          }
+        },
+        "text_wNKzG8": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>“I love this ring. Every step of the process from sizing to delivery was amazing.”</p><p>- Brett P.</p><p>“I couldn’t have asked for a better ring. PAD did an amazing job and was very communicative through the whole process and was done in a timely manner!”</p><p>- Amber A</p><p>“Feels and looks like anything you’d buy from the highest-end jewelers stores without the high-end prices.”</p><p>- Ben</p><p></p><p><a href=\"https://patrickadairdesigns.com/pages/reviews\" title=\"https://patrickadairdesigns.com/pages/reviews\"><span style=\"text-decoration:underline\">See more reviews</span></a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mVKhB4",
+        "text_wNKzG8"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "logo_list_8yzTJ8": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_image_LNqg7n": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Brides_Logo.jpg",
+            "link": ""
+          }
+        },
+        "logo_image_xVkH38": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Pewdiepie.png",
+            "link": ""
+          }
+        },
+        "logo_image_BtqybE": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/awesomer.png",
+            "link": ""
+          }
+        },
+        "logo_image_paqp87": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Vinwiki_black.png",
+            "link": ""
+          }
+        },
+        "logo_image_WFW4ML": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Strad-Logo_2C_864x_82c0b21f-b2de-42f1-ba44-102b06edc5fc.webp",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_LNqg7n",
+        "logo_image_xVkH38",
+        "logo_image_BtqybE",
+        "logo_image_paqp87",
+        "logo_image_WFW4ML"
+      ],
+      "settings": {
+        "title": "AS SEEN ON",
+        "logo_opacity": 100,
+        "divider": false
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "slideshow_gQY9qw",
+    "advanced_content_4NeRHb",
+    "promo_grid_4iW6mW",
+    "background_image_text_4FTUfW",
+    "featured_collection_RTcdPC",
+    "replo_trust_icons_white_backg_bLLqh7",
+    "featured_collections_werMCq",
+    "replo_ethos_FPf3qh",
+    "rich_text_JaHgJW",
+    "logo_list_8yzTJ8"
   ]
 }
