@@ -1,6 +1,10 @@
-{%- comment -%}
-  Promotional Section Template - With focal point control
-{%- endcomment -%}
+{% style %}
+.shopify-section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+{% endstyle %}
 
 <div class="promo-section">
   <div class="promo-content" style="background-color: {{ section.settings.background_color }}">
@@ -33,13 +37,15 @@
 
 <style>
 .promo-section {
-  margin: 0 auto;
-  max-width: 1400px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .promo-content {
   display: flex;
   align-items: stretch;
+  width: 100%;
 }
 
 .promo-image-wrapper {
