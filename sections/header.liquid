@@ -117,7 +117,7 @@
 }  
 </style>
 
-<div data-section-id="{{ section.id }}" data-section-type="header" {{ template.name }}>
+<div data-section-id="{{ section.id }}" data-section-type="header" {{ template.suffix }}>
   {%- if overlay_header or section.settings.announcement_above_header -%}
     {%- render 'announcement-bar', section: section -%}
   {%- endif -%}
