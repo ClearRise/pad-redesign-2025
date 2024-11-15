@@ -10,11 +10,19 @@
   <div class="promo-content" style="background-color: {{ section.settings.background_color }}">
     <div class="promo-image-wrapper">
       <div class="promo-image" style="min-height: {{ section.settings.desktop_height }}px">
-        {% if section.settings.image != blank %}
-          <img src="{{ section.settings.image | img_url: 'master' }}" 
-               alt="{{ section.settings.image.alt | escape }}"
+        {% if section.settings.desktop_image != blank %}
+          <img src="{{ section.settings.desktop_image | img_url: 'master' }}" 
+               alt="{{ section.settings.desktop_image.alt | escape }}"
                loading="lazy"
-               style="object-position: {{ section.settings.focal_point }};">
+               style="object-position: {{ section.settings.focal_point }};"
+               class="desktop-only">
+        {% endif %}
+        {% if section.settings.mobile_image != blank %}
+          <img src="{{ section.settings.mobile_image | img_url: 'master' }}" 
+               alt="{{ section.settings.mobile_image.alt | escape }}"
+               loading="lazy"
+               style="object-position: {{ section.settings.focal_point }};"
+               class="mobile-only">
         {% endif %}
       </div>
     </div>
@@ -102,6 +110,10 @@
   display: block;
 }
 
+.mobile-only {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .promo-content {
     flex-direction: column;
@@ -123,6 +135,14 @@
 
   .promo-text h2 {
     font-size: 2rem;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
   }
 }
 </style>
@@ -222,8 +242,13 @@
     },
     {
       "type": "image_picker",
-      "id": "image",
-      "label": "Image"
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
     }
   ],
   "presets": [
