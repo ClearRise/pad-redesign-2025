@@ -751,12 +751,14 @@
         "text_color": "#000000",
         "button_color": "#ff4400",
         "desktop_height": 400,
-        "mobile_height": 300,
-        "heading": "BLACK FRIDAY <br> STARTS NOW",
+        "mobile_height": 200,
+        "focal_point": "center center",
+        "heading": "BLACK FRIDAY  STARTS NOW",
         "subtext": "Rings that will last a lifetime. Prices that won't.",
         "button_text": "UP TO 50% OFF",
         "button_link": "",
-        "image": "shopify://shop_images/Tripple_Stack_Large_07732eb5-22c7-4ae8-836c-ceac02588205.png"
+        "desktop_image": "shopify://shop_images/Desktop_-_BF_Image.png",
+        "mobile_image": "shopify://shop_images/Mobile_-_BF_Image.png"
       }
     }
   },
