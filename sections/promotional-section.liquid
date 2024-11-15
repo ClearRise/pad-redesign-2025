@@ -1,12 +1,16 @@
 {%- comment -%}
-  Promotional Section Template
-  - Takes background_color as a parameter
-  - Image on right, text on left
-  - Stacks vertically on mobile
+  Promotional Section Template - With desktop height control
 {%- endcomment -%}
 
 <div class="promo-section">
   <div class="promo-content" style="background-color: {{ section.settings.background_color }}">
+    <div class="promo-image" style="min-height: {{ section.settings.desktop_height }}px">
+      {% if section.settings.image != blank %}
+        <img src="{{ section.settings.image | img_url: 'master' }}" 
+             alt="{{ section.settings.image.alt | escape }}"
+             loading="lazy">
+      {% endif %}
+    </div>
     <div class="promo-text">
       <h2>{{ section.settings.heading }}</h2>
       <p>{{ section.settings.subtext }}</p>
@@ -16,15 +20,6 @@
             {{ section.settings.button_text }}
           </a>
         </div>
-      {% endif %}
-    </div>
-    <div class="promo-image">
-      {% if section.settings.image != blank %}
-        <img src="{{ section.settings.image | img_url: 'master' }}" 
-             alt="{{ section.settings.image.alt | escape }}"
-             loading="lazy"
-             width="{{ section.settings.image.width }}"
-             height="{{ section.settings.image.height }}">
       {% endif %}
     </div>
   </div>
@@ -39,7 +34,7 @@
 
 .promo-content {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 40px;
   padding: 60px;
 }
@@ -79,19 +74,21 @@
 
 .promo-image {
   flex: 1;
-  max-width: 50%;
+  position: relative;
 }
 
 .promo-image img {
+  position: absolute;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
 @media screen and (max-width: 768px) {
   .promo-content {
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 0;
   }
 
   .promo-text,
@@ -99,7 +96,13 @@
     max-width: 100%;
   }
 
+  .promo-image {
+    min-height: 300px !important;
+    position: relative;
+  }
+
   .promo-text {
+    padding: 40px 20px;
     text-align: center;
   }
 
@@ -118,6 +121,16 @@
       "id": "background_color",
       "label": "Background Color",
       "default": "#f5f5f5"
+    },
+    {
+      "type": "range",
+      "id": "desktop_height",
+      "min": 200,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "label": "Desktop Image Height",
+      "default": 400
     },
     {
       "type": "text",
