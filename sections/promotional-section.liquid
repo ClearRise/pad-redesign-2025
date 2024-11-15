@@ -1,6 +1,10 @@
-{%- comment -%}
-  Promotional Section Template - No desktop padding around image
-{%- endcomment -%}
+{% style %}
+.shopify-section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+{% endstyle %}
 
 <div class="promo-section">
   <div class="promo-content" style="background-color: {{ section.settings.background_color }}">
@@ -30,13 +34,15 @@
 
 <style>
 .promo-section {
-  margin: 0 auto;
-  max-width: 1400px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .promo-content {
   display: flex;
   align-items: stretch;
+  width: 100%;
 }
 
 .promo-image-wrapper {
@@ -102,16 +108,20 @@
 
   .promo-image {
     min-height: {{ section.settings.mobile_height }}px !important;
-    position: relative;
   }
 
   .promo-text {
-    padding: 40px 20px;
+    padding: 20px;
     text-align: center;
   }
 
   .promo-text h2 {
     font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .promo-text p {
+    margin-bottom: 1rem;
   }
 }
 </style>
