@@ -8150,6 +8150,7 @@ html[dir=rtl] .grid-product__content{
 
     .grid-overflow-wrapper .grid__item--view-all{
       align-self:center;
+      margin-top: -80px;
     }
 
     .grid-overflow-wrapper .grid-product__price,.grid-overflow-wrapper .grid__item{
