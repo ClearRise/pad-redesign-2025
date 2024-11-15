@@ -1,15 +1,17 @@
 {%- comment -%}
-  Promotional Section Template - With full style controls
+  Promotional Section Template - No desktop padding around image
 {%- endcomment -%}
 
 <div class="promo-section">
   <div class="promo-content" style="background-color: {{ section.settings.background_color }}">
-    <div class="promo-image" style="min-height: {{ section.settings.desktop_height }}px">
-      {% if section.settings.image != blank %}
-        <img src="{{ section.settings.image | img_url: 'master' }}" 
-             alt="{{ section.settings.image.alt | escape }}"
-             loading="lazy">
-      {% endif %}
+    <div class="promo-image-wrapper">
+      <div class="promo-image" style="min-height: {{ section.settings.desktop_height }}px">
+        {% if section.settings.image != blank %}
+          <img src="{{ section.settings.image | img_url: 'master' }}" 
+               alt="{{ section.settings.image.alt | escape }}"
+               loading="lazy">
+        {% endif %}
+      </div>
     </div>
     <div class="promo-text" style="color: {{ section.settings.text_color }}">
       <h2>{{ section.settings.heading }}</h2>
@@ -30,19 +32,22 @@
 .promo-section {
   margin: 0 auto;
   max-width: 1400px;
-  padding: 0 20px;
 }
 
 .promo-content {
   display: flex;
   align-items: stretch;
-  gap: 40px;
-  padding: 60px;
+}
+
+.promo-image-wrapper {
+  flex: 1;
+  padding: 0;
 }
 
 .promo-text {
   flex: 1;
   max-width: 500px;
+  padding: 60px;
 }
 
 .promo-text h2 {
@@ -73,8 +78,8 @@
 }
 
 .promo-image {
-  flex: 1;
   position: relative;
+  height: 100%;
 }
 
 .promo-image img {
@@ -88,7 +93,6 @@
 @media screen and (max-width: 768px) {
   .promo-content {
     flex-direction: column;
-    padding: 0;
   }
 
   .promo-text,
