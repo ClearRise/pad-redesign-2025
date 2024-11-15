@@ -1,33 +1,29 @@
-{% style %}
-.shopify-section {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-{% endstyle %}
-
 <div class="promo-section">
   <div class="promo-content" style="background-color: {{ section.settings.background_color }}">
     <div class="promo-image-wrapper">
-      <div class="promo-image" style="min-height: {{ section.settings.desktop_height }}px">
-        {% if section.settings.image != blank %}
-          <img src="{{ section.settings.image | img_url: 'master' }}" 
-               alt="{{ section.settings.image.alt | escape }}"
-               loading="lazy">
-        {% endif %}
-      </div>
-    </div>
-    <div class="promo-text" style="color: {{ section.settings.text_color }}">
-      <h2>{{ section.settings.heading }}</h2>
-      <p>{{ section.settings.subtext }}</p>
-      {% if section.settings.button_text != blank %}
-        <div class="promo-button">
-          <a href="{{ section.settings.button_link }}" 
-             style="background-color: {{ section.settings.button_color }}">
-            {{ section.settings.button_text }}
-          </a>
+      {% if section.settings.image != blank %}
+        <div class="promo-image">
+          <div class="image-container">
+            <img src="{{ section.settings.image | img_url: 'master' }}" 
+                 alt="{{ section.settings.image.alt | escape }}"
+                 loading="lazy">
+          </div>
         </div>
       {% endif %}
+    </div>
+    <div class="promo-text" style="color: {{ section.settings.text_color }}">
+      <div class="text-content">
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.subtext }}</p>
+        {% if section.settings.button_text != blank %}
+          <div class="promo-button">
+            <a href="{{ section.settings.button_link }}" 
+               style="background-color: {{ section.settings.button_color }}">
+              {{ section.settings.button_text }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
@@ -41,93 +37,46 @@
 
 .promo-content {
   display: flex;
-  align-items: stretch;
   width: 100%;
+  min-height: 500px;
 }
 
 .promo-image-wrapper {
   flex: 1;
-  padding: 0;
+  position: relative;
+}
+
+.promo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+}
+
+.promo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .promo-text {
   flex: 1;
   max-width: 500px;
-  padding: 60px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
-.promo-text h2 {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.promo-text p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-}
-
-.promo-button a {
-  display: inline-block;
-  padding: 12px 24px;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: 600;
-  transition: opacity 0.3s ease;
-}
-
-.promo-button a:hover {
-  opacity: 0.9;
-}
-
-.promo-image {
-  position: relative;
-  height: 100%;
-}
-
-.promo-image img {
-  position: absolute;
+.text-content {
+  padding: 60px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
-
-@media screen and (max-width: 768px) {
-  .promo-content {
-    flex-direction: column;
-  }
-
-  .promo-text,
-  .promo-image {
-    max-width: 100%;
-  }
-
-  .promo-image {
-    min-height: {{ section.settings.mobile_height }}px !important;
-  }
-
-  .promo-text {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .promo-text h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .promo-text p {
-    margin-bottom: 1rem;
-  }
-}
-</style>
 
 {% schema %}
 {
