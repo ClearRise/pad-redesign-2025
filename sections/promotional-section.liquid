@@ -1,6 +1,158 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{%- comment -%}
+  Promotional Section Template
+  - Takes background_color as a parameter
+  - Image on right, text on left
+  - Stacks vertically on mobile
+{%- endcomment -%}
+
+<div class="promo-section">
+  <div class="promo-content" style="background-color: {{ section.settings.background_color }}">
+    <div class="promo-text">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.subtext }}</p>
+      {% if section.settings.button_text != blank %}
+        <div class="promo-button">
+          <a href="{{ section.settings.button_link }}">
+            {{ section.settings.button_text }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+    <div class="promo-image">
+      {% if section.settings.image != blank %}
+        <img src="{{ section.settings.image | img_url: 'master' }}" 
+             alt="{{ section.settings.image.alt | escape }}"
+             loading="lazy"
+             width="{{ section.settings.image.width }}"
+             height="{{ section.settings.image.height }}">
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+.promo-section {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+.promo-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px;
+}
+
+.promo-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.promo-text h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.promo-text p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.promo-button a {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff4400;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.promo-button a:hover {
+  background-color: #e63d00;
+}
+
+.promo-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.promo-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .promo-content {
+    flex-direction: column;
+    padding: 40px 20px;
   }
+
+  .promo-text,
+  .promo-image {
+    max-width: 100%;
+  }
+
+  .promo-text {
+    text-align: center;
+  }
+
+  .promo-text h2 {
+    font-size: 2rem;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Promotional Section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Black Friday Starts Now"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Gear Built To Last, Prices That Won't"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "UP TO 47% OFF"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promotional Section",
+      "category": "Promotional"
+    }
+  ]
+}
 {% endschema %}
