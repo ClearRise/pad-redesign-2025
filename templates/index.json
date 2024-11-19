@@ -9,6 +9,24 @@
  */
 {
   "sections": {
+    "promotional_section_N6MFiK": {
+      "type": "promotional-section",
+      "disabled": true,
+      "settings": {
+        "background_color": "#d5c3a2",
+        "text_color": "#000000",
+        "button_color": "#ff481b",
+        "desktop_height": 400,
+        "mobile_height": 200,
+        "focal_point": "center center",
+        "heading": "BLACK FRIDAY  STARTS NOW",
+        "subtext": "Rings that will last a lifetime. Prices that won't.",
+        "button_text": "UP TO 50% OFF",
+        "button_link": "",
+        "desktop_image": "shopify://shop_images/Desktop_-_BF_Image.png",
+        "mobile_image": "shopify://shop_images/Mobile_-_BF_Image.png"
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -742,27 +760,10 @@
         "full_width": false,
         "space_around": true
       }
-    },
-    "promotional_section_N6MFiK": {
-      "type": "promotional-section",
-      "disabled": true,
-      "settings": {
-        "background_color": "#f5f5f5",
-        "text_color": "#000000",
-        "button_color": "#ff4400",
-        "desktop_height": 400,
-        "mobile_height": 200,
-        "focal_point": "center center",
-        "heading": "BLACK FRIDAY  STARTS NOW",
-        "subtext": "Rings that will last a lifetime. Prices that won't.",
-        "button_text": "UP TO 50% OFF",
-        "button_link": "",
-        "desktop_image": "shopify://shop_images/Desktop_-_BF_Image.png",
-        "mobile_image": "shopify://shop_images/Mobile_-_BF_Image.png"
-      }
     }
   },
   "order": [
+    "promotional_section_N6MFiK",
     "slideshow",
     "16466920156dc1f06b",
     "rich-text",
@@ -780,7 +781,6 @@
     "16466952397d45f287",
     "1646695257dcd29238",
     "16466952952773af78",
-    "1646695630466c29fc",
-    "promotional_section_N6MFiK"
+    "1646695630466c29fc"
   ]
 }
