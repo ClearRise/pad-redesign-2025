@@ -11,7 +11,6 @@
   "sections": {
     "promotional_section_N6MFiK": {
       "type": "promotional-section",
-      "disabled": true,
       "settings": {
         "background_color": "#d5c3a2",
         "text_color": "#000000",
@@ -90,6 +89,7 @@
         "image_7kTF4N",
         "slideshow-0"
       ],
+      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
@@ -116,7 +116,7 @@
         "1646692015dc9bcd88-1"
       ],
       "custom_css": [
-        "{padding-top: 20px;}"
+        "{padding-top: 0px;}"
       ],
       "settings": {
         "full_width": false,
@@ -366,6 +366,7 @@
     },
     "background_image_text_b63KAg": {
       "type": "background-image-text",
+      "disabled": true,
       "settings": {
         "subtitle": "Handcrafted",
         "title": "NEW WOOD RINGS",
@@ -379,6 +380,13 @@
         "framed": false,
         "parallax": false
       }
+    },
+    "replo_trust_icons_white_backg_VzWd4W": {
+      "type": "replo-trust-icons-white-backg",
+      "custom_css": [
+        "{padding-top: 0px;}"
+      ],
+      "settings": {}
     },
     "featured-collection": {
       "type": "featured-collection",
@@ -394,13 +402,6 @@
         "view_all": true,
         "divider": false
       }
-    },
-    "replo_trust_icons_white_backg_VzWd4W": {
-      "type": "replo-trust-icons-white-backg",
-      "custom_css": [
-        "{padding-top: 20px;}"
-      ],
-      "settings": {}
     },
     "featured_collections_UTDNtV": {
       "type": "featured-collections",
@@ -770,8 +771,8 @@
     "1646694183f97c4822",
     "text_and_image_JAXUE3",
     "background_image_text_b63KAg",
-    "featured-collection",
     "replo_trust_icons_white_backg_VzWd4W",
+    "featured-collection",
     "featured_collections_UTDNtV",
     "1646695572d73bfd5a",
     "replo_ethos_T4hhfr",
