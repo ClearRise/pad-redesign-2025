@@ -9,75 +9,28 @@
  */
 {
   "sections": {
+    "promotional_section_mGEFMz": {
+      "type": "promotional-section",
+      "settings": {
+        "background_color": "#d5c3a2",
+        "text_color": "#000000",
+        "button_color": "#ff481b",
+        "desktop_height": 400,
+        "mobile_height": 250,
+        "focal_point": "center center",
+        "heading": "BLACK FRIDAY<br> STARTS NOW",
+        "subtext": "",
+        "button_text": "UP TO 50% OFF",
+        "button_link": "shopify://collections/all-products",
+        "desktop_image": "shopify://shop_images/Desktop_-_BF_Image.png",
+        "mobile_image": "shopify://shop_images/Mobile_-_BF_Image.png"
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
       "settings": {
         "content_display": true
-      }
-    },
-    "slideshow_gQY9qw": {
-      "type": "slideshow",
-      "blocks": {
-        "image_rppjPX": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "",
-            "special_title_color": "",
-            "subheading": "",
-            "special_text_color": "",
-            "link": "shopify://collections/all-products",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_position": "vertical-center horizontal-center",
-            "text_align": "left",
-            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
-            "mobile_text_align": "left",
-            "image": "shopify://shop_images/Bfce_Desktop_hero.png",
-            "image_mobile": "shopify://shop_images/Bfce_Desktop_mobile.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 80,
-            "base_text_size": 24
-          }
-        }
-      },
-      "block_order": [
-        "image_rppjPX"
-      ],
-      "settings": {
-        "use_img_banner": true,
-        "section_height": "natural",
-        "mobile_height": "auto",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": true,
-        "autoplay_speed": 7
-      }
-    },
-    "advanced_content_4NeRHb": {
-      "type": "advanced-content",
-      "blocks": {
-        "liquid_eRDTEP": {
-          "type": "liquid",
-          "settings": {
-            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 16px; color: #333333;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as Unique and Storied as the Men who Wear Them</h2>\n  <a href=\"https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring\" style=\"background-color: #138f7e\n; color: #ffffff; padding: 10px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"https://patrickadairdesigns.com/pages/our-story\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>",
-            "width": "100%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "liquid_eRDTEP"
-      ],
-      "settings": {
-        "full_width": false,
-        "space_around": false
       }
     },
     "promo_grid_4iW6mW": {
@@ -186,43 +139,73 @@
         "full_width": false,
         "gutter_size": 20,
         "space_above": true,
-        "space_below": true
+        "space_below": false
       }
     },
-    "background_image_text_4FTUfW": {
-      "type": "background-image-text",
+    "slideshow_gQY9qw": {
+      "type": "slideshow",
+      "blocks": {
+        "image_rppjPX": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "shopify://collections/all-products",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "image": "shopify://shop_images/Bfce_Desktop_hero.png",
+            "image_mobile": "shopify://shop_images/Bfce_Desktop_mobile.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_rppjPX"
+      ],
+      "disabled": true,
       "settings": {
-        "subtitle": "Handcrafted",
-        "title": "NEW WOOD RINGS",
-        "text": "<p>Sustainable Craftsmanship. 100% Satisfaction Guaranteed. </p>",
-        "button_label": "Find Yours",
-        "button_link": "shopify://collections/mens-wood-wedding-bands",
-        "image": "shopify://shop_images/Group_wood_rings_Large_0f57012e-432b-4356-801d-e42746176bb2.png",
-        "focal_point": "bottom",
-        "layout": "right",
-        "height": 550,
-        "framed": false,
-        "parallax": false
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 7
       }
     },
-    "featured_collection_RTcdPC": {
-      "type": "featured-collection",
+    "advanced_content_4NeRHb": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_eRDTEP": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 16px; color: #333333;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as Unique and Storied as the Men who Wear Them</h2>\n  <a href=\"https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring\" style=\"background-color: #138f7e\n; color: #ffffff; padding: 10px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"https://patrickadairdesigns.com/pages/our-story\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_eRDTEP"
+      ],
       "settings": {
-        "title": "Best Sellers",
-        "home_featured_products": "best-sellers",
-        "type_enable": false,
-        "subtitle_enable": true,
-        "subtitle_type": "two",
-        "per_row": 5,
-        "rows": 2,
-        "mobile_scrollable": true,
-        "view_all": true,
-        "divider": false
+        "full_width": false,
+        "space_around": false
       }
-    },
-    "replo_trust_icons_white_backg_bLLqh7": {
-      "type": "replo-trust-icons-white-backg",
-      "settings": {}
     },
     "featured_collections_werMCq": {
       "type": "featured-collections",
@@ -307,6 +290,25 @@
         "divider": false,
         "per_row": 4,
         "enable_gutter": false
+      }
+    },
+    "replo_trust_icons_white_backg_bLLqh7": {
+      "type": "replo-trust-icons-white-backg",
+      "settings": {}
+    },
+    "featured_collection_RTcdPC": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best Sellers",
+        "home_featured_products": "best-sellers",
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "per_row": 5,
+        "rows": 2,
+        "mobile_scrollable": false,
+        "view_all": true,
+        "divider": false
       }
     },
     "replo_ethos_FPf3qh": {
@@ -394,14 +396,14 @@
     }
   },
   "order": [
+    "promotional_section_mGEFMz",
     "main",
+    "promo_grid_4iW6mW",
     "slideshow_gQY9qw",
     "advanced_content_4NeRHb",
-    "promo_grid_4iW6mW",
-    "background_image_text_4FTUfW",
-    "featured_collection_RTcdPC",
-    "replo_trust_icons_white_backg_bLLqh7",
     "featured_collections_werMCq",
+    "replo_trust_icons_white_backg_bLLqh7",
+    "featured_collection_RTcdPC",
     "replo_ethos_FPf3qh",
     "rich_text_JaHgJW",
     "logo_list_8yzTJ8"
