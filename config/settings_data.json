@@ -335,6 +335,11 @@
         "type": "shopify://apps/fondue-cashback-promotions/blocks/caseback-embed/dcfd972d-99c5-4526-b55b-2d76e990dec8",
         "disabled": false,
         "settings": {}
+      },
+      "9685009021672784835": {
+        "type": "shopify://apps/grouptify-combined-listings/blocks/swatch_renderer/b3e63011-8382-4b7f-8929-7fe2b1aec125",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
