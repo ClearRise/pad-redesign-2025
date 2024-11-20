@@ -72,35 +72,35 @@
           "type": "question",
           "settings": {
             "title": "Meteorite Rings",
-            "text": "<p>Most rings containing solid meteorite is currently taking approx.<strong> 4-6 weeks to ship.</strong></p>"
+            "text": "<p>Most rings containing solid meteorite is currently taking approx.<strong> 4-6 weeks to ship.</strong></p><p>If you select the \"Unsure - Send Ring Sizer First\" size option, this timeline does not start until we receive your size from you.</p>"
           }
         },
         "8bd5b863-fcb1-43ae-bde3-7333f20f183b": {
           "type": "question",
           "settings": {
             "title": "Carbon Fiber Rings",
-            "text": "<p>Most Carbon Fiber Rings are currently taking approx. <strong>4-6 weeks to ship</strong>.</p><p></p>"
+            "text": "<p>Most Carbon Fiber Rings are currently taking approx. <strong>4-6 weeks to ship</strong>.</p><p>If you select the \"Unsure - Send Ring Sizer First\" size option, this timeline does not start until we receive your size from you.</p>"
           }
         },
         "question_XntpWA": {
           "type": "question",
           "settings": {
             "title": "Wood Rings",
-            "text": "<p>Most Wood Rings are currently taking approx. <strong>4-6</strong> <strong>weeks to ship</strong>.</p>"
+            "text": "<p>Most Wood Rings are currently taking approx. <strong>4-6</strong> <strong>weeks to ship</strong>.</p><p>If you select the \"Unsure - Send Ring Sizer First\" size option, this timeline does not start until we receive your size from you.</p>"
           }
         },
         "f04d8342-18cb-44cd-8612-a1fdf4afc09b": {
           "type": "question",
           "settings": {
             "title": "Opal Rings",
-            "text": "<p>All solid opal rings are currently taking approx. <strong>4-6 weeks to ship.</strong></p>"
+            "text": "<p>All solid opal rings are currently taking approx. <strong>4-6 weeks to ship.</strong></p><p>If you select the \"Unsure - Send Ring Sizer First\" size option, this timeline does not start until we receive your size from you.</p>"
           }
         },
         "56c40efd-9201-4a79-86d6-f829d8584f99": {
           "type": "question",
           "settings": {
             "title": "Misc. Rings",
-            "text": "<ul><li>Mokume Gane Rings: 8 weeks</li><li>Timascus Rings: 8 weeks</li><li>Reptilian Damascus Steel Ring: 8 weeks</li><li>Spirograph Damascus Steel Ring: 8 weeks</li><li>Superconductor Rings: 8 weeks</li></ul>"
+            "text": "<ul><li>Mokume Gane Rings: 8 weeks</li><li>Timascus Rings: 8 weeks</li><li>Reptilian Damascus Steel Ring: 8 weeks</li><li>Spirograph Damascus Steel Ring: 8 weeks</li><li>Superconductor Rings: 8 weeks</li></ul><p>If you select the \"Unsure - Send Ring Sizer First\" size option, this timeline does not start until we receive your size from you.</p>"
           }
         },
         "e9488b45-be9e-41c3-afb4-b05cfa7c0070": {
