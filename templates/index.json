@@ -100,79 +100,20 @@
         "autoplay_speed": 7
       }
     },
-    "16466920156dc1f06b": {
-      "type": "advanced-content",
-      "blocks": {
-        "1646692015dc9bcd88-1": {
-          "type": "liquid",
-          "settings": {
-            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 16px; color: #333333;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as Unique and Storied as the Men who Wear Them</h2>\n  <a href=\"https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring\" style=\"background-color: #138f7e\n; color: #ffffff; padding: 10px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"https://patrickadairdesigns.com/pages/our-story\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>",
-            "width": "100%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "1646692015dc9bcd88-1"
-      ],
-      "custom_css": [
-        "{padding-top: 0px;}"
-      ],
-      "settings": {
-        "full_width": false,
-        "space_around": false
-      }
-    },
-    "rich-text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": "Unique and Storied like the Men We Make them For"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>Whether it's a fashion piece, an upgrade, or a first wedding band, he deserves a ring that's one-of-a-kind just like him.</p><p>Since 2015, we've been handcrafting rings from the most exotic materials on earth. From hand-forged Damascus steel to million year old meteorite, you'll find a story in every ring.</p>"
-          }
-        },
-        "6608bf6f-85b6-4b98-80ce-d2b158c1626a": {
-          "type": "button",
-          "settings": {
-            "link": "https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring",
-            "link_text": "Discover Yours"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "6608bf6f-85b6-4b98-80ce-d2b158c1626a"
-      ],
-      "disabled": true,
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
-      }
-    },
     "1646694183f97c4822": {
       "type": "promo-grid",
       "blocks": {
-        "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
+        "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
           "type": "advanced",
           "settings": {
             "subheading": "UP TO 50% OFF",
-            "heading": "WEDDING   BANDS",
+            "heading": "GLOWSTONE  SERIES",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
-            "cta_link1": "https://patrickadairdesigns.com/collections/best-selling-wedding-bands-v1",
+            "cta_link1": "https://patrickadairdesigns.com/collections/the-glowstone-series",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Sterling_Silver.png",
+            "image": "shopify://shop_images/Glowstone_Ring_2-_flipped_9f85184e-0502-4a6b-9d57-22cf5248aef4.png",
             "video_url": "",
             "width": "50",
             "height": 300,
@@ -185,17 +126,17 @@
             "framed": false
           }
         },
-        "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
+        "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
           "type": "advanced",
           "settings": {
             "subheading": "UP TO 50% OFF",
-            "heading": "GLOWSTONE  SERIES",
+            "heading": "WEDDING   BANDS",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
-            "cta_link1": "https://patrickadairdesigns.com/collections/the-glowstone-series",
+            "cta_link1": "https://patrickadairdesigns.com/collections/best-selling-wedding-bands-v1",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Glowstone_Ring_2-_flipped_9f85184e-0502-4a6b-9d57-22cf5248aef4.png",
+            "image": "shopify://shop_images/Sterling_Silver.png",
             "video_url": "",
             "width": "50",
             "height": 300,
@@ -328,8 +269,8 @@
         }
       },
       "block_order": [
-        "85a12c0c-6ee7-4aba-a660-0e12f6bdc907",
         "2f6050a5-96b7-4f7d-b405-7b5952c82699",
+        "85a12c0c-6ee7-4aba-a660-0e12f6bdc907",
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02",
         "advanced_gaqMVW",
         "2e50058a-8bc8-46f4-880f-08ed48490db6",
@@ -342,8 +283,152 @@
       "settings": {
         "full_width": false,
         "gutter_size": 20,
-        "space_above": false,
-        "space_below": true
+        "space_above": true,
+        "space_below": false
+      }
+    },
+    "16466920156dc1f06b": {
+      "type": "advanced-content",
+      "blocks": {
+        "1646692015dc9bcd88-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 16px; color: #333333;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as Unique and Storied as the Men who Wear Them</h2>\n  <a href=\"https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring\" style=\"background-color: #138f7e\n; color: #ffffff; padding: 10px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"https://patrickadairdesigns.com/pages/our-story\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "1646692015dc9bcd88-1"
+      ],
+      "custom_css": [
+        "{padding-top: 0px;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "featured_collections_UTDNtV": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_cXiL8f": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-glowstone-series",
+            "title": "Glowstone",
+            "focal_point": "center center"
+          }
+        },
+        "collection_9NTX7D": {
+          "type": "collection",
+          "settings": {
+            "collection": "opal-rings",
+            "title": "Opal",
+            "focal_point": "center center"
+          }
+        },
+        "collection_MijgYa": {
+          "type": "collection",
+          "settings": {
+            "collection": "gold-rings",
+            "title": "Gold",
+            "focal_point": "center center"
+          }
+        },
+        "collection_3yGnGa": {
+          "type": "collection",
+          "settings": {
+            "collection": "meteorite-rings",
+            "title": "Meteorite",
+            "focal_point": "center center"
+          }
+        },
+        "collection_UbV6zd": {
+          "type": "collection",
+          "settings": {
+            "collection": "titanium-rings",
+            "title": "Titanium",
+            "focal_point": "center center"
+          }
+        },
+        "collection_piCPB7": {
+          "type": "collection",
+          "settings": {
+            "collection": "tungsten-rings",
+            "title": "Tungsten",
+            "focal_point": "center center"
+          }
+        },
+        "collection_DpNcFk": {
+          "type": "collection",
+          "settings": {
+            "collection": "mens-wood-wedding-bands",
+            "title": "WOOd",
+            "focal_point": "center center"
+          }
+        },
+        "collection_9AqrXz": {
+          "type": "collection",
+          "settings": {
+            "collection": "ceramic-rings",
+            "title": "Ceramic",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_cXiL8f",
+        "collection_9NTX7D",
+        "collection_MijgYa",
+        "collection_3yGnGa",
+        "collection_UbV6zd",
+        "collection_piCPB7",
+        "collection_DpNcFk",
+        "collection_9AqrXz"
+      ],
+      "settings": {
+        "title": "Shop By Material",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": false
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Unique and Storied like the Men We Make them For"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Whether it's a fashion piece, an upgrade, or a first wedding band, he deserves a ring that's one-of-a-kind just like him.</p><p>Since 2015, we've been handcrafting rings from the most exotic materials on earth. From hand-forged Damascus steel to million year old meteorite, you'll find a story in every ring.</p>"
+          }
+        },
+        "6608bf6f-85b6-4b98-80ce-d2b158c1626a": {
+          "type": "button",
+          "settings": {
+            "link": "https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring",
+            "link_text": "Discover Yours"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "6608bf6f-85b6-4b98-80ce-d2b158c1626a"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
       }
     },
     "text_and_image_JAXUE3": {
@@ -401,83 +486,6 @@
         "mobile_scrollable": false,
         "view_all": true,
         "divider": false
-      }
-    },
-    "featured_collections_UTDNtV": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_cXiL8f": {
-          "type": "collection",
-          "settings": {
-            "collection": "all-glowstone-rings",
-            "title": "Glowstone",
-            "focal_point": "center center"
-          }
-        },
-        "collection_3yGnGa": {
-          "type": "collection",
-          "settings": {
-            "collection": "meteorite-rings",
-            "title": "Meteorite",
-            "focal_point": "center center"
-          }
-        },
-        "collection_MijgYa": {
-          "type": "collection",
-          "settings": {
-            "collection": "gold-rings",
-            "title": "Gold",
-            "focal_point": "center center"
-          }
-        },
-        "collection_piCPB7": {
-          "type": "collection",
-          "settings": {
-            "collection": "tungsten-rings",
-            "title": "Tungsten",
-            "focal_point": "center center"
-          }
-        },
-        "collection_UbV6zd": {
-          "type": "collection",
-          "settings": {
-            "collection": "titanium-rings",
-            "title": "Titanium",
-            "focal_point": "center center"
-          }
-        },
-        "collection_9NTX7D": {
-          "type": "collection",
-          "settings": {
-            "collection": "opal-rings",
-            "title": "Opal",
-            "focal_point": "center center"
-          }
-        },
-        "collection_DpNcFk": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "title": "",
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "collection_cXiL8f",
-        "collection_3yGnGa",
-        "collection_MijgYa",
-        "collection_piCPB7",
-        "collection_UbV6zd",
-        "collection_9NTX7D",
-        "collection_DpNcFk"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Shop By Material",
-        "divider": false,
-        "per_row": 4,
-        "enable_gutter": true
       }
     },
     "1646695572d73bfd5a": {
@@ -766,14 +774,14 @@
   "order": [
     "promotional_section_N6MFiK",
     "slideshow",
-    "16466920156dc1f06b",
-    "rich-text",
     "1646694183f97c4822",
+    "16466920156dc1f06b",
+    "featured_collections_UTDNtV",
+    "rich-text",
     "text_and_image_JAXUE3",
     "background_image_text_b63KAg",
     "replo_trust_icons_white_backg_VzWd4W",
     "featured-collection",
-    "featured_collections_UTDNtV",
     "1646695572d73bfd5a",
     "replo_ethos_T4hhfr",
     "1647557717e099d38f",
