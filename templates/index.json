@@ -26,6 +26,24 @@
         "mobile_image": "shopify://shop_images/Mobile_-_BF_Image.png"
       }
     },
+    "promotional_section_jjdRLm": {
+      "type": "promotional-section",
+      "disabled": true,
+      "settings": {
+        "background_color": "#7bc6d8",
+        "text_color": "#000000",
+        "button_color": "#ff4400",
+        "desktop_height": 400,
+        "mobile_height": 300,
+        "focal_point": "center center",
+        "heading": "BLACK FRIDAY <br> IS HERE",
+        "subtext": "Rings as Unique and Storied as the Men We Craft Them For",
+        "button_text": "SHOP NOW",
+        "button_link": "",
+        "desktop_image": "shopify://shop_images/Stacked_GLowstone_-_Carbon_Fiber_-_Desktop.png",
+        "mobile_image": "shopify://shop_images/Stacked_Glowstone_-_Carbon_Fiber_-_Mobile_Zoomed_out_v2.png"
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -773,6 +791,7 @@
   },
   "order": [
     "promotional_section_N6MFiK",
+    "promotional_section_jjdRLm",
     "slideshow",
     "1646694183f97c4822",
     "16466920156dc1f06b",
