@@ -69,8 +69,10 @@
           </div>
 
         {%- else -%}
-
           {%- for product in collections[section.settings.home_featured_products].products limit: product_limit -%}
+            {% unless product.handle contains 'navidium' %}
+              
+            
             {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
               {%- render 'product-grid-item',
                 product: product,
@@ -81,6 +83,7 @@
                 type_enable: section.settings.type_enable,
                 subtitle_enable: section.settings.subtitle_enable
               -%}
+              {% endunless %}
           {%- endfor -%}
 
           {%- if section.settings.view_all -%}
@@ -125,6 +128,16 @@
         "id": "home_featured_products",
         "label": "Collection"
       },
+      {
+        "type": "checkbox",
+        "id": "type_enable",
+        "label": "Show Set Type"
+      },
+      {
+        "type": "checkbox",
+        "id": "subtitle_enable",
+        "label": "Show Subtitle"
+      }, 
       {
         "type": "select",
         "id": "subtitle_type",
