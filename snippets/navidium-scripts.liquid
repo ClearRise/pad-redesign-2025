@@ -1,0 +1,114 @@
+<!-- navidium script start -->
+<!-- <style>
+  .rebuy-product-block.navidium-shipping-protection:has([href*="navidium"]) {
+    display: none !important;
+}
+</style> -->
+
+<style>
+  div#nvd-widget-cart {
+    width: 380px;
+    margin: 0 auto;
+}
+  [data-handle="navidium-shipping-protection"] .cart__item-details .cart__item-sub > div .js-qty__wrapper {
+    display: none;
+}
+</style>
+{% comment %}
+ <script>
+    const nvdShop = 'patrick-adair-designs.myshopify.com';
+    const nvdShopCurrency =  `'$'{'{amount}'}'`.replaceAll("'",'');
+    const nvdControls = {
+      subtotal_item: '.rebuy-cart__flyout-subtotal-amount,.nvdsubtotal',
+      CheckoutBtns: '.rebuy-cart__checkout-button',
+      clickTriggers: 'buy-buttons button,buy-buttons button *,[href="/cart"],[href="/cart"] *,.rebuy-cart__flyout-item-quantity-widget-button,.rebuy-cart__flyout-item-quantity-widget-button *,.rebuy-cart__flyout-item-remove,.rebuy-cart__flyout-item-remove *',
+      changeTrigger: '.rebuy-cart__flyout-item-quantity-widget-label',
+	    cursorControl: '.nvd-mini',
+      showConsoleMessage: false,
+      iosDeviceListener:'click',
+      trackWidget: false,
+      forceClick: true,
+      forceCheckout: false,
+      redirectCheckout: {
+        upsaleOff: true,
+        noProtection: false
+      },
+		  nvdInject:{
+        status:false, // Inject nvd-mini div
+        parent:'gghh', // parent class for nvd-mini div
+        container:'kjhyjn' // nvd-mini will added before this div/button
+      }
+    }
+  </script>
+ <script  src="https://navidium-static-assets.s3.amazonaws.com/navidium-widgets/js/nvd-js-asset.js"></script>
+ <script src="https://d10pwglna6up6p.cloudfront.net/navidium-widgets/js/nvd-widget-v-jquery.js" defer></script>
+<!-- navidium script end -->
+
+{% endcomment %}
+
+<!-- Navidium script start -->
+    <script>
+      const nvdShop = 'patrick-adair-designs.myshopify.com';
+      const nvdShopCurrency =  `'$'{'{amount}'}'`.replaceAll("'",'');
+      const nvdControls = {
+        cartCounter: 'cart_counter_class', //cart item count
+        subtotal: 'span.bcpo-cart-original-total>span>span', // cart subtotal amount
+        lineAttribute: 'data-index', // cart item line
+        cartItemNodes: 'cart_nodes', // Cart items loop
+        quantityMinus: 'qty_minus', // Quantity decrase button
+        quantityPlus: 'qty_plus', // Quantity incrase button
+        removeItem: 'cart_remove_class', // Cart item remove btn class
+        qtybtnAttribute: 'data-href', // Cart item btn line update
+        qtyrmvAttribute: 'href', // Cart item remove line update
+        clickTriggers: '.upsell-add-to-cart,.upsell-add-to-cart *,[href="/cart"],[href="/cart"] *,.js-qty__adjust,.js-qty__adjust *,.cart__remove,.cart__remove *,[name="add"],[name="add"] *', // Onclick widget update
+        changeTrigger: '.js-qty__num', // Onchange widget update
+  	    cursorControl: '.nvd-mini', // Disabled/Enabled cursor pointer event
+        onLoadTrigger: false, // window.onload nvd_init function call
+        cartReload: true, // Cart reload for /cart page
+        showConsoleMessage:false, // Console message show/hide
+        trackWidget:false, // Track widget on realtime
+        forceClick: true, // forceclick for onclickTrigger event
+        autoHide: false, // Hide by JS according to cartItemNodes
+        initiateTime: 2000, //milisecond
+        nvdInject:{
+          status:false, // Inject nvd-mini div
+          parent:'parent_class', // parent class for nvd-mini div
+          container:'checkout_button_div' // nvd-mini will added before this div/button
+        }
+      }      
+    </script>
+    <script  src="{{ 'navidium.js' | asset_url}}" defer></script>
+  <!-- End of Navidium script -->
+<!-- Navidium Code, Please Don't remove. Extra code to remove navidium from cart line item-->
+  <script>
+    window.addEventListener('click', (e)=>{
+    const nvdRemoveTrigger = Array.from(document.querySelectorAll('[data-handle="navidium-shipping-protection"] .cart__remove, [data-handle="navidium-shipping-protection"] .cart__remove *'))
+    if(nvdRemoveTrigger.includes(e.target)){
+        localStorage.setItem('nvd_opted_out', true)
+        localStorage.removeItem('cart_protection')
+        document.querySelectorAll('#shippingProtectionCheckBox').forEach(elm=>elm.removeAttribute('checked'))
+         setTimeout(()=>{
+             setNvdStatus(1)
+         },700)
+        checkWidgetView()
+    }
+  })
+  </script>
+
+
+  <style>
+    [data-handle*=navidium-shipping-protection] {
+    display: flex !important;
+}
+  </style>
+  <style>
+  @media screen and (max-width: 767px) {
+    .additional-checkout-buttons {
+    margin-top: 120px !important;
+}
+    div#nvd-widget-cart {
+    width: 100%;
+    margin: 0 auto;
+}
+  }
+</style>
