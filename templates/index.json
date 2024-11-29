@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow": {
@@ -10,16 +19,16 @@
             "top_subheading_color": "#ffffff",
             "title": "VALENTINE'S DAY SALE",
             "special_title_color": "",
-            "subheading": "<p>PLUS get a Free Mystery Gift on Orders $195+<\/p>",
+            "subheading": "<p>PLUS get a Free Mystery Gift on Orders $195+</p>",
             "special_text_color": "",
-            "link": "shopify:\/\/collections\/all-products",
+            "link": "shopify://collections/all-products",
             "link_text": "SHOP NOW",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ff0000",
             "text_align": "vertical-top horizontal-center",
-            "image": "shopify:\/\/shop_images\/Desktop_Hero_Quick_V1_2e53390f-2cf2-4b4b-8dba-084f070be9f3.png",
-            "image_mobile": "shopify:\/\/shop_images\/Valentine_s_Day_Generic_Collection.png",
+            "image": "shopify://shop_images/Desktop_Hero_Quick_V1_2e53390f-2cf2-4b4b-8dba-084f070be9f3.png",
+            "image_mobile": "shopify://shop_images/Valentine_s_Day_Generic_Collection.png",
             "overlay_opacity": 20,
             "focal_point": "bottom center",
             "base_text_color": "#ffffff",
@@ -37,14 +46,14 @@
             "special_title_color": "",
             "subheading": "",
             "special_text_color": "",
-            "link": "shopify:\/\/collections\/all-products",
+            "link": "shopify://collections/all-products",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/Desktop_hero.png",
-            "image_mobile": "shopify:\/\/shop_images\/Moible_hero.png",
+            "image": "shopify://shop_images/Desktop_hero.png",
+            "image_mobile": "shopify://shop_images/Moible_hero.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -62,14 +71,14 @@
             "special_title_color": "",
             "subheading": "",
             "special_text_color": "",
-            "link": "shopify:\/\/collections\/all-products",
+            "link": "shopify://collections/all-products",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#000000",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify:\/\/shop_images\/Orange_Banner_2_fixed_compressed.png",
-            "image_mobile": "shopify:\/\/shop_images\/Mobile_-_Orange_Hero_-_Compressed_1x_Medium_e7aeb1ff-9271-40c7-b867-2491171db495.png",
+            "image": "shopify://shop_images/Orange_Banner_2_fixed_compressed.png",
+            "image_mobile": "shopify://shop_images/Mobile_-_Orange_Hero_-_Compressed_1x_Medium_e7aeb1ff-9271-40c7-b867-2491171db495.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -95,8 +104,7 @@
     },
     "replo_trust_icons_RKNtHa": {
       "type": "replo-trust-icons",
-      "settings": {
-      }
+      "settings": {}
     },
     "1646694183f97c4822": {
       "type": "promo-grid",
@@ -106,12 +114,12 @@
           "settings": {
             "subheading": "20-30% Off",
             "heading": "METEORITE <br>RINGS",
-            "textarea": "<u> Shop Now<\/u>",
+            "textarea": "<u> Shop Now</u>",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/meteorite-jewelry",
+            "cta_link1": "shopify://collections/meteorite-jewelry",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
+            "image": "shopify://shop_images/meteorite-ring.jpg",
             "video_url": "",
             "width": "33",
             "height": 260,
@@ -128,12 +136,12 @@
           "settings": {
             "subheading": "20-25% Off",
             "heading": "GLOWSTONE <br>SERIES",
-            "textarea": "<u> Shop Now<\/u>",
+            "textarea": "<u> Shop Now</u>",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/the-glowstone-series",
+            "cta_link1": "shopify://collections/the-glowstone-series",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Glowstone_Ring_2-_flipped_9f85184e-0502-4a6b-9d57-22cf5248aef4.png",
+            "image": "shopify://shop_images/Glowstone_Ring_2-_flipped_9f85184e-0502-4a6b-9d57-22cf5248aef4.png",
             "video_url": "",
             "width": "33",
             "height": 260,
@@ -150,12 +158,12 @@
           "settings": {
             "subheading": "20-30% Off",
             "heading": "WEDDING <br>BANDS",
-            "textarea": "<u> Shop Now<\/u>",
+            "textarea": "<u> Shop Now</u>",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/best-selling-wedding-bands-v1",
+            "cta_link1": "shopify://collections/best-selling-wedding-bands-v1-new",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Sterling_Silver.png",
+            "image": "shopify://shop_images/Sterling_Silver.png",
             "video_url": "",
             "width": "33",
             "height": 260,
@@ -174,10 +182,10 @@
             "heading": "MYSTERY GIFT",
             "textarea": "Orders $195+ come with a FREE Mystery Gift worth $200-$600",
             "cta_text1": "Shop All Rings",
-            "cta_link1": "shopify:\/\/collections\/all-products",
+            "cta_link1": "shopify://collections/all-products",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Group_Shot.png",
+            "image": "shopify://shop_images/Group_Shot.png",
             "video_url": "",
             "width": "100",
             "height": 420,
@@ -197,10 +205,10 @@
             "heading": "PENDANTS",
             "textarea": "Get a Free Black Stainless <br> Steel Box Chain",
             "cta_text1": "",
-            "cta_link1": "https:\/\/patrickadairdesigns.com\/collections\/necklaces",
+            "cta_link1": "https://patrickadairdesigns.com/collections/necklaces",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Pendant_56ae5f17-8dbc-4305-8aaa-5db6424d04ce.png",
+            "image": "shopify://shop_images/Pendant_56ae5f17-8dbc-4305-8aaa-5db6424d04ce.png",
             "video_url": "",
             "width": "50",
             "height": 400,
@@ -220,10 +228,10 @@
             "heading": "ALL EARRINGS",
             "textarea": "",
             "cta_text1": "",
-            "cta_link1": "https:\/\/patrickadairdesigns.com\/collections\/earrings",
+            "cta_link1": "https://patrickadairdesigns.com/collections/earrings",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/earrings.png",
+            "image": "shopify://shop_images/earrings.png",
             "video_url": "",
             "width": "50",
             "height": 400,
@@ -266,8 +274,7 @@
     },
     "replo_ethos_nHLRp7": {
       "type": "replo-ethos",
-      "settings": {
-      }
+      "settings": {}
     },
     "featured_collections_gQFdAi": {
       "type": "featured-collections",
@@ -328,10 +335,10 @@
             "heading": "Pendants",
             "textarea": "Unique Pieces from <br> Exotic Materials",
             "cta_text1": "Shop Pendants",
-            "cta_link1": "shopify:\/\/collections\/necklaces",
+            "cta_link1": "shopify://collections/necklaces",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Pendant_56ae5f17-8dbc-4305-8aaa-5db6424d04ce.png",
+            "image": "shopify://shop_images/Pendant_56ae5f17-8dbc-4305-8aaa-5db6424d04ce.png",
             "video_url": "",
             "width": "50",
             "height": 500,
@@ -350,10 +357,10 @@
             "heading": "Earrings",
             "textarea": "Glowstone inlaid <br>into Titanium Settings",
             "cta_text1": "Shop Earrings",
-            "cta_link1": "shopify:\/\/collections\/earrings",
+            "cta_link1": "shopify://collections/earrings",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/earrings.png",
+            "image": "shopify://shop_images/earrings.png",
             "video_url": "",
             "width": "50",
             "height": 500,
@@ -372,10 +379,10 @@
             "heading": "Virtual <br> Appointments",
             "textarea": "Book a virtual video <br>consultation to <br>hand-pick (or design) <br>your perfect piece",
             "cta_text1": "Book Now",
-            "cta_link1": "https:\/\/patrickadairdesigns.com\/pages\/custom-design-consultation",
+            "cta_link1": "https://patrickadairdesigns.com/pages/custom-design-consultation",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Lifestyle_Zoomed_Out_Shot.png",
+            "image": "shopify://shop_images/Lifestyle_Zoomed_Out_Shot.png",
             "video_url": "",
             "width": "100",
             "height": 700,
@@ -413,7 +420,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>“I love this ring. Every step of the process from sizing to delivery was amazing.”<\/p><p>- Brett P.<\/p><p>“I couldn’t have asked for a better ring. PAD did an amazing job and was very communicative through the whole process and was done in a timely manner!”<\/p><p>- Amber A<\/p><p>“Feels and looks like anything you’d buy from the highest-end jewelers stores without the high-end prices.”<\/p><p>- Ben<\/p><p><\/p><p><a href=\"https:\/\/patrickadairdesigns.com\/pages\/reviews\" title=\"https:\/\/patrickadairdesigns.com\/pages\/reviews\"><span style=\"text-decoration:underline\">See more reviews<\/span><\/a><\/p>"
+            "text": "<p>“I love this ring. Every step of the process from sizing to delivery was amazing.”</p><p>- Brett P.</p><p>“I couldn’t have asked for a better ring. PAD did an amazing job and was very communicative through the whole process and was done in a timely manner!”</p><p>- Amber A</p><p>“Feels and looks like anything you’d buy from the highest-end jewelers stores without the high-end prices.”</p><p>- Ben</p><p></p><p><a href=\"https://patrickadairdesigns.com/pages/reviews\" title=\"https://patrickadairdesigns.com/pages/reviews\"><span style=\"text-decoration:underline\">See more reviews</span></a></p>"
           }
         }
       },
@@ -429,17 +436,6 @@
     },
     "1706048898f59b8062": {
       "type": "apps",
-      "blocks": {
-        "okendo_media_carousel_ANbhPQ": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "okendo_media_carousel_ANbhPQ"
-      ],
       "settings": {
         "full_width": false,
         "space_around": true
@@ -457,13 +453,12 @@
         "text_iNPYjn": {
           "type": "text",
           "settings": {
-            "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>"
+            "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
           }
         },
         "form_LWVM43": {
           "type": "form",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
