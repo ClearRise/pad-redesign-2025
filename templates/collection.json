@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/bcfe_banner_desktop.png",
-            "image_mobile": "shopify://shop_images/bfce_Banner_mobile_collection.png",
+            "image": "shopify://shop_images/IMG_0022.png",
+            "image_mobile": "shopify://shop_images/IMG_0021.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -58,14 +58,12 @@
       "custom_css": [
         "{padding: 10 px;}"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "replo_trust_icons_fy9XYw": {
       "type": "replo-trust-icons",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "rich_text_G9LH7U": {
       "type": "rich-text",
@@ -154,8 +152,7 @@
       "blocks": {
         "collection_description": {
           "type": "collection_description",
-          "settings": {
-          }
+          "settings": {}
         },
         "subcollections": {
           "type": "subcollections",
