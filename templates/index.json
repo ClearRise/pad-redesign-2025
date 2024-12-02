@@ -12,13 +12,13 @@
     "promotional_section_N6MFiK": {
       "type": "promotional-section",
       "settings": {
-        "background_color": "#d5c3a2",
-        "text_color": "#000000",
+        "background_color": "#138f7e",
+        "text_color": "#ffffff",
         "button_color": "#ff481b",
         "desktop_height": 450,
         "mobile_height": 250,
         "focal_point": "center center",
-        "heading": "CYBER MONDAY<br>IS HERE",
+        "heading": "CYBER MONDAY <br> DEALS NOW LIVE",
         "subtext": "Rings that tell your story",
         "button_text": "UP TO 50% OFF →",
         "button_link": "shopify://collections/all-products",
