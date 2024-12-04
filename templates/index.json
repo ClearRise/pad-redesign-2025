@@ -11,6 +11,11 @@
   "sections": {
     "promotional_section_N6MFiK": {
       "type": "promotional-section",
+      "custom_css": [
+        ".desktop-only {display: block;}",
+        ".mobile-only {display: none;}",
+        "@media only screen and (max-width: 1024px) {.desktop-only {display: none; } .mobile-only {display: block; }}"
+      ],
       "settings": {
         "background_color": "#138f7e",
         "text_color": "#ffffff",
