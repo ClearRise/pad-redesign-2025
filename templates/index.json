@@ -23,7 +23,7 @@
         "desktop_height": 450,
         "mobile_height": 250,
         "focal_point": "center center",
-        "heading": "CYBER WEEK  DEALS END SOON",
+        "heading": "",
         "subtext": "Rings that tell your story",
         "button_text": "UP TO 50% OFF →",
         "button_link": "shopify://collections/all-products",
@@ -308,6 +308,40 @@
         "gutter_size": 20,
         "space_above": true,
         "space_below": false
+      }
+    },
+    "promotional_section_B4Thwk": {
+      "type": "promotional-section",
+      "disabled": true,
+      "settings": {
+        "background_color": "#f5f5f5",
+        "text_color": "#000000",
+        "button_color": "#138f7e",
+        "desktop_height": 400,
+        "mobile_height": 250,
+        "focal_point": "center center",
+        "heading": "CYBER WEEK EXCLUSIVE",
+        "subtext": "While Supplies Last",
+        "button_text": "UP TO 60% OFF →",
+        "button_link": "shopify://collections/solid-meteorite-rings",
+        "desktop_image": "shopify://shop_images/14.png",
+        "mobile_image": "shopify://shop_images/14_b4886a39-f54a-49c5-8174-e168bc3cbae0.png"
+      }
+    },
+    "featured_collection_gMka8V": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "<b>CYBER WEEK SALE</b>",
+        "home_featured_products": "solid-meteorite-rings",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
       }
     },
     "16466920156dc1f06b": {
@@ -799,6 +833,8 @@
     "promotional_section_jjdRLm",
     "slideshow",
     "1646694183f97c4822",
+    "promotional_section_B4Thwk",
+    "featured_collection_gMka8V",
     "16466920156dc1f06b",
     "featured_collections_UTDNtV",
     "rich-text",
