@@ -2207,3 +2207,19 @@ label.variant__label.custom_label{
 .variant-input-wrap.custom_options {
   margin-bottom: 12px;
 }
+
+.desktop-only{
+  display: block;
+}
+.mobile-only{
+  display:none;
+}
+
+@media only screen and (max-width: 1024px){
+  .desktop-only{
+    display: none;
+  }
+  .mobile-only{
+    display:block;
+  }
+}
