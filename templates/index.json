@@ -312,11 +312,16 @@
     },
     "promotional_section_B4Thwk": {
       "type": "promotional-section",
-      "disabled": true,
+      "custom_css": [
+        "{padding-top: 5px;}",
+        ".desktop-only {display: block;}",
+        ".mobile-only {display: none;}",
+        "@media only screen and (max-width: 1024px) {.desktop-only {display: none; } .mobile-only {display: block; }}"
+      ],
       "settings": {
-        "background_color": "#f5f5f5",
-        "text_color": "#000000",
-        "button_color": "#138f7e",
+        "background_color": "#138f7e",
+        "text_color": "#ffffff",
+        "button_color": "#ff481b",
         "desktop_height": 400,
         "mobile_height": 250,
         "focal_point": "center center",
@@ -330,12 +335,11 @@
     },
     "featured_collection_gMka8V": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
-        "title": "<b>CYBER WEEK SALE</b>",
+        "title": "<b>CYBER WEEK SALE</b><br>",
         "home_featured_products": "solid-meteorite-rings",
         "type_enable": false,
-        "subtitle_enable": false,
+        "subtitle_enable": true,
         "subtitle_type": "two",
         "per_row": 4,
         "rows": 1,
