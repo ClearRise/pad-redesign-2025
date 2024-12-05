@@ -307,7 +307,7 @@
         "full_width": false,
         "gutter_size": 20,
         "space_above": true,
-        "space_below": false
+        "space_below": true
       }
     },
     "promotional_section_B4Thwk": {
