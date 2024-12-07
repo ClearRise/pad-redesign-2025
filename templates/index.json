@@ -20,15 +20,15 @@
         "background_color": "#138f7e",
         "text_color": "#ffffff",
         "button_color": "#ff481b",
-        "desktop_height": 450,
+        "desktop_height": 500,
         "mobile_height": 250,
         "focal_point": "center center",
-        "heading": "HOLIDAY DEALS<br>LIVE NOW",
+        "heading": "HOLIDAY SALE <br> NOW LIVE",
         "subtext": "Rings that tell your story",
         "button_text": "UP TO 50% OFF →",
         "button_link": "shopify://collections/all-products",
-        "desktop_image": "shopify://shop_images/Halo_Rings_Adjusted_-_Desktop.png",
-        "mobile_image": "shopify://shop_images/Halo_Rings_Adjusted_2_mobile.png"
+        "desktop_image": "shopify://shop_images/Christmas_-_Desktop_-_Final.png",
+        "mobile_image": "shopify://shop_images/Mobile_Hero_e0af7e83-721f-4aee-86f9-3c9934900d5e.png"
       }
     },
     "promotional_section_jjdRLm": {
