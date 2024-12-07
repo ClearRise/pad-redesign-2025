@@ -16,7 +16,7 @@
           "type": "price",
           "settings": {
             "enable_badge": true,
-            "custom_badge": "CYBER WEEK OFFER"
+            "custom_badge": "HOLIDAY SALE OFFER"
           }
         },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
@@ -394,7 +394,7 @@
           "settings": {
             "subheading": "",
             "heading": "FREE GIFT OFFER",
-            "textarea": "Get a free Copper Burl Carbon Fiber Ring or Copper Burl Carbon Fiber Bar Pendant on orders $100+<br><b>LIMITED TIME ONLY</b>",
+            "textarea": "Get a free Mystery Gift (ring or pendant valued at $250+ MSRP) on orders $100+<br><b>LIMITED TIME ONLY</b>",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",

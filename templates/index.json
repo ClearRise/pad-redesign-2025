@@ -23,7 +23,7 @@
         "desktop_height": 450,
         "mobile_height": 250,
         "focal_point": "center center",
-        "heading": "CYBER WEEK DEALS <br> END TODAY",
+        "heading": "HOLIDAY DEALS<br>LIVE NOW",
         "subtext": "Rings that tell your story",
         "button_text": "UP TO 50% OFF →",
         "button_link": "shopify://collections/all-products",
@@ -175,11 +175,11 @@
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
           "type": "advanced",
           "settings": {
-            "subheading": "UP TO 60% OFF TODAY",
+            "subheading": "UP TO 50% OFF",
             "heading": "METEORITE RINGS",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
-            "cta_link1": "shopify://collections/solid-meteorite-rings",
+            "cta_link1": "shopify://collections/meteorite-rings",
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify://shop_images/meteorite-ring.jpg",
@@ -308,44 +308,6 @@
         "gutter_size": 20,
         "space_above": true,
         "space_below": true
-      }
-    },
-    "promotional_section_B4Thwk": {
-      "type": "promotional-section",
-      "custom_css": [
-        "{padding-top: 5px;}",
-        ".desktop-only {display: block;}",
-        ".mobile-only {display: none;}",
-        "@media only screen and (max-width: 1024px) {.desktop-only {display: none; } .mobile-only {display: block; }}"
-      ],
-      "settings": {
-        "background_color": "#138f7e",
-        "text_color": "#ffffff",
-        "button_color": "#ff481b",
-        "desktop_height": 400,
-        "mobile_height": 250,
-        "focal_point": "center center",
-        "heading": "CYBER WEEK EXCLUSIVE",
-        "subtext": "Today Only",
-        "button_text": "UP TO 60% OFF →",
-        "button_link": "shopify://collections/solid-meteorite-rings",
-        "desktop_image": "shopify://shop_images/14.png",
-        "mobile_image": "shopify://shop_images/14_b4886a39-f54a-49c5-8174-e168bc3cbae0.png"
-      }
-    },
-    "featured_collection_gMka8V": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "<b>CYBER WEEK SALE</b><br>",
-        "home_featured_products": "solid-meteorite-rings",
-        "type_enable": false,
-        "subtitle_enable": true,
-        "subtitle_type": "two",
-        "per_row": 4,
-        "rows": 1,
-        "mobile_scrollable": false,
-        "view_all": false,
-        "divider": false
       }
     },
     "16466920156dc1f06b": {
@@ -837,8 +799,6 @@
     "promotional_section_jjdRLm",
     "slideshow",
     "1646694183f97c4822",
-    "promotional_section_B4Thwk",
-    "featured_collection_gMka8V",
     "16466920156dc1f06b",
     "featured_collections_UTDNtV",
     "rich-text",
