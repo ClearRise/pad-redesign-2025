@@ -11,12 +11,94 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "content_display": true
+      }
+    },
+    "rich_text_dCWNqQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NFkWxw": {
+          "type": "heading",
+          "settings": {
+            "title": "Concierge Shopping Experience"
+          }
+        },
+        "text_kAfkm6": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><span style=\"text-decoration:underline\"><strong>Schedule a free 1-on-1 consultation with one of our experts</strong></span></p>"
+          }
+        },
+        "text_3QxBMK": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Shopping online is quick, easy, and convenient. But sometimes you want personalized service and attention.</p><p>That's where the Patrick Adair Designs Concierge Experience comes in. We'll match you with a personal concierge who can work with you one-on-one to find the perfect piece.</p><p>Things our concierge can help you with:</p><ul><li>Find the perfect pieces that fits your exact style and taste</li><li>Design a fully-custom piece</li><li>Discover the perfect gift</li><li>Make personalized recommendations based on your likes (and dislikes)</li></ul><p>and more. . .</p><h2><strong>How It Works</strong></h2><p>1. Fill Out The Form Below</p><p>2. A Personal Concierge Will Get Back To You Within 24-48 Hours.</p><p>3. Receive Personalized Attention</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NFkWxw",
+        "text_kAfkm6",
+        "text_3QxBMK"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "contact_form_RHbzAH": {
+      "type": "contact-form",
+      "settings": {
+        "title": "Contact us",
+        "text": "<p>Please be as detailed as possible in regards to your custom inquiry.</p>",
+        "show_phone": false,
+        "narrow_column": true
+      }
+    },
+    "rich_text_Phhwhx": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TaRCU9": {
+          "type": "heading",
+          "settings": {
+            "title": "Visit Us In Person"
+          }
+        },
+        "text_Kr8T6f": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>Visit Us</strong></p><p><strong>2451 S 600 W</strong></p><p><strong>Ste 100</strong></p><p><strong>Salt Lake City, UT 84115 </strong></p><p><strong>Monday - Friday</strong></p><p><strong>BY APPOINTMENT ONLY</strong> </p><p><strong>BOOK BELOW</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TaRCU9",
+        "text_Kr8T6f"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "section_custom_liquid_kiQJcW": {
+      "type": "section-custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"tidycal-embed\" data-path=\"patrickadairdesigns\"></div><script src=\"https://asset-tidycal.b-cdn.net/js/embed.js\" async></script>"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_dCWNqQ",
+    "contact_form_RHbzAH",
+    "rich_text_Phhwhx",
+    "section_custom_liquid_kiQJcW"
   ]
 }
