@@ -90,7 +90,7 @@
     "section_custom_liquid_kiQJcW": {
       "type": "section-custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"tidycal-embed\" data-path=\"patrickadairdesigns\"></div><script src=\"https://asset-tidycal.b-cdn.net/js/embed.js\" async></script>"
+        "custom_liquid": "<div class=\"tidycal-embed\" data-path=\"patrickadairdesigns/design-consultation-in-person\"></div><script src=\"https://asset-tidycal.b-cdn.net/js/embed.js\" async></script>"
       }
     }
   },
