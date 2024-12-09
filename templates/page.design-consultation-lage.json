@@ -51,13 +51,22 @@
         "divider": false
       }
     },
-    "contact_form_RHbzAH": {
-      "type": "contact-form",
+    "173377129823ad4612": {
+      "type": "apps",
+      "blocks": {
+        "powerful_form_builder_app_block_yPkjc7": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"NjczNTA=\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "powerful_form_builder_app_block_yPkjc7"
+      ],
       "settings": {
-        "title": "Contact us",
-        "text": "<p>Please be as detailed as possible in regards to your custom inquiry.</p>",
-        "show_phone": false,
-        "narrow_column": true
+        "full_width": false,
+        "space_around": true
       }
     },
     "rich_text_Phhwhx": {
@@ -97,7 +106,7 @@
   "order": [
     "main",
     "rich_text_dCWNqQ",
-    "contact_form_RHbzAH",
+    "173377129823ad4612",
     "rich_text_Phhwhx",
     "section_custom_liquid_kiQJcW"
   ]
