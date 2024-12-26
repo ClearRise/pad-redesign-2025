@@ -50,7 +50,7 @@
           "type": "rich-text",
           "settings": {
             "title": "Current Lead Times",
-            "text": "<p>Below are our current lead times for all of our rings, grouped by ring type/material. Due to the Holiday Season, please note our lead times are a bit longer than normal. Please be patient with us as we work through the Holiday Rush! Some rings are on a different lead time and will be listed separately. If you are unsure of what section your ring belongs to, refer to the \"Delivery\" section of the specific product listing.</p>",
+            "text": "<p>Below are our current lead times for all of our rings, grouped by ring type/material. Due to the Holiday Season, please note our lead times are a bit longer than normal. Please be patient with us as we work through the Holiday Rush! Some rings are on a different lead time and will be listed separately. If you are unsure of what section your ring belongs to, refer to the \"Shipping Information\" section of the specific product listing.</p>",
             "align_text": "left"
           }
         },
