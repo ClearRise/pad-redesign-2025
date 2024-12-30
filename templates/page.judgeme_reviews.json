@@ -21,10 +21,27 @@
         "full_width": false,
         "space_around": true
       }
+    },
+    "1735586791937f88eb": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_all_reviews_page_XqFpya": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_page/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_all_reviews_page_XqFpya"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
     "main",
-    "17337712779db4757c"
+    "17337712779db4757c",
+    "1735586791937f88eb"
   ]
 }
