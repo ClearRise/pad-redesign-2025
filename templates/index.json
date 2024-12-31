@@ -617,9 +617,10 @@
       "block_order": [
         "judge_me_reviews_featured_carousel_6JayhQ"
       ],
+      "custom_css": [],
       "settings": {
         "full_width": true,
-        "space_around": false
+        "space_around": true
       }
     },
     "featured-collections": {
