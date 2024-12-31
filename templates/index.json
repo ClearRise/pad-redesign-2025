@@ -609,9 +609,8 @@
       "blocks": {
         "judge_me_reviews_featured_carousel_6JayhQ": {
           "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": true,
           "settings": {
-            "maxwidth": 1080
+            "maxwidth": 8000
           }
         }
       },
@@ -619,8 +618,8 @@
         "judge_me_reviews_featured_carousel_6JayhQ"
       ],
       "settings": {
-        "full_width": false,
-        "space_around": true
+        "full_width": true,
+        "space_around": false
       }
     },
     "featured-collections": {
