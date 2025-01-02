@@ -96,7 +96,7 @@
     "empty_cart_text3": "",
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
-    "show_gift_box": true,
+    "show_gift_box": false,
     "first_tier_progress": "You've unlocked a Free Gift!",
     "gift_box_title": "HOLIDAY SALE OFFER",
     "gift_box_text": "",
@@ -169,13 +169,6 @@
               "link_submenu": "https://patrickadairdesigns.com/collections/best-selling-wedding-bands-v1"
             }
           },
-          "scroll_navi_mobile_yw4tEk": {
-            "type": "scroll_navi_mobile",
-            "settings": {
-              "sub_menu": "<b><u>SALE</u></b>",
-              "link_submenu": "shopify://collections/all-products-holdouts"
-            }
-          },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
             "type": "scroll_navi_mobile",
             "settings": {
@@ -187,7 +180,7 @@
             "type": "announcement",
             "settings": {
               "text": "",
-              "link_text": "Holiday Sale | Up to 50% Off",
+              "link_text": "Buy One Get One Free | Limited Time Only",
               "link": "shopify://collections/all-products"
             }
           }
@@ -196,7 +189,6 @@
           "1524770014057",
           "30d9274d-f502-4710-bb39-866381456103",
           "966bc6e1-31db-4261-b34d-773ca4a79259",
-          "scroll_navi_mobile_yw4tEk",
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc",
           "announcement_BNdmQX"
         ],
