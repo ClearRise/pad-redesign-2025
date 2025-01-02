@@ -598,6 +598,7 @@
         "1646694979babf5da2-0",
         "1646694979babf5da2-1"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
