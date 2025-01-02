@@ -61,8 +61,8 @@
         "icon_8h9qxy"
       ],
       "settings": {
-        "text_1": "",
-        "text_2": "",
+        "text_1": "Add two items to your cart and get the cheaper one for FREE (excludes Matching Wedding Band Sets)",
+        "text_2": "Add another item to your cart and get the cheaper one for FREE (excludes Matching Wedding Band Sets)",
         "show_entry": false,
         "text_entry": "Total Entries with Purchase:",
         "multiplier": "2",
@@ -72,17 +72,6 @@
     },
     "1726584996fe50afac": {
       "type": "apps",
-      "blocks": {
-        "fondue_cashback_promotions_cashback_module_taxqfx": {
-          "type": "shopify://apps/fondue-cashback-promotions/blocks/cashback-module/dcfd972d-99c5-4526-b55b-2d76e990dec8",
-          "disabled": true,
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "fondue_cashback_promotions_cashback_module_taxqfx"
-      ],
       "settings": {
         "full_width": false,
         "space_around": false
