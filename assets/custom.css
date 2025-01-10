@@ -11,7 +11,7 @@ h2{
 .cart-widget-container {
   display: none!important;
 }
-.slr-skeleton-loader{
+.slr-skeleton-loader, .slr-widget--loading{
   display: none!important;
 }
 #dynamic-checkout-cart .shopify-cleanslate .p28_J2fRvZNDqyZkZ2H9 {
