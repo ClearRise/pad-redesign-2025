@@ -23,12 +23,12 @@
         "desktop_height": 500,
         "mobile_height": 250,
         "focal_point": "center center",
-        "heading": "BUY ONE <br>GET ONE FREE",
-        "subtext": "Ring in the New Year with a Special Offer",
+        "heading": "VALENTINE'S<br>DAY SALE",
+        "subtext": "Up to 20% off <br>Free Gift on Orders $175+",
         "button_text": "SHOP NOW →",
         "button_link": "shopify://collections/all-products",
-        "desktop_image": "shopify://shop_images/Halo_Rings_Adjusted_2_mobile.png",
-        "mobile_image": "shopify://shop_images/Halo_Rings_Adjusted_2_mobile.png"
+        "desktop_image": "shopify://shop_images/No_text_8525d9f1-0bfc-484d-b706-3f71fcb38766.png",
+        "mobile_image": "shopify://shop_images/No_text_ca51f57c-3470-4c62-87af-0b98986dc88f.png"
       }
     },
     "promotional_section_jjdRLm": {
@@ -129,7 +129,7 @@
         "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "Up to 20% off",
             "heading": "GLOWSTONE  SERIES",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
@@ -152,7 +152,7 @@
         "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "Up to 20% off",
             "heading": "WEDDING   BANDS",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
@@ -175,7 +175,7 @@
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "Up to 20% off",
             "heading": "METEORITE RINGS",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
@@ -198,7 +198,7 @@
         "advanced_gaqMVW": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "Up to 20% off",
             "heading": "WOMEN'S BANDS",
             "textarea": "<u>SHOP NOW</u>",
             "cta_text1": "",
