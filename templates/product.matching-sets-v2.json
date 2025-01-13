@@ -19,6 +19,10 @@
             "custom_badge": "VALENTINE'S SALE OFFER"
           }
         },
+        "judge_me_reviews_preview_badge_wyndin": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
           "type": "text",
           "settings": {
@@ -247,6 +251,7 @@
       },
       "block_order": [
         "price",
+        "judge_me_reviews_preview_badge_wyndin",
         "94c49419-9d53-4cfe-8c63-edaf9a145c94",
         "separator",
         "variant_picker",
@@ -519,12 +524,6 @@
         "padding_bottom": 5
       }
     },
-    "section_custom_liquid_aLFMFT": {
-      "type": "section-custom-liquid",
-      "settings": {
-        "custom_liquid": "<style>\n    .slr-review {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n    }\n    .slr-main-title {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n        font-size: 32.3px;\n        font-weight: 400;\n    }\n    .slr-write-review__button, .slr-create-review__form__submit, .slr-no-reviews-message__button, .slr-create-review__form__cancel {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n        text-transform: uppercase;\n    }\n</style>\n\n<div class=\"page-width\">\n    <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"></div>\n</div>"
-      }
-    },
     "sub": {
       "type": "product-full-width",
       "blocks": {
@@ -562,6 +561,22 @@
     "collection-return": {
       "type": "collection-return",
       "settings": {}
+    },
+    "173679107864376e74": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_amtHQi": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_amtHQi"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
@@ -571,10 +586,10 @@
     "promo_grid_QUweUP",
     "product_img_with_txt",
     "product_how_to_work",
-    "section_custom_liquid_aLFMFT",
     "sub",
     "product-recommendations",
     "recently-viewed",
-    "collection-return"
+    "collection-return",
+    "173679107864376e74"
   ]
 }
