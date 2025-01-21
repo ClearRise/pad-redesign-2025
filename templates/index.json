@@ -233,7 +233,7 @@
             "width": "100",
             "height": 420,
             "text_size": 105,
-            "text_align": "vertical-center horizontal-center",
+            "text_align": "vertical-top horizontal-center",
             "focal_point": "bottom",
             "dark_overlay": 26,
             "color_accent": "#b30000",
