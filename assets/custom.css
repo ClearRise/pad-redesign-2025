@@ -2226,3 +2226,31 @@ label.variant__label.custom_label{
     display:block;
   }
 }
+
+.mpg-swatch-square.mpg-swatch__option-set{
+  display: none!important;
+}
+.mpg-button.mpg-swatch__label span{
+    font-weight:bold!important;
+}
+.mpg-button.mpg-swatch__nav{
+  gap: 10px!important;
+}
+.mpg-button.mpg-swatch__option {
+    padding: 7px 15px!important;
+    border-radius: 0px!important;
+}
+
+.mpg-button.mpg-swatch__option.selected {
+    color: #000!important;
+    background-color: #fff!important;
+    border-color: #138f7e!important;
+    box-shadow: 0 0 0 2px #138f7e!important;
+}
+
+.mpg-button.mpg-swatch__option:hover{
+    color: #000!important;
+    background-color: #fff!important;
+    border-color: #138f7e!important;
+    box-shadow: 0 0 0 2px #138f7e!important;  
+}
