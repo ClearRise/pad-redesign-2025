@@ -2230,6 +2230,11 @@ label.variant__label.custom_label{
 .mpg-swatch-square.mpg-swatch__option-set{
   /* display: none!important; */
 }
+
+.mpg-swatch-square.mpg-swatch__nav {
+    gap: 7px!important;
+}
+
 .mpg-button.mpg-swatch__label span{
     font-weight:bold!important;
 }
