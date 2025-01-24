@@ -2239,9 +2239,18 @@ label.variant__label.custom_label{
   border-radius: 0px!important;
 }
 
+.mpg-swatch-square.mpg-swatch__option:hover{
+  border-color: #138f7e !important;
+}
 .mpg-swatch-square.mpg-swatch__option div{
   border-radius: 0px!important;
 }
+
+.mpg-swatch-square.mpg-swatch__option.selected {
+    border-width: 2px !important;
+    border-color: #138f7e !important;
+}
+
 .mpg-button.mpg-swatch__label span{
     font-weight:bold!important;
 }
