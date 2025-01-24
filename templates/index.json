@@ -23,10 +23,10 @@
         "desktop_height": 500,
         "mobile_height": 250,
         "focal_point": "center center",
-        "heading": "VALENTINE'S<br>DAY SALE",
-        "subtext": "Up to 20% off<br> Free Gift on Orders $175+",
+        "heading": "VALENTINE'SDAY SALE",
+        "subtext": "Up to 20% off Free Gift on Orders $175+",
         "button_text": "SHOP NOW →",
-        "button_link": "shopify://collections/all-products",
+        "button_link": "shopify://collections/all-products-20-holdouts",
         "desktop_image": "shopify://shop_images/No_text_8525d9f1-0bfc-484d-b706-3f71fcb38766.png",
         "mobile_image": "shopify://shop_images/No_text_ca51f57c-3470-4c62-87af-0b98986dc88f.png"
       }
@@ -225,7 +225,7 @@
             "heading": "VALENTINE'S DAY SALE",
             "textarea": "Get a Free Gift on orders $175+",
             "cta_text1": "SHOP NOW →",
-            "cta_link1": "shopify://collections/all-products",
+            "cta_link1": "shopify://collections/all-products-20-holdouts",
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify://shop_images/Valentine_s_Day_V1_71e5df64-a3aa-4dae-a2e9-cbd42dc4cf75.png",
