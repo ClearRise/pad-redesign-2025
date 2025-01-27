@@ -866,7 +866,7 @@
   </div>
 </div>
 
-                                  <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     if (window.location.href.includes("products_preview")) {
       const moneyContainer = document.querySelector("div.product-block.product-block--price");
@@ -874,9 +874,11 @@
       const callback = (mutationList, observer) => {
         for (const mutation of mutationList) {
           if (mutation.type === "childList") {
-            console.log("A child node has been added or removed.");
+            var price_text = moneyContainer.querySelector("span.money").innerHTML;
+            moneyContainer.querySelector("span.money").innerHTML = price_text..replace(/,/g, "").replace(/\.00$/, "");
+            {% comment %} console.log("A child node has been added or removed."); {% endcomment %}
           } else if (mutation.type === "attributes") {
-            console.log(`The ${mutation.attributeName} attribute was modified.`);
+            {% comment %} console.log(`The ${mutation.attributeName} attribute was modified.`); {% endcomment %}
           }
         }
       };
