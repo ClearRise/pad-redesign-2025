@@ -865,3 +865,26 @@
     </div>
   </div>
 </div>
+
+                                  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.href.includes("products_preview")) {
+      const moneyContainer = document.querySelector("div.product-block.product-block--price");
+      const config = { attributes: true, childList: true, subtree: true };
+      const callback = (mutationList, observer) => {
+        for (const mutation of mutationList) {
+          if (mutation.type === "childList") {
+            console.log("A child node has been added or removed.");
+          } else if (mutation.type === "attributes") {
+            console.log(`The ${mutation.attributeName} attribute was modified.`);
+          }
+        }
+      };
+
+      if (moneyContainer) {
+        const observer = new MutationObserver(callback);
+        observer.observe(moneyContainer, config);
+      }
+    }
+  });
+</script>
