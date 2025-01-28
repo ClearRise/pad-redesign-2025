@@ -879,7 +879,7 @@
             if (price_text.includes(".00")) {
               moneyContainer.querySelector("span.money").innerHTML = price_text.replace(/,/g, "").replace(/\.00$/, "");
             }
-            console.log("test A child node has been added or removed.");
+            console.log("test - 3 A child node has been added or removed.");
           } else if (mutation.type === "attributes") {
             console.log(`test The ${mutation.attributeName} attribute was modified.`);
           }
