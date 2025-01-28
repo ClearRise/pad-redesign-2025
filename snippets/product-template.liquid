@@ -874,7 +874,7 @@
       const callback = (mutationList, observer) => {
         for (const mutation of mutationList) {
           if (mutation.type === "childList") {
-            {% comment %} console.log(moneyContainer.querySelector("span.money"), "moneyContainer.querySelector(span.money)"); {% endcomment %}
+            console.log(moneyContainer.querySelector("span.money"), "moneyContainer.querySelector(span.money)");
             {% comment %} var price_text = moneyContainer.querySelector("span.money").innerHTML; {% endcomment %}
             {% comment %} moneyContainer.querySelector("span.money").innerHTML = price_text..replace(/,/g, "").replace(/\.00$/, ""); {% endcomment %}
             console.log("test A child node has been added or removed.");
