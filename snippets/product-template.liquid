@@ -629,7 +629,7 @@
                         <div
                           class="engraving_div"
                           {% if product.type contains 'Ring' or product.type contains 'Bands' %}
-                            {% if product.tags contains 'hide_engrave' %}
+                            {% if product.tags contains 'hide_engrave' or product.metafields.custom.hide_engrave %}
                               style="visibility: hidden; height: 0;"
                             {% endif %}
                           {% else %}
