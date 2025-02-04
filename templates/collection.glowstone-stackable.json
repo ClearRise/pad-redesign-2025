@@ -87,7 +87,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<h1><strong>SHOP ALL STACKABLE RINGS</strong></h1>"
+            "text": "<h2><strong>SHOP ALL STACKABLE GLOWSTONE RINGS</strong></h2>"
           }
         }
       },
@@ -95,7 +95,7 @@
         "text_Up6xTw"
       ],
       "settings": {
-        "align_text": "left",
+        "align_text": "center",
         "narrow_column": true,
         "divider": false
       }
