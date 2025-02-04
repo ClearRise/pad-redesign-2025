@@ -60,6 +60,21 @@
       ],
       "settings": {}
     },
+    "featured_collection_hgQGGg": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "NEW STACKABLE RINGS",
+        "home_featured_products": "opal-glowstone-stackable-rings",
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "per_row": 3,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
     "replo_trust_icons_fy9XYw": {
       "type": "replo-trust-icons",
       "disabled": true,
@@ -72,14 +87,13 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<h2><strong>LIMITED TIME OFFER</strong></h2><p>Buy One Get One Free (of equal or lesser value) </p><p>AND</p><p>Spend $250 and get $50 back</p><p><strong>This Weekend ONLY</strong></p>"
+            "text": "<h1><strong>SHOP ALL STACKABLE RINGS</strong></h1>"
           }
         }
       },
       "block_order": [
         "text_Up6xTw"
       ],
-      "disabled": true,
       "settings": {
         "align_text": "left",
         "narrow_column": true,
@@ -195,6 +209,7 @@
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
     "replo_trust_icons_white_backg_Wc7kJ7",
+    "featured_collection_hgQGGg",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
     "collection-header",
