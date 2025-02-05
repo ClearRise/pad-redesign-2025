@@ -1,0 +1,661 @@
+<style>
+.navidium-widget {
+    font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+.navidium-widget * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navidium-widget .container {
+    width: 100%;
+    max-width: 36rem;
+}
+
+.navidium-widget .card {
+    background-color: white;
+    border-radius: 0.75rem;
+    border: 1px solid rgb(229, 231, 235);
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.navidium-widget h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(17, 24, 39);
+    margin-bottom: 0.75rem;
+}
+
+.navidium-widget .protection-content {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.navidium-widget .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+}
+
+.navidium-widget .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.navidium-widget .details {
+    flex: 1;
+}
+
+.navidium-widget .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.navidium-widget .title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgb(17, 24, 39);
+}
+
+.navidium-widget .price-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.navidium-widget .price {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgb(17, 24, 39);
+}
+
+.navidium-widget .toggle {
+    position: relative;
+    display: inline-block;
+    width: 2.75rem;
+    height: 1.5rem;
+}
+
+.navidium-widget .toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.navidium-widget .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(109, 113, 117);
+    transition: .2s;
+    border-radius: 999px;
+}
+
+.navidium-widget .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.25rem;
+    width: 1.25rem;
+    left: 0.125rem;
+    bottom: 0.125rem;
+    background-color: white;
+    transition: .2s;
+    border-radius: 50%;
+}
+
+.navidium-widget input:checked + .slider {
+    background-color: #00875A;
+}
+
+.navidium-widget input:checked + .slider:before {
+    transform: translateX(1.25rem);
+}
+
+.navidium-widget p {
+    font-size: 0.875rem;
+    color: rgb(75, 85, 99);
+    line-height: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+.navidium-widget .learn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: rgb(75, 85, 99);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navidium-widget .learn-more svg {
+    width: 1rem;
+    height: 1rem;
+    color: currentColor;
+}
+
+.navidium-widget .price-loader {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.navidium-widget .price {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+</style>
+{%- if settings.shipping_protection_product != blank -%}
+  {%- assign protection_product = all_products[settings.shipping_protection_product] -%}
+  <div class="navidium-widget">
+    <div class="container">
+      <div class="card">
+        <h2>{{ protection_product.title }}</h2>
+        
+        <div class="protection-content">
+          <div class="icon">
+            {%- if protection_product.featured_image -%}
+              <img src="{{ protection_product.featured_image | img_url: '40x' }}" alt="{{ protection_product.title }}">
+            {%- else -%}
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+              </svg>
+            {%- endif -%}
+          </div>
+          
+          <div class="details">
+            <div class="header">
+              <div class="title">Protection from Damage, Loss & Theft</div>
+              <div class="price-toggle">
+                <span class="price">{{ protection_product.price | money }}</span>
+                <label class="toggle">
+                  <input type="checkbox" name="attributes[shipping_protection]" value="{{ protection_product.id }}">
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+            
+            <p>{{ settings.shipping_protection_description }}</p>
+
+            <a href="{{ settings.shipping_protection_learn_more_link }}" target="_blank">
+              <button class="learn-more">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 16v-4"/></path>
+                  <path d="M12 8h.01"/></path>
+                </svg>
+                Learn More
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+<script>
+  
+function debounce(func, wait) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
+  
+class NavidiumProtection {
+  constructor() {
+    this.apiUrl = 'https://app.navidiumapp.com/api/nvd-widget-v-n-1.php?shop_url=patrick-adair-designs.myshopify.com';
+    this.protectionData = null;
+    this.isEnabled = localStorage.getItem('navidium_protection') !== 'disabled';
+    this.currentVariantId = null;
+    this.priceElement = document.querySelector('.navidium-widget .price-toggle .price');
+    this.descriptionElement = document.querySelector('.navidium-widget .details p');
+    this.overlay = document.querySelector('.overlay');
+    this.isUpdating = false;
+    this.updateTimeout = null;
+    this.debouncedUpdateCart = debounce(this.updateCart.bind(this), 500); // Debounce cart updates
+    this.cartSubtotalElement = document.querySelector('.cart-subtotal');
+    this.originalCartTotal = 0;
+  }
+
+  async init() {
+    await this.updateOriginalCartTotal(); // Fetch and store original cart total first
+    try {
+      const response = await fetch(this.apiUrl);
+      if (!response.ok) {
+        throw new Error(`API request failed with status ${response.status}`);
+      }
+      const data = await response.json();
+      sessionStorage.setItem('navidium_data', JSON.stringify(data));
+      this.protectionData = data;
+    } catch (error) {
+      console.error('Failed to fetch Navidium data:', error);
+      this.showError("Failed to load shipping protection data. Please try again later.");
+      return;
+    }
+  
+    this.bindEvents();
+    
+    if (this.isEnabled) {
+      this.showOverlay();
+      await this.updateProtection();
+      this.hideOverlay();
+    }
+    
+    // Update description and price display
+    this.updateDescription();
+    await this.updatePriceDisplay();
+    
+    // Update cart total on page load based on toggle state
+    await this.updateCartTotal(this.isEnabled);
+  }
+
+  calculateProtectionCost(cartTotal) {
+    const percentage = this.protectionData.nvd_protection_type_value;
+    let protectionCost = cartTotal * (percentage / 100);
+    return Math.ceil(protectionCost / 0.75) * 0.75;
+  }
+
+  calculateProtectionVariant(cartTotal) {
+    const protectionCost = this.calculateProtectionCost(cartTotal);
+    const cost = protectionCost;
+    console.log(cost);
+    return this.protectionData.nvd_variants[cost] || this.protectionData.nvd_variants["0.75"];
+  }
+
+  formatPrice(price) {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD'
+    }).format(price);
+  }
+
+  showPriceLoader() {
+    if (this.priceElement) {
+      this.priceElement.innerHTML = '<span class="price-loader"></span>';
+    }
+  }
+
+  showOverlay() {
+    if (this.overlay) {
+      this.overlay.style.display = 'block';
+    }
+  }
+
+  hideOverlay() {
+    if (this.overlay) {
+      this.overlay.style.display = 'none';
+    }
+  }
+
+  updateDescription() {
+    if (!this.descriptionElement || !this.protectionData) return;
+    
+    const description = this.isEnabled 
+      ? this.protectionData.nvd_description 
+      : this.protectionData.nvd_message;
+    
+    this.descriptionElement.textContent = description;
+  }
+
+  async updateCart() {
+    console.log("Updating cart...");
+    if (this.isUpdating) {
+      console.log("Update already in progress, skipping...");
+      return;
+    }
+    this.isUpdating = true;
+  
+    try {
+      const response = await fetch('/cart.js');
+      const cart = await response.json();
+      console.log("Cart data fetched:", cart);
+      
+      const cartDrawerItems = document.querySelector('cart-drawer-items');
+      if (cartDrawerItems) {
+        const sectionResponse = await fetch(`?sections=cart-drawer,cart-icon-bubble`);
+        const sectionsData = await sectionResponse.json();
+        
+        if (sectionsData['cart-drawer']) {
+          cartDrawerItems.innerHTML = sectionsData['cart-drawer'];
+        }
+      }
+
+      document.dispatchEvent(new CustomEvent('cart:refresh'));
+      document.dispatchEvent(new CustomEvent('cart:build'));
+      document.dispatchEvent(new CustomEvent('cart.requestComplete'));
+      document.dispatchEvent(new CustomEvent('cart:updated', {
+        detail: { cart: cart }
+      }));
+    } catch (error) {
+      console.error('Error updating cart:', error);
+    } finally {
+      this.isUpdating = false;
+      console.log("Cart update completed.");
+    }
+  }
+
+  async addProtection(variantId) {
+    try {
+      const response = await fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          items: [{
+            id: variantId,
+            quantity: 1,
+            properties: {
+              '_protection_type': 'navidium'
+            }
+          }]
+        })
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      window.location.href = "/checkout";
+
+    } catch (error) {
+      console.error('Failed to add protection:', error);
+    }
+  }
+
+  async removeProtection() {
+    try {
+      const cartResponse = await fetch('/cart.js');
+      const cart = await cartResponse.json();
+
+      const protectionItem = cart.items.find(item => 
+        Object.values(this.protectionData.nvd_variants).includes(item.variant_id.toString())
+      );
+
+      if (protectionItem) {
+    
+        const removeRequest = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json;',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify({
+            id: protectionItem.key.toString(),
+            quantity: 0
+          })
+        }
+        fetch('/cart/change.js', removeRequest)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data)
+            localStorage.removeItem('nvd_opted_out')
+            localStorage.removeItem('nvdVariant')
+            localStorage.removeItem('cart_protection')
+            //localStorage.removeItem('nvdProtectionPrice')
+            window.location.reload();
+          })
+      }
+
+      const protectionWidget = document.querySelector('.navidium-widget');
+      if (!protectionWidget) return;
+      const toggle = protectionWidget.querySelector('.toggle input');
+      toggle.checked = false; // Set false
+      const event = new Event('change', { bubbles: true });
+      toggle.dispatchEvent(event);
+      
+    } catch (error) {
+      console.error('Failed to remove protection:', error);
+    }
+  }
+
+  async updateProtection() {
+    if (this.isUpdating) {
+      console.log("Protection update already in progress, skipping...");
+      return;
+    }
+    this.isUpdating = true;
+  
+    try {
+      const cartResponse = await fetch('/cart.js');
+      const cart = await cartResponse.json();
+      const cartTotal = cart.total_price / 100;
+
+      const protectionCost = this.calculateProtectionCost(cartTotal);
+  
+      if (!this.isEnabled) {
+        //await this.removeProtection();
+        //localStorage.removeItem('nvd_opted_out');
+        localStorage.removeItem('nvdVariant');
+        localStorage.removeItem('cart_protection');
+        //localStorage.removeItem('nvdProtectionPrice');
+        localStorage.setItem("nvd_opted_out", "true");
+        localStorage.removeItem("nvd_opted_in");
+        this.currentVariantId = null;
+        return;
+      }
+  
+      const newVariantId = this.calculateProtectionVariant(cartTotal);
+  
+      if (this.currentVariantId !== newVariantId) {
+        if (this.currentVariantId) {
+          //await this.removeProtection();
+          //localStorage.removeItem('nvd_opted_out');
+          localStorage.removeItem('nvdVariant');
+          localStorage.removeItem('cart_protection');
+          //localStorage.removeItem('nvdProtectionPrice');
+          localStorage.removeItem("nvd_opted_in");
+          localStorage.setItem("nvd_opted_out", "true");
+        }
+        //await this.addProtection(newVariantId);
+        let protectionSwitch = document.querySelector(".price-toggle");
+        protectionSwitch.dataset.variant = newVariantId;
+        
+        localStorage.setItem('cart_protection', newVariantId);
+        localStorage.setItem('nvdVariant', newVariantId);
+        localStorage.setItem('nvdProtectionPrice', protectionCost);
+        localStorage.setItem("nvd_opted_in", "true");
+        localStorage.setItem("nvd_running", "true");
+        localStorage.removeItem("nvd_opted_out");
+        
+        this.currentVariantId = newVariantId;
+      }
+    } catch (error) {
+      console.error('Error updating protection:', error);
+    } finally {
+      this.isUpdating = false;
+    }
+  }
+
+  async updateOriginalCartTotal() {
+    const cartResponse = await fetch('/cart.js');
+    const cart = await cartResponse.json();
+    this.originalCartTotal = cart.total_price / 100; // Store original total
+  }
+
+  async updateCartTotal(isEnabled) {
+    try {
+      const response = await fetch('/cart.js');
+      const cart = await response.json();
+      const cartTotal = cart.total_price / 100; // Convert to dollars
+
+      if (isEnabled) {
+        const protectionCost = this.calculateProtectionCost(cartTotal);
+
+        // Update the cart total with the protection cost
+        const newCartTotal = cartTotal + protectionCost;
+        console.log(newCartTotal);
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        // Update the cart total display on the page
+        if (this.cartSubtotalElement) {
+          this.cartSubtotalElement.textContent = this.formatPrice(newCartTotal);
+        }
+      } else {
+        // If protection is not enabled, just display the original cart total
+        if (this.cartSubtotalElement) {
+          this.cartSubtotalElement.textContent = this.formatPrice(cartTotal);
+        }
+      }
+    } catch (error) {
+      console.error('Failed to update cart total:', error);
+    }
+  }
+
+  async reLoadToggle(isEnabled) {
+    const protectionWidget = document.querySelector('.navidium-widget');
+    if (!protectionWidget) return;
+    const toggle = protectionWidget.querySelector('.toggle input');
+  
+    if (isEnabled) {
+        toggle.checked = false;
+        await new Promise(resolve => setTimeout(resolve, 500));
+        toggle.checked = true;
+    } else {
+        toggle.checked = true;
+        await new Promise(resolve => setTimeout(resolve, 500));
+        toggle.checked = false;
+    }
+    const event = new Event('change', { bubbles: true });
+    toggle.dispatchEvent(event);
+  }
+
+  async updatePriceDisplay() {
+    if (!this.priceElement) return;
+
+    try {
+      const cartResponse = await fetch('/cart.js');
+      const cart = await cartResponse.json();
+      const cartTotal = cart.total_price / 100;
+
+      // Add a delay before updating the cart total
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Adjust time as necessary
+      const protectionCost = this.calculateProtectionCost(cartTotal);
+      this.priceElement.textContent = this.formatPrice(protectionCost);
+
+      // Update the subtotal with protection cost added
+      const toggleInput = document.querySelector('.navidium-widget .toggle input');
+      //await this.updateCartTotal(toggleInput.checked); // Update based on toggle state
+    } catch (error) {
+      console.error('Failed to update price display:', error);
+      this.priceElement.textContent = 'Error';
+    }
+  }
+
+  bindEvents() {
+    const toggleInput = document.querySelector('.navidium-widget .toggle input');
+    
+    if (toggleInput) {
+      toggleInput.checked = this.isEnabled;
+
+      toggleInput.addEventListener('change', async (e) => {
+        try {
+          this.showOverlay();
+          this.isEnabled = e.target.checked;
+          localStorage.setItem('navidium_protection', this.isEnabled ? 'enabled' : 'disabled');
+          await this.updateProtection();
+          await this.updatePriceDisplay();
+          await this.updateCartTotal(this.isEnabled); // Update cart total based on toggle state
+        } catch (error) {
+          console.error('Toggle change error:', error);
+        } finally {
+          this.hideOverlay();
+        }
+      });
+      
+      // Initial update of cart total based on current state
+      (async () => await this.updateCartTotal(this.isEnabled))();
+      (async () => await this.updatePriceDisplay());
+    }
+    
+    // Debounce cart update events
+    const debouncedUpdate = debounce(async () => {
+      await this.updateProtection();
+      await this.updatePriceDisplay();
+      await this.updateCartTotal(this.isEnabled);
+    }, 500);
+
+    // Debounce cart update events
+    const debouncedUpdateQTY = debounce(async () => {
+      await this.updateProtection();
+      await this.updatePriceDisplay();
+      await this.reLoadToggle(this.isEnabled);
+      await this.updateCartTotal(this.isEnabled);
+      document.dispatchEvent(new CustomEvent('cart:refresh'));
+      document.dispatchEvent(new CustomEvent('cart:build'));
+    }, 500);
+
+    document.addEventListener('cart.requestComplete', debouncedUpdate);
+    document.addEventListener('cart:quantity.cart-page', debouncedUpdateQTY);
+    document.addEventListener('cart:updated', async () => {
+      await this.updateProtection();
+      await this.updatePriceDisplay();
+      // Update cart total on cart update
+      await this.updateCartTotal(this.isEnabled);
+    });
+  }
+}
+  
+document.addEventListener('DOMContentLoaded', () => {
+  const navidiumProtection = new NavidiumProtection();
+  navidiumProtection.init();
+
+  const checkoutButton = document.querySelector("[name='checkout']");
+  if (checkoutButton) {
+    checkoutButton.addEventListener("click", async function(event) {
+      event.preventDefault(); // Prevent form submission for debugging
+
+      const toggleInput = document.querySelector('.navidium-widget .toggle input');
+      if (toggleInput && toggleInput.checked) {
+        let protectionSwitch = document.querySelector(".price-toggle");
+        let variantID = parseInt(protectionSwitch.dataset.variant);
+        navidiumProtection.addProtection(variantID);
+      } else {
+        navidiumProtection.removeProtection();
+        window.location.href = "/checkout";
+      }
+    });
+  } else {
+    console.error("Checkout button not found!"); // Debugging
+  }
+});
+
+document.querySelector('.learn-more').addEventListener('click', function(e) {
+    // Get the parent anchor element
+    //const parentAnchor = this.closest('a');
+    
+    // Get the href from parent anchor
+    //const url = parentAnchor.getAttribute('href');
+    
+    // Open the URL
+    //window.location.href = url;
+    
+    // Prevent default button click behavior
+    //e.preventDefault();
+});
+
+</script>
