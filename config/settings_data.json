@@ -121,6 +121,8 @@
     "third_spend_progress": "",
     "third_product-handle-1": "green-glow-burl-carbon-fiber-ring-1",
     "third_product-handle-2": "green-glow-burl-carbon-fiber-bar-pendant-1",
+    "shipping_protection_product": "navidium-shipping-protection",
+    "shipping_protection_learn_more_link": "shopify://pages/navidium-shipping-protection",
     "cart_additional_buttons": true,
     "cart_notes_enable": false,
     "cart_terms_conditions_enable": false,
