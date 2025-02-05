@@ -142,11 +142,11 @@
 {% assign upsellAtc = "Add to cart" %}
 
 <div class="dgCartUpsell dgCartUpSellWrapper  appear-delay-3" id="cart_gift_wrap">
-    <div class="overlay" style="display:none;">
+    <!-- <div class="overlay" style="display:none;">
       <div class="overlay__inner">
           <div class="overlay__content"><span class="spinner"></span></div>
       </div>
-    </div>
+    </div> -->
 
     {% assign FirstTierAmountRaw = settings.cart_threshold_amount | times:100 %}
     {% assign SecondTierMinRaw = 100000000000 %}
