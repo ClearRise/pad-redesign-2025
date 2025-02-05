@@ -75,7 +75,7 @@
                         {% endif %}
                     </div>
                     <div class="drawer__footer appear-animation appear-delay-4 black_txt">
-                  {% if false %}
+                  {% if true %}
                       <div class="appear-animation appear-delay-3 pad_10 hide" id="gift_wrap">
                         <div data-discounts>
                             {% if cart.cart_level_discount_applications != blank %}
@@ -120,6 +120,9 @@
                             
                         </div>  
                 {% endif %}
+                        {%- if settings.shipping_protection_product != blank and template != 'cart' -%}
+                          {%- render 'shipping-protection-product' -%}
+                        {%- endif -%}
                         <div data-discounts>
                             {% if cart.cart_level_discount_applications != blank %}
                                 <div class="cart__discounts cart__item-sub cart__item-row">
@@ -157,7 +160,7 @@
                                     </label>
                                 </div>
                             {% endif %}
-                             <div class='nvd-mini'></div> 
+                             <!-- <div class='nvd-mini'></div>  -->
                             <div class="cart__checkout-wrapper ">
                                 <button type="submit" name="checkout" data-terms-required="{{ settings.cart_terms_conditions_enable }}" class="btn cart__checkout">
                                     {{ 'cart.general.checkout' | t }}
