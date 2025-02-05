@@ -1791,7 +1791,7 @@ lazySizesConfig.expFactor = 4;
         if (el) {
           el.classList.add('is-loading');
           const loader = document.querySelector('.overlay');
-          loader.style.display = 'block';
+          //loader.style.display = 'block';
         }
         if (dataEngravingValue && dataProtectionValue) {
           this.updateOtherProductQuantity(key, qty, dataEngravingValue, dataProtectionValue, comp_val);
