@@ -1225,6 +1225,39 @@
         "label": "Gift Product 2"
       },
       {
+        "type": "header",
+        "content": "Navidium Shipping Protection"
+      },
+      {
+        "id": "shipping_protection_product",
+        "type": "product",
+        "label": "Select Shipping Protection Product",
+        "info": "Choose the product to use for Navidium Shipping Protection"
+      },
+      {
+        "id": "shipping_protection_description",
+        "type": "textarea",
+        "label": "Description Text (When Selected)",
+        "default": "Get peace of mind with Navidium's Delivery Guarantee in the event your delivery is damaged, stolen, or lost during transit"
+      },
+      {
+        "id": "shipping_protection_deselect_description",
+        "type": "textarea",
+        "label": "Description Text (When Deselected)",
+        "default": "By Deselecting Shipping Protection, we will not be liable for lost or stolen packages"
+      },
+      {
+        "id": "shipping_protection_price_label",
+        "type": "text",
+        "label": "Price Label",
+        "default": "Protection from Damage, Loss & Theft"
+      },
+      {
+        "id": "shipping_protection_learn_more_link",
+        "type": "url",
+        "label": "Learn More Link"
+      },
+      {
         "type": "select",
         "id": "cart_icon",
         "label": "Cart icon",
