@@ -646,16 +646,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.querySelector('.learn-more').addEventListener('click', function(e) {
     // Get the parent anchor element
-    //const parentAnchor = this.closest('a');
+    const parentAnchor = this.closest('a');
     
     // Get the href from parent anchor
-    //const url = parentAnchor.getAttribute('href');
+    const url = parentAnchor.getAttribute('href');
     
     // Open the URL
-    //window.location.href = url;
+    window.location.href = url;
     
     // Prevent default button click behavior
-    //e.preventDefault();
+    e.preventDefault();
 });
 
 </script>
