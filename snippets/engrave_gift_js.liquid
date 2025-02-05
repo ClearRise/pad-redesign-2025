@@ -283,7 +283,7 @@ function _getCart() {
 
 function updatedgCartUpsell($remove_this, $remove) {
     const loader = document.querySelector('.overlay');
-    loader.style.display = 'block';
+    //loader.style.display = 'block';
 
     fetch("".concat(theme.routes.cartPage, "?").concat("timestamp=").concat(Date.now()), {
         credentials: 'same-origin',
