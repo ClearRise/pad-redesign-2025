@@ -272,6 +272,9 @@
             {% if item.product.tags contains 'hidden' or item.product.tags contains 'OPTIONS_HIDDEN_PRODUCT' %}
               {% assign hidden = true %}
             {% endif %}
+            {% if item.product.title contains 'Navidium Shipping Protection' %}
+              {% assign hidden = true %}
+            {% endif %}
             {% if match_gift_product %}
               {% assign hidden = true %}
             {% endif %}
