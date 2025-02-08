@@ -1054,6 +1054,39 @@
       },
       {
         "type": "header",
+        "content": "Collection based Gift feature",
+        "info": "Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_collection_based_gifts",
+        "label": "Enable Collection-Based Gifts",
+        "default": false,
+        "info": "Enable to show gifts based on collections instead of cart threshold"
+      },
+      {
+        "type": "collection_list",
+        "id": "first_tier_collections",
+        "label": "First Tier Collections",
+        "limit": 5,
+        "info": "Select up to 5 collections for first tier gifts"
+      },
+      {
+        "type": "collection_list",
+        "id": "second_tier_collections",
+        "label": "Second Tier Collections",
+        "limit": 5,
+        "info": "Select up to 5 collections for second tier gifts"
+      },
+      {
+        "type": "collection_list",
+        "id": "third_tier_collections",
+        "label": "Third Tier Collections",
+        "limit": 5,
+        "info": "Select up to 5 collections for third tier gifts"
+      },
+      {
+        "type": "header",
         "content": "First Tier",
         "info": "Choose any one of product"
       },
