@@ -236,48 +236,164 @@ function _getCart() {
     {% endif %}
       
   
-  jQuery(document).ready(function($){
+jQuery(document).ready(function($) {
+    const overlay = document.querySelector('.overlay');
 
-    $(document).on('click', '.upsell_button_gtm', function(e){
-      e.preventDefault();
-      var id = $(this).attr('data-product-id');
-      var q = 1;
-      var ajax = {
-          type: "POST",
-          url: "/cart/add.js",
-          data: "quantity=" + q + "&id=" + id,
-          dataType: "json",
-          success: function (n) {
-  
-            document.dispatchEvent(new CustomEvent('ajaxProduct:added'));
-            document.dispatchEvent(new CustomEvent('cart:build'));
+    async function updateGiftBoxes() {
+        try {
+            // Update cart page gift boxes
+            const cartPage = document.querySelector('.cart__page');
+            if (cartPage) {
+                const response = await fetch(window.location.href);
+                const html = await response.text();
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                
+                const newCartPage = tempDiv.querySelector('.cart__page');
+                if (newCartPage) {
+                    const giftBoxes = cartPage.querySelectorAll('.gift_box');
+                    const newGiftBoxes = newCartPage.querySelectorAll('.gift_box');
                     
-          },
-          error: function (n, c) {
-             console.log('fail');
-          }
-       };
-      jQuery.ajax(ajax)  
-     });
-    //remove free gift
-    $(document).on('click', '.change_free_gift', function(e){
-      e.preventDefault();
-      let variantId = $(this).attr("data-remove_var");
-      $.ajax({
-        type: "POST",
-        url: "/cart/change.js",
-        dataType: "json",
-        data: {
-          id: parseFloat(variantId),
-          quantity: 0,
-        },
-      }).then((data) => {
-          document.dispatchEvent(new CustomEvent('ajaxProduct:added'));
-          document.dispatchEvent(new CustomEvent('cart:build'));
-      });
-       
-     });
-   });
+                    giftBoxes.forEach((box, index) => {
+                        if (newGiftBoxes[index]) {
+                            box.innerHTML = newGiftBoxes[index].innerHTML;
+                        }
+                    });
+                }
+            }
+    
+            // Update mini-cart gift boxes
+            const cartDrawer = document.querySelector('#CartDrawer');
+            if (cartDrawer) {
+                const response = await fetch(`${window.location.pathname}?view=cart-drawer`);
+                const html = await response.text();
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                
+                const newCartDrawer = tempDiv.querySelector('#CartDrawer');
+                if (newCartDrawer) {
+                    const giftBoxes = cartDrawer.querySelectorAll('.gift_box');
+                    const newGiftBoxes = newCartDrawer.querySelectorAll('.gift_box');
+                    
+                    giftBoxes.forEach((box, index) => {
+                        if (newGiftBoxes[index]) {
+                            box.innerHTML = newGiftBoxes[index].innerHTML;
+                        }
+                    });
+                }
+            }
+        } catch (error) {
+            console.error('Error updating gift boxes:', error);
+        }
+    }
+
+
+    async function updateCart() {
+        try {
+            const response = await fetch('/cart.js');
+            const cart = await response.json();
+            
+            // Update cart drawer if it exists
+            const cartDrawerItems = document.querySelector('cart-drawer-items');
+            if (cartDrawerItems) {
+                const sectionResponse = await fetch(`?sections=cart-drawer,cart-icon-bubble`);
+                const sectionsData = await sectionResponse.json();
+                
+                if (sectionsData['cart-drawer']) {
+                    cartDrawerItems.innerHTML = sectionsData['cart-drawer'];
+                }
+            }
+
+            // Update gift boxes
+            await updateGiftBoxes();
+
+            // Dispatch all necessary cart update events
+            document.dispatchEvent(new CustomEvent('cart:refresh'));
+            document.dispatchEvent(new CustomEvent('cart:build'));
+            document.dispatchEvent(new CustomEvent('cart.requestComplete'));
+            document.dispatchEvent(new CustomEvent('cart:updated', {
+                detail: { cart: cart }
+            }));
+
+            // Reload cart sections if available
+            if (window.Shopify && window.Shopify.section) {
+                window.Shopify.section.load('cart-drawer');
+                window.Shopify.section.load('cart-icon-bubble');
+            }
+        } catch (error) {
+            console.error('Error updating cart:', error);
+        }
+    }
+
+    // Add gift product
+    $(document).on('click', '.upsell_button_gtm', async function(e) {
+        e.preventDefault();
+        const id = $(this).attr('data-product-id');
+        const quantity = 1;
+
+        try {
+            overlay.style.display = 'block';
+            
+            const response = await fetch('/cart/add.js', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    items: [{
+                        id: id,
+                        quantity: quantity,
+                        properties: {
+                            '_gift_product': 'true'
+                        }
+                    }]
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            await updateCart();
+        } catch (error) {
+            console.error('Failed to add gift:', error);
+        } finally {
+            overlay.style.display = 'none';
+        }
+    });
+
+    // Remove gift product
+    $(document).on('click', '.change_free_gift', async function(e) {
+        e.preventDefault();
+        const variantId = $(this).attr('data-remove_var');
+
+        try {
+            overlay.style.display = 'block';
+            
+            const response = await fetch('/cart/change.js', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    id: variantId,
+                    quantity: 0
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            await updateCart();
+        } catch (error) {
+            console.error('Failed to remove gift:', error);
+        } finally {
+            overlay.style.display = 'none';
+        }
+    });
+});
+
 
   
 
