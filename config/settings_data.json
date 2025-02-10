@@ -188,6 +188,7 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "",
               "link_text": "Valentine's Day Sale | Up To 20% Off Sitewide",
