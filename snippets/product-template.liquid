@@ -186,6 +186,7 @@
                   {%- when 'glowstone_enhancement' -%}
 
                  {%- assign selected_collection = block.settings.in_collection -%}
+                  {{ selected_collection }}
 
                   {% assign found = false %}
                   {% if selected_collection %}
@@ -195,7 +196,6 @@
                       {% endif %}
                     {% endfor %}
                    {% elsif selected_collection == blank %} 
-                    1
                      {% assign found = true %}
                    {% else %}
                      {% assign found = false %}
