@@ -1,13 +1,14 @@
 <script>
 
 $(document).ready(function () {
-  
   const productForm = $(".product-single__form");
   const productFormSubmit = $(".add-to-cart");
   const productFormSubmitBtn = $(".add-to-cart span");
   const engravingInput = $(".product-page-engraving-input");
   const protectField = $(".protection-plan");
-  let protectionInput = "";
+  const protectField2 = $(".protection-plan-glow"); // New field
+
+  let protectionInputs = []; // Array to store multiple protection plan IDs
   const engravingProductID = theme.engraving.engraving_var_id;
   let hiddenFieldsAdded = false;
 
@@ -16,8 +17,6 @@ $(document).ready(function () {
     engravingInput.on("input", function () {
       let engravingValue = engravingInput.val();
       let field = $(this);
-
-      // field.val(field.val().toUpperCase());
 
       if (engravingValue !== "") {
         productFormSubmitBtn.html("<span>ADD TO CART + ENGRAVING</span>");
@@ -28,28 +27,27 @@ $(document).ready(function () {
   }
 
   protectField.click(function () {
-    {% comment %} 
-    if ($(this).is(":checked")) {
-      protectionInput = $(this).attr("data-protection");
-    } else {
-      protectionInput = "";
-    }
-    console.log(protectionInput); 
-    {% endcomment %}
+    CheckProtectField();
+  });
+
+  protectField2.click(function () { // New field event listener
+    CheckProtectField();
   });
 
   function CheckProtectField() {
+    protectionInputs = []; // Reset the array
     if ($(protectField).is(":checked")) {
-      protectionInput = $(protectField).attr("data-protection");
-    } else {
-      protectionInput = "";
+      protectionInputs.push($(protectField).attr("data-protection")); // Add first protection plan
     }
-    console.log(protectionInput); 
-  }  
-
+    if ($(protectField2).is(":checked")) { // New field logic
+      protectionInputs.push($(protectField2).attr("data-protection")); // Add second protection plan
+    }
+    console.log(protectionInputs); // Log all selected protection plans
+  }
 
   function ProtectionPlanAjaxAdd(productId) {
-    $.ajax({
+    console.log(productId+'added');
+    return $.ajax({
       type: "POST",
       url: "/cart/add.js",
       data: {
@@ -57,29 +55,20 @@ $(document).ready(function () {
         id: productId,
       },
       dataType: "json",
-      success: function (data) {
-        // Handle success if needed
-        productForm.submit();
-      },
-      error: function (error) {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Plan error!",
-        });
-      },
+      async: true
     });
   }
 
   productFormSubmit.on("click", function (event) {
     // Prevent the default form submission
     $('.add-to-cart-loader').show();
-  
     event.preventDefault();
-    CheckProtectField();
+
+    CheckProtectField(); // Check both protection fields
     let engravingValue = engravingInput.val();
-    console.log(engravingValue)
-    if (engravingValue !=='' && engravingValue != undefined){
+    console.log(engravingValue);
+
+    if (engravingValue !== '' && engravingValue != undefined) {
       $.ajax({
         type: "POST",
         url: "/cart/add.js",
@@ -89,12 +78,28 @@ $(document).ready(function () {
         },
         dataType: "json",
         success: function (data) {
-          // Handle success if needed
           $('.CircleSpinner').addClass('LoadComplete');
-          if (protectionInput !== "" && protectionInput != undefined ) {
-            ProtectionPlanAjaxAdd(protectionInput);
+
+          // Add all selected protection plans
+          if (protectionInputs.length > 0) {
+            let protectionPromises = protectionInputs.map(protectionId => {
+              return ProtectionPlanAjaxAdd(protectionId);
+            });
+
+            // Wait for all protection plans to be added
+            Promise.all(protectionPromises)
+              .then(() => {
+                productForm.submit(); // Submit the form after all protection plans are added
+              })
+              .catch((error) => {
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops...",
+                  text: "Error adding protection plans to the cart!",
+                });
+              });
           } else {
-            productForm.submit();
+            productForm.submit(); // Submit the form if no protection plans are selected
           }
         },
         error: function (error) {
@@ -107,15 +112,38 @@ $(document).ready(function () {
       });
     } else {
       $('.CircleSpinner').addClass('LoadComplete');
-      // Submit the form programmatically
-      if (protectionInput !== "" && protectionInput != undefined) {
-        ProtectionPlanAjaxAdd(protectionInput);
+      // Add all selected protection plans
+      if (protectionInputs.length > 0) {
+        console.log('inside');
+        let protectionPromises = protectionInputs.map(protectionId => {
+          return ProtectionPlanAjaxAdd(protectionId);
+        });
+
+        // Wait for all protection plans to be added
+        Promise.all(protectionPromises)
+          .then(() => {
+            console.log('item added both');
+            setTimeout(() => {
+              console.log("Delayed for 1 second.");
+            //  window.location.href = '/cart';
+              productForm.submit();
+            }, 2000);
+             // Submit the form after all protection plans are added
+          })
+          .catch((error) => {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Error adding protection plans to the cart!",
+            });
+          });
       } else {
-        productForm.submit();
+        productForm.submit(); // Submit the form if no protection plans are selected
       }
     }
   });
 });
+
 
 function AutoAddEngravingProduct(itemQuantity) {
   // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
