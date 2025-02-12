@@ -680,62 +680,121 @@ function remove_auto_gift($prod_id){
 });
 
 
-function bothRemoveEngrageShippingItems($protectionID, $engravingProductID, $productId, itemQuantity){
-  $.ajax({
-    type: "GET",
-    url: "/cart.js",
-    dataType: "json",
-    success: function (cartData) {
-      let updates = {};
-      updates[$productId]= 0;
-      console.log(cartData);
+// function bothRemoveEngrageShippingItems($protectionID, $engravingProductID, $productId, itemQuantity){
+//   $.ajax({
+//     type: "GET",
+//     url: "/cart.js",
+//     dataType: "json",
+//     success: function (cartData) {
+//       let updates = {};
+//       updates[$productId]= 0;
+//       console.log(cartData);
 
-      var ProtectionItem = cartData.items.find(function (item) {
-        return item.variant_id === parseInt($protectionID);
-      });
+//       var ProtectionItem = cartData.items.find(function (item) {
+//         return item.variant_id === parseInt($protectionID);
+//       });
 
-      if (ProtectionItem) {
-        // Decrease the quantity of the engraving product by 1
-        var newQuantity = ProtectionItem.quantity - 1*itemQuantity;
-        updates[ProtectionItem.id] = newQuantity
-      }
+//       if (ProtectionItem) {
+//         // Decrease the quantity of the engraving product by 1
+//         var newQuantity = ProtectionItem.quantity - 1*itemQuantity;
+//         updates[ProtectionItem.id] = newQuantity
+//       }
 
-      var EngravingItem = cartData.items.find(function (item) {
-        return item.variant_id === parseInt($engravingProductID);
-      });
+//       var EngravingItem = cartData.items.find(function (item) {
+//         return item.variant_id === parseInt($engravingProductID);
+//       });
 
-      if (EngravingItem) {
-        // Decrease the quantity of the engraving product by 1
-        var newQuantity = EngravingItem.quantity - 1*itemQuantity;
-        updates[EngravingItem.id] = newQuantity   
-      }
-      console.log(updates);
+//       if (EngravingItem) {
+//         // Decrease the quantity of the engraving product by 1
+//         var newQuantity = EngravingItem.quantity - 1*itemQuantity;
+//         updates[EngravingItem.id] = newQuantity   
+//       }
+//       console.log(updates);
 
 
       
-      fetch(window.Shopify.routes.root + 'cart/update.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
+//       fetch(window.Shopify.routes.root + 'cart/update.js', {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({ updates })
+//       })
+//       .then(response => {
+//         return response.json();
+//       })
+//       .then(data => {
+//         console.log(data);
+//         location.reload();
+//       })
+//       .catch((error) => {
+//         console.error('Error:', error);
+//       });
+//     },
+//     error: function (error) {
+//       // Handle error if needed
+//       console.error("Error fetching cart data:", error);
+//     },
+//   });
+// }
+
+function bothRemoveEngrageShippingItems($protectionID, $engravingProductID, $productId, itemQuantity) {
+    $.ajax({
+        type: "GET",
+        url: "/cart.js",
+        dataType: "json",
+        success: function (cartData) {
+            let updates = {};
+            updates[$productId] = 0;
+            console.log(cartData);
+
+            // Handle protection plan removal
+            if ($protectionID) {
+                var ProtectionItem = cartData.items.find(function (item) {
+                    return item.variant_id === parseInt($protectionID);
+                });
+
+                if (ProtectionItem) {
+                    var newQuantity = ProtectionItem.quantity - 1 * itemQuantity;
+                    updates[ProtectionItem.id] = newQuantity;
+                }
+            }
+
+            // Handle engraving product removal
+            if ($engravingProductID) {
+                var EngravingItem = cartData.items.find(function (item) {
+                    return item.variant_id === parseInt($engravingProductID);
+                });
+
+                if (EngravingItem) {
+                    var newQuantity = EngravingItem.quantity - 1 * itemQuantity;
+                    updates[EngravingItem.id] = newQuantity;
+                }
+            }
+
+            console.log(updates);
+
+            // Update the cart with the new quantities
+            fetch(window.Shopify.routes.root + 'cart/update.js', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ updates })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                location.reload();
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
         },
-        body: JSON.stringify({ updates })
-      })
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        console.log(data);
-        location.reload();
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-    },
-    error: function (error) {
-      // Handle error if needed
-      console.error("Error fetching cart data:", error);
-    },
-  });
+        error: function (error) {
+            console.error("Error fetching cart data:", error);
+        },
+    });
 }
   
 
