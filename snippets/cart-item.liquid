@@ -50,6 +50,12 @@
 
       {% if property_size > 0 %}
         {% for p in product.properties %}
+
+           {% if p.first contains '_prot-glowstone_enhancement_id' %}
+             <input type="hidden" class="Protection_p_glow" value="true" data-product-id="{{ p.last }}">
+           {% endif %}
+
+          
           {% if product.product.metafields.custom.premium_protection_product %}
             {% if p.first contains 'Protection Plan' %}
               {% unless p.last == '' or p.last == null %}
