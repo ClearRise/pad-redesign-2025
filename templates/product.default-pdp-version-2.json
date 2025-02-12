@@ -84,6 +84,7 @@
         },
         "glowstone_enhancement_bWeLXn": {
           "type": "glowstone_enhancement",
+          "disabled": true,
           "settings": {
             "up_product": "glowstone-enhancement-1",
             "enhancement_title": "Glowstone Enhancement",
