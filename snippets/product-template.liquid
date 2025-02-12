@@ -183,6 +183,106 @@
                     <div class="product-block custom_txt_block" {{ block.shopify_attributes }}>
                       {{ block.settings.text }}
                     </div>
+                  {%- when 'glowstone_enhancement' -%}
+                    {% style %}
+                    .custom_enhancement_block ._u_upsell-product {
+                      background: {{block.settings.bg_color}};
+                      color: {{block.settings.text_color}};
+                      border-color: {{block.settings.border_color}}!important;
+                    }
+                    {% endstyle %}
+                    {% if block.settings.up_product and block.settings.up_product != blank %}
+                      <div class="product-block custom_enhancement_block" {{ block.shopify_attributes }}>                         
+                         <div class="_u_upsell-collection _b_dgCartUpsellCont"> 
+                              <div  class="show" >
+                                <div class="_u_upsell-product  _b_custom_border inline-box">
+                                {% assign u_product = block.settings.up_product %}
+                                {%- liquid
+                                  assign featured_media = u_product.selected_or_first_available_variant.featured_media | default: u_product.featured_media
+                                -%} 
+                                  <div>
+                                    <div class="_b_dgCartUpsellInner">
+                                      <div class="_u_upsell-product-image">
+                                        <img class="dci-image" src="{{ featured_media | img_url: '70x' }}" alt="{{ title | escape }}">     
+                                      </div>
+                                      <div class="_u_upsell-product-info">
+                                        <div class="_u_product-title-link">
+                                            <strong class="dci-title">{{ block.settings.enhancement_title }}</strong>
+                                        </div>
+                                        <div class="_u_cart__item-sub">
+                                          <div style="display: block;">
+                                              <p class="_b_txt">{{ block.settings.enhancement_text }}</p>
+                                          </div>
+                                        </div> 
+                                        <div class="desktop_show">
+                                            <div class="bold_option bold_option_checkbox _u_checkbox_wrap">
+                                              <label>
+                                                <span class="bold_option_element">                                        
+                                                  <input
+                                                      type="checkbox"
+                                                      class="protection-plan-glow"
+                                                      name="properties[glowstone_enhancement]"
+                                                      value="Yes"
+                                                      data-protection="{{ u_product.selected_or_first_available_variant.id }}"
+                                                      {% if u_product.selected_or_first_available_variant.price == 0 %} checked {% endif %}
+                                                    >
+                                                    <input
+                                                      type="hidden"
+                                                      class="hidden_glowstone_enhancement_info"
+                                                      name="properties[_prot-glowstone_enhancement]"
+                                                      value="{{ u_product.title }}"
+                                                    >
+                                                   <input
+                                                      type="hidden"
+                                                      class="hidden_glowstone_enhancement_info"
+                                                      name="properties[_prot-glowstone_enhancement_id]"
+                                                      value="{{ u_product.selected_or_first_available_variant.id }}"
+                                                    >
+                                                </span>  
+                                                <span class="_u_checkbox_txt">Add Glowstone Enhancement +{{ u_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+                                                <span class="money compare_money">{{ u_product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }}</span>
+                                              </label>
+                                            </div>                                    
+                                        </div>
+                                        
+                                      </div>
+                                    </div>
+                                  </div> 
+                                  <div class="mobile_show">
+                                      <div class="bold_option bold_option_checkbox _u_checkbox_wrap">
+                                        <label>
+                                          <span class="bold_option_element">                                        
+                                            <input
+                                                type="checkbox"
+                                                class="protection-plan-glow"
+                                                name="properties[glowstone_enhancement]"
+                                                value="Yes"
+                                                data-protection="{{ u_product.selected_or_first_available_variant.id }}"
+                                                {% if u_product.selected_or_first_available_variant.price == 0 %} checked {% endif %}
+                                              >
+                                              <input
+                                                type="hidden"
+                                                class="hidden_glowstone_enhancement_info"
+                                                name="properties[_prot-glowstone_enhancement]"
+                                                value="{{ u_product.title }}"
+                                              >
+                                             <input
+                                                type="hidden"
+                                                class="hidden_glowstone_enhancement_info"
+                                                name="properties[_prot-glowstone_enhancement_id]"
+                                                value="{{ u_product.selected_or_first_available_variant.id }}"
+                                              >
+                                          </span>  
+                                          <span class="_u_checkbox_txt">Add Glowstone Enhancement +{{ u_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+                                          <span class="money compare_money">{{ u_product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }}</span>
+                                        </label>
+                                      </div>                                    
+                                  </div>
+                                </div>
+                              </div>
+                         </div>   
+                      </div>   
+                    {% endif %} 
                   {%- when 'free_gifts' -%}
                     {% style %}
                     .custom_gift_block ._b_upsell-product {
