@@ -187,14 +187,16 @@
 
                  {%- assign selected_collection = block.settings.in_collection -%}
 
+                   {% assign selected_product = block.settings.up_product %}
+
                   {% assign found = false %}
-                  {% if selected_collection %}
+                  {% if selected_collection != blank and selected_product != blank %}
                     {% for product_col in selected_collection.products %}
                       {% if product_col.id == product.id %}
                         {% assign found = true %}
                       {% endif %}
                     {% endfor %}
-                   {% elsif selected_collection == blank %} 
+                   {% elsif selected_collection == blank and selected_product != blank  %} 
                     `
                      {% assign found = true %}
                    {% else %}
@@ -211,7 +213,7 @@
                       border-color: {{block.settings.border_color}}!important;
                     }
                     {% endstyle %}
-                    {% assign selected_product = block.settings.up_product %}
+                   
                     {% if selected_product and selected_product != blank  %}
                       <div class="product-block custom_enhancement_block" {{ block.shopify_attributes }}>                         
                          <div class="_u_upsell-collection _b_dgCartUpsellCont"> 
