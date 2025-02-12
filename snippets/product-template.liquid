@@ -184,18 +184,38 @@
                       {{ block.settings.text }}
                     </div>
                   {%- when 'glowstone_enhancement' -%}
-                    {% style %}
+
+                 {%- assign selected_collection = block.settings.in_collection -%}
+
+                  {% assign found = false %}
+                  {% if selected_collection %}
+                    {% for product_col in selected_collection.products %}
+                      {% if product_col.id == product.id %}
+                        {% assign found = true %}
+                      {% endif %}
+                    {% endfor %}
+                   {% elsif selected_collection == blank %} 
+                     {% assign found = true %}
+                   {% else %}
+                     {% assign found = false %}
+                  {% endif %}
+                    
+
+                  {% if found %}
+
+                       {% style %}
                     .custom_enhancement_block ._u_upsell-product {
                       background: {{block.settings.bg_color}};
                       color: {{block.settings.text_color}};
                       border-color: {{block.settings.border_color}}!important;
                     }
                     {% endstyle %}
-                    {% if block.settings.up_product and block.settings.up_product != blank %}
+                    {% assign selected_product = block.settings.up_product %}
+                    {% if selected_product and selected_product != blank  %}
                       <div class="product-block custom_enhancement_block" {{ block.shopify_attributes }}>                         
                          <div class="_u_upsell-collection _b_dgCartUpsellCont"> 
                               <div  class="show" >
-                                <div class="_u_upsell-product   inline-box">
+                                <div class="_u_upsell-product  _b_custom_border inline-box">
                                 {% assign u_product = block.settings.up_product %}
                                 {%- liquid
                                   assign featured_media = u_product.selected_or_first_available_variant.featured_media | default: u_product.featured_media
@@ -281,8 +301,10 @@
                                 </div>
                               </div>
                          </div>   
-                      </div>   
-                    {% endif %} 
+                      </div>  
+                      {% endif %}
+                                           
+                    {% endif %}
                   {%- when 'free_gifts' -%}
                     {% style %}
                     .custom_gift_block ._b_upsell-product {
