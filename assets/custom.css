@@ -2227,3 +2227,106 @@ label.variant__label.custom_label{
   }
 }
 
+
+.compare_money{
+  color: red;
+  text-decoration: line-through;
+  padding-left: 5px;
+}
+._u_upsell-collection {
+    display: block;
+    color: #000;
+}
+
+._u_upsell-collection ._u_upsell-product {
+    align-items: flex-start;
+    /* background: #f3f3f3; */
+    margin: .3rem 0 0 0;
+    padding: .5rem 0 0;
+    width: 100% !important;
+}
+
+._u_upsell-collection ._u_upsell-product ._u_upsell-product-image img {
+    width: 100%;
+    min-width: 70px;
+}
+._u_upsell-product-image{
+    argin-right: 5px;
+}
+._u_upsell-product-info{
+  display: block;
+  padding-left: 10px;
+}
+._u_product-title-link {
+  display: block;
+  text-align: left;
+}
+._u_cart__item-sub{
+  display: block;
+}
+._u_checkbox_wrap{
+  display: block; 
+  /* margin-top: 10px; */
+}
+.desktop_show ._u_checkbox_wrap{
+  margin-top: 10px;
+}
+._u_checkbox_txt{
+  font-size:13px;
+}
+.custom_enhancement_block ._b_dgCartUpsellInner{
+  border: none!important;
+}
+
+.desktop_show{
+  display:block;
+}
+.mobile_show{
+  display:none;
+}
+.custom_enhancement_block label{
+  font-size: 13px!important;
+  font-weight: 600!important;
+}
+.desktop_show .bold_option:not(:empty){
+  padding-bottom: 0px!important;
+  margin-bottom: 0px!important;
+}
+
+
+@media screen and (max-width: 767px) {
+  ._u_upsell-product-image img {
+      max-width: 100% !important;
+  }
+  ._u_upsell-collection ._u_upsell-product ._u_upsell-product-image img {
+    min-width: 50px;
+  }
+  ._u_upsell-collection ._u_upsell-product ._u_upsell-product-info {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    padding-left: 7px;
+  }
+  ._u_product-title-link {
+    margin-bottom: 2px;
+  }
+  ._u_checkbox_wrap label:not(.variant__button-label):not(.text-label) {
+    letter-spacing: .01em !important;
+  }
+  ._u_checkbox_txt{
+    font-size:12px;
+  }
+  .desktop_show{
+    display:none;
+  }
+  .mobile_show{
+    display:block;
+  }  
+  .mobile_show .bold_option:not(:empty){
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+}
+
