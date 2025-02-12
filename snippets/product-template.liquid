@@ -195,7 +195,7 @@
                       <div class="product-block custom_enhancement_block" {{ block.shopify_attributes }}>                         
                          <div class="_u_upsell-collection _b_dgCartUpsellCont"> 
                               <div  class="show" >
-                                <div class="_u_upsell-product  _b_custom_border inline-box">
+                                <div class="_u_upsell-product   inline-box">
                                 {% assign u_product = block.settings.up_product %}
                                 {%- liquid
                                   assign featured_media = u_product.selected_or_first_available_variant.featured_media | default: u_product.featured_media
