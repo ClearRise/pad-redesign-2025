@@ -315,9 +315,8 @@ start: ss-mobile-menu-top-banner
         created at: 2/9/2025
         for: mobile menu top banner
         start: ss-mobile-menu-top-banner
-        
-        {% if section.settings.mobile_menu_top_banner_link != blink %}
         {% endcomment %}
+        {% if section.settings.mobile_menu_top_banner_link != blink %}
           <li class="mobile-nav__item mobile-nav__item-first-ss appear-animation appear-delay-block-{{ animation_row }}">
             <div class="top-banner-container-ss">
               <a href="{{ section.settings.mobile_menu_top_banner_link }}">
@@ -333,8 +332,8 @@ start: ss-mobile-menu-top-banner
               </a>
             </div>
           </li>
-        
-        {% comment %} {% endif %} end: ss-mobile-menu-top-banner {% endcomment %}
+        {% endif %}
+        {% comment %} end: ss-mobile-menu-top-banner {% endcomment %}
         
         {%- for link in main_menu.links -%}
           {%- assign animation_row = animation_row | plus: 1 -%}
