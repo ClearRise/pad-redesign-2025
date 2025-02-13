@@ -61,6 +61,21 @@
   --color-bg:#ffffff;
 }
 
+@font-face {
+    font-family: 'Trade Gothic LT Bold';
+    src: url('https://cdn.shopify.com/s/files/1/2126/0063/files/trade-gothic-lt-bold.ttf?v=1739379281') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://cdn.shopify.com/s/files/1/2126/0063/files/Roboto-Regular.ttf?v=1739384586') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  font-display: swap;
+}
+
 @media only screen and (min-width:769px){
   :root{
     --grid-gutter:22px;
