@@ -2080,7 +2080,6 @@ lazySizesConfig.expFactor = 4;
     var lastTransitionEle = {};
     
     function setTransitionHeight(container, height, isOpen, isAutoHeight) {
-      console.log("test", container, height, isOpen, isAutoHeight);
       lastEl = globalEl;
 
       // 2/9/2025
