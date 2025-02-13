@@ -4,21 +4,348 @@
   {%- assign drawer_position = 'left' -%}
 {% endif %}
 
+{% comment %}
+created at: 2/9/2025
+for: mobile menu top banner
+start: ss-mobile-menu-top-banner
+{% endcomment %}
+<style>
+  .top-banner-container-ss a {
+    background: wheat;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 34px 10px 22px;
+  }
+  .mobile-nav__item-first-ss:after {
+    border: 0px;
+  }
+  .top-banner-image-container-ss {
+    /* padding: 10px; */
+  }
+  .top-banner-image-container-ss img {
+    border-radius: 5px;
+  }
+  .top-banner-title-container-ss {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .top-banner-hypertext-container-ss {
+    color: black !important;
+    text-decoration: underline;
+    font-family: "Roboto" !important;
+    font-size: 15px;
+  }
+  a.mobile-nav__link>.discount-badge-ss {
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #ff8b27;
+    font-size: 14px;
+    color: white !important;
+    position: relative;
+    top: -1px;
+    left: 5px;
+  }
+  .collapsible-content__inner .discount-badge-ss {
+    height: 0px;
+    text-align: right;
+    display: inline;
+    position: relative;
+    font-size: 11px;
+    margin-right: 15px;
+    top: -17px;
+    width: 100%;
+  }
+  .collapsible-content__inner .discount-badge-ss span {
+    font-family: Trade Gothic LT Bold;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: initial;
+    line-height: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    background: #ff8b27;
+    padding: 0px 5px;
+  }
+  #back-main-mobile-menu-ss .collapsible-trigger__icon--circle {
+    border: 0px;
+  }
+  #back-main-mobile-menu-ss .collapsible-trigger__icon--circle {
+    border: 0px;
+  }
+  #back-main-mobile-menu-ss .collapsible-trigger__icon {
+    transform: translate(0%, -50%) rotate(90deg) scale(1.4) !important;
+  }
+  #back-main-mobile-menu-ss .mobile-nav__faux-link {
+    margin-left: 15px;
+  }
+  @media screen and (max-width: 767px) {
+    #back-main-mobile-menu-ss .collapsible-trigger__icon {
+        left: 10px;
+    }
+  }
+  .mobile-nav__child-item img {
+    margin-left: 20px;
+    border-radius: 4px;
+  }
+  .mobile-nav__child-item a {
+    display: flex;
+    align-items: center;
+  }
+  .mobile-nav__child-item {
+    padding-bottom: 5px;
+  }
+  #NavDrawer {
+    width: 100vw;
+    max-width: unset;
+    left: -100vw;
+    z-index: 99999999999999999;
+  }
+  .drawer--right.drawer--is-open {
+    transform: translate(100vw) !important;
+    left: 100vw;
+  }
+  #drawer__close-ss {
+    position: relative;
+    right: -27px;
+  }
+  #drawer__close-button-ss {
+    /* position: unset; */
+    right: 0px;
+  }
+  .drawer__title-ss img {
+    width: unset !important;
+    height: 22px;
+  }
+  .drawer__title-ss {
+    justify-content: flex-start !important;
+  }
+  /* .drawer__header-ss {
+    opacity: 0;
+    transition-property: opacity;
+    transition-delay: 0.5s;
+    transition-duration: 0.05s;
+  }
+  .drawer--is-open .drawer__header-ss {
+    opacity: 1;
+  } */
+  .drawer__fixed-header-ss {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 22px;
+    padding-left: 22px;
+    background: #262626;
+    color: #fff !important;
+    /* height: 60px; */
+    align-items: center;
+  }
+  .drawer__header-ss {
+    border: 0px;
+  }
+  .drawer__scrollable-ss {
+    background: #f7f7f7;
+  }
+  .drawer__scrollable-ss>ul {
+    padding: 0 20px;
+  }
+  .main-mobile-nav-ul-ss>.mobile-nav__item {
+    margin: 0 0 20px 0 !important;
+  }
+  .mobile-nav>.mobile-nav__item {
+    background-color: #ffffff !important;
+    color: #000;
+    font-family: "Trade Gothic LT Bold";
+  }
+  .mobile-nav__item * {
+    color: #000 !important;
+    font-family: "Trade Gothic LT Bold";
+  }
+  .mobile-nav__item:after {
+    border: 0px !important;
+  }
+  .mobile-nav--heading-style .mobile-nav__link--top-level {
+    font-family: "Trade Gothic LT Bold" !important;
+    font-size: 20px;
+  }
+  .mobile-nav__has-sublist .collapsible-trigger__icon {
+    transform: translate(-50%, -50%) rotate(270deg) scale(1.4) !important;
+  }
+  .mobile-nav__social {
+    margin: 0px !important;
+    background: white;
+    border-top: 1px solid #d9d9d9;
+    padding-top: 20px !important;
+    font-family: 'Roboto';
+  }
+  .mobile-nav__item--secondary a {
+    font-family: 'Roboto';
+    color: #262626 !important;
+    font-size: 16px;
+  }
+  .mobile-nav__social a {
+    padding: 10px 20px !important;
+  }
+  .child-mobile-nav-ul-ss {
+    margin-bottom: 20px 0;
+  }
+  #back-main-mobile-menu-ss .mobile-nav__faux-link {
+    font-family: Trade Gothic LT Bold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: initial;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-left: 20px;
+  }
+  .child-mobile-nav-ul-ss .collapsible-content__inner ul {
+    background: #f7f7f7;
+  }
+  .child-mobile-nav-ul-ss .is-open .collapsible-content__inner ul li{
+    margin-bottom: 20px;
+    background: white;
+    display: flex;
+    align-items: center;
+  }
+  .child-mobile-nav-ul-ss .is-open .collapsible-content__inner ul li:last-child {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+  }
+  .child-mobile-nav-ul-ss .mobile-nav__child-item {
+    padding: 12px 0 !important;
+    align-items: center;
+  }
+  .child-mobile-nav-ul-ss .mobile-nav__child-item .mobile-nav__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 0px;
+  }
+  .child-mobile-nav-ul-ss .mobile-nav__child-item img {
+    width: 64px;
+    height: 64px;
+  }
+  .child-mobile-nav-ul-ss .mobile-nav__child-item .submenu-title-ss {
+    font-family: Trade Gothic LT Bold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: initial;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .child-mobile-nav-ul-ss .mobile-nav__child-item .mobile-nav__link div:last-child * {
+    color: #000;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: initial;
+    line-height: normal;
+    margin: 0px;
+  }
+  .child-mobile-nav-ul-ss .mobile-nav__item {
+    /* margin-bottom: 0px !important; */
+    width: 100%;
+  }
+  .child-mobile-nav-ul-ss .mobile-nav__item a {
+    flex: 1;
+  }
+  .child-mobile-nav-ul-ss .mobile-nav__item:first-child {
+    margin-bottom: 20px !important;
+  }
+  .left-ss {
+    position: relative;
+    left: -100vw !important;
+    height: 0px !important;
+  }
+  .right-ss {
+    position: relative;
+    left: 100vw !important;
+    height: 0px !important;
+  }
+  .main-mobile-nav-ul-ss, .mobile-nav__social, .child-mobile-nav-ul-ss {
+    /* transition-property: left;
+    transition-duration: .2s;
+    transition-timing-function: linear; */
+    position: relative;
+    left: 0px;
+  }
+  .collapsible-content.is-open {
+    transition: none !important;
+  }
+  .collapsible-content {
+    transition: none !important;
+  }
+  .is-open .collapsible-content__inner {
+    transition: none !important;
+  }
+  .right-ss {
+    margin: 0px !important;
+  }
+  .right-ss .mobile-nav__item {
+    display: none;
+  }
+  .main-mobile-nav-ul-ss li:first-child {
+    margin-top: 20px !important;
+  }
+  /* .mobile-nav__sublist .mobile-nav__item:last-child {
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+  } */
+  
+</style>
+{% comment %} end: ss-mobile-menu-top-banner {% endcomment %}
+
 <div id="NavDrawer" class="drawer drawer--{{ drawer_position }}">
   <div class="drawer__contents">
-    <div class="drawer__fixed-header">
-      <div class="drawer__header appear-animation appear-delay-{{ animation_row }}">
-        <div class="h2 drawer__title"></div>
-        <div class="drawer__close">
-          <button type="button" class="drawer__close-button js-drawer-close">
-            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
+    <div class="drawer__fixed-header drawer__fixed-header-ss">
+      <div class="drawer__header drawer__header-ss appear-animation appear-delay-block-{{ animation_row }}">
+        <div class="h2 drawer__title drawer__title-ss">
+          {% if section.settings.mobile_top_banner_image != blink %}
+            <img src="{{ section.settings.mobile_top_banner_image | image_url }}" />
+          {% endif %}
+        </div>
+        <div id="drawer__close-ss" class="drawer__close drawer__close-ss">
+          <button type="button" id="drawer__close-button-ss" class="drawer__close-button js-drawer-close">
+            <svg fill="#9a9a9a" width="20px" height="20px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 14.545L1.455 16 8 9.455 14.545 16 16 14.545 9.455 8 16 1.455 14.545 0 8 6.545 1.455 0 0 1.455 6.545 8z" fill-rule="evenodd"></path>
+            </svg>
             <span class="icon__fallback-text">{{ 'general.drawers.close_menu' | t }}</span>
           </button>
         </div>
       </div>
     </div>
-    <div class="drawer__scrollable">
-      <ul class="m0 mobile-nav{% if settings.type_navigation_style == 'heading' %} mobile-nav--heading-style{% endif %}" role="navigation" aria-label="Primary">
+    <div class="drawer__scrollable drawer__scrollable-ss">
+      <ul class="main-mobile-nav-ul-ss m0 mobile-nav{% if settings.type_navigation_style == 'heading' %} mobile-nav--heading-style{% endif %}" role="navigation" aria-label="Primary">
+        
+        {% comment %}
+        created at: 2/9/2025
+        for: mobile menu top banner
+        start: ss-mobile-menu-top-banner
+        {% endcomment %}
+        {% if section.settings.mobile_menu_top_banner_link != blink %}
+          <li class="mobile-nav__item mobile-nav__item-first-ss appear-animation appear-delay-block-{{ animation_row }}">
+            <div class="top-banner-container-ss">
+              <a href="{{ section.settings.mobile_menu_top_banner_link }}">
+                <div class="top-banner-text-container-ss">
+                  <div class="top-banner-title-container-ss">{{ section.settings.mobile_menu_top_banner_title }}</div>
+                  <span class="top-banner-hypertext-container-ss" href="{{ section.settings.mobile_menu_top_banner_link }}">{{ section.settings.mobile_menu_top_banner_link_text }}</span>
+                </div>
+                {% if section.settings.mobile_menu_top_banner_image != blink %}
+                  <div class="top-banner-image-container-ss">
+                    <img src="{{ section.settings.mobile_menu_top_banner_image | image_url: width: 80, height: 80 }}" />
+                  </div>
+                {% endif %}
+              </a>
+            </div>
+          </li>
+        {% endif %}
+        {% comment %} end: ss-mobile-menu-top-banner {% endcomment %}
+        
         {%- for link in main_menu.links -%}
           {%- assign animation_row = animation_row | plus: 1 -%}
           {%- assign child_list_handle = link.url | handleize | append: forloop.index -%}
@@ -26,15 +353,14 @@
           {%- if link.links != blank -%}
             {%- assign has_dropdown = true -%}
           {%- endif -%}
-
-          <li class="mobile-nav__item appear-animation appear-delay-{{ animation_row }}">
+          <li class="mobile-nav__item appear-animation appear-delay-block-{{ animation_row }}">
             {%- if has_dropdown -%}
               <div class="mobile-nav__has-sublist">
                 {%- if link.url == '#' -%}
                   <button type="button"
-                    aria-controls="Linklist-{{ child_list_handle }}"{% if link.active or link.child_active %} aria-open="true"{% endif %}
-                    class="mobile-nav__link--button mobile-nav__link--top-level collapsible-trigger collapsible--auto-height{% if link.active or link.child_active %} is-open{% endif %}">
-                    <span class="mobile-nav__faux-link"{% if link.active %} data-active="true"{% endif %}>
+                    aria-controls="Linklist-{{ child_list_handle }}"
+                    class="mobile-nav__link--button mobile-nav__link--top-level collapsible-trigger collapsible--auto-height">
+                    <span class="mobile-nav__faux-link">
                       {{ link.title }}
                     </span>
                     <div class="mobile-nav__toggle">
@@ -47,88 +373,26 @@
                   <a href="{{ link.url }}"
                     class="mobile-nav__link mobile-nav__link--top-level"
                     id="Label-{{ child_list_handle }}"
-                    {% if link.active %}data-active="true"{% endif %}>
+                    >
                     {{ link.title }}
                   </a>
                   <div class="mobile-nav__toggle">
                     <button type="button"
-                      aria-controls="Linklist-{{ child_list_handle }}"{% if link.active or link.child_active %} aria-open="true"{% endif %}
+                      aria-controls="Linklist-{{ child_list_handle }}"
                       aria-labelledby="Label-{{ child_list_handle }}"
-                      class="collapsible-trigger collapsible--auto-height{% if link.active or link.child_active %} is-open{% endif %}">
+                      class="collapsible-trigger collapsible--auto-height">
                       {%- render 'collapsible-icons' -%}
                     </button>
                   </div>
                 {%- endif -%}
               </div>
             {%- else -%}
-              <a href="{{ link.url }}" class="mobile-nav__link mobile-nav__link--top-level"{% if link.active %} data-active="true"{% endif %}>{{ link.title }}</a>
+              <a href="{{ link.url }}" class="mobile-nav__link mobile-nav__link--top-level">
+                {{ link.title }}
+              </a>
             {%- endif -%}
 
-            {%- if has_dropdown -%}
-              <div id="Linklist-{{ child_list_handle }}"
-                class="mobile-nav__sublist collapsible-content collapsible-content--all{% if link.active or link.child_active %} is-open{% endif %}"
-                {% if link.active or link.child_active %}style="height: auto;"{% endif %}>
-                <div class="collapsible-content__inner">
-                  <ul class="mobile-nav__sublist">
-                    {%- for childlink in link.links -%}
-                      {%- assign has_sub_dropdown = false -%}
-                      {%- assign grand_child_list_handle = childlink.url | handleize | append: forloop.index -%}
-                      {%- if childlink.links != blank -%}
-                        {%- assign has_sub_dropdown = true -%}
-                      {%- endif -%}
-
-                      <li class="mobile-nav__item">
-                        <div class="mobile-nav__child-item">
-                          {%- if childlink.url == '#' and has_sub_dropdown -%}
-                            <button type="button"
-                            aria-controls="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}"{% if childlink.active or childlink.child_active %} aria-open="true"{% endif %}
-                            class="mobile-nav__link--button collapsible-trigger{% if childlink.active or childlink.child_active %} is-open{% endif %}">
-                              <span class="mobile-nav__faux-link"{% if childlink.active %} data-active="true"{% endif %}>{{ childlink.title | escape }}</span>
-                              {%- render 'collapsible-icons-alt' -%}
-                            </button>
-                          {%- else -%}
-                            <a href="{{ childlink.url }}"
-                              class="mobile-nav__link"
-                              id="Sublabel-{{ grand_child_list_handle }}"
-                              {% if childlink.active %}data-active="true"{% endif %}>
-                              {{ childlink.title | escape }}
-                            </a>
-                          {%- endif -%}
-                          {%- if childlink.url != '#' and has_sub_dropdown -%}
-                            <button type="button"
-                              aria-controls="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}"
-                              aria-labelledby="Sublabel-{{ grand_child_list_handle }}"
-                              class="collapsible-trigger{% if childlink.active or childlink.child_active %} is-open{% endif %}">
-                              {%- render 'collapsible-icons-alt' -%}
-                            </button>
-                          {%- endif -%}
-                        </div>
-
-                        {%- if has_sub_dropdown -%}
-                          <div
-                            id="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}"
-                            aria-labelledby="Sublabel-{{ grand_child_list_handle }}"
-                            class="mobile-nav__sublist collapsible-content collapsible-content--all{% if childlink.active or childlink.child_active %} is-open{% endif %}"
-                            {% if childlink.active or childlink.child_active %}style="height: auto;"{% endif %}>
-                            <div class="collapsible-content__inner">
-                              <ul class="mobile-nav__grandchildlist">
-                                {%- for grandchildlink in childlink.links -%}
-                                  <li class="mobile-nav__item">
-                                    <a href="{{ grandchildlink.url }}" class="mobile-nav__link"{% if grandchildlink.active %} data-active="true"{% endif %}>
-                                      {{ grandchildlink.title }}
-                                    </a>
-                                  </li>
-                                {%- endfor -%}
-                              </ul>
-                            </div>
-                          </div>
-                        {%- endif -%}
-                      </li>
-                    {%- endfor -%}
-                  </ul>
-                </div>
-              </div>
-            {%- endif -%}
+            
           </li>
         {%- endfor -%}
 
@@ -137,13 +401,18 @@
           {%- assign have_secondary_list = true -%}
         {%- endif -%}
 
+        
+      </ul>
+
+      {%- assign animation_row = animation_row | plus: 1 -%}
+      <ul class="mobile-nav__social appear-animation appear-delay-block-{{ animation_row }} mobile-nav__social-ss">
         {%- if have_secondary_list -%}
           <li class="mobile-nav__item mobile-nav__item--secondary">
             <div class="grid">
               {%- if section.settings.toolbar_menu != blank -%}
                 {%- for link in toolbar_menu.links -%}
                   {%- assign animation_row = animation_row | plus: 1 -%}
-                  <div class="grid__item full_width one-half appear-animation appear-delay-{{ animation_row }} medium-up--hide">
+                  <div class="grid__item full_width one-half appear-animation appear-delay-block-{{ animation_row }} medium-up--hide">
                     <a href="{{ link.url }}" class="mobile-nav__link">{{ link.title }}</a>
                   </div>
                 {%- endfor -%}
@@ -151,7 +420,7 @@
 
               {%- if shop.customer_accounts_enabled -%}
                 {%- assign animation_row = animation_row | plus: 1 -%}
-                <div class="grid__item full_width one-half appear-animation appear-delay-{{ animation_row }}">
+                <div class="grid__item full_width one-half appear-animation appear-delay-block-{{ animation_row }}">
                   <a href="{{ routes.account_url }}" class="mobile-nav__link">
                     {%- if customer -%}
                       {{ 'layout.customer.account' | t }}
@@ -164,10 +433,6 @@
             </div>
           </li>
         {%- endif -%}
-      </ul>
-
-      {%- assign animation_row = animation_row | plus: 1 -%}
-      <ul class="mobile-nav__social appear-animation appear-delay-{{ animation_row }}">
         {%- if settings.social_instagram_link != blank -%}
           <li class="mobile-nav__social-item">
             <a target="_blank" rel="noopener" href="{{ settings.social_instagram_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Instagram' }}">
@@ -248,6 +513,104 @@
             </a>
           </li>
         {%- endif -%}
+      </ul>
+
+      <ul style="" class="child-mobile-nav-ul-ss right-ss m0 mobile-nav{% if settings.type_navigation_style == 'heading' %} mobile-nav--heading-style{% endif %}" role="navigation" aria-label="Primary">
+        <li class="mobile-nav__item appear-animation appear-delay-block-{{ animation_row }}">
+          <div id="back-main-mobile-menu-ss" class="collapsible-trigger mobile-nav__link--button collapsible-trigger">
+            {%- render 'collapsible-icons-alt' -%}
+            <span class="mobile-nav__faux-link">Back</span> 
+          </div>
+        </li>
+        {%- for link in main_menu.links -%}
+          {%- assign animation_row = animation_row | plus: 1 -%}
+          {%- assign child_list_handle = link.url | handleize | append: forloop.index -%}
+          {%- assign has_dropdown = false -%}
+          {%- if link.links != blank -%}
+            {%- assign has_dropdown = true -%}
+          {%- endif -%}
+          
+          <li class="mobile-nav__item appear-animation appear-delay-block-{{ animation_row }}">
+
+            {%- if has_dropdown -%}
+              <div id="Linklist-{{ child_list_handle }}"
+                class="mobile-nav__sublist collapsible-content collapsible-content--all"
+                >
+                <div class="collapsible-content__inner">
+                  <ul class="mobile-nav__sublist">
+                    {%- for childlink in link.links -%}
+                      {%- assign has_sub_dropdown = false -%}
+                      {%- assign grand_child_list_handle = childlink.url | handleize | append: forloop.index -%}
+                      {%- if childlink.links != blank -%}
+                        {%- assign has_sub_dropdown = true -%}
+                      {%- endif -%}
+
+                      <li class="mobile-nav__item">
+                        <a  href="{{ childlink.url }}">
+                        
+                        <div class="mobile-nav__child-item">
+                          {%- if childlink.url == '#' and has_sub_dropdown -%}
+                            <button type="button"
+                            aria-controls="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}"{% if childlink.active or childlink.child_active %} aria-open="true"{% endif %}
+                            class="mobile-nav__link--button collapsible-trigger{% if childlink.active or childlink.child_active %} is-open{% endif %}">
+                              <span class="mobile-nav__faux-link"{% if childlink.active %} data-active="true"{% endif %}>{{ childlink.title | escape }}</span>
+                              {%- render 'collapsible-icons-alt' -%}
+                            </button>
+                          {%- else -%}
+                            <!-- <div class="discount-badge-ss"><span>Up to 30% OFF</span></div> -->
+                            {% if childlink.object.image != blink %}
+                              <img src={{ childlink.object.image | image_url: width: 80, height: 80 }} />
+                            {% endif %}
+                            <div
+                              class="mobile-nav__link"
+                              id="Sublabel-{{ grand_child_list_handle }}"
+                              {% if childlink.active %}data-active="true"{% endif %}>
+                              
+                              {% if childlink.object.metafields.custom.mobile_menu_badge != blink %}
+                                <div class="discount-badge-ss"><span>{{ childlink.object.metafields.custom.mobile_menu_badge }}</span></div>
+                              {% endif %}
+                              <div class="submenu-title-ss">{{ childlink.title | escape }}</div>
+                              <div>{{ childlink.object.description }}</div>
+                            </div>
+                          {%- endif -%}
+                          {%- if childlink.url != '#' and has_sub_dropdown -%}
+                            <button type="button"
+                              aria-controls="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}"
+                              aria-labelledby="Sublabel-{{ grand_child_list_handle }}"
+                              class="collapsible-trigger{% if childlink.active or childlink.child_active %} is-open{% endif %}">
+                              {%- render 'collapsible-icons-alt' -%}
+                            </button>
+                          {%- endif -%}
+                        </div>
+
+                        {%- if has_sub_dropdown -%}
+                          <div
+                            id="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}"
+                            aria-labelledby="Sublabel-{{ grand_child_list_handle }}"
+                            class="mobile-nav__sublist collapsible-content collapsible-content--all{% if childlink.active or childlink.child_active %} is-open{% endif %}"
+                            {% if childlink.active or childlink.child_active %}style="height: auto;"{% endif %}>
+                            <div class="collapsible-content__inner">
+                              <ul class="mobile-nav__grandchildlist">
+                                {%- for grandchildlink in childlink.links -%}
+                                  <li class="mobile-nav__item">
+                                    <a href="{{ grandchildlink.url }}" class="mobile-nav__link"{% if grandchildlink.active %} data-active="true"{% endif %}>
+                                      {{ grandchildlink.title }}
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            </div>
+                          </div>
+                        {%- endif -%}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              </div>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
       </ul>
     </div>
   </div>
