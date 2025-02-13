@@ -314,21 +314,23 @@ start: ss-mobile-menu-top-banner
         for: mobile menu top banner
         start: ss-mobile-menu-top-banner
         {% endcomment %}
-        <li class="mobile-nav__item mobile-nav__item-first-ss appear-animation appear-delay-block-{{ animation_row }}">
-          <div class="top-banner-container-ss">
-            <a href="{{ section.settings.mobile_menu_top_banner_link }}">
-              <div class="top-banner-text-container-ss">
-                <div class="top-banner-title-container-ss">{{ section.settings.mobile_menu_top_banner_title }}</div>
-                <span class="top-banner-hypertext-container-ss" href="{{ section.settings.mobile_menu_top_banner_link }}">{{ section.settings.mobile_menu_top_banner_link_text }}</span>
-              </div>
-              {% if section.settings.mobile_menu_top_banner_image != blink %}
-                <div class="top-banner-image-container-ss">
-                  <img src="{{ section.settings.mobile_menu_top_banner_image | image_url: width: 80, height: 80 }}" />
+        {% if section.settings.mobile_menu_top_banner_link != blink %}
+          <li class="mobile-nav__item mobile-nav__item-first-ss appear-animation appear-delay-block-{{ animation_row }}">
+            <div class="top-banner-container-ss">
+              <a href="{{ section.settings.mobile_menu_top_banner_link }}">
+                <div class="top-banner-text-container-ss">
+                  <div class="top-banner-title-container-ss">{{ section.settings.mobile_menu_top_banner_title }}</div>
+                  <span class="top-banner-hypertext-container-ss" href="{{ section.settings.mobile_menu_top_banner_link }}">{{ section.settings.mobile_menu_top_banner_link_text }}</span>
                 </div>
-              {% endif %}
-            </a>
-          </div>
-        </li>
+                {% if section.settings.mobile_menu_top_banner_image != blink %}
+                  <div class="top-banner-image-container-ss">
+                    <img src="{{ section.settings.mobile_menu_top_banner_image | image_url: width: 80, height: 80 }}" />
+                  </div>
+                {% endif %}
+              </a>
+            </div>
+          </li>
+        {% endif %}
         {% comment %} end: ss-mobile-menu-top-banner {% endcomment %}
         
         {%- for link in main_menu.links -%}
