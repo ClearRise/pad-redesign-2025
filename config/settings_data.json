@@ -218,7 +218,7 @@
           "mobile_menu_top_banner_image": "shopify://shop_images/Black_Ceramic-_Purple_Class-removebg-preview.png",
           "mobile_menu_top_banner_title": "VALENTINE'S SALE",
           "mobile_menu_top_banner_link_text": "SHOP NOW - 20% OFF",
-          "mobile_menu_top_banner_link": "shopify://collections",
+          "mobile_menu_top_banner_link": "shopify://collections/all-products",
           "mobile_menu_top_banner_background": "",
           "announcement_compact": true,
           "announcement_above_header": true,
