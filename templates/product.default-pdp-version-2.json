@@ -84,9 +84,8 @@
         },
         "glowstone_enhancement_bWeLXn": {
           "type": "glowstone_enhancement",
-          "disabled": true,
           "settings": {
-            "in_collection": "",
+            "in_collection": "the-glowstone-series",
             "up_product": "glowstone-enhancement-1",
             "enhancement_title": "Glowstone Enhancement",
             "enhancement_text": "Boost your ring’s brilliance with extra glowstone for an even brighter glow.",
