@@ -1982,6 +1982,9 @@ label.variant__label.custom_label{
   .collapsible-trigger__icon{
       right: 10px;
   }
+  .collapsible-trigger__icon-left {
+    left: 15px;
+  }
   .collapsible-trigger-btn{
       padding: 15px 10px 15px 10px;
   }
@@ -2210,7 +2213,6 @@ label.variant__label.custom_label{
 .variant-input-wrap.custom_options {
   margin-bottom: 12px;
 }
-
 .desktop-only{
   display: block;
 }
@@ -2329,4 +2331,3 @@ label.variant__label.custom_label{
     margin-bottom: 0px;
   }
 }
-
