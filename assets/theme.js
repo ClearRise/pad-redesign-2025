@@ -1791,7 +1791,7 @@ lazySizesConfig.expFactor = 4;
         if (el) {
           el.classList.add('is-loading');
           const loader = document.querySelector('.overlay');
-          //loader.style.display = 'block';
+          loader.style.display = 'block';
         }
         if (dataEngravingValue && dataProtectionValue) {
           this.updateOtherProductQuantity(key, qty, dataEngravingValue, dataProtectionValue, comp_val);
@@ -1960,6 +1960,9 @@ lazySizesConfig.expFactor = 4;
         trigger.on('click' + namespace, toggle);
       });
     }
+
+    var globalEl;
+    var lastEl;
   
     function toggle(evt) {
       if (isTransitioning) {
@@ -1973,6 +1976,7 @@ lazySizesConfig.expFactor = 4;
       var isTab = el.classList.contains(classes.tabs);
       var moduleId = el.getAttribute('aria-controls');
       var container = document.getElementById(moduleId);
+      globalEl = el;
   
       if (!moduleId) {
         moduleId = el.dataset.controls;
@@ -1980,6 +1984,10 @@ lazySizesConfig.expFactor = 4;
   
       // No ID, bail
       if (!moduleId) {
+        if (el.id == "back-main-mobile-menu-ss") {
+          lastEl.classList.remove(classes.open);
+          setTransitionHeight(lastTransitionEle.container, 0, true, lastTransitionEle.container.classList.contains(classes.autoHeight));
+        }
         return;
       }
   
@@ -2061,14 +2069,41 @@ lazySizesConfig.expFactor = 4;
           setTransitionHeight(container, height, isOpen, isAutoHeight);
         });
       }
+
+
     }
-  
+
+    // 2/9/2025
+    // for: mobile menu top banner
+    // start: ss-mobile-menu-top-banner
+    // only-next-line
+    var lastTransitionEle = {};
+    
     function setTransitionHeight(container, height, isOpen, isAutoHeight) {
+      console.log("test", container, height, isOpen, isAutoHeight);
+      lastEl = globalEl;
+
+      // 2/9/2025
+      // for: mobile menu top banner
+      // start: ss-mobile-menu-top-banner
+      lastTransitionEle.container = container;
+      lastTransitionEle.height = height;
+      lastTransitionEle.isOpen = isOpen;
+      lastTransitionEle.isAutoHeight = isAutoHeight;
+
+      document.querySelector(".main-mobile-nav-ul-ss").classList.toggle("left-ss");
+      document.querySelector(".mobile-nav__social-ss").classList.toggle("left-ss");
+      document.querySelector(".child-mobile-nav-ul-ss").classList.toggle("right-ss");
+      // end: ss-mobile-menu-top-banner
+      
       container.classList.remove(classes.hide);
       theme.utils.prepareTransition(container, function() {
-        container.style.height = height+'px';
+        // container.style.height = height+'px'; // 2/9/2025 removed for de-animation
         if (isOpen) {
-          container.classList.remove(classes.open);
+          setTimeout(() => {
+            container.classList.remove(classes.open);
+          }, 500);
+          
         } else {
           container.classList.add(classes.open);
         }
