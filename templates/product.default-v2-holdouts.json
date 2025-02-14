@@ -82,6 +82,18 @@
             "save_badge": "For Limited Time Only"
           }
         },
+        "glowstone_enhancement_x3ETgf": {
+          "type": "glowstone_enhancement",
+          "settings": {
+            "in_collection": "the-glowstone-series",
+            "up_product": "glowstone-enhancement-1",
+            "enhancement_title": "Glowstone Enhancement",
+            "enhancement_text": "Boost your ring’s brilliance with extra glowstone for an even brighter glow.",
+            "border_color": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
           "settings": {
@@ -259,6 +271,7 @@
         "bold_option_agdenj",
         "inventory_status",
         "engraving_YpGMkM",
+        "glowstone_enhancement_x3ETgf",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
         "buy_buttons",
         "7621462d-9edd-432d-a525-b5bcbfe07deb",
