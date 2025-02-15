@@ -175,7 +175,7 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "<b><u>Sale</u></b>",
-              "link_submenu": "shopify://collections/all-products-20-holdouts"
+              "link_submenu": "https://patrickadairdesigns.com/collections/all-products-holdouts"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
