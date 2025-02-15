@@ -746,6 +746,8 @@ function bothRemoveEngrageShippingItems($protectionID, $engravingProductID, $pro
         success: function (cartData) {
             let updates = {};
             updates[$productId] = 0;
+
+          console.log('yes i am here');
             console.log(cartData);
 
             // Handle protection plan removal
