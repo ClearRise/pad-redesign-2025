@@ -773,7 +773,7 @@ function bothRemoveEngrageShippingItems($protectionID, $engravingProductID, $pro
             }
 
             console.log(updates);
-
+$('.overlay').hide();
             // Update the cart with the new quantities
             fetch(window.Shopify.routes.root + 'cart/update.js', {
                 method: 'POST',
