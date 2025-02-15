@@ -664,7 +664,7 @@ function remove_auto_gift($prod_id){
     // Check if the item has engraving and protection plans (both .Protection_p and .Protection_p_glow)
     var hasEngraving = $(this).parents(".cart__item").find(".engraving_p").val() == "true";
     var hasProtection = $(this).parents(".cart__item").find(".Protection_p").val() == "true";
-  //  var hasProtectionGlow = $(this).parents(".cart__item").find(".Protection_p_glow").val() == "true";
+    var hasProtectionGlow = $(this).parents(".cart__item").find(".Protection_p_glow").val() == "true";
 
     if (hasEngraving && (hasProtection || hasProtectionGlow)) {
         var protectionID = hasProtection ? $(this).parents(".cart__item").find(".Protection_p").attr('data-product-id') : $(this).parents(".cart__item").find(".Protection_p_glow").attr('data-product-id');
