@@ -16,7 +16,7 @@
           "type": "price",
           "settings": {
             "enable_badge": true,
-            "custom_badge": "VALENTINE'S SALE OFFER"
+            "custom_badge": "PRESIDENTS DAY SALE OFFER"
           }
         },
         "judge_me_reviews_preview_badge_wyndin": {
@@ -422,8 +422,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "Up to 20% off",
-            "heading": "Valentine's Sale",
-            "textarea": "Get up to 20% off and a free gift on orders $175+",
+            "heading": "PRESIDENTS DAY SALE",
+            "textarea": "Get up to 20% off and a TWO free gifts on orders $175+",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",

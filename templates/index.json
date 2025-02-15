@@ -23,12 +23,12 @@
         "desktop_height": 500,
         "mobile_height": 250,
         "focal_point": "center center",
-        "heading": "VALENTINE'S<br>DAY SALE",
-        "subtext": "Up to 20% off<br>Free Gift on Orders $175+",
+        "heading": "PRESIDENTS DAY<br>WEEKEND SALE",
+        "subtext": "Up to 20% off<br><b>TWO</b> Free Gifts on Orders $175+",
         "button_text": "SHOP NOW →",
         "button_link": "shopify://collections/all-products-20-holdouts",
-        "desktop_image": "shopify://shop_images/No_text_8525d9f1-0bfc-484d-b706-3f71fcb38766.png",
-        "mobile_image": "shopify://shop_images/No_text_ca51f57c-3470-4c62-87af-0b98986dc88f.png"
+        "desktop_image": "shopify://shop_images/P1155361.jpg",
+        "mobile_image": "shopify://shop_images/P1155361_decd1489-0b85-4b06-bb8b-8b6ffcc0fbf3.jpg"
       }
     },
     "promotional_section_jjdRLm": {
@@ -222,8 +222,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "Up to 20% off",
-            "heading": "VALENTINE'S DAY SALE",
-            "textarea": "Free Gift on Orders $175+",
+            "heading": "PRESIDENTS DAY <br>WEEKEND SALE",
+            "textarea": "<b>TWO</b> Free Gifts on Orders $175+",
             "cta_text1": "SHOP NOW →",
             "cta_link1": "shopify://collections/all-products-20-holdouts",
             "cta_text2": "",
