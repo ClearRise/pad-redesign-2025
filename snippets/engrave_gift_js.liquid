@@ -649,8 +649,7 @@ function remove_auto_gift($prod_id){
     }
     else {       
       remove_all($remove_url);
-    }   
-     $('.overlay').hide();
+    }    
   });
 
 //    $(document).on("click", ".cart__remove a", function (event) {
@@ -868,6 +867,7 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
                           // Handle the response data here
                  setTimeout(function(){
                     updatedgCartUpsell();  
+                   $('.overlay').hide();
                  }, 800)
                              
                         });
