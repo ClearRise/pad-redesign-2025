@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/Giveaway_banner_collection_desktop.png",
-            "image_mobile": "shopify://shop_images/Giveaway_banner_collection_mobile.png",
+            "image": "shopify://shop_images/mystery_collection.png",
+            "image_mobile": "shopify://shop_images/mystery_collection_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -55,8 +55,7 @@
     },
     "replo_flash_sale_timer_BdXnmX": {
       "type": "replo-flash-sale-timer",
-      "settings": {
-      }
+      "settings": {}
     },
     "collection-header": {
       "type": "collection-header",
@@ -125,8 +124,7 @@
         "collection_description": {
           "type": "collection_description",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "subcollections": {
           "type": "subcollections",
@@ -160,6 +158,7 @@
         "subtitle_enable": false,
         "subtitle_type": "two",
         "custom_badge": "",
+        "saved_amount_option": "basic_logic",
         "load_more": false
       }
     }
