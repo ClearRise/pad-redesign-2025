@@ -79,8 +79,8 @@
     "save_badge_type": "badge",
     "product_threshold_amount": 100,
     "product1-img1": "shopify://shop_images/Mystery_Ring_Gif_bf14da19-95c3-4062-bee1-3da32c79205e.gif",
-    "product1-title": "Presidents Day Offer",
-    "product1-text": "Get TWO Free Mystery Gifts on orders $175+<br><b>THIS WEEKEND ONLY</b>",
+    "product1-title": "FREE GIFT OFFER",
+    "product1-text": "Get a Free Mystery Gift on orders $175+",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -98,11 +98,11 @@
     "upsell_box_title": "You May Also Like",
     "show_gift_box": true,
     "first_tier_progress": "You've unlocked a Free Gift!",
-    "gift_box_title": "PRESIDENTS DAY OFFER",
+    "gift_box_title": "FREE GIFT OFFER",
     "gift_box_text": "",
-    "cart_threshold_amount": 175,
+    "cart_threshold_amount": 195,
     "spend_progress": "",
-    "product-handle-1": "two-free-mystery-gifts",
+    "product-handle-1": "mystery-gift",
     "product-handle-2": "red-burl-carbon-fiber-bar-pendant",
     "hide_gift_2": true,
     "second_show_gift_box": false,
@@ -175,7 +175,7 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "<b><u>Sale</u></b>",
-              "link_submenu": "https://patrickadairdesigns.com/collections/all-products-holdouts"
+              "link_submenu": "shopify://collections/flash-sale"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
@@ -215,9 +215,9 @@
           "sticky_collection": false,
           "mobile_top_banner_image": "shopify://shop_images/oie_haHVk88If7KC.png",
           "mobile_menu_top_banner_image": "shopify://shop_images/Black_Ceramic-_Purple_Class-removebg-preview.png",
-          "mobile_menu_top_banner_title": "VALENTINE'S SALE",
-          "mobile_menu_top_banner_link_text": "SHOP NOW - 20% OFF",
-          "mobile_menu_top_banner_link": "shopify://collections/all-products",
+          "mobile_menu_top_banner_title": "FLASH SALE",
+          "mobile_menu_top_banner_link_text": "SHOP NOW - 25% OFF",
+          "mobile_menu_top_banner_link": "shopify://collections/flash-sale",
           "mobile_menu_top_banner_background": "",
           "announcement_compact": true,
           "announcement_above_header": true,
