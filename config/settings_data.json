@@ -366,7 +366,7 @@
           "show_reminder_popup": false,
           "enablejQuery": true,
           "product_handle": "navidium-shipping-protection",
-          "checkout_section": "navidium",
+          "checkout_section": "",
           "subtotal_element": "navidium",
           "click_triggers": "#cart-icon-bubble",
           "store_checkout_button": "#checkout-button",
