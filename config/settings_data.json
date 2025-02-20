@@ -360,7 +360,7 @@
       },
       "2699851813924348007": {
         "type": "shopify://apps/navidium-shipping-protection/blocks/navidium-protection-consent/0127ebe0-a248-4215-97ad-f7db763bd6c8",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "show_landing_popup": false,
           "show_reminder_popup": false,
