@@ -310,6 +310,23 @@
         "space_below": true
       }
     },
+    "text_and_image_ABibgj": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Mystery_Ring_Gif.gif",
+        "image2": "shopify://shop_images/rings-gif_1.gif",
+        "image_width": 700,
+        "subtitle": "THIS WEEKEND ONLY",
+        "title": "MYSTERY RINGS",
+        "text": "<p>✨ Mystery Ring Promotion! ✨ For a limited time, get a stunning surprise ring at an unbeatable price.</p>",
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mystery-rings",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "right",
+        "divider": false
+      }
+    },
     "16466920156dc1f06b": {
       "type": "advanced-content",
       "blocks": {
@@ -819,6 +836,7 @@
     "promotional_section_jjdRLm",
     "slideshow",
     "1646694183f97c4822",
+    "text_and_image_ABibgj",
     "16466920156dc1f06b",
     "featured_collections_UTDNtV",
     "rich-text",
