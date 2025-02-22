@@ -1,8 +1,12 @@
 <div
-  class="cart__item rm_border {% if hidden %}hide{% endif %}"
+  class="cart__item rm_border "
   data-quantity="{{ product.quantity }}"
   data-key="{{ product.key }}"
   data-handle="{{ product.product.handle }}"
+   {% if hidden %}style="height: 0 !important;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0;"{% endif %}
 >
   {%- assign img_url = product | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
   <div class="cart__image">
