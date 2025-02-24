@@ -312,6 +312,7 @@
     },
     "text_and_image_ABibgj": {
       "type": "text-and-image",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Mystery_Ring_Gif.gif",
         "image2": "shopify://shop_images/rings-gif_1.gif",
