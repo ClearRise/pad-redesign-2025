@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "collection-header": {
@@ -7,11 +16,6 @@
         "enable": true,
         "collection_image_enable": false,
         "parallax": true
-      }
-    },
-    "d6959d1f-04b7-41ed-8eb4-84036f4fad4d": {
-      "type": "replo-bogo-earrings-bf",
-      "settings": {
       }
     },
     "promo-grid": {
@@ -40,13 +44,14 @@
             "cta_link1": "",
             "cta_text2": "Shop All",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Ring_Main_Focus_Shot.jpg",
+            "image": "shopify://shop_images/Ring_Main_Focus_Shot.jpg",
             "video_url": "",
             "width": "100",
             "height": 500,
             "text_size": 120,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -70,8 +75,8 @@
       "blocks": {
         "collection_description": {
           "type": "collection_description",
-          "settings": {
-          }
+          "disabled": true,
+          "settings": {}
         },
         "subcollections": {
           "type": "subcollections",
@@ -95,17 +100,23 @@
         "product_grid"
       ],
       "settings": {
+        "title": "",
         "enable_sidebar": true,
         "collapsed": true,
         "filter_style": "sidebar",
         "enable_color_swatches": false,
-        "enable_sort": true
+        "enable_sort": true,
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "custom_badge": "",
+        "saved_amount_option": "basic_logic",
+        "load_more": false
       }
     }
   },
   "order": [
     "collection-header",
-    "d6959d1f-04b7-41ed-8eb4-84036f4fad4d",
     "promo-grid",
     "main-collection"
   ]
