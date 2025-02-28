@@ -651,6 +651,9 @@ function multiRemoveEngarageShippingItems (productId, itemQuantity, relativeItem
         });
         if (productItem) {
           var newQuantity = productItem.quantity - 1 * itemQuantity;
+          if (newQuantity < 0) {
+            newQuantity = 0;
+          }
           updates[productItem.id] = newQuantity;
         }
       }
