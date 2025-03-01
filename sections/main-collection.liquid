@@ -30,7 +30,8 @@
           -%}
         </div>
         <div class="grid__item medium-up--four-fifths grid__item--content">
-          {%- liquid
+          {% comment %}
+            
             for block in section.blocks
               case block.type
               when 'product_grid'
@@ -38,7 +39,21 @@
               endcase
             endfor
           -%}
-          {% assign paginate_by = request.query.limit | paginate_by %}
+          {%- liquid
+          {% assign paginate_by = request.query.limit | paginate_by %}{% endcomment %}
+          {%- liquid
+  assign paginate_by = 12
+  if request.query.limit and request.query.limit != blank
+    assign paginate_by = request.query.limit | plus: 0
+  endif
+-%}
+
+{% paginate collection.products by paginate_by %}
+  {% for product in collection.products %}
+    {{ product.title }}
+  {% endfor %}
+{% endpaginate %}
+
           {%- paginate collection.products by paginate_by -%}
           {%- for block in section.blocks -%}
             <div {{ block.shopify_attributes }} {%- if block.type == 'product-grid' -%}data-scroll-to{%- endif -%}>
