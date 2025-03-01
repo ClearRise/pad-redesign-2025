@@ -1780,6 +1780,7 @@ lazySizesConfig.expFactor = 4;
         var quantityInput = el.querySelector('.js-qty__num');
         var dataEngravingValue = quantityInput.getAttribute('data-engraving');
         var dataProtectionValue = quantityInput.getAttribute('data-protection');
+        var dataGlowstoneValue = quantityInput.getAttribute('data-glowston');
         var comp_val = qty - parseInt(quantityInput.getAttribute('data-quantity'));
 
         if (!key || !qty) {
@@ -1792,14 +1793,16 @@ lazySizesConfig.expFactor = 4;
           const loader = document.querySelector('.overlay');
           loader.style.display = 'block';
         }
-        if (dataEngravingValue && dataProtectionValue) {
-          this.updateOtherProductQuantity(key, qty, dataEngravingValue, dataProtectionValue, comp_val);
-        }
-        else if (dataEngravingValue) {
-          this.updateOtherProductQuantity(key, qty, dataEngravingValue, false, comp_val);
-        }
-        else if (dataProtectionValue) {
-          this.updateOtherProductQuantity(key, qty, false, dataProtectionValue, comp_val);
+
+        if (dataEngravingValue || dataProtectionValue || dataGlowstoneValue) {
+          // this.updateOtherProductQuantity(key, qty, dataEngravingValue, dataProtectionValue, comp_val);
+          this.updateOtherProductsQuantitySS(key, qty, [dataEngravingValue, dataProtectionValue, dataGlowstoneValue], comp_val);
+          // }
+          // else if (dataEngravingValue) {
+          //   this.updateOtherProductQuantity(key, qty, dataEngravingValue, false, comp_val);
+          // }
+          // else if (dataProtectionValue) {
+          //   this.updateOtherProductQuantity(key, qty, false, dataProtectionValue, comp_val);
         } else {
           theme.cart.changeItem(key, qty)
             .then(function (cart) {
@@ -1827,11 +1830,10 @@ lazySizesConfig.expFactor = 4;
 
       },
 
-      updateOtherProductQuantity: function (key, qty, dataEngravingValue, dataProtectionValue, comp_val) {
+      updateOtherProductsQuantitySS: function (key, qty, otherProductsValue, comp_val) {
         var $this = this;
+
         theme.cart.getCart().then(function (cartData) {
-          var engravingProduct = cartData.items.find(item => item.variant_id == dataEngravingValue);
-          var protectionProduct = cartData.items.find(item => item.variant_id == dataProtectionValue);
           var requestData = {
             updates: {}
           };
@@ -1840,15 +1842,16 @@ lazySizesConfig.expFactor = 4;
             requestData.updates[key] = qty;
           }
 
-          if (dataEngravingValue) {
-            requestData.updates[dataEngravingValue] = engravingProduct.quantity + comp_val;
-          }
+          otherProductsValue.forEach(function (productID) {
+            let product = cartData.items.find(item => item.variant_id == productID);
+            console.log(product, "product");
+            if (product) {
+              if (product.quantity + comp_val >= 0) {
+                requestData.updates[productID] = product.quantity + comp_val;
+              }
+            }
+          });
 
-          if (dataProtectionValue && protectionProduct) {
-            requestData.updates[dataProtectionValue] = protectionProduct.quantity + comp_val;
-          }
-
-          console.log(requestData)
           theme.cart._updateCart({
             url: ''.concat('/cart/update.js', '?t=').concat(Date.now()),
             data: JSON.stringify(requestData)
