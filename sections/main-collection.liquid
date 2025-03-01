@@ -30,8 +30,8 @@
           -%}
         </div>
         <div class="grid__item medium-up--four-fifths grid__item--content">
-          {% comment %}
-            
+
+         {%- liquid 
             for block in section.blocks
               case block.type
               when 'product_grid'
@@ -39,30 +39,7 @@
               endcase
             endfor
           -%}
-          {%- liquid
-          {% assign paginate_by = request.query.limit | paginate_by %}{% endcomment %}
-          {%- liquid
-  assign paginate_by = 12
-
-  assign query_string = request.uri | split: '?' | last
-  assign query_params = query_string | split: '&'
-
-  for param in query_params
-    assign key_value = param | split: '='
-    assign key = key_value[0]
-    assign value = key_value[1]
-
-    if key == "limit" and value != blank
-      assign paginate_by = value | plus: 0
-    endif
-  endfor
--%}
-          <div class="pppppppppppp" style="display: none !important">{{ paginate_by }}</div>
-          <div class="pppppppppppp" style="display: none !important">{{ query_params | json }}</div>
-          <div class="pppppppppppp" style="display: none !important">{{ request.uri }}</div>
-          <div class="pppppppppppp" style="display: none !important">{{ request.path }}</div>
-          <div class="pppppppppppp" style="display: none !important">{{ request.url }}</div>
-          <div class="pppppppppppp" style="display: none !important">{{ request.query | json }}</div>
+          
           {%- paginate collection.products by paginate_by -%}
           {%- for block in section.blocks -%}
             <div {{ block.shopify_attributes }} {%- if block.type == 'product-grid' -%}data-scroll-to{%- endif -%}>
