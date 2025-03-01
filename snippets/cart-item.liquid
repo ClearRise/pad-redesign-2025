@@ -1,12 +1,13 @@
 <div
-  class="cart__item rm_border "
+  class="cart__item rm_border"
   data-quantity="{{ product.quantity }}"
   data-key="{{ product.key }}"
   data-handle="{{ product.product.handle }}"
-   {% if hidden %}style="height: 0 !important;
-    opacity: 0;
-    visibility: hidden;
-    padding: 0;"{% endif %}
+
+  {% if hidden %}style="height: 0 !important;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0;"{% endif %}
 >
   {%- assign img_url = product | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
   <div class="cart__image">
@@ -53,11 +54,18 @@
       <span class="bold_load_cart_item_properties black_txt"></span>
 
       {% if property_size > 0 %}
+        {% if product.properties._glowstone_enhancement == "Yes" %}
+          <div class="product-option action_icons">
+            <input type="hidden" class="Protection_p_glow" value="true" data-product-id="{{ product.properties._prot-glowstone_enhancement_id }}">
+          </div>
+        {% endif %}
         {% for p in product.properties %}
 
-           {% if p.first contains '_prot-glowstone_enhancement_id' %}
-             <input type="hidden" class="Protection_p_glow" value="true" data-product-id="{{ p.last }}">
-           {% endif %}
+          {% comment %} {% if p.first contains '_glowstone_enhancement' %}
+            <div class="product-option action_icons">
+              <input type="hidden" class="Protection_p_glow" value="true" data-product-id="{{ p.last }}">
+            </div>
+          {% endif %} {% endcomment %}
 
           
           {% if product.product.metafields.custom.premium_protection_product %}
@@ -109,6 +117,9 @@
             data-id="{{ product.key }}"
             data-engraving="{{ e_product_id }}"
             data-protection="{{ p_product_id }}"
+            {%- if product.properties._glowstone_enhancement == "Yes" -%}
+              data-glowston="{{ product.properties._prot-glowstone_enhancement_id }}"
+            {%- endif -%}
             data-quantity="{{ product.quantity }}"
           >
           <button
