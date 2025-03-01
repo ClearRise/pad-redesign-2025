@@ -47,7 +47,9 @@
     assign paginate_by = request.query.limit | plus: 0
   endif
 -%}
-
+          <div class="pppppppppppp" style="display: none !important">{{ paginate_by }}</div>
+          <div class="pppppppppppp" style="display: none !important">{{ request.query.limit }}</div>
+          <div class="pppppppppppp" style="display: none !important">{{ request.query.page }}</div>
           {%- paginate collection.products by paginate_by -%}
           {%- for block in section.blocks -%}
             <div {{ block.shopify_attributes }} {%- if block.type == 'product-grid' -%}data-scroll-to{%- endif -%}>
