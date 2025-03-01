@@ -58,8 +58,8 @@
   endfor
 -%}
           <div class="pppppppppppp" style="display: none !important">{{ paginate_by }}</div>
-          <div class="pppppppppppp" style="display: none !important">{{ request.query.limit }}</div>
-          <div class="pppppppppppp" style="display: none !important">{{ request.query.page }}</div>
+          <div class="pppppppppppp" style="display: none !important">{{ query_params | json }}</div>
+          <div class="pppppppppppp" style="display: none !important">{{ request.uri }}</div>
           <div class="pppppppppppp" style="display: none !important">{{ request.query | json }}</div>
           {%- paginate collection.products by paginate_by -%}
           {%- for block in section.blocks -%}
