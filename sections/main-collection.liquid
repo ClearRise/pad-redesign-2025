@@ -38,6 +38,7 @@
               endcase
             endfor
           -%}
+          {% assign paginate_by = request.query.limit | paginate_by %}
           {%- paginate collection.products by paginate_by -%}
           {%- for block in section.blocks -%}
             <div {{ block.shopify_attributes }} {%- if block.type == 'product-grid' -%}data-scroll-to{%- endif -%}>
