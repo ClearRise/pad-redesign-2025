@@ -48,12 +48,6 @@
   endif
 -%}
 
-{% paginate collection.products by paginate_by %}
-  {% for product in collection.products %}
-    {{ product.title }}
-  {% endfor %}
-{% endpaginate %}
-
           {%- paginate collection.products by paginate_by -%}
           {%- for block in section.blocks -%}
             <div {{ block.shopify_attributes }} {%- if block.type == 'product-grid' -%}data-scroll-to{%- endif -%}>
