@@ -61,6 +61,7 @@
           <div class="pppppppppppp" style="display: none !important">{{ query_params | json }}</div>
           <div class="pppppppppppp" style="display: none !important">{{ request.uri }}</div>
           <div class="pppppppppppp" style="display: none !important">{{ request.path }}</div>
+          <div class="pppppppppppp" style="display: none !important">{{ request.url }}</div>
           <div class="pppppppppppp" style="display: none !important">{{ request.query | json }}</div>
           {%- paginate collection.products by paginate_by -%}
           {%- for block in section.blocks -%}
