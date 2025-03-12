@@ -203,30 +203,6 @@
             "size_chart": ""
           }
         },
-        "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
-          "type": "tab",
-          "settings": {
-            "expanded": false,
-            "style": "box",
-            "title": "Lifetime Warranty",
-            "content": "<p>At Patrick Adair Designs, all products come with a <a href=\"/pages/warranty-and-return-information\" title=\"Limited Lifetime Warranty and Return Policy\"><strong>Limited Lifetime Warranty</strong></a> by default. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.</p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": ""
-          }
-        },
-        "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
-          "type": "tab",
-          "settings": {
-            "expanded": false,
-            "style": "box",
-            "title": "How To Care",
-            "content": "<p>{{ product.metafields.global.how_to_care_new.value }}</p>",
-            "page": "",
-            "enable_readmore": false,
-            "size_chart": ""
-          }
-        },
         "tab": {
           "type": "tab",
           "settings": {
@@ -269,8 +245,6 @@
         "description",
         "67cf22ff-76d8-4ad2-91e5-80b67524f841",
         "7cf22f7b-2877-4d38-a231-95946286cc18",
-        "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86",
-        "e15f8d39-327a-449c-ae3e-f545ea35c05e",
         "tab",
         "contact"
       ],
