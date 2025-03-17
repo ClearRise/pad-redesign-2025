@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -42,7 +42,7 @@
           "type": "rich-text",
           "settings": {
             "title": "",
-            "text": "<p>Below is a list of Frequently Asked Questions (FAQs) regarding Patrick Adair Designs. If you have a question that isn't answered here, or would like futher information on our brand or a specific product,<strong> <\/strong><a href=\"https:\/\/patrickadairdesigns.com\/pages\/contact-us\" target=\"_self\"><strong>contact us<\/strong><\/a>.<\/p>",
+            "text": "<p>Below is a list of Frequently Asked Questions (FAQs) regarding Patrick Adair Designs. If you have a question that isn't answered here, or would like futher information on our brand or a specific product,<strong> </strong><a href=\"https://patrickadairdesigns.com/pages/contact-us\" target=\"_self\"><strong>contact us</strong></a>.</p>",
             "align_text": "left"
           }
         },
@@ -50,49 +50,49 @@
           "type": "question",
           "settings": {
             "title": "When will my ring ship?",
-            "text": "<p>Every Patrick Adair Designs ring is handmade, made to order. Each order is crafted by a highly-trained artisan with thought and integrity in an extremely time consuming process. Our lead times vary and are estimates. Production depends on a variety of factors including but not limited to - material availability, labor availability, and order volume. For a detailed breakdown on how quickly we are shipping our products, check out our <a href=\"https:\/\/patrickadairdesigns.com\/pages\/shipping-information\" target=\"_self\"><strong>Shipping Information<\/strong><\/a> page.<\/p>"
+            "text": "<p>Every Patrick Adair Designs ring is handmade, made to order. Each order is crafted by a highly-trained artisan with thought and integrity in an extremely time consuming process. Our lead times vary and are estimates. Production depends on a variety of factors including but not limited to - material availability, labor availability, and order volume. For a detailed breakdown on how quickly we are shipping our products, check out our <a href=\"https://patrickadairdesigns.com/pages/shipping-information\" target=\"_self\"><strong>Shipping Information</strong></a> page.</p>"
           }
         },
         "template--14574611857490__312781d0-96bd-4627-abf9-f7ed33aed4b5-question-2": {
           "type": "question",
           "settings": {
             "title": "Where do you get your meteorite?",
-            "text": "<p>All of our meteorite is currently sourced from meteorite dealers that we find either through eBay or that we know through personal connections. We use authentic and genuine Muonionalusta Meteorite for all of our meteorite products.<\/p>"
+            "text": "<p>All of our meteorite is currently sourced from meteorite dealers that we find either through eBay or that we know through personal connections. We use authentic and genuine Meteorite for all of our meteorite products.</p>"
           }
         },
         "9edaa1a8-e6fc-401d-be5e-7b9412d62dc0": {
           "type": "question",
           "settings": {
             "title": "How does the glow work on your glowstone rings?",
-            "text": "<p>The glow comes from strontium aluminate, which is a natural crystal powder that glows after being charged with a UV light. It is nontoxic and glows brighter and longer than copper activated zinc sulfide, which is one of its most popular competitors. Check out our blog post on <a href=\"https:\/\/patrickadairdesigns.com\/blogs\/blog\/how-to-get-your-glow-ring-to-glow\" title=\"https:\/\/patrickadairdesigns.com\/blogs\/blog\/how-to-get-your-glow-ring-to-glow\"><strong>How Our Glow Rings Glow<\/strong><\/a> for more information on how to charge and how long they glow for.<\/p>"
+            "text": "<p>The glow comes from strontium aluminate, which is a natural crystal powder that glows after being charged with a UV light. It is nontoxic and glows brighter and longer than copper activated zinc sulfide, which is one of its most popular competitors. Check out our blog post on <a href=\"https://patrickadairdesigns.com/blogs/blog/how-to-get-your-glow-ring-to-glow\" title=\"https://patrickadairdesigns.com/blogs/blog/how-to-get-your-glow-ring-to-glow\"><strong>How Our Glow Rings Glow</strong></a> for more information on how to charge and how long they glow for.</p>"
           }
         },
         "8bd5b863-fcb1-43ae-bde3-7333f20f183b": {
           "type": "question",
           "settings": {
             "title": "What is Damascus Steel?",
-            "text": "<p>Damascus steel is created by combining strips of either iron and steel or two different kinds of steel. They are then heated and forged to create a new and stronger steel. The material has a similar silver color; however, if it is placed in an acid bath, the acid will eat at the different combinations of steel at different rates to form a woodgrain pattern that makes <a href=\"https:\/\/patrickadairdesigns.com\/collections\/damascus-steel-rings\" target=\"_self\"><strong>Damascus Steel Rings<\/strong><\/a> incredibly unique.<\/p>"
+            "text": "<p>Damascus steel is created by combining strips of either iron and steel or two different kinds of steel. They are then heated and forged to create a new and stronger steel. The material has a similar silver color; however, if it is placed in an acid bath, the acid will eat at the different combinations of steel at different rates to form a woodgrain pattern that makes <a href=\"https://patrickadairdesigns.com/collections/damascus-steel-rings\" target=\"_self\"><strong>Damascus Steel Rings</strong></a> incredibly unique.</p>"
           }
         },
         "f04d8342-18cb-44cd-8612-a1fdf4afc09b": {
           "type": "question",
           "settings": {
             "title": "What if I order the wrong size?",
-            "text": "<p>We offer one free size exchange for all non-custom rings. Don't hesitate to contact us if you order the wrong size. Email us at support@patrickadairdesigns.com and we will be happy to figure out the best solution for your case.<\/p>"
+            "text": "<p>We offer one free size exchange for all non-custom rings. Don't hesitate to contact us if you order the wrong size. Email us at support@patrickadairdesigns.com and we will be happy to figure out the best solution for your case.</p>"
           }
         },
         "56c40efd-9201-4a79-86d6-f829d8584f99": {
           "type": "question",
           "settings": {
             "title": "Do you ship internationally?",
-            "text": "<p>Yes, we ship worldwide through DHL and UPS. Shpiping rates are based off of destination and any orders with value exceeding $700 USD ship for free through DHL Express Worldwide.<\/p>"
+            "text": "<p>Yes, we ship worldwide through DHL and UPS. Shpiping rates are based off of destination and any orders with value exceeding $700 USD ship for free through DHL Express Worldwide.</p>"
           }
         },
         "e9488b45-be9e-41c3-afb4-b05cfa7c0070": {
           "type": "question",
           "settings": {
             "title": "Do I need to pay a VAT on international orders?",
-            "text": "<p>Additional charges for customs clearance are borne by the recipient and are not included in the price of shipping. We have no control over these charges and cannot predict what they may be. To find out whether you are likely to end up paying a Value Added Tax (VAT), please check your local customs and import policy.<\/p>"
+            "text": "<p>Additional charges for customs clearance are borne by the recipient and are not included in the price of shipping. We have no control over these charges and cannot predict what they may be. To find out whether you are likely to end up paying a Value Added Tax (VAT), please check your local customs and import policy.</p>"
           }
         }
       },
