@@ -15,8 +15,8 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": false,
-            "custom_badge": "THIS WEEKEND ONLY"
+            "enable_badge": true,
+            "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
         "judge_me_reviews_preview_badge_YkNaeP": {
@@ -84,6 +84,7 @@
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
+          "disabled": true,
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
@@ -398,9 +399,9 @@
         "advanced_eReELk": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
+            "subheading": "BUY ONE GET ONE FREE",
             "heading": "LIMITED TIME OFFER",
-            "textarea": "Get a Free Gift on orders $195+",
+            "textarea": "Purchase one product and get another one of equal or lesser value for FREE",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",

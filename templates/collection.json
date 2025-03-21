@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/blue_burl_collection_desktop.png",
-            "image_mobile": "shopify://shop_images/blue_burl_mobile_mobile.png",
+            "image": "shopify://shop_images/spring_sale_desktop_collection.png",
+            "image_mobile": "shopify://shop_images/spring_sale_MOBILEcollection.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -187,7 +187,7 @@
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
-        "custom_badge": "",
+        "custom_badge": "Buy One Get One Free",
         "saved_amount_option": "basic_logic",
         "load_more": false
       }
