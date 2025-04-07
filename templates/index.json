@@ -71,8 +71,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/bogo_extended_Desktop.png",
-            "image_mobile": "shopify://shop_images/bogo_extended_MOBILE.png",
+            "image": "shopify://shop_images/mystery_gift_hero_desktop.png",
+            "image_mobile": "shopify://shop_images/mystery_gift_hero_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -129,7 +129,7 @@
         "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "",
             "heading": "GLOWSTONE  SERIES",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
@@ -152,7 +152,7 @@
         "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "",
             "heading": "WEDDING   BANDS",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
@@ -175,7 +175,7 @@
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "",
             "heading": "METEORITE RINGS",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
@@ -198,7 +198,7 @@
         "advanced_gaqMVW": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "",
             "heading": "WOMEN'S BANDS",
             "textarea": "<u>SHOP NOW</u>",
             "cta_text1": "",
