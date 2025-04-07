@@ -15,7 +15,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": true,
+            "enable_badge": false,
             "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
@@ -111,8 +111,6 @@
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
             "data_key": "credit-promotion-auto-size",
-            "locale_option": "geolocation",
-            "locale_fallback": "",
             "theme": "light",
             "topPadding": "0",
             "bottomPadding": "0",
