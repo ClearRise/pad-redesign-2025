@@ -19,7 +19,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": true,
+            "enable_badge": false,
             "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
@@ -34,8 +34,6 @@
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
             "data_key": "credit-promotion-auto-size",
-            "locale_option": "geolocation",
-            "locale_fallback": "",
             "theme": "default",
             "topPadding": "0",
             "bottomPadding": "10",
@@ -96,7 +94,6 @@
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
-          "disabled": true,
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
@@ -412,8 +409,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "LIMITED TIME ONLY",
-            "heading": "BUY ONE GET ONE FREE",
-            "textarea": "Get a Free Gift on orders $195+",
+            "heading": "MYSTERY GIFT",
+            "textarea": "Get a Free Mystery Gift (ring or pendant) on orders $195+",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
