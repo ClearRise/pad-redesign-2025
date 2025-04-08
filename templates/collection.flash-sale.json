@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/blue_burl_collection_desktop.png",
-            "image_mobile": "shopify://shop_images/blue_burl_mobile_mobile.png",
+            "image": "shopify://shop_images/mystery_collection.png",
+            "image_mobile": "shopify://shop_images/mystery_collection_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -56,6 +56,33 @@
     "replo_flash_sale_timer_BdXnmX": {
       "type": "replo-flash-sale-timer",
       "settings": {}
+    },
+    "rich_text_zhihjb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Q8QE73": {
+          "type": "heading",
+          "settings": {
+            "title": "The Vault"
+          }
+        },
+        "text_cdxqPK": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Save money on these limited edition designs. Every design on this page will stop being offered on 4/13/2025</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Q8QE73",
+        "text_cdxqPK"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
     },
     "collection-header": {
       "type": "collection-header",
@@ -165,6 +192,7 @@
   },
   "order": [
     "slideshow_VtBrAe",
+    "rich_text_zhihjb",
     "replo_flash_sale_timer_BdXnmX",
     "collection-header",
     "promo-grid",
