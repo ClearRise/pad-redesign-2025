@@ -11499,3 +11499,29 @@ float:right;
 .bold_lightbox .bold_options .bold_option_set:nth-last-child(2) .bold_option.bold_option_textbox .bold_option_element input {
   width: 100%;
 }
+
+/* for checkbox */
+input[type=checkbox] {
+  appearance: none;
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0px;
+  position: relative;
+  top: 2px;
+  border: 2px solid var(--colorBtnPrimary);
+  border-radius: 4px;
+}
+input[type="checkbox"]:checked {
+  background-color: var(--colorBtnPrimary);
+  color: white;
+}
+input[type="checkbox"]:checked::before {
+  content: "✔"; 
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* end for checkbox */
