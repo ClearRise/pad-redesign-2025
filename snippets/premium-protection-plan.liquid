@@ -1,0 +1,65 @@
+<div class="product-block" {{ block.shopify_attributes }}>
+  <div class="bold_option bold_option_checkbox ">
+    <label>
+      <span class="bold_option_element">
+        <input
+          type="checkbox"
+          class="protection-plan"
+          name="properties[Protection Plan]"
+          value="Yes"
+          data-protection="{{ product.selected_or_first_available_variant.id }}"
+          {% if product.selected_or_first_available_variant.price == 0 %} checked {% endif %}
+        >
+        <input
+          type="hidden"
+          class="hidden_protection_info"
+          name="properties[_prot-product-title]"
+          value="{{ product.title }}"
+        >
+        <!--
+          <input type="hidden" class="hidden_protection_info" name="properties[_prot_timestamp]" value="{{ random }}">
+        -->
+      </span>
+      <span class="bold_option_title">Premium Protection Plan</span>
+      <span class="bold_option_value_price">
+        {% if product.selected_or_first_available_variant.price > 0 %}                              
+          {% if product.selected_or_first_available_variant.price < product.selected_or_first_available_variant.compare_at_price %}
+          <span class="money">
+            +{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }} <s>{{product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros}}</s> 
+          </span>
+          {%- if settings.product_save_amount -%}
+            {%- if settings.product_save_type == 'dollar' -%}
+              {%- capture saved_amount -%}{{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | money_without_trailing_zeros }}{%- endcapture -%}
+            {%- else -%}
+              {%- capture saved_amount -%}{{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 | divided_by: product.selected_or_first_available_variant.compare_at_price | round }}%{%- endcapture -%}
+            {%- endif -%}
+            <span class="product__price-savings">
+              {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+              {% if block.settings.save_badge %}
+              <span class="save_badge {{settings.save_badge_type}}">{{block.settings.save_badge}}</span>
+              {% endif %}
+            </span>
+          {%- endif -%}
+          {% else %}
+          <span class="money">
+            +{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+          </span>
+          {% endif %}
+        {% elsif product.selected_or_first_available_variant.price == 0  %}  
+          <span class="money" style="color:red;">FREE</span><span style="text-decoration: line-through;padding-left: 6px;">{{ product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }}</span>
+        {% endif %}                                                             
+      </span>
+    </label>
+    <!--
+      <span class="bold_tooltip"><small>Protect your ring for a lifetime. See below tab for details.</small></span>
+    -->
+    {% if enable_tooltip %}
+      {%- render 'tool-tip-trigger', title: 'Learn More', content: tooltip_content, context: 'learn-more' -%}
+    {% endif %}
+  </div>
+  {% if block.settings.is_show_description %}
+    <div class="premium-protection-plan-description-ss">
+      {{ content }}
+    </div>
+  {% endif %}
+</div>
