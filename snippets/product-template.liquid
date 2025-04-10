@@ -975,6 +975,13 @@
                     <div class="product-block" {{ block.shopify_attributes }}>
                       {{ block.settings.code }}
                     </div>
+                  {%- when 'premium_protection_plan' -%}
+                    {% if product.metafields.custom.premium_protection_product %}
+                      {% liquid
+                        assign protection_product = all_products[product.metafields.custom.premium_protection_product]
+                      %}
+                      {%- render 'premium-protection-plan', product: protection_product, enable_tooltip: false, content: block.settings.description, block: block -%}
+                    {% endif %}
                 {%- endcase -%}
               {%- else -%}
                 <div data-blocks-holder
