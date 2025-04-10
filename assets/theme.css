@@ -11524,4 +11524,11 @@ input[type="checkbox"]:checked::before {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+@media (max-width: 768px) {
+  input[type=checkbox] {
+    border-width: 1px;
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
 /* end for checkbox */
