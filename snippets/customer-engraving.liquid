@@ -1,0 +1,114 @@
+{% style %}
+.product-page-engraving-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 5px 0 10px;
+  font-size: 14px;
+  text-transform: unset!important;
+}
+{% endstyle %}
+
+{%- unless product.empty? -%}
+  {% if settings['product-engraving'] and settings.show_engraving %}
+    <div
+      class="engraving_div"
+      {% if product.type contains 'Ring' or product.type contains 'Bands' %}
+        {% if product.tags contains 'hide_engrave' or product.metafields.custom.hide_engrave %}
+          style="visibility: hidden; height: 0;"
+        {% endif %}
+      {% else %}
+        style="visibility: hidden; height: 0;"
+      {% endif %}
+    >
+      {% assign engrave_product = settings['product-engraving'] %}
+      {% assign engrave_product_id = engrave_product.id %}
+      {% assign first_gift_product_id_var = engrave_product.selected_or_first_available_variant.id %}
+
+      {% for variant in engrave_product.variants %}
+        {% if variant.id == first_gift_product_id_var %}
+          {% assign price =  variant.price %}
+        {% endif %}
+      {% endfor %} 
+
+      {% if form_style == 'checkbox' %}
+        <div class="bold_option bold_option_checkbox ">
+          <label>
+            <span class="bold_option_element">
+              <input
+                type="checkbox"
+                class="engraving-checkbox"
+                name="properties[engraving]"
+                value="Yes"
+                data-engraving="{{ product.selected_or_first_available_variant.id }}"
+              >
+            </span>
+            <span class="bold_option_title">CUSTOM ENGRAVING</span>
+            <span class="bold_option_value_price">
+              (+{{ price | money_without_trailing_zeros }})
+            </span>
+          </label>
+        </div>
+        <div>
+          <input
+            maxlength="20"
+            class="product-page-engraving-input"
+            type="text"
+            placeholder="Enter your engraving text here"
+            name="properties[engraving]"
+          >
+        </div>
+      {% else %}
+        {% if style == 'inline' %}
+          <div class="product-page-section-header">
+            <label>
+              <span class="bold_option_element">
+                <input
+                  type="checkbox"
+                  class="engraving-checkbox"
+                >
+              </span>
+              <span class="bold_option_title"> Custom Engraving</span>
+              <span class="bold_option_value_price">
+                (+{{ price | money_without_trailing_zeros }})
+              </span>
+            </label>
+          </div>
+          <div>
+            <input
+              maxlength="20"
+              class="product-page-engraving-input"
+              type="text"
+              placeholder="Enter your engraving text here"
+              name="properties[engraving]"
+            >
+          </div>
+        {% else %}
+          <a class="add-engraving-button" title="Add an engraving" role="button" tabindex="0" data-title="CUSTOM ENGRAVING (+{{price | money_without_trailing_zeros }})">
+            {% render 'icon-edit' %} <span>Add an engraving</span> (+{{ price | money_without_trailing_zeros }})
+          </a>
+          <p class="engraving-preview hide">Engraving Text: <span></span></p>
+          <input maxlength="20" class="product-page-engraving-input" type="hidden" placeholder="Enter your engraving text here" name="properties[engraving]">
+        {% endif %}
+      {% endif %}
+    </div>
+  {% endif %}
+  {%- endunless -%}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const engravingCheckbox = document.querySelector(".engraving-checkbox");
+    const engravingInput = document.querySelector(".product-page-engraving-input");
+  
+    // Function to enable/disable text input based on checkbox state
+    function toggleEngravingInput() {
+      engravingInput.disabled = !engravingCheckbox.checked;
+    }
+  
+    // Add event listener to checkbox
+    engravingCheckbox.addEventListener("change", toggleEngravingInput);
+  
+    // Ensure input starts as disabled if the checkbox is unchecked
+    toggleEngravingInput();
+  });  
+</script>
