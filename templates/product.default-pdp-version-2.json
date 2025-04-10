@@ -73,6 +73,13 @@
             "inventory_transfers_enable": true
           }
         },
+        "premium_protection_plan_AhxfM9": {
+          "type": "premium_protection_plan",
+          "settings": {
+            "is_show_description": false,
+            "description": "<p>Our <a href=\"/pages/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan</strong></a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.</p><p>{{ product.metafields.custom.premium_protection_plan.value }}</p>"
+          }
+        },
         "engraving_YpGMkM": {
           "type": "engraving",
           "settings": {
@@ -124,6 +131,7 @@
         },
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": true,
             "style": "box",
@@ -268,6 +276,7 @@
         "variant_picker",
         "bold_option_agdenj",
         "inventory_status",
+        "premium_protection_plan_AhxfM9",
         "engraving_YpGMkM",
         "glowstone_enhancement_bWeLXn",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
