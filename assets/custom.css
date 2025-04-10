@@ -2005,6 +2005,11 @@ label.variant__label.custom_label{
   font-size: 14px;
   letter-spacing: normal;
 }
+@media (max-width: 767px) {
+  .bold_option_title {
+    font-size: 12px;
+  }
+}
 
 .bold_option_title .bold_option_value_title:first-child::before {
   content: " - ";
