@@ -11,8 +11,7 @@ bold-options.css version 6
 
 
 .bold_options {
-                border: 1px solid #000000;
-        margin-bottom: 20px;
+            margin-bottom: 20px;
 }
 
 .bold_options:empty {
@@ -355,4 +354,4 @@ bold-options.css version 6
 }
 
 /* custom css */
-                                                                        
+                                                                                                
