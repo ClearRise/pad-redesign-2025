@@ -199,8 +199,8 @@
           "settings": {
             "expanded": false,
             "style": "box",
-            "title": "{{ product.metafields.my_fields.material | metafield_text }}",
-            "content": "<p></p><p></p><p></p>",
+            "title": "{{ product.metafields.custom.material_detail_heading_1.value }}",
+            "content": "<p>{{ product.metafields.global.additional_details_1 | metafield_tag }}</p><p></p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -341,6 +341,7 @@
     },
     "replo_trust_icons_white_backg_AnTLaL": {
       "type": "replo-trust-icons-white-backg",
+      "disabled": true,
       "settings": {}
     },
     "promo_grid_QUweUP": {
