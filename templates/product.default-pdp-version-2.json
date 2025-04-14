@@ -120,6 +120,19 @@
             "description": "<p>Our <a href=\"/pages/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan</strong></a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.</p><p>{{ product.metafields.custom.premium_protection_plan.value }}</p>"
           }
         },
+        "pdp_icon_list_J4K9L6": {
+          "type": "pdp_icon_list",
+          "settings": {
+            "icon_1": "shopify://shop_images/pdp-trust-icon-1.png",
+            "label_1": "Made to Order",
+            "icon_2": "shopify://shop_images/pdp-trust-icon-2.jpg",
+            "label_2": "Unique Ring",
+            "icon_3": "shopify://shop_images/pdp-trust-icon-3.jpg",
+            "label_3": "Lifetime Warranty",
+            "icon_4": "shopify://shop_images/pdp-trust-icon-4.jpg",
+            "label_4": "Customer Satisfaction"
+          }
+        },
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0": {
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
@@ -281,6 +294,7 @@
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
         "buy_buttons",
         "premium_protection_plan_AhxfM9",
+        "pdp_icon_list_J4K9L6",
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
         "7621462d-9edd-432d-a525-b5bcbfe07deb",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
