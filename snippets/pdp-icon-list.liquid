@@ -1,0 +1,44 @@
+<div class="product-block" {{ block.shopify_attributes }}>
+  <div class="icon-list-container-ss">
+    {% if block.settings.icon_1 != blank %}
+      <div class="icon-container-ss">
+        <div class="svg-container-ss">
+          <img src="{{ block.settings.icon_1 | image_url: width: 36, height: 36 }}">
+        </div>
+        <div class="icon-label-ss">
+          {{  block.settings.label_1 }}
+        </div>
+      </div>
+    {% endif %}
+    {% if block.settings.icon_2 != blank %}
+      <div class="icon-container-ss">
+        <div class="svg-container-ss">
+          <img src="{{ block.settings.icon_2 | image_url: width: 36, height: 36 }}">
+        </div>
+        <div class="icon-label-ss">
+          {{  block.settings.label_2 }}
+        </div>
+      </div>
+    {% endif %}
+    {% if block.settings.icon_3 != blank %}
+      <div class="icon-container-ss">
+        <div class="svg-container-ss">
+          <img src="{{ block.settings.icon_3 | image_url: width: 36, height: 36 }}">
+        </div>
+        <div class="icon-label-ss">
+          {{  block.settings.label_3 }}
+        </div>
+      </div>
+    {% endif %}
+    {% if block.settings.icon_4 != blank %}
+      <div class="icon-container-ss">
+        <div class="svg-container-ss">
+          <img src="{{ block.settings.icon_4 | image_url: width: 36, height: 36 }}">
+        </div>
+        <div class="icon-label-ss">
+          {{  block.settings.label_4 }}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
