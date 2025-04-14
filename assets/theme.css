@@ -10368,6 +10368,7 @@ iframe.zoid-component-frame{
 
 .page-content--product{
   padding-top:55px;
+  background-color : #f3f5f2;
 }
 
 @media only screen and (max-width:768px){
