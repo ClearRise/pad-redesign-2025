@@ -212,6 +212,7 @@
         },
         "7cf22f7b-2877-4d38-a231-95946286cc18": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
@@ -224,6 +225,7 @@
         },
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
@@ -236,6 +238,7 @@
         },
         "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
@@ -248,6 +251,7 @@
         },
         "tab": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
@@ -350,8 +354,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "CRAFTED BY <br> HAND",
-            "textarea": "This ring is handmade<br>  by trade artisans <br>in Utah, USA.",
+            "heading": "AUTHENTIC METEORITE",
+            "textarea": "Each bracelet features authentic Muonionalusta meteorite sourced from the arctic circle.",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
@@ -396,8 +400,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "EVERY RING <br> IS UNIQUE",
-            "textarea": "Your ring is made to <br>order just for you. <br>No two rings are <br> the same.",
+            "heading": "EVERY PIECE IS UNIQUE",
+            "textarea": "Your ring is made to <br>order just for you.",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
