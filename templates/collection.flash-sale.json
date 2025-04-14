@@ -57,33 +57,6 @@
       "type": "replo-flash-sale-timer",
       "settings": {}
     },
-    "rich_text_zhihjb": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Q8QE73": {
-          "type": "heading",
-          "settings": {
-            "title": "The Vault"
-          }
-        },
-        "text_cdxqPK": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>Save money on these limited edition designs. Every design on this page will stop being offered on 4/13/2025</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_Q8QE73",
-        "text_cdxqPK"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
-      }
-    },
     "collection-header": {
       "type": "collection-header",
       "disabled": true,
@@ -192,7 +165,6 @@
   },
   "order": [
     "slideshow_VtBrAe",
-    "rich_text_zhihjb",
     "replo_flash_sale_timer_BdXnmX",
     "collection-header",
     "promo-grid",
