@@ -349,5 +349,22 @@
       }
     }
   }
-
+  .icon-list-container-ss {
+    display: flex;
+    justify-content: space-around;
+    .icon-container-ss {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+      svg {
+        width: 36px;
+        height: 36px;
+      }
+      .icon-label-ss {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
 }
