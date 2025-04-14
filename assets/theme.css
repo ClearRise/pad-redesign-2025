@@ -11537,3 +11537,13 @@ input[type="checkbox"]:checked::before {
   }
 }
 /* end for checkbox */
+.product-block .bold_options[data-swatch-style=square] .bold_option_swatch .bold_option_element .bold_option_value .bold_option_value_element {
+  border-width: 0px !important;
+}
+.bold_option_swatch .bold_option_value_element {
+  box-shadow: unset !important;
+}
+.bold_option_value_swatch {
+  border-width: 0px !important;
+}
+/* bold-option-css */
