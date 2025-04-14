@@ -274,6 +274,18 @@
   </script>
   
   {% endcomment %}
+    <style>
+      {% if request.page_type == 'product' %}
+        .page-content--product{
+          padding-top:55px;
+          background-color : #f3f5f2;
+        }
+        .r-12zjrcy{
+          background-color : #f3f5f2 !important;
+        }
+
+      {% endif %}
+    </style>
     <!-- Swiper.js CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
