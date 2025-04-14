@@ -198,8 +198,8 @@
           "disabled": true,
           "settings": {
             "expanded": false,
-            "style": "list",
-            "title": "{{ block.settings.page.metafields.custom.material_1.value }}",
+            "style": "box",
+            "title": "{{ product.metafields.my_fields.material | metafield_text }}",
             "content": "<p></p><p></p><p></p>",
             "page": "",
             "enable_readmore": false,
