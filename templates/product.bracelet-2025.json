@@ -145,11 +145,10 @@
         },
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
           "type": "sales_point",
-          "disabled": true,
           "settings": {
             "style": "grid",
             "icon": "gift",
-            "text": "Handmade in Utah",
+            "text": "Artisan Made",
             "url": "",
             "popup_text": "",
             "popup_page": ""
@@ -157,7 +156,6 @@
         },
         "87272cff-cc16-40a9-b501-c6f3b9acd243": {
           "type": "sales_point",
-          "disabled": true,
           "settings": {
             "style": "grid",
             "icon": "heart",
@@ -169,7 +167,6 @@
         },
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005": {
           "type": "sales_point",
-          "disabled": true,
           "settings": {
             "style": "grid",
             "icon": "truck",
@@ -181,7 +178,6 @@
         },
         "sales_point": {
           "type": "sales_point",
-          "disabled": true,
           "settings": {
             "style": "grid",
             "icon": "tag",
@@ -194,7 +190,7 @@
         "description": {
           "type": "description",
           "settings": {
-            "is_tab": true
+            "is_tab": false
           }
         },
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
@@ -202,9 +198,9 @@
           "disabled": true,
           "settings": {
             "expanded": false,
-            "style": "box",
-            "title": "Additional Details",
-            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}</p>",
+            "style": "list",
+            "title": "{{ block.settings.page.metafields.custom.material_1.value }}",
+            "content": "<p></p><p></p><p></p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -212,6 +208,7 @@
         },
         "7cf22f7b-2877-4d38-a231-95946286cc18": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
@@ -224,6 +221,7 @@
         },
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
@@ -236,6 +234,7 @@
         },
         "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
@@ -248,6 +247,7 @@
         },
         "tab": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
