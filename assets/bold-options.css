@@ -11,7 +11,8 @@ bold-options.css version 6
 
 
 .bold_options {
-            margin-bottom: 20px;
+                border: 1px solid #000000;
+        margin-bottom: 20px;
 }
 
 .bold_options:empty {
@@ -45,8 +46,9 @@ bold-options.css version 6
         }
 
 .bold_option_product_title {
-            font-size: 16px;
-                                font-weight: bold;
+            font-size: 18px;
+                        border: 1px solid #000000;
+                    font-weight: bold;
         margin-bottom: 20px;
 }
 
@@ -218,12 +220,12 @@ bold-options.css version 6
 
 /* custom styles for the priced options total */
 .bold_option_total > div {
-            background-color: #FFFFFF;
-                    color: #AD0000;
+            background-color: #ffffff;
+                    color: #ad0000;
     }
 
 .bold_option_total span {
-            color: #FFFFFF;
+            color: #ffffff;
     }
 
 /* Swatches styles */
@@ -353,4 +355,4 @@ bold-options.css version 6
 }
 
 /* custom css */
-
+                        
