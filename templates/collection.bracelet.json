@@ -55,6 +55,7 @@
     },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
+      "disabled": true,
       "custom_css": [
         "{padding: 10 px;}"
       ],
