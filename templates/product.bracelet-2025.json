@@ -195,10 +195,9 @@
         },
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
-          "disabled": true,
           "settings": {
             "expanded": false,
-            "style": "box",
+            "style": "list",
             "title": "{{ product.metafields.custom.material_detail_heading_1.value }}",
             "content": "<p>{{ product.metafields.global.additional_details_1 | metafield_tag }}</p><p></p>",
             "page": "",
