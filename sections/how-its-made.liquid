@@ -1,6 +1,397 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<style>
+  .how-to-work-text-board-ss {
+    width: 500px;
+    padding: 30px;
+    background: linear-gradient(#3b4953, #091618);
+    border: 1px solid transparent;
+    border-image: linear-gradient(#6e757d, #091618);
+    border-image-slice: 1;
+    color: white;
   }
+  .how-to-work-text-board-ss .list-container-ss > div {
+    display: flex;
+    align-items: center;
+  }
+  .how-to-work-text-board-ss .list-container-ss svg {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+  }
+  .how-its-made img.h_auto[data-sizes='auto'] {
+    height: 100% !important;
+  }
+  .how-to-work-text-board-ss .hero__title {
+    margin-bottom: 15px;
+    font-size: 32px;
+  }
+  .how-to-work-text-board-ss .hero__title .animation-contents {
+    font-size: 32px;
+  }
+  .how-to-work-text-board-ss .hero__subtitle {
+    margin-bottom: 15px;
+  }
+  .how-to-work-text-board-ss .hero__subtitle .animation-contents {
+    font-size: 16px;
+  }
+  .how-its-made .how-to-work-text-board-ss .list-container-ss>div {
+    padding-bottom: 5px;
+  }
+  @media (max-width: 768px) {
+    .how-its-made .hero__text-content {
+      width: 100%;
+      padding: 0px;
+    }
+    .how-its-made .how-to-work-text-board-ss {
+      width: 100%;
+      padding: 30px 10vw;
+      background: rgba(19, 142, 126, 0.1);
+      border: 0px;
+      color: black;
+    }
+    .how-its-made .how-to-work-text-board-ss .list-container-ss svg {
+      width: 24px;
+    }
+  }
+  @media (min-width: 769px) {
+    .how-its-made {
+      background-image: url({{section.settings.desktop_background|img_url:'master'}});
+      background-size: cover;
+      background-position: center;
+    }
+    .how-its-made .aos-animate {
+      display: none;
+    }
+    .how-its-made .hero__text-content {
+      padding: 11vw 0 11vw 10vw;
+    }
+    .hero__text-content {
+    }
+  }
+</style>
+
+{%- if section.settings.space_around -%}
+  <div class="index-section">
+{%- endif -%}
+{%- unless section.settings.full_width -%}
+  <div class="page-width">
+{%- endunless -%}
+<div class="how-its-made">
+  {%- for block in section.blocks -%}
+    {%- liquid
+      case block.settings.width
+        when '25%'
+          assign block_width = 'small--one-whole one-quarter'
+        when '33%'
+          assign block_width = 'small--one-whole one-third'
+        when '50%'
+          assign block_width = 'small--one-whole one-half'
+        when '66%'
+          assign block_width = 'small--one-whole two-thirds'
+        when '75%'
+          assign block_width = 'small--one-whole three-quarters'
+        when '100%'
+          assign block_width = 'one-whole'
+      endcase
+    -%}
+    <div
+      class=" {{ block_width }}{% if block.settings.alignment %} align--{{ block.settings.alignment }}{% endif %}"
+      {{ block.shopify_attributes }}
+    >
+      <div class="">
+        {%- case block.type -%}
+          {%- when 'text_box' -%}
+            <div class="rte">
+              <div class="hero__text-content text-left mobile-text-left">
+                <div class="how-to-work-text-board-ss">
+                  <h2 class="h1 hero__title">
+                    <div class="animation-cropper">
+                      <div class="animation-contents" style="--special_title_color: ">
+                        {{ block.settings.header }}
+                      </div>
+                    </div>
+                  </h2>
+                  <div class="hero__subtitle">
+                    <div class="animation-cropper">
+                      <div class="animation-contents" style="--special_text_color: ">
+                        {{ block.settings.description }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-container-ss">
+                    {% for option in section.blocks %}
+                      {% if option.type == 'option' %}
+                        <div>
+                          <svg
+                            width="64px"
+                            height="64px"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            stroke="#138E7E"
+                            transform="rotate(0)"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier"> <path d="M9.00001 18.25C8.8993 18.2466 8.80034 18.2227 8.70921 18.1797C8.61807 18.1367 8.53667 18.0756 8.47001 18L3.47001 13C3.37467 12.9382 3.29463 12.8556 3.23592 12.7583C3.17721 12.661 3.14136 12.5517 3.13109 12.4385C3.12082 12.3254 3.13639 12.2114 3.17663 12.1051C3.21686 11.9989 3.28071 11.9031 3.36336 11.8252C3.446 11.7472 3.54528 11.689 3.65369 11.6551C3.76211 11.6211 3.87682 11.6122 3.98918 11.629C4.10155 11.6458 4.20861 11.688 4.3023 11.7523C4.39599 11.8165 4.47385 11.9013 4.53001 12L9.00001 16.44L19.47 6.00003C19.611 5.90864 19.7785 5.86722 19.9458 5.88241C20.1131 5.89759 20.2705 5.96851 20.3927 6.08379C20.5149 6.19907 20.5948 6.35203 20.6197 6.51817C20.6446 6.68431 20.613 6.85399 20.53 7.00003L9.53001 18C9.46334 18.0756 9.38194 18.1367 9.29081 18.1797C9.19967 18.2227 9.10072 18.2466 9.00001 18.25Z" fill="#138E7E"></path> </g>
+                          </svg>
+                          <span>{{ option.settings.label }}</span>
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {%- when 'image' -%}
+            <div class="aos-animate">
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}">
+              {%- endif -%}
+              {%- if block.settings.image != blank -%}
+                <div
+                  class="image-wrap"
+                  style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%;"
+                >
+                  {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img
+                    class="lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[360, 540, 720, 900, 1080, 1600]"
+                    data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ block.settings.image.alt }}"
+                  >
+                  <noscript>
+                    <img
+                      class="lazyloaded"
+                      src="{{ block.settings.image | img_url: '400x' }}"
+                      alt="{{ block.settings.image.alt }}"
+                    >
+                  </noscript>
+                </div>
+              {%- else -%}
+                <div class="image-wrap">
+                  {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              {%- endif -%}
+              {%- if block.settings.link != blank -%}
+                </a>
+              {%- endif -%}
+            </div>
+        {%- endcase -%}
+      </div>
+    </div>
+  {%- endfor -%}
+  {%- if section.blocks.size == 0 -%}
+    <div class="page-width">
+      <div class="grid">
+        <div class="grid__item">
+          <div class="rte">
+            {{ 'home_page.onboarding.no_content' | t }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+{%- unless section.settings.full_width -%}
+  </div>
+{%- endunless -%}
+{%- if section.settings.space_around -%}
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "How its Made",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full page width",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "space_around",
+      "label": "Add spacing above and below",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_background",
+      "label": "Desktop Background"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_box",
+      "name": "Text box",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Header"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": "Width",
+          "default": "100%",
+          "options": [
+            {
+              "value": "25%",
+              "label": "25%"
+            },
+            {
+              "value": "33%",
+              "label": "33%"
+            },
+            {
+              "value": "50%",
+              "label": "50%"
+            },
+            {
+              "value": "66%",
+              "label": "66%"
+            },
+            {
+              "value": "75%",
+              "label": "75%"
+            },
+            {
+              "value": "100%",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Vertical alignment",
+          "default": "center",
+          "info": "Aligns when next to other custom content",
+          "options": [
+            {
+              "value": "top-middle",
+              "label": "Top"
+            },
+            {
+              "value": "center",
+              "label": "Middle"
+            },
+            {
+              "value": "bottom-middle",
+              "label": "Bottom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "option",
+      "name": "Option",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": "Width",
+          "default": "100%",
+          "options": [
+            {
+              "value": "25%",
+              "label": "25%"
+            },
+            {
+              "value": "33%",
+              "label": "33%"
+            },
+            {
+              "value": "50%",
+              "label": "50%"
+            },
+            {
+              "value": "66%",
+              "label": "66%"
+            },
+            {
+              "value": "75%",
+              "label": "75%"
+            },
+            {
+              "value": "100%",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Vertical alignment",
+          "default": "center",
+          "info": "Aligns when next to other custom content",
+          "options": [
+            {
+              "value": "top-middle",
+              "label": "Top"
+            },
+            {
+              "value": "center",
+              "label": "Middle"
+            },
+            {
+              "value": "bottom-middle",
+              "label": "Bottom"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How its Made",
+      "blocks": [
+        {
+          "type": "image",
+          "settings": {
+            "width": "50%"
+          }
+        },
+        {
+          "type": "text_box",
+          "settings": {
+            "width": "50%"
+          }
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
