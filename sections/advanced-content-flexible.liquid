@@ -1,6 +1,874 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{{ 'advanced-content-flexible.scss' | asset_url | stylesheet_tag: preload: true }}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .advanced-content-flexible-ss {
+    background-color: {{ section.settings.background_color }};
   }
+  #shopify-section-{{ section.id }} .advanced-content-flexible-ss .navigation-bar {
+    position: absolute;
+    padding: 10px;
+    padding-left: 0px;
+    margin-left: 50px;
+    font-size: 12px;
+    z-index: 9999;
+    {% unless section.settings.show_navigation %}
+      display: none;
+    {% endunless %}
+  }
+  {% if section.settings.variant_padding %}
+    @media (min-width: 1500px) {
+      #shopify-section-{{ section.id }} .advanced-content-flexible-ss .navigation-bar {
+        margin-left: calc(50% - 750px + 40px);
+      }
+    }
+  {% endif %}
+  @media (min-width: 1500px) {
+  }
+  @media (min-width: 769px) {
+  }
+  @media (max-width: 768px) {
+    #shopify-section-{{ section.id }} .advanced-content-flexible-ss {
+      {% if section.settings.background_color != '#ffffff' %}
+        padding-top: 10px;
+      {% endif %}
+    }
+    .advanced-content-flexible-ss .navigation-bar.navigation-bar-top {
+      display: none;
+    }
+    .advanced-content-flexible-ss .navigation-bar.navigation-bar-middle {
+      display: block;
+    }
+    #shopify-section-{{ section.id }} .advanced-content-flexible-ss .navigation-bar {
+      margin-left: 17px;
+    }
+  }
+  @media (max-width: 425px) {
+    #shopify-section-{{ section.id }} .advanced-content-flexible-ss .navigation-bar {
+      margin-left: 10px;
+    }
+  }
+  {%- if section.settings.image_first -%}
+    @media (max-width: 768px) {
+      #shopify-section-{{ section.id }} .custom-content {
+        flex-direction: column-reverse;
+      }
+      #shopify-section-{{ section.id }} .advanced-content-flexible-ss .liquid-container-ss {
+        margin-top: 20px;
+      }
+      {% if section.settings.background_color != '#ffffff' %}
+        #shopify-section-{{ section.id }} .advanced-content-flexible-ss .custom__item {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      {% endif %}
+    }
+    @media (max-width: 768px) {
+      #shopify-section-{{ section.id }} .navigation-bar ~ .custom__item .liquid-container-ss {
+        margin-top: 0px;
+      }
+    }
+  {% endif %}
+
+  {% if section.settings.small_image %}
+    #shopify-section-{{ section.id }} .image-container.custom__item img {
+      transform-origin: left center;
+      transform: scale(0.9);
+      position: absolute;
+      z-index: 50;
+    }
+    @media (max-width: 768px) {
+      #shopify-section-{{ section.id }} .image-container.custom__item img {
+        transform-origin: center top;
+      }
+    }
+    #shopify-section-{{ section.id }} .liquid-container.custom__item {
+      position: relative;
+      z-index: 30;
+    }
+  {% endif %}
+{%- endstyle -%}
+
+{% if section.settings.is_top_line %}
+  <div class="line-break-container-ss">
+    <div class="right-line-ss"></div>
+    <div class="center-logo-ss">
+      <img
+        src="https://cdn.shopify.com/s/files/1/2126/0063/files/logo.png?v=1743022311"
+        width="{{ section.settings.top_logo_size }}px"
+        height="{{ section.settings.top_logo_size }}px"
+      >
+    </div>
+    <div class="left-line-ss"></div>
+  </div>
+{% endif %}
+
+{%- if section.settings.space_around -%}
+  <div class="advanced-content-flexible-ss-space_around {{ section.settings.additional_class }}">
+{%- endif -%}
+{%- unless section.settings.full_width -%}
+  <div class="page-width {{ section.settings.additional_class }}">
+{%- endunless -%}
+<div class="custom-content advanced-content-flexible-ss">
+  {%- render 'breadcrumbs', addtional_classes: 'navigation-bar navigation-bar-top' -%}
+  {%- for block in section.blocks -%}
+    {%- liquid
+      case block.settings.width
+        when '25%'
+          assign block_width = 'small--one-whole one-quarter'
+        when '33%'
+          assign block_width = 'small--one-whole one-third'
+        when '40%'
+          assign block_width = 'small--one-whole w-40'
+        when '50%'
+          assign block_width = 'small--one-whole one-half'
+        when '60%'
+          assign block_width = 'small--one-whole w-60'
+        when '66%'
+          assign block_width = 'small--one-whole two-thirds'
+        when '75%'
+          assign block_width = 'small--one-whole three-quarters'
+        when '100%'
+          assign block_width = 'one-whole'
+      endcase
+    -%}
+    {%- case block.type -%}
+      {%- when 'liquid' -%}
+        <div
+          class="liquid-container custom__item {{ block_width }} background-setting-{{ block.id }} overflow-hidden"
+          {{ block.shopify_attributes }}
+        >
+          <div class="custom__item-inner align-self__{{ block.settings.alignment }} custom__item-inner--{{ block.type }}{% if block.settings.image == blank and block.type == 'image' %} custom__item-inner--placeholder-image{% endif %}">
+            {%- if block.settings.code != blank -%}
+              {%- style -%}
+                .background-setting-{{ block.id }} {
+                  background-color: {{ block.settings.simple_background_color }};
+                }
+                #shopify-section-{{ section.id }} .advanced-content-flexible-ss .liquid-container-{{  block.id }} {
+                  padding-top: {{ block.settings.padding_top }}px;
+                  padding-left: {% if block.settings.variant_padding %}50px{% else %} {{ block.settings.padding_left }}px {% endif %};
+                  padding-right: {{ block.settings.padding_right }}px;
+                  padding-bottom: {{ block.settings.padding_bottom }}px;
+                  color: {{ block.settings.text_color }};
+                }
+                @media (min-width: 1500px) {
+                  #shopify-section-{{ section.id }} .advanced-content-flexible-ss .liquid-container-{{  block.id }} {
+                    padding-left: {% if block.settings.variant_padding %}calc(50vw - 750px + 50px){% else %} {{ block.settings.padding_left }}px {% endif %};
+                  }
+                }
+                @media (max-width: 768px) {
+                  #shopify-section-{{ section.id }} .advanced-content-flexible-ss .liquid-container-ss {
+                    padding-left: 17px;
+                    padding-right: 17px;
+                  }
+                  #shopify-section-{{ section.id }} .advanced-content-flexible-ss .navigation-bar-middle {
+                    display: block;
+                  }
+                }
+                @media (max-width: 425px) {
+                  #shopify-section-{{ section.id }} .page-width .advanced-content-flexible-ss {
+                    padding-right: 10px;
+                    padding-left: 10px;
+                  }
+                  #shopify-section-{{ section.id }} .advanced-content-flexible-ss .liquid-container-ss {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                  }
+                }
+                #shopify-section-{{ section.id }} .page-width .advanced-content-flexible-ss .liquid-container-ss {
+                  padding-right: 0px;
+                  padding-left: 0px;
+                }
+
+                {% if section.settings.small_image %}
+                  @media (max-width: 768px) {
+                    #shopify-section-{{ section.id }} .page-width .advanced-content-flexible-ss .liquid-container-ss {
+                      max-width: 80vw;
+                      margin: auto;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      text-align: center;
+                      padding-bottom: 30px;
+                    }
+                  }
+                {% endif %}
+              {%- endstyle -%}
+              <div class="rte liquid-container-ss liquid-container-{{  block.id }} variant-left-padding">
+                {% for block2 in section.blocks %}
+                  {% if block2.settings.parent_name == block.settings.liquid_name %}
+                    {% if block2.settings.position == 'top' %}
+                      {% case block2.type %}
+                        {% when 'child_block_button' %}
+                          {% style %}
+                            #shopify-section-{{ section.id }} .advanced-content-flexible-ss .btn-black-ss {
+                              background-color: {{ block2.settings.button_background_color }} !important;
+                              border-color: {{ block2.settings.button_border_color }} !important;
+                              color: {{ block2.settings.button_text_color }} !important;
+                            }
+                          {% endstyle %}
+                          <a class="btn btn-black-ss" href="#">
+                            {{ block2.settings.button_label }}
+                            <svg
+                              fill="currentColor"
+                              width="64px"
+                              height="64px"
+                              viewBox="0 0 24 24"
+                              id="right-arrow"
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon line"
+                            >
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                              <g id="SVGRepo_iconCarrier">
+                              <path id="primary" d="M3,12H21m-3,3,3-3L18,9" style="fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;"></path>
+                              </g>
+                            </svg>
+                          </a>
+                      {% endcase %}
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+                {{ block.settings.code }}
+                {% for block2 in section.blocks %}
+                  {% if block2.settings.parent_name == block.settings.liquid_name %}
+                    {% if block2.settings.position == 'bottom' %}
+                      {% case block2.type %}
+                        {% when 'child_block_button' %}
+                          {% style %}
+                            #shopify-section-{{ section.id }} .advanced-content-flexible-ss .btn-black-ss {
+                              background-color: {{ block2.settings.button_background_color }} !important;
+                              border-color: {{ block2.settings.button_border_color }} !important;
+                              color: {{ block2.settings.button_text_color }} !important;
+                            }
+                          {% endstyle %}
+                          <div class="btn-container">
+                            <a class="btn btn-black-ss" href="#">
+                              {{ block2.settings.button_label }}
+                              <svg
+                                fill="currentColor"
+                                width="64px"
+                                height="64px"
+                                viewBox="0 0 24 24"
+                                id="right-arrow"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon line"
+                              >
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                <path id="primary" d="M3,12H21m-3,3,3-3L18,9" style="fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;"></path>
+                                </g>
+                              </svg>
+                            </a>
+                          </div>
+                      {% endcase %}
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {%- else -%}
+              <div class="rte">
+                {{ 'home_page.onboarding.no_content' | t }}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- when 'image' -%}
+        <div
+          class="image-container custom__item {{ block_width }} background-setting-{{ block.id }} overflow-hidden"
+          {{ block.shopify_attributes }}
+        >
+          <div class="custom__item-inner align-self__{{ block.settings.alignment }} custom__item-inner--{{ block.type }}{% if block.settings.image == blank and block.type == 'image' %} custom__item-inner--placeholder-image{% endif %}">
+            {% for child_slope_block in section.blocks %}
+              {% if child_slope_block.type == 'child_slope_block'
+                and child_slope_block.settings.parent_name == block.settings.iamge_name
+              %}
+                <div
+                  class="child-slope-block {{ child_slope_block.type }}"
+                  style="
+                    background-color: {{ child_slope_block.settings.background_color }};
+                    transform: rotate(-16deg);
+                    position: absolute;
+                    width: 40%;
+                    height: 150%;
+                    z-index: 100;
+                    right: 90%;
+                    transform-origin: -8%;
+                  "
+                ></div>
+              {% endif %}
+            {% endfor %}
+            <div class="aos-animate">
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}">
+              {%- endif -%}
+              {%- if block.settings.image != blank -%}
+                <div
+                  class="image-wrap"
+                  style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%;"
+                >
+                  {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img
+                    class="lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[360, 540, 720, 900, 1080, 1600]"
+                    data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ block.settings.image.alt }}"
+                  >
+                  <noscript>
+                    <img
+                      class="lazyloaded"
+                      src="{{ block.settings.image | img_url: '400x' }}"
+                      alt="{{ block.settings.image.alt }}"
+                    >
+                  </noscript>
+                </div>
+              {%- else -%}
+                <div class="image-wrap">
+                  {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              {%- endif -%}
+              {%- if block.settings.link != blank -%}
+                </a>
+              {%- endif -%}
+            </div>
+            {% if section.settings.show_navigation %}
+              {% if section.settings.image_first %}
+                {%- render 'breadcrumbs', addtional_classes: 'navigation-bar navigation-bar-middle' -%}
+              {% endif %}
+            {% endif %}
+          </div>
+        </div>
+      {%- when 'background_block' -%}
+        {%- liquid
+          assign block_background_color = block.settings.background
+          assign top_left_background_color = block.settings.top_left_background_color
+        -%}
+        {% style %}
+          .background-block-{{ block.id }} {
+            {% if top_left_background_color == blank %}
+              background-color: {{ background_color }};
+            {% else %}
+              background-image: linear-gradient( 154deg, {{ top_left_background_color }} -5%, {{ block_background_color }}, {{ block_background_color }}, {{ block_background_color }}, {{ block_background_color }}, {{ block_background_color }} );
+            {% endif %}
+            position: absolute;
+            {% if section.settings.full_width %}
+              /* width: calc(1500px / 100 * {{ block.settings.width }}); */
+              width: {{ block.settings.width }}%;
+            {% else %}
+              width: calc({{ block.settings.width }}vw + 100px);
+            {% endif %}
+            {{ block.settings.position }}: 0px;
+            z-index: 10;
+          }
+          {% unless section.settings.full_width %}
+            .background-block-{{ block.id }} {
+              {{ block.settings.position }}: calc(50% - 750px + 40px);
+            }
+            @media (max-width: 1500px) {
+              .background-block-{{ block.id }} {
+                {{ block.settings.position }}: 40px;
+              }
+            }
+            @media (max-width: 768px) {
+              .background-block-{{ block.id }} {
+                {{ block.settings.position }}: 0px;
+                width: 100%;
+                padding: 17px;
+              }
+            }
+            @media (max-width: 425px) {
+              .background-block-{{ block.id }} {
+                padding: 10px;
+              }
+            }
+          {% endunless %}
+        {% endstyle %}
+        <div class="background-block-contianer background-block background-block-{{ block.id }}"></div>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const backgroundEle = document.querySelector('.background-block-{{ block.id }}');
+            const parentEle = backgroundEle.parentElement;
+            if (window.innerWidth > 768) {
+              backgroundEle.style.height = parentEle.offsetHeight + "px";
+            } else {
+              backgroundEle.style.marginTop = "30vw";
+              backgroundEle.style.height = `calc(${parentEle.offsetHeight}px - 30vw)`;
+            }
+          });
+        </script>
+    {%- endcase -%}
+  {%- endfor -%}
+  {%- if section.blocks.size == 0 -%}
+    <div class="page-width">
+      <div class="grid">
+        <div class="grid__item">
+          <div class="rte">
+            {{ 'home_page.onboarding.no_content' | t }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+{%- unless section.settings.full_width -%}
+  </div>
+{%- endunless -%}
+{%- if section.settings.space_around -%}
+  </div>
+{%- endif -%}
+
+{% if section.settings.is_bottom_line %}
+  <div class="line-break-container-ss">
+    <div class="right-line-ss"></div>
+    <div class="center-logo-ss">
+      <img
+        src="https://cdn.shopify.com/s/files/1/2126/0063/files/logo.png?v=1743022311"
+        width="{{ section.settings.top_logo_size }}px"
+        height="{{ section.settings.top_logo_size }}px"
+      >
+    </div>
+    <div class="left-line-ss"></div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Advanced content - 2",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full page width",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_navigation",
+      "label": "Show Navigation",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "image_first",
+      "label": "Show the image first"
+    },
+    {
+      "type": "checkbox",
+      "id": "space_around",
+      "label": "Add spacing above and below",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "checkbox",
+      "id": "small_image",
+      "label": "Set small image",
+      "default": false,
+    },
+    {
+      "type": "header",
+      "content": "Line Break"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_top_line",
+      "label": "Top Line",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "is_bottom_line",
+      "label": "Bottom Line",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_logo_size",
+      "label": "Logo Size",
+      "min": 10,
+      "max": 100,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "text",
+      "id": "additional_class",
+      "label": "Class Name(Dev)",
+      "info": "Don't change, If you are not Developer"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "liquid",
+      "name": "HTML",
+      "settings": [
+        {
+          "type": "text",
+          "id": "liquid_name",
+          "label": "Liquid name"
+        },
+        {
+          "type": "liquid",
+          "id": "code",
+          "label": "HTML",
+          "default": "<h2>Custom content</h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.</p>",
+          "info": "Supports Liquid"
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": "Width",
+          "default": "100%",
+          "options": [
+            {
+              "value": "25%",
+              "label": "25%"
+            },
+            {
+              "value": "33%",
+              "label": "33%"
+            },
+            {
+              "value": "40%",
+              "label": "40%"
+            },
+            {
+              "value": "50%",
+              "label": "50%"
+            },
+            {
+              "value": "60%",
+              "label": "60%"
+            },
+            {
+              "value": "66%",
+              "label": "66%"
+            },
+            {
+              "value": "75%",
+              "label": "75%"
+            },
+            {
+              "value": "100%",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Vertical alignment",
+          "default": "center",
+          "info": "Aligns when next to other custom content",
+          "options": [
+            {
+              "value": "flex-start",
+              "label": "Top"
+            },
+            {
+              "value": "center",
+              "label": "Middle"
+            },
+            {
+              "value": "flex-end",
+              "label": "Bottom"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "Color settings"
+        },
+        {
+          "id": "text_color",
+          "type": "color",
+          "label": "Text color",
+          "default": "#000000"
+        },
+        {
+          "id": "simple_background_color",
+          "type": "color",
+          "label": "Simple background color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "header",
+          "content": "Padding Settings",
+          "info": "These settings are for desktop only. They are set automatically on mobile."
+        },
+        {
+          "type": "checkbox",
+          "id": "variant_padding",
+          "label": "Variant Padding",
+          "default": true,
+          "info": "This will ignore the left padding config."
+        },
+        {
+          "type": "range",
+          "id": "padding_left",
+          "label": "Padding Left",
+          "min": 0,
+          "max": 200,
+          "unit": "px",
+          "default": 0,
+          "step": 5,
+          "info": "Default is 0"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "label": "Padding Top",
+          "min": 0,
+          "max": 200,
+          "unit": "px",
+          "default": 0,
+          "step": 5,
+          "info": "Default is 0"
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "label": "Padding Bottom",
+          "min": 0,
+          "max": 200,
+          "unit": "px",
+          "default": 0,
+          "step": 5,
+          "info": "Default is 0"
+        },
+        {
+          "type": "range",
+          "id": "padding_right",
+          "label": "Padding Right",
+          "min": 0,
+          "max": 200,
+          "unit": "px",
+          "default": 30,
+          "step": 5,
+          "info": "Default is 30"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "text",
+          "id": "iamge_name",
+          "label": "Identification"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": "Width",
+          "default": "100%",
+          "options": [
+            {
+              "value": "25%",
+              "label": "25%"
+            },
+            {
+              "value": "33%",
+              "label": "33%"
+            },
+            {
+              "value": "40%",
+              "label": "40%"
+            },
+            {
+              "value": "50%",
+              "label": "50%"
+            },
+            {
+              "value": "60%",
+              "label": "60%"
+            },
+            {
+              "value": "66%",
+              "label": "66%"
+            },
+            {
+              "value": "75%",
+              "label": "75%"
+            },
+            {
+              "value": "100%",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Vertical alignment",
+          "default": "center",
+          "info": "Aligns when next to other custom content",
+          "options": [
+            {
+              "value": "top-middle",
+              "label": "Top"
+            },
+            {
+              "value": "center",
+              "label": "Middle"
+            },
+            {
+              "value": "bottom-middle",
+              "label": "Bottom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "child_block_button",
+      "name": "Button(Child)",
+      "settings": [
+        {
+          "type": "text",
+          "id": "parent_name",
+          "label": "Parent block name"
+        },
+        {
+          "type": "radio",
+          "id": "position",
+          "label": "Position",
+          "options": [
+            {
+              "value": "top",
+              "label": "Top"
+            },
+            {
+              "value": "bottom",
+              "label": "Bottom"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button text"
+        },
+        {
+          "type": "color",
+          "id": "button_background_color",
+          "label": "Button Background",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "button_border_color",
+          "label": "Button Border",
+          "default": "#138E7E"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button Text Color",
+          "default": "#000000"
+        },
+        {
+          "type": "checkbox",
+          "id": "inclue_right_arrow",
+          "label": "Include right arrow"
+        }
+      ]
+    },
+    {
+      "type": "child_slope_block",
+      "name": "Slope Block(Child)",
+      "settings": [
+        {
+          "type": "text",
+          "id": "parent_name",
+          "label": "Parent block name"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color"
+        }
+      ]
+    },
+    {
+      "type": "background_block",
+      "name": "Background Block",
+      "settings": [
+        {
+          "type": "radio",
+          "id": "position",
+          "label": "position",
+          "default": "right",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "label": "Width",
+          "min": 33,
+          "max": 100,
+          "default": 60
+        },
+        {
+          "type": "color",
+          "id": "background",
+          "label": "Background color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "top_left_background_color",
+          "label": "Top left color",
+          "default": "#db9036"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Advanced content - 2",
+      "blocks": [
+        {
+          "type": "image",
+          "settings": {
+            "width": "50%"
+          }
+        },
+        {
+          "type": "liquid",
+          "settings": {
+            "width": "50%"
+          }
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
