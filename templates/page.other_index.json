@@ -84,21 +84,14 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "content_display": true
-      }
-    },
-    "17337712779db4757c": {
-      "type": "apps",
-      "settings": {
-        "full_width": false,
-        "space_around": true
       }
     }
   },
   "order": [
     "slideshow",
-    "main",
-    "17337712779db4757c"
+    "main"
   ]
 }
