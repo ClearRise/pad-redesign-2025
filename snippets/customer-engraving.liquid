@@ -99,16 +99,13 @@
   document.addEventListener("DOMContentLoaded", function () {
     const engravingCheckbox = document.querySelector(".engraving-checkbox");
     const engravingInput = document.querySelector(".product-page-engraving-input");
-  
-    // Function to enable/disable text input based on checkbox state
-    function toggleEngravingInput() {
-      engravingInput.disabled = !engravingCheckbox.checked;
-    }
-  
-    // Add event listener to checkbox
-    engravingCheckbox.addEventListener("change", toggleEngravingInput);
-  
-    // Ensure input starts as disabled if the checkbox is unchecked
-    toggleEngravingInput();
+
+    engravingInput.addEventListener("change", () => {
+      if (engravingInput.value.length > 0) {
+        engravingCheckbox.checked = true;
+      } else {
+        engravingCheckbox.checked = false;
+      }
+    });
   });  
 </script>
