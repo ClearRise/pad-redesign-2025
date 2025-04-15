@@ -166,6 +166,193 @@
         "additional_class": ""
       }
     },
+    "1646694183f97c4822": {
+      "type": "promo-grid-fat",
+      "blocks": {
+        "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "buy one get one free",
+            "heading": "GLOWSTONE  SERIES",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://patrickadairdesigns.com/collections/the-glowstone-series",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Glowstone_Ring_2-_flipped_9f85184e-0502-4a6b-9d57-22cf5248aef4.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 80,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "buy one get one free",
+            "heading": "WEDDING   BANDS",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://patrickadairdesigns.com/collections/best-selling-wedding-bands-v1",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Sterling_Silver.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 80,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "buy one get one free",
+            "heading": "METEORITE RINGS",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/meteorite-rings",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/meteorite-ring.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 80,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_gaqMVW": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "buy one get one free",
+            "heading": "WOMEN'S BANDS",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/womens-wedding-bands",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Lavendar_Opal_Ring.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 80,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 14,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "8f48b383-f1c5-4d34-a6cd-eab1f6f524b0": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "",
+            "heading": "PENDANTS",
+            "textarea": "Get a Free Black Stainless <br> Steel Box Chain",
+            "cta_text1": "",
+            "cta_link1": "https://patrickadairdesigns.com/collections/necklaces",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Pendant_56ae5f17-8dbc-4305-8aaa-5db6424d04ce.png",
+            "video_url": "",
+            "width": "50",
+            "height": 400,
+            "text_size": 105,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "672a52df-0901-41df-bfcc-f5c1e4da1a77": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "",
+            "heading": "ALL EARRINGS",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://patrickadairdesigns.com/collections/earrings",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/earrings.png",
+            "video_url": "",
+            "width": "50",
+            "height": 400,
+            "text_size": 105,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_AgfTfH": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "UP TO 25% OFF",
+            "heading": "FLASH SALE",
+            "textarea": "THIS WEEK ONLY",
+            "cta_text1": "SHOP NOW",
+            "cta_link1": "shopify://collections/flash-sale",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Group_wood_rings_Large_0f57012e-432b-4356-801d-e42746176bb2.png",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-top horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "2f6050a5-96b7-4f7d-b405-7b5952c82699",
+        "85a12c0c-6ee7-4aba-a660-0e12f6bdc907",
+        "8fd2c38f-76d2-4ebe-87c5-e072122f3d02",
+        "advanced_gaqMVW",
+        "8f48b383-f1c5-4d34-a6cd-eab1f6f524b0",
+        "672a52df-0901-41df-bfcc-f5c1e4da1a77",
+        "advanced_AgfTfH"
+      ],
+      "custom_css": [
+        ".promo-grid-overlay {background-color: rgba(0, 0, 0, 0.2); /* Adjust color and opacity here */}"
+      ],
+      "settings": {
+        "full_width": true,
+        "gutter_size": 10,
+        "space_above": false,
+        "space_below": false
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -178,6 +365,7 @@
     "slideshow",
     "trust_icons_new_ss",
     "advanced_content_flexible_DTWtRM",
+    "1646694183f97c4822",
     "main"
   ]
 }
