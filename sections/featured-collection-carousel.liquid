@@ -1,6 +1,428 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{%- assign per_row = section.settings.per_row -%}
+{%- assign product_limit = per_row | times: section.settings.rows -%}
+{%- assign collection = collections[section.settings.home_featured_products] -%}
+
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+
+<style>
+  .swiper-container {
+    touch-action: pan-y; /* 🛠 Ensures vertical scrolling works */
+    overflow: hidden; /* Prevents unwanted overflow */
   }
+  .swiper-wrapper {
+    cursor: pointer;
+  }
+  #CollectionSection-{{ section.id }} .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  #CollectionSection-{{ section.id }} .section-header h2 + div {
+    display: flex;
+  }
+  #CollectionSection-{{ section.id }} .section-header h2 + div a {
+    text-transform: uppercase;
+  }
+  #CollectionSection-{{ section.id }} .section-header h2 + div .swiper-button-prev,
+  #CollectionSection-{{ section.id }} .section-header h2 + div .swiper-button-next {
+    position: relative;
+    left: unset;
+    right: unset;
+    top: 11px;
+    bottom: unset;
+    line-height: unset;
+    height: unset;
+    width: 80px;
+    padding: 0px;
+  }
+  .swiper-button-prev svg,
+  .swiper-button-next svg {
+    width: 36px !important;
+  }
+  @media (max-width: 550px) {
+    #CollectionSection-{{ section.id }} .section-header h2 + div .swiper-button-prev,
+    #CollectionSection-{{ section.id }} .section-header h2 + div .swiper-button-next {
+      display: none;
+    }
+  }
+  .swiper-pagination-progressbar {
+    position: relative !important;
+  }
+  .swiper-pagination-progressbar.swiper-pagination-horizontal {
+    height: 2px !important;
+  }
+  .swiper-pagination-progressbar-fill {
+    background: #000000 !important;
+  }
+</style>
+
+<div
+  id="CollectionSection-{{ section.id }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-grid"
+>
+  {%- if section.settings.title != blank -%}
+    <div class="page-width">
+      <div class="section-header{% if section.settings.view_all %}{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}{% endif %}">
+        <h2 class="section-header__title">
+          {{ section.settings.title }}
+        </h2>
+        <div>
+          {%- if section.settings.view_all -%}
+            {%- if section.settings.rows > 1 -%}
+              <div class="grid__item text-center{% if section.settings.mobile_scrollable %} small--hide{% endif %}">
+                <a href="{{ collections[section.settings.home_featured_products].url }}" class="">
+                  {{- 'collections.general.all_of_collection' | t -}}
+                </a>
+              </div>
+            {%- endif -%}
+
+            {%- if section.settings.mobile_scrollable -%}
+              <div class="grid__item grid__item--view-all text-center {{ grid_item_width }} medium-up--hide">
+                <a href="{{ collections[section.settings.home_featured_products].url }}" class="grid-product__see-all">
+                  {{ 'collections.general.view_all_products_html' | t: count: collection.products_count }}
+                </a>
+              </div>
+            {%- endif -%}
+          {%- endif -%}
+          <div class="swiper-button-prev" style="position: relative;">
+            <svg
+              width="48px"
+              height="48px"
+              viewBox="-3 0 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <g id="icomoon-ignore">
+              </g>
+              <path d="M13.114 2.887c-7.243 0-13.114 5.871-13.114 13.113s5.871 13.113 13.114 13.113c7.242 0 13.112-5.871 13.112-13.113s-5.87-13.113-13.112-13.113zM13.114 28.064c-6.653 0-12.065-5.412-12.065-12.064s5.412-12.063 12.065-12.063c6.652 0 12.063 5.412 12.063 12.063s-5.411 12.064-12.063 12.064z" fill="#000000">
+
+              </path>
+              <path d="M12.318 10.363l-0.742-0.742-6.379 6.379 6.379 6.379 0.742-0.742-5.113-5.113h12.726v-1.049h-12.726z" fill="#000000">
+
+              </path>
+            </svg>
+          </div>
+          <div class="swiper-button-next" style="position: relative;">
+            <svg
+              width="48px"
+              height="48px"
+              viewBox="-3 0 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <g id="icomoon-ignore">
+              </g>
+              <path d="M13.11 29.113c7.243 0 13.113-5.871 13.113-13.113s-5.87-13.113-13.113-13.113c-7.242 0-13.113 5.871-13.113 13.113s5.871 13.113 13.113 13.113zM13.11 3.936c6.652 0 12.064 5.412 12.064 12.064s-5.412 12.064-12.064 12.064c-6.653 0-12.064-5.412-12.064-12.064s5.411-12.064 12.064-12.064z" fill="#000000">
+
+              </path>
+              <path d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z" fill="#000000">
+
+              </path>
+            </svg>
+          </div>
+        </div>
+        {%- if section.settings.view_all and section.settings.rows == 1 -%}
+          <a
+            href="{{ collections[section.settings.home_featured_products].url }}"
+            class="btn btn--secondary btn--small section-header__link"
+          >
+            {{- 'collections.general.all_of_collection' | t -}}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="page-width{% if section.settings.mobile_scrollable %} page-width--flush-small{% endif %} ">
+    <div class="swiper-container featured-collection-carousel {% if section.settings.mobile_scrollable %}grid-overflow-wrapper{% endif %}">
+      <div
+        class="grid grid--uniform swiper-wrapper"
+        {% if section.settings.mobile_scrollable %}
+          data-aos="overflow__animation"
+        {% endif %}
+      >
+        {%- liquid
+          assign grid_item_width = 'small--one-half medium-up--one-third'
+
+          case per_row
+            when 1
+              assign grid_item_width = ''
+            when 2
+              assign grid_item_width = 'medium-up--one-half'
+            when 3
+              assign grid_item_width = 'small--one-half medium-up--one-third'
+            when 4
+              assign grid_item_width = 'small--one-half medium-up--one-quarter'
+            when 5
+              assign grid_item_width = 'small--one-half medium-up--one-fifth'
+          endcase
+        -%}
+
+        {%- if section.settings.home_featured_products == blank
+          or collections[section.settings.home_featured_products].empty?
+          or collections[section.settings.home_featured_products].products_count == 0
+        -%}
+          {%- unless emptyState -%}
+            {%- assign emptyState = true -%}
+          {%- endunless -%}
+
+          <div class="grid__item">
+            <div class="grid grid--uniform">
+              {%- for i in (1..product_limit) -%}
+                <div class="grid__item grid-product {{ grid_item_width }}" data-aos="row-of-{{ per_row }}">
+                  <div class="grid-product__content">
+                    <a href="{{ product.url | within: collection }}" class="grid-product__link">
+                      <div class="grid-product__image-mask">
+                        {%- capture current -%}{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
+                        <div class="image-wrap">
+                          {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                        </div>
+                      </div>
+                      <div class="grid-product__meta">
+                        <div class="grid-product__title">{{ 'home_page.onboarding.product_title' | t }}</div>
+                        <div class="grid-product__price">$29</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+
+        {%- else -%}
+          {% if section.settings.is_collection_list != true %}
+            {%- for product in collections[section.settings.home_featured_products].products limit: product_limit -%}
+              {% unless product.handle contains 'navidium' %}
+                {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
+                {%- render 'product-carousel-item',
+                  product: product,
+                  collection: collection,
+                  per_row: per_row,
+                  quick_shop_enable: settings.quick_shop_enable,
+                  subtitle_type: section.settings.subtitle_type,
+                  type_enable: section.settings.type_enable,
+                  subtitle_enable: section.settings.subtitle_enable
+                -%}
+              {% endunless %}
+            {%- endfor -%}
+          {% else %}
+            {% for block in section.blocks %}
+              {% if block.type == "collection" %}
+                {% assign collection = collections[block.settings.collection] %}
+                <div
+                  class="grid__item grid-product small--one-half medium-up--one-fifth swiper-slide aos-init aos-animate"
+                >
+                  <div class="grid-product__content">
+                    {% comment %} <div
+                      class="grid-product__tag grid-product__tag--sale  display-percent"
+                    >
+                      <div class="percent igSavingsPercentage">10% Off</div>
+                    </div> {% endcomment %}
+
+                    {%- liquid
+                      assign fixed_aspect_ratio = false
+                      unless settings.product_grid_image_size == 'natural'
+                        assign fixed_aspect_ratio = true
+                      endunless
+                
+                      assign preview_image = collection.featured_media
+                      assign img_url = preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+                    -%}
+
+                    <a href="{{ collection.url }}" class="grid-product__link">
+                      <div class="grid-product__image-mask">
+                        <div class="grid__image-ratio grid__image-ratio--square">
+                          <img class="lazyload{% unless settings.product_grid_image_fill %} grid__image-contain{% endunless %}"
+                            data-src="{{ img_url }}"
+                            data-widths="[360, 540, 720, 900, 1080]"
+                            data-aspectratio="{{ preview_image.aspect_ratio }}"
+                            data-sizes="auto"
+                            alt="{{ preview_image.alt | escape }}">
+                        </div>
+                      </div>
+                      <div class="grid-product__meta">
+                        <div class="grid-product__title grid-product__title--body">
+                          {{ collection.title }}
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {%- endif -%}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div>
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".featured-collection-carousel", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar", // 🛠 Converts dots into a line
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: {{ section.settings.slides_per_view_desktop | default: 4.2 }},
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerView: {{ section.settings.slides_per_view_tablet | default: 3.2 }},
+          spaceBetween: 5
+        },
+        0: {
+          slidesPerView: {{ section.settings.slides_per_view_mobile | default: 1.3 }},
+          spaceBetween: 5
+        }
+      },
+      // 🛠 Fix: Prevent Page Scrolling Issue
+      touchStartPreventDefault: false,
+      passiveListeners: true
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Featured collection(C)",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Featured collection"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_collection_list",
+      "label": "Show collection list",
+      "default": false
+    },
+    {
+      "type": "collection",
+      "id": "home_featured_products",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "slides_per_view_desktop",
+      "label": "Slides counts(Desktop)",
+      "default": "4.2",
+      "info": "Please input only number"
+    },
+    {
+      "type": "text",
+      "id": "slides_per_view_tablet",
+      "label": "Slides counts(Tablet)",
+      "default": "3.2",
+      "info": "Please input only number"
+    },
+    {
+      "type": "text",
+      "id": "slides_per_view_mobile",
+      "label": "Slides counts(Mobile)",
+      "default": "1.3",
+      "info": "Please input only number"
+    },
+    {
+      "type": "checkbox",
+      "id": "type_enable",
+      "label": "Show Set Type"
+    },
+    {
+      "type": "checkbox",
+      "id": "subtitle_enable",
+      "label": "Show Subtitle"
+    },
+    {
+      "type": "select",
+      "id": "subtitle_type",
+      "label": "Subtitle type",
+      "default": "two",
+      "options": [
+        {
+          "value": "two",
+          "label": "Two columns"
+        },
+        {
+          "value": "three",
+          "label": "Three columns"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "per_row",
+      "label": "Products per row",
+      "default": 4,
+      "min": 1,
+      "max": 5,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "rows",
+      "label": "Rows of products",
+      "default": 1,
+      "min": 1,
+      "max": 5,
+      "step": 1
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_scrollable",
+      "label": "Enable swipe on mobile",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "view_all",
+      "label": "Show 'View all' link",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "Show section divider",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured collection(C)"
+    }
+  ]
+}
 {% endschema %}
