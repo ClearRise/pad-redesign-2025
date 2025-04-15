@@ -458,10 +458,17 @@
           "settings": {
             "collection": "all-glowstone-rings"
           }
+        },
+        "collection_3jNHq4": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products"
+          }
         }
       },
       "block_order": [
-        "collection_dg8eRa"
+        "collection_dg8eRa",
+        "collection_3jNHq4"
       ],
       "settings": {
         "title": "Shop By Material",
