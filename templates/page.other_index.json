@@ -453,50 +453,15 @@
     "featured-collection1234": {
       "type": "featured-collection-carousel",
       "blocks": {
-        "collection_pKmiwV": {
+        "collection_dg8eRa": {
           "type": "collection",
           "settings": {
-            "collection": "black-rings"
-          }
-        },
-        "collection_XKjmQw": {
-          "type": "collection",
-          "settings": {
-            "collection": "april-birthstone-series"
-          }
-        },
-        "collection_nRjUDm": {
-          "type": "collection",
-          "settings": {
-            "collection": "black-rings"
-          }
-        },
-        "collection_eLeRHR": {
-          "type": "collection",
-          "settings": {
-            "collection": "carbon-fiber"
-          }
-        },
-        "collection_k7BLBU": {
-          "type": "collection",
-          "settings": {
-            "collection": "diamond-resin-rings"
-          }
-        },
-        "collection_KYECUC": {
-          "type": "collection",
-          "settings": {
-            "collection": "exotic-rings"
+            "collection": "all-glowstone-rings"
           }
         }
       },
       "block_order": [
-        "collection_pKmiwV",
-        "collection_XKjmQw",
-        "collection_nRjUDm",
-        "collection_eLeRHR",
-        "collection_k7BLBU",
-        "collection_KYECUC"
+        "collection_dg8eRa"
       ],
       "settings": {
         "title": "Shop By Material",
