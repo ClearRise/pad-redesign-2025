@@ -276,14 +276,10 @@
                             {%- if block.settings.link_text != blank or block.settings.link_text_2 != blank -%}
                               <div class="hero__link">
                                 {%- if block.settings.link_text != blank -%}
-                                  <a href="{{ block.settings.link }}" class="btn{% if block.settings.color_accent contains 'rgba(0,0,0,0)' %} btn--inverse{% endif %}">
-                                    {{ block.settings.link_text }}
-                                  </a>
+                                  {% render 'button-ss', color: block.settings.button_color_1, url: block.settings.link_1, label: block.settings.link_text %}
                                 {%- endif -%}
                                 {%- if block.settings.link_text_2 != blank -%}
-                                  <a href="{{ block.settings.link_2 }}" class="btn{% if block.settings.color_accent contains 'rgba(0,0,0,0)' %} btn--inverse{% endif %}">
-                                    {{ block.settings.link_text_2 }}
-                                  </a>
+                                  {% render 'button-ss', color: block.settings.button_color_2, url: block.settings.link_2, label: block.settings.link_text_2 %}
                                 {%- endif -%}
                               </div>
                             {%- endif -%}
@@ -550,14 +546,10 @@
                             {%- if block.settings.link_text != blank or block.settings.link_text_2 != blank -%}
                               <div class="hero__link">
                                 {%- if block.settings.link_text != blank -%}
-                                  <a href="{{ block.settings.link }}" class="btn{% if block.settings.color_accent contains 'rgba(0,0,0,0)' %} btn--inverse{% endif %}">
-                                    {{ block.settings.link_text }}
-                                  </a>
+                                  {% render 'button-ss', color: block.settings.button_color_1, url: block.settings.link_1, label: block.settings.link_text %}
                                 {%- endif -%}
                                 {%- if block.settings.link_text_2 != blank -%}
-                                  <a href="{{ block.settings.link_2 }}" class="btn{% if block.settings.color_accent contains 'rgba(0,0,0,0)' %} btn--inverse{% endif %}">
-                                    {{ block.settings.link_text_2 }}
-                                  </a>
+                                  {% render 'button-ss', color: block.settings.button_color_2, url: block.settings.link_2, label: block.settings.link_text_2 %}
                                 {%- endif -%}
                               </div>
                             {%- endif -%}
