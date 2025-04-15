@@ -1,3 +1,20 @@
+{% style %}
+  #shopify-section-{{ section.id }} .promo-grid__container {
+    display: flex;
+    /* align-items:flex-start; */
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+  }
+   #shopify-section-{{ section.id }} .vertical-center .promo-grid__content {
+    /* align-self:center */
+    align-self: self-end;
+    width: 100%;
+    text-align: center;
+  }
+{% endstyle %}
+
 <div
   data-section-id="{{ section.id }}"
   data-section-type="promo-grid">
