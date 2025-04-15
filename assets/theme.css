@@ -11524,6 +11524,19 @@ input[type="checkbox"]:checked::before {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+input[type="checkbox"].active {
+  background-color: var(--colorBtnPrimary);
+  color: white;
+}
+input[type="checkbox"].active::before {
+  content: "\2713"; 
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 @media (max-width: 768px) {
   input[type=checkbox] {
     border-width: 1px;
