@@ -90,6 +90,16 @@
         "autoplay_speed": 7
       }
     },
+    "trust_icons_new_ss": {
+      "type": "trust-icons",
+      "custom_css": [
+        "{padding-top: 0px;}"
+      ],
+      "settings": {
+        "top_padding": 30,
+        "bottom_padding": 15
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -100,6 +110,7 @@
   },
   "order": [
     "slideshow",
+    "trust_icons_new_ss",
     "main"
   ]
 }
