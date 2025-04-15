@@ -4,7 +4,7 @@
  *
  * This file may be updated by the Shopify admin theme editor
  * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
+ * made to this file may be overwritten. 
  * ------------------------------------------------------------
  */
 {
@@ -453,22 +453,50 @@
     "featured-collection1234": {
       "type": "featured-collection-carousel",
       "blocks": {
-        "collection_dg8eRa": {
+        "collection_pKmiwV": {
           "type": "collection",
           "settings": {
             "collection": "all-glowstone-rings"
           }
         },
-        "collection_3jNHq4": {
+        "collection_XKjmQw": {
           "type": "collection",
           "settings": {
-            "collection": "all-products"
+            "collection": "april-birthstone-series"
+          }
+        },
+        "collection_nRjUDm": {
+          "type": "collection",
+          "settings": {
+            "collection": "black-rings"
+          }
+        },
+        "collection_eLeRHR": {
+          "type": "collection",
+          "settings": {
+            "collection": "carbon-fiber"
+          }
+        },
+        "collection_k7BLBU": {
+          "type": "collection",
+          "settings": {
+            "collection": "diamond-resin-rings"
+          }
+        },
+        "collection_KYECUC": {
+          "type": "collection",
+          "settings": {
+            "collection": "exotic-rings"
           }
         }
       },
       "block_order": [
-        "collection_dg8eRa",
-        "collection_3jNHq4"
+        "collection_pKmiwV",
+        "collection_XKjmQw",
+        "collection_nRjUDm",
+        "collection_eLeRHR",
+        "collection_k7BLBU",
+        "collection_KYECUC"
       ],
       "settings": {
         "title": "Shop By Material",
