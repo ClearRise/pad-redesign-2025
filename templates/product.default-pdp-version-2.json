@@ -122,6 +122,7 @@
         },
         "pdp_icon_list_J4K9L6": {
           "type": "pdp_icon_list",
+          "disabled": true,
           "settings": {
             "icon_1": "shopify://shop_images/pdp-trust-icon-1.png",
             "label_1": "Made to Order",
