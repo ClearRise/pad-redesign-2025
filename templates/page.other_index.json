@@ -450,6 +450,71 @@
         "desktop_background": "shopify://shop_images/ring_fcea0cd3-97c1-4394-8a16-bec5e8107ec7.jpg"
       }
     },
+    "featured-collection1234": {
+      "type": "featured-collection-carousel",
+      "blocks": {
+        "collection_pKmiwV": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-glowstone-rings"
+          }
+        },
+        "collection_XKjmQw": {
+          "type": "collection",
+          "settings": {
+            "collection": "april-birthstone-series"
+          }
+        },
+        "collection_nRjUDm": {
+          "type": "collection",
+          "settings": {
+            "collection": "black-rings"
+          }
+        },
+        "collection_eLeRHR": {
+          "type": "collection",
+          "settings": {
+            "collection": "carbon-fiber"
+          }
+        },
+        "collection_k7BLBU": {
+          "type": "collection",
+          "settings": {
+            "collection": "diamond-resin-rings"
+          }
+        },
+        "collection_KYECUC": {
+          "type": "collection",
+          "settings": {
+            "collection": "exotic-rings"
+          }
+        }
+      },
+      "block_order": [
+        "collection_pKmiwV",
+        "collection_XKjmQw",
+        "collection_nRjUDm",
+        "collection_eLeRHR",
+        "collection_k7BLBU",
+        "collection_KYECUC"
+      ],
+      "settings": {
+        "title": "Shop By Material",
+        "is_collection_list": true,
+        "home_featured_products": "best-sellers",
+        "slides_per_view_desktop": "4.2",
+        "slides_per_view_tablet": "3.2",
+        "slides_per_view_mobile": "1.3",
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "per_row": 5,
+        "rows": 2,
+        "mobile_scrollable": false,
+        "view_all": true,
+        "divider": false
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -465,6 +530,7 @@
     "1646694183f97c4822",
     "featured_collection_carousel_RgiWej",
     "advanced_content_QHBLxq",
+    "featured-collection1234",
     "main"
   ]
 }
