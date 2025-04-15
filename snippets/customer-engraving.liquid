@@ -100,7 +100,7 @@
     const engravingCheckbox = document.querySelector(".engraving-checkbox");
     const engravingInput = document.querySelector(".product-page-engraving-input");
 
-    engravingInput.addEventListener("change", () => {
+    engravingInput.addEventListener("input", () => {
       if (engravingInput.value.length > 0) {
         engravingCheckbox.checked = true;
         // engravingCheckbox.classList.add("active");
