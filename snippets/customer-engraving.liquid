@@ -103,8 +103,10 @@
     engravingInput.addEventListener("change", () => {
       if (engravingInput.value.length > 0) {
         engravingCheckbox.checked = true;
+        engravingCheckbox.classList.add("active");
       } else {
         engravingCheckbox.checked = false;
+        engravingCheckbox.classList.remove("active");
       }
     });
   });  
