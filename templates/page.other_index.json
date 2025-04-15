@@ -383,6 +383,73 @@
         "divider": false
       }
     },
+    "advanced_content_QHBLxq": {
+      "type": "how-its-made",
+      "blocks": {
+        "image_Ae9GLy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ring-image.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "text_box_CVtG4r": {
+          "type": "text_box",
+          "settings": {
+            "header": "How its Made",
+            "description": "Discover the story behind the creation, from cancept to craftsmanship.",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "option_erCRAX": {
+          "type": "option",
+          "settings": {
+            "label": "One of Kind"
+          }
+        },
+        "option_EGzDm8": {
+          "type": "option",
+          "settings": {
+            "label": "HandCrafted by Artisans"
+          }
+        },
+        "option_WGQM7y": {
+          "type": "option",
+          "settings": {
+            "label": "100M Viewers"
+          }
+        },
+        "option_pAzHPw": {
+          "type": "option",
+          "settings": {
+            "label": "Uncommon Material"
+          }
+        },
+        "option_W3mfnE": {
+          "type": "option",
+          "settings": {
+            "label": "A Story in every Ring"
+          }
+        }
+      },
+      "block_order": [
+        "image_Ae9GLy",
+        "text_box_CVtG4r",
+        "option_erCRAX",
+        "option_EGzDm8",
+        "option_WGQM7y",
+        "option_pAzHPw",
+        "option_W3mfnE"
+      ],
+      "settings": {
+        "full_width": true,
+        "space_around": true,
+        "desktop_background": "shopify://shop_images/ring_fcea0cd3-97c1-4394-8a16-bec5e8107ec7.jpg"
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -397,6 +464,7 @@
     "advanced_content_flexible_DTWtRM",
     "1646694183f97c4822",
     "featured_collection_carousel_RgiWej",
+    "advanced_content_QHBLxq",
     "main"
   ]
 }
