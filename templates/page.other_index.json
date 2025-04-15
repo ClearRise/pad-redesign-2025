@@ -10,7 +10,7 @@
 {
   "sections": {
     "slideshow": {
-      "type": "slideshow",
+      "type": "slideshow-2",
       "blocks": {
         "image_7kTF4N": {
           "type": "image",
@@ -25,7 +25,7 @@
             "link_text": "Shop Wedding Rings",
             "link_2": "",
             "link_text_2": "",
-            "color_accent": "#ffffff",
+            "color_accent": "rgba(0,0,0,0)",
             "text_position": "vertical-center horizontal-center",
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
