@@ -10,7 +10,7 @@
 {
   "sections": {
     "slideshow": {
-      "type": "slideshow",
+      "type": "slideshow-2",
       "blocks": {
         "image_7kTF4N": {
           "type": "image",
@@ -36,7 +36,11 @@
             "focal_point": "center center",
             "base_text_color": "#ffffff",
             "title_size": 40,
-            "base_text_size": 14
+            "base_text_size": 14,
+            "text_bottom_padding_desktop": 5,
+            "text_bottom_padding_mobile": 12,
+            "button_color_1": "white",
+            "button_color_2": "white"
           }
         },
         "slideshow-0": {
@@ -64,7 +68,11 @@
             "focal_point": "center center",
             "base_text_color": "#ffffff",
             "title_size": 50,
-            "base_text_size": 24
+            "base_text_size": 24,
+            "text_bottom_padding_desktop": 30,
+            "text_bottom_padding_mobile": 30,
+            "button_color_1": "white",
+            "button_color_2": "white"
           }
         }
       },
