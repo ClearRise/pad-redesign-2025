@@ -1,3 +1,36 @@
+<style>
+  .btn-white-ss,
+  .btn-black-ss,
+  .btn-primary-ss {
+    background: transparent !important;
+    border-color: #138e7e !important;
+    font-size: 16px !important;
+    letter-spacing: 2px !important;
+    display: inline-flex !important;
+    align-items: center;
+    padding: 7px 20px !important;
+    justify-content: center;
+    border-radius: 0px !important;
+  }
+  .btn-black-ss {
+    color: black !important;
+  }
+  .btn-white-ss {
+    color: white !important;
+  }
+  .btn-primary-ss {
+    color: #138e7e !important;
+  }
+  
+  
+  .btn-white-ss svg,
+  .btn-black-ss svg {
+    margin-left: 5px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+</style>
+
 <a class="btn btn-{{ color }}-ss" href="{{ url }}">
   {{ label }}
   <svg fill="currentColor" width="64px" height="64px" viewBox="0 0 24 24" id="right-arrow" xmlns="http://www.w3.org/2000/svg" class="icon line">
