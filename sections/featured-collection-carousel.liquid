@@ -137,7 +137,7 @@
   {%- endif -%}
 
   <div class="page-width{% if section.settings.mobile_scrollable %} page-width--flush-small{% endif %} ">
-    <div class="swiper-container featured-collection-carousel {% if section.settings.mobile_scrollable %}grid-overflow-wrapper{% endif %}">
+    <div class="swiper-container featured-collection-carousel featured-collection-carousel-{{ section.id }} {% if section.settings.mobile_scrollable %}grid-overflow-wrapper{% endif %}">
       <div
         class="grid grid--uniform swiper-wrapper"
         {% if section.settings.mobile_scrollable %}
@@ -265,7 +265,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    var swiper = new Swiper(".featured-collection-carousel", {
+    var swiper = new Swiper(".featured-collection-carousel-{{ section.id }}", {
       loop: true,
       autoplay: {
         delay: 3000,
