@@ -11563,3 +11563,8 @@ input[type="checkbox"]:checked::before {
 .w-60 {
   width: 60%;
 }
+@media only screen and (max-width:768px) {
+  .small--one-whole {
+    width: 100%;
+  }
+}
