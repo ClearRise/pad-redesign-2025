@@ -11,6 +11,35 @@
   justify-content: center;
   height: 90px;
 }
+.logo-list-new-ss .logo-bar {
+  justify-content: space-between;
+  flex-wrap: unset;
+  margin-bottom: 0px;
+}
+
+.logo-bar__item {
+  flex: 0 1 110px;
+  vertical-align: middle;
+  margin: 0 15px 20px
+}
+
+.logo-list-new-ss .logo-bar__item {
+  margin: 0px;
+  border: 1px solid grey;
+  flex: none;
+}
+
+@media only screen and (min-width:769px) {
+
+  .logo-bar__item {
+    flex: 0 1 160px;
+    margin: 0 20px 30px
+  }
+
+  .logo-list-new-ss .logo-bar__item {
+    margin: 0px;
+  }
+}
 @media (max-width: 768px) {
   .logo-swiper-container-ss .swiper-slide {
     height: 60px;
