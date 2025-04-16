@@ -515,6 +515,40 @@
         "divider": false
       }
     },
+    "advanced_content_FGUmTy": {
+      "type": "advanced-content-new",
+      "blocks": {
+        "image_3WMrKJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/the-solstice-glowstone-ring-3.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "liquid_qmBUjY": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Get a Custom Ring</h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.</p><a href=\"/collections/mens-wedding-bands\" class=\"button btn btn-white-ss\">shop wedding rings<svg fill=\"currentColor\" width=\"64px\" height=\"64px\" viewBox=\"0 0 24 24\" id=\"right-arrow\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon line\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"/><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g id=\"SVGRepo_iconCarrier\"><path id=\"primary\" d=\"M3,12H21m-3,3,3-3L18,9\" style=\"fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;\"/></g></svg></a>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_3WMrKJ",
+        "liquid_qmBUjY"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".liquid-container-ss h2 {font-size: 42px;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "space_around": true
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -531,6 +565,7 @@
     "featured_collection_carousel_RgiWej",
     "advanced_content_QHBLxq",
     "featured-collection1234",
+    "advanced_content_FGUmTy",
     "main"
   ]
 }
