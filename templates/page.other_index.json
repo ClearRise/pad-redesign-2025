@@ -349,7 +349,7 @@
       "settings": {
         "full_width": true,
         "gutter_size": 10,
-        "space_above": false,
+        "space_above": true,
         "space_below": false
       }
     },
