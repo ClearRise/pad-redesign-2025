@@ -515,38 +515,78 @@
         "divider": false
       }
     },
-    "advanced_content_FGUmTy": {
-      "type": "advanced-content-new",
+    "advanced_content_flexible_EWdeYp": {
+      "type": "advanced-content-flexible",
       "blocks": {
-        "image_3WMrKJ": {
+        "image_LBWe9j": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/the-solstice-glowstone-ring-3.jpg",
+            "iamge_name": "",
+            "image": "shopify://shop_images/custom_ring.jpg",
             "link": "",
-            "width": "50%",
+            "width": "40%",
             "alignment": "center"
           }
         },
-        "liquid_qmBUjY": {
+        "liquid_Q68qKd": {
           "type": "liquid",
           "settings": {
-            "code": "<h2>Get a Custom Ring</h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.</p><a href=\"/collections/mens-wedding-bands\" class=\"button btn btn-white-ss\">shop wedding rings<svg fill=\"currentColor\" width=\"64px\" height=\"64px\" viewBox=\"0 0 24 24\" id=\"right-arrow\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon line\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"/><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g id=\"SVGRepo_iconCarrier\"><path id=\"primary\" d=\"M3,12H21m-3,3,3-3L18,9\" style=\"fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;\"/></g></svg></a>",
-            "width": "50%",
-            "alignment": "center"
+            "liquid_name": "btn-ctn",
+            "code": "<h2>Get a Custom Ring</h2><p>We pride ourselves on our ability to make intricate, handmade custom rings made from exotic materials.</p>",
+            "width": "60%",
+            "alignment": "center",
+            "text_color": "#ffffff",
+            "simple_background_color": "rgba(0,0,0,0)",
+            "variant_padding": false,
+            "padding_left": 150,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "child_block_button_4J6Qp8": {
+          "type": "child_block_button",
+          "settings": {
+            "parent_name": "btn-ctn",
+            "position": "bottom",
+            "button_label": "shop wedding rings",
+            "button_background_color": "#000000",
+            "button_border_color": "#138e7e",
+            "button_text_color": "#ffffff",
+            "inclue_right_arrow": false
+          }
+        },
+        "background_block_pJDhcD": {
+          "type": "background_block",
+          "settings": {
+            "position": "right",
+            "width": 65,
+            "background": "#000001",
+            "top_left_background_color": "#db9036"
           }
         }
       },
       "block_order": [
-        "image_3WMrKJ",
-        "liquid_qmBUjY"
+        "image_LBWe9j",
+        "liquid_Q68qKd",
+        "child_block_button_4J6Qp8",
+        "background_block_pJDhcD"
       ],
-      "disabled": true,
       "custom_css": [
-        ".liquid-container-ss h2 {font-size: 42px;}"
+        ".liquid-container-ss {max-width: 420px;}",
+        ".liquid-container-ss h2 {font-size: 40px;}"
       ],
       "settings": {
-        "full_width": true,
-        "space_around": true
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": true,
+        "background_color": "#ffffff",
+        "small_image": true,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 16,
+        "additional_class": ""
       }
     },
     "main": {
@@ -565,7 +605,7 @@
     "featured_collection_carousel_RgiWej",
     "advanced_content_QHBLxq",
     "featured-collection1234",
-    "advanced_content_FGUmTy",
+    "advanced_content_flexible_EWdeYp",
     "main"
   ]
 }
