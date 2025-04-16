@@ -11555,3 +11555,11 @@ input[type="checkbox"]:checked::before {
   border-width: 0px !important;
 }
 /* bold-option-css */
+
+.w-40 {
+  width: 40%;
+}
+
+.w-60 {
+  width: 60%;
+}
