@@ -206,7 +206,7 @@
                               color: {{ block2.settings.button_text_color }} !important;
                             }
                           {% endstyle %}
-                          <a class="btn btn-black-ss" href="#">
+                          <a class="btn btn-black-ss" href="{{ block2.settings.link }}">
                             {{ block2.settings.button_label }}
                             <svg
                               fill="currentColor"
@@ -766,6 +766,11 @@
           "type": "text",
           "id": "button_label",
           "label": "Button text"
+        },
+        {
+          "id": "link",
+          "type": "url",
+          "label": "Button Link"
         },
         {
           "type": "color",
