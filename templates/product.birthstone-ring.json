@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -29,14 +29,15 @@
         "separator": {
           "type": "separator",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "size_chart": "",
             "variant_labels": true,
+            "picker_type": "button",
+            "product_swatch_style": "square",
             "color_swatches": false,
             "custom_variant_comment": false,
             "collapse_options": false
@@ -46,6 +47,7 @@
           "type": "bold_option",
           "settings": {
             "option_type": "Default",
+            "product_swatch_style": "square",
             "swatch_style": "type_1"
           }
         },
@@ -60,7 +62,9 @@
         "engraving_jR7cGk": {
           "type": "engraving",
           "settings": {
-            "style": "inline"
+            "form_style": "checkbox",
+            "style": "inline",
+            "save_badge": "For Limited Time Only"
           }
         },
         "d2bfdc2f-2cae-43b1-91ed-390419b7a7d8": {
@@ -89,16 +93,25 @@
             "show_dynamic_checkout": false,
             "surface_pickup_enable": true,
             "enable_tooltip": false,
-            "tooltip_header": "<h4>Premium Protection<\/h4>",
-            "tooltip_content": "<p>Our <a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan<\/u><\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"\/pages\/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details<\/u><\/a><\/p>"
+            "tooltip_header": "<h4>Premium Protection</h4>",
+            "tooltip_content": "<p>Our <a href=\"/pages/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong><u>Premium Protection Plan</u></strong></a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<br><br><a href=\"/pages/premium-protection-plan\" target=\"_blank\" title=\"Premium Protection Plan | Patrick Adair Designs\"><u>View full details</u></a></p>"
+          }
+        },
+        "premium_protection_plan_JaB3PN": {
+          "type": "premium_protection_plan",
+          "settings": {
+            "is_show_description": true,
+            "description": "<p>Our <a href=\"/pages/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan</strong></a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.</p><p>{{ product.metafields.custom.premium_protection_plan.value }}</p>"
           }
         },
         "aee49288-aed2-447a-9362-0e6b1ca600d1": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": true,
+            "style": "box",
             "title": "Premium Protection Plan",
-            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
+            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}</p><p>Our <a href=\"/pages/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan</strong></a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.</p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -107,33 +120,45 @@
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
           "type": "sales_point",
           "settings": {
+            "style": "grid",
             "icon": "gift",
             "text": "Handmade in Utah",
-            "url": ""
+            "url": "",
+            "popup_text": "",
+            "popup_page": ""
           }
         },
         "87272cff-cc16-40a9-b501-c6f3b9acd243": {
           "type": "sales_point",
           "settings": {
+            "style": "grid",
             "icon": "heart",
             "text": "Made to order",
-            "url": ""
+            "url": "",
+            "popup_text": "",
+            "popup_page": ""
           }
         },
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005": {
           "type": "sales_point",
           "settings": {
+            "style": "grid",
             "icon": "truck",
             "text": "Worldwide Shipping",
-            "url": ""
+            "url": "",
+            "popup_text": "",
+            "popup_page": ""
           }
         },
         "sales_point": {
           "type": "sales_point",
           "settings": {
+            "style": "grid",
             "icon": "tag",
             "text": "Find Your Size",
-            "url": "https:\/\/patrickadairdesigns.com\/pages\/how-to-use-a-ring-sizer"
+            "url": "https://patrickadairdesigns.com/pages/how-to-use-a-ring-sizer",
+            "popup_text": "",
+            "popup_page": ""
           }
         },
         "description": {
@@ -147,8 +172,9 @@
           "type": "tab",
           "settings": {
             "expanded": false,
+            "style": "box",
             "title": "Additional Details",
-            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
+            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}</p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -158,8 +184,9 @@
           "type": "tab",
           "settings": {
             "expanded": false,
+            "style": "box",
             "title": "Sizing Information",
-            "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
+            "content": "<p>{{ product.metafields.global.sizing_information_new.value }}</p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -169,8 +196,9 @@
           "type": "tab",
           "settings": {
             "expanded": false,
+            "style": "box",
             "title": "Shipping information",
-            "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
+            "content": "<p>{{ product.metafields.global.delivery.value }}</p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -180,8 +208,9 @@
           "type": "tab",
           "settings": {
             "expanded": false,
+            "style": "box",
             "title": "HOW THE GLOW WORKS",
-            "content": "<p>Our glowstone rings contain an odorless, non-flammable glow powder called <strong>strontium aluminate<\/strong>. To get your ring to glow, expose it to a UV light source (such as the sun) to charge it and take it into the dark shortly after. There are many factors that affect the strength of the glow which are detailed on this helpful <a href=\"https:\/\/patrickadairdesigns.com\/blogs\/blog\/how-do-i-get-my-glow-ring-to-glow\" title=\"How The Glow Works\"><strong>page<\/strong><\/a>.<\/p>",
+            "content": "<p>Our glowstone rings contain an odorless, non-flammable glow powder called <strong>strontium aluminate</strong>. To get your ring to glow, expose it to a UV light source (such as the sun) to charge it and take it into the dark shortly after. There are many factors that affect the strength of the glow which are detailed on this helpful <a href=\"https://patrickadairdesigns.com/blogs/blog/how-do-i-get-my-glow-ring-to-glow\" title=\"How The Glow Works\"><strong>page</strong></a>.</p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -191,8 +220,9 @@
           "type": "tab",
           "settings": {
             "expanded": false,
+            "style": "box",
             "title": "How To Care",
-            "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
+            "content": "<p>{{ product.metafields.global.how_to_care_new.value }}</p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -202,8 +232,9 @@
           "type": "tab",
           "settings": {
             "expanded": false,
+            "style": "box",
             "title": "Lifetime Warranty",
-            "content": "<p>At Patrick Adair Designs, all products come with a <a href=\"\/pages\/warranty-and-return-information\" title=\"Limited Lifetime Warranty and Return Policy\"><strong>Limited Lifetime Warranty<\/strong><\/a> by default. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.<\/p>",
+            "content": "<p>At Patrick Adair Designs, all products come with a <a href=\"/pages/warranty-and-return-information\" title=\"Limited Lifetime Warranty and Return Policy\"><strong>Limited Lifetime Warranty</strong></a> by default. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.</p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -212,6 +243,7 @@
         "contact": {
           "type": "contact",
           "settings": {
+            "style": "box",
             "title": "Ask a question",
             "phone": false
           }
@@ -227,6 +259,7 @@
         "engraving_jR7cGk",
         "d2bfdc2f-2cae-43b1-91ed-390419b7a7d8",
         "buy_buttons",
+        "premium_protection_plan_JaB3PN",
         "aee49288-aed2-447a-9362-0e6b1ca600d1",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
@@ -243,6 +276,9 @@
       ],
       "settings": {
         "sku_enable": false,
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
         "image_position": "left",
         "image_size": "medium",
         "product_zoom_enable": true,
@@ -257,15 +293,15 @@
       "type": "product_img_with_txt",
       "settings": {
         "sub_title1": "Handcrafted in the USA",
-        "image_1": "shopify:\/\/shop_images\/img2.jpg",
+        "image_1": "shopify://shop_images/img2.jpg",
         "text_1": "Every ring is handmade by trade artisans in Utah, USA.",
         "url_1": "",
         "sub_title2": "Uncommon materials",
-        "image_2": "shopify:\/\/shop_images\/img1.jpg",
+        "image_2": "shopify://shop_images/img1.jpg",
         "text_2": "Go beyond silver and gold and find something that’s truly you.",
         "url_2": "",
         "sub_title3": "Every ring is unique",
-        "image_3": "shopify:\/\/shop_images\/img3.jpg",
+        "image_3": "shopify://shop_images/img3.jpg",
         "text_3": "Your ring is made to order just for you. No two rings are the same.",
         "url_3": ""
       }
@@ -278,7 +314,7 @@
         "image_width": 700,
         "subtitle": "",
         "title": "{{ product.metafields.custom.blog_section_heading.value }}",
-        "text": "<p>Check out our dedicated blog post on this month's birthstone and learn about its rich history, meaning, and color.<\/p>",
+        "text": "<p>Check out our dedicated blog post on this month's birthstone and learn about its rich history, meaning, and color.</p>",
         "button_label": "READ MORE",
         "button_link": "{{ product.metafields.custom.blog_link.value }}",
         "button_style": "primary",
@@ -295,8 +331,8 @@
           "settings": {
             "sub_title": "Place your order",
             "text": "Unsure of your size? Select “unsure – send ring sizer first” and we’ll post you a free ring sizer",
-            "image_1": "shopify:\/\/shop_images\/how-it-works-11.jpg",
-            "image_2": "shopify:\/\/shop_images\/how-it-works-22.jpg"
+            "image_1": "shopify://shop_images/how-it-works-11.jpg",
+            "image_2": "shopify://shop_images/how-it-works-22.jpg"
           }
         },
         "0669e6bd-9d26-4ae4-b380-ce53681e452e": {
@@ -341,7 +377,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>{{ product.metafields.global.unrivaled_process | metafield_tag }}<\/p>"
+            "text": "<p>{{ product.metafields.global.unrivaled_process | metafield_tag }}</p>"
           }
         }
       },
@@ -377,6 +413,9 @@
       "settings": {
         "title": "Shop The Birthstone Series",
         "home_featured_products": "birthstone-series",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
         "per_row": 4,
         "rows": 1,
         "mobile_scrollable": true,
@@ -387,7 +426,7 @@
     "section_custom_liquid_emyGpb": {
       "type": "section-custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n     <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>\n<\/div>"
+        "custom_liquid": "<div class=\"page-width\">\n     <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"></div>\n</div>"
       }
     },
     "product-recommendations": {
@@ -395,7 +434,10 @@
       "settings": {
         "show_product_recommendations": false,
         "product_recommendations_heading": "You may also like",
-        "related_count": 5
+        "related_count": 5,
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two"
       }
     },
     "534c70bd-1de0-44e8-978e-a489c47944be": {
@@ -403,6 +445,9 @@
       "settings": {
         "title": "You May Also Like",
         "home_featured_products": "you-may-also-like",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
         "per_row": 4,
         "rows": 1,
         "mobile_scrollable": false,
@@ -419,8 +464,7 @@
     },
     "collection-return": {
       "type": "collection-return",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
