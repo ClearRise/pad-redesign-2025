@@ -62,6 +62,7 @@
         "engraving_YpGMkM": {
           "type": "engraving",
           "settings": {
+            "form_style": "checkbox",
             "style": "inline",
             "save_badge": "For Limited Time Only"
           }
@@ -101,16 +102,22 @@
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
             "data_key": "credit-promotion-auto-size",
-            "locale_option": "geolocation",
-            "locale_fallback": "",
             "theme": "default",
             "topPadding": "0",
             "bottomPadding": "10",
             "messagePrefix": ""
           }
         },
+        "premium_protection_plan_NU7PRz": {
+          "type": "premium_protection_plan",
+          "settings": {
+            "is_show_description": true,
+            "description": "<p>Our <a href=\"/pages/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan</strong></a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.</p><p>{{ product.metafields.custom.premium_protection_plan.value }}</p>"
+          }
+        },
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": true,
             "style": "box",
@@ -257,6 +264,7 @@
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
         "buy_buttons",
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
+        "premium_protection_plan_NU7PRz",
         "7621462d-9edd-432d-a525-b5bcbfe07deb",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
