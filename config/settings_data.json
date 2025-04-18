@@ -173,7 +173,6 @@
           },
           "scroll_navi_mobile_UFP4e7": {
             "type": "scroll_navi_mobile",
-            "disabled": true,
             "settings": {
               "sub_menu": "<b><u>Sale</u></b>",
               "link_submenu": "shopify://collections/flash-sale"
