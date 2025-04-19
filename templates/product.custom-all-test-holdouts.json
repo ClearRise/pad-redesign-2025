@@ -81,6 +81,13 @@
             "save_badge": "For Limited Time Only"
           }
         },
+        "premium_protection_plan_VmjVtM": {
+          "type": "premium_protection_plan",
+          "settings": {
+            "is_show_description": true,
+            "description": "<p>Our <a href=\"/pages/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan</strong></a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.</p><p>{{ product.metafields.custom.premium_protection_plan.value }}</p>"
+          }
+        },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
           "settings": {
@@ -109,13 +116,6 @@
             "enable_tooltip": false,
             "tooltip_header": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
             "tooltip_content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>"
-          }
-        },
-        "premium_protection_plan_VmjVtM": {
-          "type": "premium_protection_plan",
-          "settings": {
-            "is_show_description": true,
-            "description": "<p>Our <a href=\"/pages/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan</strong></a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.</p><p>{{ product.metafields.custom.premium_protection_plan.value }}</p>"
           }
         },
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
@@ -266,9 +266,9 @@
         "bold_option_agdenj",
         "inventory_status",
         "engraving_YpGMkM",
+        "premium_protection_plan_VmjVtM",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
         "buy_buttons",
-        "premium_protection_plan_VmjVtM",
         "7621462d-9edd-432d-a525-b5bcbfe07deb",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
