@@ -187,11 +187,10 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "",
-              "link_text": "LAST CHANCE FOR FREE GIFT | ENDS AT MIDNIGHT",
-              "link": "shopify://collections/all-products"
+              "link_text": "Mother's Day Sale | Up to 30% Off",
+              "link": "shopify://collections/mothers-day-sale"
             }
           }
         },
