@@ -195,29 +195,6 @@
             "framed": false
           }
         },
-        "advanced_AgfTfH": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "UP TO 30% OFF",
-            "heading": "FLASH <br>SALE",
-            "textarea": "<u>SHOP NOW</u>",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/flash-sale",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Wood-forged-carbon-gold-accent-ring-1_c6b44c77-413e-4c7a-8ffe-4e6a0706202f.png",
-            "video_url": "",
-            "width": "33",
-            "height": 300,
-            "text_size": 105,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 20,
-            "color_accent": "#138f7e",
-            "boxed": false,
-            "framed": false
-          }
-        },
         "advanced_gaqMVW": {
           "type": "advanced",
           "settings": {
@@ -243,7 +220,6 @@
         },
         "8f48b383-f1c5-4d34-a6cd-eab1f6f524b0": {
           "type": "advanced",
-          "disabled": true,
           "settings": {
             "subheading": "NEW DESIGNS",
             "heading": "PENDANTS",
@@ -269,17 +245,17 @@
           "type": "advanced",
           "disabled": true,
           "settings": {
-            "subheading": "",
-            "heading": "ALL EARRINGS",
+            "subheading": "Up to 30% Off",
+            "heading": "",
             "textarea": "",
             "cta_text1": "",
             "cta_link1": "https://patrickadairdesigns.com/collections/earrings",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/earrings.png",
+            "image": "shopify://shop_images/mother_day_banner-mobile-collection2.jpg",
             "video_url": "",
             "width": "100",
-            "height": 400,
+            "height": 520,
             "text_size": 105,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -294,7 +270,6 @@
         "2f6050a5-96b7-4f7d-b405-7b5952c82699",
         "85a12c0c-6ee7-4aba-a660-0e12f6bdc907",
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02",
-        "advanced_AgfTfH",
         "advanced_gaqMVW",
         "8f48b383-f1c5-4d34-a6cd-eab1f6f524b0",
         "672a52df-0901-41df-bfcc-f5c1e4da1a77"
