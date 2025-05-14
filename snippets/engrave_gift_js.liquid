@@ -265,7 +265,7 @@ jQuery(document).ready(function($) {
     }
 
 
-    async function updateCart() {
+    async function updateCart(isFreeGift = false) {
         try {
             const response = await fetch('/cart.js');
             const cart = await response.json();
@@ -284,13 +284,15 @@ jQuery(document).ready(function($) {
             // Update gift boxes
             await updateGiftBoxes();
 
-            // Dispatch all necessary cart update events
-            document.dispatchEvent(new CustomEvent('cart:refresh'));
-            document.dispatchEvent(new CustomEvent('cart:build'));
-            document.dispatchEvent(new CustomEvent('cart.requestComplete'));
-            document.dispatchEvent(new CustomEvent('cart:updated', {
-                detail: { cart: cart }
-            }));
+            if (!isFreeGift) {
+              // Dispatch all necessary cart update events
+              document.dispatchEvent(new CustomEvent('cart:refresh'));
+              document.dispatchEvent(new CustomEvent('cart:build'));
+              document.dispatchEvent(new CustomEvent('cart.requestComplete'));
+              document.dispatchEvent(new CustomEvent('cart:updated', {
+                  detail: { cart: cart }
+              }));
+            }
 
             // Reload cart sections if available
             if (window.Shopify && window.Shopify.section) {
@@ -302,10 +304,12 @@ jQuery(document).ready(function($) {
         }
     }
 
+    const variantSelector = document.querySelector(".change-gift-size-options");
+
     // Add gift product
     $(document).on('click', '.upsell_button_gtm', async function(e) {
         e.preventDefault();
-        const id = $(this).attr('data-product-id');
+        const id = variantSelector ? variantSelector.value : $(this).attr('data-product-id');
         const quantity = 1;
 
         try {
@@ -331,7 +335,8 @@ jQuery(document).ready(function($) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
 
-            await updateCart();
+            // await updateCart();
+            location.reload();
         } catch (error) {
             console.error('Failed to add gift:', error);
         } finally {
@@ -342,7 +347,7 @@ jQuery(document).ready(function($) {
     // Remove gift product
     $(document).on('click', '.change_free_gift', async function(e) {
         e.preventDefault();
-        const variantId = $(this).attr('data-remove_var');
+        const variantId = variantSelector ? variantSelector.value : $(this).attr('data-remove_var');
 
         try {
             overlay.style.display = 'block';
@@ -362,13 +367,139 @@ jQuery(document).ready(function($) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
 
-            await updateCart();
+            location.reload();
+            // await updateCart();
         } catch (error) {
             console.error('Failed to remove gift:', error);
         } finally {
             overlay.style.display = 'none';
         }
     });
+
+
+    // Change gift product
+    // const variantSelector = document.querySelector(".change-gift-size-options");
+    if (variantSelector) {
+      variantSelector.addEventListener('change', async function() {
+        // e.preventDefault();
+        // const variantSelector = document.querySelector(".change-gift-size-options");
+        const purchaseInfo = document.querySelector(".selected-gift-product-variant");
+        const changeProductButton = document.querySelector(".upsell-add-to-cart-gift");
+  
+        const oldVariant = purchaseInfo.dataset.variantId;
+        const newVariant = variantSelector.value;
+        const wasNotPuchased = purchaseInfo.dataset.notAlreadyPurchase;
+  
+        let itemsData;
+  
+        if (oldVariant == newVariant) {
+          if (wasNotPuchased != "false") {
+            console.log("will puchase 🤔 not now");
+            // itemsData = [
+            //   { id: newVariant, quantity: 1, properties: { '_gift_product': 'true' } }
+            // ];
+  
+            // try {
+            //   overlay.style.display = 'block';
+              
+            //   const response = await fetch('/cart/add.js', {
+            //     method: 'POST',
+            //     headers: {
+            //       'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify({
+            //       items: itemsData
+            //     })
+            //   });
+      
+            //   if (!response.ok) {
+            //     throw new Error(`HTTP error! status: ${response.status}`);
+            //   }
+      
+            //   await updateCart();
+            // } catch (error) {
+            //     console.error('Failed to add gift:', error);
+            // } finally {
+            //     overlay.style.display = 'none';
+            // }
+          } else {
+            console.log("won't do anything");
+            return;
+          }
+        } else {
+          if (wasNotPuchased != "false") {
+            console.log("will new puchase 🤔 not now", oldVariant, newVariant);
+            // itemsData = [
+            //   { id: newVariant, quantity: 1, properties: { '_gift_product': 'true' } }
+            // ];
+  
+            // try {
+            //   overlay.style.display = 'block';
+              
+            //   const response = await fetch('/cart/add.js', {
+            //     method: 'POST',
+            //     headers: {
+            //       'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify({
+            //       items: itemsData
+            //     })
+            //   });
+      
+            //   if (!response.ok) {
+            //     throw new Error(`HTTP error! status: ${response.status}`);
+            //   }
+      
+            //   await updateCart();
+            // } catch (error) {
+            //     console.error('Failed to add gift:', error);
+            // } finally {
+            //     overlay.style.display = 'none';
+            // }
+          } else {
+            console.log("will other puchase");
+            itemsData = [
+              // { id: oldVariant, quantity: 0 },
+              { id: newVariant, quantity: 1, properties: { '_gift_product': 'true' } }
+            ];
+  
+            try {
+              overlay.style.display = 'block';
+              
+              const response = await fetch('/cart/change.js', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  id: oldVariant, quantity: 0
+                })
+              });
+      
+              if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+              }
+              const response2 = await fetch('/cart/add.js', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  items: itemsData
+                })
+              });
+              // await updateCart(true);
+              // purchaseInfo.dataset.variantId = newVariant;
+              location.reload();
+            } catch (error) {
+                console.error('Failed to add gift:', error);
+            } finally {
+                overlay.style.display = 'none';
+            }
+          }
+        }
+      });
+    }
 });
 
 
