@@ -326,7 +326,7 @@
                               selected
                             {% endif %}
                           >
-                            {{ gift_variant.title }}
+                            {{ first_gift_product.options[0] }} - {{ gift_variant.option1 }} {% if first_gift_product.options[1] %} | {{ first_gift_product.options[1] }} - {{ gift_variant.option2 }} {% endif %} {% if first_gift_product.options[2] %} | {{ first_gift_product.options[2] }} - {{ gift_variant.option3 }} {% endif %}
                           </option>
                         {% endfor %}
                       </select>
@@ -534,7 +534,7 @@
                               selected
                             {% endif %}
                           >
-                            {{ gift_variant.title }}
+                            {{ first_gift_product.options[0] }} - {{ gift_variant.option1 }} {% if first_gift_product.options[1] %} | {{ first_gift_product.options[1] }} - {{ gift_variant.option2 }} {% endif %} {% if first_gift_product.options[2] %} | {{ first_gift_product.options[2] }} - {{ gift_variant.option3 }} {% endif %}
                           </option>
                         {% endfor %}
                       </select>
