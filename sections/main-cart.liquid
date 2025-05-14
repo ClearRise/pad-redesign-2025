@@ -215,12 +215,26 @@
             
             {% if settings.show_gift_box %}
               {% assign first_gift_product = settings['product-handle-1'] %}
-              {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
+              {% comment %} {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %} {% endcomment %}
+              {% for gift_variant in first_gift_product.variants %}
+                {% if gift_variant.id == item.id %}
+                  {% assign match_gift_product = true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
               {% assign second_gift_product = settings['product-handle-2'] %}
-              {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
-              {% if first_gift_product_id == item.id or second_gift_product_id == item.id %}
+              {% comment %} {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %} {% endcomment %}
+              {% for gift_variant in second_gift_product %}
+                {% if gift_variant.id == item.id %}
+                  {% assign match_gift_product = true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+              {% comment %} {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %} {% endcomment %}
+              {% comment %} {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %} {% endcomment %}
+              {% comment %} {% if first_gift_product_id == item.id or second_gift_product_id == item.id %}
                 {% assign match_gift_product = true %}
-              {% endif %}
+              {% endif %} {% endcomment %}
             {% endif %}
 
             {% if settings.second_show_gift_box %}
