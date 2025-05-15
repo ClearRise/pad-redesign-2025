@@ -180,6 +180,7 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "",
               "link_text": "FREE MYSTERY BOX ($200+ Value) on Orders $195+",
