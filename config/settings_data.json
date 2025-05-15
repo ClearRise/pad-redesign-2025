@@ -171,13 +171,6 @@
               "link_submenu": "https://patrickadairdesigns.com/collections/best-selling-wedding-bands-v1"
             }
           },
-          "scroll_navi_mobile_UFP4e7": {
-            "type": "scroll_navi_mobile",
-            "settings": {
-              "sub_menu": "<b><u>Sale</u></b>",
-              "link_submenu": "shopify://collections/flash-sale"
-            }
-          },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
             "type": "scroll_navi_mobile",
             "settings": {
@@ -198,7 +191,6 @@
           "1524770014057",
           "30d9274d-f502-4710-bb39-866381456103",
           "966bc6e1-31db-4261-b34d-773ca4a79259",
-          "scroll_navi_mobile_UFP4e7",
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc",
           "announcement_BNdmQX"
         ],
