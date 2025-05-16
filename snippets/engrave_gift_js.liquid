@@ -304,11 +304,11 @@ jQuery(document).ready(function($) {
         }
     }
 
-    const variantSelector = document.querySelector(".change-gift-size-options");
-
+    // const variantSelector = document.querySelector(".change-gift-size-options");
     // Add gift product
     $(document).on('click', '.upsell_button_gtm', async function(e) {
         e.preventDefault();
+        let variantSelector = e.target.classList.contains("upsell-add-to-cart-gift-first") ? document.querySelector(".change-gift-size-options-first") : document.querySelector(".change-gift-size-options-second");
         const id = variantSelector ? variantSelector.value : $(this).attr('data-product-id');
         const quantity = 1;
 
@@ -347,6 +347,7 @@ jQuery(document).ready(function($) {
     // Remove gift product
     $(document).on('click', '.change_free_gift', async function(e) {
         e.preventDefault();
+        let variantSelector = e.target.classList.contains("upsell-add-to-cart-gift-first") ? document.querySelector(".change-gift-size-options-first") : document.querySelector(".change-gift-size-options-second");
         const variantId = variantSelector ? variantSelector.value : $(this).attr('data-remove_var');
 
         try {
@@ -378,127 +379,74 @@ jQuery(document).ready(function($) {
 
 
     // Change gift product
-    // const variantSelector = document.querySelector(".change-gift-size-options");
-    if (variantSelector) {
-      variantSelector.addEventListener('change', async function() {
-        // e.preventDefault();
-        // const variantSelector = document.querySelector(".change-gift-size-options");
-        const purchaseInfo = document.querySelector(".selected-gift-product-variant");
-        const changeProductButton = document.querySelector(".upsell-add-to-cart-gift");
-  
-        const oldVariant = purchaseInfo.dataset.variantId;
-        const newVariant = variantSelector.value;
-        const wasNotPuchased = purchaseInfo.dataset.notAlreadyPurchase;
-  
-        let itemsData;
-  
-        if (oldVariant == newVariant) {
-          if (wasNotPuchased != "false") {
-            console.log("will puchase 🤔 not now");
-            // itemsData = [
-            //   { id: newVariant, quantity: 1, properties: { '_gift_product': 'true' } }
-            // ];
-  
-            // try {
-            //   overlay.style.display = 'block';
-              
-            //   const response = await fetch('/cart/add.js', {
-            //     method: 'POST',
-            //     headers: {
-            //       'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify({
-            //       items: itemsData
-            //     })
-            //   });
-      
-            //   if (!response.ok) {
-            //     throw new Error(`HTTP error! status: ${response.status}`);
-            //   }
-      
-            //   await updateCart();
-            // } catch (error) {
-            //     console.error('Failed to add gift:', error);
-            // } finally {
-            //     overlay.style.display = 'none';
-            // }
+    const variantSelectors = document.querySelectorAll(".change-gift-size-options");
+    if (variantSelectors) {
+      [ ...variantSelectors ].forEach(eachVariantSelector => {
+        eachVariantSelector.addEventListener('change', async function() {
+          // e.preventDefault();
+          // const variantSelector = document.querySelector(".change-gift-size-options");
+          const purchaseInfo = document.querySelector(".selected-gift-product-variant");
+          const changeProductButton = document.querySelector(".upsell-add-to-cart-gift");
+    
+          const oldVariant = purchaseInfo.dataset.variantId;
+          const newVariant = eachVariantSelector.value;
+          const wasNotPuchased = purchaseInfo.dataset.notAlreadyPurchase;
+    
+          let itemsData;
+    
+          if (oldVariant == newVariant) {
+            if (wasNotPuchased != "false") {
+              console.log("will puchase 🤔 not now");
+            } else {
+              console.log("won't do anything");
+              return;
+            }
           } else {
-            console.log("won't do anything");
-            return;
-          }
-        } else {
-          if (wasNotPuchased != "false") {
-            console.log("will new puchase 🤔 not now", oldVariant, newVariant);
-            // itemsData = [
-            //   { id: newVariant, quantity: 1, properties: { '_gift_product': 'true' } }
-            // ];
-  
-            // try {
-            //   overlay.style.display = 'block';
-              
-            //   const response = await fetch('/cart/add.js', {
-            //     method: 'POST',
-            //     headers: {
-            //       'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify({
-            //       items: itemsData
-            //     })
-            //   });
-      
-            //   if (!response.ok) {
-            //     throw new Error(`HTTP error! status: ${response.status}`);
-            //   }
-      
-            //   await updateCart();
-            // } catch (error) {
-            //     console.error('Failed to add gift:', error);
-            // } finally {
-            //     overlay.style.display = 'none';
-            // }
-          } else {
-            console.log("will other puchase");
-            itemsData = [
-              // { id: oldVariant, quantity: 0 },
-              { id: newVariant, quantity: 1, properties: { '_gift_product': 'true' } }
-            ];
-  
-            try {
-              overlay.style.display = 'block';
-              
-              const response = await fetch('/cart/change.js', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                  id: oldVariant, quantity: 0
-                })
-              });
-      
-              if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+            if (wasNotPuchased != "false") {
+              console.log("will new puchase 🤔 not now", oldVariant, newVariant);
+            } else {
+              console.log("will other puchase");
+              itemsData = [
+                { id: newVariant, quantity: 1, properties: { '_gift_product': 'true' } }
+              ];
+    
+              try {
+                overlay.style.display = 'block';
+                
+                const response = await fetch('/cart/change.js', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    id: oldVariant, quantity: 0
+                  })
+                });
+        
+                if (!response.ok) {
+                  throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const response2 = await fetch('/cart/add.js', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    items: itemsData
+                  })
+                });
+                // await updateCart(true);
+                // purchaseInfo.dataset.variantId = newVariant;
+                location.reload();
+              } catch (error) {
+                  console.error('Failed to add gift:', error);
+              } finally {
+                  overlay.style.display = 'none';
               }
-              const response2 = await fetch('/cart/add.js', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                  items: itemsData
-                })
-              });
-              // await updateCart(true);
-              // purchaseInfo.dataset.variantId = newVariant;
-              location.reload();
-            } catch (error) {
-                console.error('Failed to add gift:', error);
-            } finally {
-                overlay.style.display = 'none';
             }
           }
-        }
-      });
+        });
+      })
     }
 });
 
