@@ -224,8 +224,8 @@
               {% endfor %}
               {% assign second_gift_product = settings['product-handle-2'] %}
               {% comment %} {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %} {% endcomment %}
-              {% for gift_variant in second_gift_product %}
-                {% if gift_variant.id == item.id %}
+              {% for second_gift_variant in second_gift_product.variants %}
+                {% if second_gift_variant.id == item.id %}
                   {% assign match_gift_product = true %}
                   {% break %}
                 {% endif %}
