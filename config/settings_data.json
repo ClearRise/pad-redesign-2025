@@ -180,10 +180,9 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "",
-              "link_text": "FREE MYSTERY BOX ($200+ Value) on Orders $195+",
+              "link_text": "MEMORIAL DAY DEALS THIS WEEK ONLY",
               "link": "shopify://collections/all-products"
             }
           }
