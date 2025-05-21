@@ -180,6 +180,7 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "",
               "link_text": "MEMORIAL DAY DEALS THIS WEEK ONLY",
