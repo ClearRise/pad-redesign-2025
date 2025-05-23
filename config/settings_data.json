@@ -80,7 +80,7 @@
     "product_threshold_amount": 100,
     "product1-img1": "shopify://shop_images/Mystery_Ring_Gif_bf14da19-95c3-4062-bee1-3da32c79205e.gif",
     "product1-title": "MEMORIAL DAY OFFER",
-    "product1-text": "Get TWO FREE Mystery Gifts (Ring or Pendant with guaranteed value of $250+) on orders $195+<br><b>THIS WEEKEND ONLY</b>",
+    "product1-text": "Get TWO FREE Mystery Gifts (Ring or Pendant with guaranteed value of $250+) on orders $195+<br><br><b>THIS WEEKEND ONLY</b>",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -98,7 +98,7 @@
     "upsell_box_title": "You May Also Like",
     "show_gift_box": true,
     "first_tier_progress": "You've unlocked a Free Gift!",
-    "gift_box_title": "FREE GIFT OFFER",
+    "gift_box_title": "MEMORIAL DAY OFFER",
     "gift_box_text": "",
     "cart_threshold_amount": 195,
     "spend_progress": "",
@@ -180,10 +180,9 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "",
-              "link_text": "MEMORIAL DAY DEALS THIS WEEK ONLY",
+              "text": "MEMORIAL DAY WEEKEND ONLY",
+              "link_text": "TWO FREE MYSTERY GIFTS ON ALL ORDERS $195+",
               "link": "shopify://collections/all-products"
             }
           }
