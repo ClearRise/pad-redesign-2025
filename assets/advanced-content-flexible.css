@@ -1,8 +1,3 @@
-.advanced-content-flexible-ss .custom__item {
-  display: flex;
-  align-items: center;
-}
-
 .advanced-content-flexible-ss-space_around {
   padding: 40px 0;
 }
@@ -10,9 +5,8 @@
 .liquid-container-ss h2 {
   font-size: 56px;
   font-weight: 450;
-  font-family: "Futura PT";
+  font-family: 'Futura PT';
 }
-
 .liquid-container-ss h3 {
   font-size: 32px;
 }
@@ -28,7 +22,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .custom-content ul li {
   font-size: 16px;
   line-height: 30px;
@@ -39,9 +32,8 @@
   border-bottom: 1px solid #ccc;
   padding-top: 10px;
 }
-
 .custom-content ul li:before {
-  content: "";
+  content: '';
   width: 8px;
   min-width: 8px;
   height: 8px;
@@ -55,11 +47,9 @@
   position: unset !important;
   display: none;
 }
-
 .advanced-content-flexible-ss .navigation-bar .navigation-home a {
   color: rgba(0, 0, 0, 0.8);
 }
-
 .advanced-content-flexible-ss .navigation-bar svg {
   width: 8px;
   height: 8px;
@@ -69,22 +59,18 @@
   display: flex;
   align-items: center;
 }
-
 .right-line-ss, .left-line-ss {
   height: 1px;
   flex: 1;
   background-color: #138f7e;
 }
-
 .center-logo-ss {
   padding-right: 10px;
   padding-left: 10px;
 }
-
 .line-break-container-ss + .index-section {
   margin-top: 20px !important;
 }
-
 .line-break-container-ss + .index-section .aos-animate {
   margin-bottom: 20px;
 }
@@ -121,6 +107,7 @@
     line-height: 26px;
   }
 }
+
 @media (max-width: 768px) {
   .advanced-content-flexible-ss-space_around {
     padding: 20px 0;
@@ -160,11 +147,11 @@
     line-height: 24px;
   }
 }
+
 /* --- START | featured-blog | --- */
 .featured-blog-container .custom__item {
   margin: auto;
 }
-
 .featured-blog-container .liquid-container-ss {
   padding: 30px 40px;
   text-align: center;
@@ -178,4 +165,4 @@
   margin-top: 0px;
   margin-bottom: 0px;
   text-align: left;
-}/*# sourceMappingURL=advanced-content-flexible.css.map */
+}
