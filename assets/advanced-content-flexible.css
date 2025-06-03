@@ -1,3 +1,8 @@
+.advanced-content-flexible-ss .custom__item {
+    display: flex;
+    align-items: center;
+}
+
 .advanced-content-flexible-ss-space_around {
   padding: 40px 0;
 }
