@@ -11568,3 +11568,14 @@ input[type="checkbox"]:checked::before {
     width: 100%;
   }
 }
+.align-self__center {
+  align-self: center;
+}
+
+.align-self__flex-start {
+  align-self: flex-start;
+}
+
+.align-self__flex-end {
+  align-self: flex-end;
+}
