@@ -11579,3 +11579,19 @@ input[type="checkbox"]:checked::before {
 .align-self__flex-end {
   align-self: flex-end;
 }
+
+.swiper-slide * {
+  user-select: none;
+  /* Prevent image dragging */
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: #008060 !important;
+}
+
+.hidden {
+  display: none;
+  transform: translateY(100%);
+}
