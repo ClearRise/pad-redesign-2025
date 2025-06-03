@@ -15,6 +15,9 @@
       display: none;
     {% endunless %}
   }
+  #shopify-section-{{ section.id }} .custom__item {
+    padding-left: 0px !important;
+  }
   {% if section.settings.variant_padding %}
     @media (min-width: 1500px) {
       #shopify-section-{{ section.id }} .advanced-content-flexible-ss .navigation-bar {
