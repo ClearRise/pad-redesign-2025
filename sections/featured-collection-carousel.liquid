@@ -85,7 +85,7 @@
               </div>
             {%- endif -%}
           {%- endif -%}
-          <div class="swiper-button-prev" style="position: relative;">
+          <div class="swiper-button-prev swiper-button-prev-{{ section.id }}" style="position: relative;">
             <svg
               width="48px"
               height="48px"
@@ -104,7 +104,7 @@
               </path>
             </svg>
           </div>
-          <div class="swiper-button-next" style="position: relative;">
+          <div class="swiper-button-next swiper-button-next-{{ section.id }}" style="position: relative;">
             <svg
               width="48px"
               height="48px"
@@ -137,7 +137,7 @@
   {%- endif -%}
 
   <div class="page-width{% if section.settings.mobile_scrollable %} page-width--flush-small{% endif %} ">
-    <div class="swiper-container featured-collection-carousel {% if section.settings.mobile_scrollable %}grid-overflow-wrapper{% endif %}">
+    <div class="swiper-container featured-collection-carousel featured-collection-carousel-{{ section.id }} {% if section.settings.mobile_scrollable %}grid-overflow-wrapper{% endif %}">
       <div
         class="grid grid--uniform swiper-wrapper"
         {% if section.settings.mobile_scrollable %}
@@ -268,7 +268,7 @@
     var swiper = new Swiper(".featured-collection-carousel-{{ section.id }}", {
       loop: true,
       autoplay: {
-        delay: 7000,
+        delay: 5000,
         disableOnInteraction: false,
       },
       pagination: {
@@ -276,8 +276,8 @@
         type: "progressbar", // 🛠 Converts dots into a line
       },
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next-{{ section.id }}",
+        prevEl: ".swiper-button-prev-{{ section.id }}",
       },
       breakpoints: {
         1024: {
