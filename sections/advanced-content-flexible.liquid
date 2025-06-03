@@ -398,6 +398,23 @@
             }
           });
         </script>
+      {%- when 'tab' -%}
+        <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
+          {% assign tab_id = block.id | append: product.id %}
+          {% capture tab_content %}
+            {{ block.settings.content }}
+            {{ block.settings.page.content }}
+          {% endcapture %}
+          {%- render 'tab', 
+            id: tab_id,  
+            title: block.settings.title, 
+            content: tab_content, 
+            readmore: block.settings.enable_readmore,
+            size_chart: block.settings.size_chart,
+            force_open: block.settings.expanded,
+            style: block.settings.style
+          -%}
+        </div>
     {%- endcase -%}
   {%- endfor -%}
   {%- if section.blocks.size == 0 -%}
@@ -735,6 +752,60 @@
               "label": "Bottom"
             }
           ]
+        }
+      ]
+    },
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "expanded",
+          "label": "Automatically expanded"
+        },
+        {
+          "type": "select",
+          "id": "style",
+          "label": "Style",
+          "default": "box",
+          "options": [
+            {
+              "value": "box",
+              "label": "Box"
+            },
+            {
+              "value": "list",
+              "label": "List"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Tab content"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Tab content from page"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_readmore",
+          "label": "Enable Protection Read more link",
+          "info": "Read more link enable",
+          "default": false
+        },
+        {
+          "type": "page",
+          "id": "size_chart",
+          "label": "Protection Read more popup"
         }
       ]
     },
