@@ -171,7 +171,6 @@
         },
         "description": {
           "type": "description",
-          "disabled": true,
           "settings": {
             "is_tab": false
           }
@@ -191,6 +190,7 @@
         },
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
@@ -205,7 +205,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
-            "style": "box",
+            "style": "list",
             "title": "Sizing Information",
             "content": "<p>Each Women's Wedding Band is made with real precious metals and is custom made for each order. We want to ensure you are ordering the correct size and each order will come with a complimentary sizer to confirm your size before we begin production on your ring. This ring is NOT eligible for a free size exchange. If you are needing a new size post-delivery, please reach out to us via email for options.</p>",
             "page": "",
@@ -217,7 +217,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
-            "style": "box",
+            "style": "list",
             "title": "Lifetime Warranty",
             "content": "<p>Each Women's Wedding Band comes with a <a href=\"https://patrickadairdesigns.com/pages/limited-lifetime-warranty-and-return-policy\" target=\"_blank\" title=\"https://patrickadairdesigns.com/pages/limited-lifetime-warranty-and-return-policy\"><strong>limited lifetime warranty</strong></a>. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.</p>",
             "page": "",
@@ -242,7 +242,7 @@
           "type": "tab",
           "settings": {
             "expanded": false,
-            "style": "box",
+            "style": "list",
             "title": "Shipping information",
             "content": "<p>Each Women's Wedding Band is made to order. Once your size is confirmed, we expect it to be made and shipped within 2-4 weeks.</p>",
             "page": "",
