@@ -232,7 +232,7 @@
           "settings": {
             "heading": "HOLIDAY SPECIAL",
             "text": "Save Up to 50% Sitewide",
-            "link": "shopify://collections/all-products",
+            "link": "shopify://collections/all-products-sunset",
             "label": "Shop now",
             "color_tint": "#000000",
             "color_tint_opacity": 8,
