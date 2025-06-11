@@ -1,10 +1,18 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "d85bc3a7-fd8d-47e1-96ea-6e11429dde6c": {
       "type": "slideshow",
@@ -16,14 +24,14 @@
             "title": "Give a Gift as Unique as They Are",
             "title_size": 60,
             "subheading": "Save 30-50% During our Holiday Gift Event",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "link_text": "SHOP ALL RINGS",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#138f7e",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify:\/\/shop_images\/Christmas_Large_f37d6320-69bd-43ac-b40a-de52c9fd421f.png",
-            "image_mobile": "shopify:\/\/shop_images\/hero1_713564a8-7654-477c-a504-ec1c0d559da7.png",
+            "image": "shopify://shop_images/Christmas_Large_f37d6320-69bd-43ac-b40a-de52c9fd421f.png",
+            "image_mobile": "shopify://shop_images/hero1_713564a8-7654-477c-a504-ec1c0d559da7.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -64,10 +72,10 @@
             "heading": "Glowstone Series",
             "textarea": "Limited Time Only",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/the-glowstone-series",
+            "cta_link1": "shopify://collections/the-glowstone-series",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Glowstone_Ring_2-_flipped_091974d9-dead-4efa-8f3b-b86399fcdcaf.png",
+            "image": "shopify://shop_images/Glowstone_Ring_2-_flipped_091974d9-dead-4efa-8f3b-b86399fcdcaf.png",
             "video_url": "",
             "width": "100",
             "height": 400,
@@ -112,10 +120,10 @@
             "heading": "Solid   Meteorite   Rings",
             "textarea": "",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/meteorite-jewelry",
+            "cta_link1": "shopify://collections/meteorite-jewelry",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Meteorite_Stack_Square.png",
+            "image": "shopify://shop_images/Meteorite_Stack_Square.png",
             "video_url": "",
             "width": "100",
             "height": 400,
@@ -160,10 +168,10 @@
             "heading": "Shop Gifts Under $200",
             "textarea": "",
             "cta_text1": "",
-            "cta_link1": "https:\/\/patrickadairdesigns.com\/collections\/gifts-under-200",
+            "cta_link1": "https://patrickadairdesigns.com/collections/gifts-under-200",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Group_Shot.png",
+            "image": "shopify://shop_images/Group_Shot.png",
             "video_url": "",
             "width": "100",
             "height": 500,
@@ -182,10 +190,10 @@
             "heading": "Pendants",
             "textarea": "Free Black Stainless<br> Steel Box Chain",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/necklaces",
+            "cta_link1": "shopify://collections/necklaces",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Pendant_56ae5f17-8dbc-4305-8aaa-5db6424d04ce.png",
+            "image": "shopify://shop_images/Pendant_56ae5f17-8dbc-4305-8aaa-5db6424d04ce.png",
             "video_url": "",
             "width": "50",
             "height": 500,
@@ -204,10 +212,10 @@
             "heading": "Earrings",
             "textarea": "",
             "cta_text1": "",
-            "cta_link1": "shopify:\/\/collections\/earrings",
+            "cta_link1": "shopify://collections/earrings",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/earrings.png",
+            "image": "shopify://shop_images/earrings.png",
             "video_url": "",
             "width": "50",
             "height": 500,
@@ -224,7 +232,7 @@
           "settings": {
             "heading": "HOLIDAY SPECIAL",
             "text": "Save Up to 50% Sitewide",
-            "link": "shopify:\/\/collections\/all-products",
+            "link": "shopify://collections/all-products-sunset",
             "label": "Shop now",
             "color_tint": "#000000",
             "color_tint_opacity": 8,
