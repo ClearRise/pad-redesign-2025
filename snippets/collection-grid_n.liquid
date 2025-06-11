@@ -1,0 +1,218 @@
+{% comment %}
+Snippet Arguments
+- collection: Liquid 'collection' or 'search' object
+- items: Paginated 'collection.products' or 'search.results' list. Cannot be pulled from the the 'collection' object passed in above
+- enable_sidebar: boolean
+- filter_style: 'sidebar' or 'drawer'
+- enable_sort: boolean
+- enable_collection_count
+- per_row
+- mobile_flush_grid
+- quick_shop_enable
+{% endcomment %}
+
+{% liquid
+  if collection.products
+    assign count = collection.products_count
+    assign count_label = 'collections.general.items_with_count'
+  endif
+
+  if collection.results
+    assign count = collection.results_count
+    assign count_label = 'general.search.result_count'
+  endif
+
+  assign filters = collection.filters
+  assign sort_by = collection.sort_by
+  assign default_sort_by = collection.default_sort_by
+  assign sort_options = collection.sort_options
+  assign current_filter_size = 0
+
+  for filter in filters
+    assign current_filter_size = current_filter_size | plus: filter.active_values.size
+  endfor
+%}
+
+<div class="collection-grid__wrapper">
+  <div class="collection-filter">
+    <div class="collection-filter__item collection-filter__item--drawer">
+      <button
+        type="button"
+        class="btn btn--tertiary{% unless current_filter_size == 0 %} btn--tertiary-active{% endunless %} mobile-filter-menu-open-button-ss"
+      >
+          <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Filter</title>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Filter">
+                <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24"></rect>
+                <line x1="4" y1="5" x2="16" y2="5" id="Path" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="4" y1="12" x2="10" y2="12" id="Path" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="14" y1="12" x2="20" y2="12" id="Path" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="8" y1="19" x2="20" y2="19" id="Path" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <circle id="Oval" stroke="currentColor" stroke-width="2" stroke-linecap="round" cx="18" cy="5" r="2"></circle>
+                <circle id="Oval" stroke="currentColor" stroke-width="2" stroke-linecap="round" cx="12" cy="12" r="2"></circle>
+                <circle id="Oval" stroke="currentColor" stroke-width="2" stroke-linecap="round" cx="6" cy="19" r="2"></circle>
+              </g>
+            </g>
+          </svg>
+          {{ 'collections.filters.title_tags' | t }}
+          {%- if current_filter_size > 0 -%}
+              ({{ current_filter_size }})
+          {%- endif -%}
+      </button>
+    </div>
+
+    <div class="collection-filter__item collection-filter__item--drawer">
+      <button
+        type="button"
+        class=" btn btn--tertiary mobile-sort-menu-open-button-ss"
+      >
+        <svg fill="currentColor" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+          <path d="M232.4834,176.4867l-39.999,39.99316c-.03613.03613-.07617.06641-.1123.102-.24609.23975-.499.47217-.76465.69043-.14453.11914-.29736.22266-.44629.3335-.165.123-.32617.251-.49756.36572-.17236.11572-.35107.21533-.52783.3208-.15967.09521-.31543.19531-.47949.2832-.17871.09571-.3623.17676-.54492.2627-.17285.08154-.34278.168-.52.24121-.17578.07275-.356.13183-.53467.1958-.19043.06836-.37891.1416-.57422.20068-.17822.0542-.35888.09326-.53906.13867-.19922.0503-.39649.10645-.59961.14649-.20752.041-.417.06543-.626.0957-.17822.02539-.35351.05908-.53418.07715-.39355.03858-.78857.05957-1.18359.05957s-.79-.021-1.18359-.05957c-.1792-.01758-.353-.05127-.52979-.07666-.21094-.03027-.42187-.05469-.63135-.09619-.20117-.04-.39648-.0957-.59423-.14551-.18213-.04541-.36475-.08545-.54444-.13965-.19385-.05859-.38086-.13134-.57031-.1997-.17969-.06446-.36084-.12354-.53858-.19678-.17675-.07373-.34619-.15967-.519-.24121-.18213-.08594-.36621-.167-.54492-.2627-.165-.08789-.32129-.18847-.48145-.28418-.17626-.10547-.35449-.20459-.52587-.31933-.17432-.1167-.33789-.24659-.50538-.37159-.146-.10937-.29589-.21093-.438-.32763-.28516-.23389-.55762-.48242-.81983-.74121-.019-.01856-.04-.03418-.05859-.05274l-40-40a12.0001,12.0001,0,0,1,16.9707-16.9707L172,179.02332V111.99353a12,12,0,0,1,24,0v67.03223L215.51465,159.514A12.0001,12.0001,0,0,1,232.4834,176.4867ZM119.999,115.99353H48a12,12,0,0,0,0,24h71.999a12,12,0,0,0,0-24Zm-71.999-40H183.999a12,12,0,0,0,0-24H48a12,12,0,0,0,0,24Zm56,104H48a12,12,0,0,0,0,24h56a12,12,0,0,0,0-24Z"/>
+        </svg>
+        Sort
+      </button>
+    </div>
+
+    <div class="collection-filter__item collection-filter__item--count small--hide filtered-products-count-ss">
+      {%- if enable_collection_count -%}
+        {% comment %} {{ count_label | t: count: count }} {% endcomment %}
+         {{ count }} items found
+      {%- endif -%}
+    </div>
+
+    <div class="collection-filter__item product-per-page-count">
+      <label for="ProductCount">Show</label>
+      <select name="ProductCount" id="ProductCount">
+        <option value="12" {% if paginate_by == '12' or paginate_by == 12 %} selected {% endif %}>12</option>
+        <option value="30" {% if paginate_by == '30' or paginate_by == 30 %} selected {% endif %}>30</option>
+        <option value="60" {% if paginate_by == '60' or paginate_by == 60 %} selected {% endif %}>60</option>
+        <option value="90" {% if paginate_by == '90' or paginate_by == 90 %} selected {% endif %}>90</option>
+      </select>
+      <label for="ProductCount">Product per page</label>
+    </div>
+
+    <div class="collection-filter__item collection-filter__item--sort">
+        <div class="collection-filter__sort-container">
+        {%- assign sort_by = sort_by | default: default_sort_by -%}
+        <label for="SortBy">
+          {% comment %} {{ 'collections.sorting.title' | t }} {% endcomment %}
+          Sort By:
+        </label>
+        <select name="SortBy" id="SortBy" data-default-sortby="{{ default_sort_by }}">
+          <option value="title-ascending"{% if sort_by == default_sort_by %} selected="selected"{% endif %}>{{ 'collections.sorting.title' | t }}</option>
+          {%- for option in sort_options -%}
+          <option value="{{ option.value }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name }}</option>
+          {%- endfor -%}
+        </select>
+        </div>
+    </div>
+
+    <div class="filtered-products-count-for-mobile-ss">
+      {%- if enable_collection_count -%}
+         {{ count }} items found
+      {%- endif -%}
+    </div>
+
+    <div class="mobile-sort-menu-container-ss">
+      <div class="mobile-sort-menu-ss">
+        <div class="mobile-sort-menu-close-ss mobile-sort-menu-item">
+          <svg fill="currentColor" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <title>times</title>
+            <path d="M17.062 16l9.37-9.37c0.136-0.136 0.219-0.323 0.219-0.53 0-0.415-0.336-0.751-0.751-0.751-0.208 0-0.395 0.084-0.531 0.22v0l-9.369 9.369-9.37-9.369c-0.135-0.131-0.319-0.212-0.522-0.212-0.414 0-0.75 0.336-0.75 0.75 0 0.203 0.081 0.387 0.212 0.522l9.368 9.369-9.369 9.369c-0.136 0.136-0.22 0.324-0.22 0.531 0 0.415 0.336 0.751 0.751 0.751 0.207 0 0.394-0.084 0.53-0.219v0l9.37-9.37 9.369 9.37c0.136 0.136 0.324 0.22 0.531 0.22 0.415 0 0.751-0.336 0.751-0.751 0-0.207-0.084-0.395-0.22-0.531v0z"></path>
+          </svg>
+        </div>
+        {%- for option in sort_options -%}
+          <div class="mobile-sort-menu-item {% if option.value == sort_by %}mobile-selected-sort-item-ss{% endif %}" data-sortValue="{{ option.value }}">
+            <span value="{{ option.value }}">{{ option.name }}</span>
+          </div>
+        {%- endfor -%}
+      </div>
+      <div class="sort-bottom-fixed-button-container-ss">
+        <div class="filter-bottom-fixed-button-ss clear-all-filters-ss">
+          {%- render 'button-ss_n', color: 'black', url: "#", label: 'Clear All Filters' -%}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid--uniform{% if mobile_flush_grid %} small--grid--flush{% endif %} produts-grid"{% unless enable_collection_count %} data-scroll-to{% endunless %}>
+    {%- for item in items -%}
+      {%- if item.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
+      {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
+      {%- if item.object_type == 'product' -%}
+        {%- render 'product-grid-item',
+          product: item,
+          per_row: per_row,
+          quick_shop_enable: quick_shop_enable,
+          subtitle_type: subtitle_type,
+          type_enable: type_enable,
+          subtitle_enable: subtitle_enable
+        -%}
+      {%- else -%}
+        {%- render 'search-grid-item',
+          item: item,
+          per_row: per_row
+        %}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const productCount = document.querySelector('#ProductCount');
+    if (productCount) {
+      productCount.addEventListener('change', (e) => {
+        const url = new URL(window.location.href);
+        url.searchParams.set('limit', e.target.value);
+        url.searchParams.set('page', 1);
+        window.location.href = url.toString();
+      });
+    }
+  });
+</script>
+
+{%- if enable_sidebar and filter_style != 'drawer' and collection.filters.size > 0 -%}
+{% comment %}
+  Sidebar enabled but not in drawer mode, only show filter button on mobile
+{% endcomment %}
+{% style %}
+@media screen and (min-width: 769px) {
+  .collection-filter__item--drawer {
+    display: none;
+  }
+  .collection-filter__item--count {
+    text-align: left;
+  }
+  html[dir="rtl"] .collection-filter__item--count {
+    text-align: right;
+  }
+}
+{% endstyle %}
+{%- endif -%}
+
+{%- if enable_sidebar == false or collection.filters.size == 0 -%}
+{% comment %}
+    Disable sidebar & filter features
+{% endcomment %}
+{% style %}
+.collection-filter__item--drawer {
+  display: none;
+}
+.collection-filter__item--count {
+  text-align: left;
+}
+html[dir="rtl"] .collection-filter__item--count {
+  text-align: right;
+}
+{% endstyle %}
+{%- endif -%}
+
+{%- unless enable_sort -%}
+{% style %}
+.collection-filter__sort-container {
+  display: none;
+}
+{% endstyle %}
+{%- endunless -%}

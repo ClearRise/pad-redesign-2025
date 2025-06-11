@@ -1,0 +1,168 @@
+
+  {%- liquid
+    assign enable_dynamic_buttons = false
+    if show_dynamic_checkout and template != 'product.preorder'
+      assign enable_dynamic_buttons = true
+    endif
+  -%}
+
+  {%- if enable_dynamic_buttons -%}
+    <div class="payment-buttons">
+  {%- endif -%}
+
+  {%- liquid
+    assign default_text = 'products.product.add_to_cart' | t
+    assign button_text = 'products.product.add_to_cart' | t
+    if template == 'product.preorder'
+      assign default_text = 'products.product.preorder' | t
+      assign button_text = 'products.product.preorder' | t
+    endif
+    unless current_variant.available
+      assign button_text = 'products.product.sold_out' | t
+    endunless
+  -%}
+ 
+
+  <button
+    {% if product.empty? %}
+      type="button"
+    {% else %}
+      type="submit"
+    {% endif %}
+    name="add"
+    data-add-to-cart
+    class="btn btn--full add-to-cart{% if enable_dynamic_buttons and product.selling_plan_groups == empty %} btn--secondary{% endif %}"
+    {% unless current_variant.available %}
+      disabled="disabled"
+    {% endunless %}
+  >
+    {%- render 'icon-shopping-bag' -%}
+    <span data-add-to-cart-text data-default-text="{{ default_text }}">
+      {{ button_text }}
+    </span>
+    {%- render 'icon-dot' -%}
+    <span class="total-price" id="total-price"></span>
+  </button>
+
+  {%- if enable_dynamic_buttons -%}
+    {{ form | payment_button }}
+  {%- endif -%}
+
+  {%- if enable_dynamic_buttons -%}
+    </div>
+  {%- endif -%}
+
+  <div class="shopify-payment-terms product__policies">{{ form | payment_terms }}</div>
+
+  <select name="id" data-product-select class="product-single__variants no-js">
+    {%- for variant in product.variants -%}
+      {%- if variant.available -%}
+        <option
+          {% if variant == product.selected_or_first_available_variant %}
+            selected="selected"
+          {% endif %}
+          value="{{ variant.id }}"
+        >
+          {{ variant.title }} - {{ variant.price | money_with_currency }}
+        </option>
+      {%- else -%}
+        <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+      {%- endif -%}
+    {%- endfor -%}
+  </select>
+
+  <textarea data-variant-json class="hide" aria-hidden="true" aria-label="Product JSON">
+    {{ product.variants | json }}
+  </textarea>
+  {%- if product.options.size > 1 -%}
+    <textarea data-current-variant-json class="hide" aria-hidden="true" aria-label="Variant JSON">
+      {{ current_variant | json }}
+    </textarea>
+  {%- endif -%}
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector(".product-single__form"); // Select the form using the class
+    
+      // Function to calculate the total price based on the base price and upsell checkbox
+      function calculateTotal() {
+        
+        const totalPriceElements = document.querySelectorAll(".total-price"); // Element to display the total price
+        let total = 0;
+    
+        // Get the base price from the form
+        const priceElement = form.querySelector(".product__price .money");
+        if (priceElement) {
+          // Extract the price value (removes any non-numeric characters like $)
+          let basePrice = parseFloat(priceElement.textContent.replace(/[^0-9.]/g, ""));
+          if (isNaN(basePrice)) return; // Skip if the base price is invalid
+    
+          total += basePrice; // Add base price to the total
+        }
+    
+        [ ...form.querySelectorAll('.swiper-slide') ].forEach(slide => {
+          // Get the base price for the product inside the swiper-slide
+          const priceElement = slide.querySelector(".sales-price .money");
+          if (priceElement) {
+            let basePrice = parseFloat(priceElement.textContent.replace(/[^0-9.]/g, ""));
+            if (isNaN(basePrice)) return; // Skip if the price is invalid
+            console.log("Find the upsell checkbox in this .swiper-slide");
+            // Find the upsell checkbox in this .swiper-slide
+            const upsellCheckbox = slide.querySelector(".cart-upsell-toggle");
+            if (upsellCheckbox && upsellCheckbox.checked) {
+              console.log(upsellCheckbox, "upsellCheckbox")
+              // If the upsell checkbox is checked, add the base price to the total
+              total += basePrice;
+            }
+          }
+        });
+
+        let engravingDiv = form.querySelector(".engraving_div");
+        if (engravingDiv && engravingDiv.querySelector(".engraving-checkbox")) {
+          if (engravingDiv.querySelector(".engraving-checkbox").checked) {
+            engravingDiv.querySelector(".product-page-engraving-input").addEventListener("change", () => {
+              calculateTotal();
+            });
+          }
+          if (engravingDiv.querySelector(".engraving-checkbox").checked && engravingDiv.querySelector(".product-page-engraving-input").value) {
+            let price = parseFloat(engravingDiv.querySelector(".money").textContent.replace(/[^0-9.]/g, ""));
+            if (!isNaN(price)) {
+              total += price;
+            }
+          }
+        }
+
+        [ ...form.querySelectorAll('.bold_option.bold_option_checkbox ') ].forEach(item => {
+          if (item.querySelector(".protection-plan") && item.querySelector(".protection-plan").checked) {
+            let price = parseFloat(item.querySelector(".money").textContent.replace(/[^0-9.]/g, ""));
+            if (!isNaN(price)) {
+              total += price;
+            }
+          }
+        });
+    
+        setTimeout(() => {
+          let boldOptionTotal = form.querySelector(".bold_option_total")
+          if (boldOptionTotal) {
+            let price = parseFloat(boldOptionTotal.querySelector(".money").textContent.replace(/[^0-9.]/g, ""));
+            if (!isNaN(price)) {
+              total += price;
+            }
+          }
+          [ ...totalPriceElements].forEach(totalPriceEle => {
+            totalPriceEle.innerHTML = `$${total.toFixed(2)}`; // Format the total price as currency
+          });
+        }, 500);
+      }
+    
+      // Listen for a click on the form to trigger the price calculation
+      form.addEventListener("click", function () {
+        calculateTotal(); // Recalculate the total price when the checkbox changes
+      });
+    
+      // Ensure the total is correct on initial load (if needed)
+      // setInterval(calculateTotal, 500)
+      calculateTotal();
+    });
+
+  </script>

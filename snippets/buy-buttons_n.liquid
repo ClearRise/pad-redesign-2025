@@ -1,0 +1,28 @@
+<div class="product-block" {{ block.shopify_attributes }}>
+  {%- unless product.empty? -%}
+
+    {% capture tooltip_content  %}
+      <div>{{ block.settings.tooltip_header }}</div>
+      <div>{{ product.metafields.custom.premium_protection_plan }}</div>
+      <p>{{ block.settings.tooltip_content }}</p>
+    {% endcapture %}
+    
+    <div class="product-block">
+      {%- render 'product-form_n',
+        form_id: form_id,
+        product: product,
+        show_dynamic_checkout: block.settings.show_dynamic_checkout,
+        current_variant: current_variant,
+        tooltip_content: tooltip_content,
+        enable_tooltip: block.settings.enable_tooltip
+      -%}
+    </div>
+  {%- endunless -%}
+
+  {%- if block.settings.surface_pickup_enable -%}
+    <div data-store-availability-holder
+      data-product-name="{{ product.title | escape }}"
+      data-base-url="{{ shop.url }}{{ routes.root_url }}"
+      ></div>
+  {%- endif -%}
+</div>

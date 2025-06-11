@@ -1,0 +1,96 @@
+{{ 'relative-product-carousel.css' | asset_url | stylesheet_tag: preload: true  }}
+
+<div class="relative-carousel-container overflow-hidden">
+  <div class="swiper-wrapper">
+    {% comment %} <div>{{ relative_products }}</div> {% endcomment %}
+    {% for product in relative_products %}
+      {% comment %} <div>{{ product | json }}, {{ product }}</div> {% endcomment %}
+      <div class="swiper-slide">
+        <div class="item-wrapper">
+          <div class="image-container">
+            <img src="{{ product.featured_image | img_url: 'master' }}">
+          </div>
+          <div class="item">
+            <div class="item-body">
+              <div class="product-title">
+                {{ product.title }}
+              </div>
+              <div class="product-body">
+                <span class="sales-price">{{ product.price | money }}</span>
+                {% if product.price != product.compare_at_price %}
+                  <span class="compare-price">{{ product.compare_at_price | money }}</span>
+                {% endif %}
+                {% if enable_common_badge %}
+                  <span class="badge">{{ common_badge_text }}</span>
+                {% else %}
+                  {% if product.metafields.custom.spectial_tag %}
+                    <span class="badge">{{ product.metafields.custom.spectial_tag }}</span>
+                  {% endif %}
+                {% endif %}
+                {% assign variant_count = product.variants | size %}
+                {% if variant_count > 1 %}
+                  <select class="select-relative-prodct-variants-selector" data-selector-index={{ forloop.index0 }}>
+                    {% for variant in product.variants %}
+                      <option value="{{ variant.id }}">{{ variant.title }}</option>
+                    {% endfor %}
+                  </select>
+                {% endif %}
+              </div>
+              {% if show_description %}
+                <div class="product-description">
+                  {{ product.description }}
+                </div>
+              {% endif %}
+            </div>
+            <div class="cart-upsell-toggle-container cart-upsell-toggle-container--center ">
+              <label class="cart-upsell-toggle-label">
+                <input type="checkbox" id="cart-upsell-toggle-{{ forloop.index0 }}" class="cart-upsell-toggle" data-relative-product="yes"  data-relative-product-id="{{ product.variants[0].id }}" name="properties[_relative_product_{{ forloop.index0 }}]" value="{{ product.variants[0].id }}" >
+                <span class="cart-upsell-toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="relative-carousel-swiper-pagination"></div>
+  <div class="button-container">
+    <div class="relative-carousel-swiper-button-prev swiper-button-prev ">
+      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"></path></svg>
+    </div>
+    <div class="relative-carousel-swiper-button-next swiper-button-next">
+      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"></path></svg>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var relativeCarouselContainer = new Swiper('.relative-carousel-container', {
+      loop: true,
+      autoplay: false,
+      pagination: {
+        el: '.relative-carousel-swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+        dynamicBullets: false,
+      },
+      navigation: {
+        nextEl: ".relative-carousel-swiper-button-next",
+        prevEl: ".relative-carousel-swiper-button-prev",
+      },
+      {% comment %} watchSlidesProgress: true,
+      watchSlidesVisibility: true, {% endcomment %}
+      slidesPerView: 1,
+      spaceBetween: 0
+    });
+    
+    const selectRelativeProdctVariantsSelector = document.querySelector(".select-relative-prodct-variants-selector");
+    selectRelativeProdctVariantsSelector.addEventListener("change", function () {
+      {% comment %} this.getAttribute('data-relative-product-id') {% endcomment %}
+      const cartUpsellToggle = document.querySelector(`#cart-upsell-toggle-${ this.getAttribute('data-selector-index') }`);
+      cartUpsellToggle.setAttribute('data-relative-product-id', this.value);
+      cartUpsellToggle.value = this.value;
+    });
+  });
+</script>

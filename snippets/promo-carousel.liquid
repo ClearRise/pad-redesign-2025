@@ -1,0 +1,74 @@
+{% liquid
+  assign blocks = section.blocks
+%}
+
+<div class="promo-carousel-container-ss" style="overflow:hidden">
+  <div class="swiper-wrapper">
+    {% for block in blocks %}
+      <div class="swiper-slide">
+        <div class="item-container-ss">
+          <div class="image-container-ss">
+            <img
+              class="image-fit promo-carousel__bg-image--{{ block.id }} lazyloaded"
+              src="{{ block.settings.image | img_url: '500x' }}"
+              alt="{{ block.settings.image.alt }}"
+            />
+          </div>
+          <div class="text-container-ss">
+            {%- if block.settings.subheading -%}
+              <div class="subheading-ss"> {{ block.settings.subheading }} </div>
+            {%- endif -%}
+            {%- if block.settings.heading -%}
+              <div class="heading-ss"> {{ block.settings.heading }} </div>
+            {%- endif -%}
+            {%- if block.settings.textarea -%}
+              <div class="textarea-ss"> {{ block.settings.textarea }} </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="swiper-pagination" style="position:relative"></div>
+  {% comment %} <div class="swiper-button-prev" style="position: relative;">Next</div>
+  <div class="swiper-button-next" style="position: relative;">Prev</div> {% endcomment %}
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+      var swiper = new Swiper('.promo-carousel-container-ss', {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: "progressbar"
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 2.7,
+            spaceBetween: 20
+          },
+          768: {
+            slidesPerView: 2.2,
+            spaceBetween: 15
+          },
+          0: {
+            slidesPerView: 1.5,
+            spaceBetween: 10
+          }
+        },
+        touchStartPreventDefault: false,
+        passiveListeners: true
+      });
+    });
+  }, 1000);
+  setTimeout(() => {
+    var promoCarouselContainer = document.querySelector(".promo-carousel-container-ss");
+    promoCarouselContainer.style.height = 'unset';
+    promoCarouselContainer.style.opacity = 1;
+  }, 1000);
+</script>
