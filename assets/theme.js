@@ -7505,53 +7505,45 @@ lazySizesConfig.expFactor = 4;
       },
 
       initProductSlider: function (variant) {
-        // Stop if only a single image, but add active class to first slide
-        if (this.cache.mainSlider.querySelectorAll(selectors.slide).length <= 1) {
-          var slide = this.cache.mainSlider.querySelector(selectors.slide);
-          if (slide) {
-            slide.classList.add('is-selected');
+        var productThumbnailsSwiperContainer = new Swiper(".swiper-thumbnails-container", {
+          spaceBetween: 3,
+          navigation: {
+            prevEl: ".product__thumb-arrow--prev",
+            nextEl: ".product__thumb-arrow--next",
+          },
+          breakpoints: {
+            1024: {
+              slidesPerView: 7,
+              spaceBetween: 3
+            },
+            768: {
+              slidesPerView: 7,
+              spaceBetween: 3
+            },
+            0: {
+              slidesPerView: 7,
+              spaceBetween: 3
+            },
+          },
+        });
+        var productMainPhotoSwiperContainer = new Swiper(".product-main-photo-swiper-container", {
+          spaceBetween: 10,
+          thumbs: {
+            swiper: productThumbnailsSwiperContainer,
+          },
+          breakpoints: {
+            769: {
+              direction: "vertical",
+              slidesPerView: 3
+            },
+            0: {
+              direction: "horizontal",
+              slidesPerView: 1
+            }
           }
-          return;
-        }
-
-        // Destroy slider in preparation of new initialization
-        if (this.flickity && typeof this.flickity.destroy === 'function') {
-          this.flickity.destroy();
-        }
-
-        // If variant argument exists, slideshow is reinitializing because of the
-        // image set feature enabled and switching to a new group.
-        // currentSlideIndex
-        if (!variant) {
-          var activeSlide = this.cache.mainSlider.querySelector(selectors.startingSlide);
-          this.settings.currentSlideIndex = this._slideIndex(activeSlide);
-        }
-
-        var mainSliderArgs = {
-          adaptiveHeight: true,
-          avoidReflow: true,
-          initialIndex: this.settings.currentSlideIndex,
-          childNav: this.cache.thumbSlider,
-          childNavScroller: this.cache.thumbScroller,
-          childVertical: this.cache.thumbSlider.dataset.position === 'beside',
-          pageDots: true, // mobile only with CSS
-          wrapAround: true,
-          callbacks: {
-            onInit: this.onSliderInit.bind(this),
-            onChange: this.onSlideChange.bind(this)
-          }
-        };
-
-        // Override default settings if image set feature enabled
-        if (this.settings.imageSetName) {
-          var imageSetArgs = this.imageSetArguments(variant);
-          mainSliderArgs = Object.assign({}, mainSliderArgs, imageSetArgs);
-          this.updateImageSetThumbs(mainSliderArgs.imageSet);
-        }
-
-        this.flickity = new theme.Slideshow(this.cache.mainSlider, mainSliderArgs);
+        });
       },
-
+      
       onSliderInit: function (slide) {
         // If slider is initialized with image set feature active,
         // initialize any videos/media when they are first slide
@@ -7996,6 +7988,38 @@ lazySizesConfig.expFactor = 4;
 
         this.outputContainer.innerHTML = productMarkup;
 
+  // Swiper slide Recently Viewed
+        setTimeout(() => {
+          var recentlyViewedSwiperSlide = new Swiper('.recently-viewed-caruosel-container', {
+            loop: true,
+            autoPlay: false,
+            pagination: {
+              el: '.swiper-pagination',
+              type: "progressbar"
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+              1024: {
+                slidesPerView: 4.2,
+                spaceBetween: 20
+              },
+              768: {
+                slidesPerView: 2.7,
+                spaceBetween: 15
+              },
+              0: {
+                slidesPerView: 1.3,
+                spaceBetween: 10
+              }
+            },
+            touchStartPreventDefault: false,
+            passiveListeners: true
+          });
+        }, 1000);
+        
         if (AOS) {
           AOS.refreshHard();
         }
