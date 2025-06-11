@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_body_bg": "#ffffff",
@@ -173,7 +173,7 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "<b><u>SALE</u></b>",
-              "link_submenu": "shopify://collections/all-products"
+              "link_submenu": "shopify://collections/all-products-sunset"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
@@ -189,7 +189,7 @@
             "settings": {
               "text": "TWO FREE GIFTS ON ORDERS $150+",
               "link_text": "THIS WEEKEND ONLY",
-              "link": "shopify://collections/all-products"
+              "link": "shopify://collections/all-products-sunset"
             }
           }
         },
@@ -313,33 +313,17 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "1877152918344802950": {
         "type": "shopify://apps/intelligems-a-b-testing/blocks/intelligems-script/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
         "disabled": true,
-        "settings": {
-        }
-      },
-      "2728461494843721857": {
-        "type": "shopify://apps/amped-email-sms-popups/blocks/app-embed/d9d8f140-4443-4f6c-a16a-95357ecc2125",
-        "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "16881471024131275657": {
         "type": "shopify://apps/searchanise-search-filter/blocks/app-embed/d8f24ada-02b1-458a-bbeb-5bf16d5c921e",
         "disabled": true,
-        "settings": {
-        }
-      },
-      "17174303574952363282": {
-        "type": "shopify://apps/fondue-cashback-promotions/blocks/caseback-embed/dcfd972d-99c5-4526-b55b-2d76e990dec8",
-        "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     }
   },
@@ -487,8 +471,7 @@
         },
         "newsletter-popup": {
           "type": "newsletter-popup",
-          "settings": {
-          }
+          "settings": {}
         },
         "collection-header": {
           "type": "collection-header",
@@ -832,8 +815,7 @@
           "blocks": {
             "1524768779513": {
               "type": "logo",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -854,8 +836,7 @@
           "blocks": {
             "1494292487693": {
               "type": "newsletter",
-              "settings": {
-              }
+              "settings": {}
             },
             "1526406521795": {
               "type": "menu",
@@ -882,8 +863,7 @@
         },
         "newsletter-popup": {
           "type": "newsletter-popup",
-          "settings": {
-          }
+          "settings": {}
         },
         "collection-header": {
           "type": "collection-header",
