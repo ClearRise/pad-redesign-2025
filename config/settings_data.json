@@ -190,7 +190,7 @@
             "settings": {
               "text": "Better than Black Friday",
               "link_text": "Up to 50% Off + Free Gift On Orders $100+",
-              "link": "shopify://collections/all-products"
+              "link": "shopify://collections/all-products-sunset"
             }
           }
         },
@@ -321,19 +321,9 @@
         "disabled": true,
         "settings": {}
       },
-      "2728461494843721857": {
-        "type": "shopify://apps/amped-email-sms-popups/blocks/app-embed/d9d8f140-4443-4f6c-a16a-95357ecc2125",
-        "disabled": false,
-        "settings": {}
-      },
       "16881471024131275657": {
         "type": "shopify://apps/searchanise-search-filter/blocks/app-embed/d8f24ada-02b1-458a-bbeb-5bf16d5c921e",
         "disabled": true,
-        "settings": {}
-      },
-      "17174303574952363282": {
-        "type": "shopify://apps/fondue-cashback-promotions/blocks/caseback-embed/dcfd972d-99c5-4526-b55b-2d76e990dec8",
-        "disabled": false,
         "settings": {}
       },
       "9685009021672784835": {

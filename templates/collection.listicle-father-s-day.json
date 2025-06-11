@@ -1,27 +1,27 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "text_and_image_LWcTaf": {
       "type": "text-and-image",
       "custom_css": [
-        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}"
+        ".feature-row__text .h1 {font-size: 24px; /* Adjust the font size as needed */}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Meteorite_Landscape.png",
+        "image": "shopify://shop_images/Meteorite_Landscape.png",
         "image_width": 700,
         "subtitle": "",
         "title": "A Ring That Tells His Story",
-        "text": "<p>Whether it's a fashion piece, an upgrade or his first wedding band, he deserves a ring that's one-of-a-kind just like him.<br\/><br\/>From hand-forged Damascus steel to million year old meteorite, you'll find a story in every ring.<\/p>",
+        "text": "<p>Whether it's a fashion piece, an upgrade or his first wedding band, he deserves a ring that's one-of-a-kind just like him.<br/><br/>From hand-forged Damascus steel to million year old meteorite, you'll find a story in every ring.</p>",
         "button_label": "Shop All Rings",
-        "button_link": "shopify:\/\/collections\/all-products",
+        "button_link": "shopify://collections/all-products-sunset",
         "button_style": "primary",
         "align_text": "left",
         "layout": "right",
@@ -30,8 +30,7 @@
     },
     "replo_trust_icons_white_backg_WjtKCT": {
       "type": "replo-trust-icons-white-backg",
-      "settings": {
-      }
+      "settings": {}
     },
     "rich_text_pm48aQ": {
       "type": "rich-text",
@@ -56,15 +55,15 @@
     "text_and_image_GaNiE8": {
       "type": "text-and-image",
       "custom_css": [
-        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
-        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+        ".feature-row__text .h1 {font-size: 24px; /* Adjust the font size as needed */}",
+        ".feature-row__text .subheading {font-size: 28px; /* Adjust the font size as needed */}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Vertical_Groupshot.png",
+        "image": "shopify://shop_images/Vertical_Groupshot.png",
         "image_width": 700,
         "subtitle": "#1",
         "title": "One-of-a-Kind Designs",
-        "text": "<p>A ring should be more than just jewelry. That's why we meticulously handcraft every ring to make sure each one is as unique as the men who wear them. <\/p>",
+        "text": "<p>A ring should be more than just jewelry. That's why we meticulously handcraft every ring to make sure each one is as unique as the men who wear them. </p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -76,16 +75,16 @@
     "text_and_image_xYCfXG": {
       "type": "text-and-image",
       "custom_css": [
-        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
-        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+        ".feature-row__text .h1 {font-size: 24px; /* Adjust the font size as needed */}",
+        ".feature-row__text .subheading {font-size: 28px; /* Adjust the font size as needed */}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Group_Shot_d3dec58d-44ce-4568-9648-13e1dd7ba31e.png",
-        "image2": "shopify:\/\/shop_images\/Untitled-2.png",
+        "image": "shopify://shop_images/Group_Shot_d3dec58d-44ce-4568-9648-13e1dd7ba31e.png",
+        "image2": "shopify://shop_images/Untitled-2.png",
         "image_width": 700,
         "subtitle": "#2",
         "title": "Exotic Materials",
-        "text": "<p>Whether it’s hand-forged Damascus steel from Nevada, fossilized mammoth tooth from Siberia, or meteorite pulled from the Arctic Circle you’ll find a story in every ring<\/p>",
+        "text": "<p>Whether it’s hand-forged Damascus steel from Nevada, fossilized mammoth tooth from Siberia, or meteorite pulled from the Arctic Circle you’ll find a story in every ring</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -97,15 +96,15 @@
     "text_and_image_9XTPrK": {
       "type": "text-and-image",
       "custom_css": [
-        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
-        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+        ".feature-row__text .h1 {font-size: 24px; /* Adjust the font size as needed */}",
+        ".feature-row__text .subheading {font-size: 28px; /* Adjust the font size as needed */}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Glowstone_Groupshot.png",
+        "image": "shopify://shop_images/Glowstone_Groupshot.png",
         "image_width": 700,
         "subtitle": "#3",
         "title": "Hundreds of Customizable Designs",
-        "text": "<p>With hundreds of designs that are all fully customizable, there's a perfect ring for anyone. <\/p>",
+        "text": "<p>With hundreds of designs that are all fully customizable, there's a perfect ring for anyone. </p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -117,15 +116,15 @@
     "text_and_image_ciVTF9": {
       "type": "text-and-image",
       "custom_css": [
-        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
-        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+        ".feature-row__text .h1 {font-size: 24px; /* Adjust the font size as needed */}",
+        ".feature-row__text .subheading {font-size: 28px; /* Adjust the font size as needed */}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Perfect_fit.png",
+        "image": "shopify://shop_images/Perfect_fit.png",
         "image_width": 700,
         "subtitle": "#4",
         "title": "Perfect Fit. Everytime.",
-        "text": "<p>Thanks to our free ring sizing kit, you're guaranteed to get a perfectly sized ring every time. <\/p>",
+        "text": "<p>Thanks to our free ring sizing kit, you're guaranteed to get a perfectly sized ring every time. </p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -137,15 +136,15 @@
     "text_and_image_HeDYVD": {
       "type": "text-and-image",
       "custom_css": [
-        ".feature-row__text .h1 {font-size: 24px; \/* Adjust the font size as needed *\/}",
-        ".feature-row__text .subheading {font-size: 28px; \/* Adjust the font size as needed *\/}"
+        ".feature-row__text .h1 {font-size: 24px; /* Adjust the font size as needed */}",
+        ".feature-row__text .subheading {font-size: 28px; /* Adjust the font size as needed */}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Opal_shot.png",
+        "image": "shopify://shop_images/Opal_shot.png",
         "image_width": 700,
         "subtitle": "#5",
         "title": "A Ring That Lasts a Lifetime",
-        "text": "<p>Every ring is rigorously inspected to make sure that it will last. Combined with our 100% satisfaction guarantee, you're literally guaranteed to not be disappointed. <\/p>",
+        "text": "<p>Every ring is rigorously inspected to make sure that it will last. Combined with our 100% satisfaction guarantee, you're literally guaranteed to not be disappointed. </p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -169,8 +168,7 @@
         "collection_description": {
           "type": "collection_description",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "subcollections": {
           "type": "subcollections",
@@ -204,20 +202,19 @@
     },
     "replo_trust_icons_white_backg_f8LLfG": {
       "type": "replo-trust-icons-white-backg",
-      "settings": {
-      }
+      "settings": {}
     },
     "text_and_image_NJ76bR": {
       "type": "text-and-image",
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/Women_s_Group_Shot_-_Beige_Back_Ground_v2.png",
+        "image": "shopify://shop_images/Women_s_Group_Shot_-_Beige_Back_Ground_v2.png",
         "image_width": 700,
         "subtitle": "",
         "title": "Looking for Something Custom?",
-        "text": "<p>Designed by You. Crafted by Us.<\/p>",
+        "text": "<p>Designed by You. Crafted by Us.</p>",
         "button_label": "Design Your Dream Wedding Ring",
-        "button_link": "shopify:\/\/pages\/concierge-shopping-experience",
+        "button_link": "shopify://pages/concierge-shopping-experience",
         "button_style": "secondary",
         "align_text": "left",
         "layout": "right",
