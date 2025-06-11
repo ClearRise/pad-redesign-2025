@@ -1,26 +1,17 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "main-product_n",
       "blocks": {
         "judge_me_reviews_preview_badge_6bMyn3": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
         "price": {
           "type": "price",
           "settings": {
             "enable_badge": false,
-            "custom_badge": "BUY ONE GET ONE FREE"
+            "custom_badge": "Buy one get one free"
           }
         },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
@@ -39,6 +30,9 @@
           "type": "variant_picker",
           "settings": {
             "size_chart": "",
+            "size_chart_image": "shopify:\/\/shop_images\/custom_ring.jpg",
+            "size_chart_title": "Find Your Size",
+            "size_chart_text": "Find your size!",
             "variant_labels": true,
             "picker_type": "button",
             "product_swatch_style": "square",
@@ -51,7 +45,7 @@
           "type": "bold_option",
           "settings": {
             "option_type": "Test",
-            "product_swatch_style": "square",
+            "product_swatch_style": "circle",
             "swatch_style": "type_1"
           }
         },
@@ -63,8 +57,31 @@
             "inventory_transfers_enable": true
           }
         },
+        "premium_protection_plan_w3bnhk": {
+          "type": "premium_protection_plan",
+          "settings": {
+            "is_show_description": true,
+            "description": "<p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\">Premium Protection Plan<\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p><p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p>"
+          }
+        },
+        "custom_request_FGGa9p": {
+          "type": "custom_request",
+          "disabled": true,
+          "settings": {
+            "show_input_field": false
+          }
+        },
+        "engraving_YpGMkM": {
+          "type": "engraving",
+          "settings": {
+            "form_style": "text",
+            "style": "inline",
+            "save_badge": "For Limited Time Only"
+          }
+        },
         "glowstone_enhancement_bWeLXn": {
           "type": "glowstone_enhancement",
+          "disabled": true,
           "settings": {
             "in_collection": "the-glowstone-series",
             "up_product": "glowstone-enhancement-1",
@@ -75,19 +92,14 @@
             "text_color": ""
           }
         },
-        "engraving_YpGMkM": {
-          "type": "engraving",
+        "relative_product_carousel_UBEHtr": {
+          "type": "relative_product_carousel",
+          "disabled": true,
           "settings": {
-            "form_style": "checkbox",
-            "style": "inline",
-            "save_badge": "For Limited Time Only"
-          }
-        },
-        "premium_protection_plan_AhxfM9": {
-          "type": "premium_protection_plan",
-          "settings": {
-            "is_show_description": true,
-            "description": "<p>Our <a href=\"/pages/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan</strong></a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.</p><p>{{ product.metafields.custom.premium_protection_plan.value }}</p>"
+            "show_description": true,
+            "enable_select_variant": true,
+            "enable_common_badge": true,
+            "common_badge_text": "test"
           }
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
@@ -116,26 +128,12 @@
             "show_dynamic_checkout": false,
             "surface_pickup_enable": true,
             "enable_tooltip": false,
-            "tooltip_header": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
-            "tooltip_content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>"
-          }
-        },
-        "pdp_icon_list_J4K9L6": {
-          "type": "pdp_icon_list",
-          "disabled": true,
-          "settings": {
-            "icon_1": "shopify://shop_images/pdp-trust-icon-1.png",
-            "label_1": "Made to Order",
-            "icon_2": "shopify://shop_images/pdp-trust-icon-2.jpg",
-            "label_2": "Unique Ring",
-            "icon_3": "shopify://shop_images/pdp-trust-icon-3.jpg",
-            "label_3": "Lifetime Warranty",
-            "icon_4": "shopify://shop_images/pdp-trust-icon-4.jpg",
-            "label_4": "Customer Satisfaction"
+            "tooltip_header": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>",
+            "tooltip_content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>"
           }
         },
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
             "data_key": "credit-promotion-auto-size",
             "theme": "default",
@@ -144,6 +142,10 @@
             "messagePrefix": ""
           }
         },
+        "pdp_icon_list_dix4kX": {
+          "type": "pdp_icon_list",
+          "settings": {}
+        },
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
           "type": "tab",
           "disabled": true,
@@ -151,7 +153,7 @@
             "expanded": true,
             "style": "box",
             "title": "Premium Protection Plan",
-            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}</p><p>Our <a href=\"/pages/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan</strong></a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.</p>",
+            "content": "<p>{{ product.metafields.custom.premium_protection_plan.value }}<\/p><p>Our <a href=\"\/pages\/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan<\/strong><\/a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -200,7 +202,7 @@
             "style": "grid",
             "icon": "tag",
             "text": "Find Your Size",
-            "url": "https://patrickadairdesigns.com/pages/how-to-use-a-ring-sizer",
+            "url": "https:\/\/patrickadairdesigns.com\/pages\/how-to-use-a-ring-sizer",
             "popup_text": "",
             "popup_page": ""
           }
@@ -209,16 +211,16 @@
           "type": "description",
           "disabled": true,
           "settings": {
-            "is_tab": true
+            "is_tab": false
           }
         },
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
           "settings": {
-            "expanded": false,
+            "expanded": true,
             "style": "box",
             "title": "Additional Details",
-            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}</p>",
+            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}<\/p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -230,7 +232,7 @@
             "expanded": false,
             "style": "box",
             "title": "Sizing Information",
-            "content": "<p>{{ product.metafields.global.sizing_information_new.value }}</p>",
+            "content": "<p>{{ product.metafields.global.sizing_information_new.value }}<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -242,7 +244,7 @@
             "expanded": false,
             "style": "box",
             "title": "Lifetime Warranty",
-            "content": "<p>At Patrick Adair Designs, all products come with a <a href=\"/pages/warranty-and-return-information\" title=\"Limited Lifetime Warranty and Return Policy\"><strong>Limited Lifetime Warranty</strong></a> by default. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.</p>",
+            "content": "<p>At Patrick Adair Designs, all products come with a <a href=\"\/pages\/warranty-and-return-information\" title=\"Limited Lifetime Warranty and Return Policy\"><strong>Limited Lifetime Warranty<\/strong><\/a> by default. This warranty covers a variety of low probability potential issues that occur not as a result of natural wear and tear over time such as manufacturer or material defects.<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -254,7 +256,7 @@
             "expanded": false,
             "style": "box",
             "title": "How To Care",
-            "content": "<p>{{ product.metafields.global.how_to_care_new.value }}</p>",
+            "content": "<p>{{ product.metafields.global.how_to_care_new.value }}<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -266,7 +268,7 @@
             "expanded": false,
             "style": "box",
             "title": "Shipping information",
-            "content": "<p>{{ product.metafields.global.delivery.value }}</p>",
+            "content": "<p>{{ product.metafields.global.delivery.value }}<\/p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
@@ -290,13 +292,15 @@
         "variant_picker",
         "bold_option_agdenj",
         "inventory_status",
-        "glowstone_enhancement_bWeLXn",
+        "premium_protection_plan_w3bnhk",
+        "custom_request_FGGa9p",
         "engraving_YpGMkM",
-        "premium_protection_plan_AhxfM9",
+        "glowstone_enhancement_bWeLXn",
+        "relative_product_carousel_UBEHtr",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
         "buy_buttons",
-        "pdp_icon_list_J4K9L6",
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
+        "pdp_icon_list_dix4kX",
         "7621462d-9edd-432d-a525-b5bcbfe07deb",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
@@ -339,7 +343,7 @@
           "disabled": true,
           "settings": {
             "enlarge_text": false,
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
           }
         }
       },
@@ -355,23 +359,141 @@
       }
     },
     "replo_trust_icons_white_backg_AnTLaL": {
-      "type": "replo-trust-icons-white-backg",
-      "settings": {}
+      "type": "replo-trust-icons-white-backg_n",
+      "disabled": true,
+      "settings": {
+        "top_padding": 0,
+        "bottom_padding": 0
+      }
+    },
+    "promo_carousel_EMH4nT": {
+      "type": "promo-carousel",
+      "blocks": {
+        "advanced_QLw3Pe": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Limited time",
+            "heading": "Announce your promotion 1",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "image": "shopify:\/\/shop_images\/Titanium8mmLayingDown-CrimsonOpalRed.jpg",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)"
+          }
+        },
+        "advanced_QeVyAd": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Limited time",
+            "heading": "Announce your promotion 2",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "image": "shopify:\/\/shop_images\/Titanium8mmLayingDown-BlackfireOpal.jpg",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)"
+          }
+        },
+        "advanced_8g9jMh": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Limited time",
+            "heading": "Announce your promotion 3",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "image": "shopify:\/\/shop_images\/blackceramic8mmLayingDown-Winter_sHowl.jpg",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)"
+          }
+        },
+        "advanced_CtPXwW": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Limited time",
+            "heading": "Announce your promotion 4",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "image": "shopify:\/\/shop_images\/blackceramic8mmLayingDown-Regal.jpg",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)"
+          }
+        },
+        "advanced_kR4VcC": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Limited time",
+            "heading": "Announce your promotion 5",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "image": "shopify:\/\/shop_images\/Tungsten8mmLayingDown-LavenderOpal.jpg",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_QLw3Pe",
+        "advanced_QeVyAd",
+        "advanced_8g9jMh",
+        "advanced_CtPXwW",
+        "advanced_kR4VcC"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true
+      }
     },
     "promo_grid_QUweUP": {
-      "type": "promo-grid",
+      "type": "promo-grid_n",
       "blocks": {
+        "advanced_KyqEAm": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Announce your promotion",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "background_color": "#000000",
+            "text_color": "#ffffff",
+            "video_url": "",
+            "width": "100",
+            "height": 200,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "dark_overlay": 0,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
         "advanced_nqeHQA": {
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "CRAFTED BY <br> HAND",
+            "heading": "CRAFTED BY  HAND",
             "textarea": "This ring is handmade<br>  by trade artisans <br>in Utah, USA.",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Handcrafted_V2.png",
+            "background_color": "#000000",
+            "text_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/Handcrafted_V2.png",
             "video_url": "",
             "width": "33",
             "height": 500,
@@ -388,13 +510,15 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "EXOTIC <br>MATERIALS",
+            "heading": "EXOTIC MATERIALS",
             "textarea": "Go beyond silver and <br> gold and find something <br>that's truly you.",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Glowing_Vial.png",
+            "background_color": "#000000",
+            "text_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/Glowing_Vial.png",
             "video_url": "",
             "width": "33",
             "height": 500,
@@ -417,7 +541,9 @@
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Meteorite_Stack_Square.png",
+            "background_color": "#000000",
+            "text_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/Meteorite_Stack_Square.png",
             "video_url": "",
             "width": "33",
             "height": 500,
@@ -433,14 +559,16 @@
         "advanced_eReELk": {
           "type": "advanced",
           "settings": {
-            "subheading": "LIMITED TIME ONLY",
-            "heading": "FREE GIFT",
-            "textarea": "Get a Free Gift (ring or pendant) on orders $175+",
+            "subheading": "",
+            "heading": "FREE GIFT OFFER",
+            "textarea": "Get a free Mystery Gift on orders $195+",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/BOGO_1ad22304-9dc6-4a8c-aa06-7960583eb1a0.png",
+            "background_color": "#000000",
+            "text_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/BOGO_1ad22304-9dc6-4a8c-aa06-7960583eb1a0.png",
             "video_url": "",
             "width": "100",
             "height": 660,
@@ -455,16 +583,17 @@
         }
       },
       "block_order": [
+        "advanced_KyqEAm",
         "advanced_nqeHQA",
         "advanced_hEMdLL",
         "advanced_TwEqdf",
         "advanced_eReELk"
       ],
       "settings": {
-        "full_width": false,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": true
+        "full_width": true,
+        "gutter_size": 0,
+        "space_above": true,
+        "space_below": false
       }
     },
     "product_img_with_txt": {
@@ -472,15 +601,15 @@
       "disabled": true,
       "settings": {
         "sub_title1": "Handcrafted in the USA",
-        "image_1": "shopify://shop_images/img2.jpg",
+        "image_1": "shopify:\/\/shop_images\/img2.jpg",
         "text_1": "Every ring is handmade by trade artisans in Utah, USA.",
         "url_1": "",
         "sub_title2": "Uncommon materials",
-        "image_2": "shopify://shop_images/img1.jpg",
+        "image_2": "shopify:\/\/shop_images\/img1.jpg",
         "text_2": "Go beyond silver and gold and find something that’s truly you.",
         "url_2": "",
         "sub_title3": "Every ring is unique",
-        "image_3": "shopify://shop_images/img3.jpg",
+        "image_3": "shopify:\/\/shop_images\/img3.jpg",
         "text_3": "Your ring is made to order just for you. No two rings are the same.",
         "url_3": ""
       }
@@ -500,8 +629,8 @@
           "settings": {
             "sub_title": "Place your order",
             "text": "Unsure of your size? Select “unsure – send ring sizer first” and we’ll post you a free ring sizer",
-            "image_1": "shopify://shop_images/how-it-works-11.jpg",
-            "image_2": "shopify://shop_images/how-it-works-22.jpg"
+            "image_1": "shopify:\/\/shop_images\/how-it-works-11.jpg",
+            "image_2": "shopify:\/\/shop_images\/how-it-works-22.jpg"
           }
         },
         "0669e6bd-9d26-4ae4-b380-ce53681e452e": {
@@ -556,7 +685,7 @@
       "type": "section-custom-liquid",
       "disabled": true,
       "settings": {
-        "custom_liquid": "<style>\n    .slr-review {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n    }\n    .slr-main-title {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n        font-size: 32.3px;\n        font-weight: 400;\n    }\n    .slr-write-review__button, .slr-create-review__form__submit, .slr-no-reviews-message__button, .slr-create-review__form__cancel {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n        text-transform: uppercase;\n    }\n</style>\n\n<div class=\"page-width\">\n    <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"></div>\n</div>"
+        "custom_liquid": "<style>\n    .slr-review {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n    }\n    .slr-main-title {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n        font-size: 32.3px;\n        font-weight: 400;\n    }\n    .slr-write-review__button, .slr-create-review__form__submit, .slr-no-reviews-message__button, .slr-create-review__form__cancel {\n        font-family: -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Ubuntu, \"Helvetica Neue\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n        text-transform: uppercase;\n    }\n<\/style>\n\n<div class=\"page-width\">\n    <div class=\"sendlane-reviews\" sl-product-id=\"{{product.id}}\"><\/div>\n<\/div>"
       }
     },
     "product-recommendations": {
@@ -571,7 +700,7 @@
       }
     },
     "recently-viewed": {
-      "type": "recently-viewed",
+      "type": "recently-viewed_n",
       "settings": {
         "recent_count": 5
       }
@@ -584,7 +713,7 @@
       "type": "apps",
       "blocks": {
         "judge_me_reviews_review_widget_Q9CVK3": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         }
       },
@@ -601,6 +730,7 @@
     "main",
     "rich_text_zd3AyU",
     "replo_trust_icons_white_backg_AnTLaL",
+    "promo_carousel_EMH4nT",
     "promo_grid_QUweUP",
     "product_img_with_txt",
     "product_how_to_work",
