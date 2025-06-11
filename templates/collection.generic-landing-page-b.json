@@ -69,7 +69,7 @@
         "c49e5be0-7798-4f70-8d1c-be086dcb4fe9": {
           "type": "button",
           "settings": {
-            "link": "shopify://collections/all-products-sunset",
+            "link": "shopify://collections/all-products",
             "link_text": "View ALL"
           }
         }
