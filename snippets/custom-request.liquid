@@ -1,0 +1,88 @@
+{%- unless custom_request_product.empty? -%}
+  {% style %}
+    .bold_option.bold_option_textbox {
+      display: none !important;
+    }
+    .custom-request-widget {
+      display: none;
+    }
+  {% endstyle %}
+  <div class="product-block" {{ block.shopify_attributes }}>
+    {% comment %} {% assign engrave_product = settings['product-engraving'] %} {% endcomment %}
+    {% comment %} {% assign engrave_product_id = engrave_product.id %} {% endcomment %}
+    {% comment %} {% assign first_gift_product_id_var = custom_request_product.selected_or_first_available_variant.id %}
+
+    {% for variant in custom_request_product.variants %}
+      {% if variant.id == first_gift_product_id_var %}
+        {% assign price =  variant.price %}
+      {% endif %}
+    {% endfor %}  {% endcomment %}
+    <div class="bold_option bold_option_checkbox custom-request-widget ">
+      <label>
+        <span class="bold_option_element">
+          <input
+            type="checkbox"
+            class="custom-request-product-ss"
+          >
+        </span>
+        <span class="bold_option_title">Custom Request</span>
+        {% comment %} <span class="bold_option_value_price">
+          (+{{ price | money_without_trailing_zeros }})
+        </span> {% endcomment %}
+      </label>
+    </div>
+    
+    <div class="custom-request-ss">
+      <input
+        maxlength="250"
+        class="product-page-custom-request-input"
+        type="text"
+        placeholder="Enter your engraving text here"
+        name="properties[custom_request]"
+      >
+    </div>
+  </div>
+  <script>
+    var getBoldOptionTextBoxContainerTimer = setInterval(() => {
+      const boldOptionTextBoxContainer = document.querySelector(".bold_option.bold_option_textbox");
+      if (boldOptionTextBoxContainer) {
+        clearInterval(getBoldOptionTextBoxContainerTimer);
+
+        const customRequestWidget = document.querySelector(".custom-request-widget");
+        customRequestWidget.style.display = "block";
+        {% comment %} const customRequestInput = customRequestWidget.querySelector(".custom-request-product-ss");
+        customRequestInput.addEventListener("change", () => {
+          boldOptionTextBoxContainer.querySelector("input").value = customRequestInput.value;
+        }); {% endcomment %}
+
+
+        const checkbox = document.querySelector(".custom-request-product-ss");
+        const firstInput = document.querySelector(".product-page-custom-request-input");
+        const secondInput = document.querySelector(".bold_option.bold_option_textbox input");
+
+        function updateInputs() {
+            if (checkbox.checked) {
+                firstInput.disabled = false; // Enable first input
+                secondInput.value = firstInput.value; // Sync values
+            } else {
+                firstInput.disabled = true; // Disable first input
+                secondInput.value = ""; // Clear second input
+            }
+        }
+
+        // Listen for checkbox change
+        checkbox.addEventListener("change", updateInputs);
+
+        // Sync second input with first input when first input changes
+        firstInput.addEventListener("input", function () {
+            if (checkbox.checked) {
+                secondInput.value = firstInput.value;
+            }
+        });
+
+        // Initialize the correct state on page load
+        updateInputs();
+      }
+    }, 500);
+  </script>
+{%- endunless -%}

@@ -1,0 +1,33 @@
+.swiper-slide {
+  padding: 20px;
+  background-color: white;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+.swiper-slide * {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+.swiper-slide .text-container-ss {
+
+}
+.swiper-slide .text-container-ss .subheading-ss {}
+.swiper-slide .text-container-ss .heading-ss {
+  font-size: 20px;
+}
+.swiper-slide .text-container-ss .textarea-ss {
+  font-size: 14px;
+  color: rgba(0,0,0,0.6);
+}
+.swiper-horizontal>.swiper-pagination-progressbar {
+  height: 2px;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background-color: #000000;
+}
+.promo-carousel-container-ss {
+  height: 0px;
+  opacity: 0;
+}

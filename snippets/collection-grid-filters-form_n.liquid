@@ -1,0 +1,257 @@
+{% comment %}
+- filters: Liquid 'collection.filters' or 'search.filters' object
+- enable_color_swatches: boolean
+- collapsed: boolean
+{% endcomment %}
+
+<div class="left-top-bar-ss">
+  <div class="filters-count-ss">
+    <div class="no-selected-label-ss">No Filtered Selected</div>
+    <div class="selected-label-ss hide">
+      <div class="selected-count-ss"></div>
+      <div class="">Filtered Selected</div>
+    </div>
+  </div>
+  <div class="clear-filters-ss clear-all-filters-ss">
+    <span>Clear</span>
+    <svg fill="currentColor" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <title>times</title>
+      <path d="M17.062 16l9.37-9.37c0.136-0.136 0.219-0.323 0.219-0.53 0-0.415-0.336-0.751-0.751-0.751-0.208 0-0.395 0.084-0.531 0.22v0l-9.369 9.369-9.37-9.369c-0.135-0.131-0.319-0.212-0.522-0.212-0.414 0-0.75 0.336-0.75 0.75 0 0.203 0.081 0.387 0.212 0.522l9.368 9.369-9.369 9.369c-0.136 0.136-0.22 0.324-0.22 0.531 0 0.415 0.336 0.751 0.751 0.751 0.207 0 0.394-0.084 0.53-0.219v0l9.37-9.37 9.369 9.37c0.136 0.136 0.324 0.22 0.531 0.22 0.415 0 0.751-0.336 0.751-0.751 0-0.207-0.084-0.395-0.22-0.531v0z"></path>
+    </svg>
+  </div>
+</div>
+
+<ul class="no-bullets tag-list tag-list--active-tags">
+{%- assign hide_non_filter_result = true -%}
+{%- for filter in filters -%}
+  {%- assign filter_index = forloop.index -%}
+
+  {%- for filter_value in filter.active_values -%}
+  {%- assign hide_non_filter_result = false -%}
+  <li class="tag tag--remove">
+    <a class="btn btn--small" href="{{ filter_value.url_to_remove }}">
+      {{ filter_value.label | escape }}
+    </a>
+    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
+  </li>
+  {%- endfor -%}
+{%- endfor -%}
+</ul>
+
+{% if hide_non_filter_result %}
+  <style>
+    .left-top-bar-ss {
+      display: none;
+    }
+  </style>
+{% endif %}
+
+<form class="filter-form">
+{%- for filter in filters -%}
+  {%- capture filter_id -%}filter-{{ filter.label | handleize }}{%- endcapture -%}
+  {%- assign filter_index = forloop.index -%}
+
+  <div class="collection-sidebar__group--{{ filter_index }} collection-sidebar__group--{{ filter_id }} collection-sidebar__group-container-ss">
+    <div class="collection-sidebar__group">
+      <button
+          type="button"
+          class="collapsible-trigger collapsible-trigger-btn collapsible--auto-height{% unless collapsed %} is-open{% endunless %} tag-list__header"
+          aria-controls="{{ location }}-{{ filter_index }}{% if filter_id %}-{{ filter_id }}{% endif %}"
+          data-collapsible-id="{{ filter_id }}">
+          {{ filter.label | escape }}
+          {%- render 'collapsible-icons' -%}
+      </button>
+      <div
+      id="{{ location }}-{{ filter_index }}-{{ filter_id }}"
+      class="collapsible-content collapsible-content-{{ filter_id }} collapsible-content--sidebar{% unless collapsed %} is-open{% endunless %}"
+      data-collapsible-id="{{ filter_id }}"
+      {% comment %} {% unless collapsed %}style="height: auto;"{% endunless %} {% endcomment %}
+    >
+        <div class="collapsible-content__inner">
+          {%- case filter.type -%}
+            {%- when 'list' -%}
+              {%- if filter_id == 'filter-color' -%}
+                {%- liquid
+                  assign is_color = false
+                  assign swatch_file_extension = 'png'
+                  if enable_color_swatches
+                      assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase
+                      assign downcased_label = filter.label | downcase
+                      if downcased_label contains swatch_trigger
+                      assign is_color = true
+                      elsif swatch_trigger == 'color' and downcased_label contains 'colour'
+                      assign is_color = true
+                      endif
+                  endif
+                -%}
+  
+                <ul class="no-bullets tag-list">
+                {%- assign tag_count = filter.values.size -%}
+                {%- for filter_value in filter.values -%}
+                  {%- liquid
+                  assign tag_count = tag_count | plus: 1
+                  assign filter_value_index = forloop.index
+  
+                  assign color_file_name = filter_value.label | handle | append: '.' | append: swatch_file_extension
+                  assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+                  assign color_swatch_fallback = filter_value.label | split: ' ' | last | handle
+                -%}
+  
+                  <li class="tag{% if filter_value.active %} tag--active{% endif %}{% if is_color %} tag--swatch{% endif %}{% if filter_value.count == 0%} hide{% endif %}">
+                    <label class="tag__checkbox-wrapper text-label">
+                        <input
+                        type="checkbox"
+                        class="tag__input"
+                        name="{{ filter_value.param_name }}"
+                        value="{{ filter_value.value }}"
+                        {% if filter_value.active %}checked{% endif %}>
+                        {%- if is_color -%}
+                        <span
+                            class="color-swatch color-swatch--filter color-swatch--{{ filter_value.label | handle }}"
+                            title="{{ filter_value.label }}"
+                            style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}"
+                        >
+                            {{ filter_value.label }}
+                        </span>
+                        <span class="tag__text hide">{{ filter_value.label | escape }}</span>
+                        {%- else -%}
+                        <span class="color-tag__checkbox background-{{ filter_value.label | replace: ' ', '' | downcase }}"></span>
+                        <span>
+                            <span class="tag__text">{{ filter_value.label | escape }}</span><span class="tag__count">&nbsp;({{ filter_value.count }})</span>
+                        </span>
+                        {%- endif -%}
+                    </label>
+                  </li>
+                {%- endfor -%}
+                </ul>
+              {%- else -%}
+                {%- liquid
+                  assign is_color = false
+                  assign swatch_file_extension = 'png'
+                  if enable_color_swatches
+                      assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase
+                      assign downcased_label = filter.label | downcase
+                      if downcased_label contains swatch_trigger
+                      assign is_color = true
+                      elsif swatch_trigger == 'color' and downcased_label contains 'colour'
+                      assign is_color = true
+                      endif
+                  endif
+                -%}
+  
+                <ul class="no-bullets tag-list">
+                {%- assign tag_count = filter.values.size -%}
+                {%- for filter_value in filter.values -%}
+                  {%- liquid
+                  assign tag_count = tag_count | plus: 1
+                  assign filter_value_index = forloop.index
+  
+                  assign color_file_name = filter_value.label | handle | append: '.' | append: swatch_file_extension
+                  assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+                  assign color_swatch_fallback = filter_value.label | split: ' ' | last | handle
+                -%}
+  
+                  <li class="tag{% if filter_value.active %} tag--active{% endif %}{% if is_color %} tag--swatch{% endif %}{% if filter_value.count == 0%} hide{% endif %}">
+                    <label class="tag__checkbox-wrapper text-label">
+                        <input
+                        type="checkbox"
+                        class="tag__input"
+                        name="{{ filter_value.param_name }}"
+                        value="{{ filter_value.value }}"
+                        {% if filter_value.active %}checked{% endif %}>
+                        {%- if is_color -%}
+                        <span
+                            class="color-swatch color-swatch--filter color-swatch--{{ filter_value.label | handle }}"
+                            title="{{ filter_value.label }}"
+                            style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}"
+                        >
+                            {{ filter_value.label }}
+                        </span>
+                        <span class="tag__text hide">{{ filter_value.label | escape }}</span>
+                        {%- else -%}
+                        <span class="tag__checkbox">
+                          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.00001 18.25C8.8993 18.2466 8.80034 18.2227 8.70921 18.1797C8.61807 18.1367 8.53667 18.0756 8.47001 18L3.47001 13C3.37467 12.9382 3.29463 12.8556 3.23592 12.7583C3.17721 12.661 3.14136 12.5517 3.13109 12.4385C3.12082 12.3254 3.13639 12.2114 3.17663 12.1051C3.21686 11.9989 3.28071 11.9031 3.36336 11.8252C3.446 11.7472 3.54528 11.689 3.65369 11.6551C3.76211 11.6211 3.87682 11.6122 3.98918 11.629C4.10155 11.6458 4.20861 11.688 4.3023 11.7523C4.39599 11.8165 4.47385 11.9013 4.53001 12L9.00001 16.44L19.47 6.00003C19.611 5.90864 19.7785 5.86722 19.9458 5.88241C20.1131 5.89759 20.2705 5.96851 20.3927 6.08379C20.5149 6.19907 20.5948 6.35203 20.6197 6.51817C20.6446 6.68431 20.613 6.85399 20.53 7.00003L9.53001 18C9.46334 18.0756 9.38194 18.1367 9.29081 18.1797C9.19967 18.2227 9.10072 18.2466 9.00001 18.25Z" fill="currentColor"/>
+                          </svg>
+                          {% comment %} <svg width="800px" height="800px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 5L8 15l-5-4"/>
+                          </svg> {% endcomment %}
+                          {% comment %} <svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M5 16.577l2.194-2.195 5.486 5.484L24.804 7.743 27 9.937l-14.32 14.32z"/></svg> {% endcomment %}
+                        </span>
+                        <span>
+                            <span class="tag__text">{{ filter_value.label | escape }}</span> ({{ filter_value.count }})
+                        </span>
+                        {%- endif -%}
+                    </label>
+                  </li>
+                {%- endfor -%}
+                </ul>
+              {%- endif -%}
+
+              {%- if tag_count == 0 -%}
+                {%- style -%}
+                    .collection-sidebar__group--{{ filter_index }} { display: none; }
+                {%- endstyle -%}
+              {%- endif -%}
+            {%- when 'price_range'-%}
+              {% comment %} Comma code from Dawn {% endcomment %}
+              {% liquid
+                assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
+                assign uses_comma_decimals = false
+
+                if currencies_using_comma_decimals contains cart.currency.iso_code
+                    assign uses_comma_decimals = true
+                endif
+
+                assign filter_min_value = filter.min_value.value | money_without_currency | replace: ',', ''
+                assign filter_max_value = filter.max_value.value | money_without_currency | replace: ',', ''
+                assign filter_range_min = filter.range_min | money_without_currency | replace: ',', ''
+                assign filter_range_max = filter.range_max | money_without_currency | replace: ',', ''
+
+                if uses_comma_decimals
+                    if filter.min_value.value
+                    assign filter_min_value = filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.'
+                    endif
+
+                    if filter.max_value.value
+                    assign filter_max_value = filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.'
+                    endif
+
+                    assign filter_range_min = filter.range_min | money_without_currency | replace: '.', '' | replace: ',', '.'
+                    assign filter_range_max = filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.'
+                endif
+              %}
+              <div
+              class="price-range"
+              data-min-value="{{ filter_min_value }}"
+              data-min-name="{{ filter.min_value.param_name }}"
+              data-min="{{ filter_range_min }}"
+              data-max-value="{{ filter_max_value }}"
+              data-max-name="{{ filter.max_value.param_name }}"
+              data-max="{{ filter_range_max }}">
+                <div class="price-range__slider-wrapper">
+                  <div class="price-range__slider"></div>
+                </div>
+                <input
+                  class="price-range__input price-range__input-min"
+                  name="{{ filter.min_value.param_name }}"
+                  value="{{ filter_min_value }}"
+                  readonly>
+                <input
+                  class="price-range__input price-range__input-max"
+                  name="{{ filter.max_value.param_name }}"
+                  value="{{ filter_max_value }}"
+                  readonly>
+                <div class="price-range__display-wrapper">
+                  <span class="price-range__display-min price-range__controller-ss">{{ filter_min_value }}</span>
+                  <span class="symbol__ss"></span>
+                  <span class="price-range__display-max price-range__controller-ss">{{ filter_max_value }}</span>
+                </div>
+              </div>
+          {%- endcase -%}
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endfor -%}
+</form>

@@ -1,0 +1,372 @@
+{%- liquid
+  assign current_filter_size = 0
+
+  for filter in collection.filters
+    assign current_filter_size = current_filter_size | plus: filter.active_values.size
+  endfor
+-%}
+
+<style>
+  .product-grid-container-ss {
+    padding-right: {{ section.settings.padding_horizontal }}px;
+    padding-left: {{ section.settings.padding_horizontal }}px;
+  }
+</style>
+
+{{ 'main-collection.css' | asset_url | stylesheet_tag: preload:true }}
+
+<div
+  class="collection-content custom_collection_content"
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-grid"
+>
+  <div id="CollectionAjaxContent" class="">
+    <div class="product-grid-container-ss">
+      {% if section.settings.title != blank %}
+      <div class="grid">
+        <h2 class="h1 grid__item one-whole">{{section.settings.title}}</h2>
+      </div>
+      {% endif %}
+      
+      <div class="grid">
+        <div class="grid__item medium-up--one-fifth grid__item--sidebar">
+          {%- render 'collection-grid-filters_n',
+            collection: collection,
+            enable_sidebar: section.settings.enable_sidebar,
+            filter_style: section.settings.filter_style,
+            collapsed: section.settings.collapsed,
+            enable_color_swatches: section.settings.enable_color_swatches
+          -%}
+
+          <div class="filter-bottom-fixed-button-container-ss">
+            <div class="filter-bottom-fixed-left-button-ss filter-bottom-fixed-button-ss clear-all-filters-ss">
+              {%- render 'button-ss_n', color: 'black', url: "#", label: 'Clear All Filters' -%}
+            </div>
+            <div class="filter-bottom-fixed-right-button-ss filter-bottom-fixed-button-ss apply-filter-ss">
+              {%- render 'button-ss_n', color: 'white', url: "#", label: 'APPLY FILTER' -%}
+            </div>
+          </div>
+        </div>
+        <div class="grid__item medium-up--four-fifths grid__item--content">
+          {%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+          {%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.com' | last |
+             replace:'\/','/' | 
+             replace:'%20',' ' | 
+             replace:'\u0026','&'
+          -%}
+          {% assign limit_part = pageUrl | split: 'limit=' | last %}
+          {% assign limit_value = limit_part | split: '&' | first %}
+          {%- liquid
+            for block in section.blocks
+              case block.type
+                when 'product_grid'
+                  assign limit_value_abs = limit_value | abs
+          
+                  if limit_value_abs and limit_value_abs > 0
+                    assign paginate_by = limit_value
+                  else
+                    assign paginate_by = block.settings.per_row | times: block.settings.rows_per_page
+          
+                    if paginate_by == 0 or paginate_by == blank
+                      assign paginate_by = 60
+                    endif
+                  endif
+              endcase
+            endfor
+          -%}
+
+
+          {%- paginate collection.products by paginate_by -%}
+          {%- for block in section.blocks -%}
+            <div {{ block.shopify_attributes }} {%- if block.type == 'product-grid' -%}data-scroll-to{%- endif -%}>
+              {%- case block.type -%}
+              {%- when 'collection_description' -%}
+                {%- if collection.description != blank and current_filter_size == 0 -%}
+                  <div class="rte collection__description custom_collection__description">
+                    {{ collection.description }}
+                  </div>
+                {%- endif -%}
+              {%- when 'subcollections' -%}
+                {%- if paginate.current_page == 1 and current_filter_size == 0 -%}
+                  {%- render 'subcollections', per_row: block.settings.subcollections_per_row -%}
+                {%- endif -%}
+              {%- when 'product_grid' -%}
+                <div data-scroll-to>
+                  {% render 'collection-grid_n',
+                    collection: collection,
+                    items: collection.products,
+                    enable_sidebar: section.settings.enable_sidebar,
+                    filter_style: section.settings.filter_style,
+                    enable_sort: section.settings.enable_sort,
+                    enable_collection_count: block.settings.enable_collection_count,
+                    per_row: block.settings.per_row,
+                    mobile_flush_grid: block.settings.mobile_flush_grid,
+                    quick_shop_enable: settings.quick_shop_enable,
+                    subtitle_type: section.settings.subtitle_type,
+                    type_enable: section.settings.type_enable,
+                    subtitle_enable: section.settings.subtitle_enable
+                    paginate_by: paginate_by
+                  %}
+                  {%- if paginate.pages > 1 -%}
+                    {%- render 'pagination', paginate: paginate -%}
+                  {%- endif -%}
+                </div>
+              {%- endcase -%}
+            </div>
+          {%- endfor -%}
+
+          {%- endpaginate -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- if section.settings.enable_sidebar == false or section.settings.filter_style == 'drawer' or collection.filters.size == 0 -%}
+{% comment %}
+  Override grid styles if sidebar is disabled
+{% endcomment %}
+{% style %}
+  .collection-content .grid__item--sidebar { width: 0; padding:0; }
+  .collection-content .grid__item--content { width: 100%; }
+  .grid__item--sidebar { position: static; overflow: hidden; }
+{% endstyle %}
+{%- endif -%}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "CollectionPage",
+  {% if collection.description != blank %}
+    "description": {{ collection.description | strip_html | json }},
+  {% endif %}
+  {% if page_image %}
+    {% assign image_size = page_image.width | append: 'x' %}
+    "image": {
+      "@type": "ImageObject",
+      "height": {{ page_image.height | json }},
+      "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+      "width": {{ page_image.width | json }}
+    },
+  {% endif %}
+  "name": {{ collection.title | json }}
+}
+</script>
+{% comment %} <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var mobileFilterMenuOpenButton = document.querySelector(".mobile-filter-menu-open-button-ss");
+    var mobileSortMenuOpenButton = document.querySelector(".mobile-sort-menu-open-button-ss");
+    if (mobileFilterMenuOpenButton) {
+      mobileFilterMenuOpenButton.addEventListener("click", function() {
+        document.querySelector("body").classList.add("mobile-filter-menu-on");
+        document.querySelector("body").classList.remove("mobile-sort-menu-on");
+      });
+    }
+    if (mobileSortMenuOpenButton){
+      mobileSortMenuOpenButton.addEventListener("click", function() {
+        document.querySelector("body").classList.add("mobile-filter-menu-on");
+        document.querySelector("body").classList.add("mobile-sort-menu-on");
+      });
+    }
+  });
+</script> {% endcomment %}
+
+{% schema %}
+  {
+    "name": "Product grid",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "range",
+        "id": "padding_horizontal",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "label": "Horizontal Padding",
+        "default": 50
+      },
+      {
+        "type": "header",
+        "content": "Filtering and sorting"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sidebar",
+        "label": "Enable filter",
+        "default": true,
+        "info": "Allow your customers to filter collections and search results by product availability, price, color, and more. [Customize filters](/admin/menus)"
+      },
+      {
+        "type": "checkbox",
+        "id": "collapsed",
+        "label": "Collapse filters",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "filter_style",
+        "label": "Filter style",
+        "default": "sidebar",
+        "options": [
+          {
+            "value": "sidebar",
+            "label": "Sidebar"
+          },
+          {
+            "value": "drawer",
+            "label": "Drawer"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_color_swatches",
+        "label": "Enable color swatches",
+        "info": "[View setup instructions](https://archetypethemes.co/blogs/impulse/how-do-i-set-up-color-swatches)"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sort",
+        "label": "Show sort options",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Prduct item"
+      },
+      {
+        "type": "checkbox",
+        "id": "type_enable",
+        "label": "Show Set Type"
+      },
+      {
+        "type": "checkbox",
+        "id": "subtitle_enable",
+        "label": "Show Subtitle"
+      }, 
+      {
+        "type": "select",
+        "id": "subtitle_type",
+        "label": "Subtitle type",
+        "default": "two",
+        "options": [
+          {
+            "value": "two",
+            "label": "Two columns"
+          },
+          {
+            "value": "three",
+            "label": "Default"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "custom_badge",
+        "label": "Custom badge text"
+      },
+      {
+        "type": "header",
+        "content": "Saved Amount Option"
+      },      
+      {
+        "type": "radio",
+        "id": "saved_amount_option",
+        "label": "Choose Option",
+        "default": "basic_logic",
+        "options": [
+          {
+            "value": "basic_logic",
+            "label": "Display $ off ( > $100 )"
+          },
+          {
+            "value": "display_price",
+            "label": "Display all $ off"
+          },
+          {
+            "value": "display_percentage",
+            "label": "Display all % off"
+          }          
+        ]
+      },      
+      {
+        "type": "header",
+        "content": "loading style"
+      },
+      {
+        "type": "checkbox",
+        "id": "load_more",
+        "label": "Load more"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection_description",
+        "name": "Collection description",
+        "limit": 1
+      },
+      {
+        "type": "product_grid",
+        "name": "Products",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "enable_collection_count",
+            "label": "Enable collection count",
+            "default": true
+          },
+          {
+            "type": "range",
+            "id": "per_row",
+            "label": "Products per row",
+            "default": 4,
+            "min": 2,
+            "max": 5,
+            "step": 1
+          },
+          {
+            "type": "range",
+            "id": "rows_per_page",
+            "label": "Rows per page",
+            "default": 7,
+            "min": 3,
+            "max": 20,
+            "step": 1
+          },
+          {
+            "type": "checkbox",
+            "id": "mobile_flush_grid",
+            "label": "Flush grid on mobile",
+            "default": false
+          }
+        ],
+        "limit": 1
+      },
+      {
+        "type": "subcollections",
+        "name": "Subcollections",
+        "settings": [
+          {
+            "type": "paragraph",
+            "content": "Links to collections from your menu will appear here. [Learn more](https://archetypethemes.co/blogs/expanse/how-do-i-create-subcollections)"
+          },
+          {
+            "type": "range",
+            "id": "subcollections_per_row",
+            "label": "Subcollections per row",
+            "default": 5,
+            "min": 2,
+            "max": 5,
+            "step": 1
+          }
+        ],
+        "limit": 1
+      }
+    ]
+
+  }
+{% endschema %}
