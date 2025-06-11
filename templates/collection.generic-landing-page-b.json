@@ -1,18 +1,17 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "f4ccb977-157f-457d-a856-9ee6a557102b": {
       "type": "replo-all-products-lander-hero",
-      "settings": {
-      }
+      "settings": {}
     },
     "collection-header": {
       "type": "collection-header",
@@ -29,8 +28,7 @@
         "collection_description": {
           "type": "collection_description",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "subcollections": {
           "type": "subcollections",
@@ -71,7 +69,7 @@
         "c49e5be0-7798-4f70-8d1c-be086dcb4fe9": {
           "type": "button",
           "settings": {
-            "link": "shopify:\/\/collections\/all-products",
+            "link": "shopify://collections/all-products-sunset",
             "link_text": "View ALL"
           }
         }
@@ -87,8 +85,7 @@
     },
     "0964b319-67f6-40eb-a52e-abccce122d6e": {
       "type": "replo-bottom-lp-container",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
