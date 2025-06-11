@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow": {
@@ -11,7 +20,7 @@
             "title": "",
             "title_size": 50,
             "subheading": "",
-            "link": "shopify:\/\/collections\/all-products",
+            "link": "shopify://collections/all-products-sunset",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
@@ -23,8 +32,8 @@
             "bottom_padding": 50,
             "left_padding": 50,
             "right_padding": 50,
-            "image": "shopify:\/\/shop_images\/THIS_WEEKEND_ONLY.png",
-            "image_mobile": "shopify:\/\/shop_images\/This_weekend_only_1.png",
+            "image": "shopify://shop_images/THIS_WEEKEND_ONLY.png",
+            "image_mobile": "shopify://shop_images/This_weekend_only_1.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -36,7 +45,7 @@
             "title": "asdfasdfasdf",
             "title_size": 80,
             "subheading": "",
-            "link": "shopify:\/\/collections\/all-products",
+            "link": "shopify://collections/all-products-sunset",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
@@ -48,8 +57,8 @@
             "bottom_padding": 50,
             "left_padding": 50,
             "right_padding": 50,
-            "image": "shopify:\/\/shop_images\/Black_Friday_Came_Early_Desktop.png",
-            "image_mobile": "shopify:\/\/shop_images\/Black_Friday_is_here_early_Mobile.png",
+            "image": "shopify://shop_images/Black_Friday_Came_Early_Desktop.png",
+            "image_mobile": "shopify://shop_images/Black_Friday_is_here_early_Mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -71,8 +80,7 @@
     },
     "b83f732f-7586-44d1-8196-569a5f831266": {
       "type": "replo-trust-icons",
-      "settings": {
-      }
+      "settings": {}
     },
     "18d61218-afee-40dc-a9af-f51e5ae51ccf": {
       "type": "promo-grid",
@@ -87,7 +95,7 @@
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/meteorite-ring.jpg",
+            "image": "shopify://shop_images/meteorite-ring.jpg",
             "video_url": "",
             "width": "33",
             "height": 260,
@@ -109,7 +117,7 @@
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Glowstone_Ring_2-_flipped_9f85184e-0502-4a6b-9d57-22cf5248aef4.png",
+            "image": "shopify://shop_images/Glowstone_Ring_2-_flipped_9f85184e-0502-4a6b-9d57-22cf5248aef4.png",
             "video_url": "",
             "width": "33",
             "height": 260,
@@ -131,7 +139,7 @@
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Sterling_Silver.png",
+            "image": "shopify://shop_images/Sterling_Silver.png",
             "video_url": "",
             "width": "33",
             "height": 260,
@@ -150,10 +158,10 @@
             "heading": "Find Your Ring",
             "textarea": "Expert Craftsmanship <br> from Quality Materials",
             "cta_text1": "Shop All Rings",
-            "cta_link1": "https:\/\/patrickadairdesigns.com\/collections\/all-products?filter.p.m.custom.product_type=Ring",
+            "cta_link1": "https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Group_Shot.png",
+            "image": "shopify://shop_images/Group_Shot.png",
             "video_url": "",
             "width": "100",
             "height": 420,
@@ -212,7 +220,7 @@
         "030c2399-07ee-414a-ac43-064bae3829fa": {
           "type": "button",
           "settings": {
-            "link": "shopify:\/\/collections\/best-sellers",
+            "link": "shopify://collections/best-sellers",
             "link_text": "Shop All Bestsellers"
           }
         }
@@ -229,8 +237,7 @@
     },
     "28fba7ba-c556-4a41-98e8-59504c6930d1": {
       "type": "replo-ethos",
-      "settings": {
-      }
+      "settings": {}
     },
     "ec9377f9-28e4-481f-8919-27dba48916ab": {
       "type": "featured-collections",
@@ -291,10 +298,10 @@
             "heading": "Pendants",
             "textarea": "Unique Pieces from <br> Exotic Materials",
             "cta_text1": "Shop Pendants",
-            "cta_link1": "shopify:\/\/collections\/necklaces",
+            "cta_link1": "shopify://collections/necklaces",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Pendant_56ae5f17-8dbc-4305-8aaa-5db6424d04ce.png",
+            "image": "shopify://shop_images/Pendant_56ae5f17-8dbc-4305-8aaa-5db6424d04ce.png",
             "video_url": "",
             "width": "50",
             "height": 500,
@@ -316,7 +323,7 @@
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/earrings.png",
+            "image": "shopify://shop_images/earrings.png",
             "video_url": "",
             "width": "50",
             "height": 500,
@@ -338,7 +345,7 @@
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Lifestyle_Zoomed_Out_Shot.png",
+            "image": "shopify://shop_images/Lifestyle_Zoomed_Out_Shot.png",
             "video_url": "",
             "width": "100",
             "height": 700,
@@ -376,7 +383,7 @@
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Lifestyle_Zoomed_Out_Shot.png",
+            "image": "shopify://shop_images/Lifestyle_Zoomed_Out_Shot.png",
             "video_url": "",
             "width": "100",
             "height": 700,
@@ -407,10 +414,10 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/Gold.png",
+            "image": "shopify://shop_images/Gold.png",
             "image_width": 650,
             "title": "Exotic Luxury Materials",
-            "text": "<p>Every Patrick Adair Designs ring is made from exotic luxury materials including meteorite, glowstone, and dozens of others.<\/p>",
+            "text": "<p>Every Patrick Adair Designs ring is made from exotic luxury materials including meteorite, glowstone, and dozens of others.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -419,10 +426,10 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/Patrick_working_on_lathe.png",
+            "image": "shopify://shop_images/Patrick_working_on_lathe.png",
             "image_width": 650,
             "title": "Artisan Craftsmanship",
-            "text": "<p>Every Patrick Adair Designs ring is machined in Salt Lake City, Utah before undergoing a rigorous inspection process.<\/p>",
+            "text": "<p>Every Patrick Adair Designs ring is machined in Salt Lake City, Utah before undergoing a rigorous inspection process.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -431,10 +438,10 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/Stack_1_shorter_116c85fa-56ed-44e3-adac-1e911e64a4ec.png",
+            "image": "shopify://shop_images/Stack_1_shorter_116c85fa-56ed-44e3-adac-1e911e64a4ec.png",
             "image_width": 600,
             "title": "Every Ring is Unique",
-            "text": "<p>With hundreds of styles and thousands of customization options, no two rings are ever the same. <\/p>",
+            "text": "<p>With hundreds of styles and thousands of customization options, no two rings are ever the same. </p>",
             "button_label": "",
             "button_link": ""
           }
@@ -458,7 +465,7 @@
       "settings": {
         "subtitle": "Impressive",
         "title": "Shop Pendants",
-        "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
+        "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>",
         "button_label": "S",
         "button_link": "",
         "focal_point": "center",
@@ -481,7 +488,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>“I love this ring. Every step of the process from sizing to delivery was amazing.”<\/p><p>- Brett P.<\/p><p>“I couldn’t have asked for a better ring. PAD did an amazing job and was very communicative through the whole process and was done in a timely manner!”<\/p><p>- Amber A<\/p><p>“Feels and looks like anything you’d buy from the highest-end jewelers stores without the high-end prices.”<\/p><p>- Ben<\/p><p><\/p><p><a href=\"https:\/\/patrickadairdesigns.com\/pages\/reviews\" title=\"https:\/\/patrickadairdesigns.com\/pages\/reviews\"><span style=\"text-decoration:underline\">See more reviews (2,773+)<\/span><\/a><\/p>"
+            "text": "<p>“I love this ring. Every step of the process from sizing to delivery was amazing.”</p><p>- Brett P.</p><p>“I couldn’t have asked for a better ring. PAD did an amazing job and was very communicative through the whole process and was done in a timely manner!”</p><p>- Amber A</p><p>“Feels and looks like anything you’d buy from the highest-end jewelers stores without the high-end prices.”</p><p>- Ben</p><p></p><p><a href=\"https://patrickadairdesigns.com/pages/reviews\" title=\"https://patrickadairdesigns.com/pages/reviews\"><span style=\"text-decoration:underline\">See more reviews (2,773+)</span></a></p>"
           }
         }
       },
@@ -497,17 +504,6 @@
     },
     "1698960689cc8859a7": {
       "type": "apps",
-      "blocks": {
-        "18994950-d2ce-4421-958d-eedc10fe5cce": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "lavender-opal-glowstone-ring"
-          }
-        }
-      },
-      "block_order": [
-        "18994950-d2ce-4421-958d-eedc10fe5cce"
-      ],
       "settings": {
         "full_width": false,
         "space_around": false
@@ -525,13 +521,12 @@
         "e64387e8-2a23-47cd-93a2-c3cc824c5def": {
           "type": "text",
           "settings": {
-            "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>"
+            "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
           }
         },
         "template--14630909837394__1a1b666e-56e5-4ab7-8616-02ffce4135d6-form-1": {
           "type": "form",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
