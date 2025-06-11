@@ -89,12 +89,27 @@
   
     {%- render 'font-face' -%}
     {%- render 'css-variables' -%}  
-    
+  
+  {% comment %} conditions {% endcomment %}
+  {% assign last_added = cart.items.first %}
+  {% assign last_added_product = last_added.product %}
+  {% assign is_test_product = false %}
+  {% for tag in last_added_product.tags %}
+    {% if tag == "web-new-design-test" %}
+      {% assign is_test_product = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
   {% if false %}
     {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}   
   {% else %}  
-    <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ 'theme.css' | asset_url }}"></noscript>
+    {% if true or template.suffix == "web-new-design-pdp" or template.suffix == "web-new-design-plp" or is_test_product %}
+      <link rel="preload" href="{{ 'theme_n.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="{{ 'theme_n.css' | asset_url }}"></noscript>
+    {% else %}
+      <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="{{ 'theme.css' | asset_url }}"></noscript>
+    {% endif %}
   {% endif %}
   
   
@@ -172,7 +187,11 @@
       <link rel="stylesheet" href="{{ 'country-flags.css' | asset_url | split: '?' | first }}">
     {%- endif -%}
   
-    <script src="{{ 'theme.js' | asset_url }}" defer></script>
+    {% if true or template.suffix == "web-new-design-pdp" or template.suffix == "web-new-design-plp" or is_test_product %}
+      <script src="{{ 'theme_n.js' | asset_url }}" defer></script>
+    {% else %}
+      <script src="{{ 'theme.js' | asset_url }}" defer></script>
+    {% endif %}
   
     {%- if request.page_type contains 'customers/' -%}
       <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
@@ -237,10 +256,14 @@
       {% endif %}
   {% endif %}  
   
-  
-  <!-- <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">   -->
-  <link rel="preload" href="{{ 'custom.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ 'custom.css' | asset_url }}"></noscript>
+  {% if true or template.suffix == "web-new-design-pdp" or template.suffix == "web-new-design-plp" or is_test_product %}
+    <link rel="preload" href="{{ 'custom_n.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ 'custom_n.css' | asset_url }}"></noscript>
+  {% else %}
+    <!-- <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">   -->
+    <link rel="preload" href="{{ 'custom.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ 'custom.css' | asset_url }}"></noscript>
+  {% endif %}
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" ></script>
   
@@ -285,7 +308,7 @@
     <style>
       {% if request.page_type == 'product' %}
         main{
-          padding-top:55px;
+          {% comment %} padding-top:55px; {% endcomment %}
           background-color : #f8f8f8;
         }
         .r-12zjrcy{
