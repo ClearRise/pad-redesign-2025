@@ -1,0 +1,102 @@
+article header.section-header {
+  margin-bottom: 25px;
+}
+article header.section-header h1 {
+  font-size: 56px;
+  line-height: 64px;
+}
+@media (max-width: 1024px) {
+  article header.section-header h1 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+@media (max-width: 1024px) {
+  article header.section-header h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 550px) {
+  article header.section-header h1 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 425px) {
+  article header.section-header h1 {
+    font-size: 28px;
+    line-height: 48px;
+  }
+}
+article header.section-header .article__date {
+  font-size: 14px;
+  line-height: 22px;
+}
+article header.section-header img {
+  max-height: 500px;
+}
+article ul.mobile-social-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+article ul.mobile-social-icon-container li svg.icon {
+  height: 40px;
+  width: 40px;
+  fill: #138e7e;
+}
+@media (max-width: 1024px) {
+  article ul.mobile-social-icon-container li svg.icon {
+    height: 36px;
+    width: 36px;
+  }
+}
+@media (max-width: 768px) {
+  article ul.mobile-social-icon-container li svg.icon {
+    height: 32px;
+    width: 32px;
+  }
+}
+@media (max-width: 768px) {
+  article ul.mobile-social-icon-container li svg.icon {
+    height: 28px;
+    width: 28px;
+  }
+}
+@media (max-width: 768px) {
+  article ul.mobile-social-icon-container li svg.icon {
+    height: 24px;
+    width: 24px;
+  }
+}
+article div.article__body p {
+  margin-bottom: 20px !important;
+}
+article div.article__body h1,
+article div.article__body h2 {
+  font-size: 40px !important;
+  text-decoration: none !important;
+  line-height: 48px;
+  margin-top: 50px !important;
+}
+@media (max-width: 1024px) {
+  article div.article__body h1,
+  article div.article__body h2 {
+    font-size: 32px !important;
+    line-height: 40px;
+  }
+}
+@media (max-width: 768px) {
+  article div.article__body h1,
+  article div.article__body h2 {
+    font-size: 30px !important;
+  }
+}
+@media (max-width: 425px) {
+  article div.article__body h1,
+  article div.article__body h2 {
+    font-size: 24px !important;
+    margin-top: 30px !important;
+  }
+}/*# sourceMappingURL=article-new-design.css.map */
