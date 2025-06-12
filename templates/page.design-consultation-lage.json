@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "main": {
       "type": "main-page",
@@ -16,108 +16,362 @@
         "content_display": true
       }
     },
-    "rich_text_dCWNqQ": {
-      "type": "rich-text",
+    "advanced_content_flexible_4LrQXk": {
+      "type": "advanced-content-flexible",
       "blocks": {
-        "heading_NFkWxw": {
-          "type": "heading",
+        "liquid_pkmPgP": {
+          "type": "liquid",
           "settings": {
-            "title": "Concierge Shopping Experience"
+            "liquid_name": "",
+            "code": "<h2>Custom content</h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.</p>",
+            "width": "40%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
           }
         },
-        "text_kAfkm6": {
-          "type": "text",
+        "image_Y3gN4g": {
+          "type": "image",
           "settings": {
-            "enlarge_text": false,
-            "text": "<p><span style=\"text-decoration:underline\"><strong>Schedule a free 1-on-1 consultation with one of our experts</strong></span></p>"
-          }
-        },
-        "text_3QxBMK": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": false,
-            "text": "<p>Shopping online is quick, easy, and convenient. But sometimes you want personalized service and attention.</p><p>That's where the Patrick Adair Designs Concierge Experience comes in. We'll match you with a personal concierge who can work with you one-on-one to find the perfect piece.</p><p>Things our concierge can help you with:</p><ul><li>Find the perfect pieces that fits your exact style and taste</li><li>Design a fully-custom piece</li><li>Discover the perfect gift</li><li>Make personalized recommendations based on your likes (and dislikes)</li></ul>"
-          }
-        },
-        "text_DkCHBN": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>and more. . .</p><h2><strong>How It Works</strong></h2><p>1. Fill Out The Form Below</p><p>2. A Personal Concierge Will Get Back To You Within 24-48 Hours.</p><p>3. Receive Personalized Attention via Email and/or Video Call </p>"
+            "iamge_name": "",
+            "link": "",
+            "width": "60%",
+            "alignment": "center"
           }
         }
       },
       "block_order": [
-        "heading_NFkWxw",
-        "text_kAfkm6",
-        "text_3QxBMK",
-        "text_DkCHBN"
+        "liquid_pkmPgP",
+        "image_Y3gN4g"
       ],
       "settings": {
-        "align_text": "left",
-        "narrow_column": true,
-        "divider": false
+        "full_width": true,
+        "show_navigation": true,
+        "image_first": true,
+        "space_around": false,
+        "background_color": "#ffffff",
+        "small_image": false,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 30,
+        "additional_class": ""
       }
     },
-    "173377129823ad4612": {
-      "type": "apps",
-      "blocks": {
-        "powerful_form_builder_app_block_yPkjc7": {
-          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
-          "settings": {
-            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"NjczNTA=\"></div>"
-          }
-        }
-      },
-      "block_order": [
-        "powerful_form_builder_app_block_yPkjc7"
-      ],
+    "main_404_with_ring_mNNc6d": {
+      "type": "main-404-with-ring",
       "disabled": true,
       "settings": {
         "full_width": false,
-        "space_around": true
+        "image_0": "shopify://shop_images/break_ring.png",
+        "description": "Oops, something went wrong."
       }
     },
-    "rich_text_Phhwhx": {
-      "type": "rich-text",
+    "advanced_content_flexible_dxA4mr": {
+      "type": "advanced-content-flexible",
       "blocks": {
-        "heading_TaRCU9": {
-          "type": "heading",
+        "liquid_ccYhiN": {
+          "type": "liquid",
           "settings": {
-            "title": "Visit Us In Person"
+            "liquid_name": "",
+            "code": "<h2>Custom content</h2>",
+            "width": "50%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
           }
         },
-        "text_Kr8T6f": {
-          "type": "text",
+        "liquid_9zc8Yk": {
+          "type": "liquid",
           "settings": {
-            "enlarge_text": false,
-            "text": "<p><strong>Visit Us</strong></p><p><strong>2451 S 600 W</strong></p><p><strong>Ste 100</strong></p><p><strong>Salt Lake City, UT 84115 </strong></p><p><strong>Monday - Friday</strong></p><p><strong>BY APPOINTMENT ONLY</strong> </p><p><strong>BOOK BELOW</strong></p>"
+            "liquid_name": "",
+            "code": "<p>Shopping online is quick, easy, and convenient. But sometimes you want personalized service and attention. That's where the Patrick Adair Designs Concierge Experience comes in. We'll match you with a personal concierge who can work with you one-on-one to find the perfect piece.</p>\n\n<ul>\n  <li>Find The Perfect Pieces That Fit Your Exact Style And Taste</li>\n  <li>Design A Fully-Custom Place</li>\n  <li>Discover The Perfect Gift</li>\n  <li>Show You Hundreds Of Different Pieces Up Close</li>\n  <li>Make Personalized Recommendations Based On Your Likes (And Dislikes)</li>\n</ul>",
+            "width": "50%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
           }
         }
       },
       "block_order": [
-        "heading_TaRCU9",
-        "text_Kr8T6f"
+        "liquid_ccYhiN",
+        "liquid_9zc8Yk"
+      ],
+      "custom_css": [
+        ".custom__item:first-of-type {align-self: flex-start;}"
       ],
       "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": true,
+        "background_color": "#ffffff",
+        "small_image": false,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 30,
+        "additional_class": ""
       }
     },
-    "section_custom_liquid_kiQJcW": {
-      "type": "section-custom-liquid",
+    "how_works_with_card_GY9qgA": {
+      "type": "how-works-with-card",
+      "blocks": {
+        "card_LDwiHB": {
+          "type": "card",
+          "settings": {
+            "card_title": "",
+            "card_badge": "shopify://shop_images/calendar-simple-1-svgrepo-com.svg",
+            "card_contents": "<p>Book An Appointment</p>",
+            "button": "",
+            "button_url": ""
+          }
+        },
+        "card_6zxDtT": {
+          "type": "card",
+          "settings": {
+            "card_title": "",
+            "card_badge": "shopify://shop_images/handshake-deal-svgrepo-com.svg",
+            "card_contents": "<p>Meet With Your Concierge</p>",
+            "button": "",
+            "button_url": ""
+          }
+        },
+        "card_LfGt3n": {
+          "type": "card",
+          "settings": {
+            "card_title": "",
+            "card_badge": "shopify://shop_images/meeting-discussion-svgrepo-com.svg",
+            "card_contents": "<p>Receive Personalized Attention</p>",
+            "button": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_LDwiHB",
+        "card_6zxDtT",
+        "card_LfGt3n"
+      ],
+      "custom_css": [
+        ".card-container-ss {padding: 20px 20px; height: 137px; display: flex; flex-direction: column; justify-content: space-between;}",
+        ".card-header-ss > div {padding-bottom: 0px;}",
+        ".card-body-ss {padding-top: 0px; text-align: center;}",
+        ".card-body-ss p {margin-bottom: 0px;}",
+        ".number-ss {font-size: 14px; color: black;}",
+        ".card-badge {width: 100%; display: flex; justify-content: center;}",
+        "@media (max-width: 425px) {.card-container-ss {padding: 10px 20px !important; height: 100px; }}"
+      ],
       "settings": {
-        "custom_liquid": "<div class=\"tidycal-embed\" data-path=\"patrickadairdesigns/design-consultation-in-person\"></div><script src=\"https://asset-tidycal.b-cdn.net/js/embed.js\" async></script>"
+        "full_width": true,
+        "title": "How to work",
+        "description": "",
+        "footer_text": "",
+        "is_default_background": true,
+        "padding_vertical": 0,
+        "padding_horizontal": 0,
+        "additional_class": "",
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 30
+      }
+    },
+    "advanced_content_flexible_xjYkKi": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "liquid_7Kx9Yk": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "design-consultation",
+            "code": "<h3>Design Consultation - Video Call</h3><p>Not local? Book a video call with us to discuss your handmade piece. A specialist will walk you through our to help you figure out what's best for you.</p>",
+            "width": "60%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "image_A3QDpc": {
+          "type": "image",
+          "settings": {
+            "iamge_name": "",
+            "link": "",
+            "width": "40%",
+            "alignment": "center"
+          }
+        },
+        "child_block_button_Fn3Q7k": {
+          "type": "child_block_button",
+          "settings": {
+            "parent_name": "design-consultation",
+            "position": "bottom",
+            "button_label": "book now",
+            "link": "",
+            "button_background_color": "#ffffff",
+            "button_border_color": "#138e7e",
+            "button_text_color": "#000000",
+            "inclue_right_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "liquid_7Kx9Yk",
+        "image_A3QDpc",
+        "child_block_button_Fn3Q7k"
+      ],
+      "custom_css": [
+        "@media (min-width: 769px) {.custom__item > * {max-width: 550px; margin: auto; } .btn-container {display: flex; justify-content: center; } .btn-black-ss {padding: 7px 50px !important; }}"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": true,
+        "space_around": true,
+        "background_color": "#ffffff",
+        "small_image": false,
+        "is_top_line": true,
+        "is_bottom_line": false,
+        "top_logo_size": 30,
+        "additional_class": ""
+      }
+    },
+    "advanced_content_flexible_h6RpWH": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "liquid_PqJLDW": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "design-consultation",
+            "code": "<h3>Design Consultation - Video Call</h3><p>Not local? Book a video call with us to discuss your handmade piece. A specialist will walk you through our to help you figure out what's best for you.</p>",
+            "width": "60%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "image_GDFtUR": {
+          "type": "image",
+          "settings": {
+            "iamge_name": "",
+            "link": "",
+            "width": "40%",
+            "alignment": "center"
+          }
+        },
+        "child_block_button_kTYXHD": {
+          "type": "child_block_button",
+          "settings": {
+            "parent_name": "design-consultation",
+            "position": "bottom",
+            "button_label": "book now",
+            "link": "",
+            "button_background_color": "#ffffff",
+            "button_border_color": "#138e7e",
+            "button_text_color": "#000000",
+            "inclue_right_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "liquid_PqJLDW",
+        "image_GDFtUR",
+        "child_block_button_kTYXHD"
+      ],
+      "custom_css": [
+        "@media (min-width: 769px) {.custom__item > * {max-width: 550px; margin: auto; } .btn-container {display: flex; justify-content: center; } .btn-black-ss {padding: 7px 50px !important; }}"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": true,
+        "space_around": true,
+        "background_color": "#ffffff",
+        "small_image": false,
+        "is_top_line": true,
+        "is_bottom_line": false,
+        "top_logo_size": 30,
+        "additional_class": ""
+      }
+    },
+    "advanced_content_flexible_EPrx7x": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "liquid_BEcyNh": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "",
+            "code": "<div class=\"tidycal-embed\" data-path=\"patrickadairdesigns/design-consultation-in-person\"></div><script src=\"https://asset-tidycal.b-cdn.net/js/embed.js\" async></script>",
+            "width": "100%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": false,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "liquid_BEcyNh"
+      ],
+      "custom_css": [
+        ".custom__item:last-of-type .liquid-container-ss {display: flex; justify-content: center;}",
+        ".bottom-icon {height: 40px;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": true,
+        "background_color": "#ffffff",
+        "small_image": false,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 30,
+        "additional_class": ""
+      }
+    },
+    "17337712779db4757c": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
       }
     }
   },
   "order": [
     "main",
-    "rich_text_dCWNqQ",
-    "173377129823ad4612",
-    "rich_text_Phhwhx",
-    "section_custom_liquid_kiQJcW"
+    "advanced_content_flexible_4LrQXk",
+    "main_404_with_ring_mNNc6d",
+    "advanced_content_flexible_dxA4mr",
+    "how_works_with_card_GY9qgA",
+    "advanced_content_flexible_xjYkKi",
+    "advanced_content_flexible_h6RpWH",
+    "advanced_content_flexible_EPrx7x",
+    "17337712779db4757c"
   ]
 }
