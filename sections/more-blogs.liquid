@@ -1,0 +1,143 @@
+{%- liquid
+  assign page_width = section.settings.page_width
+-%}
+
+{% style %}
+  #shopify-sectin-{{ section.id }} .sectoin-replo-style-review-container {
+    background-color: {{ section.settings.background }};
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    width: 100%;
+  }
+{% endstyle %}
+{% style %}
+  @media (min-width: 426px) and (max-width: 768px) {
+    .blog-template-container .medium-up--one-third {
+      width: 100%;
+    }
+  }
+  @media (max-width: 768px) {
+    .blog-template-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .blog-template-container .small--one-third {
+      width: 100%;
+    }
+    .blog-template-container .small--two-thirds {
+      width: 100%;
+    }
+  }
+{% endstyle %}
+
+<div class="more-blogs-section-container">
+  <div class="{% if page_width %}page-width{% endif %} more-blogs-wrapper">
+    <div class="more-blogs-header">
+      <h2 class="more-blogs-title">{{ section.settings.title }}</h2>
+    </div>
+
+    <div class="more-blogs-content grid grid--uniform blog-template-container">
+      {% for each_article in blogs['blog'].articles %}
+        {% if each_article.id == article.id %}
+          <script>console.log("{{ each_article.id }}, {{ article.id }}")</script>
+          {% assign article_index = forloop.index0 %}
+          {% continue %}
+        {% endif %}
+        {% if article_index != blank %}
+          {% assign article_last_index = article_index | plus: 4 %}
+          {% if forloop.index0 >= article_index and forloop.index0 < article_last_index %}
+            {%- render 'article-grid-item', article: each_article, grid_item_width: 'medium-up--one-third', per_row: '3', image_size: section.settings.blog_image_size -%}
+          {% endif %}
+        {% endif %}
+      {% endfor %} 
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "More Blogs",
+  "class": "more-blogs",
+  "settings": [
+    {
+      "type": "header",
+      "content": "More Blogs Section"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "More Blogs"
+    },
+    {
+      "type": "header",
+      "content": "Design settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "page_width",
+      "label": "Page max-width",
+      "default": true
+    },
+    {
+      "id": "background",
+      "type": "color",
+      "label": "Background color"
+    },
+    {
+      "id": "padding_top",
+      "type": "range",
+      "label": "Padding top",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "id": "padding_bottom",
+      "type": "range",
+      "label": "Padding bottom",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "blog_image_size",
+      "label": "Image size",
+      "default": "wide",
+      "options": [
+        {
+          "value": "natural",
+          "label": "Natural"
+        },
+        {
+          "value": "square",
+          "label": "Square (1:1)"
+        },
+        {
+          "value": "landscape",
+          "label": "Landscape (4:3)"
+        },
+        {
+          "value": "portrait",
+          "label": "Portrait (2:3)"
+        },
+        {
+          "value": "wide",
+          "label": "Wide (16:9)"
+        }
+      ]
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "More Blogs"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,181 @@
+{%- liquid
+  assign title = section.settings.title
+  assign is_max_width = section.settings.is_max_width
+  assign max_width = section.settings.max_width  
+  assign blocks = section.blocks
+  assign padding_vertical = section.settings.padding_vertical
+  assign padding_horizontal = section.settings.padding_horizontal
+  assign is_full_width = section.settings.is_full_width
+-%}
+
+{{ 'description.css' | asset_url | stylesheet_tag: preload: true }}
+
+{%- style -%}
+.section-template-{{ section.id }} {
+  padding: {{ padding_vertical }}px {{ padding_horizontal }}px;
+}
+{% if padding_horizontal > 20 %}
+  @media (min-width: 426px) and (max-width:768px) {
+    .section-template-{{ section.id }} {
+      padding: {{ padding_vertical | times: 0.5 }}px 20px;
+    }
+  }
+{% endif %}
+{% if padding_horizontal > 0 %}
+  @media (max-width: 425px) {
+    .section-template-{{ section.id }} {
+      padding: {{ padding_vertical | times: 0.25 }}px 10px;
+    }
+  }
+{% endif %}
+{%- endstyle -%}
+
+<div class="section-template-{{ section.id }} description-section-container-ss {% unless is_full_width %}page-width{% endunless %}">
+  <div class="section-title-ss text-center section-title-bottom-margin">{{ title }}</div>
+  <div class=" {% if is_max_width %}max-width_{{ max_width }}{% endif %}">
+    {% for block in blocks %}
+      {% case block.type %}
+        {% when 'description' %}
+          <div class="description-ss">
+            <div class="order-wrapper">
+              <div class="dash-line"></div>
+              <div class="order-box">{{ forloop.index }}</div>
+            </div>
+            <div class="description-wrapper">
+              <div class="description-title">
+                {{ block.settings.description_title }}
+              </div>
+              <div class="description-text_preview" data-block-id="{{ block.id }}">
+                <div class="show-desktop">{{ block.settings.description_preview }}</div>
+                <div class="show-mobile">{{ block.settings.description_preview_mobile }}</div>
+              </div>
+              <div class="description-text_main hide" data-block-id="{{ block.id }}">
+                {{ block.settings.description_main }}
+              </div>
+              <div class="description-read-more text-center" data-block-id="{{ block.id }}">
+                Load More
+              </div>
+            </div>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const descriptions = document.querySelectorAll(".description-read-more");
+    const descriptionTextPreview = document.querySelectorAll(".description-text_preview");
+    const descriptionTextMain = document.querySelectorAll(".description-text_main");
+
+    descriptions.forEach((description) => {
+      description.addEventListener("click", () => {
+        console.log("clicked");
+        const blockId = description.getAttribute("data-block-id");
+        const previewText = document.querySelector(`.description-text_preview[data-block-id="${blockId}"]`);
+        const mainText = document.querySelector(`.description-text_main[data-block-id="${blockId}"]`);
+
+        previewText.classList.toggle("hide");
+        mainText.classList.toggle("hide");
+        description.innerHTML = mainText.classList.contains("hide") ? "Load More" : "Show Less";
+      });
+    });
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "description",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Content"
+      },
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title",
+        "default": "How to work"
+      },
+      {
+        "type": "header",
+        "content": "Design"
+      },
+      {
+        "id": "is_full_width",
+        "type": "checkbox",
+        "label": "Full Width",
+        "default": true
+      },
+      {
+        "id": "padding_vertical",
+        "type": "range",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "default": 60,
+        "label": "Vertical Padding"
+      },
+      {
+        "id": "padding_horizontal",
+        "type": "range",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "default": 40,
+        "label": "Horizontal Padding"
+      },
+      {
+        "id": "is_max_width",
+        "type": "checkbox",
+        "label": "Max-width",
+        "default": false
+      },
+      {
+        "id": "max_width",
+        "type": "range",
+        "min": 700,
+        "max": 1500,
+        "step": 50,
+        "default": 1200,
+        "unit": "px",
+        "label": "Control Max-width"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "description",
+        "name": "Description",
+        "settings": [
+          {
+            "id": "description_title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "id": "description_preview",
+            "type": "richtext",
+            "label": "Preview Description"
+          },
+          {
+            "id": "description_preview_mobile",
+            "type": "richtext",
+            "label": "Preview Description(Mobile)"
+          },
+          {
+            "id": "description_main",
+            "type": "richtext",
+            "label": "Main Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Description"
+      }
+    ]
+  }
+{% endschema %}

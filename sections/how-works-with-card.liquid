@@ -1,0 +1,224 @@
+{%- liquid
+  assign blocks = section.blocks
+  assign padding_vertical = section.settings.padding_vertical
+  assign padding_horizontal = section.settings.padding_horizontal
+-%}
+{{ 'how-works-with-card.css' | asset_url | stylesheet_tag: preload: true }}
+{%- style -%}
+  {% unless section.settings.full_width %}
+    .how-works-with-card-container-ss--{{ section.id }} {
+      padding: {{ padding_vertical }}px {{ padding_horizontal }}px;
+    }
+  {% endunless %}
+  @media (max-width: 768px) {
+    .how-works-with-card-container-ss--{{ section.id }} {
+      padding-right: 17px;
+      padding-left: 17px;
+    }
+  }
+  @media (max-width: 425px) {
+    .how-works-with-card-container-ss--{{ section.id }} {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+{%- endstyle -%}
+
+{% if section.settings.is_top_line %}
+  <div class="line-break-container-ss">
+    <div class="right-line-ss"></div>
+    <div class="center-logo-ss">
+      <img src="{{ section.settings.top_logo }}" width="{{ section.settings.top_logo_size }}px" height="{{ section.settings.top_logo_size }}px" />
+    </div>
+    <div class="left-line-ss"></div>
+  </div>
+{% endif %}
+
+<div class="how-works-with-card-container-ss how-works-with-card-container-ss--{{ section.id }} {% if section.settings.full_width %} page-width {% endif %} ">
+  <div class="section-title-container-ss">
+    <div class="section-title-ss">
+      {{ section.settings.title }}
+    </div>
+    <div class="section-description-ss">
+      {{ section.settings.description }}
+    </div>
+  </div>
+  <div class="section-card-container-ss">
+    {% for block in blocks %}
+      {% case block.type %}
+        {% when 'card' %}
+          <div class="{{ block.type }}-container-ss">
+            <div class="card-header-ss">
+              <div class="number-ss">{{ forloop.index }}</div>
+              {% if block.settings.card_badge %}
+                <div class="card-badge">
+                  <img src="{{ block.settings.card_badge | img_url:'master' }}" />
+                </div>
+              {% endif %}
+              <div class="card-title">{{ block.settings.card_title }}</div>
+            </div>
+            <div class="card-body-ss">
+              {{ block.settings.card_contents }}
+            </div>
+            {% if block.settings.button_url != blank and block.settings.button != blank %}
+              <div class="card-button-container">
+                <a href="{{ block.settings.button_url }}" class="btn btn-primary-ss">
+                  {{ block.settings.button }}
+                  {% render 'icon-arrow-right' %}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+  <div class="section-footer">
+    <div class="">
+      {{ section.settings.footer_text }}
+    </div>
+  </div>
+</div>
+
+{% if section.settings.is_bottom_line %}
+  <div class="line-break-container-ss">
+    <div class="right-line-ss"></div>
+    <div class="center-logo-ss">
+      <img src="{{ section.settings.top_logo }}" width="{{ section.settings.top_logo_size }}px" height="{{ section.settings.top_logo_size }}px" />
+    </div>
+    <div class="left-line-ss"></div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "How to work(card)",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full page width",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Title",
+      "default": "How to work"
+    },
+    {
+      "id": "description",
+      "type": "richtext",
+      "label": "Description"
+    },
+    {
+      "id": "footer_text",
+      "type": "richtext",
+      "label": "Footer Text"
+    },
+    {
+      "id": "is_default_background",
+      "type": "checkbox",
+      "label": "Default Background",
+      "default": true
+    },
+    {
+      "id": "padding_vertical",
+      "type": "range",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 0,
+      "label": "Vertical Padding"
+    },
+    {
+      "id": "padding_horizontal",
+      "type": "range",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 60,
+      "label": "Horizontal Padding"
+    },
+    {
+      "type": "text",
+      "id": "additional_class",
+      "label": "Class Name(Dev)",
+      "info": "Don't change, If you are not Developer"
+    },
+    {
+      "type": "header",
+      "content": "Break line settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_top_line",
+      "label": "Top Line",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "is_bottom_line",
+      "label": "Bottom Line",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "top_logo",
+      "label": "Center logo"
+    },
+    {
+      "type": "range",
+      "id": "top_logo_size",
+      "label": "Logo Size",
+      "min": 10,
+      "max": 100,
+      "default": 30,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "id": "card_title",
+          "type": "text",
+          "label": "Card Title"
+        },
+        {
+          "id": "card_badge",
+          "type": "image_picker",
+          "label": "Badge"
+        },
+        {
+          "id": "card_contents",
+          "type": "richtext",
+          "label": "card_content"
+        },
+        {
+          "id": "button",
+          "type": "text",
+          "label": "Button"
+        },
+        {
+          "id": "button_url",
+          "type": "url",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How to work(card)"
+    }
+  ]
+}
+{% endschema %}
