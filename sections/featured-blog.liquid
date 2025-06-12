@@ -1,0 +1,564 @@
+{{ 'advanced-content-flexible.css' | asset_url | stylesheet_tag: preload: true }}
+
+{%- liquid
+  assign featured_article = section.settings.featured_article
+  assign img_url = featured_article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+-%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .advanced-content-flexible-ss {
+    background-color: {{ section.settings.background_color }};
+  }
+  {% if section.settings.variant_padding %}
+    @media (min-width: 1500px) {
+      #shopify-section-{{ section.id }} .advanced-content-flexible-ss .navigation-bar {
+        margin-left: calc(50% - 750px + 40px);
+      }
+    }
+  {% endif %}
+  @media (min-width: 1500px) {
+  }
+  @media (min-width: 769px) {
+  }
+  @media (max-width: 768px) {
+    #shopify-section-{{ section.id }} .advanced-content-flexible-ss {
+      {% if section.settings.background_color != '#ffffff' %}
+        padding-top: 10px;
+      {% endif %}
+    }
+    .advanced-content-flexible-ss .navigation-bar.navigation-bar-top {
+      display: none;
+    }
+    .advanced-content-flexible-ss .navigation-bar.navigation-bar-middle {
+      display: block;
+    }
+    #shopify-section-{{ section.id }} .advanced-content-flexible-ss .navigation-bar {
+      margin-left: 17px;
+    }
+  }
+  @media (max-width: 425px) {
+    #shopify-section-{{ section.id }} .advanced-content-flexible-ss .navigation-bar {
+      margin-left: 10px;
+    }
+  }
+  .featured-blog-container .liquid-container-ss h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 768px) {
+    .featured-blog-container .liquid-container-ss {
+      width: 90%;
+      margin: auto;
+    }
+    .featured-blog-container .image-wrap {
+      min-height: 290px;
+    }
+  }
+  @media (max-width: 425px) {
+    .featured-blog-container .image-wrap {
+      min-height: 60vw;
+    }
+    .featured-blog-container .liquid-container-ss {
+      top: -30px;
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+    }
+    .featured-blog-container .liquid-container-ss h2 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+{%- endstyle -%}
+
+{% style %}
+
+{% endstyle %}
+
+{%- if section.settings.space_around -%}
+  <div class="advanced-content-flexible-ss-space_around {{ section.settings.additional_class }}">
+{%- endif -%}
+{%- unless section.settings.full_width -%}
+  <div class="page-width {{ section.settings.additional_class }}">
+{%- endunless -%}
+  <div class="custom-content advanced-content-flexible-ss featured-blog-container">
+    {%- for block in section.blocks -%}
+      {%- liquid
+        case block.settings.width
+          when '25%'
+            assign block_width = 'small--one-whole one-quarter'
+          when '33%'
+            assign block_width = 'small--one-whole one-third'
+          when '40%'
+            assign block_width = 'small--one-whole w-40'
+          when '50%'
+            assign block_width = 'small--one-whole one-half'
+          when '60%'
+            assign block_width = 'small--one-whole w-60'
+          when '66%'
+            assign block_width = 'small--one-whole two-thirds'
+          when '75%'
+            assign block_width = 'small--one-whole three-quarters'
+          when '100%'
+            assign block_width = 'one-whole'
+        endcase
+      -%}
+      <div class="custom__item {{ block_width }} " {{ block.shopify_attributes }}>
+        <div class="custom__item-inner custom__item-inner--{{ block.type }}{% if featured_article.image == blank and block.type == 'image' %} custom__item-inner--placeholder-image{% endif %}">
+          {%- case block.type -%}
+            {%- when 'liquid' -%}
+              {%- if block.settings.code != blank -%}
+                {%- style -%}
+                  #shopify-section-{{ section.id }} .advanced-content-flexible-ss .liquid-container-{{  block.id }} {
+                    padding-top: {{ block.settings.padding_top }}px;
+                    padding-left: {% if block.settings.variant_padding %}50px{% else %} {{ block.settings.padding_left }}px {% endif %};
+                    padding-right: {{ block.settings.padding_right }}px;
+                    padding-bottom: {{ block.settings.padding_bottom }}px;
+                  }
+                  @media (min-width: 1500px) {
+                    #shopify-section-{{ section.id }} .advanced-content-flexible-ss .liquid-container-{{  block.id }} {
+                      padding-left: {% if block.settings.variant_padding %}calc(50vw - 750px + 50px){% else %} {{ block.settings.padding_left }}px {% endif %};
+                    }
+                  }
+                  @media (max-width: 768px) {
+                    #shopify-section-{{ section.id }} .advanced-content-flexible-ss .liquid-container-ss {
+                      padding-left: 17px;
+                      padding-right: 17px;
+                    }
+                    #shopify-section-{{ section.id }} .advanced-content-flexible-ss .navigation-bar-middle {
+                      display: block;
+                    }
+                  }
+                  @media (max-width: 425px) {
+                    #shopify-section-{{ section.id }} .page-width .advanced-content-flexible-ss {
+                      padding-right: 10px;
+                      padding-left: 10px;
+                    }
+                  }
+                {%- endstyle -%}
+                <div class="rte liquid-container-ss liquid-container-{{  block.id }} variant-left-padding">
+                  <div class="article__date">
+                    {{ featured_article.published_at | time_tag: format: 'month_day_year' }}
+                  </div>
+                  <h2 class="">
+                    {{ featured_article.title }}
+                  </h2>
+                  <div class="featured_article">
+                    <p>
+                      {{ featured_article.content | strip_html | truncatewords: 40 }}
+                    </p>
+                  </div>
+                </div>
+              {%- else -%}
+                <div class="rte">
+                  {{ 'home_page.onboarding.no_content' | t }}
+                </div>
+              {%- endif -%}
+            {%- when 'image' -%}
+              <div class="aos-animate">
+                {% liquid
+                  if block.settings.link != blank
+                    assign image_link = block.settings.link
+                  else
+                    assign image_link = featured_article.url
+                  endif
+                %}
+                {%- if image_link != blank -%}
+                  <a href="{{ image_link }}">
+                {%- endif -%}
+                {%- if featured_article.image != blank -%}
+                  <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: featured_article.image.aspect_ratio }}%;">
+                    {% comment %} {%- assign img_url = featured_article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%} {% endcomment %}
+                    <img class="lazyload"
+                        data-src="{{ img_url }}"
+                        data-widths="[360, 540, 720, 900, 1080, 1600]"
+                        data-aspectratio="{{ featured_article.image.aspect_ratio }}"
+                        data-sizes="auto"
+                        alt="{{ featured_article.image.alt }}">
+                    <noscript>
+                      <img class="lazyloaded" src="{{ featured_article.image | img_url: '400x' }}" alt="{{ featured_article.image.alt }}">
+                    </noscript>
+                  </div>
+                  {%- else -%}
+                    <div class="image-wrap">
+                      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                    </div>
+                {%- endif -%}
+                {%- if image_link != blank -%}
+                  </a>
+                {%- endif -%}
+              </div>
+          {%- endcase -%}
+        </div>
+      </div>
+    {%- endfor -%}
+    {%- if section.blocks.size == 0 -%}
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item">
+            <div class="rte">
+              {{ 'home_page.onboarding.no_content' | t }}
+            </div>
+          </div>
+        </div>
+    </div>
+    {%- endif -%}
+  </div>
+{%- unless section.settings.full_width -%}
+  </div>
+{%- endunless -%}
+{%- if section.settings.space_around -%}
+  </div>
+{%- endif -%}
+
+{%- paginate blog.articles by 9 -%}
+
+<div data-section-id="{{ section.id }}" data-section-type="blog">
+  <div class="page-width " style="padding-bottom: 0px !important;">
+
+    <div class="grid grid--uniform blog-template-container">
+      {%- for article in blog.articles -%}
+        {% if forloop.index0 < 6 %}
+          {%- render 'article-grid-item', article: article, grid_item_width: 'medium-up--one-third', per_row: '3', image_size: section.settings.blog_image_size -%}
+        {% endif %}
+      {%- endfor -%}
+    </div>
+
+  </div>
+</div>
+
+{%- endpaginate -%}
+
+{% schema %}
+  {
+    "name": "Featured Blog",
+    "settings": [
+      {
+        "type": "article",
+        "id": "featured_article",
+        "label": "Select a article"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full page width",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "space_around",
+        "label": "Add spacing above and below",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "header",
+        "content": "Line Break"
+      },
+      {
+        "type": "text",
+        "id": "additional_class",
+        "label": "Class Name(Dev)",
+        "info": "Don't change, If you are not Developer"
+      },
+      {
+        "type": "select",
+        "id": "blog_image_size",
+        "label": "Blog Image size",
+        "default": "wide",
+        "options": [
+          {
+            "value": "natural",
+            "label": "Natural"
+          },
+          {
+            "value": "square",
+            "label": "Square (1:1)"
+          },
+          {
+            "value": "landscape",
+            "label": "Landscape (4:3)"
+          },
+          {
+            "value": "portrait",
+            "label": "Portrait (2:3)"
+          },
+          {
+            "value": "wide",
+            "label": "Wide (16:9)"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "liquid",
+        "name": "HTML",
+        "settings": [
+          {
+            "type": "text",
+            "id": "liquid_name",
+            "label": "Liquid name"
+          },
+          {
+            "type": "liquid",
+            "id": "code",
+            "label": "HTML",
+            "default": "<h2>Custom content</h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.</p>",
+            "info": "Supports Liquid"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Width",
+            "default": "100%",
+            "options": [
+              {
+                "value": "25%",
+                "label": "25%"
+              },
+              {
+                "value": "33%",
+                "label": "33%"
+              },
+              {
+                "value": "40%",
+                "label": "40%"
+              },
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "60%",
+                "label": "60%"
+              },
+              {
+                "value": "66%",
+                "label": "66%"
+              },
+              {
+                "value": "75%",
+                "label": "75%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              }
+            ]
+          },
+          {
+            "type": "header",
+            "content": "Padding Settings",
+            "info": "These settings are for desktop only. They are set automatically on mobile."
+          },
+          {
+            "type": "checkbox",
+            "id": "variant_padding",
+            "label": "Variant Padding",
+            "default": true,
+            "info": "This will ignore the left padding config."
+          },
+          {
+            "type": "range",
+            "id": "padding_left",
+            "label": "Padding Left",
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 0,
+            "step": 5,
+            "info": "Default is 0"
+          },
+          {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 0,
+            "step": 5,
+            "info": "Default is 0"
+          },
+          {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 0,
+            "step": 5,
+            "info": "Default is 0"
+          },
+          {
+            "type": "range",
+            "id": "padding_right",
+            "label": "Padding Right",
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 30,
+            "step": 5,
+            "info": "Default is 30"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Width",
+            "default": "100%",
+            "options": [
+              {
+                "value": "25%",
+                "label": "25%"
+              },
+              {
+                "value": "33%",
+                "label": "33%"
+              },
+              {
+                "value": "40%",
+                "label": "40%"
+              },
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "60%",
+                "label": "60%"
+              },
+              {
+                "value": "66%",
+                "label": "66%"
+              },
+              {
+                "value": "75%",
+                "label": "75%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "alignment",
+            "label": "Vertical alignment",
+            "default": "center",
+            "info": "Aligns when next to other custom content",
+            "options": [
+              {
+                "value": "top-middle",
+                "label": "Top"
+              },
+              {
+                "value": "center",
+                "label": "Middle"
+              },
+              {
+                "value": "bottom-middle",
+                "label": "Bottom"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "child_block_button",
+        "name": "Button(Child Block)",
+        "settings": [
+          {
+            "type": "text",
+            "id": "parent_name",
+            "label": "Parent block name"
+          },
+          {
+            "type": "radio",
+            "id": "position",
+            "label": "Position",
+            "options": [
+              {
+                "value": "top",
+                "label": "Top"
+              },
+              {
+                "value": "bottom",
+                "label": "Bottom"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button text"
+          },
+          {
+            "type": "color",
+            "id": "button_background_color",
+            "label": "Button Background",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "button_border_color",
+            "label": "Button Border",
+            "default": "#138E7E"
+          },
+          {
+            "type": "color",
+            "id": "button_text_color",
+            "label": "Button Text Color",
+            "default": "#000000"
+          },
+          {
+            "type": "checkbox",
+            "id": "inclue_right_arrow",
+            "label": "Include right arrow"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Blog",
+        "blocks": [
+          {
+            "type": "image",
+            "settings": {
+              "width": "50%"
+            }
+          },
+          {
+            "type": "liquid",
+            "settings": {
+              "width": "50%"
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

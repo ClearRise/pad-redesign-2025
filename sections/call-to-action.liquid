@@ -1,0 +1,327 @@
+<style>
+  .line-break-container-ss {
+    display: flex;
+    align-items: center;
+  }
+  .right-line-ss, .left-line-ss {
+    height: 1px;
+    flex: 1;
+    background-color: {{ section.settings.top_line_color }};
+  }
+  .center-logo-ss {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .line-break-container-ss + .index-section {
+    margin-top: 20px !important;
+  }
+  .line-break-container-ss + .index-section .aos-animate {
+    margin-bottom: 20px;
+  }
+</style>
+<div class="line-break-container-ss">
+  <div class="right-line-ss"></div>
+  <div class="center-logo-ss">
+    <img src="{{ section.settings.top_logo }}" width="{{ section.settings.top_logo_size }}px" height="{{ section.settings.top_logo_size }}px" />
+  </div>
+  <div class="left-line-ss"></div>
+</div>
+{%- if section.settings.space_around -%}
+    <div class="index-section">
+  {%- endif -%}
+  {%- unless section.settings.full_width -%}
+    <div class="page-width">
+  {%- endunless -%}
+    <div class="custom-content">
+    {%- for block in section.blocks -%}
+      {%- liquid
+        case block.settings.width
+          when '25%'
+            assign block_width = 'small--one-whole one-quarter'
+          when '33%'
+            assign block_width = 'small--one-whole one-third'
+          when '50%'
+            assign block_width = 'small--one-whole one-half'
+          when '66%'
+            assign block_width = 'small--one-whole two-thirds'
+          when '75%'
+            assign block_width = 'small--one-whole three-quarters'
+          when '100%'
+            assign block_width = 'one-whole'
+        endcase
+      -%}
+      <div class="custom__item {{ block_width }}{% if block.settings.alignment %} align--{{ block.settings.alignment }}{% endif %}" {{ block.shopify_attributes }}>
+        <div class="custom__item-inner custom__item-inner--{{ block.type }}{% if block.settings.image == blank and block.type == 'image' %} custom__item-inner--placeholder-image{% endif %}">
+          {%- case block.type -%}
+            {%- when 'liquid' -%}
+              {%- if block.settings.code != blank -%}
+                <div class="rte">
+                  {{ block.settings.code }}
+  
+                  {% if block.settings.button_label != blink %}
+                    {% comment %} <a class="btn btn-black-ss" href="{{ block.settings.url }}">
+                      {{ block.settings.button_label }}
+                      <svg fill="currentColor" width="64px" height="64px" viewBox="0 0 24 24" id="right-arrow" xmlns="http://www.w3.org/2000/svg" class="icon line">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                        <g id="SVGRepo_iconCarrier">
+                        <path id="primary" d="M3,12H21m-3,3,3-3L18,9" style="fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;"/>
+                        </g>
+                      </svg>
+                    </a> {% endcomment %}
+                    {% render 'button-ss', color: block.settings.button_color, url: block.settings.url, label: block.settings.button_label %}
+                  {% endif %}
+                </div>
+              {%- else -%}
+                <div class="rte">
+                  {{ 'home_page.onboarding.no_content' | t }}
+                </div>
+              {%- endif -%}
+            {%- when 'image' -%}
+              <div class="aos-animate">
+                <div>
+                  {{ block.settings.right_text }}
+                </div>
+              </div>
+          {%- endcase -%}
+        </div>
+      </div>
+    {%- endfor -%}
+    {%- if section.blocks.size == 0 -%}
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item">
+            <div class="rte">
+              {{ 'home_page.onboarding.no_content' | t }}
+            </div>
+          </div>
+        </div>
+     </div>
+    {%- endif -%}
+    </div>
+  {%- unless section.settings.full_width -%}
+    </div>
+  {%- endunless -%}
+  {%- if section.settings.space_around -%}
+    </div>
+  {%- endif -%}
+  
+  {% schema %}
+    {
+      "name": "Custom content",
+      "max_blocks": 3,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "full_width",
+          "label": "Full page width",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "space_around",
+          "label": "Add spacing above and below",
+          "default": true
+        },
+        {
+          "type": "color",
+          "id": "top_line_color",
+          "label": "Top Line Color",
+          "default": "#138F7E"
+        },
+        {
+          "type": "image_picker",
+          "id": "top_logo",
+          "label": "Top Line Logo"
+        },
+        {
+          "type": "range",
+          "id": "top_logo_size",
+          "label": "Top Logo Size",
+          "min": 10,
+          "max": 100,
+          "default": 30,
+          "unit": "px"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "liquid",
+          "name": "HTML",
+          "settings": [
+            {
+              "type": "liquid",
+              "id": "code",
+              "label": "HTML",
+              "default": "<h2>Custom content</h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.</p>",
+              "info": "Supports Liquid"
+            },
+            {
+              "type": "text",
+              "id": "button_label",
+              "label": "Button Label",
+              "default": "Discover Yours"
+            },
+            {
+              "type": "url",
+              "id": "button_url",
+              "label": "Link"
+            },
+            {
+              "type": "select",
+              "id": "button_color",
+              "label": "Button Color",
+              "default": "white",
+              "options": [
+                {
+                  "value": "white",
+                  "label": "White"
+                },
+                {
+                  "value": "black",
+                  "label": "Black"
+                }
+              ]
+            },
+            {
+              "type": "select",
+              "id": "width",
+              "label": "Width",
+              "default": "100%",
+              "options": [
+                {
+                  "value": "25%",
+                  "label": "25%"
+                },
+                {
+                  "value": "33%",
+                  "label": "33%"
+                },
+                {
+                  "value": "50%",
+                  "label": "50%"
+                },
+                {
+                  "value": "66%",
+                  "label": "66%"
+                },
+                {
+                  "value": "75%",
+                  "label": "75%"
+                },
+                {
+                  "value": "100%",
+                  "label": "100%"
+                }
+              ]
+            },
+            {
+              "type": "select",
+              "id": "alignment",
+              "label": "Vertical alignment",
+              "default": "center",
+              "info": "Aligns when next to other custom content",
+              "options": [
+                {
+                  "value": "top-middle",
+                  "label": "Top"
+                },
+                {
+                  "value": "center",
+                  "label": "Middle"
+                },
+                {
+                  "value": "bottom-middle",
+                  "label": "Bottom"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "name": "Right Title",
+          "settings": [
+            {
+              "type": "richtext",
+              "id": "right_text",
+              "label": "Title"
+            },
+            {
+              "type": "select",
+              "id": "width",
+              "label": "Width",
+              "default": "100%",
+              "options": [
+                {
+                  "value": "25%",
+                  "label": "25%"
+                },
+                {
+                  "value": "33%",
+                  "label": "33%"
+                },
+                {
+                  "value": "50%",
+                  "label": "50%"
+                },
+                {
+                  "value": "66%",
+                  "label": "66%"
+                },
+                {
+                  "value": "75%",
+                  "label": "75%"
+                },
+                {
+                  "value": "100%",
+                  "label": "100%"
+                }
+              ]
+            },
+            {
+              "type": "select",
+              "id": "alignment",
+              "label": "Vertical alignment",
+              "default": "center",
+              "info": "Aligns when next to other custom content",
+              "options": [
+                {
+                  "value": "top-middle",
+                  "label": "Top"
+                },
+                {
+                  "value": "center",
+                  "label": "Middle"
+                },
+                {
+                  "value": "bottom-middle",
+                  "label": "Bottom"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Custom content",
+          "blocks": [
+            {
+              "type": "image",
+              "settings": {
+                "width": "50%"
+              }
+            },
+            {
+              "type": "liquid",
+              "settings": {
+                "width": "50%"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  {% endschema %}
+  

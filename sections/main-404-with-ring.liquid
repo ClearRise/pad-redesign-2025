@@ -1,0 +1,127 @@
+{%- liquid
+  assign image_0 = section.settings.image_0
+-%}
+
+{% style %}
+.main-404-with-ring-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.main-404-with-ring-wrapper .main-404-part {
+  display: flex;
+  align-items: stretch;
+}
+.main-404-with-ring-wrapper .main-404-part .letter-404 {
+  display: flex;
+  font-size: 300px;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .main-404-with-ring-wrapper .main-404-part .letter-404 {
+    font-size: 200px;
+  }
+}
+@media (max-width: 425px) {
+  .main-404-with-ring-wrapper .main-404-part .letter-404 {
+    font-size: 150px;
+  }
+}
+.main-404-with-ring-wrapper .main-404-part .letter-404-0 img {
+  max-height: 200px;
+}
+@media (max-width: 768px) {
+  .main-404-with-ring-wrapper .main-404-part .letter-404-0 img {
+    max-height: 130px;
+  }
+}
+@media (max-width: 425px) {
+  .main-404-with-ring-wrapper .main-404-part .letter-404-0 img {
+    max-height: 100px;
+  }
+}
+.main-404-with-ring-wrapper .description {
+  position: relative;
+  top: -50px;
+}
+@media (max-width: 768px) {
+  .main-404-with-ring-wrapper .description {
+    top: 0px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 425px) {
+  .main-404-with-ring-wrapper .description {
+    top: -10px;
+    margin-bottom: 30px;
+  }
+}
+.main-404-with-ring-wrapper .btn-container {
+  margin-bottom: 50px;
+}
+.main-404-with-ring-wrapper .btn-container a svg {
+  margin-left: 80px !important;
+}
+@media (max-width: 425px) {
+  .main-404-with-ring-wrapper .btn-container a svg {
+    margin-left: 40px !important;
+  }
+}/*# sourceMappingURL=main-404-with-ring.css.map */
+{% endstyle %}
+<div class="main-404-with-ring-container {% if section.settings.full_width %} page-width{% endif %}">
+  <div class="main-404-with-ring-wrapper">
+    <div class="main-404-part">
+      <div class="letter-404 letter-404-4">4</div>
+      <div class="letter-404 letter-404-0">
+        {% if image_0 != blank %}
+          <img src="{{ image_0 | img_url: 'master' }}" />
+        {% else %}
+          0
+        {% endif %}
+      </div>
+      <div class="letter-404 letter-404-4">4</div>
+    </div>
+    <div class="description">{{ section.settings.description }}</div>
+    <div class="btn-container">
+      <a href="/" class="btn btn-black-ss">go home {% render 'icon-arrow-right' %}</a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "404 main with ring",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Design"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full page width",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Main config"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_0",
+      "label": "Central Image"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description"
+    }
+  ],
+  "presets": [
+    {
+      "name": "404 main with ring"
+    }
+  ]
+}
+{% endschema %}

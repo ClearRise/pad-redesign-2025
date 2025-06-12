@@ -1,0 +1,113 @@
+
+{%- liquid
+  assign blocks = section.blocks
+  assign background_color = section.settings.background_color
+  assign icon_color = section.settings.icon_color
+-%}
+
+{{ 'icon-group-bar.css' | asset_url | stylesheet_tag: preload: true }}
+{%- style -%}
+.trust-icons-section--{{ section.id }} {
+  padding-top: {{ section.settings.top_padding }}px;
+  padding-bottom: {{ section.settings.bottom_padding }}px;
+  background-color: {{ background_color }};
+}
+.trust-icons-section--{{ section.id }} .trust-icons-container-ss .trust-icon-ss svg {
+  fill: {{ icon_color }};
+}
+.trust-icons-section--{{ section.id }} .trust-icons-container-ss .trust-label-ss {
+  color: {{ icon_color }};
+}
+@media (max-width: 768px) {
+  .trust-icons-section--{{ section.id }} {
+    padding-top: {{ section.settings.top_padding | times: 0.4 }}px;
+    padding-bottom: {{ section.settings.bottom_padding | times: 0.4 }}px;
+  }
+}
+{%- endstyle -%}
+
+<div class="trust-icons-section-ss trust-icons-section--{{ section.id }}">
+  <div class="trust-icons-container-ss">
+    {% for block in blocks %}
+      {% case block.type %}
+        {% when 'icon' %}
+          <div class="trust-icons-wrapper-ss">
+            <div class="trust-icon-ss">
+              <img src="{{ block.settings.icon | image_url: width: 50, height: 50 }}">
+            </div>
+            <div class="trust-label-ss">{{ block.settings.label }}</div>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Icon Group",
+  "settings": [
+    {
+      "id": "icon_color",
+      "type": "color",
+      "label": "Color"
+    },
+    {
+      "id": "background_color",
+      "type": "color",
+      "label": "Background Color"
+    },
+    {
+      "type": "range",
+      "id": "top_padding",
+      "label": "Top Padding",
+      "default": 0,
+      "unit": "px",
+      "max": 100,
+      "min": 0
+    },
+    {
+      "type": "range",
+      "id": "bottom_padding",
+      "label": "Bottom Padding",
+      "default": 0,
+      "unit": "px",
+      "max": 100,
+      "min": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon",
+      "name": "Icon",
+      "settings": [
+        {
+          "id": "icon",
+          "type": "image_picker",
+          "label": "Icon"
+        },
+        {
+          "id": "label",
+          "type": "text",
+          "label": "Label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon Group",
+      "blocks": [
+        {
+          "type": "icon"
+        },
+        {
+          "type": "icon"
+        },
+        {
+          "type": "icon"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
