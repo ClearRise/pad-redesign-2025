@@ -1,0 +1,204 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+  "sections": {
+    "advanced_content_flexible_L8rajD": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "liquid_ip4WLA": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "",
+            "code": "<h2>FAQS</h2><p>Frequently Asked Questions (FAQs)</p>\n<p>Below is a list of Frequently Asked Questions (FAQs) regarding Patrick Adair Designs. If you have a question that isn't answered here, or would like further information on our brand or a specific product, please contact us.</p>",
+            "width": "100%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": false,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "liquid_ip4WLA"
+      ],
+      "custom_css": [
+        ".liquid-container-ss {height: 271px; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center;}",
+        "h2 {text-align: center; margin-bottom: 0px !important;}",
+        "p {margin-block: 0px; max-width: 800px;}",
+        "@media (max-width: 767px) {.liquid-container-ss {height: 250px; } h2 {font-size: 42px; }}",
+        "@media (max-width: 425px) {.liquid-container-ss {height: 220px; } h2 {font-size: 36px; }}",
+        "@media (max-width: 375px) {.liquid-container-ss {height: 180px; } h2 {font-size: 28px; }}"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": false,
+        "background_color": "#d7cfcf",
+        "small_image": false,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 16,
+        "additional_class": ""
+      }
+    },
+    "advanced_content_flexible_af9pn9": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "liquid_FJqtgb": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "",
+            "code": "<style>\n.page-normal-contents {\n  max-width: 850px !important;\n  box-sizing: border-box;\n  margin: auto;\n}\n.page-normal-contents .custom__item .liquid-container-ss {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.page-normal-contents h3 {\n  margin-bottom: 10px;\n  font-size: 40px;\n  line-height: 56px;\n  margin-top: 20px !important;\n}\n@media (max-width: 1024px) {\n  .page-normal-contents h3 {\n    font-size: 32px;\n    line-height: 40px;\n  }\n}\n@media (max-width: 767px) {\n  .page-normal-contents h3 {\n    font-size: 28px;\n    line-height: 36px;\n  }\n}\n.page-normal-contents h4 {\n  margin-bottom: 10px;\n  font-size: 30px;\n  line-height: 40px;\n  margin-top: 20px !important;\n  padding: 0px;\n  font-weight: 500;\n  letter-spacing: 2px;\n}\n@media (max-width: 1024px) {\n  .page-normal-contents h4 {\n    font-size: 20px;\n    line-height: 36px;\n  }\n}\n@media (max-width: 767px) {\n  .page-normal-contents h4 {\n    font-size: 16px;\n    line-height: 30px;\n  }\n}\n.page-normal-contents p {\n  font-size: 16px;\n  line-height: 24px;\n  margin-bottom: 10px !important;\n}\n@media (max-width: 767px) {\n  .page-normal-contents p {\n    font-size: 14px;\n    line-height: 22px;\n    margin-bottom: 5px !important;\n  }\n}\n.page-normal-contents ul {\n  margin-top: 10px;\n}\n.page-normal-contents ul li {\n  font-size: 16px;\n  line-height: 30px;\n  display: block !important;\n  border-width: 0px !important;\n}\n@media (max-width: 767px) {\n  .page-normal-contents ul li {\n    font-size: 14px;\n    line-height: 22px;\n  }\n}\n.page-normal-contents ul ::marker {\n  font-size: 24px;\n  color: #138E7E;\n}\n@media (max-width: 767px) {\n  .page-normal-contents ul ::marker {\n    font-size: 20px;\n  }\n}\n.page-normal-contents .image-wrap {\n  margin-top: 10px;\n}\n.page-normal-contents .custom-content ul li {\n  border-bottom-width: 0px !important;\n}\n.page-normal-contents .collapsible-trigger-btn {\n  text-align: left !important;\n  border-width: 0px;\n  border-bottom: 1px solid #ccc;\n}\n</style>",
+            "width": "100%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "tab_PefbPc": {
+          "type": "tab",
+          "settings": {
+            "expanded": true,
+            "style": "box",
+            "title": "When will my ring ship?",
+            "content": "<p>Every Patrick Adair Designs ring is handmade, made to order. Each order is crafted by a highly-trained artisan with thought and integrity in an extremely time consuming process. Our lead times vary and are estimates. Production depends on a variety of factors including but not limited to - material availability, labor availability, and order volume. For a detailed breakdown on how quickly we are shipping our products, check out our <a href=\"https://patrickadairdesigns.com/pages/shipping-information\" target=\"_self\"><strong>Shipping Information </strong></a>page.</p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "tab_diEWCk": {
+          "type": "tab",
+          "settings": {
+            "expanded": true,
+            "style": "box",
+            "title": "Where do you get your meteorite?",
+            "content": "<p></p><p>All of our meteorite is currently sourced from meteorite dealers that we find either through eBay or that we know through personal connections. We use authentic and genuine Meteorite for all of our meteorite products.</p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "tab_dAcG4Q": {
+          "type": "tab",
+          "settings": {
+            "expanded": true,
+            "style": "box",
+            "title": "How does the glow work on your glowstone rings?",
+            "content": "<p>The glow comes from strontium aluminate, which is a natural crystal powder that glows after being charged with a UV light. It is nontoxic and glows brighter and longer than copper activated zinc sulfide, which is one of its most popular competitors. Check out our blog post on<a href=\"https://patrickadairdesigns.com/blogs/blog/how-to-get-your-glow-ring-to-glow\" title=\"https://patrickadairdesigns.com/blogs/blog/how-to-get-your-glow-ring-to-glow\"><strong>How Our Glow Rings Glow</strong></a> for more information on how to charge and how long they glow for</p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "tab_NpDk3y": {
+          "type": "tab",
+          "settings": {
+            "expanded": true,
+            "style": "box",
+            "title": "What is Damascus Steel?",
+            "content": "<p>Damascus steel is created by combining strips of either iron and steel or two different kinds of steel. They are then heated and forged to create a new and stronger steel. The material has a similar silver color; however, if it is placed in an acid bath, the acid will eat at the different combinations of steel at different rates to form a woodgrain pattern that makes <a href=\"https://patrickadairdesigns.com/collections/damascus-steel-rings\" target=\"_self\"><strong>Damascus Steel Rings </strong></a>incredibly unique.<br/><br/></p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "tab_dDNYBi": {
+          "type": "tab",
+          "settings": {
+            "expanded": true,
+            "style": "box",
+            "title": "What if I order the wrong size?",
+            "content": "<p>We offer one free size exchange for all non-custom rings. Don't hesitate to contact us if you order the wrong size. Email us at support@patrickadairdesigns.com and we will be happy to figure out the best solution for your case.</p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "tab_mjbcjz": {
+          "type": "tab",
+          "settings": {
+            "expanded": true,
+            "style": "box",
+            "title": "Do you ship internationally?",
+            "content": "<p>Yes, we ship worldwide through DHL and UPS. Shpiping rates are based off of destination and any orders with value exceeding $700 USD ship for free through DHL Express Worldwide.</p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
+        "tab_7UT6ex": {
+          "type": "tab",
+          "settings": {
+            "expanded": true,
+            "style": "box",
+            "title": "Do I need to pay a VAT on international orders?",
+            "content": "<p>Additional charges for customs clearance are borne by the recipient and are not included in the price of shipping. We have no control over these charges and cannot predict what they may be. To find out whether you are likely to end up paying a Value Added Tax (VAT), please check your local customs and import policy.</p>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        }
+      },
+      "block_order": [
+        "liquid_FJqtgb",
+        "tab_PefbPc",
+        "tab_diEWCk",
+        "tab_dAcG4Q",
+        "tab_NpDk3y",
+        "tab_dDNYBi",
+        "tab_mjbcjz",
+        "tab_7UT6ex"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": true,
+        "background_color": "#ffffff",
+        "small_image": false,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 16,
+        "additional_class": "page-normal-contents"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_display": true
+      }
+    },
+    "17337712779db4757c": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "advanced_content_flexible_L8rajD",
+    "advanced_content_flexible_af9pn9",
+    "main",
+    "17337712779db4757c"
+  ]
+}

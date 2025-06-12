@@ -1,0 +1,231 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+  "sections": {
+    "advanced_content_flexible_4NNTGk": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "liquid_zwWf6p": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "",
+            "code": "<h2>Privacy and Policy</h2>",
+            "width": "100%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        }
+      },
+      "block_order": [
+        "liquid_zwWf6p"
+      ],
+      "custom_css": [
+        ".liquid-container-ss {height: 271px; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; gap: 10px; max-width: 700px; margin: auto;}",
+        "h2 {text-align: center; margin-bottom: 0px !important;}",
+        "@media (max-width: 767px) {.liquid-container-ss {height: 250px; } h2 {font-size: 42px; }}",
+        "@media (max-width: 425px) {.liquid-container-ss {height: 220px; } h2 {font-size: 36px; }}",
+        "@media (max-width: 375px) {.liquid-container-ss {height: 180px; } h2 {font-size: 28px; }}"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": true,
+        "background_color": "#ffffff",
+        "small_image": false,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 16,
+        "additional_class": ""
+      }
+    },
+    "advanced_content_flexible_EkcH7r": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "liquid_kxGWhM": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "",
+            "code": "<h2>Personal Information We Collect</h2><p>When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the Site, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the Site, and information about how you interact with the Site. We refer to this automatically-collected information as \"Device Information.\"</p>",
+            "width": "100%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "liquid_6rpkX8": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "",
+            "code": "<style>\n.page-normal-contents {\n  max-width: 850px !important;\n  box-sizing: border-box;\n  margin: auto;\n}\n.page-normal-contents .custom__item .liquid-container-ss {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.page-normal-contents h3 {\n  margin-bottom: 10px;\n  font-size: 40px;\n  line-height: 56px;\n  margin-top: 20px !important;\n}\n@media (max-width: 1024px) {\n  .page-normal-contents h3 {\n    font-size: 32px;\n    line-height: 40px;\n  }\n}\n@media (max-width: 767px) {\n  .page-normal-contents h3 {\n    font-size: 28px;\n    line-height: 36px;\n  }\n}\n.page-normal-contents p {\n  font-size: 16px;\n  line-height: 24px;\n  margin-bottom: 10px !important;\n}\n@media (max-width: 767px) {\n  .page-normal-contents p {\n    font-size: 14px;\n    line-height: 22px;\n    margin-bottom: 5px !important;\n  }\n}\n.page-normal-contents ul {\n  margin-top: 10px;\n}\n.page-normal-contents ul li {\n  font-size: 16px;\n  line-height: 30px;\ndisplay: block !important;\nborder-width: 0px !important;\n}\n@media (max-width: 767px) {\n  .page-normal-contents ul li {\n    font-size: 14px;\n    line-height: 22px;\n  }\n}\n.page-normal-contents ul ::marker {\n  font-size: 24px;\n  color: #138E7E;\n}\n@media (max-width: 767px) {\n  .page-normal-contents ul ::marker {\n    font-size: 20px;\n  }\n}\n.page-normal-contents .image-wrap {\n  margin-top: 10px;\n}\n.page-normal-contents .table-container {\n  overflow: auto;\n  margin-bottom: 15px !important;\n}\n.page-normal-contents .table {\n  margin-top: 15px;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid #ccc;\n  border-right: 0px;\n  width: 100%;\n}\n@media (max-width: 767px) {\n  .page-normal-contents .table {\n    min-width: 510px;\n  }\n}\n.page-normal-contents .table .row {\n  display: flex;\n}\n.page-normal-contents .table .row .cell {\n  flex: 5;\n  padding: 15px 0px;\n  border-right: 1px solid #ccc;\n  text-align: center;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n@media (max-width: 767px) {\n  .page-normal-contents .table .row .cell {\n    padding: 7px 0px;\n    font-size: 14px;\n  }\n}\n.page-normal-contents .table .row .cell svg {\n  padding: 0px;\n  height: 32px;\n  width: 32px;\n}\n@media (max-width: 767px) {\n  .page-normal-contents .table .row .cell svg {\n    height: 24px;\n    width: 24px;\n  }\n}\n.page-normal-contents .table .row .cell.cell-false {\n  color: #E32020;\n}\n.page-normal-contents .table .row .cell sup {\n  padding: 3px !important;\n  display: inline;\n  flex: 0;\n}\n.page-normal-contents .table .row.header {\n  font-weight: 500;\n  background-color: #000000;\n  color: white;\n  text-align: center;\n}\n.page-normal-contents .table .row.header .cell {\n  padding: 15px 0px;\n  justify-content: center;\n}\n@media (max-width: 767px) {\n  .page-normal-contents .table .row.header .cell {\n    padding: 7px 0px;\n    font-size: 14px;\n  }\n}\n.page-normal-contents .table .row.header :first-child {\n  text-align: left;\n  padding: 15px 20px;\n  justify-content: flex-start;\n}\n@media (max-width: 767px) {\n  .page-normal-contents .table .row.header :first-child {\n    padding: 7px 10px;\n  }\n}\n.page-normal-contents .table .row :first-child {\n  flex: 12;\n  padding: 15px 20px;\n  text-align: left;\n  justify-content: flex-start;\n}\n@media (max-width: 767px) {\n  .page-normal-contents .table .row :first-child {\n    padding: 7px 10px;\n  }\n}\n</style>",
+            "width": "100%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "liquid_3nN66y": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "",
+            "code": "<h3>We collect Device Information using the following technologies</h3>\n\n<ul>\n  <li>\n    <strong>Cookies</strong> – data files that are placed on your device or computer and often include an anonymous unique identifier. For more information about cookies, and how to disable cookies, visit \n    <a href=\"http://www.allaboutcookies.org\" target=\"_blank\" rel=\"noopener noreferrer\">http://www.allaboutcookies.org</a>.\n  </li>\n  <li>\n    <strong>Log files</strong> – track actions occurring on the Site, and collect data including your IP address, browser type, Internet service provider, referring/exit pages, and date/time stamps.\n  </li>\n</ul>\n\n<p>Additionally, when you make a purchase or attempt to make a purchase through the Site, we collect certain information from you, including your name, billing address, shipping address, payment information (including credit card numbers), email address, and phone number. We refer to this information as <strong>\"Order Information.\"</strong></p>\n\n<p>When we talk about <strong>\"Personal Information\"</strong> in this Privacy Policy, we are talking both about Device Information and Order Information.</p>",
+            "width": "100%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "liquid_CqcRLt": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "",
+            "code": "<h2>How do we use your personal information?</h2><p>We use the Order Information that we collect generally to fulfill any orders placed through the Site (including processing your payment information, arranging for shipping, and providing you with invoices and/or order confirmations).</p>\n\n<p>Additionally, we use this Order Information to: Communicate with you; Screen our orders for potential risk or fraud; and when in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services.</p>\n\n<p>When we talk about \"Personal Information\" in this Privacy Policy, we are talking both about Device Information and Order Information.</p>",
+            "width": "100%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "liquid_DJWggx": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "",
+            "code": "<h2>Sharing your personal information</h2><p>We share your Personal Information with third parties to help us use your Personal Information, as described above. For example, we use Shopify to power our online store—you can read more about how Shopify uses your Personal Information here: <a href=\"https://www.shopify.com/legal/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.shopify.com/legal/privacy</a>.</p>\n\n<p>We also use Google Analytics to help us understand how our customers use the Site—you can read more about how Google uses your Personal Information here: <a href=\"https://www.google.com/intl/en/policies/privacy/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.google.com/intl/en/policies/privacy/</a>. You can also opt out of Google Analytics here: <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener noreferrer\">https://tools.google.com/dlpage/gaoptout</a>.</p>\n\n<p>Finally, we may also share your Personal Information to comply with applicable laws and regulations, to respond to a subpoena, search warrant, or other lawful request for information we receive, or to otherwise protect our rights.</p>",
+            "width": "100%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "liquid_pfVGCf": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "",
+            "code": "<h3>Do Not Track</h3>\n<p>Please note that we do not alter our Site's data collection and use practices when we see a Do Not Track signal from your browser.</p>\n\n<h3>Your Rights</h3>\n<p>If you are a European resident, you have the right to access personal information we hold about you and to ask that your personal information be corrected, updated, or deleted. If you would like to exercise this right, please contact us through the contact information below.</p>\n\n<p>Additionally, if you are a European resident we note that we are processing your information in order to fulfill contracts we might have with you (for example, if you make an order through the Site), or otherwise to pursue our legitimate business interests listed above. Additionally, please note that your information will be transferred outside of Europe, including to Canada and the United States.</p>",
+            "width": "100%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "liquid_ahBBTU": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "",
+            "code": "<h3>Data Retention</h3>\n\n<ul>\n  <li>Third Party Pixels and Cookies</li>\n</ul>\n\n<p>Notwithstanding anything else in this policy, we and/or our partners may use pixels and pixel tags, and place, read or use cookies that collect information from your device and/or Internet browser. These cookies do not contain personally identifiable information, however, it may be possible for our third-party business partners to combine it with other information in order to identify your email address or other personally identifiable information about you.</p>\n\n<p>For example, the cookies may reflect de-identified demographic or other data linked to data you voluntarily have submitted to us, e.g., your email address, which we may share with a data provider solely in hashed, non-human readable form.</p>\n\n<p>By using our Service, you agree that we and our third-party partners may store, sell, port, combine with other data, monetize, utilize, and otherwise use either (i) the personally indefinable information about you that we share with them, or (ii) the personally identifiable information they discover and/or identify as described above.</p>\n\n<p>Visitors can also express their choices for display advertising through the following platforms: Digital Advertising Alliance opt-out platform or the Network Advertising Initiative opt-out platform.</p>\n\n<p>We and/or our partners may also use cookies for delivering personalized advertising emails. These cookies are used to identify the visitors of our advertisers' websites and send personalized emails based on the visitors' browsing experience.</p>\n\n<p>We and/or our partners use cookies, pixels, and other tracking technology to associate certain Internet-related information about you, such as your Internet Protocol address and what Web browser you are using, with certain of your online behaviors, such as opening emails or browsing websites. Such information is used to customize ads or content and may be shared with our partners.</p>",
+            "width": "100%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "liquid_wCNyWG": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "",
+            "code": "<h3>Changes</h3>\n\n<p>We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal, or regulatory reasons.</p>",
+            "width": "100%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        }
+      },
+      "block_order": [
+        "liquid_kxGWhM",
+        "liquid_6rpkX8",
+        "liquid_3nN66y",
+        "liquid_CqcRLt",
+        "liquid_DJWggx",
+        "liquid_pfVGCf",
+        "liquid_ahBBTU",
+        "liquid_wCNyWG"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": true,
+        "background_color": "#ffffff",
+        "small_image": false,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 16,
+        "additional_class": "page-normal-contents"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_display": true
+      }
+    },
+    "17337712779db4757c": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "advanced_content_flexible_4NNTGk",
+    "advanced_content_flexible_EkcH7r",
+    "main",
+    "17337712779db4757c"
+  ]
+}
