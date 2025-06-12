@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "advanced_content_flexible_wTQDya": {
       "type": "advanced-content-flexible",
@@ -16,7 +16,7 @@
           "type": "liquid",
           "settings": {
             "liquid_name": "",
-            "code": "<div>\n    <h2>\n      We offer financing with <img src=\"https://cdn.shopify.com/s/files/1/2126/0063/files/klarna.png?v=1741624564\" /> &amp; <img src=\"https://cdn.shopify.com/s/files/1/2126/0063/files/shop_pay.png?v=1741624564\" />\n    </h2>\n    <p>\n      It is important to take care of the patient, to be followed by the patient, but it will happen at such a time that there is a lot of work and pain. To come to the smallest detail, who is ours?\n    </p>\n  </div>",
+            "code": "<br>\n<div>\n    <h2>\n      We offer financing with <img src=\"https://cdn.shopify.com/s/files/1/2126/0063/files/klarna.png?v=1741624564\" /> &amp; <img src=\"https://cdn.shopify.com/s/files/1/2126/0063/files/shop_pay.png?v=1741624564\" />\n    </h2>\n    <p>\n      It is important to take care of the patient, to be followed by the patient, but it will happen at such a time that there is a lot of work and pain. To come to the smallest detail, who is ours?\n    </p>\n  </div>\n<br>",
             "width": "40%",
             "alignment": "center",
             "text_color": "#000000",
@@ -49,7 +49,7 @@
         "full_width": true,
         "show_navigation": true,
         "image_first": true,
-        "space_around": true,
+        "space_around": false,
         "background_color": "#ffffff",
         "small_image": false,
         "is_top_line": false,
@@ -111,9 +111,9 @@
         "card_dg9CkG": {
           "type": "card",
           "settings": {
-            "card_title": "Payment process",
+            "card_title": "Interest and Fees",
             "card_badge": "shopify://shop_images/klarna.png",
-            "card_contents": "<ul><li>Use a valid debit or credit card (no prepaid cards).</li><li>First payment is charged when the order is placed.</li><li>The next 3 payments are automatically charged every 2 weeks.</li></ul>",
+            "card_contents": "<ul><li>No interest or fees if the automatic payment schedule is followed.</li><li>A late fee of up to $7 may apply if an automatic payment fails.</li></ul>",
             "button": "",
             "button_url": ""
           }
@@ -121,9 +121,9 @@
         "card_XgXEQD": {
           "type": "card",
           "settings": {
-            "card_title": "Payment process",
+            "card_title": "Pay Later in 4 Installments",
             "card_badge": "shopify://shop_images/klarna.png",
-            "card_contents": "<ul><li>Use a valid debit or credit card (no prepaid cards).</li><li>First payment is charged when the order is placed.</li><li>The next 3 payments are automatically charged every 2 weeks.</li></ul>",
+            "card_contents": "<ul><li>Card issuers may charge interest or fees, so contact them for questions.</li><li>All products on the website qualify for Klarna's \"Pay Later in 4 Installments.\"</li></ul>",
             "button": "",
             "button_url": ""
           }
@@ -234,18 +234,18 @@
           "type": "description",
           "settings": {
             "description_title": "Representations and warranties",
-            "description_preview": "<p>By using Shop you represent and warrant that (i) you are at least 18 years of age, (ii) the information you<br/><br/>provide in<br/><br/>using Shop is true, accurate, and complete, and will not violate any applicable laws, regulations or rights of third parties, (iii) you will not use Shop for any fraudulent, unlawful or abusive purpose, and (iv) your use of Shop is...</p>",
-            "description_preview_mobile": "<p>By using Shop you represent and warrant that (i) you are at least 18 years of age, (ii) the information you provide in using Shop is true, accurate, and complete, and will not violate any applicable laws, regulations or rights of  ...</p>",
-            "description_main": ""
+            "description_preview": "<p>By using Shop you represent and warrant that (i) you are at least 18 years of age, (ii) the information you provide in using Shop is true, accurate, and complete, and will not violate any applicable laws, regulations or rights of third parties...</p>",
+            "description_preview_mobile": "<p>By using Shop you represent and warrant that (i) you are at least 18 years of age, (ii) the information you provide in using Shop is true, accurate, and complete, and will not violate any applicable laws, regulations or rights of third parties...</p>",
+            "description_main": "<p>By using Shop you represent and warrant that (i) you are at least 18 years of age, (ii) the information you provide in using Shop is true, accurate, and complete, and will not violate any applicable laws, regulations or rights of third parties, (iii) you will not use Shop for any fraudulent, unlawful or abusive purpose, and (iv) your use of Shop is not in violation of any obligation imposed on you.</p>"
           }
         },
         "description_jRd6VU": {
           "type": "description",
           "settings": {
             "description_title": "Prohibited Uses",
-            "description_preview": "<p>In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using Shop, its content, or any of the services available through the Shop: (i) for any unlawful purpose; (ii) to solicit others to perform or participate in any unlawful acts; (iii) to violate any international, federal, or local laws, regulations, rules, or ordinances; (iv) to infringe upon or violate our intellectual property rights or the intellectual property ri...</p>",
+            "description_preview": "<p>In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using Shop, its content, or any of the services available through the Shop: (i) for any unlawful purpose; (ii) to solicit others to perform or participate...</p>",
             "description_preview_mobile": "<p>In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using Shop, its content, or any of the services available through the Shop: (i) for any unlawful purpose; (ii) to solicit others to perform or participate...</p>",
-            "description_main": ""
+            "description_main": "<p>In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using Shop, its content, or any of the services available through the Shop: (i) for any unlawful purpose; (ii) to solicit others to perform or participate in any unlawful acts; (iii) to violate any international, federal, or local laws, regulations, rules, or ordinances; (iv) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (v) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (vi) to submit false or misleading information; (vii) to upload or transmit viruses or any other type of malicious or destructive code; (viii) to collect or track the personal information of others; (ix) to spam, phish, pharm, pretext, spider, crawl, scrape or other similar activities; (x) for any obscene or immoral purpose; (xi) to interfere with or circumvent the security features of the service or any related website or application, other website or application, or the Internet; (xii) use Shop in such a way that could overburden, attack, damage, or otherwise negatively impact the performance of Shop, or any other user’s use of Shop; (xiii) to modify, translate, reverse engineer, disassemble, reconstruct, decompile, copy, or create derivative works of Shop, Merchant data, any Shop Pay Site, or any aspect or portion thereof, or (xiv) use any robot, spider, automatic device or process, or other automated or manual means to access Shop for any purpose. We reserve the right to terminate your use of Shop or any related website or application for violating any of the prohibited uses.</p>"
           }
         },
         "description_F4ciNy": {
@@ -254,7 +254,7 @@
             "description_title": "Limitation of liability; Disclaimer of warranties",
             "description_preview": "<p>To the extent permitted by applicable law, you expressly understand and agree that in no event will shopify, its employees, agents, suppliers or independent contractors (the \"disclaiming entities\") be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses which may be incurred in connection with any disclaimi...</p>",
             "description_preview_mobile": "<p>To the extent permitted by applicable law, you expressly understand and agree that in no event will shopify, its employees, agents, suppliers or independent contractors (the \"disclaiming entities\") be liable for any direct, indirect, incidental, special, consequential ...</p>",
-            "description_main": ""
+            "description_main": "<p>6.1 TO THE EXTENT PERMITTED BY APPLICABLE LAW, YOU EXPRESSLY UNDERSTAND AND AGREE THAT IN NO EVENT WILL SHOPIFY, ITS EMPLOYEES, AGENTS, SUPPLIERS OR INDEPENDENT CONTRACTORS (THE “DISCLAIMING ENTITIES”) BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSSES WHICH MAY BE INCURRED IN CONNECTION WITH ANY DISCLAIMING ENTITY OR SHOP, OR ANY GOODS, SERVICES, OR INFORMATION PURCHASED, RECEIVED, SOLD, OR PAID FOR BY WAY OF SHOP, REGARDLESS OF THE TYPE OF CLAIM OR THE NATURE OF THE CAUSE OF ACTION, EVEN IF THE DISCLAIMING ENTITY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE OR LOSS. BECAUSE SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR THE LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, IN SUCH JURISDICTIONS, OUR LIABILITY WILL BE LIMITED TO THE MAXIMUM EXTENT PERMITTED BY LAW.</p><p></p><p>6.2 YOU AGREE TO INDEMNIFY, DEFEND AND HOLD HARMLESS SHOPIFY AND THE DISCLAIMING ENTITIES FROM ALL CLAIMS, LOSSES, DAMAGES, PENALTIES, LIABILITY AND COSTS, INCLUDING REASONABLE ATTORNEYS’ FEES, OF ANY KIND OR NATURE ARISING OUT OF OR RELATED TO A CLAIM (A) ALLEGING THAT YOUR USE OF SHOP INFRINGES OR VIOLATES THE RIGHTS OF A THIRD PARTY (INCLUDING ANY MERCHANT) OR VIOLATES APPLICABLE LAW; OR (B) ARISING OUT OF YOUR BREACH OF THESE TERMS OF SERVICE OR THE DOCUMENTS THEY INCORPORATE BY REFERENCE.</p><p></p><p>6.3 YOUR USE OF SHOP IS AT YOUR SOLE RISK. THE SHOP SERVICE IS PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS WITHOUT ANY WARRANTY OR CONDITION, EXPRESS, IMPLIED OR STATUTORY.</p><p></p><p>6.4 TO THE FULLEST EXTENT PERMITTED BY LAW, SHOPIFY AND THE DISCLAIMING ENTITIES MAKE NO REPRESENTATION OR WARRANTY OF ANY KIND WHATSOEVER FOR SHOP, THE CONTENT, MATERIALS, INFORMATION AND/OR FUNCTIONS AVAILABLE THROUGH SHOP, OR FOR ANY BREACH OF SECURITY ASSOCIATED WITH THE TRANSMISSION OF INFORMATION (INCLUDING SENSITIVE INFORMATION) THROUGH SHOP.</p><p></p><p>6.5 ANY RELIANCE ON THE MATERIAL OR INFORMATION MADE AVAILABLE THROUGH SHOP IS AT YOUR OWN RISK. WE DO NOT WARRANT THAT THE SHOP SERVICE WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE, OR THAT ANY ERRORS WILL BE CORRECTED. WE DO NOT WARRANT THAT THE RESULT OBTAINED FROM USE OF THE SHOP SERVICE WILL BE ACCURATE OR RELIABLE.</p>"
           }
         },
         "description_WMhFbL": {
@@ -263,7 +263,7 @@
             "description_title": "Governing law",
             "description_preview": "<p>These Terms of Service will be governed by and interpreted in accordance with the laws of the Province of Ontario, without regard to principles of conflicts of laws. You and we irrevocably and unconditionally submit to the exclusive jurisdiction of the provincial and federal courts of Ontario with respect to any dispute or claim arising out of or in connection with these Terms of Service or your use of Shop. The United Nations Convention...</p>",
             "description_preview_mobile": "<p>These Terms of Service will be governed by and interpreted in accordance with the laws of the Province of Ontario, without regard to principles of conflicts of...</p>",
-            "description_main": ""
+            "description_main": "<p>These Terms of Service will be governed by and interpreted in accordance with the laws of the Province of Ontario, without regard to principles of conflicts of laws. You and we irrevocably and unconditionally submit to the exclusive jurisdiction of the provincial and federal courts of Ontario with respect to any dispute or claim arising out of or in connection with these Terms of Service or your use of Shop. The United Nations Convention on Contracts for the International Sale of Goods will not apply to these Terms of Service and is hereby expressly excluded.<br/><br/></p>"
           }
         },
         "description_hywx97": {
@@ -272,7 +272,7 @@
             "description_title": "Assignment",
             "description_preview": "<p>You may not assign these Terms of Service or any rights or obligations hereunder, by operation of law or otherwise, without our prior written approval and any such attempted assignment will be void. We reserve the right to freely assign these Terms of Service and the rights and obligations hereunder, to any third party without notice or consent. Subject to the foregoing, these Terms of Service will be binding upon and inure to the benefit...</p>",
             "description_preview_mobile": "<p>You may not assign these Terms of Service or any rights or obligations hereunder, by operation of law or otherwise, without our prior written approval and any such attempted assignment will be void...</p>",
-            "description_main": ""
+            "description_main": "<p>You may not assign these Terms of Service or any rights or obligations hereunder, by operation of law or otherwise, without our prior written approval and any such attempted assignment will be void. We reserve the right to freely assign these Terms of Service and the rights and obligations hereunder, to any third party without notice or consent. Subject to the foregoing, these Terms of Service will be binding upon and inure to the benefit of the parties hereto, their successors and permitted assigns.<br/><br/></p>"
           }
         },
         "description_g9wVAg": {
@@ -281,7 +281,7 @@
             "description_title": "Modifications",
             "description_preview": "<p>We reserve the right, in our sole and absolute discretion, to update or change any portion of the Terms of Service at any time. We will provide you with reasonable advance notice of changes to the Terms of Service that materially adversely affect your use of the Shop services or your rights under the Terms of Service by sending an email, providing notice through Shop app, or by similar means. Notwithstanding the foregoing, we may make...</p>",
             "description_preview_mobile": "<p>We reserve the right, in our sole and absolute discretion, to update or change any portion of the Terms of Service at any time. We will provide you with reasonable advance notice of changes to...</p>",
-            "description_main": ""
+            "description_main": "<p>We reserve the right, in our sole and absolute discretion, to update or change any portion of the Terms of Service at any time. We will provide you with reasonable advance notice of changes to the Terms of Service that materially adversely affect your use of the Shop services or your rights under the Terms of Service by sending an email, providing notice through Shop app, or by similar means. Notwithstanding the foregoing, we may make changes to the Terms of Service at any time and with immediate effect (i) for legal, regulatory, fraud and abuse prevention, or security reasons; or (ii) to restrict products or activities that we deem unsafe, inappropriate, or offensive. Unless we indicate otherwise in our notice (if applicable), any changes to the Terms of Service will be effective immediately upon posting of such updated terms at this location. Your continued access to or use of Shop after we provide such notice, if applicable, or after we post such updated terms, constitutes your acceptance of the changes and consent to be bound by the Terms of Service as amended. In the event you do not agree with any such updates, your sole and exclusive remedy is to terminate your use of Shop (refer to section 3).</p>"
           }
         },
         "description_7X9TcG": {
@@ -290,7 +290,7 @@
             "description_title": "Severability",
             "description_preview": "<p>In the event that any provision of these Terms of Service is determined by a court of competent jurisdiction to be unlawful, void or unenforceable, such provision will nonetheless be enforceable to the fullest extent permitted by applicable law, the unenforceable portion will be deemed to be severed from these Terms of Service, and such determination will not affect the validity and enforceability of any other remaining provisions.</p>",
             "description_preview_mobile": "<p>In the event that any provision of these Terms of Service is determined by a court of competent jurisdiction to be unlawful, void or unenforceable, such provision will nonetheless be enforceable.</p>",
-            "description_main": ""
+            "description_main": "<p>In the event that any provision of these Terms of Service is determined by a court of competent jurisdiction to be unlawful, void or unenforceable, such provision will nonetheless be enforceable to the fullest extent permitted by applicable law, the unenforceable portion will be deemed to be severed from these Terms of Service, and such determination will not affect the validity and enforceability of any other remaining provisions.<br/><br/></p>"
           }
         },
         "description_rPHyg4": {
@@ -299,7 +299,7 @@
             "description_title": "Waiver and Entire Agreement",
             "description_preview": "<p>Our failure to exercise or enforce any right or provision of these Terms of Service will not constitute a waiver of such right or provision. These Terms of Service, the Shop Privacy Policy, and any other policies or operating rules incorporated into these Terms of Service or posted by us in respect to Shop constitutes the entire agreement and understanding between you and us, and govern your use of Shop, superseding any prior or contemporaneous...</p>",
             "description_preview_mobile": "<p>Our failure to exercise or enforce any right or provision of these Terms of Service will not constitute a waiver of such right or provision. These Terms of Service, the Shop Privacy Policy, and any other policies ...</p>",
-            "description_main": ""
+            "description_main": "<p>Our failure to exercise or enforce any right or provision of these Terms of Service will not constitute a waiver of such right or provision. These Terms of Service, the Shop Privacy Policy, and any other policies or operating rules incorporated into these Terms of Service or posted by us in respect to Shop constitutes the entire agreement and understanding between you and us, and govern your use of Shop, superseding any prior or contemporaneous agreements, communications and proposals, whether oral or written, between you and us (including, but not limited to, any prior versions of the Terms of Service). These Terms of Service are not intended and will not be construed to create any rights or remedies in any parties other than you and us, and no other person will have the ability to assert any rights as a third party beneficiary under these Terms of Service.<br/><br/></p>"
           }
         },
         "description_gFpzWb": {
@@ -308,7 +308,7 @@
             "description_title": "Survival",
             "description_preview": "<p>Upon termination of your use of Shop or termination of these Terms of Service for any reason, the following sections will survive termination: Preamble, Sections 1.6, 2, 3.6 and 4 through 12.</p>",
             "description_preview_mobile": "<p>Upon termination of your use of Shop or termination of these Terms of Service for any reason, the following sections will survive termination: Preamble, Sections 1.6, 2, 3.6 and 4 through 12.</p>",
-            "description_main": ""
+            "description_main": "<p>Upon termination of your use of Shop or termination of these Terms of Service for any reason, the following sections will survive termination: Preamble, Sections 1.6, 2, 3.6 and 4 through 12.</p>"
           }
         }
       },
