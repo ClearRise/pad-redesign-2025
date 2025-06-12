@@ -1,1 +1,30 @@
-{"sections":{"main":{"type":"main-404","settings":{}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "disabled": true,
+      "settings": {}
+    },
+    "main_404_with_ring_3fcM6A": {
+      "type": "main-404-with-ring",
+      "settings": {
+        "full_width": false,
+        "image_0": "shopify://shop_images/break_ring.png",
+        "description": "Oops, something went wrong."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_404_with_ring_3fcM6A"
+  ]
+}
