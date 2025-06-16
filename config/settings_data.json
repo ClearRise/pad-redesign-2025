@@ -98,9 +98,9 @@
     "upsell_box_title": "You May Also Like",
     "show_gift_box": true,
     "first_tier_progress": "You've unlocked a Free Gift!",
-    "gift_box_title": "FATHER'S DAY OFFER",
+    "gift_box_title": "FREE GIFT OFFER",
     "gift_box_text": "",
-    "cart_threshold_amount": 175,
+    "cart_threshold_amount": 195,
     "spend_progress": "",
     "product-handle-1": "mystery-gift",
     "product-handle-2": "lavender-burl-carbon-fiber-bar-pendant",
@@ -173,7 +173,6 @@
           },
           "scroll_navi_mobile_WcV7fN": {
             "type": "scroll_navi_mobile",
-            "disabled": true,
             "settings": {
               "sub_menu": "<b><u>SALE</u></b>",
               "link_submenu": "shopify://collections/flash-sale"
@@ -216,9 +215,9 @@
           "sticky_collection": false,
           "mobile_top_banner_image": "shopify://shop_images/oie_haHVk88If7KC.png",
           "mobile_menu_top_banner_image": "shopify://shop_images/image__60_-removebg-preview.png",
-          "mobile_menu_top_banner_title": "Father's Day Sale",
+          "mobile_menu_top_banner_title": "FLASH SALE",
           "mobile_menu_top_banner_link_text": "Save up to 30% Off",
-          "mobile_menu_top_banner_link": "shopify://collections/all-products-new",
+          "mobile_menu_top_banner_link": "shopify://collections/flash-sale",
           "mobile_menu_top_banner_background": "",
           "announcement_compact": true,
           "announcement_above_header": true,
