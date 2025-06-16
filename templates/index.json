@@ -272,6 +272,7 @@
         },
         "672a52df-0901-41df-bfcc-f5c1e4da1a77": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "Up to 30% Off",
             "heading": "FATHER'S DAY DEALS",
@@ -295,7 +296,6 @@
         },
         "advanced_YtVYUJ": {
           "type": "advanced",
-          "disabled": true,
           "settings": {
             "subheading": "Up to 35% OffTHIS WEEKEND ONLY",
             "heading": "FLASH SALE DEALS",
