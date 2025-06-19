@@ -72,6 +72,7 @@
         "image_FDpUNC",
         "image_be3MfE"
       ],
+      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
@@ -84,6 +85,7 @@
     },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
+      "disabled": true,
       "custom_css": [
         "{padding: 10 px;}"
       ],
@@ -181,7 +183,6 @@
       "blocks": {
         "collection_description": {
           "type": "collection_description",
-          "disabled": true,
           "settings": {}
         },
         "subcollections": {
