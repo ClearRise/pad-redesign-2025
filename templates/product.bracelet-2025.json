@@ -19,7 +19,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": false,
+            "enable_badge": true,
             "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
@@ -419,8 +419,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "LIMITED TIME ONLY",
-            "heading": "MYSTERY GIFT",
-            "textarea": "Get a Free Mystery Gift (ring or pendant) on orders $195+",
+            "heading": "BUY ONE GET ONE FREE",
+            "textarea": "Buy One Product and Get Another Product of Equal or Lesser Value FREE",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",

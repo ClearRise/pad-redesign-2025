@@ -19,7 +19,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": false,
+            "enable_badge": true,
             "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
@@ -92,6 +92,7 @@
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
+          "disabled": true,
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
@@ -411,7 +412,7 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "EVERY RING <br> IS UNIQUE",
+            "heading": "EVERY RING  IS UNIQUE",
             "textarea": "Your ring is made to <br>order just for you. <br>No two rings are <br> the same.",
             "cta_text1": "",
             "cta_link1": "",
@@ -434,8 +435,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "LIMITED TIME ONLY",
-            "heading": "FREE GIFT",
-            "textarea": "Get a Free Gift (ring or pendant) on orders $175+",
+            "heading": "BUY ONE GET ONE FREE",
+            "textarea": "Buy One Product and Get Another Product of Equal or Lesser Value FREE",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",

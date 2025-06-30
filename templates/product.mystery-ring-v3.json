@@ -15,7 +15,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": false,
+            "enable_badge": true,
             "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
@@ -76,6 +76,7 @@
         "engraving_YpGMkM": {
           "type": "engraving",
           "settings": {
+            "form_style": "checkbox",
             "style": "inline",
             "save_badge": "For Limited Time Only"
           }
@@ -396,9 +397,9 @@
         "advanced_eReELk": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
-            "heading": "MYSTERY GIFT",
-            "textarea": "Get a Free Mystery Gift (ring or pendant) on orders $195+",
+            "subheading": "LIMITED TIME ONLY",
+            "heading": "BUY ONE GET ONE FREE",
+            "textarea": "Buy One Product and Get Another Product of Equal or Lesser Value FREE",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
