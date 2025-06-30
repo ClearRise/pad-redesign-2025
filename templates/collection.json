@@ -216,7 +216,7 @@
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
-        "custom_badge": "",
+        "custom_badge": "Buy one Get one FREE",
         "saved_amount_option": "basic_logic",
         "load_more": false
       }
