@@ -359,7 +359,7 @@
         "collection_rcEKnR": {
           "type": "collection",
           "settings": {
-            "collection": "best-sellers"
+            "collection": ""
           }
         }
       },
@@ -398,7 +398,7 @@
         "text_box_CVtG4r": {
           "type": "text_box",
           "settings": {
-            "header": "How its Made",
+            "header": "How It's Made",
             "description": "Discover the story behind the creation, from cancept to craftsmanship.",
             "width": "100%",
             "alignment": "center"
