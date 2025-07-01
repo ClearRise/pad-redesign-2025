@@ -32,7 +32,7 @@
           "type": "image",
           "settings": {
             "iamge_name": "",
-            "image": "shopify://shop_images/wedding-rings-collection-banner.jpg",
+            "image": "shopify://shop_images/Collection_mobile_bogo1.png",
             "link": "",
             "width": "60%",
             "alignment": "center"
@@ -49,6 +49,7 @@
         "image_first": true,
         "space_around": false,
         "background_color": "#ffffff",
+        "small_image": false,
         "is_top_line": false,
         "is_bottom_line": false,
         "top_logo_size": 30,
@@ -247,7 +248,7 @@
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
-        "custom_badge": "",
+        "custom_badge": "Buy One Get One FREE",
         "saved_amount_option": "basic_logic",
         "load_more": false
       }
