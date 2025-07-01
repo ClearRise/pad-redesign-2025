@@ -556,8 +556,8 @@
           "settings": {
             "parent_name": "btn-ctn",
             "position": "bottom",
-            "button_label": "shop wedding rings",
-            "link": "",
+            "button_label": "shop custom rings",
+            "link": "shopify://collections/custom-rings",
             "button_background_color": "#000000",
             "button_border_color": "#138e7e",
             "button_text_color": "#ffffff",
