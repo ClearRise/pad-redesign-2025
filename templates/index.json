@@ -468,25 +468,31 @@
         "collection_nRjUDm": {
           "type": "collection",
           "settings": {
-            "collection": "black-rings"
+            "collection": "gold-rings"
           }
         },
         "collection_eLeRHR": {
           "type": "collection",
           "settings": {
-            "collection": "carbon-fiber"
+            "collection": "meteorite-rings"
           }
         },
         "collection_k7BLBU": {
           "type": "collection",
           "settings": {
-            "collection": "diamond-resin-rings"
+            "collection": "tungsten-rings"
           }
         },
         "collection_KYECUC": {
           "type": "collection",
           "settings": {
-            "collection": "exotic-rings"
+            "collection": "mens-wood-wedding-bands"
+          }
+        },
+        "collection_eHXDrA": {
+          "type": "collection",
+          "settings": {
+            "collection": "ceramic-rings"
           }
         }
       },
@@ -496,7 +502,8 @@
         "collection_nRjUDm",
         "collection_eLeRHR",
         "collection_k7BLBU",
-        "collection_KYECUC"
+        "collection_KYECUC",
+        "collection_eHXDrA"
       ],
       "settings": {
         "title": "Shop By Material",
