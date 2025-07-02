@@ -7,6 +7,8 @@
   endunless
 -%}
 
+{{ 'header-desktop-nav.css' | asset_url | stylesheet_tag }}
+
 <ul
   class="site-nav site-navigation small--hide"
   {% unless disable_aria %}
@@ -129,34 +131,59 @@
         </div>
       {%- elsif has_dropdown -%}
         <ul class="site-nav__dropdown text-left">
-          {%- for childlink in link.links -%}
-            {%- liquid
-              assign has_sub_dropdown = false
-              if childlink.links != blank
-                assign has_sub_dropdown = true
-              endif
-            -%}
+          <div class="li-container">
+            <h6>{{ link.title }}</h6>
+            {%- for childlink in link.links -%}
+              {%- liquid
+                assign has_sub_dropdown = false
+                if childlink.links != blank
+                  assign has_sub_dropdown = true
+                endif
+              -%}
 
-            <li class="{% if has_sub_dropdown %} site-nav__deep-dropdown-trigger{% endif %}">
-              {%- assign subcollection_drop = false -%}
-      
-              <a href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--second-level{% if has_sub_dropdown %} site-nav__dropdown-link--has-children{% endif %}">
-                {{ childlink.title | escape }}
+              <li class="{% if has_sub_dropdown %} site-nav__deep-dropdown-trigger{% endif %}">
+                {%- assign subcollection_drop = false -%}
+        
+                <a href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--second-level{% if has_sub_dropdown %} site-nav__dropdown-link--has-children{% endif %}">
+                  {{ childlink.title | escape }}
+                  {%- if has_sub_dropdown -%}
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none" fill-rule="evenodd"/></svg>
+                  {%- endif -%}
+                </a>
                 {%- if has_sub_dropdown -%}
-                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none" fill-rule="evenodd"/></svg>
+                  <ul class="site-nav__deep-dropdown">
+                    {%- for grandchildlink in childlink.links -%}
+                      <li>
+                        <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">{{ grandchildlink.title | escape }}</a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
                 {%- endif -%}
-              </a>
-              {%- if has_sub_dropdown -%}
-                <ul class="site-nav__deep-dropdown">
-                  {%- for grandchildlink in childlink.links -%}
-                    <li>
-                      <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">{{ grandchildlink.title | escape }}</a>
-                    </li>
-                  {%- endfor -%}
-                </ul>
-              {%- endif -%}
-            </li>
-          {%- endfor -%}
+              </li>
+            {%- endfor -%}
+          </div>
+          <div class="featured_collection-container">
+            {% for featured_collection in blocks %}
+              {% if featured_collection.type == "featured_collection" %}
+                {% assign menu_label = featured_collection.settings.menu_lable | downcase | escape %}
+                {% assign link_title = link.title | downcase | escape %}
+                {% if menu_label == link_title %}
+                  <a class="featured-collection-container" href="/collections/{{ featured_collection.settings.url }}">
+                    {% assign featured_collection_selected = collections[featured_collection.settings.collection] %}
+                    {% if featured_collection_selected.featured_image or featured_collection.settings.featured_image %}
+                      {% if featured_collection.settings.featured_image != blank %}
+                        <img src="{{ featured_collection.settings.featured_image | img_url: 'large' }}" alt="{{ featured_collection_selected.title }}">
+                      {% else %}
+                        <img src="{{ featured_collection_selected.featured_image | img_url: 'large' }}" alt="{{ featured_collection_selected.title }}">
+                      {% endif %}
+                      <span>Shop by</span>
+                      <h6>{{ featured_collection_selected.title }}</h6>
+                    {% endif %}
+                  </a>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
         </ul>
       {%- endif -%}
     </li>
