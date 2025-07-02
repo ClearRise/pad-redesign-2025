@@ -223,12 +223,13 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "38235289-faf5-4ce6-96f4-f6489ba7e199": {
-            "type": "menu",
+          "1494292487693": {
+            "type": "newsletter",
             "settings": {
               "show_footer_title": true,
-              "menu": "footer",
-              "container_width": 20
+              "title": "partrick adiar",
+              "text": "<p>NEWSLETTER SIGN UP<\/p>",
+              "container_width": 32
             }
           },
           "1494301487049": {
@@ -236,16 +237,15 @@
             "settings": {
               "show_footer_title": true,
               "menu": "footer-shop-menu",
-              "container_width": 20
+              "container_width": 16
             }
           },
-          "445961cc-3c5c-4028-98e7-a4ef362b41e6": {
-            "type": "custom",
+          "38235289-faf5-4ce6-96f4-f6489ba7e199": {
+            "type": "menu",
             "settings": {
               "show_footer_title": true,
-              "title": "Contact Information",
-              "text": "<p>Address: 2451 S 600 W Ste 100, Salt Lake City, Utah 84115</p><p>E-mail: support@patrickadairdesigns.com</p><p><a href=\"https://patrickadairdesigns.com/pages/custom-design-consultation\" title=\"https://patrickadairdesigns.com/pages/custom-design-consultation\">Need Help? Book a Call</a></p><p>Hours: M-F 8AM - 4PM MST</p>",
-              "container_width": 20
+              "menu": "footer",
+              "container_width": 16
             }
           },
           "c53a7c74-707e-4385-bf44-c1dc2610f22a": {
@@ -253,33 +253,49 @@
             "settings": {
               "show_footer_title": true,
               "menu": "footer-menu-legal",
+              "container_width": 16
+            }
+          },
+          "445961cc-3c5c-4028-98e7-a4ef362b41e6": {
+            "type": "custom",
+            "disabled": true,
+            "settings": {
+              "show_footer_title": true,
+              "title": "Contact Information",
+              "text": "<p>Address: 2451 S 600 W Ste 100, Salt Lake City, Utah 84115<\/p><p>E-mail: support@patrickadairdesigns.com<\/p><p><a href=\"https:\/\/patrickadairdesigns.com\/pages\/custom-design-consultation\" title=\"https:\/\/patrickadairdesigns.com\/pages\/custom-design-consultation\">Need Help? Book a Call<\/a><\/p><p>Hours: M-F 8AM - 4PM MST<\/p>",
               "container_width": 20
             }
           },
-          "1494292487693": {
-            "type": "newsletter",
+          "contact_8bmYdX": {
+            "type": "contact",
             "settings": {
               "show_footer_title": true,
-              "title": "Sign up and save",
-              "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>",
+              "title": "CONTACT",
+              "address": "<p>229 Harris Ave S, Salt Lake city, Utah 84115<\/p>",
+              "mail": "<p>Support@patrickdairdesigns.com<\/p>",
+              "phone": "<p><a href=\"\/pages\/contact-us\" title=\"Contact Us\">Need Help? Book a call<\/a><\/p><p> Hours: M-F 8AM-4PM MST<\/p>",
               "container_width": 20
             }
           }
         },
         "block_order": [
-          "38235289-faf5-4ce6-96f4-f6489ba7e199",
+          "1494292487693",
           "1494301487049",
-          "445961cc-3c5c-4028-98e7-a4ef362b41e6",
+          "38235289-faf5-4ce6-96f4-f6489ba7e199",
           "c53a7c74-707e-4385-bf44-c1dc2610f22a",
-          "1494292487693"
+          "445961cc-3c5c-4028-98e7-a4ef362b41e6",
+          "contact_8bmYdX"
         ],
         "settings": {
           "show_locale_selector": true,
+          "privacy_policy_link": "",
+          "terms_and_conditions_link": "",
+          "review_link": "",
           "show_currency_selector": true,
           "show_currency_flags": true,
           "show_payment_icons": false,
-          "show_copyright": false,
-          "copyright_text": ""
+          "show_copyright": true,
+          "copyright_text": "All Rights Reserved"
         }
       },
       "newsletter-popup": {
