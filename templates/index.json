@@ -445,7 +445,8 @@
         "option_W3mfnE"
       ],
       "custom_css": [
-        ".hero__title .animation-contents {font-family: \"Futura PT\";}"
+        ".hero__title .animation-contents {font-family: \"Futura PT\";}",
+        "@media (max-width: 768px) {hero__subtitle {color: #333333 !important; } .list-container-ss {color: #333333 !important; }}"
       ],
       "settings": {
         "full_width": true,
