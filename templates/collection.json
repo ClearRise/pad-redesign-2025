@@ -116,8 +116,11 @@
     "trust_icons_EDYTbe": {
       "type": "trust-icons_n",
       "settings": {
+        "section_background": "#eeeeee",
         "top_padding": 20,
-        "bottom_padding": 20
+        "bottom_padding": 20,
+        "show_bottom_break_line": true,
+        "top_logo_size": 16
       }
     },
     "replo_trust_icons_fy9XYw": {
