@@ -15,6 +15,7 @@
         "liquid_DNKzNA": {
           "type": "liquid",
           "settings": {
+            "is_collection_banner": true,
             "liquid_name": "",
             "code": "<h2>Glow Stone Series</h2><p>Experience the perfect blend of tradition and quality with craftsmanship that stands the test of time.</p>",
             "width": "40%",
