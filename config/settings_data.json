@@ -1,15 +1,6 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "current": {
-    "color_body_bg": "#ffffff",
+    "color_body_bg": "#f5f5f5",
     "color_body_text": "#111111",
     "color_price": "#111111",
     "color_savings_text": "#cf7208",
@@ -25,8 +16,8 @@
     "color_header_text": "#111111",
     "color_announcement": "#f68e36",
     "color_announcement_text": "#ffffff",
-    "color_footer": "#d8d8d8",
-    "color_footer_text": "#111111",
+    "color_footer": "#000000",
+    "color_footer_text": "#ffffff",
     "color_drawer_background": "#262626",
     "color_drawer_text": "#f3f3f3",
     "color_drawer_border": "#dddddd",
@@ -36,13 +27,13 @@
     "color_image_overlay": "#000000",
     "color_image_overlay_opacity": 0,
     "color_image_overlay_text_shadow": 30,
-    "type_header_font_family": "futura_n4",
-    "type_header_spacing": "50",
-    "type_header_base_size": 38,
+    "type_header_font_family": "futura_n5",
+    "type_header_spacing": "0",
+    "type_header_base_size": 56,
     "type_header_line_height": 1.2,
     "type_header_capitalize": false,
     "type_headers_align_text": true,
-    "type_base_font_family": "sans-serif",
+    "type_base_font_family": "futura_n4",
     "type_base_spacing": "50",
     "type_base_size": 16,
     "type_base_line_height": 1.4,
@@ -121,18 +112,22 @@
     "third_product-handle-1": "green-glow-burl-carbon-fiber-ring-1",
     "third_product-handle-2": "green-glow-burl-carbon-fiber-bar-pendant-1",
     "shipping_protection_product": "navidium-shipping-protection",
-    "shipping_protection_learn_more_link": "shopify://pages/navidium-shipping-protection",
+    "shipping_protection_learn_more_link": "shopify:\/\/pages\/navidium-shipping-protection",
     "cart_additional_buttons": true,
     "cart_notes_enable": false,
     "cart_terms_conditions_enable": false,
-    "favicon": "shopify://shop_images/Black_and_White_Version.png",
+    "social_facebook_link": "https:\/\/www.facebook.com\/shopify",
+    "social_instagram_link": "https:\/\/instagram.com\/shopify",
+    "social_youtube_link": "https:\/\/www.youtube.com\/user\/shopify",
+    "favicon": "shopify:\/\/shop_images\/Black_and_White_Version.png",
     "search_enable": true,
     "search_type": "product",
     "predictive_search_enabled": false,
     "show_breadcrumbs": false,
+    "show_breadcrumbs_collection_link": true,
     "picker_type": "dropdown",
     "product_swatch_style": "circle",
-    "checkout_logo_image": "shopify://shop_images/test5.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/test5.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "small",
     "checkout_body_background_color": "#ffffff",
@@ -269,7 +264,7 @@
             "settings": {
               "show_footer_title": true,
               "title": "partrick adiar",
-              "text": "<p>NEWSLETTER SIGN UP</p>",
+              "text": "<p>NEWSLETTER SIGN UP<\/p>",
               "container_width": 32
             }
           },
@@ -303,7 +298,7 @@
             "settings": {
               "show_footer_title": true,
               "title": "Contact Information",
-              "text": "<p>Address: 2451 S 600 W Ste 100, Salt Lake City, Utah 84115</p><p>E-mail: support@patrickadairdesigns.com</p><p><a href=\"https://patrickadairdesigns.com/pages/custom-design-consultation\" title=\"https://patrickadairdesigns.com/pages/custom-design-consultation\">Need Help? Book a Call</a></p><p>Hours: M-F 8AM - 4PM MST</p>",
+              "text": "<p>Address: 2451 S 600 W Ste 100, Salt Lake City, Utah 84115<\/p><p>E-mail: support@patrickadairdesigns.com<\/p><p><a href=\"https:\/\/patrickadairdesigns.com\/pages\/custom-design-consultation\" title=\"https:\/\/patrickadairdesigns.com\/pages\/custom-design-consultation\">Need Help? Book a Call<\/a><\/p><p>Hours: M-F 8AM - 4PM MST<\/p>",
               "container_width": 20
             }
           },
@@ -312,9 +307,9 @@
             "settings": {
               "show_footer_title": true,
               "title": "CONTACT",
-              "address": "<p>229 Harris Ave S, Salt Lake city, Utah 84115</p>",
-              "mail": "<p>Support@patrickdairdesigns.com</p>",
-              "phone": "<p><a href=\"/pages/contact-us\" title=\"Contact Us\">Need Help? Book a call</a></p><p> Hours: M-F 8AM-4PM MST</p>",
+              "address": "<p>229 Harris Ave S, Salt Lake city, Utah 84115<\/p>",
+              "mail": "<p>Support@patrickdairdesigns.com<\/p>",
+              "phone": "<p><a href=\"\/pages\/contact-us\" title=\"Contact Us\">Need Help? Book a call<\/a><\/p><p> Hours: M-F 8AM-4PM MST<\/p>",
               "container_width": 20
             }
           }
@@ -346,7 +341,7 @@
           "popup_seconds": 5,
           "popup_days": 30,
           "popup_title": "Sign up and save",
-          "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.</p>",
+          "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.<\/p>",
           "close_text": "No thanks",
           "enable_newsletter": true,
           "button_label": "Optional button",
@@ -373,32 +368,32 @@
     "content_for_index": [],
     "blocks": {
       "1877152918344802950": {
-        "type": "shopify://apps/intelligems-a-b-testing/blocks/intelligems-script/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
+        "type": "shopify:\/\/apps\/intelligems-a-b-testing\/blocks\/intelligems-script\/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
         "disabled": true,
         "settings": {}
       },
       "14952540001915115444": {
-        "type": "shopify://apps/upcart-cart-drawer/blocks/app-embed/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
+        "type": "shopify:\/\/apps\/upcart-cart-drawer\/blocks\/app-embed\/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
         "disabled": true,
         "settings": {}
       },
       "16881471024131275657": {
-        "type": "shopify://apps/searchanise-search-filter/blocks/app-embed/d8f24ada-02b1-458a-bbeb-5bf16d5c921e",
+        "type": "shopify:\/\/apps\/searchanise-search-filter\/blocks\/app-embed\/d8f24ada-02b1-458a-bbeb-5bf16d5c921e",
         "disabled": true,
         "settings": {}
       },
       "6279071938380501511": {
-        "type": "shopify://apps/powerful-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "type": "shopify:\/\/apps\/powerful-form-builder\/blocks\/app-embed\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
         "disabled": false,
         "settings": {}
       },
       "855628211100114053": {
-        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
       },
       "14060646107696862457": {
-        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {}
       },
@@ -672,7 +667,7 @@
               "settings": {
                 "text": "Free shipping",
                 "link_text": "On all orders over $100",
-                "link": "shopify://collections/all"
+                "link": "shopify:\/\/collections\/all"
               }
             },
             "1520888647304": {
@@ -680,7 +675,7 @@
               "settings": {
                 "text": "Hassle-free returns",
                 "link_text": "30-day postage paid returns",
-                "link": "shopify://collections/all"
+                "link": "shopify:\/\/collections\/all"
               }
             }
           },
@@ -721,7 +716,7 @@
               "settings": {
                 "show_footer_title": true,
                 "title": "Sign up and save",
-                "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>",
+                "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
                 "container_width": 30
               }
             },
@@ -756,7 +751,7 @@
             "popup_days": 30,
             "popup_title": "Sign up and save",
             "popup_image": "",
-            "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.</p>",
+            "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.<\/p>",
             "close_text": "No thanks",
             "enable_newsletter": true,
             "button_label": "Optional button",
@@ -781,7 +776,7 @@
                 "enable_image": true,
                 "image": "",
                 "title": "Site-wide promotion",
-                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.<\/p>",
                 "button_label": "Optional button",
                 "button_link": ""
               }
@@ -792,7 +787,7 @@
                 "enable_image": true,
                 "image": "",
                 "title": "Site-wide promotion",
-                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.<\/p>",
                 "button_label": "Optional button",
                 "button_link": ""
               }
@@ -803,7 +798,7 @@
                 "enable_image": true,
                 "image": "",
                 "title": "Site-wide promotion",
-                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.<\/p>",
                 "button_label": "Optional button",
                 "button_link": ""
               }
