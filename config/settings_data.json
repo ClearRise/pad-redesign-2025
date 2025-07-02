@@ -36,7 +36,7 @@
     "color_image_overlay": "#000000",
     "color_image_overlay_opacity": 0,
     "color_image_overlay_text_shadow": 30,
-    "type_header_font_family": "sans-serif",
+    "type_header_font_family": "futura_n4",
     "type_header_spacing": "50",
     "type_header_base_size": 38,
     "type_header_line_height": 1.2,
@@ -269,7 +269,7 @@
             "settings": {
               "show_footer_title": true,
               "title": "partrick adiar",
-              "text": "<p>NEWSLETTER SIGN UP<\/p>",
+              "text": "<p>NEWSLETTER SIGN UP</p>",
               "container_width": 32
             }
           },
@@ -303,7 +303,7 @@
             "settings": {
               "show_footer_title": true,
               "title": "Contact Information",
-              "text": "<p>Address: 2451 S 600 W Ste 100, Salt Lake City, Utah 84115<\/p><p>E-mail: support@patrickadairdesigns.com<\/p><p><a href=\"https:\/\/patrickadairdesigns.com\/pages\/custom-design-consultation\" title=\"https:\/\/patrickadairdesigns.com\/pages\/custom-design-consultation\">Need Help? Book a Call<\/a><\/p><p>Hours: M-F 8AM - 4PM MST<\/p>",
+              "text": "<p>Address: 2451 S 600 W Ste 100, Salt Lake City, Utah 84115</p><p>E-mail: support@patrickadairdesigns.com</p><p><a href=\"https://patrickadairdesigns.com/pages/custom-design-consultation\" title=\"https://patrickadairdesigns.com/pages/custom-design-consultation\">Need Help? Book a Call</a></p><p>Hours: M-F 8AM - 4PM MST</p>",
               "container_width": 20
             }
           },
@@ -312,9 +312,9 @@
             "settings": {
               "show_footer_title": true,
               "title": "CONTACT",
-              "address": "<p>229 Harris Ave S, Salt Lake city, Utah 84115<\/p>",
-              "mail": "<p>Support@patrickdairdesigns.com<\/p>",
-              "phone": "<p><a href=\"\/pages\/contact-us\" title=\"Contact Us\">Need Help? Book a call<\/a><\/p><p> Hours: M-F 8AM-4PM MST<\/p>",
+              "address": "<p>229 Harris Ave S, Salt Lake city, Utah 84115</p>",
+              "mail": "<p>Support@patrickdairdesigns.com</p>",
+              "phone": "<p><a href=\"/pages/contact-us\" title=\"Contact Us\">Need Help? Book a call</a></p><p> Hours: M-F 8AM-4PM MST</p>",
               "container_width": 20
             }
           }
