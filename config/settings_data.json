@@ -149,33 +149,52 @@
       "header": {
         "type": "header",
         "blocks": {
+          "announcement_xVJyfX": {
+            "type": "announcement",
+            "settings": {
+              "text": "",
+              "link_text": "Buy One Get One Free",
+              "link": ""
+            }
+          },
           "1524770014057": {
             "type": "logo",
             "settings": {
-              "logo": "shopify://shop_images/3Asset_2.png",
+              "logo": "shopify:\/\/shop_images\/3Asset_2.png",
               "desktop_logo_width": 100,
               "mobile_logo_width": 130
             }
           },
           "30d9274d-f502-4710-bb39-866381456103": {
             "type": "scroll_navi_mobile",
+            "disabled": true,
             "settings": {
-              "sub_menu": "<u>Shop Rings</u>",
-              "link_submenu": "https://patrickadairdesigns.com/collections/all-products"
+              "sub_menu": "<u>Shop Rings<\/u>",
+              "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/all-products"
             }
           },
           "966bc6e1-31db-4261-b34d-773ca4a79259": {
             "type": "scroll_navi_mobile",
+            "disabled": true,
             "settings": {
-              "sub_menu": "<u>Wedding Bands</u>",
-              "link_submenu": "https://patrickadairdesigns.com/collections/best-selling-wedding-bands-v1"
+              "sub_menu": "<u>Wedding Bands<\/u>",
+              "link_submenu": "https:\/\/patrickadairdesigns.com\/collections\/best-selling-wedding-bands-v1"
+            }
+          },
+          "scroll_navi_mobile_UFP4e7": {
+            "type": "scroll_navi_mobile",
+            "disabled": true,
+            "settings": {
+              "sub_menu": "<b><u>Sale<\/u><\/b>",
+              "link_submenu": "shopify:\/\/collections\/flash-sale"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
             "type": "scroll_navi_mobile",
+            "disabled": true,
             "settings": {
-              "sub_menu": "<u>Custom Rings</u>",
-              "link_submenu": "shopify://collections/custom-rings"
+              "sub_menu": "<u>Custom Rings<\/u>",
+              "link_submenu": "shopify:\/\/collections\/custom-rings"
             }
           },
           "announcement_BNdmQX": {
@@ -186,20 +205,42 @@
               "link_text": "TWO FREE MYSTERY GIFTS ON ALL ORDERS $195+",
               "link": "shopify://collections/all-products-sunset"
             }
+          },
+          "featured_collection_FXBcwx": {
+            "type": "featured_collection",
+            "settings": {
+              "menu_lable": "shop by collection",
+              "collection": "meteorite-rings",
+              "featured_image": "shopify:\/\/shop_images\/ring-1.png",
+              "url": ""
+            }
+          },
+          "featured_collection_JeUTzx": {
+            "type": "featured_collection",
+            "settings": {
+              "menu_lable": "shop by collection",
+              "collection": "all-glowstone-rings",
+              "featured_image": "shopify:\/\/shop_images\/ring-2.jpg",
+              "url": ""
+            }
           }
         },
         "block_order": [
+          "announcement_xVJyfX",
           "1524770014057",
           "30d9274d-f502-4710-bb39-866381456103",
           "966bc6e1-31db-4261-b34d-773ca4a79259",
+          "scroll_navi_mobile_UFP4e7",
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc",
-          "announcement_BNdmQX"
+          "announcement_BNdmQX",
+          "featured_collection_FXBcwx",
+          "featured_collection_JeUTzx"
         ],
         "settings": {
-          "main_menu_link_list": "new-menu-redesign-2-4-2025",
+          "main_menu_link_list": "new-menu-for-new-design",
           "mega_menu_images": true,
           "show_menu_img": true,
-          "menu_img": "shopify://shop_images/carbon-fiber-ring.jpg",
+          "menu_img": "shopify:\/\/shop_images\/carbon-fiber-ring.jpg",
           "main_menu_alignment": "left",
           "main_menu_alignment_mobile": "center-split",
           "header_style": "normal",
