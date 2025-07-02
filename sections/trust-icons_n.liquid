@@ -42,9 +42,12 @@
       padding-bottom: {{ section.settings.bottom_padding | times: 0.4 }}px;
     }
   }
+  .trust-icons-section-ss-{{ section.id }} {
+    background-color: {{ section.settings.section_background }};
+  }
 </style>
 
-<div class="trust-icons-section-ss">
+<div class="trust-icons-section-ss trust-icons-section-ss-{{ section.id }}">
   <div class="trust-icons-container-ss">
     <div class="trust-icons-wrapper-ss">
       <div class="trust-icon-ss">
@@ -133,6 +136,20 @@
   </div>
 </div>
 
+{% if section.settings.show_bottom_break_line %}
+  <div class="line-break-container-ss">
+    <div class="right-line-ss"></div>
+    <div class="center-logo-ss">
+      <img
+        src="https://cdn.shopify.com/s/files/1/2126/0063/files/logo.png?v=1743022311"
+        width="{{ section.settings.top_logo_size }}px"
+        height="{{ section.settings.top_logo_size }}px"
+      >
+    </div>
+    <div class="left-line-ss"></div>
+  </div>
+{% endif %}
+
 {% schema %}
 {
   "name": "Trust Icons(new-2)",
@@ -142,6 +159,11 @@
     }
   ],
   "settings": [
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Background Color"
+    },
     {
       "type": "range",
       "id": "top_padding",
@@ -159,6 +181,21 @@
       "unit": "px",
       "max": 100,
       "min": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bottom_break_line",
+      "label": "Show Bottom Break Line",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_logo_size",
+      "label": "Logo Size",
+      "min": 10,
+      "max": 100,
+      "default": 16,
+      "unit": "px"
     }
   ]
 }
