@@ -231,7 +231,11 @@
                     {% endif %}
                   {% endif %}
                 {% endfor %}
-                {{ block.settings.code }}
+                {% if block.settings.is_collection_banner %}
+                  <h2>{{ collection.title }}</h2><p>{{ collection.description }}</p>
+                {% else %}
+                  {{ block.settings.code }}
+                {% endif %}
                 {% for block2 in section.blocks %}
                   {% if block2.settings.parent_name == block.settings.liquid_name %}
                     {% if block2.settings.position == 'bottom' %}
@@ -529,6 +533,12 @@
       "type": "liquid",
       "name": "HTML",
       "settings": [
+        {
+          "type": "checkbox",
+          "id": "is_collection_banner",
+          "label": "Collection Banner",
+          "default": false
+        },
         {
           "type": "text",
           "id": "liquid_name",
