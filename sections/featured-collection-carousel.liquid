@@ -54,7 +54,6 @@
   .swiper-pagination-progressbar-fill {
     background: #000000 !important;
   }
-  
   #CollectionSection-{{ section.id }} .swiper-slide {
     width: 300px !important;
   }
@@ -270,11 +269,6 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".featured-collection-carousel-{{ section.id }}", {
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
       pagination: {
         el: ".swiper-pagination",
         type: "progressbar", // 🛠 Converts dots into a line
@@ -283,17 +277,15 @@
         nextEl: ".swiper-button-next-{{ section.id }}",
         prevEl: ".swiper-button-prev-{{ section.id }}",
       },
+      slidesPerView: "auto",
       breakpoints: {
         1024: {
-          slidesPerView: {{ section.settings.slides_per_view_desktop | default: 4.2 }},
           spaceBetween: 20
         },
         768: {
-          slidesPerView: {{ section.settings.slides_per_view_tablet | default: 3.2 }},
           spaceBetween: 5
         },
         0: {
-          slidesPerView: {{ section.settings.slides_per_view_mobile | default: 1.3 }},
           spaceBetween: 5
         }
       },
