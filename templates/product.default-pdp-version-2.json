@@ -392,20 +392,6 @@
             "color_accent": "rgba(0,0,0,0)"
           }
         },
-        "advanced_QeVyAd": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "Limited time",
-            "heading": "Announce your promotion 2",
-            "textarea": "Include the smaller details of your promotion in text below the title.",
-            "image": "shopify://shop_images/Titanium8mmLayingDown-BlackfireOpal.jpg",
-            "height": 500,
-            "text_size": 100,
-            "text_align": "vertical-center horizontal-center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)"
-          }
-        },
         "advanced_8g9jMh": {
           "type": "advanced",
           "settings": {
@@ -451,11 +437,11 @@
       },
       "block_order": [
         "advanced_QLw3Pe",
-        "advanced_QeVyAd",
         "advanced_8g9jMh",
         "advanced_CtPXwW",
         "advanced_kR4VcC"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "gutter_size": 20,
@@ -469,9 +455,9 @@
         "advanced_KyqEAm": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
-            "heading": "Announce your promotion",
-            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "subheading": "Limited Time Only",
+            "heading": "BUY ONE GET ONE FREE",
+            "textarea": "Buy One Product and Get Another Product of Equal or Lesser Value for FREE",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
@@ -495,7 +481,7 @@
           "settings": {
             "subheading": "",
             "heading": "CRAFTED BY  HAND",
-            "textarea": "This ring is handmade<br>  by trade artisans <br>in Utah, USA.",
+            "textarea": "This ring is handmade<br>  by trade artisans <br>",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
@@ -567,6 +553,7 @@
         },
         "advanced_eReELk": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "",
             "heading": "FREE GIFT OFFER",
