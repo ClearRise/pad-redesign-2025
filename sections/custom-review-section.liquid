@@ -79,6 +79,15 @@
     .custom-review-section__content {
       width: 100%;
     }
+    .custom-review-image-container__image {
+      padding: 0 20px;
+    }
+    .custom-review-section__content {
+      padding: 0;
+    }
+    .custom-review-section__title {
+      font-size: 24px;
+    }
   }
   @media (max-width: 1440px) {
     .custom-review-section__content-inner {
@@ -95,10 +104,28 @@
       padding: 0 20px;
     }
   }
+  .custom-review-section__title-mobile {
+    display: none;
+  }
+  .custom-review-section__title-desktop {
+    display: block;
+  }
+  @media (max-width: 768px) {
+    .custom-review-section__title-mobile {
+      display: block;
+    }
+    .custom-review-section__title-desktop {
+      display: none;
+    }
+  }
 </style>
 
 <div class="custom-review-section">
   <div class="custom-review-section__container page-width">
+    <div class="custom-review-section__title custom-review-section__title-mobile">
+      <div class="custom-review-section__subtitle">{{ section.settings.subtitle }}</div>
+      <h2 class="custom-review-section__title">{{ section.settings.title }}</h2>
+    </div>
     <div class="custom-review-image__container">
       <div class="custom-review-image-container__image">
         <img src="{{ section.settings.main_image | image_url: width: 1000 }}" alt="{{ section.settings.main_image.alt }}">
@@ -107,7 +134,7 @@
     <div class="custom-review-section__content">
       <div class="custom-review-section__content-inner custom-review-section__content-inner-{{ section.id }}">
         <div class="custom-review-section__subtitle">{{ section.settings.subtitle }}</div>
-        <h2 class="custom-review-section__title">{{ section.settings.title }}</h2>
+        <h2 class="custom-review-section__title custom-review-section__title-desktop">{{ section.settings.title }}</h2>
         <div class="custom-review-section__reviews custom-review-section__reviews-{{ section.id }} overflow-hidden">
           <div class="swiper-wrapper">
             {% for block in section.blocks %}
