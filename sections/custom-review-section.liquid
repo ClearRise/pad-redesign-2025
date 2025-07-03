@@ -95,27 +95,29 @@
       <div class="custom-review-section__content-inner custom-review-section__content-inner-{{ section.id }}">
         <div class="custom-review-section__subtitle">{{ section.settings.subtitle }}</div>
         <h2 class="custom-review-section__title">{{ section.settings.title }}</h2>
-        <div class="custom-review-section__reviews swiper-wrapper">
-          {% for block in section.blocks %}
-            <div class="custom-review-section__review swiper-slide">
-              <div class="custom-review-section__review-stars">
-                {% for i in (1..5) %}
-                  <span class="custom-review-section__review-star">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#FBB040"/>
-                    </svg>
-                  </span>
-                {% endfor %}
+        <div class="custom-review-section__reviews custom-review-section__reviews-{{ section.id }} overflow-hidden">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="custom-review-section__review swiper-slide">
+                <div class="custom-review-section__review-stars">
+                  {% for i in (1..5) %}
+                    <span class="custom-review-section__review-star">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#FBB040"/>
+                      </svg>
+                    </span>
+                  {% endfor %}
+                </div>
+                <h3 class="custom-review-section__review-title">{{ block.settings.title }}</h3>
+                <div class="custom-review-section__review-text">{{ block.settings.text }}</div>
+                <div class="custom-review-section__review-name">
+                  <span class="custom-review-section__review-name-text">{{ block.settings.name }}</span>
+                  <span class="custom-review-section__review-name-text">Verified Buyer</span>
+                </div>
               </div>
-              <h3 class="custom-review-section__review-title">{{ block.settings.title }}</h3>
-              <div class="custom-review-section__review-text">{{ block.settings.text }}</div>
-              <div class="custom-review-section__review-name">
-                <span class="custom-review-section__review-name-text">{{ block.settings.name }}</span>
-                <span class="custom-review-section__review-name-text">Verified Buyer</span>
-              </div>
+            {% endfor %}
             </div>
-          {% endfor %}
-        </div>
+          </div>
       </div>
     </div>
   </div>
@@ -123,7 +125,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const swiper = new Swiper('.custom-review-section__content-inner-{{ section.id }}', {
+    const swiper = new Swiper('.custom-review-section__reviews-{{ section.id }}', {
       slidesPerView: 1,
       spaceBetween: 20,
       loop: true,
