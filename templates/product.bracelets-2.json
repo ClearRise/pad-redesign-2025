@@ -355,6 +355,7 @@
     },
     "replo_trust_icons_white_backg_AnTLaL": {
       "type": "replo-trust-icons-white-backg",
+      "disabled": true,
       "settings": {}
     },
     "promo_grid_QUweUP": {
