@@ -865,7 +865,7 @@
                       {%- render 'premium-protection-plan', product: protection_product, enable_tooltip: false, content: block.settings.description, block: block -%}
                     {% endif %}
                   {%- when 'pdp_icon_list' -%}
-                    {%- render 'pdp-icon-list', block: block -%}
+                    {%- render 'pdp-icon-list_n', block: block -%}
                 {%- endcase -%}
               {%- else -%}
                 <div data-blocks-holder
