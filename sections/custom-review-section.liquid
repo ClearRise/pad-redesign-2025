@@ -181,7 +181,6 @@
                 </div>
               </div>
             {% endfor %}
-            </div>
           </div>
           <div class="swiper-button-prev swiper-button-prev-{{ section.id }}">
             {% if section.settings.prev_button_image != blank %}
@@ -193,6 +192,7 @@
               <img src="{{ section.settings.next_button_image | image_url: width: 100 }}" alt="{{ section.settings.next_button_image.alt }}">
             {% endif %}
           </div>
+        </div>
       </div>
     </div>
   </div>
