@@ -645,6 +645,7 @@
         "show_top_break_line": true,
         "show_bottom_break_line": true,
         "prev_button_image": "shopify://shop_images/pdp-trust-icon-4.jpg",
+        "next_button_image": "shopify://shop_images/pdp-trust-icon-1.png",
         "background_color": "",
         "text_color": "",
         "text_color_2": "",
