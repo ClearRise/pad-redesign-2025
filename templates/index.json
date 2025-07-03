@@ -668,6 +668,7 @@
       "block_order": [
         "judge_me_reviews_featured_carousel_nbYEGU"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true
