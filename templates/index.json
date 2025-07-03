@@ -642,6 +642,8 @@
         "title": "See What our customers say",
         "subtitle": "10,000 + Five star Reviews",
         "main_image": "shopify://shop_images/Boundless_1_a36e44fa-4289-41d0-b0ae-74b89886217f.jpg",
+        "show_top_break_line": true,
+        "show_bottom_break_line": true,
         "background_color": "",
         "text_color": "",
         "text_color_2": "",
