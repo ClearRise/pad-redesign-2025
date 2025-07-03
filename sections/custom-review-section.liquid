@@ -67,6 +67,21 @@
       flex-direction: column;
     }
   }
+  @media (max-width: 1440px) {
+    .custom-review-section__content-inner {
+      padding: 0 60px;
+    }
+  }
+  @media (max-width: 1024px) {
+    .custom-review-section__content-inner {
+      padding: 0 40px;
+    }
+  }
+  @media (max-width: 768px) {
+    .custom-review-section__content-inner {
+      padding: 0 20px;
+    }
+  }
 </style>
 
 <div class="custom-review-section">
@@ -77,12 +92,12 @@
       </div>
     </div>
     <div class="custom-review-section__content">
-      <div class="custom-review-section__content-inner">
+      <div class="custom-review-section__content-inner custom-review-section__content-inner-{{ section.id }}">
         <div class="custom-review-section__subtitle">{{ section.settings.subtitle }}</div>
         <h2 class="custom-review-section__title">{{ section.settings.title }}</h2>
-        <div class="custom-review-section__reviews">
+        <div class="custom-review-section__reviews swiper-wrapper">
           {% for block in section.blocks %}
-            <div class="custom-review-section__review">
+            <div class="custom-review-section__review swiper-slide">
               <div class="custom-review-section__review-stars">
                 {% for i in (1..5) %}
                   <span class="custom-review-section__review-star">
@@ -105,6 +120,16 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.custom-review-section__content-inner-{{ section.id }}', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+    });
+  });
+</script>
 
 {% schema %}
 {
