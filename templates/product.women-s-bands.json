@@ -125,8 +125,18 @@
             "messagePrefix": ""
           }
         },
+        "pdp_icon_list_EkRcxE": {
+          "type": "pdp_icon_list",
+          "settings": {
+            "label_1": "",
+            "label_2": "",
+            "label_3": "",
+            "label_4": ""
+          }
+        },
         "07bdb91c-b9ed-4326-8127-0098675d0092": {
           "type": "sales_point",
+          "disabled": true,
           "settings": {
             "style": "grid",
             "icon": "gift",
@@ -138,6 +148,7 @@
         },
         "87272cff-cc16-40a9-b501-c6f3b9acd243": {
           "type": "sales_point",
+          "disabled": true,
           "settings": {
             "style": "grid",
             "icon": "heart",
@@ -149,6 +160,7 @@
         },
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005": {
           "type": "sales_point",
+          "disabled": true,
           "settings": {
             "style": "grid",
             "icon": "shield",
@@ -160,6 +172,7 @@
         },
         "sales_point": {
           "type": "sales_point",
+          "disabled": true,
           "settings": {
             "style": "grid",
             "icon": "leaf",
@@ -273,6 +286,7 @@
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
         "buy_buttons",
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
+        "pdp_icon_list_EkRcxE",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
