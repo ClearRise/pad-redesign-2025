@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: {{ section.settings.padding_top_desktop }}px {{ section.settings.padding_bottom_desktop }}px;
+    padding: 0 {{ section.settings.padding_top_desktop }}px 0 {{ section.settings.padding_bottom_desktop }}px;
   }
   .custom-review-image__container{
     flex: 1;
@@ -35,7 +35,18 @@
   }
   .custom-review-section__review-name-text {
     font-size: 16px;
-    font-weight: 600;
+  }
+  .custom-review-section__review-title {
+    font-size: 16px;
+  }
+  .custom-review-section__review-text {
+    color: #333333;
+    font-size: 16px;
+  }
+  .custom-review-section__review {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(77, 168, 49);
   }
   @media (max-width: 768px) {
     .custom-review-section__container {
@@ -61,8 +72,8 @@
               <div class="custom-review-section__review-stars">
                 {% for i in (1..5) %}
                   <span class="custom-review-section__review-star">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#FBB040"/>
                     </svg>
                   </span>
                 {% endfor %}
