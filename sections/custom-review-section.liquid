@@ -69,16 +69,18 @@
   }
   .custom-review-section__reviews {
     width: 102%;
-    position: relative;
+    {% comment %} position: relative; {% endcomment %}
   }
   .custom-review-section__title-container {
     text-align: center;
   }
   .swiper-button-next-{{ section.id }} {
-    right: 0px !important;
+    right: -20px !important;
+    width: 40px;
   }
   .swiper-button-prev-{{ section.id }} {
-    left: 0px !important;
+    left: -20px !important;
+    width: 40px;
   }
   @media (max-width: 768px) {
     .custom-review-section__container {
