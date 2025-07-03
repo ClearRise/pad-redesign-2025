@@ -1,0 +1,180 @@
+<style>
+  .custom-review-section {
+    background-color: {{ section.settings.background_color }};
+    color: {{ section.settings.text_color }};
+  }
+  .custom-review-section__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: {{ section.settings.padding_top_desktop }}px {{ section.settings.padding_bottom_desktop }}px;
+  }
+  .custom-review-section__review-stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .custom-review-section__review-star {
+    width: 24px;
+    height: 24px;
+  }
+  .custom-review-section__review-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .custom-review-section__review-name-text {
+    font-size: 16px;
+    font-weight: 600;
+  }
+</style>
+
+<div class="custom-review-section">
+  <div class="custom-review-section__container">
+    <div class="custom-review-image__container">
+      <div class="custom-review-image-container__image">
+        <img src="{{ section.settings.main_image | image_url: width: 1000 }}" alt="{{ section.settings.main_image.alt }}" width="1000" height="1000">
+      </div>
+    </div>
+    <div class="custom-review-section__content">
+      <div class="custom-review-section__subtitle">{{ section.settings.subtitle }}</div>
+      <h2 class="custom-review-section__title">{{ section.settings.title }}</h2>
+      <div class="custom-review-section__reviews">
+        {% for block in section.blocks %}
+          <div class="custom-review-section__review">
+            <div class="custom-review-section__review-stars">
+              {% for i in (1..5) %}
+                <span class="custom-review-section__review-star">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
+                  </svg>
+                </span>
+              {% endfor %}
+            </div>
+            <h3 class="custom-review-section__review-title">{{ block.settings.title }}</h3>
+            <div class="custom-review-section__review-text">{{ block.settings.text }}</div>
+            <div class="custom-review-section__review-name">
+              <span class="custom-review-section__review-name-text">{{ block.settings.name }}</span>
+              <span class="custom-review-section__review-name-text">Verified Buyer</span>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Review Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    },
+    {
+      "type": "header",
+      "content": "Design"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color"
+    },
+    {
+      "type": "color",
+      "id": "text_color_2",
+      "label": "Text Color 2"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Padding Top Desktop",
+      "default": 20,
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Padding Top Mobile",
+      "default": 20,
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Padding Bottom Desktop",
+      "default": 20,
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Padding Bottom Mobile",
+      "default": 20,
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Review Section"
+    }
+  ]
+}
+{% endschema %}
