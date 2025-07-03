@@ -128,6 +128,20 @@
   }
 </style>
 
+{% if section.settings.show_top_break_line %}
+  <div class="line-break-container-ss">
+    <div class="right-line-ss"></div>
+    <div class="center-logo-ss">
+      <img
+        src="https://cdn.shopify.com/s/files/1/2126/0063/files/logo.png?v=1743022311"
+        width="16px"
+        height="16px"
+      >
+    </div>
+    <div class="left-line-ss"></div>
+  </div>
+{% endif %}
+
 <div class="custom-review-section">
   <div class="custom-review-section__container page-width">
     <div class="custom-review-section__title-container custom-review-section__title-mobile">
@@ -173,6 +187,21 @@
   </div>
 </div>
 
+{% if section.settings.show_bottom_break_line %}
+  <div class="line-break-container-ss">
+    <div class="right-line-ss"></div>
+    <div class="center-logo-ss">
+      <img
+        src="https://cdn.shopify.com/s/files/1/2126/0063/files/logo.png?v=1743022311"
+        width="16px"
+        height="16px"
+      >
+    </div>
+    <div class="left-line-ss"></div>
+  </div>
+{% endif %}
+
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const swiper = new Swiper('.custom-review-section__reviews-{{ section.id }}', {
@@ -205,6 +234,18 @@
       "type": "image_picker",
       "id": "main_image",
       "label": "Main Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_top_break_line",
+      "label": "Show Top Break Line",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bottom_break_line",
+      "label": "Show Bottom Break Line",
+      "default": false
     },
     {
       "type": "header",
