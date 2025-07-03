@@ -83,7 +83,7 @@
     width: 40px;
   }
   .swiper-button-lock {
-    display: none !important;
+    display: block !important;
   }
   @media (max-width: 768px) {
     .custom-review-section__container {
@@ -108,6 +108,12 @@
     .custom-review-section__title-container {
       padding-bottom: 20px;
       padding-top: 20px;
+    }
+    .swiper-button-next-{{ section.id }} {
+      right: -5px !important;
+    }
+    .swiper-button-prev-{{ section.id }} {
+      left: -5px !important;
     }
   }
   @media (max-width: 1440px) {
@@ -193,7 +199,7 @@
                 </div>
               </div>
             {% endfor %}
-            
+          </div>
           <div class="swiper-button-prev swiper-button-prev-{{ section.id }}">
             {% if section.settings.prev_button_image != blank %}
               <img src="{{ section.settings.prev_button_image | image_url: width: 100 }}" alt="{{ section.settings.prev_button_image.alt }}">
@@ -203,7 +209,6 @@
             {% if section.settings.next_button_image != blank %}
               <img src="{{ section.settings.next_button_image | image_url: width: 100 }}" alt="{{ section.settings.next_button_image.alt }}">
             {% endif %}
-          </div>
           </div>
         </div>
       </div>
