@@ -614,10 +614,28 @@
             "name": "Bernice V.",
             "text": "I Absolutely Love My Ring! The Craftsmanship Is Stunning, And The Attention To Detail Is Unmatched. It's The Perfect Blend Of Elegance And Uniqueness I've Received So Many Compliments!\""
           }
+        },
+        "review_FAtUAV": {
+          "type": "review",
+          "settings": {
+            "title": "Beautifully Made",
+            "name": "Bernice V.",
+            "text": "I Absolutely Love My Ring! The Craftsmanship Is Stunning, And The Attention To Detail Is Unmatched. It's The Perfect Blend Of Elegance And Uniqueness I've Received So Many Compliments!\""
+          }
+        },
+        "review_qDgNpt": {
+          "type": "review",
+          "settings": {
+            "title": "Beautifully Made",
+            "name": "Bernice V.",
+            "text": "I Absolutely Love My Ring! The Craftsmanship Is Stunning, And The Attention To Detail Is Unmatched. It's The Perfect Blend Of Elegance And Uniqueness I've Received So Many Compliments!\""
+          }
         }
       },
       "block_order": [
-        "review_8T8wtn"
+        "review_8T8wtn",
+        "review_FAtUAV",
+        "review_qDgNpt"
       ],
       "name": "Custom Review Section",
       "settings": {
