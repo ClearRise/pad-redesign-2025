@@ -14,7 +14,7 @@
     width: 50%;
   }
   .custom-review-section__content-inner {
-    padding: 0 80px;
+    {% comment %} padding: 0 80px; {% endcomment %}
   }
   .custom-review-section__content {
     width: 50%;
@@ -69,6 +69,7 @@
   }
   .custom-review-section__reviews {
     width: 102%;
+    padding: 0 80px;
     {% comment %} position: relative; {% endcomment %}
   }
   .custom-review-section__title-container {
@@ -117,17 +118,17 @@
     }
   }
   @media (max-width: 1440px) {
-    .custom-review-section__content-inner {
+    .custom-review-section__reviews {
       padding: 0 60px;
     }
   }
   @media (max-width: 1024px) {
-    .custom-review-section__content-inner {
+    .custom-review-section__reviews {
       padding: 0 40px;
     }
   }
   @media (max-width: 768px) {
-    .custom-review-section__content-inner {
+    .custom-review-section__reviews {
       padding: 0 20px;
     }
   }
