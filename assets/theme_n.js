@@ -6787,7 +6787,7 @@ lazySizesConfig.expFactor = 4;
           document.addEventListener('modalClose.QuickShopModal-' + this.productId, this.closeModalProduct.bind(this));
         }
 
-        if (document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper button').classList.contains("default-expand")) {
+        if (document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper button') && document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper button').classList.contains("default-expand")) {
           document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper button').classList.add('is-open');
           document.querySelector('div[data-product-blocks] div.product-block--tab .collapsibles-wrapper .collapsible-content').classList.add('is-open');
         }
