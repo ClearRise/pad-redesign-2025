@@ -9560,7 +9560,8 @@ html[dir=rtl] .grid-product__content {
 
 .grid-product__see-all {
   display: inline-block;
-  padding: 15px;
+  padding: 5px;
+  font-size: 12px;
   text-align: center;
   border: 1px solid;
   /*   border-color:#111111; */
