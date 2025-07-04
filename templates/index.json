@@ -610,25 +610,25 @@
         "review_8T8wtn": {
           "type": "review",
           "settings": {
-            "title": "Beautifully Made -2",
-            "name": "Bernice V.",
-            "text": "I Absolutely Love My Ring! The Craftsmanship Is Stunning, And The Attention To Detail Is Unmatched. It's The Perfect Blend Of Elegance And Uniqueness I've Received So Many Compliments!\""
+            "title": "Amazingly Light",
+            "name": "Brett P.",
+            "text": "I absolutely love my new ring. I had lost my wedding ring in a lake on a recent trip and had always followed PAD on Youtube and thought their rings were beautiful. They look even better than the photos in person!"
           }
         },
         "review_FAtUAV": {
           "type": "review",
           "settings": {
-            "title": "Beautifully Made - 3",
-            "name": "Bernice V.",
-            "text": "I Absolutely Love My Ring! The Craftsmanship Is Stunning, And The Attention To Detail Is Unmatched. It's The Perfect Blend Of Elegance And Uniqueness I've Received So Many Compliments!\""
+            "title": "Wedding Band",
+            "name": "Amber A.",
+            "text": "I customized this glow stone ring for my fiance, and it came out better than I could have imagined. The stone inlay is beautiful and the the band is super shiny and polished. 10/10 would recommend!"
           }
         },
         "review_qDgNpt": {
           "type": "review",
           "settings": {
-            "title": "Beautifully Made",
-            "name": "Bernice V.",
-            "text": "I Absolutely Love My Ring! The Craftsmanship Is Stunning, And The Attention To Detail Is Unmatched. It's The Perfect Blend Of Elegance And Uniqueness I've Received So Many Compliments!\""
+            "title": "Picture does not do it justice",
+            "name": "Ben",
+            "text": "Ill be honest, the pictures of this ring make it seem a little bland. When it arrived, I was pleasantly surprised at how beautiful it was. Feels and looks amazing! Well worth it."
           }
         }
       },
@@ -639,9 +639,9 @@
       ],
       "name": "Custom Review Section",
       "settings": {
-        "title": "See What our customers say",
-        "subtitle": "10,000 + Five star Reviews",
-        "main_image": "shopify://shop_images/Boundless_1_a36e44fa-4289-41d0-b0ae-74b89886217f.jpg",
+        "title": "Customer Testimonials",
+        "subtitle": "3,000 + Five Star Reviews",
+        "main_image": "shopify://shop_images/c3ae3ed3-e451-445c-894e-80586731a90b.jpg",
         "show_top_break_line": true,
         "show_bottom_break_line": true,
         "prev_button_image": "shopify://shop_images/arrow-circle-left-thin-svgrepo-com.svg",
@@ -668,6 +668,7 @@
       "block_order": [
         "judge_me_reviews_featured_carousel_nbYEGU"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true
