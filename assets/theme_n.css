@@ -9423,10 +9423,10 @@ html[dir=rtl] .grid-product__content {
   /* top: 0;
   right: 0; */
   top: 2%;
-  right: 3%;
+  left: 3%;
   line-height: 1;
   padding: 6px 5px 6px 7px;
-  background-color: var(--colorBtnPrimary);
+  background-color: var(--colorBtnPrimary) !important;
   letter-spacing: normal;
   color: var(--colorBtnPrimaryText);
   z-index: 2;
