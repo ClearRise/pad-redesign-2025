@@ -1526,6 +1526,12 @@ button.upsell-add-to-cart.disabled{
   width: 24px;
   height: 24px;
 }
+@media (max-width: 520px) {
+  .pdp-product-block--price-ss .product__price-savings svg {
+    width: 18px;
+    height: 18px;
+  }
+}
 
 /*engrave feature css*/
 .product-page-section-header{
