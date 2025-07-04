@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "main-product_n",
@@ -39,6 +39,8 @@
           "type": "variant_picker",
           "settings": {
             "size_chart": "",
+            "size_chart_title": "",
+            "size_chart_text": "",
             "variant_labels": true,
             "picker_type": "button",
             "product_swatch_style": "square",
@@ -202,6 +204,7 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "is_tab": false
           }
