@@ -20,7 +20,7 @@
           "type": "price",
           "settings": {
             "enable_badge": false,
-            "custom_badge": "Buy one get one free"
+            "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
@@ -39,9 +39,6 @@
           "type": "variant_picker",
           "settings": {
             "size_chart": "",
-            "size_chart_image": "shopify://shop_images/custom_ring.jpg",
-            "size_chart_title": "Find Your Size",
-            "size_chart_text": "Find your size!",
             "variant_labels": true,
             "picker_type": "button",
             "product_swatch_style": "square",
@@ -54,7 +51,7 @@
           "type": "bold_option",
           "settings": {
             "option_type": "Test",
-            "product_swatch_style": "circle",
+            "product_swatch_style": "square",
             "swatch_style": "type_1"
           }
         },
@@ -66,24 +63,17 @@
             "inventory_transfers_enable": true
           }
         },
-        "premium_protection_plan_w3bnhk": {
+        "premium_protection_plan_AhxfM9": {
           "type": "premium_protection_plan",
           "settings": {
             "is_show_description": true,
-            "description": "<p>Our <a href=\"/pages/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\">Premium Protection Plan</a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.</p><p>{{ product.metafields.custom.premium_protection_plan.value }}</p>"
-          }
-        },
-        "custom_request_FGGa9p": {
-          "type": "custom_request",
-          "disabled": true,
-          "settings": {
-            "show_input_field": false
+            "description": "<p>Our <a href=\"/pages/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan</strong></a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.</p><p>{{ product.metafields.custom.premium_protection_plan.value }}</p>"
           }
         },
         "engraving_YpGMkM": {
           "type": "engraving",
           "settings": {
-            "form_style": "text",
+            "form_style": "checkbox",
             "style": "inline",
             "save_badge": "For Limited Time Only"
           }
@@ -100,19 +90,8 @@
             "text_color": ""
           }
         },
-        "relative_product_carousel_UBEHtr": {
-          "type": "relative_product_carousel",
-          "disabled": true,
-          "settings": {
-            "show_description": true,
-            "enable_select_variant": true,
-            "enable_common_badge": true,
-            "common_badge_text": "test"
-          }
-        },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
-          "disabled": true,
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
@@ -151,9 +130,14 @@
             "messagePrefix": ""
           }
         },
-        "pdp_icon_list_dix4kX": {
+        "pdp_icon_list_dqmk8k": {
           "type": "pdp_icon_list",
-          "settings": {}
+          "settings": {
+            "label_1": "",
+            "label_2": "",
+            "label_3": "",
+            "label_4": ""
+          }
         },
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
           "type": "tab",
@@ -218,15 +202,15 @@
         },
         "description": {
           "type": "description",
-          "disabled": true,
           "settings": {
             "is_tab": false
           }
         },
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
+          "disabled": true,
           "settings": {
-            "expanded": true,
+            "expanded": false,
             "style": "box",
             "title": "Additional Details",
             "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}</p>",
@@ -237,6 +221,7 @@
         },
         "7cf22f7b-2877-4d38-a231-95946286cc18": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
@@ -249,6 +234,7 @@
         },
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
@@ -261,6 +247,7 @@
         },
         "e15f8d39-327a-449c-ae3e-f545ea35c05e": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
@@ -273,6 +260,7 @@
         },
         "tab": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
@@ -301,15 +289,13 @@
         "variant_picker",
         "bold_option_agdenj",
         "inventory_status",
-        "premium_protection_plan_w3bnhk",
-        "custom_request_FGGa9p",
+        "premium_protection_plan_AhxfM9",
         "engraving_YpGMkM",
         "glowstone_enhancement_bWeLXn",
-        "relative_product_carousel_UBEHtr",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
         "buy_buttons",
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
-        "pdp_icon_list_dix4kX",
+        "pdp_icon_list_dqmk8k",
         "7621462d-9edd-432d-a525-b5bcbfe07deb",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
