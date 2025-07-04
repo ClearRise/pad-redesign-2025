@@ -371,10 +371,10 @@
   color: #138E7E;
 }
 @media (max-width: 380px) {
-  .first-your-size-ss {
-    font-size: 10px
+  .find-your-size-ss {
+    font-size: 10px;
   }
-  .first-your-size-ss svg {
+  .find-your-size-ss svg {
     width: 18px;
     height: 18px;
   }
