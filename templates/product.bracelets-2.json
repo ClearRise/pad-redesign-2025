@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "main": {
       "type": "main-product_n",
@@ -19,7 +19,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": true,
+            "enable_badge": false,
             "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
@@ -39,8 +39,6 @@
           "type": "variant_picker",
           "settings": {
             "size_chart": "",
-            "size_chart_title": "",
-            "size_chart_text": "",
             "variant_labels": true,
             "picker_type": "button",
             "product_swatch_style": "square",
@@ -94,7 +92,6 @@
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
-          "disabled": true,
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
@@ -131,6 +128,15 @@
             "topPadding": "0",
             "bottomPadding": "10",
             "messagePrefix": ""
+          }
+        },
+        "pdp_icon_list_dqmk8k": {
+          "type": "pdp_icon_list",
+          "settings": {
+            "label_1": "",
+            "label_2": "",
+            "label_3": "",
+            "label_4": ""
           }
         },
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
@@ -196,7 +202,6 @@
         },
         "description": {
           "type": "description",
-          "disabled": true,
           "settings": {
             "is_tab": false
           }
@@ -290,6 +295,7 @@
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
         "buy_buttons",
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
+        "pdp_icon_list_dqmk8k",
         "7621462d-9edd-432d-a525-b5bcbfe07deb",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
         "87272cff-cc16-40a9-b501-c6f3b9acd243",
