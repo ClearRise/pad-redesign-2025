@@ -78,7 +78,7 @@
             {%- if section.settings.rows > 1 -%}
               <div class="grid__item text-center{% if section.settings.mobile_scrollable %} small--hide{% endif %}">
                 <a href="{{ collections[section.settings.home_featured_products].url }}" class="">
-                  {{- 'collections.general.all_of_collection' | t -}}
+                  VIEW ALL
                 </a>
               </div>
             {%- endif -%}
@@ -86,7 +86,7 @@
             {%- if section.settings.mobile_scrollable -%}
               <div class="grid__item grid__item--view-all text-center {{ grid_item_width }} medium-up--hide">
                 <a href="{{ collections[section.settings.home_featured_products].url }}" class="grid-product__see-all">
-                  {{ 'collections.general.view_all_products_html' | t: count: collection.products_count }}
+                  VIEW ALL
                 </a>
               </div>
             {%- endif -%}
