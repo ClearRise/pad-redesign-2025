@@ -43,6 +43,9 @@
           "type": "variant_picker",
           "settings": {
             "size_chart": "",
+            "size_chart_image": "shopify://shop_images/Ring_Sizing_Chart.JPG",
+            "size_chart_title": "Find Your Size",
+            "size_chart_text": "",
             "variant_labels": true,
             "picker_type": "button",
             "product_swatch_style": "square",
