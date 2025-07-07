@@ -1,44 +1,68 @@
 <div class="product-block" {{ block.shopify_attributes }}>
   <div class="icon-list-container-ss">
-    {% if block.settings.icon_1 != blank %}
-      <div class="icon-container-ss">
-        <div class="svg-container-ss">
+    <div class="icon-container-ss">
+      <div class="svg-container-ss">
+        {% if block.settings.icon_1 != blank %}
           <img src="{{ block.settings.icon_1 | image_url: width: 36, height: 36 }}">
-        </div>
-        <div class="icon-label-ss">
-          {{  block.settings.label_1 }}
-        </div>
+        {% else %}
+          {%- render 'icon-hammer' -%}
+        {% endif %}
       </div>
-    {% endif %}
-    {% if block.settings.icon_2 != blank %}
-      <div class="icon-container-ss">
-        <div class="svg-container-ss">
+      <div class="icon-label-ss">
+        {% if block.settings.label_1 != blank %}
+          {{ block.settings.label_1 }}
+        {% else %}
+          Made to Order
+        {% endif %}
+      </div>
+    </div>
+    <div class="icon-container-ss">
+      <div class="svg-container-ss">
+        {% if block.settings.icon_2 != blank %}
           <img src="{{ block.settings.icon_2 | image_url: width: 36, height: 36 }}">
-        </div>
-        <div class="icon-label-ss">
-          {{  block.settings.label_2 }}
-        </div>
+        {% else %}
+          {%- render 'icon-unique-ring' -%}
+        {% endif %}
       </div>
-    {% endif %}
-    {% if block.settings.icon_3 != blank %}
-      <div class="icon-container-ss">
-        <div class="svg-container-ss">
+      <div class="icon-label-ss">
+        {% if block.settings.label_2 != blank %}
+          {{ block.settings.label_2 }}
+        {% else %}
+          Unique Ring
+        {% endif %}
+      </div>
+    </div>
+    <div class="icon-container-ss">
+      <div class="svg-container-ss">
+        {% if block.settings.icon_3 != blank %}
           <img src="{{ block.settings.icon_3 | image_url: width: 36, height: 36 }}">
-        </div>
-        <div class="icon-label-ss">
-          {{  block.settings.label_3 }}
-        </div>
+        {% else %}
+          {%- render 'icon-lifteime-warranty' -%}
+        {% endif %}
       </div>
-    {% endif %}
-    {% if block.settings.icon_4 != blank %}
-      <div class="icon-container-ss">
-        <div class="svg-container-ss">
+      <div class="icon-label-ss">
+        {% if block.settings.label_3 != blank %}
+          {{ block.settings.label_3 }}
+        {% else %}
+          Lifetime Warranty
+        {% endif %}
+      </div>
+    </div>
+    <div class="icon-container-ss">
+      <div class="svg-container-ss">
+        {% if block.settings.icon_4 != blank %}
           <img src="{{ block.settings.icon_4 | image_url: width: 36, height: 36 }}">
-        </div>
-        <div class="icon-label-ss">
-          {{  block.settings.label_4 }}
-        </div>
+        {% else %}
+          {%- render 'icon-thumb-up' -%}
+        {% endif %}
       </div>
-    {% endif %}
+      <div class="icon-label-ss">
+        {% if block.settings.label_4 != blank %}
+          {{ block.settings.label_4 }}
+        {% else %}
+          Customer Satisfaction
+        {% endif %}
+      </div>
+    </div>
   </div>
 </div>
