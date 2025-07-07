@@ -186,7 +186,9 @@
             <span>
               <span class="real-_-price Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>
             {% if intelligems_discount == 0 %}
+              <div style="display: none;">{{ e_product_id }}, {{ property_size }}</div>
               {% if property_size > 0 and e_product_id != blank %}
+                <div style="display: none;">{{ e_product_id }}, {{ property_size }}, {{ engrave_product.selected_or_first_available_variant.price }}, {{ product.original_price }}, {{ procut }}</div>
                 {{ product.original_price | plus: engrave_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
               {% else %}
                 {{ product.original_price | money_without_trailing_zeros }}
