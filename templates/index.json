@@ -100,7 +100,11 @@
         "top_padding": 30,
         "bottom_padding": 15,
         "show_bottom_break_line": false,
-        "top_logo_size": 16
+        "top_logo_size": 16,
+        "trust_icon_1_label": "",
+        "trust_icon_2_label": "",
+        "trust_icon_3_label": "",
+        "trust_icon_4_label": "One-of-a-kind Designs"
       }
     },
     "advanced_content_flexible_DTWtRM": {
