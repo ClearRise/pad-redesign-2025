@@ -15,7 +15,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": false,
+            "enable_badge": true,
             "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
@@ -132,7 +132,7 @@
           "type": "pdp_icon_list",
           "settings": {
             "label_1": "",
-            "label_2": "",
+            "label_2": "One-of-a-kind Designs",
             "label_3": "",
             "label_4": ""
           }
