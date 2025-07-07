@@ -399,6 +399,7 @@
             const parentEle = backgroundEle.parentElement;
             if (window.innerWidth > 768) {
               backgroundEle.style.height = parentEle.offsetHeight + "px";
+              backgroundEle.style.marginTop = "0px";
             } else {
               backgroundEle.style.marginTop = "30vw";
               backgroundEle.style.height = `calc(${parentEle.offsetHeight}px - 30vw)`;
@@ -406,6 +407,7 @@
             window.addEventListener('resize', () => {
               if (window.innerWidth > 768) {
                 backgroundEle.style.height = parentEle.offsetHeight + "px";
+                backgroundEle.style.marginTop = "0px";
               } else {
                 backgroundEle.style.marginTop = "30vw";
                 backgroundEle.style.height = `calc(${parentEle.offsetHeight}px - 30vw)`;
