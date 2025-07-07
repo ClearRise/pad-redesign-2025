@@ -911,7 +911,7 @@
                       {%- render 'custom-request', custom_request_product: custom_request_product, block: block -%}
                     {% comment %} {% endif %} {% endcomment %}
                   {%- when 'pdp_icon_list' -%}
-                    {%- render 'pdp-icon-list_n' -%}
+                    {%- render 'pdp-icon-list_n', block: block -%}
                   {%- when 'relative_product_carousel' -%}
                     {% if product.metafields.custom.relative_products %}
                       <div class="product-block" {{ block.shopify_attributes }}>
