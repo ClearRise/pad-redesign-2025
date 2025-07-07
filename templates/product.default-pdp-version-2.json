@@ -228,8 +228,15 @@
             "is_tab": false
           }
         },
+        "richtext_rCNNwa": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}</p>"
+          }
+        },
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": true,
             "style": "box",
@@ -321,6 +328,7 @@
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
         "sales_point",
         "description",
+        "richtext_rCNNwa",
         "67cf22ff-76d8-4ad2-91e5-80b67524f841",
         "7cf22f7b-2877-4d38-a231-95946286cc18",
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86",
