@@ -719,7 +719,7 @@
                           {%- endif -%}
                         </div>
                       {%- endif -%}
-                      {% if block.settings.custom_badge != blank %}
+                      {% if block.settings.enable_badge == true and block.settings.custom_badge != blank %}
                         <div class="buy-one-get-one-free">
                           <span>{{ block.settings.custom_badge }}</span>
                         </div>
