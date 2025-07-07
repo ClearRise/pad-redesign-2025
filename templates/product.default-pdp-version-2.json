@@ -39,9 +39,9 @@
           "type": "variant_picker",
           "settings": {
             "size_chart": "",
-            "size_chart_image": "shopify://shop_images/custom_ring.jpg",
+            "size_chart_image": "shopify://shop_images/Ring_Sizing_Chart.JPG",
             "size_chart_title": "Find Your Size",
-            "size_chart_text": "Find your size!",
+            "size_chart_text": "",
             "variant_labels": true,
             "picker_type": "button",
             "product_swatch_style": "square",
@@ -153,7 +153,12 @@
         },
         "pdp_icon_list_dix4kX": {
           "type": "pdp_icon_list",
-          "settings": {}
+          "settings": {
+            "label_1": "",
+            "label_2": "",
+            "label_3": "",
+            "label_4": ""
+          }
         },
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
           "type": "tab",
