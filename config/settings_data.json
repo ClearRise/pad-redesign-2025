@@ -188,11 +188,10 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "MEMORIAL DAY WEEKEND ONLY",
-              "link_text": "TWO FREE MYSTERY GIFTS ON ALL ORDERS $195+",
-              "link": "shopify://collections/all-products-sunset"
+              "text": "PRIME DAY LIMITED OFFER",
+              "link_text": "Buy One Get One Free + Free Gift On Orders $300+",
+              "link": "shopify://collections/all-products-new"
             }
           }
         },
