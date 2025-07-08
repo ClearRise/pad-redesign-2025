@@ -1806,6 +1806,7 @@ lazySizesConfig.expFactor = 4;
         } else {
           theme.cart.changeItem(key, qty)
             .then(function (cart) {
+              window.location.reload();
               if (cart.item_count > 0) {
                 this.wrapper.classList.remove('is-empty');
               } else {
