@@ -1857,6 +1857,7 @@ lazySizesConfig.expFactor = 4;
             url: ''.concat('/cart/update.js', '?t=').concat(Date.now()),
             data: JSON.stringify(requestData)
           }).then(function (cart) {
+            window.location.reload();
             if (cart.item_count > 0) {
               $this.wrapper.classList.remove('is-empty');
             } else {
