@@ -188,6 +188,7 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "PRIME DAY LIMITED OFFER",
               "link_text": "Buy One Get One Free + Free Gift On Orders $300+",
