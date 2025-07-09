@@ -171,7 +171,6 @@
           },
           "30d9274d-f502-4710-bb39-866381456103": {
             "type": "scroll_navi_mobile",
-            "disabled": true,
             "settings": {
               "sub_menu": "<u>Shop Rings</u>",
               "link_submenu": "https://patrickadairdesigns.com/collections/all-products"
@@ -179,7 +178,6 @@
           },
           "966bc6e1-31db-4261-b34d-773ca4a79259": {
             "type": "scroll_navi_mobile",
-            "disabled": true,
             "settings": {
               "sub_menu": "<u>Wedding Bands</u>",
               "link_submenu": "https://patrickadairdesigns.com/collections/best-selling-wedding-bands-v1"
@@ -195,7 +193,6 @@
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
             "type": "scroll_navi_mobile",
-            "disabled": true,
             "settings": {
               "sub_menu": "<u>Custom Rings</u>",
               "link_submenu": "shopify://collections/custom-rings"
