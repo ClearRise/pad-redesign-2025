@@ -11,6 +11,7 @@
   "sections": {
     "promotional_section_mGEFMz": {
       "type": "promotional-section",
+      "disabled": true,
       "settings": {
         "background_color": "#d5c3a2",
         "text_color": "#000000",
@@ -24,122 +25,6 @@
         "button_link": "shopify://collections/all-products-sunset",
         "desktop_image": "shopify://shop_images/Desktop_-_BF_Image.png",
         "mobile_image": "shopify://shop_images/Mobile_-_BF_Image.png"
-      }
-    },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "content_display": true
-      }
-    },
-    "promo_grid_4iW6mW": {
-      "type": "promo-grid",
-      "blocks": {
-        "advanced_VciUai": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "UP TO 50% OFF",
-            "heading": "WEDDING   BANDS",
-            "textarea": "<u> SHOP NOW </u>",
-            "cta_text1": "",
-            "cta_link1": "https://patrickadairdesigns.com/collections/best-selling-wedding-bands-v1",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Sterling_Silver.png",
-            "video_url": "",
-            "width": "50",
-            "height": 300,
-            "text_size": 105,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_BTL7At": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "UP TO 50% OFF",
-            "heading": "GLOWSTONE SERIES",
-            "textarea": "<u> SHOP NOW </u>",
-            "cta_text1": "",
-            "cta_link1": "https://patrickadairdesigns.com/collections/the-glowstone-series",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Glowstone_Ring_2-_flipped_f2b5db60-8229-40df-aa6f-a3a8827b2809.png",
-            "video_url": "",
-            "width": "50",
-            "height": 300,
-            "text_size": 105,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_AMKHzD": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "UP TO 50% OFF",
-            "heading": "METEORITE RINGS",
-            "textarea": "<u> SHOP NOW </u>",
-            "cta_text1": "",
-            "cta_link1": "https://patrickadairdesigns.com/collections/meteorite-rings-1",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/meteorite-ring.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 300,
-            "text_size": 105,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_Ld8MT9": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "UP TO 50% OFF",
-            "heading": "WOMEN'S BANDS",
-            "textarea": "<u> SHOP NOW </u>",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/womens-wedding-bands",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Lavendar_Opal_Ring.png",
-            "video_url": "",
-            "width": "50",
-            "height": 300,
-            "text_size": 105,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        }
-      },
-      "block_order": [
-        "advanced_VciUai",
-        "advanced_BTL7At",
-        "advanced_AMKHzD",
-        "advanced_Ld8MT9"
-      ],
-      "settings": {
-        "full_width": false,
-        "gutter_size": 20,
-        "space_above": true,
-        "space_below": false
       }
     },
     "slideshow_gQY9qw": {
@@ -163,8 +48,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/Bfce_Desktop_hero.png",
-            "image_mobile": "shopify://shop_images/Bfce_Desktop_mobile.png",
+            "image": "shopify://shop_images/3_1.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_1_1.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -176,7 +61,6 @@
       "block_order": [
         "image_rppjPX"
       ],
-      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
@@ -187,13 +71,129 @@
         "autoplay_speed": 7
       }
     },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_display": true
+      }
+    },
+    "promo_grid_4iW6mW": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_BTL7At": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "BUY ONE GET ONE FREE",
+            "heading": "GLOWSTONE SERIES",
+            "textarea": "<u> SHOP NOW </u>",
+            "cta_text1": "",
+            "cta_link1": "https://patrickadairdesigns.com/collections/the-glowstone-series",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Glowstone_Ring_2-_flipped_f2b5db60-8229-40df-aa6f-a3a8827b2809.png",
+            "video_url": "",
+            "width": "50",
+            "height": 300,
+            "text_size": 105,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_VciUai": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "BUY ONE GET ONE FREE",
+            "heading": "WEDDING   BANDS",
+            "textarea": "<u> SHOP NOW </u>",
+            "cta_text1": "",
+            "cta_link1": "https://patrickadairdesigns.com/collections/best-selling-wedding-bands-v1",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Sterling_Silver.png",
+            "video_url": "",
+            "width": "50",
+            "height": 300,
+            "text_size": 105,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_AMKHzD": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "BUY ONE GET ONE FREE",
+            "heading": "METEORITE RINGS",
+            "textarea": "<u> SHOP NOW </u>",
+            "cta_text1": "",
+            "cta_link1": "https://patrickadairdesigns.com/collections/meteorite-rings-1",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/meteorite-ring.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 300,
+            "text_size": 105,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_Ld8MT9": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "BUY ONE GET ONE FREE",
+            "heading": "WOMEN'S BANDS",
+            "textarea": "<u> SHOP NOW </u>",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/womens-wedding-bands",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Lavendar_Opal_Ring.png",
+            "video_url": "",
+            "width": "50",
+            "height": 300,
+            "text_size": 105,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "advanced_BTL7At",
+        "advanced_VciUai",
+        "advanced_AMKHzD",
+        "advanced_Ld8MT9"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": false
+      }
+    },
     "advanced_content_4NeRHb": {
       "type": "advanced-content",
       "blocks": {
         "liquid_eRDTEP": {
           "type": "liquid",
           "settings": {
-            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 16px; color: #333333;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as Unique and Storied as the Men who Wear Them</h2>\n  <a href=\"https://patrickadairdesigns.com/collections/all-products?filter.p.m.custom.product_type=Ring\" style=\"background-color: #138f7e\n; color: #ffffff; padding: 10px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"https://patrickadairdesigns.com/pages/our-story\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>",
+            "code": "<div style=\"text-align: center; padding: 40px 0;\">\n  <p style=\"font-size: 16px; color: #333333;\">100,000+ Happy Couples</p>\n  <h2 style=\"font-size: 28px; color: #333333; margin: 10px 0;\">Rings as Unique and Storied as the Men who Wear Them</h2>\n  <a href=\"https://patrickadairdesigns.com/collections/all-products-new\" style=\"background-color: #138f7e\n; color: #ffffff; padding: 10px 30px; text-decoration: none; display: inline-block; font-size: 16px; font-weight: bold; margin-top: 20px;\">Find Your Ring</a>\n  <p style=\"font-size: 14px; color: #666666; margin-top: 20px;\">\n    <a href=\"https://patrickadairdesigns.com/pages/our-story\" style=\"color: #666666; text-decoration: underline;\">Learn How We Do It</a>\n  </p>\n</div>",
             "width": "100%",
             "alignment": "center"
           }
@@ -397,9 +397,9 @@
   },
   "order": [
     "promotional_section_mGEFMz",
+    "slideshow_gQY9qw",
     "main",
     "promo_grid_4iW6mW",
-    "slideshow_gQY9qw",
     "advanced_content_4NeRHb",
     "featured_collections_werMCq",
     "replo_trust_icons_white_backg_bLLqh7",
