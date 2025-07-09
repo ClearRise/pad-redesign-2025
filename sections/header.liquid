@@ -222,7 +222,7 @@
   </div>
                   
 {% if request.path == '/' or template.suffix == 'home-page-test'%}                  
-  <div id="homepage-scroll-navigation">
+  <div id="homepage-scroll-navigation t">
     {% assign flag_active = true %}
     {%- for block in section.blocks -%}
       {%- if block.type == 'scroll_navi_mobile' -%}
