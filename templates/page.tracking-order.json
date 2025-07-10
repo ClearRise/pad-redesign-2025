@@ -21,10 +21,18 @@
         "full_width": false,
         "space_around": true
       }
+    },
+    "order_tracking_beta_pBReHG": {
+      "type": "order-tracking-beta",
+      "name": "Order Tracking",
+      "settings": {
+        "order_date": ""
+      }
     }
   },
   "order": [
     "main",
-    "17337712779db4757c"
+    "17337712779db4757c",
+    "order_tracking_beta_pBReHG"
   ]
 }
