@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "content_display": true
       }
@@ -31,8 +32,8 @@
     }
   },
   "order": [
+    "order_tracking_beta_pBReHG",
     "main",
-    "17337712779db4757c",
-    "order_tracking_beta_pBReHG"
+    "17337712779db4757c"
   ]
 }
