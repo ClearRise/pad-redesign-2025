@@ -1330,6 +1330,11 @@
         "type": "page",
         "id": "cart_terms_conditions_page",
         "label": "Terms and conditions page"
+      },
+      {
+        "type": "url",
+        "id": "cart_continue_shopping_link",
+        "label": "Continue Shopping Link"
       }
     ]
   },
