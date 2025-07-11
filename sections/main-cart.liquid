@@ -28,7 +28,7 @@
 
         <div class="dgCartUpsell dgCartUpSellWrapper  appear-delay-3" id="cart_gift_wrap"></div>
       {%- endif -%}
-      <p><a href="/collections/all-products">Continue shopping</a></p>
+      <p><a href="{{ section.settings.cart_continue_shopping_link }}">Continue shopping</a></p>
       {% if cart.item_count > 0 %}
         <p><a href="/cart/clear">Clear cart</a></p>
 
