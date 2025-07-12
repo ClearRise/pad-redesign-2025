@@ -20,6 +20,7 @@
       }
   
       tryonButton.addEventListener("click", () => {
+        console.log("tryonButton clicked")
         const tryonSellingPlanId = tryonProduct?.selling_plan_groups
           ?.flatMap(group => group.selling_plans || [])
           ?.find(plan => plan.description?.toLowerCase() === "tryon")
