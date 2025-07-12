@@ -2,7 +2,7 @@
 
   // Tryon
   // Handle selling plan input and create the event listener for tryon-button click
-  function handleTryonSellingPlanInput(tryonInput) {
+  function handleTryonSellingPlanInput(tryonInput, tryonButton) {
     try {
       console.log("Creating a new input");
   
@@ -13,7 +13,7 @@
       tryonInput.parentNode.replaceChild(newInput, tryonInput);
   
       // Add event listener to the tryon button
-      const tryonButton = document.querySelector("#tryon-button");
+      // const tryonButton = document.querySelector("#tryon-button");
       if (!tryonButton) {
         console.log("Tryon button not found");
         return;
