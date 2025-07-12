@@ -4,7 +4,6 @@
   // Handle selling plan input and create the event listener for tryon-button click
   function handleTryonSellingPlanInput(tryonInput, tryonButton) {
     try {
-      console.log("Creating a new input");
   
       const newInput = tryonInput.cloneNode(true);
       newInput.id = "patrick-selling-plan-input";
@@ -18,10 +17,8 @@
         console.log("Tryon button not found");
         return;
       }
-      console.log("Tryon button found")
   
       tryonButton.addEventListener("click", () => {
-        console.log("tryonButton clicked")
         const tryonSellingPlanId = tryonProduct?.selling_plan_groups
           ?.flatMap(group => group.selling_plans || [])
           ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon").id
@@ -36,7 +33,6 @@
           newInput.dispatchEvent(new Event("input", { bubbles: true }));
           newInput.dispatchEvent(new Event("change", { bubbles: true }));
   
-          console.log("Set selling plan ID and dispatched events");
         } else {
           console.warn("Tryon selling plan ID not found");
         }
@@ -53,12 +49,10 @@
     const startTime = Date.now();
   
     function waitForTryonInput() {
-      console.log("Waiting for #tryon-input...");
       const tryonInput = document.querySelector("#tryon-input");
       const tryonButton = document.querySelector(".tryon-button");
   
       if (tryonInput && tryonButton) {
-        console.log("Found tryonInput and tryonButton")
         handleTryonSellingPlanInput(tryonInput, tryonButton);
       } else if (Date.now() - startTime < maxWaitTime) {
         setTimeout(waitForTryonInput, pollInterval);
