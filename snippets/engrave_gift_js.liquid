@@ -24,8 +24,7 @@
         console.log("tryonButton clicked")
         const tryonSellingPlanId = tryonProduct?.selling_plan_groups
           ?.flatMap(group => group.selling_plans || [])
-          ?.find(plan => plan.description?.toLowerCase() === "tryon")
-          ?.id;
+          ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon").id
   
         console.log("tryonSellingPlanId: " + tryonSellingPlanId)
         if (tryonSellingPlanId) {
