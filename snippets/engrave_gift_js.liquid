@@ -60,7 +60,7 @@
   
       if (tryonInput && tryonButton) {
         console.log("Found tryonInput and tryonButton")
-        handleTryonSellingPlanInput(tryonInput);
+        handleTryonSellingPlanInput(tryonInput, tryonButton);
       } else if (Date.now() - startTime < maxWaitTime) {
         setTimeout(waitForTryonInput, pollInterval);
       } else {
