@@ -301,7 +301,7 @@
 }
 
 /* Swiper navigation buttons */
-{% comment %} .swiper-button-prev,
+.swiper-button-prev,
 .swiper-button-next {
   position: absolute;
   top: 50%;
@@ -326,7 +326,7 @@
   background: #f8fafc;
   border-color: #2563eb;
   box-shadow: 0 4px 16px rgba(37, 99, 235, 0.2);
-} {% endcomment %}
+}
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
@@ -477,7 +477,7 @@
     max-width: 80px;
   }
   
-  {% comment %} .swiper-button-prev,
+  .swiper-button-prev,
   .swiper-button-next {
     width: 36px;
     height: 36px;
@@ -486,7 +486,7 @@
   .swiper-button-prev::after,
   .swiper-button-next::after {
     font-size: 14px;
-  } {% endcomment %}
+  }
   
   .order-tracking-table-header-line {
     grid-template-columns: 1fr;
@@ -611,11 +611,26 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const orderTrackingStepper = new Swiper(".order-tracking-stepper-contianer-{{ section.id }}", {
-      slidesPerView: 10,
-      spaceBetween: 10,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      allowTouchMove: true,
+      grabCursor: true,
+      touchRatio: 1,
+      touchAngle: 45,
       navigation: {
         nextEl: '.swiper-button-next-{{ section.id }}',
         prevEl: '.swiper-button-prev-{{ section.id }}',
+      },
+      breakpoints: {
+        320: {
+          spaceBetween: 10,
+        },
+        768: {
+          spaceBetween: 15,
+        },
+        1024: {
+          spaceBetween: 20,
+        }
       }
     });
   });
