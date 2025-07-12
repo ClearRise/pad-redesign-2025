@@ -59,6 +59,7 @@
       const tryonButton = document.querySelector("#tryon-button");
   
       if (tryonInput && tryonButton) {
+        console.log("Found tryonInput and tryonButton")
         handleTryonSellingPlanInput(tryonInput);
       } else if (Date.now() - startTime < maxWaitTime) {
         setTimeout(waitForTryonInput, pollInterval);
