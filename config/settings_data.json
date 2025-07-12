@@ -432,7 +432,7 @@
         "type": "shopify://apps/tryon/blocks/tryOnAppEmbed/95799297-dc1d-40fb-9234-066b30a3012a",
         "disabled": false,
         "settings": {
-          "tryon-redirect-on-click": "checkout",
+          "tryon-redirect-on-click": "none",
           "tryon-button-location": "after",
           "open-tryon-modal-on-button-click": false,
           "show-tryon-description": true,
