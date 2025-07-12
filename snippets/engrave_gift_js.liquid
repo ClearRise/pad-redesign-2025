@@ -64,6 +64,19 @@ $(document).ready(function () {
     const newInput = tryonInput.cloneNode(true)
     newInput.id = "patrick-selling-plan-input"
     replaceChild(newInput, oldInput)
+
+    const tryonButton = document.querySelector("#tryon-button")
+    tryonButton.addEventListener("click", () => {
+      const tryonSellingPlanId = tryonProduct?.selling_plan_groups
+        ?.flatMap(group => group.selling_plans || [])
+        ?.find(plan => plan.description?.toLowerCase() === "tryon")
+        ?.id;
+
+      if(tryonSellingPlanId){
+        newInput.value = tryonSellingPlanId
+      }
+      newInput = 
+    })
   }
   catch((error) =>{
     console.log("Error with tryon input handling: " + error)
