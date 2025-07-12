@@ -60,38 +60,37 @@ $(document).ready(function () {
   }
 
   productFormSubmit.on("click", function (event) {
-    console.log("Tryon, productFormSubmit: " + productFormSubmit)
-  //   $('.add-to-cart-loader').show();
-  //   event.preventDefault();
+    $('.add-to-cart-loader').show();
+    event.preventDefault();
 
-  //   CheckProtectField(); // Check both protection fields
-  //   let engravingValue = engravingInput.val();
-  //   console.log(engravingValue);
+    CheckProtectField(); // Check both protection fields
+    let engravingValue = engravingInput.val();
+    console.log(engravingValue);
 
-  //   if (engravingValue !== '' && engravingValue != undefined) {
-  //     protectionInputs.push(engravingProductID);
-  //   }
-  //   $('.CircleSpinner').addClass('LoadComplete');
-  //   // Add all selected protection plans
-  //   if (protectionInputs.length > 0) {
-  //     fetch('/cart/add.js', {
-  //       body: JSON.stringify(
-  //         {items: protectionInputs.map(item => ({id: item, quantity: 1}))}
-  //       ),
-  //       credentials: 'same-origin',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //         'X-Requested-With':'xmlhttprequest'
-  //       },
-  //       method: 'POST'
-  //     })
-  //     .then(response => setTimeout(() => {
-  //       productForm.submit();
-  //     }, 2000));
-  //   } else {
-  //     productForm.submit();
-  //   }
-  // });
+    if (engravingValue !== '' && engravingValue != undefined) {
+      protectionInputs.push(engravingProductID);
+    }
+    $('.CircleSpinner').addClass('LoadComplete');
+    // Add all selected protection plans
+    if (protectionInputs.length > 0) {
+      fetch('/cart/add.js', {
+        body: JSON.stringify(
+          {items: protectionInputs.map(item => ({id: item, quantity: 1}))}
+        ),
+        credentials: 'same-origin',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With':'xmlhttprequest'
+        },
+        method: 'POST'
+      })
+      .then(response => setTimeout(() => {
+        productForm.submit();
+      }, 2000));
+    } else {
+      productForm.submit();
+    }
+  });
 });
 
 
