@@ -59,7 +59,13 @@ $(document).ready(function () {
   }
 
   // handle selling plan input and create the event listener for tryon-button click
-  
+  try{
+    
+  const tryonInput = document.querySelector("#tryon-input")
+  }
+  catch((error) =>{
+    console.log("Error with tryon input handling: " + error)
+  })
 
   productFormSubmit.on("click", function (event) {
     $('.add-to-cart-loader').show();
