@@ -15,9 +15,10 @@
       // Add event listener to the tryon button
       const tryonButton = document.querySelector("#tryon-button");
       if (!tryonButton) {
-        console.warn("Tryon button not found");
+        console.log("Tryon button not found");
         return;
       }
+      console.log("Tryon button found")
   
       tryonButton.addEventListener("click", () => {
         console.log("tryonButton clicked")
