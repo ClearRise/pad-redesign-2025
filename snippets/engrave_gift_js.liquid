@@ -70,6 +70,8 @@ $(document).ready(function () {
     if (engravingValue !== '' && engravingValue != undefined) {
       protectionInputs.push(engravingProductID);
     }
+
+    console.log("protectionInputs: " + protectionInputs)
     $('.CircleSpinner').addClass('LoadComplete');
     // Add all selected protection plans
     if (protectionInputs.length > 0) {
@@ -85,7 +87,7 @@ $(document).ready(function () {
         method: 'POST'
       })
       .then(response => setTimeout(() => {
-        productForm.submit();
+        // productForm.submit();
       }, 2000));
     } else {
       productForm.submit();
