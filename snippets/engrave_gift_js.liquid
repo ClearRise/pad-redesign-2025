@@ -88,6 +88,7 @@ $(document).ready(function () {
       })
       .then(response => setTimeout(() => {
         console.log("productForm: " + productForm)
+        console.log("productForm stringify: " + JSON.stringify(productForm))
         // productForm.submit();
       }, 2000));
     } else {
