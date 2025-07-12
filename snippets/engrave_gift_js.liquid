@@ -60,8 +60,10 @@ $(document).ready(function () {
 
   // handle selling plan input and create the event listener for tryon-button click
   try{
-    
-  const tryonInput = document.querySelector("#tryon-input")
+    const tryonInput = document.querySelector("#tryon-input")
+    const newInput = tryonInput.cloneNode(true)
+    newInput.id = "patrick-selling-plan-input"
+    replaceChild(newInput, oldInput)
   }
   catch((error) =>{
     console.log("Error with tryon input handling: " + error)
