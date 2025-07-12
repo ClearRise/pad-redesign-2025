@@ -127,291 +127,508 @@
 .order-tracking-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 24px 20px 32px 20px;
+  padding: 32px 24px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: #f8fafc;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px 0 rgba(37,99,235,0.07), 0 1.5px 4px 0 rgba(0,0,0,0.04);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.08), 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.order-tracking-top-info {
+.order-tracking-topInfo {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 24px;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.order-number {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: 0.5px;
+}
+
+.order-placed-date {
   font-size: 16px;
-  color: #2563eb;
+  color: #64748b;
   font-weight: 500;
 }
 
 .order-tracking-stepper-container {
   position: relative;
+  margin: 32px 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 32px 20px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.08);
+}
+
+.order-tracking-stepper-contianer {
+  position: relative;
   overflow: hidden;
-  margin: 24px 0 18px 0;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 1px 4px 0 rgba(37,99,235,0.04);
-  padding: 18px 0 10px 0;
 }
 
 .order-tracking-stepper {
   display: flex;
-  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
-  min-width: max-content;
-  align-items: flex-start;
+  gap: 40px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 20px;
 }
 
-.order-tracking-step {
+.order-tracking-stepper-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 130px;
-  margin: 0 12px;
+  min-width: 140px;
   position: relative;
+  flex-shrink: 0;
 }
 
-.order-tracking-step::after {
+.order-tracking-stepper-item::after {
   content: '';
   position: absolute;
-  top: 28px;
+  top: 24px;
   left: 100%;
-  width: 100%;
-  height: 4px;
-  background-color: #e0e7ef;
-  z-index: 1;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #e2e8f0 0%, #cbd5e1 100%);
   border-radius: 2px;
+  z-index: 1;
 }
 
-.order-tracking-step:last-child::after {
+.order-tracking-stepper-item:last-child::after {
   display: none;
 }
 
-.order-tracking-step.connector-complete::after {
-  background-color: #2563eb;
+.order-tracking-stepper-item-icon {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 12px;
 }
 
-.order-tracking-step-icon {
+.order-tracking-stepper-item-icon-circle {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: #e0e7ef;
-  border: 3px solid #e0e7ef;
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  border: 3px solid #e2e8f0;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
-  position: relative;
-  z-index: 2;
-  font-size: 22px;
-  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.order-tracking-step-icon.complete {
-  background-color: #2563eb;
-  border-color: #2563eb;
-  color: #fff;
+.order-tracking-stepper-item-icon-circle-inner {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.order-tracking-step-icon.active {
-  background-color: #fff;
-  border-color: #2563eb;
-  color: #2563eb;
-  box-shadow: 0 0 0 3px #dbeafe;
+.order-tracking-stepper-item-icon-circle-inner-icon {
+  width: 20px;
+  height: 20px;
+  color: #64748b;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.order-tracking-step-icon .icon-check {
-  width: 28px;
-  height: 28px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: inline-block;
-}
-
-.order-tracking-step-label {
+.order-tracking-stepper-item-label {
   font-size: 14px;
+  font-weight: 600;
+  color: #475569;
   text-align: center;
-  color: #222;
+  line-height: 1.4;
   max-width: 120px;
-  line-height: 1.3;
-  font-weight: 500;
-  margin-top: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.order-tracking-arrow {
+/* Active and completed states */
+.order-tracking-stepper-item.active .order-tracking-stepper-item-icon-circle {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border-color: #2563eb;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+}
+
+.order-tracking-stepper-item.active .order-tracking-stepper-item-icon-circle-inner {
+  background: #ffffff;
+}
+
+.order-tracking-stepper-item.active .order-tracking-stepper-item-icon-circle-inner-icon {
+  color: #2563eb;
+}
+
+.order-tracking-stepper-item.active .order-tracking-stepper-item-label {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.order-tracking-stepper-item.completed .order-tracking-stepper-item-icon-circle {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border-color: #059669;
+  box-shadow: 0 4px 16px rgba(5, 150, 105, 0.3);
+}
+
+.order-tracking-stepper-item.completed .order-tracking-stepper-item-icon-circle-inner {
+  background: #ffffff;
+}
+
+.order-tracking-stepper-item.completed .order-tracking-stepper-item-icon-circle-inner-icon {
+  color: #059669;
+}
+
+.order-tracking-stepper-item.completed .order-tracking-stepper-item-label {
+  color: #065f46;
+  font-weight: 600;
+}
+
+.order-tracking-stepper-item.completed::after {
+  background: linear-gradient(90deg, #059669 0%, #10b981 100%);
+}
+
+/* Swiper navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #fff;
-  border: 2px solid #dbeafe;
-  border-radius: 50%;
   width: 44px;
   height: 44px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #e2e8f0;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 3;
-  transition: all 0.3s cubic-bezier(.4,0,.2,1);
-  font-size: 22px;
-  color: #2563eb;
-  box-shadow: 0 1px 4px 0 rgba(37,99,235,0.04);
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
-.order-tracking-arrow:hover:not(:disabled) {
-  background-color: #dbeafe;
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #f8fafc;
+  border-color: #2563eb;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.2);
 }
 
-.order-tracking-arrow:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px;
+  font-weight: bold;
+  color: #64748b;
 }
 
-.order-tracking-arrow.left {
+.swiper-button-prev {
   left: 10px;
 }
 
-.order-tracking-arrow.right {
+.swiper-button-next {
   right: 10px;
 }
 
-.order-tracking-progress-container {
-  width: 100%;
-  height: 14px;
-  background-color: #e0e7ef;
-  border-radius: 7px;
-  overflow: hidden;
+/* Progress bar */
+.order-tracking-stepper-progress {
   margin-top: 24px;
+  padding: 0 20px;
 }
 
-.order-tracking-progress-bar {
+.order-tracking-stepper-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #e2e8f0 0%, #cbd5e1 100%);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.order-tracking-stepper-progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
-  border-radius: 7px;
-  transition: width 0.3s cubic-bezier(.4,0,.2,1);
+  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
+  border-radius: 4px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
+.order-tracking-stepper-progress-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Table styles */
+.order-tracking-table-container {
+  margin-top: 32px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.08);
+}
+
+.order-tracking-table-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.order-tracking-table-header-line {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px 24px;
+}
+
+.order-tracking-table-header-item-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.order-tracking-table-body {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
-  .order-tracking-top-info {
+  .order-tracking-container {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+  
+  .order-tracking-topInfo {
     flex-direction: column;
-    gap: 10px;
-    font-size: 15px;
+    gap: 12px;
+    text-align: center;
+    padding: 16px 20px;
   }
-  .order-tracking-step {
-    min-width: 110px;
-    margin: 0 4px;
-  }
-  .order-tracking-step-label {
-    font-size: 12px;
-  }
-  .order-tracking-step-icon {
-    width: 38px;
-    height: 38px;
+  
+  .order-number {
     font-size: 16px;
+  }
+  
+  .order-placed-date {
+    font-size: 14px;
+  }
+  
+  .order-tracking-stepper-container {
+    padding: 24px 16px 20px;
+  }
+  
+  .order-tracking-stepper {
+    gap: 24px;
+    padding: 0 16px;
+  }
+  
+  .order-tracking-stepper-item {
+    min-width: 100px;
+  }
+  
+  .order-tracking-stepper-item-icon-circle {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .order-tracking-stepper-item-icon-circle-inner {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .order-tracking-stepper-item-icon-circle-inner-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .order-tracking-stepper-item-label {
+    font-size: 12px;
+    max-width: 80px;
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 14px;
+  }
+  
+  .order-tracking-table-header-line {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+  
+  .order-tracking-table-header-item-title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-tracking-stepper {
+    gap: 16px;
+  }
+  
+  .order-tracking-stepper-item {
+    min-width: 80px;
+  }
+  
+  .order-tracking-stepper-item-icon-circle {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .order-tracking-stepper-item-icon-circle-inner {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .order-tracking-stepper-item-icon-circle-inner-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .order-tracking-stepper-item-label {
+    font-size: 11px;
+    max-width: 70px;
   }
 }
 </style>
 
-<div class="order-tracking-container">
-  <div class="order-tracking-top-info">
-    {% assign last_step_index = step_names.size | minus: 1 %}
-    {% if current_step_index != last_step_index %}
-      <span>Business Days Elapsed: {{ business_days_elapsed }}</span>
-      <span>Expected Shipment: {{ expected_shipment_date }}</span>
-    {% endif %}
-  </div>
-
-  <div class="order-tracking-stepper-container" id="stepper-container">
-    <button class="order-tracking-arrow left" id="scroll-left" onclick="handleScroll(-1)">
-      &lt;
-    </button>
-
-    <div class="order-tracking-stepper" id="stepper" style="transform: translateX(0px);">
-      {% for step in step_names %}
-        {% assign step_index = forloop.index0 %}
-        {% assign is_complete = false %}
-        {% assign is_active = false %}
-        {% if step_index < current_step_index %}
-          {% assign is_complete = true %}
-        {% endif %}
-        {% if step_index == current_step_index %}
-          {% assign is_active = true %}
-        {% endif %}
-        <div class="order-tracking-step{% if is_active %} active-step{% endif %}{% if is_complete %} connector-complete{% endif %}">
-          <div class="order-tracking-step-icon{% if is_complete %} complete{% endif %}{% if is_active %} active{% endif %}">
-            {% if is_complete %}
-              <span class="icon-check"></span>
-            {% else %}
-              <span style="font-size: 18px;">{{ forloop.index }}</span>
-            {% endif %}
-          </div>
-          <span class="order-tracking-step-label">{{ step }}</span>
-        </div>
-      {% endfor %}
+<div class="order-tracking-container order-tracking-container-{{ section.id }}">
+  <div class="order-tracking-topInfo">
+    <div class="order-number">
+      Order #676767B
     </div>
-
-    <button class="order-tracking-arrow right" id="scroll-right" onclick="handleScroll(1)">
-      &gt;
-    </button>
+    <div class="order-placed-date">
+      Placed on: 07/11/2025
+    </div>
   </div>
-
-  <div class="order-tracking-progress-container">
-    <div class="order-tracking-progress-bar" style="width: {{ progress_percentage }}%;"></div>
+  <div class="order-tracking-stepper-container">
+    <div class="order-tracking-stepper-contianer order-tracking-stepper-contianer-{{ section.id }}">
+      <div class="order-tracking-stepper swiper-wrapper">
+        {% for step in step_names %}
+          {% assign step_index = forloop.index0 %}
+          {% assign is_complete = false %}
+          {% assign is_active = false %}
+          {% if step_index < current_step_index %}
+            {% assign is_complete = true %}
+          {% endif %}
+          {% if step_index == current_step_index %}
+            {% assign is_active = true %}
+          {% endif %}
+          <div class="order-tracking-stepper-item swiper-slide{% if is_active %} active{% endif %}{% if is_complete %} completed{% endif %}">
+            <div class="order-tracking-stepper-item-icon">
+              <div class="order-tracking-stepper-item-icon-circle">
+                <div class="order-tracking-stepper-item-icon-circle-inner">
+                  <div class="order-tracking-stepper-item-icon-circle-inner-icon">
+                    {% if is_complete %}
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                      </svg>
+                    {% else %}
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 22h20L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                      </svg>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-tracking-stepper-item-label">
+              {{ step }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-button-prev swiper-button-prev-{{ section.id }}"></div>
+      <div class="swiper-button-next swiper-button-next-{{ section.id }}"></div>
+      <div class="order-tracking-stepper-progress">
+        <div class="order-tracking-stepper-progress-bar">
+          <div class="order-tracking-stepper-progress-bar-fill" style="width: {{ progress_percentage }}%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="order-tracking-table-container">
+    <div class="order-tracking-table-header">
+      <div class="order-tracking-table-header-line">
+        <div class="order-tracking-table-header-item-title label-product">
+          Product
+        </div>
+        <div class="order-tracking-table-header-item-title label-price">
+          Price
+        </div>
+        <div class="order-tracking-table-header-item-title label-quantity">
+          Quantity
+        </div>
+        <div class="order-tracking-table-header-item-title label-total">
+          Total
+        </div>
+      </div>
+    </div>
+    <div class="order-tracking-table-body">
+      Order details will be displayed here
+    </div>
   </div>
 </div>
 
 <script>
-(function() {
-  let scrollOffset = 0;
-  let maxScroll = 0;
-  const stepWidth = 120;
-  
-  function calculateScroll() {
-    const container = document.getElementById('stepper-container');
-    const stepper = document.getElementById('stepper');
-    
-    if (container && stepper) {
-      const containerWidth = container.offsetWidth;
-      const stepperWidth = stepper.scrollWidth;
-      maxScroll = Math.max(0, stepperWidth - containerWidth);
-    }
-  }
-  
-  function handleScroll(direction) {
-    scrollOffset = scrollOffset + (direction * stepWidth);
-    scrollOffset = Math.max(0, Math.min(scrollOffset, maxScroll));
-    
-    const stepper = document.getElementById('stepper');
-    if (stepper) {
-      stepper.style.transform = `translateX(-${scrollOffset}px)`;
-    }
-    
-    updateArrowStates();
-  }
-  
-  function updateArrowStates() {
-    const leftArrow = document.getElementById('scroll-left');
-    const rightArrow = document.getElementById('scroll-right');
-    
-    if (leftArrow) {
-      leftArrow.disabled = scrollOffset <= 0;
-    }
-    
-    if (rightArrow) {
-      rightArrow.disabled = scrollOffset >= maxScroll;
-    }
-  }
-  
-  // Initialize
-  calculateScroll();
-  updateArrowStates();
-  
-  // Handle window resize
-  window.addEventListener('resize', calculateScroll);
-  
-  // Make handleScroll globally available
-  window.handleScroll = handleScroll;
-})();
+  document.addEventListener('DOMContentLoaded', function() {
+    const orderTrackingStepper = new Swiper(".order-tracking-stepper-contianer-{{ section.id }}", {
+      slidesPerView: 'auto',
+      spaceBetween: 40,
+      navigation: {
+        nextEl: '.swiper-button-next-{{ section.id }}',
+        prevEl: '.swiper-button-prev-{{ section.id }}',
+      },
+      breakpoints: {
+        320: {
+          spaceBetween: 16,
+        },
+        768: {
+          spaceBetween: 24,
+        },
+        1024: {
+          spaceBetween: 40,
+        }
+      }
+    });
+  });
 </script>
+
 {% schema %}
 {
   "name": "Order Tracking",
@@ -420,6 +637,63 @@
       "type": "text",
       "id": "order_date",
       "label": "Order Date"
+    },
+    {
+      "type": "checkbox",
+      "id": "bifm_order",
+      "label": "BIFM Order",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "custom_order",
+      "label": "Custom Order",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "expedited_order",
+      "label": "Expedited Order",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "custom_steps_text",
+      "label": "Custom Steps Text",
+      "default": "Step 1,Step 2,Step 3,Step 4,Step 5,Step 6,Step 7,Step 8"
+    },
+    {
+      "type": "text",
+      "id": "diy_steps_text",
+      "label": "DIY Steps Text",
+      "default": "Step 1,Step 2,Step 3,Step 4,Step 5,Step 6"
+    },
+    {
+      "type": "range",
+      "id": "bifm_days_limit",
+      "label": "BIFM Days Limit",
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "diy_days_limit",
+      "label": "DIY Days Limit",
+      "min": 3,
+      "max": 15,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "expedited_days_limit",
+      "label": "Expedited Days Limit",
+      "min": 1,
+      "max": 7,
+      "step": 1,
+      "default": 3
     }
   ],
   "presets": [
