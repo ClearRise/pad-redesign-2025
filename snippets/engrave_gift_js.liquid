@@ -71,56 +71,6 @@
   });
 // End Tryon
 
-
-  // // Tryon
-  // // handle selling plan input and create the event listener for tryon-button click
-  // function handleTryonSellingPlanInput (tryonInput){
-  //   try {
-  //     console.log("creating a new input")
-  //     const newInput = tryonInput.cloneNode(true)
-  //     newInput.id = "patrick-selling-plan-input"
-  //     replaceChild(newInput, oldInput)
-  
-  //     const tryonButton = document.querySelector("#tryon-button")
-  //     tryonButton.addEventListener("click", () => {
-  //       const tryonSellingPlanId = tryonProduct?.selling_plan_groups
-  //         ?.flatMap(group => group.selling_plans || [])
-  //         ?.find(plan => plan.description?.toLowerCase() === "tryon")
-  //         ?.id;
-  
-  //       if(tryonSellingPlanId){
-  //         newInput.value = tryonSellingPlanId
-  //       }
-  //       newInput = 
-  //     })
-  // }
-  // catch((error) =>{
-  //   console.log("Error with tryon input handling: " + error)
-  // })
-  // }
-  
-  // const maxWaitTime = 3000; // 3s
-  // const pollInterval = 200;
-  // const startTime = Date.now();
-  
-  // function waitForTryonInput() {
-  //   console.log("waitForTyonInput")
-  //   const tryonInput = document.querySelector("#tryon-input");
-  
-  //   if (tryonInput) {
-  //     handleTryonSellingPlanInput(tryonInput);
-  //   } else if (Date.now() - startTime < maxWaitTime) {
-  //     setTimeout(waitForTryonInput, pollInterval);
-  //   } else {
-  //     console.warn("tryon-input not found within 3 seconds");
-  //   }
-  // }
-  
-  // // Start waiting on page load
-  // waitForTryonInput();
-
-  // // End Tryon
-
 $(document).ready(function () {
   const productForm = $(".product-single__form");
   const productFormSubmit = $(".add-to-cart");
