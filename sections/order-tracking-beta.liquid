@@ -611,22 +611,11 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const orderTrackingStepper = new Swiper(".order-tracking-stepper-contianer-{{ section.id }}", {
-      slidesPerView: 'auto',
-      spaceBetween: 40,
+      slidesPerView: 10,
+      spaceBetween: 10,
       navigation: {
         nextEl: '.swiper-button-next-{{ section.id }}',
         prevEl: '.swiper-button-prev-{{ section.id }}',
-      },
-      breakpoints: {
-        320: {
-          spaceBetween: 16,
-        },
-        768: {
-          spaceBetween: 24,
-        },
-        1024: {
-          spaceBetween: 40,
-        }
       }
     });
   });
