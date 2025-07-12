@@ -91,7 +91,6 @@ $(document).ready(function () {
         method: 'POST'
       })
       .then(response => setTimeout(() => {
-        console.log("productForm: " + productForm)
         productForm.submit();
       }, 2000));
     } else {
