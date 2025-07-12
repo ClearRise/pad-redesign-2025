@@ -27,8 +27,8 @@
           ?.find(plan => plan.description?.toLowerCase() === "tryon")
           ?.id;
   
+        console.log("tryonSellingPlanId: " + tryonSellingPlanId)
         if (tryonSellingPlanId) {
-          console.log("tryonSellingPlanId: " + tryonSellingPlanId)
           console.log("newInput: ")
           console.log(newInput)
           newInput.value = tryonSellingPlanId;
