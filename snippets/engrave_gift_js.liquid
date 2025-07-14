@@ -59,9 +59,14 @@
     path.setAttribute("fill", "currentColor");
   
     svg.appendChild(path);
-    tryonButton.appendChild(svg);
+
+    svgSpan = document.createElement("span");
+    svgSpan.appendChild(svg);
+    tryonButton.appendChild(svgSpan);
+
+    zeroSpan = document.createElement("span");
+    zeroSpan.textContent = "$0";
   
-    console.log("SVG appended to Tryon button:", tryonButton);
   }
   
   // Poll for #tryon-input and run logic on document load
