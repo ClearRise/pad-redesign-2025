@@ -246,7 +246,7 @@
             <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>
           {% if intelligems_discount == 0 %}
             <div style="display: none;" class="real-_-price-original-{{ product.id }}"></div>
-              <div style="display: none;" class="real-_-price-engraving-{{ product.id }}">{{ engrave_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</div>
+              <div style="display: none;" class="real-_-price-engraving-{{ product.id }} ppppppppp">{{ engrave_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</div>
                 <span class="real-_-price-{{ product.id }} real-_-price-engraving-{{ product.id }}">{% if property_size > 0 and e_product_id != blank %}
                   {{ product.original_price | plus: engrave_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
                 {% else %}
