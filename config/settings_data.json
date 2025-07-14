@@ -455,7 +455,7 @@
           "tryon-modal-stage2-description": "Your trial starts upon the items' arrival. Comfortably try them at home and send us back the items you don't want.",
           "tryon-modal-stage3-header": "Pay",
           "tryon-modal-stage3-description": "Upon the return of your unwanted items, we will only charge you for the items you choose to keep.",
-          "appendable-atc-button": ".buy-buttons-block",
+          "appendable-atc-button": "",
           "tryon-product-form-selector": ""
         }
       }
