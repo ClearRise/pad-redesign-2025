@@ -33,7 +33,7 @@
           "type": "image",
           "settings": {
             "iamge_name": "",
-            "image": "shopify://shop_images/Collection_mobile_bogo1.png",
+            "image": "shopify://shop_images/2-2.jpg",
             "link": "",
             "width": "60%",
             "alignment": "center"
@@ -121,7 +121,11 @@
         "top_padding": 20,
         "bottom_padding": 20,
         "show_bottom_break_line": true,
-        "top_logo_size": 16
+        "top_logo_size": 16,
+        "trust_icon_1_label": "",
+        "trust_icon_2_label": "",
+        "trust_icon_3_label": "",
+        "trust_icon_4_label": ""
       }
     },
     "replo_trust_icons_fy9XYw": {
