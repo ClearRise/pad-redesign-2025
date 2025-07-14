@@ -73,8 +73,8 @@
   
       if (tryonInput && tryonButton) {
         alert("We have input and button")
-        handleTryonSellingPlanInput(tryonInput, tryonButton);
         handleAddingButtonElements(tryonButton);
+        handleTryonSellingPlanInput(tryonInput, tryonButton);
       } else if (Date.now() - startTime < maxWaitTime) {
         setTimeout(waitForTryonInput, pollInterval);
       } else {
