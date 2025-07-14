@@ -23,7 +23,7 @@
           ?.flatMap(group => group.selling_plans || [])
           ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon").id
   
-        console.log("tryonSellingPlanId: " + tryonSellingPlanId)
+        // console.log("tryonSellingPlanId: " + tryonSellingPlanId)
         // alert("tryonSellingPlanId: " + tryonSellingPlanId)
         if (tryonSellingPlanId) {
           console.log("newInput: ")
