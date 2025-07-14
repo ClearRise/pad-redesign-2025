@@ -423,7 +423,7 @@
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+{% comment %} @media (max-width: 768px) {
   .order-tracking-container {
     padding: 24px 16px;
     border-radius: 16px;
@@ -467,17 +467,17 @@
     height: 28px;
   }
   
-    {% comment %} .order-tracking-stepper-item-icon-circle-inner-icon {
+    .order-tracking-stepper-item-icon-circle-inner-icon {
       width: 16px;
       height: 16px;
-    } {% endcomment %}
+    }
   
   .order-tracking-stepper-item-label {
     font-size: 12px;
     max-width: 80px;
   }
   
-  {% comment %} .swiper-button-prev,
+  .swiper-button-prev,
   .swiper-button-next {
     width: 36px;
     height: 36px;
@@ -486,7 +486,7 @@
   .swiper-button-prev::after,
   .swiper-button-next::after {
     font-size: 14px;
-  } {% endcomment %}
+  }
   
   .order-tracking-table-header-line {
     grid-template-columns: 1fr;
@@ -497,9 +497,9 @@
   .order-tracking-table-header-item-title {
     font-size: 14px;
   }
-}
+} {% endcomment %}
 
-@media (max-width: 480px) {
+{% comment %} @media (max-width: 480px) {
   .order-tracking-stepper {
     gap: 16px;
   }
@@ -518,16 +518,16 @@
     height: 24px;
   }
   
-  {% comment %} .order-tracking-stepper-item-icon-circle-inner-icon {
+  .order-tracking-stepper-item-icon-circle-inner-icon {
     width: 14px;
     height: 14px;
-  } {% endcomment %}
+  }
   
   .order-tracking-stepper-item-label {
     font-size: 11px;
     max-width: 70px;
   }
-}
+} {% endcomment %}
 </style>
 
 <div class="order-tracking-container order-tracking-container-{{ section.id }}">
