@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "rich_text_RyLK4F": {
@@ -22,7 +22,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>Handcrafted Wedding Bands that are fully customizable featuring sustainable and conflict-free materials. <\/p>"
+            "text": "<p>Handcrafted Wedding Bands that are fully customizable featuring sustainable and conflict-free materials. </p>"
           }
         }
       },
@@ -51,8 +51,7 @@
         "collection_description": {
           "type": "collection_description",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "subcollections": {
           "type": "subcollections",
@@ -77,23 +76,30 @@
         "product_grid"
       ],
       "settings": {
+        "title": "",
         "enable_sidebar": true,
         "collapsed": true,
         "filter_style": "sidebar",
         "enable_color_swatches": false,
-        "enable_sort": true
+        "enable_sort": true,
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "custom_badge": "BUY ONE GET ONE FREE",
+        "saved_amount_option": "basic_logic",
+        "load_more": false
       }
     },
     "text_and_image_NJ76bR": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Women_s_Group_Shot_-_Beige_Back_Ground_v2.png",
+        "image": "shopify://shop_images/Women_s_Group_Shot_-_Beige_Back_Ground_v2.png",
         "image_width": 700,
         "subtitle": "",
         "title": "Looking for Something Custom?",
-        "text": "<p>Designed by You. Crafted by Us.<\/p>",
+        "text": "<p>Designed by You. Crafted by Us.</p>",
         "button_label": "Design Your Dream Wedding Ring",
-        "button_link": "shopify:\/\/pages\/concierge-shopping-experience",
+        "button_link": "shopify://pages/concierge-shopping-experience",
         "button_style": "secondary",
         "align_text": "left",
         "layout": "right",
@@ -110,16 +116,17 @@
             "heading": "",
             "textarea": "",
             "cta_text1": "Shop Men's Bands",
-            "cta_link1": "shopify:\/\/collections\/mens-wedding-bands",
+            "cta_link1": "shopify://collections/mens-wedding-bands",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Frame_2065.png",
+            "image": "shopify://shop_images/Frame_2065.png",
             "video_url": "",
             "width": "50",
             "height": 500,
             "text_size": 100,
             "text_align": "vertical-bottom horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "#ffffff",
             "boxed": false,
             "framed": false
@@ -132,16 +139,17 @@
             "heading": "",
             "textarea": "",
             "cta_text1": "Shop Matching Bands",
-            "cta_link1": "shopify:\/\/collections\/wedding-ring-sets",
+            "cta_link1": "shopify://collections/wedding-ring-sets",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify:\/\/shop_images\/Frame_2055.png",
+            "image": "shopify://shop_images/Frame_2055.png",
             "video_url": "",
             "width": "50",
             "height": 500,
             "text_size": 100,
             "text_align": "vertical-bottom horizontal-center",
             "focal_point": "center",
+            "dark_overlay": 10,
             "color_accent": "#ffffff",
             "boxed": false,
             "framed": false
