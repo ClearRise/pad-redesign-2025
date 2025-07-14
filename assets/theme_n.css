@@ -13206,3 +13206,6 @@ input[type="checkbox"]:checked::before {
   display: none;
   transform: translateY(100%);
 }
+.flex-grid__item.flex-grid__item--50.type-advanced {
+  max-height: 36vw;
+}
