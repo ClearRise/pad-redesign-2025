@@ -16,7 +16,7 @@
         "order_date": "",
         "bifm_order": false,
         "custom_order": false,
-        "expedited_order": true,
+        "expedited_order": false,
         "custom_steps_text": "Step 1,Step 2,Step 3,Step 4,Step 5,Step 6,Step 7,Step 8",
         "diy_steps_text": "Step 1,Step 2,Step 3,Step 4,Step 5,Step 6",
         "bifm_days_limit": 10,
