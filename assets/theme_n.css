@@ -13210,13 +13210,13 @@ input[type="checkbox"]:checked::before {
   display: none;
   transform: translateY(100%);
 }
-/* @media (min-width: 769px) { */
+@media (min-width: 769px) {
   .flex-grid__item.flex-grid__item--50.type-advanced {
-    max-height: 40vw;
+    max-height: 38vw;
   }
-/* } */
-/* @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
   .flex-grid__item.flex-grid__item--50.type-advanced {
-    height: 80vw !important;
+    height: 70vw !important;
   }
-} */
+}
