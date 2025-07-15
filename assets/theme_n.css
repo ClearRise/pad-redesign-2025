@@ -13213,6 +13213,6 @@ input[type="checkbox"]:checked::before {
 }
 @media (max-width: 768px) {
   .flex-grid__item.flex-grid__item--50.type-advanced {
-    height: 90% !important;
+    height: 80vw !important;
   }
 }
