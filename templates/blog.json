@@ -72,6 +72,7 @@
           "type": "image",
           "settings": {
             "iamge_name": "image",
+            "image": "shopify://shop_images/ring-2_acba807a-3bd8-4360-a970-6cf639012532.jpg",
             "link": "",
             "width": "60%",
             "alignment": "center"
