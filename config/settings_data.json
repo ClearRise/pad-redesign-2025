@@ -330,8 +330,8 @@
         ],
         "settings": {
           "show_locale_selector": true,
-          "privacy_policy_link": "",
-          "terms_and_conditions_link": "",
+          "privacy_policy_link": "shopify://pages/privacy-policy",
+          "terms_and_conditions_link": "shopify://pages/terms-and-conditions",
           "review_link": "shopify://pages/reviews",
           "show_currency_selector": true,
           "show_currency_flags": true,
