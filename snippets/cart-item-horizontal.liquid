@@ -93,16 +93,6 @@
         <span class="bold_load_cart_item_properties black_txt"></span>
 
         {% if property_size > 0 %}
-          {% if product.properties._glowstone_enhancement == 'Yes' %}
-            <div class="product-option action_icons">
-              <input
-                type="hidden"
-                class="Protection_p_glow"
-                value="true"
-                data-product-id="{{ product.properties._prot-glowstone_enhancement_id }}"
-              >
-            </div>
-          {% endif %}
           {% for property in product.properties %}
             {% if property.first contains '_relative_product_' %}
               <div class="product-option action_icons">
@@ -116,6 +106,11 @@
               </div>
             {% endif %}
           {% endfor %}
+          {% if product.properties._glowstone_enhancement == "Yes" %}
+            <div class="product-option action_icons">
+              <input type="hidden" class="Protection_p_glow" value="true" data-product-id="{{ product.properties._prot-glowstone_enhancement_id }}">
+            </div>
+          {% endif %}
           {% for p in product.properties %}
             {% if product.product.metafields.custom.premium_protection_product %}
               {% if p.first contains 'Protection Plan' %}
