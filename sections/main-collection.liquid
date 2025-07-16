@@ -1,307 +1,208 @@
-{%- liquid
-  assign current_filter_size = 0
-
-  for filter in collection.filters
-    assign current_filter_size = current_filter_size | plus: filter.active_values.size
-  endfor
--%}
-
-<div
-  class="collection-content custom_collection_content"
-  data-section-id="{{ section.id }}"
-  data-section-type="collection-grid"
->
-  <div id="CollectionAjaxContent">
-    <div class="page-width">
-      {% if section.settings.title != blank %}
-      <div class="grid">
-        <h2 class="h1 grid__item one-whole">{{section.settings.title}}</h2>
-      </div>
-      {% endif %}
-      
-      <div class="grid">
-        <div class="grid__item medium-up--one-fifth grid__item--sidebar">
-          {%- render 'collection-grid-filters',
-            collection: collection,
-            enable_sidebar: section.settings.enable_sidebar,
-            filter_style: section.settings.filter_style,
-            collapsed: section.settings.collapsed,
-            enable_color_swatches: section.settings.enable_color_swatches
-          -%}
-        </div>
-        <div class="grid__item medium-up--four-fifths grid__item--content">
-
-         {%- liquid
-            for block in section.blocks
-              case block.type
-              when 'product_grid'
-                assign paginate_by = block.settings.per_row | times: block.settings.rows_per_page
-              endcase
-            endfor
-          -%}
-          {%- paginate collection.products by paginate_by -%}
-          {%- for block in section.blocks -%}
-            <div {{ block.shopify_attributes }} {%- if block.type == 'product-grid' -%}data-scroll-to{%- endif -%}>
-              {%- case block.type -%}
-              {%- when 'collection_description' -%}
-                {%- if collection.description != blank and current_filter_size == 0 -%}
-                  <div class="rte collection__description custom_collection__description">
-                    {{ collection.description }}
-                  </div>
-                {%- endif -%}
-              {%- when 'subcollections' -%}
-                {%- if paginate.current_page == 1 and current_filter_size == 0 -%}
-                  {%- render 'subcollections', per_row: block.settings.subcollections_per_row -%}
-                {%- endif -%}
-              {%- when 'product_grid' -%}
-                <div data-scroll-to>
-                  {% render 'collection-grid',
-                    collection: collection,
-                    items: collection.products,
-                    enable_sidebar: section.settings.enable_sidebar,
-                    filter_style: section.settings.filter_style,
-                    enable_sort: section.settings.enable_sort,
-                    enable_collection_count: block.settings.enable_collection_count,
-                    per_row: block.settings.per_row,
-                    mobile_flush_grid: block.settings.mobile_flush_grid,
-                    quick_shop_enable: settings.quick_shop_enable,
-                    subtitle_type: section.settings.subtitle_type,
-                    type_enable: section.settings.type_enable,
-                    subtitle_enable: section.settings.subtitle_enable
-                  %}
-                  {%- if paginate.pages > 1 -%}
-                    {%- render 'pagination', paginate: paginate -%}
-                  {%- endif -%}
-                </div>
-              {%- endcase -%}
-            </div>
-          {%- endfor -%}
-
-          {%- endpaginate -%}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-{%- if section.settings.enable_sidebar == false or section.settings.filter_style == 'drawer' or collection.filters.size == 0 -%}
-{% comment %}
-  Override grid styles if sidebar is disabled
-{% endcomment %}
-{% style %}
-  .collection-content .grid__item--sidebar { width: 0; padding:0; }
-  .collection-content .grid__item--content { width: 100%; }
-  .grid__item--sidebar { position: static; overflow: hidden; }
-{% endstyle %}
-{%- endif -%}
-
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "CollectionPage",
-  {% if collection.description != blank %}
-    "description": {{ collection.description | strip_html | json }},
-  {% endif %}
-  {% if page_image %}
-    {% assign image_size = page_image.width | append: 'x' %}
-    "image": {
-      "@type": "ImageObject",
-      "height": {{ page_image.height | json }},
-      "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
-      "width": {{ page_image.width | json }}
-    },
-  {% endif %}
-  "name": {{ collection.title | json }}
+.mobile-sort-menu-container-ss {
+  display: none;
 }
-</script>
-
-{% schema %}
-  {
-    "name": "Product grid",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Title"
-      },
-      {
-        "type": "header",
-        "content": "Filtering and sorting"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_sidebar",
-        "label": "Enable filter",
-        "default": true,
-        "info": "Allow your customers to filter collections and search results by product availability, price, color, and more. [Customize filters](/admin/menus)"
-      },
-      {
-        "type": "checkbox",
-        "id": "collapsed",
-        "label": "Collapse filters",
-        "default": true
-      },
-      {
-        "type": "select",
-        "id": "filter_style",
-        "label": "Filter style",
-        "default": "sidebar",
-        "options": [
-          {
-            "value": "sidebar",
-            "label": "Sidebar"
-          },
-          {
-            "value": "drawer",
-            "label": "Drawer"
-          }
-        ]
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_color_swatches",
-        "label": "Enable color swatches",
-        "info": "[View setup instructions](https://archetypethemes.co/blogs/impulse/how-do-i-set-up-color-swatches)"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_sort",
-        "label": "Show sort options",
-        "default": true
-      },
-      {
-        "type": "header",
-        "content": "Prduct item"
-      },
-      {
-        "type": "checkbox",
-        "id": "type_enable",
-        "label": "Show Set Type"
-      },
-      {
-        "type": "checkbox",
-        "id": "subtitle_enable",
-        "label": "Show Subtitle"
-      }, 
-      {
-        "type": "select",
-        "id": "subtitle_type",
-        "label": "Subtitle type",
-        "default": "two",
-        "options": [
-          {
-            "value": "two",
-            "label": "Two columns"
-          },
-          {
-            "value": "three",
-            "label": "Default"
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "id": "custom_badge",
-        "label": "Custom badge text"
-      },
-      {
-        "type": "header",
-        "content": "Saved Amount Option"
-      },      
-      {
-        "type": "radio",
-        "id": "saved_amount_option",
-        "label": "Choose Option",
-        "default": "basic_logic",
-        "options": [
-          {
-            "value": "basic_logic",
-            "label": "Display $ off ( > $100 )"
-          },
-          {
-            "value": "display_price",
-            "label": "Display all $ off"
-          },
-          {
-            "value": "display_percentage",
-            "label": "Display all % off"
-          }          
-        ]
-      },      
-      {
-        "type": "header",
-        "content": "loading style"
-      },
-      {
-        "type": "checkbox",
-        "id": "load_more",
-        "label": "Load more"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "collection_description",
-        "name": "Collection description",
-        "limit": 1
-      },
-      {
-        "type": "product_grid",
-        "name": "Products",
-        "settings": [
-          {
-            "type": "checkbox",
-            "id": "enable_collection_count",
-            "label": "Enable collection count",
-            "default": true
-          },
-          {
-            "type": "range",
-            "id": "per_row",
-            "label": "Products per row",
-            "default": 4,
-            "min": 2,
-            "max": 5,
-            "step": 1
-          },
-          {
-            "type": "range",
-            "id": "rows_per_page",
-            "label": "Rows per page",
-            "default": 7,
-            "min": 3,
-            "max": 20,
-            "step": 1
-          },
-          {
-            "type": "checkbox",
-            "id": "mobile_flush_grid",
-            "label": "Flush grid on mobile",
-            "default": false
-          }
-        ],
-        "limit": 1
-      },
-      {
-        "type": "subcollections",
-        "name": "Subcollections",
-        "settings": [
-          {
-            "type": "paragraph",
-            "content": "Links to collections from your menu will appear here. [Learn more](https://archetypethemes.co/blogs/expanse/how-do-i-create-subcollections)"
-          },
-          {
-            "type": "range",
-            "id": "subcollections_per_row",
-            "label": "Subcollections per row",
-            "default": 5,
-            "min": 2,
-            "max": 5,
-            "step": 1
-          }
-        ],
-        "limit": 1
-      }
-    ]
-
+.filter-bottom-fixed-button-container-ss {
+  display: none;  
+}
+.sort-bottom-fixed-button-container-ss {
+  display: none;
+}
+@media (max-width: 768px) {
+  .product-grid-container-ss {
+    padding-right: 0px;
+    padding-left: 0px;
   }
-{% endschema %}
+
+  .mobile-filter-menu-on .grid__item--sidebar {
+    position: absolute;
+    top: 134px;
+    background: white;
+    width: 100vw;
+    z-index: 99998;
+    left: 0px;
+    min-height: calc(100vh - 202px);
+    margin-bottom: 68px;
+  }
+  .mobile-filter-menu-on .collection-filter {
+    position: absolute;
+    top: 78px;
+    width: 100%;
+  }
+  .mobile-filter-menu-on .produts-grid {
+    display: none;
+  }
+  .mobile-filter-menu-on .collection-sidebar{
+    display: block !important;
+  }
+  .mobile-filter-menu-on footer {
+    display: none;
+  }
+  .mobile-filter-menu-on.mobile-sort-menu-on .mobile-sort-menu-container-ss {
+    display: block;
+    position: absolute;
+    min-height: calc(100vh - 202px);
+    top: 56px;
+    z-index: 99999;
+    background: white;
+    width: 100%;
+  }
+
+  .no-selected-label-ss {
+    padding-left: 20px;
+  }
+  .collection-sidebar__group--filter-price .collapsible-content.is-open {
+    height: 100px !important;
+  }
+  .collection-sidebar__group--filter-price .collapsible-content .collapsible-content__inner {
+    position: relative;
+    top: 20px;
+  }
+  .collection-sidebar__group--filter-price .collapsible-content .collapsible-content__inner .price-range__display-wrapper {
+    padding-top: 20px;
+  }
+  .mobile-filter-menu-on {
+    overflow-x: hidden;
+  }
+  .mobile-filter-menu-on .collection-sidebar__group--filter-color ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .mobile-filter-menu-on .collection-sidebar__group--filter-color ul li {
+    width: 14%;
+    margin-top: 10px;
+    height: auto !important;
+    border-bottom-width: 0px !important;
+    justify-content: center;
+  }
+  .mobile-filter-menu-on .collection-sidebar__group--filter-color ul li label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobile-filter-menu-on .collection-sidebar__group--filter-color .tag-list label {
+    font-size: 12px;
+  }
+  .mobile-filter-menu-on .collection-sidebar__group--filter-color .tag__count {
+    display: none;
+  }
+  .mobile-filter-menu-on .collection-sidebar__group--filter-color .color-tag__checkbox {
+    left: unset !important;
+    margin-right: 0px !important;
+    width: 28px !important;
+    height: 28px !important;
+  }
+  .mobile-filter-menu-on .collection-sidebar__group--filter-color .color-tag__checkbox:after {
+    height: 36px;
+    width: 36px;
+    left: -4px;
+    top: 14px;
+  }
+  .mobile-filter-menu-on .collection-sidebar__group--filter-color .color-tag__checkbox:before {
+    width: 28px;
+    height: 28px;
+    top: 14px;
+  }
+  .mobile-filter-menu-on .collection-sidebar__group--filter-color .color-tag__checkbox ~ span {
+    text-align: center;
+    margin-top: 5px;
+  }
+  .mobile-filter-menu-on .collection-sidebar__group--filter-color input[type=checkbox]:checked ~ .color-tag__checkbox:after {
+    border: 2px solid var(--colorBtnPrimary) !important;
+  }
+  .mobile-filter-menu-on .filter-bottom-fixed-button-container-ss {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    left: 0px;
+    height: 68px;
+    z-index: 100001;
+    background: white;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .mobile-filter-menu-on .filter-bottom-fixed-button-ss {
+    flex: 1;
+  }
+  .mobile-filter-menu-on .filter-bottom-fixed-left-button-ss {
+    margin-right: 5px;
+  }
+  .mobile-filter-menu-on .filter-bottom-fixed-right-button-ss {
+    margin-left: 5px;
+  }
+  .mobile-filter-menu-on .filter-bottom-fixed-right-button-ss>a {
+    background: var(--colorBtnPrimary) !important;
+  }
+  .mobile-filter-menu-on .filter-bottom-fixed-button-ss>a {
+    width: 100%;
+    height: 48px;
+    padding: 7px 0 !important;
+    font-size: 14px !important;
+    text-transform: capitalize;
+    border: 2px solid var(--colorBtnPrimary) !important;
+  }
+  .mobile-filter-menu-on .sort-bottom-fixed-button-container-ss {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    background: white;
+    height: 68px;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    left: 0px;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  .mobile-sort-menu-close-ss svg {
+    width: 28px;
+    margin-right: 10px;
+  }
+  .mobile-sort-menu-close-ss {
+    justify-content: flex-end;
+  }
+  .mobile-filter-menu-close-ss svg {
+    width: 28px;
+    margin-right: 10px;
+  }
+  .mobile-filter-menu-close-ss {
+    justify-content: flex-end;
+  }
+  .mobile-sort-menu-item {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  .mobile-sort-menu-item span {
+    display: flex;
+    align-items: center;
+  }
+  .mobile-sort-menu-item span:before {
+    content: "";
+    width: 24px;
+    display: block;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #000;
+  }
+  .mobile-sort-menu-item.mobile-selected-sort-item-ss span:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: var(--colorBtnPrimaryLight);
+    position: absolute;
+    border-radius: 50%;
+    left: 32px;
+  }
+  .mobile-filter-menu-on .no-bullets.tag-list.tag-list--active-tags {
+    display: none;
+  }
+  .custom_collection_content{
+    padding-top: 0px;
+  }
+}
