@@ -14,13 +14,18 @@
   border-radius: 0px;
   border-right-width: 0px !important;
 }
+.filter-bottom-fixed-left-button-ss a {
+  display: block !important;
+}
 {%- endstyle -%}
 
 {%- assign animation_row = 1 -%}
 
 {%- if enable_sidebar -%}
 <div id="CollectionSidebar" data-style="{{ filter_style }}">
-
+    <div class="filter-bottom-fixed-left-button-ss filter-bottom-fixed-button-ss clear-all-filters-ss">
+      {%- render 'button-ss_n', color: 'black', url: "#", label: 'Clear All Filters' -%}
+    </div>
     {%- if filter_style == 'sidebar' -%}
     <div class="collection-sidebar small--hide">
         {%- render 'collection-grid-filters-form_n', location: 'CollectionSidebar', filters: collection.filters, collapsed: collapsed, enable_color_swatches: enable_color_swatches -%}
