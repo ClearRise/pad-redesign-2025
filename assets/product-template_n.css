@@ -309,9 +309,23 @@
   margin-left: 0;
 }
 .product-block .add-to-cart span {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+}
+@media (max-width: 520px) {
+  .product-block .add-to-cart span {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .sticky-bar .product-block .add-to-cart span {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .product-block .add-to-cart svg {
+    width: 16px;
+    height: 24px;
+  }
 }
 .product-block .icon-list-container-ss {
   display: flex;
@@ -354,25 +368,21 @@
   display: inline-flex;
   align-items: center;
   letter-spacing: 0px;
-  cursor: pointer;
-}
-@media (max-width: 550px) {
-  .product-block .variant-wrapper .find-your-size-ss {
-    display: flex;
-    align-items: center;
-    letter-spacing: 0px;
-    width: 100%;
-    justify-content: end;
-    margin-top: 5px;
-    float: unset;
-  }
 }
 .product-block .variant-wrapper .find-your-size-ss svg {
   width: 24px;
   height: 24px;
   color: #138E7E;
 }
-
+@media (max-width: 380px) {
+  .find-your-size-ss {
+    font-size: 10px;
+  }
+  .find-your-size-ss svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
 klarna-placement div.container.default.auto-size {
   padding: 8px 10px;
   font-size: 14px;
@@ -383,3 +393,109 @@ klarna-placement div.container.default.auto-size span {
   display: inline-block;
   border-radius: 6px;
 }/*# sourceMappingURL=custom-product.css.map */
+
+.sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+}
+#add-to-cart-sticky-bar .product-single__title {
+  font-size: 30px;
+}
+#add-to-cart-sticky-bar .product__price {
+  font-size: 18px;
+}
+.sticky-bar .page-width {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.sticky-bar .page-width {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .sticky-bar .page-width {
+    flex-direction: column;
+  }
+  #add-to-cart-sticky-bar .product-single__title {
+    font-size: 18px;
+  }
+  #add-to-cart-sticky-bar .product__price {
+    font-size: 10px;
+  }
+  #add-to-cart-sticky-bar .product-subtitle {
+    font-size: 10px;
+  }
+  .sticky-bar .page-width .product-info {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+  .sticky-bar .page-width .product-info .pdp-product-block--price-ss {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sticky-bar .buy-button-wrapper {
+    width: 70%;
+  }
+  .sticky-bar .page-width .product-info .pdp-product-block--price-ss {
+    margin-left: 10px;
+  }
+  .product-block .add-to-cart svg {
+    width: 18px;
+    height: 24px;
+  }
+  .sticky-bar .btn.btn--full.add-to-cart.bold_clone {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+@media (max-width: 520px) {
+  .sticky-bar .buy-button-wrapper {
+    width: 70%;
+  }
+  .sticky-bar .page-width .product-info .pdp-product-block--price-ss {
+    margin-left: 10px;
+  }
+  #add-to-cart-sticky-bar .product-single__title {
+    font-size: 14px;
+  }
+  #add-to-cart-sticky-bar .product__price {
+    font-size: 10px;
+  }
+  #add-to-cart-sticky-bar .product-subtitle {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .sticky-bar .btn.btn--full.add-to-cart.bold_clone {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}
+@media (max-width: 425px) {
+  .sticky-bar .btn.btn--full.add-to-cart.bold_clone {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sticky-bar .page-width {
+    width: 80%;
+  }
+}
