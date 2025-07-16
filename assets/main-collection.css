@@ -163,6 +163,13 @@
   .mobile-sort-menu-close-ss {
     justify-content: flex-end;
   }
+  .mobile-filter-menu-close-ss svg {
+    width: 28px;
+    margin-right: 10px;
+  }
+  .mobile-filter-menu-close-ss {
+    justify-content: flex-end;
+  }
   .mobile-sort-menu-item {
     height: 50px;
     display: flex;
