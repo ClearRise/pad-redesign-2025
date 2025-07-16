@@ -24,7 +24,7 @@
 {%- if enable_sidebar -%}
 <div id="CollectionSidebar" data-style="{{ filter_style }}">
     <div class="filter-bottom-fixed-left-button-ss filter-bottom-fixed-button-ss clear-all-filters-ss">
-      {%- render 'button-ss_n', color: 'black', url: "#", label: 'Clear All Filters' -%}
+      <a class="btn btn-black-ss" href="#">Clear All Filters</a>
     </div>
     {%- if filter_style == 'sidebar' -%}
     <div class="collection-sidebar small--hide">
