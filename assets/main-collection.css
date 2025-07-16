@@ -7,6 +7,9 @@
 .sort-bottom-fixed-button-container-ss {
   display: none;
 }
+.mobile-filter-menu-close-ss {
+  display: none;
+}
 @media (max-width: 768px) {
   .product-grid-container-ss {
     padding-right: 0px;
