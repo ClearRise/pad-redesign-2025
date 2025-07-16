@@ -93,16 +93,6 @@
         <span class="bold_load_cart_item_properties black_txt"></span>
 
         {% if property_size > 0 %}
-          {% if product.properties._glowstone_enhancement == 'Yes' %}
-            <div class="product-option action_icons">
-              <input
-                type="hidden"
-                class="Protection_p_glow"
-                value="true"
-                data-product-id="{{ product.properties._prot-glowstone_enhancement_id }}"
-              >
-            </div>
-          {% endif %}
           {% for property in product.properties %}
             {% if property.first contains '_relative_product_' %}
               <div class="product-option action_icons">
@@ -116,6 +106,11 @@
               </div>
             {% endif %}
           {% endfor %}
+          {% if product.properties._glowstone_enhancement == "Yes" %}
+            <div class="product-option action_icons">
+              <input type="hidden" class="Protection_p_glow" value="true" data-product-id="{{ product.properties._prot-glowstone_enhancement_id }}">
+            </div>
+          {% endif %}
           {% for p in product.properties %}
             {% if product.product.metafields.custom.premium_protection_product %}
               {% if p.first contains 'Protection Plan' %}
@@ -236,8 +231,56 @@
             <small class="cart__price cart__price--strikethrough  black_txt">
               <span>
                   <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>
-                {{- product.original_price | money_without_trailing_zeros -}}
+                  <div style="display: none;" class="real-_-price-original-{{ product.id }}"></div>
+                  <div style="display: none;" class="real-_-price-engraving-{{ product.id }}">{{ engrave_product.selected_or_first_available_variant.price | divided_by: 100 }}</div>
+                    <span class="real-_-price-{{ product.id }} real-_-price-engraving-{{ product.id }}">{% if property_size > 0 and e_product_id != blank %}
+                      {{ product.original_price | plus: engrave_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                    {% else %}
+                      {{ product.original_price | money_without_trailing_zeros }}
+                    {% endif %}
+                  </span>
               </span>
+              {% comment %} here script {% endcomment %}
+              <script>
+                (function() {
+                  const productId = {{ product.id }};
+                  const originalPriceElement = document.querySelector('.real-_-price-original-' + productId);
+                  const engravingPriceElement = document.querySelector('.real-_-price-engraving-' + productId);
+                  const finalPriceElement = document.querySelector('.real-_-price-' + productId);
+                  
+                  if (originalPriceElement && engravingPriceElement && finalPriceElement) {
+                    // Function to update the final price
+                    function updateFinalPrice() {
+                      const originalPrice = parseFloat(originalPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0;
+                      const engravingPrice = parseFloat(engravingPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0;
+                      const totalPrice = originalPrice + engravingPrice;
+                      
+                      // Format the price as currency (assuming USD format)
+                      const formattedPrice = '$' + totalPrice.toFixed(2);
+                      finalPriceElement.textContent = formattedPrice;
+                    }
+                    
+                    // Create a MutationObserver to watch for changes in the original price element
+                    const observer = new MutationObserver(function(mutations) {
+                      mutations.forEach(function(mutation) {
+                        if (mutation.type === 'childList' || mutation.type === 'characterData') {
+                          updateFinalPrice();
+                        }
+                      });
+                    });
+                    
+                    // Start observing the original price element
+                    observer.observe(originalPriceElement, {
+                      childList: true,
+                      characterData: true,
+                      subtree: true
+                    });
+                    
+                    // Initial calculation
+                    updateFinalPrice();
+                  }
+                })();
+              </script>
             </small>
           {% endif %}
         {% endif %}
@@ -252,7 +295,55 @@
           <span>
             <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>
           {% if intelligems_discount == 0 %}
-            {{ product.original_price | money_without_trailing_zeros }}
+            <div style="display: none;" class="real-_-price-original-{{ product.id }}"></div>
+              <div style="display: none;" class="real-_-price-engraving-{{ product.id }}">{{ engrave_product.selected_or_first_available_variant.price | divided_by: 100 }}</div>
+                <span class="real-_-price-{{ product.id }} real-_-price-engraving-{{ product.id }}">{% if property_size > 0 and e_product_id != blank %}
+                  {{ product.original_price | plus: engrave_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                {% else %}
+                  {{ product.original_price | money_without_trailing_zeros }}
+                {% endif %}
+              </span>
+              {% comment %} here script {% endcomment %}
+              <script>
+                (function() {
+                  const productId = {{ product.id }};
+                  const originalPriceElement = document.querySelector('.real-_-price-original-' + productId);
+                  const engravingPriceElement = document.querySelector('.real-_-price-engraving-' + productId);
+                  const finalPriceElement = document.querySelector('.real-_-price-' + productId);
+                  
+                  if (originalPriceElement && engravingPriceElement && finalPriceElement) {
+                    // Function to update the final price
+                    function updateFinalPrice() {
+                      const originalPrice = parseFloat(originalPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0;
+                      const engravingPrice = parseFloat(engravingPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0;
+                      const totalPrice = originalPrice + engravingPrice;
+                      
+                      // Format the price as currency (assuming USD format)
+                      const formattedPrice = '$' + totalPrice.toFixed(2);
+                      finalPriceElement.textContent = formattedPrice;
+                    }
+                    
+                    // Create a MutationObserver to watch for changes in the original price element
+                    const observer = new MutationObserver(function(mutations) {
+                      mutations.forEach(function(mutation) {
+                        if (mutation.type === 'childList' || mutation.type === 'characterData') {
+                          updateFinalPrice();
+                        }
+                      });
+                    });
+                    
+                    // Start observing the original price element
+                    observer.observe(originalPriceElement, {
+                      childList: true,
+                      characterData: true,
+                      subtree: true
+                    });
+                    
+                    // Initial calculation
+                    updateFinalPrice();
+                  }
+                })();
+              </script>
           {% else %}
             <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>
             {{ product.final_price | money_without_trailing_zeros }}
