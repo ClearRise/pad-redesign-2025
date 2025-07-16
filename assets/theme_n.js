@@ -6528,6 +6528,14 @@ lazySizesConfig.expFactor = 4;
             });
           });
         }
+
+        var mobileFilterMenuCloseSS = document.querySelector(".mobile-filter-menu-close-ss");
+        if (mobileFilterMenuCloseSS) {
+          mobileFilterMenuCloseSS.addEventListener("click", function () {
+            document.querySelector("body").classList.remove("mobile-filter-menu-on");
+            document.querySelector("body").classList.remove("mobile-sort-menu-on");
+          })
+        }
       }
     });
 
