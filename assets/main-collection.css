@@ -169,6 +169,7 @@
   }
   .mobile-filter-menu-close-ss {
     justify-content: flex-end;
+    display: flex;
   }
   .mobile-sort-menu-item {
     height: 50px;
