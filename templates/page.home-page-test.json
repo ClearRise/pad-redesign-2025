@@ -71,6 +71,52 @@
         "autoplay_speed": 7
       }
     },
+    "how_it_works_2_XVYfNT": {
+      "type": "how-it-works-2",
+      "blocks": {
+        "step_Hy87Q8": {
+          "type": "step",
+          "settings": {
+            "title": "Try up to 8 items",
+            "description": "Fill your cart to find something you love."
+          }
+        },
+        "step_AhwDFm": {
+          "type": "step",
+          "settings": {
+            "title": "Try up to 8 items",
+            "description": "Fill your cart to find something you love."
+          }
+        },
+        "step_KdjBb4": {
+          "type": "step",
+          "settings": {
+            "title": "Try up to 8 items",
+            "description": "Fill your cart to find something you love."
+          }
+        }
+      },
+      "block_order": [
+        "step_Hy87Q8",
+        "step_AhwDFm",
+        "step_KdjBb4"
+      ],
+      "name": "How It Works 2",
+      "settings": {
+        "full_width": false,
+        "max_width": 1600,
+        "background_color": "",
+        "title": "TRY BEFORE YOU BUY",
+        "title_font_size_desktop": 24,
+        "title_font_size_mobile": 24,
+        "step_title_color": "#000000",
+        "step_title_font_size_desktop": 18,
+        "step_title_font_size_mobile": 18,
+        "step_description_font_size_desktop": 14,
+        "step_description_font_size_mobile": 14,
+        "step_description_color": "#000000"
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -398,6 +444,7 @@
   "order": [
     "promotional_section_mGEFMz",
     "slideshow_gQY9qw",
+    "how_it_works_2_XVYfNT",
     "main",
     "promo_grid_4iW6mW",
     "advanced_content_4NeRHb",
