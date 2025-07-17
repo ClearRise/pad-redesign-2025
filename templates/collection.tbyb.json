@@ -302,9 +302,60 @@
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
-        "custom_badge": "Buy One Get One FREE",
+        "custom_badge": "Try Before You Buy",
         "saved_amount_option": "basic_logic",
         "load_more": false
+      }
+    },
+    "faq_VdwH4a": {
+      "type": "faq",
+      "blocks": {
+        "question_dTFxTP": {
+          "type": "question",
+          "settings": {
+            "title": "When do I have to return my items by?",
+            "text": "<p>Initiate your return before your trial ends by emailing us at support@patrickadairdesigns.com with your order # and the items you wish to return.</p>"
+          }
+        },
+        "question_ye4zpL": {
+          "type": "question",
+          "settings": {
+            "title": "Why is there an authorization on my card?",
+            "text": "<p>Similar to booking a hotel or rideshare, we reserve the funds in case you decide to keep all your items. An authorization is not a charge - you'll only be charged for what you keep.</p>"
+          }
+        },
+        "question_nWPfzJ": {
+          "type": "question",
+          "settings": {
+            "title": "Do I get free shipping or free returns?",
+            "text": "<p>Try Before You Buy Orders are NOT eligible for free shipping on returns.</p>"
+          }
+        },
+        "question_WNkRQy": {
+          "type": "question",
+          "settings": {
+            "title": "I initiated my return, why is my card being re-authorized?",
+            "text": "<p>Banks have limits for how long a hold can be valid. We are likely still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations.</p>"
+          }
+        },
+        "question_DYNtCH": {
+          "type": "question",
+          "settings": {
+            "title": "Why is my card being re-authorized after already initiating a return or before my order has shipped?",
+            "text": "<p>Banks have limits for how long a hold can be valid. In the event of a return, we are still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations. If your order has not shipped yet, it will ship shortly.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_dTFxTP",
+        "question_ye4zpL",
+        "question_nWPfzJ",
+        "question_WNkRQy",
+        "question_DYNtCH"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "title": "Try Before You Buy FAQs"
       }
     }
   },
@@ -318,6 +369,7 @@
     "rich_text_G9LH7U",
     "collection-header",
     "promo-grid",
-    "main-collection"
+    "main-collection",
+    "faq_VdwH4a"
   ]
 }
