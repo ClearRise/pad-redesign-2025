@@ -62,7 +62,7 @@
 </style>
 
 <div
-  class="product-main-slide {% if is_featured %}starting-slide{% else %}secondary-slide{% endif %} swiper-slide"
+  class="product-main-slide {% if is_featured %}starting-slide{% else %}secondary-slide{% endif %} swiper-slide {% if is_video %}is-selected{% endif %}"
   data-index="{{ loopIndex0 }}"
   {% if image_set %}
     data-set-name="{{image_set_group}}"
