@@ -62,7 +62,7 @@
 </style>
 
 <div
-  class="product-main-slide {% if is_featured %}starting-slide{% else %}secondary-slide{% endif %} swiper-slide {% if is_video %}is-selcted{% endif %}"
+  class="product-main-slide {% if is_featured %}starting-slide{% else %}secondary-slide{% endif %} swiper-slide"
   data-index="{{ loopIndex0 }}"
   {% if image_set %}
     data-set-name="{{image_set_group}}"
@@ -156,7 +156,7 @@
         {%- unless video_modal -%}
           <div
             data-video-type="{{ video_type }}"
-            class="product__video-wrapper{% if video_type == 'youtube' %} loading{% endif %}"
+            class="product__video-wrapper {% if is_video %}is-selected{% endif %} {% if video_type == 'youtube' %} loading{% endif %}"
             data-video-style="{{ video_style }}"
             style="padding-bottom: {{ 100 | divided_by: media.aspect_ratio }}%;">
             {%- if video_type == 'youtube' -%}
