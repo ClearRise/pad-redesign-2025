@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/4-2.jpg",
-            "image_mobile": "shopify://shop_images/2-2.jpg",
+            "image": "shopify://shop_images/b.jpg",
+            "image_mobile": "shopify://shop_images/a.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -130,6 +130,7 @@
     },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
+      "disabled": true,
       "custom_css": [
         "{padding: 10 px;}"
       ],
