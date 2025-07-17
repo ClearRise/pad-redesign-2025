@@ -52,8 +52,17 @@
   endif
 -%}
 
+<style>
+  .product__video-wrapper {
+    padding-bottom: 0px !important;
+  }
+  .product__video {
+    position: unset !important;
+  }
+</style>
+
 <div
-  class="product-main-slide {% if is_featured %}starting-slide{% else %}secondary-slide{% endif %} swiper-slide"
+  class="product-main-slide {% if is_featured %}starting-slide{% else %}secondary-slide{% endif %} swiper-slide {% if is_video %}is-selected{% endif %}"
   data-index="{{ loopIndex0 }}"
   {% if image_set %}
     data-set-name="{{image_set_group}}"
@@ -121,9 +130,9 @@
           </a>
         {%- endif -%}
         {%- if video_type == 'mp4' -%}
-          <button type="button" class="btn btn--circle btn--large btn--static product-video-trigger product-video-trigger--mp4">
+          {% comment %} <button type="button" class="btn btn--circle btn--large btn--static product-video-trigger product-video-trigger--mp4">
             <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-play" viewBox="18.24 17.35 24.52 28.3"><path fill="#323232" d="M22.1 19.151v25.5l20.4-13.489-20.4-12.011z"/></svg>
-          </button>
+          </button> {% endcomment %}
 
           {% comment %}
             Hidden video element that gets placed in the video modal
@@ -147,7 +156,7 @@
         {%- unless video_modal -%}
           <div
             data-video-type="{{ video_type }}"
-            class="product__video-wrapper{% if video_type == 'youtube' %} loading{% endif %}"
+            class="product__video-wrapper is-selected {% if video_type == 'youtube' %} loading{% endif %}"
             data-video-style="{{ video_style }}"
             style="padding-bottom: {{ 100 | divided_by: media.aspect_ratio }}%;">
             {%- if video_type == 'youtube' -%}
@@ -187,3 +196,12 @@
   </div>
   <!-- <div class="bar-for-mobile-space-ss"></div> -->
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const videos = document.querySelectorAll('video');
+    videos.forEach(function(video) {
+      video.play();
+    });
+  });
+</script>
