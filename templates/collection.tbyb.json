@@ -292,13 +292,6 @@
             "text": "<p>Try Before You Buy Orders are NOT eligible for free shipping on returns.</p>"
           }
         },
-        "question_ce8eDC": {
-          "type": "question",
-          "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
-          }
-        },
         "question_RbfYLK": {
           "type": "question",
           "settings": {
@@ -318,7 +311,6 @@
         "question_bW6wKj",
         "question_dNNhcR",
         "question_wjGx3K",
-        "question_ce8eDC",
         "question_RbfYLK",
         "question_mwbHWn"
       ],
