@@ -33,7 +33,7 @@
           "type": "image",
           "settings": {
             "iamge_name": "",
-            "image": "shopify://shop_images/2-2.jpg",
+            "image": "shopify://shop_images/a.jpg",
             "link": "",
             "width": "50%",
             "alignment": "center"
@@ -55,6 +55,52 @@
         "is_bottom_line": false,
         "top_logo_size": 30,
         "additional_class": ""
+      }
+    },
+    "how_it_works_2_NTW4aQ": {
+      "type": "how-it-works-2",
+      "blocks": {
+        "step_zPWLMh": {
+          "type": "step",
+          "settings": {
+            "title": "<b>TRY UP TO 6 ITEMS</b>",
+            "description": "Fill your cart to find something you love."
+          }
+        },
+        "step_zEY6MV": {
+          "type": "step",
+          "settings": {
+            "title": "<b>10-DAY TRIAL</b>",
+            "description": "Try it on in the comfort of your home."
+          }
+        },
+        "step_kEbceP": {
+          "type": "step",
+          "settings": {
+            "title": "<b>RETURNS ARE EASY</b>",
+            "description": "Only pay for what you keep."
+          }
+        }
+      },
+      "block_order": [
+        "step_zPWLMh",
+        "step_zEY6MV",
+        "step_kEbceP"
+      ],
+      "name": "How It Works 2",
+      "settings": {
+        "full_width": false,
+        "max_width": 1600,
+        "background_color": "",
+        "title": "",
+        "title_font_size_desktop": 26,
+        "title_font_size_mobile": 24,
+        "step_title_color": "#000000",
+        "step_title_font_size_desktop": 18,
+        "step_title_font_size_mobile": 18,
+        "step_description_font_size_desktop": 14,
+        "step_description_font_size_mobile": 14,
+        "step_description_color": "#000000"
       }
     },
     "17347204-928a-46d1-8166-ac8c007f382d": {
@@ -264,6 +310,7 @@
   },
   "order": [
     "advanced_content_eYLzPF",
+    "how_it_works_2_NTW4aQ",
     "17347204-928a-46d1-8166-ac8c007f382d",
     "replo_trust_icons_white_backg_Wc7kJ7",
     "trust_icons_EDYTbe",
