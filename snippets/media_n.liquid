@@ -156,7 +156,7 @@
         {%- unless video_modal -%}
           <div
             data-video-type="{{ video_type }}"
-            class="product__video-wrapper is-selected {% if video_type == 'youtube' %} loading{% endif %}"
+            class="product__video-wrapper is-selected loaded {% if video_type == 'youtube' %} loading{% endif %}"
             data-video-style="{{ video_style }}"
             style="padding-bottom: {{ 100 | divided_by: media.aspect_ratio }}%;">
             {%- if video_type == 'youtube' -%}
