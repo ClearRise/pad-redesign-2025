@@ -77,22 +77,22 @@
         "step_Hy87Q8": {
           "type": "step",
           "settings": {
-            "title": "Try up to 8 items",
+            "title": "TRY UP TO 8 ITEMS",
             "description": "Fill your cart to find something you love."
           }
         },
         "step_AhwDFm": {
           "type": "step",
           "settings": {
-            "title": "Try up to 8 items",
-            "description": "Fill your cart to find something you love."
+            "title": "7-DAY TRIAL",
+            "description": "Try it on in the comfort of your home."
           }
         },
         "step_KdjBb4": {
           "type": "step",
           "settings": {
-            "title": "Try up to 8 items",
-            "description": "Fill your cart to find something you love."
+            "title": "RETURNS ARE EASY",
+            "description": "Only pay for what you keep."
           }
         }
       },
