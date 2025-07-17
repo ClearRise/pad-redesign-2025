@@ -295,8 +295,8 @@
         "question_RbfYLK": {
           "type": "question",
           "settings": {
-            "title": "I initiated my return, why is my card being re-authorized?",
-            "text": "<p>Banks have limits for how long a hold can be valid. We are likely still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations.</p>"
+            "title": "Why is my card being re-authorized after already initiating a return or before my order has shipped?",
+            "text": "<p>Banks have limits for how long a hold can be valid. In the event of a return, we are still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations. If your order has not shipped yet, it will ship shortly.</p>"
           }
         },
         "question_mwbHWn": {
