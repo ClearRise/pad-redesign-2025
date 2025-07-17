@@ -57,7 +57,8 @@
               product_image_size: product_image_size,
               isModal: isModal,
               video_looping: video_looping,
-              video_style: video_style
+              video_style: video_style,
+              is_video: media.media_type == 'video' or media.media_type == 'external_video'
             -%}
           {%- endfor -%}
         </div>
@@ -112,12 +113,12 @@
                   data-group="{{image_set_full}}"
                 {% endif %}>
                 <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: media.preview_image.aspect_ratio }}%;">
-                  <a
+                  {% comment %} <a
                     href="{{ media.preview_image | img_url: product_zoom_size }}"
                     data-product-thumb
                     class="product__thumb"
                     data-index="{{ forloop.index0 }}"
-                    data-id="{{ media.id }}">
+                    data-id="{{ media.id }}"> {% endcomment %}
                     {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
                       <span class="product__thumb-icon">
                         <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-play" viewBox="18.24 17.35 24.52 28.3"><path fill="#323232" d="M22.1 19.151v25.5l20.4-13.489-20.4-12.011z"/></svg>
@@ -142,7 +143,7 @@
                         src="{{ media | img_url: '400x' }}"
                         alt="{{ media.alt | escape }}">
                     </noscript>
-                  </a>
+                  {% comment %} </a> {% endcomment %}
                 </div>
               </div>
             {%- endfor -%}
