@@ -448,6 +448,63 @@
     };
   </script>
   <script src="https://c.albss.com/p/l/loader.iife.js" async></script>
+
+
+    <!-- Tryon -->
+    <script>
+      (function waitForInputAndWrapSetter() {
+      const maxWaitTime = 3000; // 3 seconds
+      const pollInterval = 100;
+      const startTime = Date.now();
+
+      console.log("Wrapping Tryon input");
+    
+      const tryFindAndWrap = () => {
+        const input = document.querySelector('#tryon-input');
+    
+        if (input) {
+          // Save original descriptor
+          const descriptor = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value');
+    
+          if (!descriptor) {
+            console.warn("Couldn't get input.value descriptor");
+            return;
+          }
+    
+          Object.defineProperty(input, 'value', {
+            set: function(newValue) {
+              descriptor.set.call(this, newValue);
+    
+              // Dispatch input and change events
+              this.dispatchEvent(new Event('input', { bubbles: true }));
+              this.dispatchEvent(new Event('change', { bubbles: true }));
+            },
+            get: function() {
+              return descriptor.get.call(this);
+            }
+          });
+    
+          console.log('Wrapped #tryon-input .value setter to auto-trigger events.');
+          return;
+        }
+    
+        if (Date.now() - startTime < maxWaitTime) {
+          setTimeout(tryFindAndWrap, pollInterval);
+        } else {
+          console.warn('#tryon-input not found within 3 seconds.');
+        }
+      };
+    
+      // Start polling
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', tryFindAndWrap);
+      } else {
+        tryFindAndWrap();
+      }
+    })();
+
+    </script>
+    <!-- End Tryon -->
   </body>
   </html>
   

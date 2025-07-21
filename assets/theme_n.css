@@ -11014,7 +11014,11 @@ html[dir=rtl] .background-media-text__text {
 @media only screen and (max-width:768px) {
 
   .promo-grid__container .btn {
-    margin-right: 7px
+    margin: 0px !important;
+    padding: 4px 10px;
+    font-size: 1em !important;
+    letter-spacing: 0px !important;
+    font-weight: 400 !important;
   }
 }
 
@@ -11249,7 +11253,7 @@ html[dir=rtl] .background-media-text__text {
 
 .type-advanced .rte--strong,
 .type-product .rte--strong {
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 1.1;
 }
 
@@ -13208,11 +13212,11 @@ input[type="checkbox"]:checked::before {
 }
 @media (min-width: 769px) {
   .flex-grid__item.flex-grid__item--50.type-advanced {
-    max-height: 40vw;
+    max-height: 38vw;
   }
 }
 @media (max-width: 768px) {
   .flex-grid__item.flex-grid__item--50.type-advanced {
-    height: 80vw !important;
+    height: 70vw !important;
   }
 }
