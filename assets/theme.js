@@ -101,9 +101,6 @@ function tryonHandlingItem() {
         }
       }
     });
-
-  updateCartForTryon();
-
   // // Run on page load
   // document.addEventListener('DOMContentLoaded', updateCartForTryon);
 
