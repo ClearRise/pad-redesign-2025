@@ -108,6 +108,7 @@ function tryonHandlingItem() {
   // document.addEventListener('cart:updated', updateCartForTryon);
 }
 document.addEventListener('cart:updated', tryonHandlingItem);
+document.addEventListener('DOMContentLoaded', tryonHandlingItem);
 
 // End Tryon
 
