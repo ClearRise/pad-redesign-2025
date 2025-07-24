@@ -1781,6 +1781,7 @@ document.addEventListener('DOMContentLoaded', tryonHandlingItem);
       buildCart: function () {
         // theme.cart.getCartProductMarkup().then(this.cartMarkup.bind(this));
         location.reload();
+        tryonHandlingItem();
       },
 
 
