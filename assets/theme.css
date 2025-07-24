@@ -11597,5 +11597,12 @@ input[type="checkbox"]:checked::before {
 }
 
 /* Tryon */
-
+.selling_plan: {
+  background: #bb0e0e;
+  color: #fff !important;
+  padding: 0 12px 3px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  display: table;
+}
 /* End Tryon */
