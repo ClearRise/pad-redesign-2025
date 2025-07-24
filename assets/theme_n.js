@@ -31,6 +31,9 @@ if (theme.config.isTouch) {
   document.documentElement.className += ' supports-touch';
 }
 
+
+console.log("Hi")
+
 if (console && console.log) {
   console.log('Impulse theme (' + theme.settings.themeVersion + ') by ARCHΞTYPE | Learn more at https://archetypethemes.co');
 }
