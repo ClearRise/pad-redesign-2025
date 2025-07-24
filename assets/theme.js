@@ -44,6 +44,7 @@ window.lazySizesConfig = window.lazySizesConfig || {};
 lazySizesConfig.expFactor = 4;
 
 // Tryon
+console.log("before tryonHandlingItem")
 function tryonHandlingItem() {
   const TRYON_VARIANT_ID = 42097358766162;
   const TRYON_DESCRIPTION = 'tryon';
