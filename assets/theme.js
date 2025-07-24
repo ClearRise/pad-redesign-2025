@@ -1718,7 +1718,6 @@ lazySizesConfig.expFactor = 4;
 
 
       cartMarkup: function (html) {
-        console.log("in markup")
         var markup = this._parseProductHTML(html);
         var items = markup.items;
         var count = parseInt(items.dataset.count);
