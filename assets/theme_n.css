@@ -13229,6 +13229,6 @@ input[type="checkbox"]:checked::before {
   border-radius: 10px;
   text-transform: uppercase;
   display: table;
-  font-size: 15px !important;
+  font-size: 14px !important;
 }
 /* End Tryon */
