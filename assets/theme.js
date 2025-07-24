@@ -1661,6 +1661,7 @@ lazySizesConfig.expFactor = 4;
         document.addEventListener('cart:quantity' + this.namespace, this.quantityChanged.bind(this));
 
         this.form.on('submit' + this.namespace, this.onSubmit.bind(this));
+        this.form.on('submit', () => {alert("Submitting")})
 
         if (this.noteInput) {
           this.noteInput.addEventListener('change', function () {
