@@ -51,6 +51,7 @@ function tryonHandlingItem() {
   const TRYON_DESCRIPTION = 'tryon';
 
   function updateCartForTryon() {
+    console.log("updateCartForTryon")
     fetch('/cart.js')
       .then(res => res.json())
       .then(cart => {
