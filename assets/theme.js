@@ -40,6 +40,8 @@ theme.recentlyViewed = {
   productInfo: {} // will store product data to reduce API calls
 };
 
+console.log("Hi")
+
 window.lazySizesConfig = window.lazySizesConfig || {};
 lazySizesConfig.expFactor = 4;
 
