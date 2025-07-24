@@ -112,6 +112,8 @@ function tryonHandlingItem() {
   // // Optional: re-check on custom cart updates (if your theme supports this event)
   // document.addEventListener('cart:updated', updateCartForTryon);
 }
+document.addEventListener('cart:updated', tryonHandlingItem);
+
 // End Tryon
 
 
