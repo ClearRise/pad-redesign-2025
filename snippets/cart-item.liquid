@@ -9,7 +9,6 @@
   visibility: hidden;
   padding: 0;"{% endif %}
 >
-  blaa
   {%- assign img_url = product | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
   <div class="cart__image">
     <a href="{{ product.url }}" style="height: 0; padding-bottom: {{ 100 | divided_by: product.image.aspect_ratio }}%;">
