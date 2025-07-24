@@ -90,6 +90,7 @@
       if (tryonInput && tryonButton) {
         handleTryonSellingPlanInput(tryonInput, tryonButton);
         {% comment %} add $0 to tryon button {% endcomment %}
+        {% comment %} handleAddingButtonElements(tryonButton); {% endcomment %}
       } else if (Date.now() - startTime < maxWaitTime) {
         setTimeout(waitForTryonInput, pollInterval);
       } else {
