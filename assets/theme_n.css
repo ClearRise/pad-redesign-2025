@@ -13225,9 +13225,10 @@ input[type="checkbox"]:checked::before {
 .selling_plan {
   background: #bb0e0e;
   color: #fff !important;
-  padding: 0 12px 3px;
+  padding: 3px 12px 3px;
   border-radius: 10px;
   text-transform: uppercase;
   display: table;
+  font-size: 15px !important;
 }
 /* End Tryon */
