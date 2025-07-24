@@ -15,7 +15,7 @@
         "liquid_DNKzNA": {
           "type": "liquid",
           "settings": {
-            "is_collection_banner": true,
+            "is_collection_banner": false,
             "liquid_name": "",
             "code": "<h2>Glow Stone Series</h2><p>Experience the perfect blend of tradition and quality with craftsmanship that stands the test of time.</p>",
             "width": "50%",
@@ -44,6 +44,7 @@
         "liquid_DNKzNA",
         "image_khDkUk"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "show_navigation": true,
@@ -78,8 +79,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/mystery_collection.png",
-            "image_mobile": "shopify://shop_images/mystery_collection_mobile.png",
+            "image": "shopify://shop_images/4-2.jpg",
+            "image_mobile": "shopify://shop_images/2-2.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -95,7 +96,6 @@
       "block_order": [
         "image_WfWU9Q"
       ],
-      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
@@ -120,12 +120,12 @@
         "section_background": "#eeeeee",
         "top_padding": 20,
         "bottom_padding": 20,
-        "show_bottom_break_line": true,
+        "show_bottom_break_line": false,
         "top_logo_size": 16,
         "trust_icon_1_label": "",
         "trust_icon_2_label": "",
         "trust_icon_3_label": "",
-        "trust_icon_4_label": ""
+        "trust_icon_4_label": "One-of-a-kind Designs"
       }
     },
     "replo_trust_icons_fy9XYw": {
