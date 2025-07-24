@@ -156,6 +156,7 @@
         "blocks": {
           "announcement_xVJyfX": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "",
               "link_text": "Buy One Get One Free",
