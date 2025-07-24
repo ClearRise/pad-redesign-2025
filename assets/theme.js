@@ -104,11 +104,13 @@ function tryonHandlingItem() {
       });
   }
 
-  // Run on page load
-  document.addEventListener('DOMContentLoaded', updateCartForTryon);
+  updateCartForTryon();
 
-  // Optional: re-check on custom cart updates (if your theme supports this event)
-  document.addEventListener('cart:updated', updateCartForTryon);
+  // // Run on page load
+  // document.addEventListener('DOMContentLoaded', updateCartForTryon);
+
+  // // Optional: re-check on custom cart updates (if your theme supports this event)
+  // document.addEventListener('cart:updated', updateCartForTryon);
 }
 // End Tryon
 
