@@ -1781,6 +1781,10 @@ document.addEventListener('DOMContentLoaded', tryonHandlingItem);
 
       buildCart: function () {
         theme.cart.getCartProductMarkup().then(this.cartMarkup.bind(this));
+        // Tryon
+        // Handle adding or remomving Tryon handling item
+        tryonHandlingItem()
+        // End Tryon
       },
 
 
