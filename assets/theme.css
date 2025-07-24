@@ -11597,7 +11597,7 @@ input[type="checkbox"]:checked::before {
 }
 
 /* Tryon */
-.selling_plan: {
+.selling_plan {
   background: #bb0e0e;
   color: #fff !important;
   padding: 0 12px 3px;
