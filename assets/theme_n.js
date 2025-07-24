@@ -62,6 +62,9 @@ function tryonHandlingItem() {
 
       const hasTryonFeeItem = items.some(item => item.variant_id === TRYON_VARIANT_ID);
 
+      console.log(`hasTryonProduct: ${hasTryonProduct}`)
+      console.log(`hasTryonFeeItem: ${hasTryonFeeItem}`)
+
       if (hasTryonProduct && !hasTryonFeeItem) {
         // ✅ Add Tryon fee product
         fetch('/cart/add.js', {
