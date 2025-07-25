@@ -5449,6 +5449,7 @@ lazySizesConfig.expFactor = 4;
         }
 
         this.items = this.getImageData();
+        console.log(this.items);
 
         var image = this.inSlideshow ? this.container.querySelector(selectors.activeImage) : evt.currentTarget;
 
