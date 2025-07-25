@@ -5452,8 +5452,10 @@ lazySizesConfig.expFactor = 4;
         console.log(this.items);
 
         var image = this.inSlideshow ? this.container.querySelector(selectors.activeImage) : evt.currentTarget;
+        image = evt.currentTarget;
 
         var index = this.inSlideshow ? this.getChildIndex(image) : image.dataset.index;
+        index = image.dataset.index;
 
         this.initGallery(this.items, index);
       },
