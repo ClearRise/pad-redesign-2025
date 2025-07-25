@@ -5474,6 +5474,8 @@ lazySizesConfig.expFactor = 4;
           ? this.container.querySelectorAll(selectors.slideshowTrack + selectors.images)
           : this.container.querySelectorAll(selectors.images);
 
+        this.images = this.container.querySelectorAll(selectors.images)
+
         var items = [];
         var options = {};
 
