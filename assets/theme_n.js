@@ -5509,6 +5509,7 @@ lazySizesConfig.expFactor = 4;
           tapToToggleControls: false,
           getThumbBoundsFn: function (index) {
             var pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
+            console.log(items, index);
             var thumbnail = items[index].el;
             var rect = thumbnail.getBoundingClientRect();
             return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
