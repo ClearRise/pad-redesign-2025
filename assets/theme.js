@@ -43,6 +43,74 @@ theme.recentlyViewed = {
 window.lazySizesConfig = window.lazySizesConfig || {};
 lazySizesConfig.expFactor = 4;
 
+// Tryon
+console.log("before tryonHandlingItem")
+function tryonHandlingItem() {
+  const TRYON_VARIANT_ID = 42097358766162;
+  const TRYON_DESCRIPTION = 'tryon';
+
+  console.log("updateCartForTryon")
+  fetch('/cart.js')
+    .then(res => res.json())
+    .then(cart => {
+      const items = cart.items;
+
+      const hasTryonProduct = items.some(item =>
+        item.selling_plan_allocation &&
+        item.selling_plan_allocation.selling_plan &&
+        item.selling_plan_allocation.selling_plan.description === TRYON_DESCRIPTION
+      );
+
+      const hasTryonFeeItem = items.some(item => item.variant_id === TRYON_VARIANT_ID);
+
+      if (hasTryonProduct && !hasTryonFeeItem) {
+        // ✅ Add Tryon fee product
+        fetch('/cart/add.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            id: TRYON_VARIANT_ID,
+            quantity: 1
+          })
+        })
+          .then(res => res.json())
+          .then(() => {
+            console.log('Tryon fee product added.');
+            location.reload(); // reload to update cart view
+          });
+
+      } else if (!hasTryonProduct && hasTryonFeeItem) {
+        // ✅ Remove Tryon fee product
+        const itemToRemove = items.find(item => item.variant_id === TRYON_VARIANT_ID);
+
+        if (itemToRemove) {
+          fetch('/cart/change.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              id: itemToRemove.key,
+              quantity: 0
+            })
+          })
+            .then(res => res.json())
+            .then(() => {
+              console.log('Tryon fee product removed.');
+              location.reload(); // reload to update cart view
+            });
+        }
+      }
+    });
+  // // Run on page load
+  // document.addEventListener('DOMContentLoaded', updateCartForTryon);
+
+  // // Optional: re-check on custom cart updates (if your theme supports this event)
+  // document.addEventListener('cart:updated', updateCartForTryon);
+}
+document.addEventListener('cart:updated', tryonHandlingItem);
+document.addEventListener('DOMContentLoaded', tryonHandlingItem);
+
+// End Tryon
+
 (function () {
   'use strict';
 
@@ -1714,6 +1782,10 @@ lazySizesConfig.expFactor = 4;
 
       buildCart: function () {
         theme.cart.getCartProductMarkup().then(this.cartMarkup.bind(this));
+        // Tryon
+        // Handle adding or remomving Tryon handling item
+        tryonHandlingItem()
+        // End Tryon
       },
 
 
