@@ -112,14 +112,14 @@
         "step_zPWLMh": {
           "type": "step",
           "settings": {
-            "title": "<b>TRY UP TO 6 ITEMS</b>",
+            "title": "<b>TRY UP TO 3 ITEMS</b>",
             "description": "Fill your cart to find something you love."
           }
         },
         "step_zEY6MV": {
           "type": "step",
           "settings": {
-            "title": "<b>10-DAY TRIAL</b>",
+            "title": "<b>7-DAY TRIAL</b>",
             "description": "Try it on in the comfort of your home."
           }
         },
@@ -314,7 +314,7 @@
           "type": "question",
           "settings": {
             "title": "When do I have to return my items by?",
-            "text": "<p>Initiate your return before your trial ends by emailing us at support@patrickadairdesigns.com with your order # and the items you wish to return.</p>"
+            "text": "<p>https://docs.google.com/document/d/1UHmth-mjet-0_PE2H2N5DLHbL2gK3xdl8hQi05IQZQA/edit?tab=t.0</p>"
           }
         },
         "question_ye4zpL": {
