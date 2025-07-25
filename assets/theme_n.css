@@ -13220,3 +13220,15 @@ input[type="checkbox"]:checked::before {
     height: 70vw !important;
   }
 }
+
+/* Tryon */
+.selling_plan {
+  background: #bb0e0e;
+  color: #fff !important;
+  padding: 3px 12px 3px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  display: table;
+  font-size: 14px !important;
+}
+/* End Tryon */
