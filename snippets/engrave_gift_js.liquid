@@ -153,7 +153,11 @@ $(document).ready(function () {
         productForm.submit();
       }, 2000));
     } else {
-      productForm.submit();
+      {% comment %} Tryon edit {% endcomment %}
+      setTimeout(() => {
+        productForm.submit();
+      }, 2000);
+      {% comment %} End Tryon edit {% endcomment %}
     }
   });
 });
