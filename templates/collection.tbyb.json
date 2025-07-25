@@ -44,6 +44,7 @@
         "liquid_DNKzNA",
         "image_khDkUk"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "show_navigation": true,
@@ -57,20 +58,68 @@
         "additional_class": ""
       }
     },
+    "17347204-928a-46d1-8166-ac8c007f382d": {
+      "type": "slideshow_n",
+      "blocks": {
+        "image_WfWU9Q": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "image": "shopify://shop_images/b.jpg",
+            "image_mobile": "shopify://shop_images/a.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24,
+            "text_bottom_padding_desktop": 30,
+            "text_bottom_padding_mobile": 30,
+            "button_color_1": "white",
+            "button_color_2": "white"
+          }
+        }
+      },
+      "block_order": [
+        "image_WfWU9Q"
+      ],
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
     "how_it_works_2_NTW4aQ": {
       "type": "how-it-works-2",
       "blocks": {
         "step_zPWLMh": {
           "type": "step",
           "settings": {
-            "title": "<b>TRY UP TO 6 ITEMS</b>",
+            "title": "<b>TRY UP TO 3 ITEMS</b>",
             "description": "Fill your cart to find something you love."
           }
         },
         "step_zEY6MV": {
           "type": "step",
           "settings": {
-            "title": "<b>10-DAY TRIAL</b>",
+            "title": "<b>7-DAY TRIAL</b>",
             "description": "Try it on in the comfort of your home."
           }
         },
@@ -103,55 +152,6 @@
         "step_description_color": "#000000"
       }
     },
-    "17347204-928a-46d1-8166-ac8c007f382d": {
-      "type": "slideshow_n",
-      "blocks": {
-        "image_WfWU9Q": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "",
-            "special_title_color": "",
-            "subheading": "",
-            "special_text_color": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_position": "vertical-center horizontal-center",
-            "text_align": "left",
-            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
-            "mobile_text_align": "left",
-            "image": "shopify://shop_images/mystery_collection.png",
-            "image_mobile": "shopify://shop_images/mystery_collection_mobile.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 80,
-            "base_text_size": 24,
-            "text_bottom_padding_desktop": 30,
-            "text_bottom_padding_mobile": 30,
-            "button_color_1": "white",
-            "button_color_2": "white"
-          }
-        }
-      },
-      "block_order": [
-        "image_WfWU9Q"
-      ],
-      "disabled": true,
-      "settings": {
-        "use_img_banner": true,
-        "section_height": "natural",
-        "mobile_height": "auto",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": false,
-        "autoplay_speed": 5
-      }
-    },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
       "disabled": true,
@@ -166,7 +166,7 @@
         "section_background": "#eeeeee",
         "top_padding": 20,
         "bottom_padding": 20,
-        "show_bottom_break_line": true,
+        "show_bottom_break_line": false,
         "top_logo_size": 16,
         "trust_icon_1_label": "",
         "trust_icon_2_label": "",
@@ -314,7 +314,7 @@
           "type": "question",
           "settings": {
             "title": "When do I have to return my items by?",
-            "text": "<p>Initiate your return before your trial ends by emailing us at support@patrickadairdesigns.com with your order # and the items you wish to return.</p>"
+            "text": "<p>https://docs.google.com/document/d/1UHmth-mjet-0_PE2H2N5DLHbL2gK3xdl8hQi05IQZQA/edit?tab=t.0</p>"
           }
         },
         "question_ye4zpL": {
@@ -361,8 +361,8 @@
   },
   "order": [
     "advanced_content_eYLzPF",
-    "how_it_works_2_NTW4aQ",
     "17347204-928a-46d1-8166-ac8c007f382d",
+    "how_it_works_2_NTW4aQ",
     "replo_trust_icons_white_backg_Wc7kJ7",
     "trust_icons_EDYTbe",
     "replo_trust_icons_fy9XYw",

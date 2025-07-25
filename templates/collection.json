@@ -15,7 +15,7 @@
         "liquid_DNKzNA": {
           "type": "liquid",
           "settings": {
-            "is_collection_banner": true,
+            "is_collection_banner": false,
             "liquid_name": "",
             "code": "<h2>Glow Stone Series</h2><p>Experience the perfect blend of tradition and quality with craftsmanship that stands the test of time.</p>",
             "width": "50%",
@@ -44,6 +44,7 @@
         "liquid_DNKzNA",
         "image_khDkUk"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "show_navigation": true,
@@ -60,8 +61,9 @@
     "17347204-928a-46d1-8166-ac8c007f382d": {
       "type": "slideshow_n",
       "blocks": {
-        "image_WfWU9Q": {
+        "image_t7LfrH": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -90,12 +92,43 @@
             "button_color_1": "white",
             "button_color_2": "white"
           }
+        },
+        "image_WfWU9Q": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "image": "shopify://shop_images/4-2.jpg",
+            "image_mobile": "shopify://shop_images/2-2.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24,
+            "text_bottom_padding_desktop": 30,
+            "text_bottom_padding_mobile": 30,
+            "button_color_1": "white",
+            "button_color_2": "white"
+          }
         }
       },
       "block_order": [
+        "image_t7LfrH",
         "image_WfWU9Q"
       ],
-      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
@@ -120,12 +153,12 @@
         "section_background": "#eeeeee",
         "top_padding": 20,
         "bottom_padding": 20,
-        "show_bottom_break_line": true,
+        "show_bottom_break_line": false,
         "top_logo_size": 16,
         "trust_icon_1_label": "",
         "trust_icon_2_label": "",
         "trust_icon_3_label": "",
-        "trust_icon_4_label": ""
+        "trust_icon_4_label": "One-of-a-kind Designs"
       }
     },
     "replo_trust_icons_fy9XYw": {
