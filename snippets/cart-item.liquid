@@ -186,14 +186,10 @@
       <div class="cart__item-price-col text-right">
         <!-- Tryon -->
         <!-- Show quantity selector only if not a Tryon item -->
-        {% if product.selling_plan_allocation
-          and product.selling_plan_allocation.selling_plan.description == 'tryon'
-        %}
-          <span style="font-weight: bold"> 
-          {{ product.quantity }} ×
-          </span>
+        {% if product.selling_plan_allocation and product.selling_plan_allocation.selling_plan.description == 'tryon' %}
+          <span style="font-weight: bold"> {{ product.quantity }} × </span>
         {% endif %}
-          <!-- End Tryon -->
+        <!-- End Tryon -->
         {% if product.original_price != product.final_price %}
           {% if product.final_price == 0 %}
             <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
