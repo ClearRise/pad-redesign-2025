@@ -118,8 +118,8 @@
       <div>
         <!-- Tryon -->
         <!-- Show quantity selector only if not a Tryon item -->
-        {% if line_item.selling_plan_allocation
-          and line_item.selling_plan_allocation.selling_plan.description == 'tryon'
+        {% if !(line_item.selling_plan_allocation
+          and line_item.selling_plan_allocation.selling_plan.description == 'tryon')
         %}
           <!-- End Tryon -->
           <div class="js-qty__wrapper">
