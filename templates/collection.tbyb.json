@@ -305,6 +305,13 @@
             "title": "My trial ended and I was charged, but now I want to return something. Is this still possible?",
             "text": "<p>Yes, you can still return eligible items within the our return window. Check out our <a href=\"/pages/limited-lifetime-warranty-and-return-policy\" target=\"_blank\" title=\"Limited Lifetime Warranty and Return Policy\">returns policy</a> for more details.</p>"
           }
+        },
+        "question_XaPKVe": {
+          "type": "question",
+          "settings": {
+            "title": "Are Try Before You Buy Orders Eligible For a Free Gift?",
+            "text": "<p>Unfortunately, due to the nature of Try Before You Buy, orders containing Try Before You Buy products are NOT eligible for free gifts during promotions.</p>"
+          }
         }
       },
       "block_order": [
@@ -312,7 +319,8 @@
         "question_dNNhcR",
         "question_wjGx3K",
         "question_RbfYLK",
-        "question_mwbHWn"
+        "question_mwbHWn",
+        "question_XaPKVe"
       ],
       "name": "FAQ",
       "settings": {
