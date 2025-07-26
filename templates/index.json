@@ -55,7 +55,6 @@
       "blocks": {
         "image_MMJkqq": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -83,6 +82,7 @@
         },
         "image_ErbVFi": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -158,7 +158,7 @@
         "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "",
             "heading": "GLOWSTONE  SERIES",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
@@ -181,7 +181,7 @@
         "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "",
             "heading": "WEDDING   BANDS",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
@@ -204,7 +204,7 @@
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "",
             "heading": "METEORITE RINGS",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
@@ -227,7 +227,7 @@
         "advanced_gaqMVW": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "",
             "heading": "WOMEN'S BANDS",
             "textarea": "<u>SHOP NOW</u>",
             "cta_text1": "",
@@ -250,14 +250,14 @@
         "8f48b383-f1c5-4d34-a6cd-eab1f6f524b0": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
-            "heading": "PENDANTS",
+            "subheading": "$0 Upfront",
+            "heading": "TRY BEFORE YOU BUY",
             "textarea": "<u>SHOP NOW</u>",
             "cta_text1": "",
-            "cta_link1": "https://patrickadairdesigns.com/collections/necklaces",
+            "cta_link1": "shopify://collections/try-before-you-buy",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/PPendant_Tile_Edited.png",
+            "image": "shopify://shop_images/download.png",
             "video_url": "",
             "width": "33",
             "height": 300,

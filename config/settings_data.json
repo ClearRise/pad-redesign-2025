@@ -79,8 +79,8 @@
     "save_badge_type": "badge",
     "product_threshold_amount": 100,
     "product1-img1": "shopify://shop_images/Mystery_Ring_Gif_bf14da19-95c3-4062-bee1-3da32c79205e.gif",
-    "product1-title": "PRIME DAY LIMITED OFFER",
-    "product1-text": "Get a Free Mystery Gift (Ring or Pendant) on orders $300+<br><b>ENDS AT MIDNIGHT</b>",
+    "product1-title": "FREE GIFT OFFER",
+    "product1-text": "Get a Free Mystery Gift (Ring or Pendant) on orders $195+",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -96,11 +96,11 @@
     "empty_cart_text3": "",
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
-    "show_gift_box": false,
+    "show_gift_box": true,
     "first_tier_progress": "You've unlocked a Free Gift!",
-    "gift_box_title": "PRIME DAY OFFER ENDS AT MIDNIGHT",
+    "gift_box_title": "FREE GIFT OFFER",
     "gift_box_text": "",
-    "cart_threshold_amount": 300,
+    "cart_threshold_amount": 195,
     "spend_progress": "",
     "product-handle-1": "mystery-gift",
     "product-handle-2": "lavender-burl-carbon-fiber-bar-pendant",
@@ -174,10 +174,9 @@
           },
           "scroll_navi_mobile_WcV7fN": {
             "type": "scroll_navi_mobile",
-            "disabled": true,
             "settings": {
-              "sub_menu": "<b><u>SALE</u></b>",
-              "link_submenu": "shopify://collections/flash-sale"
+              "sub_menu": "<u>Try Free</u>",
+              "link_submenu": "shopify://collections/try-before-you-buy"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
@@ -217,8 +216,8 @@
           "sticky_collection": false,
           "mobile_top_banner_image": "shopify://shop_images/oie_haHVk88If7KC.png",
           "mobile_menu_top_banner_image": "shopify://shop_images/image__60_-removebg-preview.png",
-          "mobile_menu_top_banner_title": "BUY ONE<br>GET ONE FREE",
-          "mobile_menu_top_banner_link_text": "Sitewide - Limited Time Only",
+          "mobile_menu_top_banner_title": "FREE MYSTERY GIFT",
+          "mobile_menu_top_banner_link_text": "On All Orders $195+",
           "mobile_menu_top_banner_link": "shopify://collections/all-products-new",
           "mobile_menu_top_banner_background": "",
           "announcement_compact": true,
