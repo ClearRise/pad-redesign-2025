@@ -189,7 +189,10 @@
         {% if product.selling_plan_allocation
           and product.selling_plan_allocation.selling_plan.description == 'tryon'
         %}
+          <span>
+            
           {{ product.quantity }}
+          </span>
         {% endif %}
           <!-- End Tryon -->
         {% if product.original_price != product.final_price %}
