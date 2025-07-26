@@ -99,10 +99,11 @@
       {% endif %}
       <div class="bold_edit_in_cart"></div>
     </div>
+    <div class="cart__item-sub">
     <!-- Tryon -->
     <!-- Show quantity selector only if not a Tryon item -->
-    {{ product.selling_plan_allocation.selling_plan.description }}
-    <div class="cart__item-sub">
+    {% if line_item.selling_plan_allocation and line_item.selling_plan_allocation.selling_plan.description == 'tryon' %}
+    <!-- End Tryon -->
       <div>
         <div class="js-qty__wrapper">
           <label for="cart_updates_{{ product.key }}" class="hidden-label">{{ 'cart.label.quantity' | t }}</label>
@@ -149,6 +150,8 @@
             <span class="icon__fallback-text" aria-hidden="true">+</span>
           </button>
         </div>
+                <!-- Tryon -->
+                {% endif %}
 
         <div class="cart__remove">
           <a href="{{ routes.cart_change_url }}?id={{ product.key }}&amp;quantity=0" data-product-id="{{product.variant_id}}" class="text-link" alt=" {{ 'cart.general.remove' | t }}">
