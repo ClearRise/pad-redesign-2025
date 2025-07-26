@@ -184,7 +184,14 @@
       </div>
 
       <div class="cart__item-price-col text-right">
-        hi
+        <!-- Tryon -->
+        <!-- Show quantity selector only if not a Tryon item -->
+        {% if product.selling_plan_allocation
+          and product.selling_plan_allocation.selling_plan.description == 'tryon'
+        %}
+          {{ product.quantity }}
+        {% endif %}
+          <!-- End Tryon -->
         {% if product.original_price != product.final_price %}
           {% if product.final_price == 0 %}
             <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
