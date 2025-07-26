@@ -116,6 +116,7 @@
     </div>
     <div class="cart__item-sub">
       <div>
+        <label for="cart_updates_{{ product.key }}" class="hidden-label">{{ 'cart.label.quantity' | t }}</label>
         <!-- Tryon -->
         <!-- Show quantity selector only if not a Tryon item -->
         {% unless product.selling_plan_allocation
