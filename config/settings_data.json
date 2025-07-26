@@ -195,7 +195,7 @@
           "scroll_navi_mobile_T4MxJh": {
             "type": "scroll_navi_mobile",
             "settings": {
-              "sub_menu": "Sale",
+              "sub_menu": "<u>Sale</u>",
               "link_submenu": "shopify://collections/flash-sale"
             }
           },
