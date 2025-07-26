@@ -344,6 +344,13 @@
             "title": "Why is my card being re-authorized after already initiating a return or before my order has shipped?",
             "text": "<p>Banks have limits for how long a hold can be valid. In the event of a return, we are still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations. If your order has not shipped yet, it will ship shortly.</p>"
           }
+        },
+        "question_78TDdL": {
+          "type": "question",
+          "settings": {
+            "title": "Unfortunately, due to the nature of Try Before You Buy, orders containing Try Before You Buy products are NOT eligible for free gifts during promotions.",
+            "text": "<p>Unfortunately, due to the nature of Try Before You Buy, orders containing Try Before You Buy products are NOT eligible for free gifts during promotions.</p>"
+          }
         }
       },
       "block_order": [
@@ -351,7 +358,8 @@
         "question_ye4zpL",
         "question_nWPfzJ",
         "question_WNkRQy",
-        "question_DYNtCH"
+        "question_DYNtCH",
+        "question_78TDdL"
       ],
       "name": "FAQ",
       "settings": {
