@@ -173,11 +173,13 @@
     </div>
   </div>
   <div class="cart-item-quantity d-flex flex-grid--center">
-    <!-- Tryon -->
-    <!-- Show quantity selector only if not a Tryon item -->
-    {% unless product.selling_plan_allocation and product.selling_plan_allocation.selling_plan.description == 'tryon' %}
-      <!-- End Tryon -->
-      <div class="js-qty__wrapper">
+    <div class="js-qty__wrapper">
+      <!-- Tryon -->
+      <!-- Show quantity selector only if not a Tryon item -->
+      {% unless product.selling_plan_allocation
+        and product.selling_plan_allocation.selling_plan.description == 'tryon'
+      %}
+        <!-- End Tryon -->
         <label for="cart_updates_{{ product.key }}" class="hidden-label">{{ 'cart.label.quantity' | t }}</label>
         <input
           type="text"
@@ -221,10 +223,10 @@
           </svg>
           <span class="icon__fallback-text" aria-hidden="true">+</span>
         </button>
-      </div>
-      <!-- Tryon -->
-    {% endunless %}
-    <!-- End Tryon -->
+        <!-- Tryon -->
+      {% endunless %}
+      <!-- End Tryon -->
+    </div>
   </div>
   <div class="cart-item-price-container-ss d-flex justify-content-flex-end">
     <div class="cart__item-price-col text-right">
