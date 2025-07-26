@@ -126,6 +126,7 @@
             <label for="cart_updates_{{ product.key }}" class="hidden-label">{{ 'cart.label.quantity' | t }}</label>
             <input
               type="text"
+              disabled
               {% if match_gift_product %}
                 style="pointer-events: none;"
               {% endif %}
