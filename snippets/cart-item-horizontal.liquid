@@ -323,6 +323,12 @@
           </span>
         </span>
       {% else %}
+        <!-- Tryon -->
+        <!-- Show quantity selector only if not a Tryon item -->
+        {% if product.selling_plan_allocation and product.selling_plan_allocation.selling_plan.description == 'tryon' %}
+          <span style="font-weight: bold"> {{ product.quantity }} × </span>
+        {% endif %}
+        <!-- End Tryon -->
         <span class="cart__price  black_txt">
           <span>
             <span
