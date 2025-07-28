@@ -351,6 +351,13 @@
             "title": "Unfortunately, due to the nature of Try Before You Buy, orders containing Try Before You Buy products are NOT eligible for free gifts during promotions.",
             "text": "<p>Unfortunately, due to the nature of Try Before You Buy, orders containing Try Before You Buy products are NOT eligible for free gifts during promotions.</p>"
           }
+        },
+        "question_4heaRU": {
+          "type": "question",
+          "settings": {
+            "title": "Are Try Before You Buy Orders Eligible For a Free Gift?",
+            "text": "<p>Unfortunately, due to the nature of Try Before You Buy, orders containing Try Before You Buy products are NOT eligible for free gifts during promotions.</p>"
+          }
         }
       },
       "block_order": [
@@ -359,7 +366,8 @@
         "question_nWPfzJ",
         "question_WNkRQy",
         "question_DYNtCH",
-        "question_78TDdL"
+        "question_78TDdL",
+        "question_4heaRU"
       ],
       "name": "FAQ",
       "settings": {
