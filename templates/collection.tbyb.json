@@ -292,6 +292,13 @@
             "text": "<p>Try Before You Buy Orders are NOT eligible for free shipping on returns.</p>"
           }
         },
+        "question_C9hNkn": {
+          "type": "question",
+          "settings": {
+            "title": "I initiated my return, why is my card being re-authorized?",
+            "text": "<p>Banks have limits for how long a hold can be valid. We are likely still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations.</p>"
+          }
+        },
         "question_RbfYLK": {
           "type": "question",
           "settings": {
@@ -318,6 +325,7 @@
         "question_bW6wKj",
         "question_dNNhcR",
         "question_wjGx3K",
+        "question_C9hNkn",
         "question_RbfYLK",
         "question_mwbHWn",
         "question_XaPKVe"
