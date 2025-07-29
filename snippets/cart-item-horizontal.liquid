@@ -84,7 +84,7 @@
           </div>
         {%- endunless -%}
 
-        {%- if product.selling_plan_allocation != empty -%}
+        {%- if product.selling_plan_allocation != empty and product.selling_plan_allocation.selling_plan.name != blank -%}
           <div class="cart__item--variants selling_plan">
             {{ product.selling_plan_allocation.selling_plan.name }}
           </div>
