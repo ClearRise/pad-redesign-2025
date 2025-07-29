@@ -98,7 +98,7 @@
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
     "top_text": "You're (amount) away from (next) Tier",
-    "bottom_text": "Add a (upsell_product_title)( (upsell_product_price)) for your (main_product_title) to unlock the next tier",
+    "bottom_text": "Add a (upsell_product_title)($(upsell_product_price)) for your (main_product_title) to unlock the next tier",
     "show_gift_box": true,
     "first_tier_progress": "You've unlocked a Free Gift!",
     "gift_box_title": "FREE GIFT OFFER",
