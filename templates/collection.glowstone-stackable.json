@@ -82,8 +82,74 @@
         "autoplay_speed": 5
       }
     },
+    "trust_icons_n_7V7LiD": {
+      "type": "trust-icons_n",
+      "name": "Trust Icons(new-2)",
+      "settings": {
+        "section_background": "#eeeeee",
+        "top_padding": 20,
+        "bottom_padding": 20,
+        "show_bottom_break_line": false,
+        "top_logo_size": 16,
+        "trust_icon_1_label": "",
+        "trust_icon_2_label": "",
+        "trust_icon_3_label": "",
+        "trust_icon_4_label": "One-of-a-kind Designs"
+      }
+    },
+    "advanced_content_flexible_pEAW8a": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "image_6VQejX": {
+          "type": "image",
+          "settings": {
+            "iamge_name": "",
+            "image": "shopify://shop_images/3rings2.jpg",
+            "link": "shopify://pages/womens-stackable-bundle",
+            "width": "33%",
+            "alignment": "center"
+          }
+        },
+        "liquid_XXkUyH": {
+          "type": "liquid",
+          "settings": {
+            "is_collection_banner": false,
+            "liquid_name": "",
+            "code": "<h2>Women's Stackable Bundle</h2><p>Build your own Glowstone Stackable Ring Bundle from 20 of our best selling designs and save up to 45% off! Stack them on the same finger or wear them on separate fingers, the choice is yours!</p><br><a href=\"https://patrickadairdesigns.com/pages/womens-stackable-bundle\"><b><u>SHOP NOW</b></u></a>",
+            "width": "50%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_6VQejX",
+        "liquid_XXkUyH"
+      ],
+      "disabled": true,
+      "name": "Advanced content - 2",
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": true,
+        "background_color": "#ffffff",
+        "small_image": false,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 16,
+        "additional_class": ""
+      }
+    },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
+      "disabled": true,
       "custom_css": [
         "{padding: 10 px;}"
       ],
@@ -92,7 +158,7 @@
     "featured_collection_hgQGGg": {
       "type": "featured-collection",
       "settings": {
-        "title": "<b>NEW STACKABLE RINGS</b>",
+        "title": "NEW STACKABLE RINGS",
         "home_featured_products": "new-glowstone-stackable-rings",
         "type_enable": false,
         "subtitle_enable": true,
@@ -238,6 +304,8 @@
   },
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
+    "trust_icons_n_7V7LiD",
+    "advanced_content_flexible_pEAW8a",
     "replo_trust_icons_white_backg_Wc7kJ7",
     "featured_collection_hgQGGg",
     "replo_trust_icons_fy9XYw",
