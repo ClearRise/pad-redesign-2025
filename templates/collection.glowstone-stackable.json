@@ -82,17 +82,51 @@
         "autoplay_speed": 5
       }
     },
+    "trust_icons_n_7V7LiD": {
+      "type": "trust-icons_n",
+      "name": "Trust Icons(new-2)",
+      "settings": {
+        "section_background": "#eeeeee",
+        "top_padding": 20,
+        "bottom_padding": 20,
+        "show_bottom_break_line": false,
+        "top_logo_size": 16,
+        "trust_icon_1_label": "",
+        "trust_icon_2_label": "",
+        "trust_icon_3_label": "",
+        "trust_icon_4_label": "One-of-a-kind Designs"
+      }
+    },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
+      "disabled": true,
       "custom_css": [
         "{padding: 10 px;}"
       ],
       "settings": {}
     },
+    "background_image_text_Br3T76": {
+      "type": "background-image-text",
+      "disabled": true,
+      "name": "Large image with text box",
+      "settings": {
+        "subtitle": "Impressive",
+        "title": "Large image with text box",
+        "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>",
+        "button_label": "",
+        "button_link": "",
+        "image": "shopify://shop_images/3rings2.jpg",
+        "focal_point": "20% 50%",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": false
+      }
+    },
     "featured_collection_hgQGGg": {
       "type": "featured-collection",
       "settings": {
-        "title": "<b>NEW STACKABLE RINGS</b>",
+        "title": "NEW STACKABLE RINGS",
         "home_featured_products": "new-glowstone-stackable-rings",
         "type_enable": false,
         "subtitle_enable": true,
@@ -238,7 +272,9 @@
   },
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
+    "trust_icons_n_7V7LiD",
     "replo_trust_icons_white_backg_Wc7kJ7",
+    "background_image_text_Br3T76",
     "featured_collection_hgQGGg",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
