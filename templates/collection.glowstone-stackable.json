@@ -97,6 +97,55 @@
         "trust_icon_4_label": "One-of-a-kind Designs"
       }
     },
+    "advanced_content_flexible_pEAW8a": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "image_6VQejX": {
+          "type": "image",
+          "settings": {
+            "iamge_name": "",
+            "image": "shopify://shop_images/3rings2.jpg",
+            "link": "shopify://pages/womens-stackable-bundle",
+            "width": "33%",
+            "alignment": "center"
+          }
+        },
+        "liquid_XXkUyH": {
+          "type": "liquid",
+          "settings": {
+            "is_collection_banner": false,
+            "liquid_name": "",
+            "code": "<h2>Women's Stackable Bundle</h2><p>Build your own Glowstone Stackable Ring Bundle from 20 of our best selling designs and save up to 45% off! Stack them on the same finger or wear them on separate fingers, the choice is yours!</p><br><a href=\"patrickadairdesigns.com/pages/womens-bundle-builder\"><B><U>SHOP NOW</b></u></a>",
+            "width": "50%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_6VQejX",
+        "liquid_XXkUyH"
+      ],
+      "name": "Advanced content - 2",
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": true,
+        "background_color": "#ffffff",
+        "small_image": false,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 16,
+        "additional_class": ""
+      }
+    },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
       "disabled": true,
@@ -105,26 +154,9 @@
       ],
       "settings": {}
     },
-    "background_image_text_Br3T76": {
-      "type": "background-image-text",
-      "disabled": true,
-      "name": "Large image with text box",
-      "settings": {
-        "subtitle": "Impressive",
-        "title": "Large image with text box",
-        "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>",
-        "button_label": "",
-        "button_link": "",
-        "image": "shopify://shop_images/3rings2.jpg",
-        "focal_point": "20% 50%",
-        "layout": "left",
-        "height": 550,
-        "framed": false,
-        "parallax": false
-      }
-    },
     "featured_collection_hgQGGg": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "NEW STACKABLE RINGS",
         "home_featured_products": "new-glowstone-stackable-rings",
@@ -273,8 +305,8 @@
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
     "trust_icons_n_7V7LiD",
+    "advanced_content_flexible_pEAW8a",
     "replo_trust_icons_white_backg_Wc7kJ7",
-    "background_image_text_Br3T76",
     "featured_collection_hgQGGg",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
