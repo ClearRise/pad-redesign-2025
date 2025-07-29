@@ -463,7 +463,7 @@
           <div class="upcart-rewards-tier styles_TieredRewards__tierCircleAndDescription__ styles_TieredRewards__tierCircleAndDescription--leftOfCenter__">
             <div
               class="upcart-rewards-tier-circle styles_TieredRewards__tierCircle__"
-              style="fill: {{ reward_bar_main_color }}; background-color: {% if pass_first_tier == false %}{{ reward_secondary_color }}{% else %}{{ reward_bar_main_color }}{% endif %}; border: 2px solid {{ reward_bar_main_color }};"
+              style="fill: {{ reward_bar_main_color }}; background-color: {% if pass_first_tier == false %}{{ reward_secondary_color }}{% else %}{{ reward_bar_main_color }}{% endif %}; border: 2px solid {{ reward_bar_main_color }}; border-radius: 50px;"
             >
               <div class="upcart-rewards-tier-icon" style="width: 25px; height: 25px; margin: auto; color: {% if pass_first_tier == false %}{{ reward_bar_main_color }}{% else %}{{ reward_secondary_color }}{% endif %};">
                 {% if settings.reward_bar_first_icon != blank %}
