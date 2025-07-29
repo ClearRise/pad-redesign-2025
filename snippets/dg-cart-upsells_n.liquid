@@ -637,7 +637,7 @@
           <div class="upsell-section-for-next-tier">
             <div class="upsell-product-suggest-text">
               <span class="suggested-product-title">
-                {% assign upsell_product_price_money = will_suggest_upsell_protection_plan_product.selected_or_first_available_variant.price | money %}
+                {% assign upsell_product_price_money = will_suggest_upsell_protection_plan_product.selected_or_first_available_variant.price | divided_by: 100 %}
                 <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'Premium Protection Plan' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b>
               </span>
             </div>
@@ -702,7 +702,7 @@
             <div class="upsell-section-for-next-tier">
               <div class="upsell-product-suggest-text">
                 <span class="suggested-product-title">
-                  {% assign upsell_product_price_money = all_products[settings['product-engraving']].selected_or_first_available_variant.price | money %}
+                  {% assign upsell_product_price_money = all_products[settings['product-engraving']].selected_or_first_available_variant.price | divided_by: 100 %}
                   <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'CUSTOM ENGRAVING' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b>
                 </span>
               </div>
