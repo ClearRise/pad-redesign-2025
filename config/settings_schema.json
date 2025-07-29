@@ -993,6 +993,16 @@
     ]
   },
   {
+    "name": "Glowstone Enhancement",
+    "settings": [
+      {
+        "type": "product",
+        "id": "product-glowstone",
+        "label": "Glowstone Product"
+      }
+    ]
+  },
+  {
     "name": "Cart",
     "settings": [
       {
@@ -1087,6 +1097,37 @@
       },
       {
         "type": "header",
+        "content": "Rewards Bar"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_rewards_bar",
+        "label": "Enable Rewards Bar",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "top_text",
+        "label": "Reward Bar Top Text",
+        "default": "You're (amount) away from (next) Tier",
+        "info": "(amount) shows how much is left until the next step."
+      },
+      {
+        "type": "text",
+        "id": "unlock_text",
+        "label": "Reward Bar Unlock Text",
+        "default": "You've unlocked a (tier?) Free Gift!",
+        "info": "(tier?)"
+      },
+      {
+        "type": "text",
+        "id": "bottom_text",
+        "label": "Reward Bar Bottom Text",
+        "default": "Add a (upsell_product_title)($(upsell_product_price)) for your (main_product_title) to unlock the next tier",
+        "info": "(upsell_product_title), (upsell_product_price), (main_product_title)"
+      },
+      {
+        "type": "header",
         "content": "First Tier",
         "info": "Choose any one of product"
       },
@@ -1144,6 +1185,11 @@
         "label": "Gift Product 2"
       },
       {
+        "type": "image_picker",
+        "id": "reward_bar_first_icon",
+        "label": "Reward Bar First Icon"
+      },
+      {
         "type": "checkbox",
         "id": "hide_gift_2",
         "label": "Hide Second Gift",
@@ -1175,6 +1221,13 @@
         "info": "Add Gift box title for cart drawer"
       },
       {
+        "type": "text",
+        "id": "cart_threshold_amount_second",
+        "label": "Second Tier Cart Threshold Amount",
+        "default": "690",
+        "info": "unit: $"
+      },
+      {
         "type": "range",
         "id": "min_cart_threshold_amount",
         "label": "Minimum Cart Threshold Amount",
@@ -1202,6 +1255,11 @@
         "type": "product",
         "id": "second_product-handle-1",
         "label": "Gift Product 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "reward_bar_second_icon",
+        "label": "Reward Bar Second Icon"
       },
       {
         "type": "product",
@@ -1256,6 +1314,11 @@
         "type": "product",
         "id": "third_product-handle-2",
         "label": "Gift Product 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "reward_bar_third_icon",
+        "label": "Reward Bar Third Icon"
       },
       {
         "type": "header",
