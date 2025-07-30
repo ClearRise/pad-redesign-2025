@@ -89,6 +89,55 @@
       ],
       "settings": {}
     },
+    "advanced_content_flexible_DKne6r": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "image_LhGRBX": {
+          "type": "image",
+          "settings": {
+            "iamge_name": "",
+            "image": "shopify://shop_images/3rings2.jpg",
+            "link": "shopify://pages/womens-stackable-bundle",
+            "width": "33%",
+            "alignment": "center"
+          }
+        },
+        "liquid_B8YYcA": {
+          "type": "liquid",
+          "settings": {
+            "liquid_name": "",
+            "code": "<h2>Women's Stackable Bundle</h2><p>Build your own Glowstone Stackable Ring Bundle from 20 of our best selling designs and save up to 45% off! Stack them on the same finger or wear them on separate fingers, the choice is yours!</p><br><a href=\"https://patrickadairdesigns.com/pages/womens-stackable-bundle\"><b><u>CLICK HERE TO SHOP THE BUNDLE</b></u></a>",
+            "width": "50%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_LhGRBX",
+        "liquid_B8YYcA"
+      ],
+      "disabled": true,
+      "name": "Advanced content - 2",
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": true,
+        "background_color": "#ffffff",
+        "small_image": false,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 16,
+        "additional_class": ""
+      }
+    },
     "featured_collection_hgQGGg": {
       "type": "featured-collection",
       "settings": {
@@ -239,6 +288,7 @@
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
     "replo_trust_icons_white_backg_Wc7kJ7",
+    "advanced_content_flexible_DKne6r",
     "featured_collection_hgQGGg",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
