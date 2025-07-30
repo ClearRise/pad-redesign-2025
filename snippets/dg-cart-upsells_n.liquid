@@ -711,83 +711,82 @@
               });
             });
           </script>
-        {% else %}
-          {% if amount_away_number < all_products[settings['product-engraving']].selected_or_first_available_variant.price and will_suggest_upsell_engraving == true %}
-            <div class="upsell-section-for-next-tier">
-              <div class="upsell-product-suggest-text">
-                <span class="suggested-product-title">
-                  {% assign upsell_product_price_money = all_products[settings['product-engraving']].selected_or_first_available_variant.price | divided_by: 100 %}
-                  <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'CUSTOM ENGRAVING' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b>
-                </span>
-              </div>
-              <div class="custom-engraving-input-container">
-                <input type="text" class="custom-engraving-note" placeholder="Enter your engraving text here" />
-                <p class="error-text empty-text hide">Please input engraving text here</p>
-              </div>
-              <div class="button-container">
-                <button class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}" data-main-product-id="{{ purchased_main_product_on_cart.id }}" data-product-id="{{ all_products[settings['product-engraving']].selected_or_first_available_variant.id }}" data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}">Add CUSTOM ENGRAVING</button>
-              </div>
+        {% endif %}
+        {% if amount_away_number < all_products[settings['product-engraving']].selected_or_first_available_variant.price and will_suggest_upsell_engraving == true %}
+          <div class="upsell-section-for-next-tier">
+            <div class="upsell-product-suggest-text">
+              <span class="suggested-product-title">
+                {% assign upsell_product_price_money = all_products[settings['product-engraving']].selected_or_first_available_variant.price | divided_by: 100 %}
+                <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'CUSTOM ENGRAVING' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b>
+              </span>
             </div>
-            <script>
-              document.addEventListener('DOMContentLoaded', function() {
-                // Ensure the DOM is fully loaded before attaching event listeners
-                document.querySelector('.upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}').addEventListener('click', function(e) {
-                  e.preventDefault();
-                  var mainProductId = this.getAttribute('data-main-product-id');
-                  var productId = this.getAttribute('data-product-id');
-                  var mainProductCartId = this.getAttribute('data-main-product-cart-id');
-                  var customProperties = {{ purchased_main_product_on_cart.properties | json }};
-                  var customPropertiesJSON = {}
-                  customProperties.forEach(propert => 
-                    customPropertiesJSON[propert[0]] = propert[1]
-                  );
-                  const customEngravingNote = document.querySelector('.custom-engraving-note').value;
-                  if (customEngravingNote.trim() === '') {
-                    document.querySelector('.error-text.empty-text').classList.remove('hide');
-                    return;
-                  } else {
-                    document.querySelector('.error-text.empty-text').classList.add('hide');
-                  }
-                  customPropertiesJSON['engraving'] = customEngravingNote;
-                  fetch('/cart/add.js', {
+            <div class="custom-engraving-input-container">
+              <input type="text" class="custom-engraving-note" placeholder="Enter your engraving text here" />
+              <p class="error-text empty-text hide">Please input engraving text here</p>
+            </div>
+            <div class="button-container">
+              <button class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}" data-main-product-id="{{ purchased_main_product_on_cart.id }}" data-product-id="{{ all_products[settings['product-engraving']].selected_or_first_available_variant.id }}" data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}">Add CUSTOM ENGRAVING</button>
+            </div>
+          </div>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              // Ensure the DOM is fully loaded before attaching event listeners
+              document.querySelector('.upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}').addEventListener('click', function(e) {
+                e.preventDefault();
+                var mainProductId = this.getAttribute('data-main-product-id');
+                var productId = this.getAttribute('data-product-id');
+                var mainProductCartId = this.getAttribute('data-main-product-cart-id');
+                var customProperties = {{ purchased_main_product_on_cart.properties | json }};
+                var customPropertiesJSON = {}
+                customProperties.forEach(propert => 
+                  customPropertiesJSON[propert[0]] = propert[1]
+                );
+                const customEngravingNote = document.querySelector('.custom-engraving-note').value;
+                if (customEngravingNote.trim() === '') {
+                  document.querySelector('.error-text.empty-text').classList.remove('hide');
+                  return;
+                } else {
+                  document.querySelector('.error-text.empty-text').classList.add('hide');
+                }
+                customPropertiesJSON['engraving'] = customEngravingNote;
+                fetch('/cart/add.js', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                  },
+                  body: JSON.stringify({
+                    items: [{
+                      id: productId,
+                      quantity: 1
+                    }]
+                  })
+                })
+                .then(response => response.json())
+                .then(data => {
+                  // main product property update
+                  fetch('/cart/change.js', {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',
                       'Accept': 'application/json'
                     },
                     body: JSON.stringify({
-                      items: [{
-                        id: productId,
-                        quantity: 1
-                      }]
+                      id: mainProductCartId,
+                      properties: customPropertiesJSON
                     })
-                  })
-                  .then(response => response.json())
+                  }).
+                  then(response => response.json())
                   .then(data => {
-                    // main product property update
-                    fetch('/cart/change.js', {
-                      method: 'POST',
-                      headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                      },
-                      body: JSON.stringify({
-                        id: mainProductCartId,
-                        properties: customPropertiesJSON
-                      })
-                    }).
-                    then(response => response.json())
-                    .then(data => {
-                      console.log('Main product properties updated:', data);
-                      location.reload(); // Reload the page to reflect changes
-                    })
-                    .catch(error => console.error('Error updating main product properties:', error));
+                    console.log('Main product properties updated:', data);
+                    location.reload(); // Reload the page to reflect changes
                   })
-                  .catch(error => console.error('Error adding product to cart:', error));
-                });
+                  .catch(error => console.error('Error updating main product properties:', error));
+                })
+                .catch(error => console.error('Error adding product to cart:', error));
               });
-            </script>
-          {% endif %}
+            });
+          </script>
         {% endif %}
       {% endif %}
     {% endif %}
