@@ -82,8 +82,24 @@
         "autoplay_speed": 5
       }
     },
+    "trust_icons_n_7A6A4E": {
+      "type": "trust-icons_n",
+      "name": "Trust Icons(new-2)",
+      "settings": {
+        "section_background": "#eeeeee",
+        "top_padding": 20,
+        "bottom_padding": 20,
+        "show_bottom_break_line": false,
+        "top_logo_size": 16,
+        "trust_icon_1_label": "",
+        "trust_icon_2_label": "",
+        "trust_icon_3_label": "",
+        "trust_icon_4_label": "One-of-a-kind Designs"
+      }
+    },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
+      "disabled": true,
       "custom_css": [
         "{padding: 10 px;}"
       ],
@@ -238,6 +254,7 @@
   },
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
+    "trust_icons_n_7A6A4E",
     "replo_trust_icons_white_backg_Wc7kJ7",
     "featured_collection_hgQGGg",
     "replo_trust_icons_fy9XYw",
