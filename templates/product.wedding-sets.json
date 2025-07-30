@@ -351,7 +351,7 @@
       }
     },
     "recently-viewed": {
-      "type": "recently-viewed",
+      "type": "recently-viewed_n",
       "disabled": true,
       "settings": {
         "recent_count": 5
