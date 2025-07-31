@@ -358,6 +358,13 @@
             "title": "Are Cremation Rings Eligible For a Resize, Return, or Exchange?",
             "text": "<p>Unfortunately, due to the nature of cremation jewelry, unless you purchase the Premium Protection Plan associated with the product, all cremation jewelry is NOT eligible for a free resize or exchange and is non refundable.</p>"
           }
+        },
+        "question_kTcTaU": {
+          "type": "question",
+          "settings": {
+            "title": "Can I choose a different pre-set design that isn't listed for a Cremation Ring?",
+            "text": "<p>Yes, just send us an email at support@patrickadairdesigns.com with the pre-set design you are looking to use!</p>"
+          }
         }
       },
       "block_order": [
@@ -367,7 +374,8 @@
         "question_WNkRQy",
         "question_DYNtCH",
         "question_78TDdL",
-        "question_4heaRU"
+        "question_4heaRU",
+        "question_kTcTaU"
       ],
       "name": "FAQ",
       "settings": {
