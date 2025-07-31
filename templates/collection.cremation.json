@@ -12,36 +12,8 @@
     "17347204-928a-46d1-8166-ac8c007f382d": {
       "type": "slideshow",
       "blocks": {
-        "image_be3MfE": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "",
-            "special_title_color": "",
-            "subheading": "",
-            "special_text_color": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_position": "vertical-center horizontal-center",
-            "text_align": "left",
-            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
-            "mobile_text_align": "left",
-            "image": "shopify://shop_images/h.jpg",
-            "image_mobile": "shopify://shop_images/g.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 80,
-            "base_text_size": 24
-          }
-        },
         "image_FDpUNC": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -58,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/collection_desktop_bogo1.png",
-            "image_mobile": "shopify://shop_images/Collection_mobile_bogo1.png",
+            "image": "shopify://shop_images/mystery_collection.png",
+            "image_mobile": "shopify://shop_images/mystery_collection_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -69,7 +41,6 @@
         }
       },
       "block_order": [
-        "image_be3MfE",
         "image_FDpUNC"
       ],
       "settings": {
@@ -88,22 +59,22 @@
         "step_YRRJKq": {
           "type": "step",
           "settings": {
-            "title": "<b>TRY UP TO 3 ITEMS</b>",
-            "description": "Fill your cart to find something you love."
+            "title": "<b>DESIGN YOUR RING</b>",
+            "description": "Choose among our most popular designs or customize your own to honor your loved one."
           }
         },
         "step_aCzgHL": {
           "type": "step",
           "settings": {
-            "title": "<b>7-DAY TRIAL</b>",
-            "description": "Try it on in the comfort of your home."
+            "title": "<b>SEND US CREMAINS</b>",
+            "description": "We provide a paid secure collection kit with clear instructions for mailing the ashes."
           }
         },
         "step_GBpecJ": {
           "type": "step",
           "settings": {
-            "title": "<b>RETURNS ARE EASY</b>",
-            "description": "Only pay for what you keep."
+            "title": "<b>CRAFTED & DELIVERED</b>",
+            "description": "We handcraft your ring with care and respect, then ship it directly to your door."
           }
         }
       },
@@ -274,65 +245,57 @@
         "question_bW6wKj": {
           "type": "question",
           "settings": {
-            "title": "When do I have to return my items by?",
-            "text": "<p>Your trial starts the day your items are marked delivered by the shipping courier. The trial period is 7 days.</p><p>Initiate your return before your trial ends by emailing us at support@patrickadairdesigns.com with your order # and the items you wish to return.</p><p>Once a return is initiated, you then have 5 days to return the products. You are responsible for return shipping costs on any products being returned.</p>"
-          }
-        },
-        "question_dNNhcR": {
-          "type": "question",
-          "settings": {
-            "title": "Why is there an authorization on my card?",
-            "text": "<p>Similar to booking a hotel or rideshare, we reserve the funds in case you decide to keep all your items. An authorization is not a charge - you'll only be charged for what you keep.</p>"
-          }
-        },
-        "question_wjGx3K": {
-          "type": "question",
-          "settings": {
-            "title": "Do I get free shipping or free returns?",
-            "text": "<p>Try Before You Buy Orders are NOT eligible for free shipping on returns.</p>"
-          }
-        },
-        "question_C9hNkn": {
-          "type": "question",
-          "settings": {
-            "title": "I initiated my return, why is my card being re-authorized?",
-            "text": "<p>Banks have limits for how long a hold can be valid. We are likely still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations.</p>"
-          }
-        },
-        "question_RbfYLK": {
-          "type": "question",
-          "settings": {
-            "title": "Why is my card being re-authorized after already initiating a return or before my order has shipped?",
-            "text": "<p>Banks have limits for how long a hold can be valid. In the event of a return, we are still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations. If your order has not shipped yet, it will ship shortly.</p>"
+            "title": "Can I choose how the ashes are incorporated?",
+            "text": "<p>We typically will sprinkle the ashes throughout the ring on top of the design to act as a compliment. </p><p>If you are wanting a ring that is predominantly filled with ashes or for the ashes to be completely hidden as a base layer, please reach out to us.</p>"
           }
         },
         "question_mwbHWn": {
           "type": "question",
           "settings": {
-            "title": "My trial ended and I was charged, but now I want to return something. Is this still possible?",
-            "text": "<p>Yes, you can still return eligible items within the our return window. Check out our <a href=\"/pages/limited-lifetime-warranty-and-return-policy\" target=\"_blank\" title=\"Limited Lifetime Warranty and Return Policy\">returns policy</a> for more details.</p>"
+            "title": "Can I send Pet Cremains and Fur?",
+            "text": "<p>Yes, we accept both Pet and Human cremains in addition to Fur/Hair!</p>"
           }
         },
-        "question_XaPKVe": {
+        "question_dNNhcR": {
           "type": "question",
           "settings": {
-            "title": "Are Try Before You Buy Orders Eligible For a Free Gift?",
-            "text": "<p>Unfortunately, due to the nature of Try Before You Buy, orders containing Try Before You Buy products are NOT eligible for free gifts during promotions.</p>"
+            "title": "How much cremains should I send to you?",
+            "text": "<p>We typically only require roughly 2 teaspoons per ring.</p>"
+          }
+        },
+        "question_wjGx3K": {
+          "type": "question",
+          "settings": {
+            "title": "Will you send back any unused cremains?",
+            "text": "<p>Yes, if you send us more than we need, we will send back any excess cremains with your order. If you do not receive any cremains back with your finished ring, it means we used them all.</p>"
+          }
+        },
+        "question_C9hNkn": {
+          "type": "question",
+          "settings": {
+            "title": "How does the Vial Kit Process work?",
+            "text": "<p>If you order a cremation product with a vial kit included, we will ship you a vial kit within 24-48 business hours after you place your order. </p><p>Once received, you will fill the vial kit with the remains and you will be emailed instructions on how to send the cremains back to us.</p>"
+          }
+        },
+        "question_RbfYLK": {
+          "type": "question",
+          "settings": {
+            "title": "How do I send you Cremains if I choose to not purchase the Vial Kit Add On?",
+            "text": "<p>You are welcome to send us the cremains using your own method but please note the only way to send cremains legally through the US is through USPS Priority Mail Express.</p>"
           }
         }
       },
       "block_order": [
         "question_bW6wKj",
+        "question_mwbHWn",
         "question_dNNhcR",
         "question_wjGx3K",
         "question_C9hNkn",
-        "question_RbfYLK",
-        "question_mwbHWn",
-        "question_XaPKVe"
+        "question_RbfYLK"
       ],
       "name": "FAQ",
       "settings": {
-        "title": "Try Before You Buy FAQs"
+        "title": "Cremation Jewelry FAQs"
       }
     }
   },
