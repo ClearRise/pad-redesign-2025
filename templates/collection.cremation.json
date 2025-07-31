@@ -283,6 +283,13 @@
             "title": "How do I send you Cremains if I choose to not purchase the Vial Kit Add On?",
             "text": "<p>You are welcome to send us the cremains using your own method but please note the only way to send cremains legally through the US is through USPS Priority Mail Express.</p>"
           }
+        },
+        "question_ggtCw4": {
+          "type": "question",
+          "settings": {
+            "title": "Are Cremation Rings Eligible For a Resize, Return, or Exchange?",
+            "text": "<p>Unfortunately, due to the nature of cremation jewelry, unless you purchase the Premium Protection Plan associated with the product, all cremation jewelry is NOT eligible for a free resize or exchange and is non refundable.</p>"
+          }
         }
       },
       "block_order": [
@@ -291,7 +298,8 @@
         "question_dNNhcR",
         "question_wjGx3K",
         "question_C9hNkn",
-        "question_RbfYLK"
+        "question_RbfYLK",
+        "question_ggtCw4"
       ],
       "name": "FAQ",
       "settings": {
