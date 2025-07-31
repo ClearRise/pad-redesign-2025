@@ -79,8 +79,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/h.jpg",
-            "image_mobile": "shopify://shop_images/g.jpg",
+            "image": "shopify://shop_images/mystery_collection.png",
+            "image_mobile": "shopify://shop_images/mystery_collection_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -112,22 +112,22 @@
         "step_zPWLMh": {
           "type": "step",
           "settings": {
-            "title": "<b>TRY UP TO 3 ITEMS</b>",
-            "description": "Fill your cart to find something you love."
+            "title": "<b>DESIGN YOUR RING</b>",
+            "description": "Choose among our most popular designs or customize your own to honor your loved one."
           }
         },
         "step_zEY6MV": {
           "type": "step",
           "settings": {
-            "title": "<b>7-DAY TRIAL</b>",
-            "description": "Try it on in the comfort of your home."
+            "title": "<b>SEND US CREMAINS</b>",
+            "description": "We provide a paid secure collection kit with clear instructions for mailing the ashes."
           }
         },
         "step_kEbceP": {
           "type": "step",
           "settings": {
-            "title": "<b>RETURNS ARE EASY</b>",
-            "description": "Only pay for what you keep."
+            "title": "<b>CRAFTED & DELIVERED</b>",
+            "description": "We handcraft your ring with care and respect, then ship it directly to your door."
           }
         }
       },
@@ -141,8 +141,8 @@
         "full_width": false,
         "max_width": 1600,
         "background_color": "",
-        "title": "",
-        "title_font_size_desktop": 26,
+        "title": "<b>CREMATION JEWELRY</b>",
+        "title_font_size_desktop": 40,
         "title_font_size_mobile": 24,
         "step_title_color": "#000000",
         "step_title_font_size_desktop": 18,
