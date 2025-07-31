@@ -313,50 +313,50 @@
         "question_dTFxTP": {
           "type": "question",
           "settings": {
-            "title": "When do I have to return my items by?",
-            "text": "<p>Your trial starts the day your items are marked delivered by the shipping courier. The trial period is 7 days.</p><p>Initiate your return before your trial ends by emailing us at support@patrickadairdesigns.com with your order # and the items you wish to return.</p><p>Once a return is initiated, you then have 5 days to return the products. You are responsible for return shipping costs on any products being returned.</p>"
+            "title": "Can I choose how the ashes are incorporated?",
+            "text": "<p>We typically will sprinkle the ashes throughout the ring on top of the design to act as a compliment. </p><p>If you are wanting a ring that is predominantly filled with ashes or for the ashes to be completely hidden as a base layer, please reach out to us.</p>"
           }
         },
         "question_ye4zpL": {
           "type": "question",
           "settings": {
-            "title": "Why is there an authorization on my card?",
-            "text": "<p>Similar to booking a hotel or rideshare, we reserve the funds in case you decide to keep all your items. An authorization is not a charge - you'll only be charged for what you keep.</p>"
+            "title": "Can I send Pet Cremains and Fur?",
+            "text": "<p>Yes, we accept both Pet and Human cremains in addition to Fur/Hair!</p>"
           }
         },
         "question_nWPfzJ": {
           "type": "question",
           "settings": {
-            "title": "Do I get free shipping or free returns?",
-            "text": "<p>Try Before You Buy Orders are NOT eligible for free shipping on returns.</p>"
+            "title": "How many cremains should I send to you?",
+            "text": "<p>We typically only require roughly 2 teaspoons per ring.</p>"
           }
         },
         "question_WNkRQy": {
           "type": "question",
           "settings": {
-            "title": "I initiated my return, why is my card being re-authorized?",
-            "text": "<p>Banks have limits for how long a hold can be valid. We are likely still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations.</p>"
+            "title": "Will you send back any unused cremains?",
+            "text": "<p>Yes, if you send us more than we need, we will send back any excess cremains with your order. If you do not receive any cremains back with your finished ring, it means we used them all.</p>"
           }
         },
         "question_DYNtCH": {
           "type": "question",
           "settings": {
-            "title": "Why is my card being re-authorized after already initiating a return or before my order has shipped?",
-            "text": "<p>Banks have limits for how long a hold can be valid. In the event of a return, we are still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations. If your order has not shipped yet, it will ship shortly.</p>"
+            "title": "How does the Vial Kit Process work?",
+            "text": "<p>If you order a cremation product with a vial kit included, we will ship you a vial kit within 24-48 business hours after you place your order. </p><p>Once received, you will fill the vial kit with the remains and you will be emailed instructions on how to send the cremains back to us.</p>"
           }
         },
         "question_78TDdL": {
           "type": "question",
           "settings": {
-            "title": "My trial ended and I was charged, but now I want to return something. Is this still possible?",
-            "text": "<p>Yes, you can still return eligible items within the our return window. Check out our <a href=\"/pages/limited-lifetime-warranty-and-return-policy\" target=\"_blank\" title=\"Limited Lifetime Warranty and Return Policy\">returns policy</a> for more details.</p>"
+            "title": "How do I send you Cremains if I choose to not purchase the Vial Kit Add On?",
+            "text": "<p>You are welcome to send us the cremains using your own method but please note the only way to send cremains legally through the US is through USPS Priority Mail Express.</p>"
           }
         },
         "question_4heaRU": {
           "type": "question",
           "settings": {
-            "title": "Are Try Before You Buy Orders Eligible For a Free Gift?",
-            "text": "<p>Unfortunately, due to the nature of Try Before You Buy, orders containing Try Before You Buy products are NOT eligible for free gifts during promotions.</p>"
+            "title": "Are Cremation Rings Eligible For a Resize, Return, or Exchange?",
+            "text": "<p>Unfortunately, due to the nature of cremation jewelry, unless you purchase the Premium Protection Plan associated with the product, all cremation jewelry is NOT eligible for a free resize or exchange and is non refundable.</p>"
           }
         }
       },
@@ -371,7 +371,7 @@
       ],
       "name": "FAQ",
       "settings": {
-        "title": "Try Before You Buy FAQs"
+        "title": "Cremation Jewelry FAQs"
       }
     }
   },
