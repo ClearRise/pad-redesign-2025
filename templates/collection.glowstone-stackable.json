@@ -124,7 +124,7 @@
         "liquid_B8YYcA"
       ],
       "custom_css": [
-        ".liquid-container-ss {padding-left: 40px !important;}"
+        "@media (min-width: 769px) {.liquid-container-ss {padding-left: 40px !important;}}"
       ],
       "name": "Advanced content - 2",
       "settings": {
