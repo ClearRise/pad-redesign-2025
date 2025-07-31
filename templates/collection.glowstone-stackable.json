@@ -97,7 +97,7 @@
           "settings": {
             "iamge_name": "",
             "image": "shopify://shop_images/3rings2.jpg",
-            "link": "shopify://pages/womens-stackable-bundle",
+            "link": "shopify://pages/womens-bundle-builder",
             "width": "33%",
             "alignment": "center"
           }
@@ -106,7 +106,7 @@
           "type": "liquid",
           "settings": {
             "liquid_name": "",
-            "code": "<h2>Women's Stackable Bundle</h2><p>Build your own Glowstone Stackable Ring Bundle from 20 of our best selling designs and save up to 45% off! Stack them on the same finger or wear them on separate fingers, the choice is yours!</p><br><a href=\"https://patrickadairdesigns.com/pages/womens-stackable-bundle\"><b><u>CLICK HERE TO SHOP THE BUNDLE</b></u></a>",
+            "code": "<h2>Women's Stackable Bundle</h2><p>Build your own Glowstone Stackable Ring Bundle from 20 of our best selling designs and save up to 45% off! Stack them on the same finger or wear them on separate fingers, the choice is yours!</p><br><a href=\"https://patrickadairdesigns.com/pages/womens-bundle-builder\"><b><u>CLICK HERE TO SHOP THE BUNDLE</b></u></a>",
             "width": "50%",
             "alignment": "center",
             "text_color": "#000000",
@@ -123,7 +123,6 @@
         "image_LhGRBX",
         "liquid_B8YYcA"
       ],
-      "disabled": true,
       "name": "Advanced content - 2",
       "settings": {
         "full_width": false,
@@ -140,8 +139,9 @@
     },
     "featured_collection_hgQGGg": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
-        "title": "<b>NEW STACKABLE RINGS</b>",
+        "title": "NEW STACKABLE RINGS",
         "home_featured_products": "new-glowstone-stackable-rings",
         "type_enable": false,
         "subtitle_enable": true,
