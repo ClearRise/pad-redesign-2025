@@ -128,8 +128,8 @@
             "alignment": "center",
             "text_color": "#000000",
             "simple_background_color": "#ffffff",
-            "variant_padding": true,
-            "padding_left": 0,
+            "variant_padding": false,
+            "padding_left": 40,
             "padding_top": 0,
             "padding_bottom": 0,
             "padding_right": 0
@@ -139,6 +139,9 @@
       "block_order": [
         "image_HRU7Pz",
         "liquid_QJ7cza"
+      ],
+      "custom_css": [
+        ".liquid-container-ss {padding-left: 40px !important;}"
       ],
       "name": "Advanced content - 2",
       "settings": {
