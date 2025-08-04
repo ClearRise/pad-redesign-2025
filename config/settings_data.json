@@ -247,6 +247,7 @@
           "featured_collection_JeUTzx"
         ],
         "settings": {
+          "full_width_header": false,
           "main_menu_link_list": "new-menu-redesign-2-4-2025",
           "mega_menu_images": true,
           "show_menu_img": true,
@@ -258,9 +259,9 @@
           "sticky_collection": false,
           "mobile_top_banner_image": "shopify://shop_images/oie_haHVk88If7KC.png",
           "mobile_menu_top_banner_image": "shopify://shop_images/Black_Ceramic-_Purple_Class-removebg-preview.png",
-          "mobile_menu_top_banner_title": "FLASH SALE",
-          "mobile_menu_top_banner_link_text": "Up to 30% off - Shop now",
-          "mobile_menu_top_banner_link": "shopify://collections/flash-sale",
+          "mobile_menu_top_banner_title": "FAREWELL COLLECTION",
+          "mobile_menu_top_banner_link_text": "Up to 50% off - Shop now",
+          "mobile_menu_top_banner_link": "shopify://collections/the-farewell-collection",
           "mobile_menu_top_banner_background": "",
           "announcement_compact": true,
           "announcement_above_header": true,
