@@ -25,13 +25,9 @@
   width: 16px;
   height: 16px;
 }
-.section-header .rte.text-spacing {
-  /* display: flex;
-  justify-content: flex-end; */
-  color: rgb(123, 139, 157) !important;
-}
-.section-header .rte.text-spacing a::after {
+.section-header .rte.text-spacing a {
   border-bottom-width: 0px !important;
+  color: rgb(123, 139, 157) !important;
 }
 .cart-item-price-container-ss {
   min-width: 170px;
