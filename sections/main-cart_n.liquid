@@ -280,6 +280,8 @@
         {% endif %}
       </div>
     </header>
+    
+    {%- render 'reward-bar' -%}
 
     {%- if cart.item_count > 0 -%}
       {% assign main_item_count = 0 %}
@@ -407,7 +409,6 @@
                 {% assign main_item_count = main_item_count | plus: 1 %}
               {% endif %}
 
-              {%- render 'reward-bar' -%}
               {%- render 'cart-item-horizontal', product: item, line: forloop.index, intelligems_discount: intelligems_discount, hidden: hidden -%}
             {%- endfor -%}
           </div>
