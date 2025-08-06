@@ -323,7 +323,7 @@
     </div>
   </div>
 
-  <style>
+  {% comment %} <style>
     .upsell-section-for-next-tier {
       {% comment %} display: flex; {% endcomment %}
       justify-content: space-between;
@@ -366,10 +366,6 @@
       display: inline;
     }
   </style>
-  {% comment %} <div>{{ engrave_product | json }}, {{ all_products[settings['product-engraving']].selected_or_first_available_variant.price }}, {{ will_suggest_upsell_engraving }}, {{ purchased_main_product_on_cart.properties | json }}</div> {% endcomment %}
-  {% comment %} <div>{{ purchased_main_product.metafields.custom.product_type }}, {{ purchased_ring }}, {{ testvar }}</div> {% endcomment %}
-  {% comment %} <div>{{ all_products[settings['product-engraving']].selected_or_first_available_variant.price }}, {{ purchased_main_product_on_cart.properties | json }}</div> {% endcomment %}
-  {% comment %} <div>{{ cart.items | json }}</div> {% endcomment %}
   {% if amount_away_number < all_products[settings['product-glowstone']].selected_or_first_available_variant.price and will_suggest_upsell_glowstone %}
     <div class="upsell-section-for-next-tier">
       <div class="upsell-product-suggest-text">
@@ -576,6 +572,6 @@
         });
       </script>
     {% endif %}
-  {% endif %}
+  {% endif %} {% endcomment %}
 {% endif %}
 {% comment %} -------------------------------------------------------- {% endcomment %}
