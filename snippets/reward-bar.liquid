@@ -23,11 +23,11 @@
       line-height: 20px;
       padding-top: 5px;
       text-align: center;
+      margin-bottom: 20px;
     }
     .upcart-rewards-message p,
     .upcart-rewards-message p span {
-      font-family: 'Gelica', sans-serif !important;
-      font-size: 15px !important;
+      font-size: 14px !important;
     }
     .styles_TieredRewards__progressBar__ {
       background: #e4e5e7;
@@ -89,7 +89,7 @@
       justify-content: space-between;
     }
     .upcart-rewards-bar-title-span {
-      {% comment %} font-weight: bold; {% endcomment %}
+      font-weight: bold;
     }
     .cart-total-price-and-gift-total-price {
       font-size: 12px;
@@ -104,6 +104,14 @@
     }
     .tier-step {
       font-weight: bold;
+    }
+  </style>
+  <style>
+    @media (max-width: 768px) {
+      .upcart-rewards-message p,
+      .upcart-rewards-message p span {
+        font-size: 12px !important;
+      }
     }
   </style>
   {% comment %} vaildation gift box {% endcomment %}
@@ -368,7 +376,7 @@
           </div>
         </div>
       {% endif %}
-      {% if second_show_gift_box == true %}
+      {% if third_show_gift_box == true %}
         <div class="tier-name-wrapper">
           <div class="tier-step">
             Tier 3: ${{ third_cart_threshold_amount_number | divided_by: 100 }}
