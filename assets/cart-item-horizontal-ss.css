@@ -68,11 +68,11 @@
   background-color: var(--colorBodyDim);
 }
 .cart__remove a {
-  padding: 10px;
+  padding: 7px;
 }
 .cart__remove a svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 .cart__image {
   flex: 0 0 150px;
