@@ -79,6 +79,9 @@
       margin-right: 2.5px;
       width: 40px;
     }
+    .upcart-rewards {
+      
+    }
   </style>
   {% comment %} vaildation gift box {% endcomment %}
   {%- liquid
@@ -235,6 +238,10 @@
   -%}
   {% comment %} end vaildation gift box {% endcomment %}
   <div class="upcart-rewards styles_TieredRewards__ UpcartDesignSettings__cartTextColor">
+    <div class="upcart-rewards-bar-title">
+      <span>Progress to Free Gift</span>
+      <span>{{ new_total_price }} / {{ total_gift_box_amount }}</span>
+    </div>
     <div class="upcart-rewards-message">
       <p><b>{{ banner_text | replace: '(amount)' }}</b></p>
     </div>
