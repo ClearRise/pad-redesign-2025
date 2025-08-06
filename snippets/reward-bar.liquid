@@ -83,6 +83,19 @@
       
     }
   </style>
+  <style>
+    .upcart-rewards-bar-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .upcart-rewards-bar-title-span {
+      font-weight: bold;
+    }
+    .cart-total-price-and-gift-total-price {
+      font-size: 14px;
+    }
+  </style>
   {% comment %} vaildation gift box {% endcomment %}
   {%- liquid
     assign first_show_gift_box = settings.show_gift_box
@@ -239,8 +252,8 @@
   {% comment %} end vaildation gift box {% endcomment %}
   <div class="upcart-rewards styles_TieredRewards__ UpcartDesignSettings__cartTextColor">
     <div class="upcart-rewards-bar-title">
-      <span>Progress to Free Gift</span>
-      <span>{{ new_total_price }} / {{ total_gift_box_amount }}</span>
+      <span class="upcart-rewards-bar-title-span">Progress to Free Gift</span>
+      <span class="cart-total-price-and-gift-total-price">{{ new_total_price }} / {{ total_gift_box_amount }}</span>
     </div>
     <div class="upcart-rewards-message">
       <p><b>{{ banner_text | replace: '(amount)' }}</b></p>
