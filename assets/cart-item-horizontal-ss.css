@@ -26,8 +26,8 @@
   height: 16px;
 }
 .section-header .rte.text-spacing {
-  display: flex;
-  justify-content: flex-end;
+  /* display: flex;
+  justify-content: flex-end; */
 }
 .section-header .rte.text-spacing a::after {
   border-bottom-width: 0px !important;
