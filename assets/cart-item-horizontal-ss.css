@@ -51,7 +51,7 @@
   justify-content: flex-end;
 }
 .cart-item-price-container-ss {
-  min-width: 170px;
+  min-width: 100px;
 }
 .main-cart-container-ss .section-header .section-header__title {
   font-size: calc(var(--typeHeaderSize)* 0.7);
@@ -133,6 +133,9 @@
 }
 #CartPageForm {
   padding-top: 20px !important;
+}
+.black_txt {
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 767px) {
