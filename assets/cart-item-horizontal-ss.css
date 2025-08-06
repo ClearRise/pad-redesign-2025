@@ -10,8 +10,8 @@
   margin-right: -40px;
   padding-right: 40px;
   border-bottom: 1px solid rgb(123, 139, 157);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
   background-color: white;
 }
 .section-header>* {
