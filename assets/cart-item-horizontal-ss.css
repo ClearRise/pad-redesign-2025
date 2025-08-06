@@ -41,6 +41,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 0px !important;
+  justify-content: flex-end;
 }
 .cart-item-price-container-ss {
   min-width: 170px;
