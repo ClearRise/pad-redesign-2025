@@ -9,7 +9,7 @@
   flex: 1;
 }
 .section-header h2 {
-  font-size: 18px;
+  font-size: 18px !important;
 }
 .section-header:first-child {
   display: flex;
@@ -18,10 +18,19 @@
 .section-header .text-center a {
   display: flex;
   align-items: center;
+  gap: 20px;
+  color: rgb(123, 139, 157);
 }
 .section-header .text-center a svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
+}
+.section-header:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+.section-header:last-child a::after {
+  border-bottom-width: 0px !important;
 }
 .cart-item-price-container-ss {
   min-width: 170px;
