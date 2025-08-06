@@ -412,6 +412,9 @@
 
               {%- render 'cart-item-horizontal', product: item, line: forloop.index, intelligems_discount: intelligems_discount, hidden: hidden -%}
             {%- endfor -%}
+
+            {% render 'dg-cart-upsells_n', hide_price: cart_total_exclude_gift %}
+            
           </div>
           <div class="cart__page-col">
             {% if main_item_count == 1 %}
