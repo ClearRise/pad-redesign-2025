@@ -40,6 +40,7 @@
 .section-header .clear-cart-label {
   display: flex;
   align-items: center;
+  margin-bottom: 0px !important;
 }
 .cart-item-price-container-ss {
   min-width: 170px;
