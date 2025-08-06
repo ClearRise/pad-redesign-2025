@@ -1196,6 +1196,12 @@
         "info": "Second Gift products will be hidden from cart drawer if selected."
       },
       {
+        "type": "text",
+        "id": "first_tier_name",
+        "label": "First Tier Name",
+        "default": "Free Shipping"
+      },
+      {
         "type": "header",
         "content": "Second Tier",
         "info": "Choose one or two products"
@@ -1257,14 +1263,20 @@
         "label": "Gift Product 1"
       },
       {
+        "type": "product",
+        "id": "second_product-handle-2",
+        "label": "Gift Product 2"
+      },
+      {
         "type": "image_picker",
         "id": "reward_bar_second_icon",
         "label": "Reward Bar Second Icon"
       },
       {
-        "type": "product",
-        "id": "second_product-handle-2",
-        "label": "Gift Product 2"
+        "type": "text",
+        "id": "second_tier_name",
+        "label": "Second Tier Name",
+        "default": "Free Gift"
       },
       {
         "type": "header",
@@ -1319,6 +1331,12 @@
         "type": "image_picker",
         "id": "reward_bar_third_icon",
         "label": "Reward Bar Third Icon"
+      },
+      {
+        "type": "text",
+        "id": "third_tier_name",
+        "label": "Third Tier Name",
+        "default": "Premium Gift"
       },
       {
         "type": "header",

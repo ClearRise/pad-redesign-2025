@@ -288,7 +288,7 @@
             {% endif %}
           </div>
         </div>
-        <div class="upcart-rewards-tier-description styles_rewardsDescription__">First Tier</div>
+        <div class="upcart-rewards-tier-description styles_rewardsDescription__">Tier 1</div>
       </div>
       {% if second_show_gift_box == true %}
         <div class="upcart-rewards-tier styles_TieredRewards__tierCircleAndDescription__ styles_TieredRewards__tierCircleAndDescription--leftOfCenter__">
@@ -310,7 +310,7 @@
               {% endif %}
             </div>
           </div>
-          <div class="upcart-rewards-tier-description styles_rewardsDescription__">Second Tier</div>
+          <div class="upcart-rewards-tier-description styles_rewardsDescription__">Tier 2</div>
         </div>
       {% endif %}
       {% if third_show_gift_box == true %}
@@ -333,11 +333,42 @@
               {% endif %}
             </div>
           </div>
-          <div class="upcart-rewards-tier-description styles_rewardsDescription__">Third Tier</div>
+          <div class="upcart-rewards-tier-description styles_rewardsDescription__">Tier 3</div>
         </div>
       {% endif %}
     </div>
     
+    <div class="tier-names-container">
+      <div class="tier-name-wrapper">
+        <div class="tier-step">
+          Tier 1: ${{ first_cart_threshold_amount_number | divided_by: 100 }}
+        </div>
+        <div class="tier-name">
+          {{ settings.first_tier_name }}
+        </div>
+      </div>
+      {% if second_show_gift_box == true %}
+        <div class="tier-name-wrapper">
+          <div class="tier-step">
+            Tier 2: ${{ second_cart_threshold_amount_number | divided_by: 100 }}
+          </div>
+          <div class="tier-name">
+            {{ settings.second_tier_name }}
+          </div>
+        </div>
+      {% endif %}
+      {% if second_show_gift_box == true %}
+        <div class="tier-name-wrapper">
+          <div class="tier-step">
+            Tier 3: ${{ third_cart_threshold_amount_number | divided_by: 100 }}
+          </div>
+          <div class="tier-name">
+            {{ settings.third_tier_name }}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
     <div class="upcart-rewards-message">
       <p><b>{{ banner_text | replace: '(amount)' }}</b></p>
     </div>
