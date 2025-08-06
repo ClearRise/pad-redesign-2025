@@ -25,11 +25,11 @@
   width: 16px;
   height: 16px;
 }
-.section-header:last-child {
+.section-header .rte.text-spacing {
   display: flex;
   justify-content: flex-end;
 }
-.section-header:last-child a::after {
+.section-header .rte.text-spacing a::after {
   border-bottom-width: 0px !important;
 }
 .cart-item-price-container-ss {
