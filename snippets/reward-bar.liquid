@@ -86,14 +86,13 @@
   <style>
     .upcart-rewards-bar-title {
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
     }
     .upcart-rewards-bar-title-span {
       font-weight: bold;
     }
     .cart-total-price-and-gift-total-price {
-      font-size: 14px;
+      font-size: 13px;
     }
   </style>
   {% comment %} vaildation gift box {% endcomment %}
@@ -253,10 +252,7 @@
   <div class="upcart-rewards styles_TieredRewards__ UpcartDesignSettings__cartTextColor">
     <div class="upcart-rewards-bar-title">
       <span class="upcart-rewards-bar-title-span">Progress to Free Gift</span>
-      <span class="cart-total-price-and-gift-total-price">{{ new_total_price }} / {{ total_gift_box_amount }}</span>
-    </div>
-    <div class="upcart-rewards-message">
-      <p><b>{{ banner_text | replace: '(amount)' }}</b></p>
+      <span class="cart-total-price-and-gift-total-price">${{ new_total_price | divided_by: 100 }} / ${{ total_gift_box_amount | divided_by: 100 }}</span>
     </div>
     <div
       class="upcart-rewards-bar-background styles_TieredRewards__progressBar__"
@@ -340,6 +336,10 @@
           <div class="upcart-rewards-tier-description styles_rewardsDescription__">Third Tier</div>
         </div>
       {% endif %}
+    </div>
+    
+    <div class="upcart-rewards-message">
+      <p><b>{{ banner_text | replace: '(amount)' }}</b></p>
     </div>
   </div>
 
