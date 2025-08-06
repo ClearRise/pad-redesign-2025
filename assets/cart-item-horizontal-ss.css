@@ -4,16 +4,24 @@
 .section-header {
   margin-bottom: 0px !important;
   display: flex;
+  margin-left: -40px;
+  padding-left: 40px;
+  margin-right: -40px;
+  padding-right: 40px;
+  border-bottom: 1px solid rgb(123, 139, 157);
 }
 .section-header>* {
   flex: 1;
 }
 .section-header h2 {
   font-size: 18px !important;
+  display: flex;
+  align-items: center;
 }
 .section-header:first-child {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 .section-header .text-center a {
   display: flex;
