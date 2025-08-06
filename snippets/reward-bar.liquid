@@ -6,6 +6,7 @@
     assign enable_rewards_bar = true
   endif
 -%}
+{% assign new_total_price = cart.total_price | minus: hide_price %}
 {% if enable_rewards_bar and settings.show_gift_box %}
   <style>
     .upcart-rewards * {
