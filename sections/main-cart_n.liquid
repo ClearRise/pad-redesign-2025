@@ -280,14 +280,15 @@
         {% endif %}
       </div>
     </header>
-    
-    {%- render 'reward-bar' -%}
 
     {%- if cart.item_count > 0 -%}
       {% assign main_item_count = 0 %}
       <form action="{{ routes.cart_url }}" method="post" novalidate data-location="page" id="CartPageForm">
         <div class="cart__page">
           <div data-products class="cart__page-col">
+    
+            {%- render 'reward-bar' -%}
+            
             <div class="cart-item-header-ss d-flex">
               <div class="cart-item-product-header-ss">
                 PRODUCT
