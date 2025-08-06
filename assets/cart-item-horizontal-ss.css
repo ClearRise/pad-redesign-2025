@@ -1,5 +1,6 @@
 .main-cart-container-ss {
   font-size: 14px;
+  background-color: #fafafa;
 }
 .section-header {
   margin-bottom: 0px !important;
@@ -9,6 +10,9 @@
   margin-right: -40px;
   padding-right: 40px;
   border-bottom: 1px solid rgb(123, 139, 157);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
 }
 .section-header>* {
   flex: 1;
@@ -36,6 +40,9 @@
 .section-header .rte.text-spacing a {
   border-bottom-width: 0px !important;
   color: rgb(123, 139, 157) !important;
+}
+.section-header .rte.text-spacing a::after {
+  border-bottom-width: 0px !important;
 }
 .section-header .clear-cart-label {
   display: flex;
@@ -122,6 +129,9 @@
 }
 .page-content.main-cart-container-ss {
   padding-top: 0px !important;
+}
+#CartPageForm {
+  padding-top: 20px !important;
 }
 
 @media only screen and (max-width: 767px) {
