@@ -11,6 +11,18 @@
 .section-header h2 {
   font-size: 18px;
 }
+.section-header:first-child {
+  display: flex;
+  justify-content: flex-start;
+}
+.section-header .text-center a {
+  display: flex;
+  align-items: center;
+}
+.section-header .text-center a svg {
+  width: 20px;
+  height: 20px;
+}
 .cart-item-price-container-ss {
   min-width: 170px;
 }
