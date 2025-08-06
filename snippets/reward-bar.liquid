@@ -1,0 +1,580 @@
+{% comment %} -------------------------------------------------------- {% endcomment %}
+{%- liquid
+  if settings.enable_rewards_bar
+    assign enable_rewards_bar = settings.enable_rewards_bar
+  else
+    assign enable_rewards_bar = true
+  endif
+-%}
+{% if enable_rewards_bar and settings.show_gift_box %}
+  <style>
+    .upcart-rewards * {
+      box-sizing: border-box;
+    }
+    .upcart-rewards p {
+      margin: 0;
+    }
+    .UpcartDesignSettings__cartTextColor {
+      color: #212322;
+    }
+    .styles_TieredRewards__ {
+        font-size: 15px;
+      line-height: 20px;
+      padding-top: 5px;
+      text-align: center;
+    }
+    .upcart-rewards-message p,
+    .upcart-rewards-message p span {
+      font-family: 'Gelica', sans-serif !important;
+      font-size: 15px !important;
+    }
+    .styles_TieredRewards__progressBar__ {
+      background: #e4e5e7;
+      {% comment %} border-radius: 16px; {% endcomment %}
+      height: 10px;
+      margin-top: 22.5px;
+      overflow: hidden;
+      width: 100%;
+    }
+    .styles_Rewards__progressBar--progress__:empty {
+      display: block;
+    }
+    .styles_Rewards__progressBar--progress__ {
+      background-color: #93d3ff;
+      height: inherit;
+      overflow: hidden;
+      transition: all .5s ease 0s;
+    }
+    .styles_TieredRewards__tiersContainer__ {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -25px;
+    }
+    .styles_TieredRewards__tierCircleAndDescription--leftOfCenter__ {
+      margin-left: -20px;
+      transform: translate(20px);
+    }
+    .styles_TieredRewards__tierCircleAndDescription__ {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      max-height: 100px;
+      max-width: 75px;
+      min-width: 75px;
+      width: 75px;
+    }
+    .styles_rewardsDescription__ {
+      word-wrap: normal;
+      font-size: x-small;
+      line-height: 1.25;
+      margin-top: 5px;
+      font-weight: 600;
+    }
+    .styles_TieredRewards__tierCircle__ {
+      border-radius: 50%;
+      display: flex;
+      height: 40px;
+      margin-left: 2.5px;
+      margin-right: 2.5px;
+      width: 40px;
+    }
+  </style>
+  {% comment %} vaildation gift box {% endcomment %}
+  {%- liquid
+    assign first_show_gift_box = settings.show_gift_box
+    assign second_show_gift_box = settings.second_show_gift_box
+    assign third_show_gift_box = settings.third_show_gift_box
+    assign show_gift_box = first_show_gift_box
+
+    assign first_cart_threshold_amount = settings.cart_threshold_amount | times: 100
+    assign second_cart_threshold_amount = settings.cart_threshold_amount_second | times: 100
+    assign third_cart_threshold_amount = settings.cart_threshold_amount_third | times: 100
+
+    assign total_gift_box_amount = first_cart_threshold_amount
+    if second_show_gift_box == true and second_cart_threshold_amount > first_cart_threshold_amount
+      assign total_gift_box_amount = second_cart_threshold_amount
+    endif
+    if third_show_gift_box == true and third_cart_threshold_amount > second_cart_threshold_amount
+      assign total_gift_box_amount = third_cart_threshold_amount
+    endif
+
+    assign pass_first_tier = false
+    if new_total_price >= first_cart_threshold_amount
+      assign pass_first_tier = true
+    endif
+    assign pass_second_tier = false
+    if new_total_price >= second_cart_threshold_amount
+      assign pass_second_tier = true
+    endif
+    assign pass_third_tier = false
+    if new_total_price >= third_cart_threshold_amount
+      assign pass_third_tier = true
+    endif
+
+    if pass_first_tier == false
+      assign amount_away_number = first_cart_threshold_amount | minus: new_total_price
+      assign amount_away = first_cart_threshold_amount | minus: new_total_price | money
+      # assign banner_text = "You're " | append: amount_away | append: " away from " | append: "First Tier"
+      assign banner_text = settings.top_text | replace: '(amount)', amount_away | replace: '(next)', 'First'
+      assign gift_tier_count = 1
+    else
+      assign banner_text = settings.unlock_text | replace: '(tier?)', ''
+    endif
+    if second_show_gift_box == true
+      assign gift_tier_count = 2
+      if pass_second_tier == false and pass_first_tier == true
+        assign amount_away_number = second_cart_threshold_amount | minus: new_total_price
+        assign amount_away = second_cart_threshold_amount | minus: new_total_price | money
+        assign banner_text = settings.top_text | replace: '(amount)', amount_away | replace: '(next)', 'Second'
+      endif
+      if pass_second_tier == true and pass_first_tier == true
+        assign banner_text = settings.unlock_text | replace: '(tier?)', 'Second'
+      endif
+    endif
+    if third_show_gift_box == true
+      assign gift_tier_count = 3
+      if pass_third_tier == false and pass_second_tier == true
+        assign amount_away_number = third_cart_threshold_amount | minus: new_total_price
+        assign amount_away = third_cart_threshold_amount | minus: new_total_price | money
+        assign banner_text = settings.top_text | replace: '(amount)', amount_away | replace: '(next)', 'Third'
+      endif
+      if pass_third_tier == true and  pass_second_tier == true
+        assign banner_text = settings.unlock_text | replace: '(tier?)', 'Third'
+      endif
+    endif
+    
+    assign new_total_price_number = new_total_price | plus: 0
+    assign total_gift_box_amount_number = total_gift_box_amount | plus: 0 | times: 1.0
+    assign first_cart_threshold_amount_number = first_cart_threshold_amount | plus: 0 | times: 1.0
+    assign second_cart_threshold_amount_number = second_cart_threshold_amount | plus: 0 | times: 1.0
+    assign third_cart_threshold_amount_number = third_cart_threshold_amount | plus: 0 | times: 1.0
+
+    assign bar_width = new_total_price_number | divided_by: total_gift_box_amount_number | times: 100
+
+    if pass_first_tier == false
+      assign bar_width = new_total_price_number | divided_by: first_cart_threshold_amount_number | times: 100 | divided_by: gift_tier_count
+    else
+      if second_show_gift_box == true and pass_second_tier == false
+        assign rest_new_total_price_number = new_total_price_number | minus: first_cart_threshold_amount_number
+        assign rest_second_cart_threshold_amount_number = second_cart_threshold_amount_number | minus: first_cart_threshold_amount_number
+        assign already_reached_bar = 100 | divided_by: gift_tier_count
+        assign bar_width = rest_new_total_price_number | divided_by: rest_second_cart_threshold_amount_number | times: 100 | divided_by: gift_tier_count | plus: already_reached_bar
+      else
+        if third_show_gift_box == true and pass_third_tier == false
+          assign rest_new_total_price_number = new_total_price_number | minus: second_cart_threshold_amount_number
+          assign rest_third_cart_threshold_amount_number = third_cart_threshold_amount_number | minus: second_cart_threshold_amount_number
+          assign already_reached_bar = 100 | divided_by: gift_tier_count | times: 2
+          assign bar_width = rest_new_total_price_number | divided_by: rest_third_cart_threshold_amount_number | times: 100 | divided_by: gift_tier_count | plus: already_reached_bar
+        endif
+      endif
+    endif
+
+    assign purchased_ring = 0
+    assign purchased_other_main = 0
+    for purchased_product in cart.items
+      if purchased_product.product.metafields.custom.product_type != blank
+        assign purchased_other_main = purchased_other_main | plus: 1
+        assign purchased_main_product_on_cart = purchased_product
+        assign purchased_main_product = purchased_product.product
+        
+        if purchased_product.product.metafields.custom.product_type == "Ring"
+          assign purchased_ring = purchased_ring | plus: 1
+        else
+          assign testvar = "testvar"
+          assign testvar = purchased_product.product.metafields.custom.product_type
+          for product_type in purchased_product.product.metafields.custom.product_type
+            assign testvar = purchased_product.product.metafields.custom.product_type
+            if product_type contains "Ring"
+              assign purchased_ring = purchased_ring | plus: 1
+            endif
+          endfor
+        endif
+
+        if purchased_product.product.metafields.custom.product_type contains "Ring"
+          assign purchased_ring = purchased_ring | plus: 1
+        endif
+      endif
+    endfor
+
+    assign total_main_products = purchased_other_main
+
+    if total_main_products == 1
+      assign will_suggest_upsell = true
+      assign will_suggest_upsell_protection_plan = true
+      assign will_suggest_upsell_protection_plan_product = all_products[purchased_main_product.metafields.custom.premium_protection_product]
+      for property in purchased_main_product_on_cart.properties
+        if property[0] == "Protection Plan"
+          if property[1] == "Yes"
+            assign will_suggest_upsell_protection_plan = false
+          endif
+        endif
+      endfor
+      #if purchased_ring == 1
+        assign will_suggest_upsell_engraving = false
+        for property in purchased_main_product_on_cart.properties
+          if property[0] == "engraving"
+            if property[1] == ""
+              assign will_suggest_upsell_engraving = true
+            endif
+          endif
+        endfor
+      #endif
+      assign will_suggest_upsell_glowstone = true
+      for property in purchased_main_product_on_cart.properties
+        if property[0] == "Glowstone Enhancement"
+          if property[1] == "Yes"
+            assign will_suggest_upsell_glowstone = false
+          endif
+        endif
+      endfor
+    endif
+
+    assign reward_bar_main_color = "#138f7e"
+    assign reward_secondary_color = "rgb(238, 238, 238)"
+  -%}
+  {% comment %} end vaildation gift box {% endcomment %}
+  <div class="upcart-rewards styles_TieredRewards__ UpcartDesignSettings__cartTextColor">
+    <div class="upcart-rewards-message">
+      <p><b>{{ banner_text | replace: '(amount)' }}</b></p>
+    </div>
+    <div
+      class="upcart-rewards-bar-background styles_TieredRewards__progressBar__"
+      style="background-color: rgb(238, 238, 238); border-radius: 50px;"
+    >
+      <div
+        class="upcart-rewards-bar-foreground styles_Rewards__progressBar--progress__"
+        style="background-color: {{ reward_bar_main_color }}; width: {{ bar_width }}%;"
+      ></div>
+    </div>
+    <div class="styles_TieredRewards__tiersContainer__">
+      <div></div>
+      <div class="upcart-rewards-tier styles_TieredRewards__tierCircleAndDescription__ styles_TieredRewards__tierCircleAndDescription--leftOfCenter__">
+        <div
+          class="upcart-rewards-tier-circle styles_TieredRewards__tierCircle__"
+          style="fill: {{ reward_bar_main_color }}; background-color: {% if pass_first_tier == false %}{{ reward_secondary_color }}{% else %}{{ reward_bar_main_color }}{% endif %}; border: 2px solid {{ reward_bar_main_color }};"
+        >
+          <div class="upcart-rewards-tier-icon" style="width: 25px; height: 25px; margin: auto; color: {% if pass_first_tier == false %}{{ reward_bar_main_color }}{% else %}{{ reward_secondary_color }}{% endif %};">
+            {% if settings.reward_bar_first_icon != blank %}
+              <img src="{{ settings.reward_bar_first_icon | img_url: 'master' }}">
+            {% else %}
+              <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 9.5C3 9.03534 3 8.80302 3.03843 8.60982C3.19624 7.81644 3.81644 7.19624 4.60982 7.03843C4.80302 7 5.03534 7 5.5 7H12H18.5C18.9647 7 19.197 7 19.3902 7.03843C20.1836 7.19624 20.8038 7.81644 20.9616 8.60982C21 8.80302 21 9.03534 21 9.5V9.5V9.5C21 9.96466 21 10.197 20.9616 10.3902C20.8038 11.1836 20.1836 11.8038 19.3902 11.9616C19.197 12 18.9647 12 18.5 12H12H5.5C5.03534 12 4.80302 12 4.60982 11.9616C3.81644 11.8038 3.19624 11.1836 3.03843 10.3902C3 10.197 3 9.96466 3 9.5V9.5V9.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M4 12V16C4 17.8856 4 18.8284 4.58579 19.4142C5.17157 20 6.11438 20 8 20H9H15H16C17.8856 20 18.8284 20 19.4142 19.4142C20 18.8284 20 17.8856 20 16V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 7V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11.3753 6.21913L9.3959 3.74487C8.65125 2.81406 7.26102 2.73898 6.41813 3.58187C5.1582 4.8418 6.04662 7 7.82843 7L11 7C11.403 7 11.6271 6.53383 11.3753 6.21913Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.6247 6.21913L14.6041 3.74487C15.3488 2.81406 16.739 2.73898 17.5819 3.58187C18.8418 4.8418 17.9534 7 16.1716 7L13 7C12.597 7 12.3729 6.53383 12.6247 6.21913Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              {% comment %} <svg viewBox="0 0 30 30" fill="currentColor" style="width: 30px; height: 30px; margin: auto; position: relative; top: 1px;">
+                <path d="M12.18 10.79C12.0694 10.7906 11.96 10.7666 11.8598 10.7199C11.7595 10.6733 11.6708 10.605 11.6 10.52L7 5C6.87702 4.8625 6.80902 4.68449 6.80902 4.5C6.80902 4.31552 6.87702 4.13751 7 4L8.82 2.14C8.89109 2.0661 8.97657 2.00757 9.07117 1.96801C9.16577 1.92845 9.26747 1.90871 9.37 1.91H14.89C15.0888 1.91018 15.2795 1.98931 15.42 2.13L17.23 3.93C17.3581 4.06233 17.4338 4.23667 17.443 4.42061C17.4521 4.60454 17.3942 4.78555 17.28 4.93L12.76 10.5C12.6917 10.5885 12.6037 10.6599 12.5031 10.7085C12.4024 10.7571 12.2918 10.7816 12.18 10.78V10.79ZM8.59 4.56L12.17 8.86L15.69 4.52L14.58 3.41H9.69L8.59 4.56Z"/>
+                <path d="M12.14 21.18C10.7295 21.1785 9.35111 20.7593 8.17862 19.9753C7.00613 19.1913 6.09212 18.0775 5.55191 16.7746C5.01171 15.4717 4.8695 14.038 5.14323 12.6543C5.41697 11.2707 6.09439 9.99908 7.09001 9C7.15868 8.92631 7.24148 8.86721 7.33348 8.82622C7.42548 8.78523 7.52479 8.76319 7.62549 8.76141C7.72619 8.75963 7.82622 8.77816 7.91961 8.81588C8.013 8.8536 8.09783 8.90974 8.16905 8.98096C8.24027 9.05218 8.29642 9.13701 8.33414 9.2304C8.37186 9.32379 8.39038 9.42382 8.38861 9.52452C8.38683 9.62523 8.36479 9.72454 8.3238 9.81654C8.2828 9.90854 8.2237 9.99134 8.15001 10.06C7.36462 10.8501 6.83082 11.8551 6.61593 12.9482C6.40104 14.0414 6.5147 15.1737 6.94257 16.2023C7.37044 17.2309 8.09335 18.1097 9.02011 18.728C9.94687 19.3462 11.036 19.6761 12.15 19.6761C13.2641 19.6761 14.3532 19.3462 15.2799 18.728C16.2067 18.1097 16.9296 17.2309 17.3575 16.2023C17.7853 15.1737 17.899 14.0414 17.6841 12.9482C17.4692 11.8551 16.9354 10.8501 16.15 10.06C16.0096 9.91937 15.9307 9.72875 15.9307 9.53C15.9307 9.33125 16.0096 9.14062 16.15 9C16.219 8.92924 16.3014 8.87301 16.3924 8.83461C16.4834 8.79621 16.5812 8.77643 16.68 8.77643C16.7788 8.77643 16.8766 8.79621 16.9676 8.83461C17.0587 8.87301 17.1411 8.92924 17.21 9C18.2091 9.99856 18.8895 11.271 19.1652 12.6564C19.4409 14.0417 19.2995 15.4777 18.7589 16.7827C18.2183 18.0877 17.3027 19.203 16.1281 19.9875C14.9535 20.772 13.5725 21.1905 12.16 21.19L12.14 21.18Z"/>
+              </svg> {% endcomment %}
+            {% endif %}
+          </div>
+        </div>
+        <div class="upcart-rewards-tier-description styles_rewardsDescription__">First Tier</div>
+      </div>
+      {% if second_show_gift_box == true %}
+        <div class="upcart-rewards-tier styles_TieredRewards__tierCircleAndDescription__ styles_TieredRewards__tierCircleAndDescription--leftOfCenter__">
+          <div
+            class="upcart-rewards-tier-circle styles_TieredRewards__tierCircle__"
+            style="fill: {{ reward_bar_main_color }}; background-color: {% if pass_second_tier == false %}{{ reward_secondary_color }}{% else %}{{ reward_bar_main_color }}{% endif %}; border: 2px solid {{ reward_bar_main_color }};"
+          >
+            <div class="upcart-rewards-tier-icon" style="width: 25px; height: 25px; margin: auto; color: {% if pass_second_tier == false %}{{ reward_bar_main_color }}{% else %}{{ reward_secondary_color }}{% endif %};">
+              {% if settings.reward_bar_second_icon != blank %}
+                <img src="{{ settings.reward_bar_second_icon | img_url: 'master' }}">
+              {% else %}
+                <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 9.5C3 9.03534 3 8.80302 3.03843 8.60982C3.19624 7.81644 3.81644 7.19624 4.60982 7.03843C4.80302 7 5.03534 7 5.5 7H12H18.5C18.9647 7 19.197 7 19.3902 7.03843C20.1836 7.19624 20.8038 7.81644 20.9616 8.60982C21 8.80302 21 9.03534 21 9.5V9.5V9.5C21 9.96466 21 10.197 20.9616 10.3902C20.8038 11.1836 20.1836 11.8038 19.3902 11.9616C19.197 12 18.9647 12 18.5 12H12H5.5C5.03534 12 4.80302 12 4.60982 11.9616C3.81644 11.8038 3.19624 11.1836 3.03843 10.3902C3 10.197 3 9.96466 3 9.5V9.5V9.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M4 12V16C4 17.8856 4 18.8284 4.58579 19.4142C5.17157 20 6.11438 20 8 20H9H15H16C17.8856 20 18.8284 20 19.4142 19.4142C20 18.8284 20 17.8856 20 16V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 7V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M11.3753 6.21913L9.3959 3.74487C8.65125 2.81406 7.26102 2.73898 6.41813 3.58187C5.1582 4.8418 6.04662 7 7.82843 7L11 7C11.403 7 11.6271 6.53383 11.3753 6.21913Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12.6247 6.21913L14.6041 3.74487C15.3488 2.81406 16.739 2.73898 17.5819 3.58187C18.8418 4.8418 17.9534 7 16.1716 7L13 7C12.597 7 12.3729 6.53383 12.6247 6.21913Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {% endif %}
+            </div>
+          </div>
+          <div class="upcart-rewards-tier-description styles_rewardsDescription__">Second Tier</div>
+        </div>
+      {% endif %}
+      {% if third_show_gift_box == true %}
+        <div class="upcart-rewards-tier styles_TieredRewards__tierCircleAndDescription__ styles_TieredRewards__tierCircleAndDescription--leftOfCenter__">
+          <div
+            class="upcart-rewards-tier-circle styles_TieredRewards__tierCircle__"
+            style="fill: {{ reward_bar_main_color }}; background-color: {% if pass_third_tier == false %}{{ reward_secondary_color }}{% else %}{{ reward_bar_main_color }}{% endif %}; border: 2px solid {{ reward_bar_main_color }};"
+          >
+            <div class="upcart-rewards-tier-icon" style="width: 25px; height: 25px; margin: auto; color: {% if pass_third_tier == false %}{{ reward_bar_main_color }}{% else %}{{ reward_secondary_color }}{% endif %};">
+              {% if settings.reward_bar_third_icon != blank %}
+                <img src="{{ settings.reward_bar_third_icon | img_url: 'master' }}">
+              {% else %}
+                <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 9.5C3 9.03534 3 8.80302 3.03843 8.60982C3.19624 7.81644 3.81644 7.19624 4.60982 7.03843C4.80302 7 5.03534 7 5.5 7H12H18.5C18.9647 7 19.197 7 19.3902 7.03843C20.1836 7.19624 20.8038 7.81644 20.9616 8.60982C21 8.80302 21 9.03534 21 9.5V9.5V9.5C21 9.96466 21 10.197 20.9616 10.3902C20.8038 11.1836 20.1836 11.8038 19.3902 11.9616C19.197 12 18.9647 12 18.5 12H12H5.5C5.03534 12 4.80302 12 4.60982 11.9616C3.81644 11.8038 3.19624 11.1836 3.03843 10.3902C3 10.197 3 9.96466 3 9.5V9.5V9.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M4 12V16C4 17.8856 4 18.8284 4.58579 19.4142C5.17157 20 6.11438 20 8 20H9H15H16C17.8856 20 18.8284 20 19.4142 19.4142C20 18.8284 20 17.8856 20 16V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 7V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M11.3753 6.21913L9.3959 3.74487C8.65125 2.81406 7.26102 2.73898 6.41813 3.58187C5.1582 4.8418 6.04662 7 7.82843 7L11 7C11.403 7 11.6271 6.53383 11.3753 6.21913Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12.6247 6.21913L14.6041 3.74487C15.3488 2.81406 16.739 2.73898 17.5819 3.58187C18.8418 4.8418 17.9534 7 16.1716 7L13 7C12.597 7 12.3729 6.53383 12.6247 6.21913Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {% endif %}
+            </div>
+          </div>
+          <div class="upcart-rewards-tier-description styles_rewardsDescription__">Third Tier</div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <style>
+    .upsell-section-for-next-tier {
+      {% comment %} display: flex; {% endcomment %}
+      justify-content: space-between;
+      text-align: center;
+      padding: 0.5rem;
+      border: 4px solid #e3e3e3 !important;
+      margin-top: 10px;
+    }
+    .upsell-product-suggest-text span {
+      display: block;
+    }
+    .main-product-title {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .suggested-product-title b {
+      font-size: 14px;
+    }
+    .suggested-product-title span {
+      font-size: 14px;
+    }
+    .d-block {
+      display: block;
+    }
+    .upsell-suggest-product-button {
+      letter-spacing: 2px;
+      margin-top: 7px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+    .custom-engraving-note {
+      width: 100%;
+    }
+    .error-text {
+      font-size: 14px;
+      color: red;
+    }
+    .suggested-product-title b .money {
+      display: inline;
+    }
+  </style>
+  {% comment %} <div>{{ engrave_product | json }}, {{ all_products[settings['product-engraving']].selected_or_first_available_variant.price }}, {{ will_suggest_upsell_engraving }}, {{ purchased_main_product_on_cart.properties | json }}</div> {% endcomment %}
+  {% comment %} <div>{{ purchased_main_product.metafields.custom.product_type }}, {{ purchased_ring }}, {{ testvar }}</div> {% endcomment %}
+  {% comment %} <div>{{ all_products[settings['product-engraving']].selected_or_first_available_variant.price }}, {{ purchased_main_product_on_cart.properties | json }}</div> {% endcomment %}
+  {% comment %} <div>{{ cart.items | json }}</div> {% endcomment %}
+  {% if amount_away_number < all_products[settings['product-glowstone']].selected_or_first_available_variant.price and will_suggest_upsell_glowstone %}
+    <div class="upsell-section-for-next-tier">
+      <div class="upsell-product-suggest-text">
+        <span class="suggested-product-title">
+          {% assign upsell_product_price_money = all_products[settings['product-glowstone']].selected_or_first_available_variant.price | divided_by: 100 %}
+          <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'Glowstone Enhancement' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b>
+        </span>
+      </div>
+      <div class="button-container">
+        <button class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}" data-main-product-id="{{ purchased_main_product_on_cart.id }}" data-product-id="{{ all_products[settings['product-glowstone']].selected_or_first_available_variant.id }}" data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}">Add Glowstone Enhancement</button>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Ensure the DOM is fully loaded before attaching event listeners
+        document.querySelector('.upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}').addEventListener('click', function(e) {
+          e.preventDefault();
+          var mainProductId = this.getAttribute('data-main-product-id');
+          var productId = this.getAttribute('data-product-id');
+          var mainProductCartId = this.getAttribute('data-main-product-cart-id');
+          var customProperties = {{ purchased_main_product_on_cart.properties | json }};
+          var customPropertiesJSON = {}
+          customProperties.forEach(propert => 
+            customPropertiesJSON[propert[0]] = propert[1]
+          );
+          customPropertiesJSON['Glowstone Enhancement'] = 'Yes';
+          fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              items: [{
+                id: productId,
+                quantity: 1
+              }]
+            })
+          })
+          .then(response => response.json())
+          .then(data => {
+            // main product property update
+            fetch('/cart/change.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify({
+                id: mainProductCartId,
+                properties: customPropertiesJSON
+              })
+            }).
+            then(response => response.json())
+            .then(data => {
+              console.log('Main product properties updated:', data);
+              location.reload(); // Reload the page to reflect changes
+            })
+            .catch(error => console.error('Error updating main product properties:', error));
+          })
+          .catch(error => console.error('Error adding product to cart:', error));
+        });
+      });
+    </script>
+  {% else %}
+    {% if amount_away_number < will_suggest_upsell_protection_plan_product.selected_or_first_available_variant.price and will_suggest_upsell_protection_plan == true %}
+      <div class="upsell-section-for-next-tier">
+        <div class="upsell-product-suggest-text">
+          <span class="suggested-product-title">
+            {% assign upsell_product_price_money = will_suggest_upsell_protection_plan_product.selected_or_first_available_variant.price | divided_by: 100 %}
+            <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'Premium Protection Plan' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b>
+          </span>
+        </div>
+        <div class="button-container">
+          <button class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }} upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}-ppp" data-main-product-id="{{ purchased_main_product_on_cart.id }}" data-product-id="{{ will_suggest_upsell_protection_plan_product.selected_or_first_available_variant.id }}" data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}">Add Premium Protection Plan</button>
+        </div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Ensure the DOM is fully loaded before attaching event listeners
+          document.querySelector('.upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}-ppp').addEventListener('click', function(e) {
+            e.preventDefault();
+            var mainProductId = this.getAttribute('data-main-product-id');
+            var productId = this.getAttribute('data-product-id');
+            var mainProductCartId = this.getAttribute('data-main-product-cart-id');
+            var customProperties = {{ purchased_main_product_on_cart.properties | json }};
+            var customPropertiesJSON = {}
+            customProperties.forEach(propert => 
+              customPropertiesJSON[propert[0]] = propert[1]
+            );
+            customPropertiesJSON['Protection Plan'] = "Yes";
+            fetch('/cart/add.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify({
+                items: [{
+                  id: productId,
+                  quantity: 1
+                }]
+              })
+            })
+            .then(response => response.json())
+            .then(data => {
+              // main product property update
+              fetch('/cart/change.js', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                  id: mainProductCartId,
+                  properties: customPropertiesJSON
+                })
+              }).
+              then(response => response.json())
+              .then(data => {
+                console.log('Main product properties updated:', data);
+                location.reload(); // Reload the page to reflect changes
+              })
+              .catch(error => console.error('Error updating main product properties:', error));
+            })
+            .catch(error => console.error('Error adding product to cart:', error));
+          });
+        });
+      </script>
+    {% endif %}
+    {% if amount_away_number < all_products[settings['product-engraving']].selected_or_first_available_variant.price and will_suggest_upsell_engraving == true %}
+      <div class="upsell-section-for-next-tier">
+        <div class="upsell-product-suggest-text">
+          <span class="suggested-product-title">
+            {% assign upsell_product_price_money = all_products[settings['product-engraving']].selected_or_first_available_variant.price | divided_by: 100 %}
+            <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'CUSTOM ENGRAVING' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b>
+          </span>
+        </div>
+        <div class="custom-engraving-input-container">
+          <input type="text" class="custom-engraving-note" placeholder="Enter your engraving text here" />
+          <p class="error-text empty-text hide">Please input engraving text here</p>
+        </div>
+        <div class="button-container">
+          <button class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }} upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}-engraving" data-main-product-id="{{ purchased_main_product_on_cart.id }}" data-product-id="{{ all_products[settings['product-engraving']].selected_or_first_available_variant.id }}" data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}">Add CUSTOM ENGRAVING</button>
+        </div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Ensure the DOM is fully loaded before attaching event listeners
+          document.querySelector('.upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}-engraving').addEventListener('click', function(e) {
+            e.preventDefault();
+            var mainProductId = this.getAttribute('data-main-product-id');
+            var productId = this.getAttribute('data-product-id');
+            var mainProductCartId = this.getAttribute('data-main-product-cart-id');
+            var customProperties = {{ purchased_main_product_on_cart.properties | json }};
+            var customPropertiesJSON = {}
+            customProperties.forEach(propert => 
+              customPropertiesJSON[propert[0]] = propert[1]
+            );
+            const customEngravingNote = document.querySelector('.custom-engraving-note').value;
+            if (customEngravingNote.trim() === '') {
+              document.querySelector('.error-text.empty-text').classList.remove('hide');
+              return;
+            } else {
+              document.querySelector('.error-text.empty-text').classList.add('hide');
+            }
+            customPropertiesJSON['engraving'] = customEngravingNote;
+            fetch('/cart/add.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify({
+                items: [{
+                  id: productId,
+                  quantity: 1
+                }]
+              })
+            })
+            .then(response => response.json())
+            .then(data => {
+              // main product property update
+              fetch('/cart/change.js', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                  id: mainProductCartId,
+                  properties: customPropertiesJSON
+                })
+              }).
+              then(response => response.json())
+              .then(data => {
+                console.log('Main product properties updated:', data);
+                location.reload(); // Reload the page to reflect changes
+              })
+              .catch(error => console.error('Error updating main product properties:', error));
+            })
+            .catch(error => console.error('Error adding product to cart:', error));
+          });
+        });
+      </script>
+    {% endif %}
+  {% endif %}
+{% endif %}
+{% comment %} -------------------------------------------------------- {% endcomment %}
