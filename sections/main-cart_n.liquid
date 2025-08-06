@@ -1,4 +1,8 @@
   {{'cart-item-horizontal-ss.css' | asset_url | stylesheet_tag }}
+  
+  {% comment %} custom style {% endcomment %}
+  <style>
+  </style>
 
   <div data-section-type="cart" class="page-width page-content main-cart-container-ss">
     {%- render 'breadcrumbs_n' -%}
@@ -130,6 +134,13 @@
           {% assign main_item_count = main_item_count | plus: 1 %}
         {% endif %}
       {%- endfor -%}
+      
+      <p class="text-center">
+        <a href="{{ settings.cart_continue_shopping_link }}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-4 h-4" data-lov-id="src/pages/Index.tsx:157:14" data-lov-name="ArrowLeft" data-component-path="src/pages/Index.tsx" data-component-line="157" data-component-file="Index.tsx" data-component-name="ArrowLeft" data-component-content="%7B%22className%22%3A%22w-4%20h-4%22%7D"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+          <span>Continue shopping</span>
+        </a>
+      </p>
       {% if main_item_count > 0 %}
         <h2 class="section-header__title">Your Cart&nbsp;({{ main_item_count }})</h2>
       {% endif %}
@@ -142,7 +153,6 @@
 
           <div class="dgCartUpsell dgCartUpSellWrapper  appear-delay-3" id="cart_gift_wrap"></div>
         {%- endif -%}
-        <p class="text-center"><a href="{{ settings.cart_continue_shopping_link }}">Continue shopping</a></p>
         {% if cart.item_count > 0 %}
           <p class="text-center"><a href="/cart/clear">Clear cart</a></p>
 
@@ -414,7 +424,7 @@
             {%- endfor -%}
 
             {% render 'dg-cart-upsells_n', hide_price: cart_total_exclude_gift %}
-            
+
           </div>
           <div class="cart__page-col">
             {% if main_item_count == 1 %}
