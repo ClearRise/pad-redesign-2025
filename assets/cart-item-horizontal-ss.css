@@ -28,6 +28,7 @@
 .section-header .rte.text-spacing {
   /* display: flex;
   justify-content: flex-end; */
+  color: rgb(123, 139, 157);
 }
 .section-header .rte.text-spacing a::after {
   border-bottom-width: 0px !important;
