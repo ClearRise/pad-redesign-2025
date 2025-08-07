@@ -452,7 +452,7 @@ jQuery(document).ready(function($) {
               alert("firstVariantSelector test ---")
               let firstVariantSelector = {{ first_gift_product_id }};
               if (firstVariantSelector) {
-                alert("firstVariantSelector test {{ first_gift_product_id }}")
+                alert("firstVariantSelector test {{ first_gift_product_id }} {{ first_gift_product.id }}")
                 console.log("firstVariantSelector test")
                 let firstVariantID = firstVariantSelector;
                 await fetch('/cart/change.js', {
