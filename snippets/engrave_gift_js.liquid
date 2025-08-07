@@ -451,7 +451,7 @@ jQuery(document).ready(function($) {
               let firstVariantSelector = {{ first_gift_product_id }};
               if (firstVariantSelector) {
                 {% comment %} alert("firstVariantSelector test {{ first_gift_product_id }} {{ first_gift_product.id }}") {% endcomment %}
-                {% comment %} console.log("firstVariantSelector test")
+                console.log("firstVariantSelector test")
                 let firstVariantID = firstVariantSelector;
                 await fetch('/cart/change.js', {
                   method: 'POST',
@@ -459,10 +459,10 @@ jQuery(document).ready(function($) {
                       'Content-Type': 'application/json',
                   },
                   body: JSON.stringify({
-                        id: id,
+                        id: firstVariantID,
                         quantity: 0
                   })
-                }); {% endcomment %}
+                });
               }
             }
             // await updateCart();
