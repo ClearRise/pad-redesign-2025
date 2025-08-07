@@ -1,3 +1,5 @@
+{% assign first_gift_product = settings['product-handle-1'] %}
+{% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
 <script>
 
   // Tryon
@@ -448,11 +450,11 @@ jQuery(document).ready(function($) {
 
             if (!e.target.classList.contains("upsell-add-to-cart-gift-first")) {
               alert("firstVariantSelector test ---")
-              let firstVariantSelector = document.querySelector(".change-gift-size-options-first");
+              let firstVariantSelector = {{ first_gift_product_id }};
               if (firstVariantSelector) {
                 alert("firstVariantSelector test")
                 console.log("firstVariantSelector test")
-                let firstVariantID = firstVariantSelector.value;
+                let firstVariantID = firstVariantSelector;
                 await fetch('/cart/change.js', {
                   method: 'POST',
                   headers: {
