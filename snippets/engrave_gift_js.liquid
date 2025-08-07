@@ -448,7 +448,7 @@ jQuery(document).ready(function($) {
 
             if (!e.target.classList.contains("upsell-add-to-cart-gift-first")) {
               alert("firstVariantSelector test ---")
-              let firstVariantSelector = {{ first_gift_product_id }};
+              let firstVariantSelector = {{ first_gift_product_id_var }};
               if (firstVariantSelector) {
                 {% comment %} alert("firstVariantSelector test {{ first_gift_product_id }} {{ first_gift_product.id }}") {% endcomment %}
                 console.log("firstVariantSelector test", firstVariantSelector, {{ cart.items | json }});
