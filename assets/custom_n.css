@@ -969,7 +969,7 @@ label span.bold_option_element input{
     align-items: center;
     /* flex-basis: 80%; */
     padding-left: 0px;
-    width: 100%;
+    flex: 1;
   }
   .upsell-product-image {
     width: 100px !important;

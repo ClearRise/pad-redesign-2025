@@ -9267,7 +9267,7 @@ html[dir=rtl] .grid-product__content {
 
 [data-type_product_capitalize=true] .grid-product__title {
   text-transform: uppercase;
-  font-size: calc(var(--typeBaseSize) - 2px);
+  font-size: 14px;
   letter-spacing: 0.1em;
   font-weight: 600;
 }
@@ -9275,7 +9275,7 @@ html[dir=rtl] .grid-product__content {
 @media only screen and (max-width:768px) {
 
   [data-type_product_capitalize=true] .grid-product__title {
-    font-size: calc(var(--typeBaseSize) - 3px)
+    font-size: 12px;
   }
 }
 
@@ -9399,7 +9399,7 @@ html[dir=rtl] .grid-product__content {
 
 .grid-product__price {
   /* font-size: calc(var(--typeBaseSize)*0.85); */
-  font-size: 16px;
+  font-size: 12px;
   letter-spacing: normal;
   color: var(--colorPrice);
   margin-top: 5px;
