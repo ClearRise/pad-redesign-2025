@@ -1,5 +1,3 @@
-{% assign first_gift_product = settings['product-handle-1'] %}
-{% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
 <script>
 
   // Tryon
@@ -461,16 +459,14 @@ jQuery(document).ready(function($) {
                       'Content-Type': 'application/json',
                   },
                   body: JSON.stringify({
-                      items: {
                         id: id,
                         quantity: 0
-                      }
                   })
                 });
               }
             }
             // await updateCart();
-            {% comment %} location.reload(); {% endcomment %}
+            location.reload();
         } catch (error) {
             console.error('Failed to add gift:', error);
         } finally {
