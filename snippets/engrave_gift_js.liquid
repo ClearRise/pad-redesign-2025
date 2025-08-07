@@ -453,14 +453,15 @@ jQuery(document).ready(function($) {
                 {% comment %} alert("firstVariantSelector test {{ first_gift_product_id }} {{ first_gift_product.id }}") {% endcomment %}
                 console.log("firstVariantSelector test", firstVariantSelector, {{ cart.items | json }})
                 let firstVariantID = firstVariantSelector;
-                await fetch('/cart/change.js', {
+                await fetch('/cart/update.js', {
                   method: 'POST',
                   headers: {
                       'Content-Type': 'application/json',
                   },
                   body: JSON.stringify({
-                        id: firstVariantSelector,
-                        quantity: 0
+                        {% comment %} id: firstVariantSelector,
+                        quantity: 0 {% endcomment %}
+                        firstVariantSelector: 0
                   })
                 });
               }
