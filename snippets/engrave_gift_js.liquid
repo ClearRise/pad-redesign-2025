@@ -453,7 +453,7 @@ jQuery(document).ready(function($) {
                 {% comment %} alert("firstVariantSelector test {{ first_gift_product_id }} {{ first_gift_product.id }}") {% endcomment %}
                 console.log("firstVariantSelector test", firstVariantSelector, {{ cart.items | json }});
                 var updates = {};
-                updates[firstVariantID] = 0;
+                updates[firstVariantSelector] = 0;
                 let firstVariantID = firstVariantSelector;
                 await fetch('/cart/update.js', {
                   method: 'POST',
