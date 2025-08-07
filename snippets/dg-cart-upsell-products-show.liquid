@@ -204,6 +204,14 @@
     .suggested-product-title b .money {
       display: inline;
     }
+    @media (min-width: 768px) {
+      .text-box-and-ctas-container {
+        display: flex;
+      }
+      .text-box-and-ctas-container>* {
+        flex: 1;
+      }
+    }
   </style>
   {% if amount_away_number < all_products[settings['product-glowstone']].selected_or_first_available_variant.price and will_suggest_upsell_glowstone %}
     <div class="upsell-section-for-next-tier">
@@ -343,12 +351,14 @@
             <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'CUSTOM ENGRAVING' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b>
           </span>
         </div>
-        <div class="custom-engraving-input-container">
-          <input type="text" class="custom-engraving-note" placeholder="Enter your engraving text here" />
-          <p class="error-text empty-text hide">Please input engraving text here</p>
-        </div>
-        <div class="button-container">
-          <button class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }} upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}-engraving" data-main-product-id="{{ purchased_main_product_on_cart.id }}" data-product-id="{{ all_products[settings['product-engraving']].selected_or_first_available_variant.id }}" data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}">Add CUSTOM ENGRAVING</button>
+        <div class="text-box-and-ctas-container">
+          <div class="custom-engraving-input-container">
+            <input type="text" class="custom-engraving-note" placeholder="Enter your engraving text here" />
+            <p class="error-text empty-text hide">Please input engraving text here</p>
+          </div>
+          <div class="button-container">
+            <button class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }} upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}-engraving" data-main-product-id="{{ purchased_main_product_on_cart.id }}" data-product-id="{{ all_products[settings['product-engraving']].selected_or_first_available_variant.id }}" data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}">Add CUSTOM ENGRAVING</button>
+          </div>
         </div>
       </div>
       <script>
