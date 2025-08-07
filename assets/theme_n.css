@@ -9267,7 +9267,7 @@ html[dir=rtl] .grid-product__content {
 
 [data-type_product_capitalize=true] .grid-product__title {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   font-weight: 600;
 }
