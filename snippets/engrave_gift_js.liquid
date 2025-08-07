@@ -450,11 +450,10 @@ jQuery(document).ready(function($) {
 
             if (!e.target.classList.contains("upsell-add-to-cart-gift-first")) {
               alert("firstVariantSelector test ---")
-              let firstVariantSelector = {{ first_gift_product_id }};
+              let firstVariantSelector = document.querySelector(".change-gift-size-options-first");
               if (firstVariantSelector) {
-                alert("firstVariantSelector test {{ first_gift_product_id }}")
-                console.log("firstVariantSelector test")
-                let firstVariantID = firstVariantSelector;
+                alert("firstVariantSelector test ")
+                let firstVariantID = document.querySelector(".change-gift-size-options-first").value;
                 await fetch('/cart/change.js', {
                   method: 'POST',
                   headers: {
@@ -470,7 +469,7 @@ jQuery(document).ready(function($) {
               }
             }
             // await updateCart();
-            location.reload();
+            {% comment %} location.reload(); {% endcomment %}
         } catch (error) {
             console.error('Failed to add gift:', error);
         } finally {

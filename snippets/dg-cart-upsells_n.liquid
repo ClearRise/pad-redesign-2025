@@ -284,6 +284,23 @@
                 <h5 class="upsell-heading gift_box_title">{{ settings.gift_box_title }}</h5>
               {% endif %}
               
+              <!-- top first selector -->
+              <div class="product-variant-selector product-variant-selector-first {% if first_gift_product.has_only_default_variant %}hide{% endif %}">
+                <select class="change-gift-size-options change-gift-size-options-first">
+                  {% for gift_variant in first_gift_product.variants %}
+                    <option
+                      value="{{ gift_variant.id }}"
+                      {% if gift_variant.id == first_gift_product_id %}
+                        selected
+                      {% endif %}
+                    >
+                      {% comment %} {{ gift_variant.title }} {% endcomment %}
+                      {{ first_gift_product.options[0] }} - {{ gift_variant.option1 }} {% if first_gift_product.options[1] %}, {{ first_gift_product.options[1] }} - {{ gift_variant.option2 }} {% endif %} {% if first_gift_product.options[2] %}, {{ first_gift_product.options[2] }} - {{ gift_variant.option3 }} {% endif %}
+                    </option>
+                  {% endfor %}
+                </select>
+              </div>
+              
               <div class="upsell-collection dgCartUpsellCont gift-products pad_10">
                 {% if settings.product-handle-1 %}
                   {% assign first_gift_product = settings.product-handle-1 %}
