@@ -447,8 +447,10 @@ jQuery(document).ready(function($) {
             }
 
             if (!e.target.classList.contains("upsell-add-to-cart-gift-first")) {
+              alert("firstVariantSelector test ---")
               let firstVariantSelector = document.querySelector(".change-gift-size-options-first");
               if (firstVariantSelector) {
+                alert("firstVariantSelector test")
                 console.log("firstVariantSelector test")
                 let firstVariantID = firstVariantSelector.value;
                 await fetch('/cart/change.js', {
