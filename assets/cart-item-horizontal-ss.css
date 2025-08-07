@@ -5,15 +5,19 @@
 .section-header {
   margin-bottom: 0px !important;
   display: flex;
-  margin-left: -40px;
-  padding-left: 40px;
-  margin-right: -40px;
-  padding-right: 40px;
   border-bottom: 1px solid rgb(123, 139, 157);
   /* padding-top: 10px;
   padding-bottom: 10px; */
   background-color: white;
   margin-bottom: 20px !important;
+}
+@media (min-width: 768px) {
+  .section-header {
+    margin-left: -40px;
+    padding-left: 40px;
+    margin-right: -40px;
+    padding-right: 40px;
+  }
 }
 .section-header>* {
   flex: 1;
