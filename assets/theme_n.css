@@ -11714,7 +11714,7 @@ html[dir=rtl] .background-media-text__text {
 
 .cart__item-name {
   display: block;
-  font-size: 14px;
+  font-size: 14px !important;
   margin-bottom: 4px;
 }
 
