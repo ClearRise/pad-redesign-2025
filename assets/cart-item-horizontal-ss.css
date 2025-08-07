@@ -46,6 +46,7 @@
   margin: 0px !important;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 .section-header .rte.text-spacing * {
   margin: 0px !important

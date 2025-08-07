@@ -967,8 +967,13 @@ label span.bold_option_element input{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-basis: 80%;
+    /* flex-basis: 80%; */
     padding-left: 0px;
+    width: 100%;
+  }
+  .upsell-product-image {
+    width: 100px !important;
+    padding-right: 30px !important
   }
   .upsell-collection .upsell-product .upsell-product-info h3 {
     letter-spacing: initial;
