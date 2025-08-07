@@ -461,10 +461,10 @@ jQuery(document).ready(function($) {
                       'Content-Type': 'application/json',
                   },
                   body: JSON.stringify({
-                      items: [{
-                          id: id,
-                          quantity: 0
-                      }]
+                      items: {
+                        id: id,
+                        quantity: 0
+                      }
                   })
                 });
               }
