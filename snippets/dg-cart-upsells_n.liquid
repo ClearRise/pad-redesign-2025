@@ -17,7 +17,7 @@
       color: black;
       /* border-bottom: 1px solid rgb(196, 196, 196); */
       margin: 0;
-      font-size: 18px;
+      font-size: 14px;
       font-weight: 800;
     }
   
@@ -143,6 +143,14 @@
     border-width: 0px !important;
     background: transparent !important;
   }
+  @media (max-width: 767px) {
+    .gift_box_title {
+        font-size: 12px;
+    }
+    .dgCartUpsell .dci-title {
+        font-size: 12px;
+    }
+}
 </style>
 {% assign upsellCollection = "upsells" %}
 {% assign upsellLimit = "3" -%}
