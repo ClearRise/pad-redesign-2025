@@ -451,7 +451,9 @@ jQuery(document).ready(function($) {
               let firstVariantSelector = {{ first_gift_product_id }};
               if (firstVariantSelector) {
                 {% comment %} alert("firstVariantSelector test {{ first_gift_product_id }} {{ first_gift_product.id }}") {% endcomment %}
-                console.log("firstVariantSelector test", firstVariantSelector, {{ cart.items | json }})
+                console.log("firstVariantSelector test", firstVariantSelector, {{ cart.items | json }});
+                var updates = {};
+                updates[firstVariantID] = 0;
                 let firstVariantID = firstVariantSelector;
                 await fetch('/cart/update.js', {
                   method: 'POST',
@@ -461,7 +463,7 @@ jQuery(document).ready(function($) {
                   body: JSON.stringify({
                         {% comment %} id: firstVariantSelector,
                         quantity: 0 {% endcomment %}
-                        firstVariantSelector: 0
+                        updates
                   })
                 });
               }
