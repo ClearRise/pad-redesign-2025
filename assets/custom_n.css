@@ -773,7 +773,7 @@ label span.bold_option_element input{
  
   .upsell-collection .upsell-product {
     margin: 0.3rem 0;
-    padding: 0.3rem 0.3rem!important;
+    padding: 0 !important;
   }
   .upsell-product-heading {
     margin-top: 10px!important;
