@@ -973,7 +973,7 @@ label span.bold_option_element input{
   }
   .upsell-product-image {
     width: 100px !important;
-    padding-right: 30px !important
+    margin-right: 30px !important
   }
   .upsell-collection .upsell-product .upsell-product-info h3 {
     letter-spacing: initial;
