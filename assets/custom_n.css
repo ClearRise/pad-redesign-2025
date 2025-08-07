@@ -975,6 +975,11 @@ label span.bold_option_element input{
     width: 100px !important;
     margin-right: 30px !important
   }
+  @media (max-width: 767px) {
+    .upsell-product-image {
+      margin-right: 20px !important;
+    }
+  }
   .upsell-collection .upsell-product .upsell-product-info h3 {
     letter-spacing: initial;
     text-transform: uppercase;
