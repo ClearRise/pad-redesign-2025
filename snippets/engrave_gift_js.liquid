@@ -417,7 +417,7 @@ jQuery(document).ready(function($) {
     // const variantSelector = document.querySelector(".change-gift-size-options");
     // Add gift product
     $(document).on('click', '.upsell_button_gtm', async function(e) {
-      alert("ppppp");
+      {% comment %} alert("ppppp"); {% endcomment %}
         e.preventDefault();
         let variantSelector = e.target.classList.contains("upsell-add-to-cart-gift-first") ? document.querySelector(".change-gift-size-options-first") : document.querySelector(".change-gift-size-options-second");
         const id = variantSelector ? variantSelector.value : $(this).attr('data-product-id');
@@ -447,10 +447,10 @@ jQuery(document).ready(function($) {
             }
 
             if (!e.target.classList.contains("upsell-add-to-cart-gift-first")) {
-              alert("firstVariantSelector test ---")
+              {% comment %} alert("firstVariantSelector test ---") {% endcomment %}
               let firstVariantSelector = {{ first_gift_product_id }};
               if (firstVariantSelector) {
-                alert("firstVariantSelector test {{ first_gift_product_id }} {{ first_gift_product.id }}")
+                {% comment %} alert("firstVariantSelector test {{ first_gift_product_id }} {{ first_gift_product.id }}") {% endcomment %}
                 console.log("firstVariantSelector test")
                 let firstVariantID = firstVariantSelector;
                 await fetch('/cart/change.js', {
