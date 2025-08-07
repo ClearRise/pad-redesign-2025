@@ -450,10 +450,11 @@ jQuery(document).ready(function($) {
 
             if (!e.target.classList.contains("upsell-add-to-cart-gift-first")) {
               alert("firstVariantSelector test ---")
-              let firstVariantSelector = document.querySelector(".change-gift-size-options-first");
+              let firstVariantSelector = {{ first_gift_product_id }};
               if (firstVariantSelector) {
-                alert("firstVariantSelector test ")
-                let firstVariantID = document.querySelector(".change-gift-size-options-first").value;
+                alert("firstVariantSelector test {{ first_gift_product_id }}")
+                console.log("firstVariantSelector test")
+                let firstVariantID = firstVariantSelector;
                 await fetch('/cart/change.js', {
                   method: 'POST',
                   headers: {
