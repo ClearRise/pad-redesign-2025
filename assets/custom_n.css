@@ -968,7 +968,7 @@ label span.bold_option_element input{
     justify-content: center;
     align-items: center;
     flex-basis: 80%;
-    padding-left: 10px;
+    padding-left: 0px;
   }
   .upsell-collection .upsell-product .upsell-product-info h3 {
     letter-spacing: initial;
