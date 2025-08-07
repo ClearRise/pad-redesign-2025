@@ -794,6 +794,7 @@ label span.bold_option_element input{
   }
   .upsell-product-image{
     line-height:0px;
+    width: calc(33.33% - 20px) !important;
   }
 
   .gift_box .product-title-link {
