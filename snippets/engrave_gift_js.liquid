@@ -445,6 +445,25 @@ jQuery(document).ready(function($) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
 
+            if (!e.target.classList.contains("upsell-add-to-cart-gift-first")) {
+              let firstVariantSelector = document.querySelector(".change-gift-size-options-first");
+              if (firstVariantSelector) {
+                console.log("firstVariantSelector test")
+                let firstVariantID = firstVariantSelector.value;
+                await fetch('/cart/change.js', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                      items: [{
+                          id: id,
+                          quantity: 0
+                      }]
+                  })
+                });
+              }
+            }
             // await updateCart();
             location.reload();
         } catch (error) {
