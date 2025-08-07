@@ -43,7 +43,9 @@
   color: rgb(123, 139, 157) !important;
 }
 .section-header .rte.text-spacing {
-  margin: 0px !important
+  margin: 0px !important;
+  display: flex;
+  align-items: center;
 }
 .section-header .rte.text-spacing * {
   margin: 0px !important
@@ -138,9 +140,9 @@
 .page-content.main-cart-container-ss {
   padding-top: 0px !important;
 }
-#CartPageForm {
+/* #CartPageForm {
   padding-top: 20px !important;
-}
+} */
 .black_txt {
   font-size: 12px;
 }
