@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <header class="section-header text{% if cart.item_count == 0 %}-center section-header--404 {% else %}-center {% endif %}">
+    <header class="section-header text{% if cart.item_count == 0 %}-center {% else %}-center {% endif %}">
       {% assign intelligems_total = 0 %}
       {% assign cart_total_exclude_gift = 0 %}
       {% for item in cart.items %}
