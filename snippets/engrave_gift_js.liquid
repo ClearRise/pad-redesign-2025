@@ -451,7 +451,7 @@ jQuery(document).ready(function($) {
               let firstVariantSelector = {{ first_gift_product_id }};
               if (firstVariantSelector) {
                 {% comment %} alert("firstVariantSelector test {{ first_gift_product_id }} {{ first_gift_product.id }}") {% endcomment %}
-                console.log("firstVariantSelector test")
+                console.log("firstVariantSelector test", firstVariantSelector, cart.items)
                 let firstVariantID = firstVariantSelector;
                 await fetch('/cart/change.js', {
                   method: 'POST',
