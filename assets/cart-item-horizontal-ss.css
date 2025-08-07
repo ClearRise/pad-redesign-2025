@@ -116,7 +116,7 @@
 }
 .cart-item-price-header-ss {
   text-align: right;
-  min-width: 170px;
+  min-width: 100px;
 }
 .cart__item-name {
   /* color: var(--colorAnnouncement); */

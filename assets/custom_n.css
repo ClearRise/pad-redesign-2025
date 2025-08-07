@@ -1083,8 +1083,8 @@ label span.bold_option_element input{
     border-radius: 0;
     background: #138f7e;
     padding: 0 1.2rem;
-    height: 45px;
-    min-height: 45px;
+    height: 40px;
+    min-height: 40px;
     font-size: 14px;
     font-weight: 600;
     color: white;
