@@ -137,6 +137,9 @@
 .black_txt {
   font-size: 12px;
 }
+.upsell-product-price {
+  font-size: 12px;
+}
 
 @media only screen and (max-width: 767px) {
   .main-cart-container-ss {
