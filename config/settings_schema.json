@@ -1179,11 +1179,11 @@
         "id": "product-handle-1",
         "label": "Gift Product 1"
       },
-      {
-        "type": "product",
-        "id": "product-handle-2",
-        "label": "Gift Product 2"
-      },
+      // {
+      //   "type": "product",
+      //   "id": "product-handle-2",
+      //   "label": "Gift Product 2"
+      // },
       {
         "type": "image_picker",
         "id": "reward_bar_first_icon",
