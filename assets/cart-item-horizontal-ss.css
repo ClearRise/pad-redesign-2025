@@ -13,6 +13,7 @@
   /* padding-top: 10px;
   padding-bottom: 10px; */
   background-color: white;
+  margin-bottom: 20px !important;
 }
 .section-header>* {
   flex: 1;
@@ -40,6 +41,12 @@
 .section-header .rte.text-spacing a {
   border-bottom-width: 0px !important;
   color: rgb(123, 139, 157) !important;
+}
+.section-header .rte.text-spacing {
+  margin: 0px !important
+}
+.section-header .rte.text-spacing * {
+  margin: 0px !important
 }
 .section-header .rte.text-spacing a::after {
   border-bottom-width: 0px !important;
