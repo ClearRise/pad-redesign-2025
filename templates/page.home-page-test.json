@@ -48,8 +48,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/3-2.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_1-2.jpg",
+            "image": "shopify://shop_images/mystery_gift_hero_desktop.png",
+            "image_mobile": "shopify://shop_images/mystery_gift_hero_mobile.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -84,7 +84,7 @@
         "advanced_BTL7At": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "",
             "heading": "GLOWSTONE SERIES",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
@@ -107,7 +107,7 @@
         "advanced_VciUai": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "",
             "heading": "WEDDING   BANDS",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
@@ -130,7 +130,7 @@
         "advanced_AMKHzD": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "",
             "heading": "METEORITE RINGS",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
@@ -153,7 +153,7 @@
         "advanced_Ld8MT9": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
+            "subheading": "",
             "heading": "WOMEN'S BANDS",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
