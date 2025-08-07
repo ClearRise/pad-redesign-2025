@@ -11717,6 +11717,11 @@ html[dir=rtl] .background-media-text__text {
   font-size: 14px !important;
   margin-bottom: 4px;
 }
+@media (max-width: 768px) {
+  .cart__item-name {
+    font-size: 12px !important;
+  }
+}
 
 .cart__item--variants {
   margin-bottom: 10px
