@@ -466,7 +466,7 @@ jQuery(document).ready(function($) {
               }
             }
             // await updateCart();
-            location.reload();
+            {% comment %} location.reload(); {% endcomment %}
         } catch (error) {
             console.error('Failed to add gift:', error);
         } finally {
