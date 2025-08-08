@@ -172,7 +172,7 @@
     margin: 0px;
   }
 }
-.cart__item.d-flex:last-child {
+.cart__item.d-flex:last-of-type {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
