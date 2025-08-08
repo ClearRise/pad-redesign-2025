@@ -240,7 +240,7 @@
   </style>
   {% if true or amount_away_number < all_products[settings['product-glowstone']].selected_or_first_available_variant.price and will_suggest_upsell_glowstone %}
     {% assign upsell_product = all_products[settings['product-glowstone']] %}
-    <div class="upsell-collection dgCartUpsellCont gift-products pad_10">
+    <div class="upsell-collection dgCartUpsellCont gift-products pad_10 mt-3">
       <div class="upsell-product dgCartUpsellInner  border_line mb_10">
         <div class="upsell-product-image">
           {% comment %} {{ upsell_product.featured_image |  }} {% endcomment %}
