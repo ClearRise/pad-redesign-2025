@@ -1,5 +1,14 @@
   {{'cart-item-horizontal-ss.css' | asset_url | stylesheet_tag }}
-  
+  <style>
+    .upcart-rewards.styles_TieredRewards__.UpcartDesignSettings__cartTextColor {
+      padding: 1rem;
+      border: 1px solid rgb(224, 230, 235);
+      border-radius: 5px;
+    }
+    .cart__item {
+      border: 1px solid rgb(224, 230, 235);
+    }
+  </style>
   {% comment %} custom style {% endcomment %}
   <style>
   </style>
@@ -295,7 +304,7 @@
 
     {%- if cart.item_count > 0 -%}
       {% assign main_item_count = 0 %}
-      <form action="{{ routes.cart_url }}" method="post" novalidate data-location="page" id="CartPageForm">
+      <form action="{{ routes.cart_url }}" method="post" novalidate data-location="page" id="CartPageForm" class="page-width">
         <div class="cart__page">
           <div data-products class="cart__page-col">
     
