@@ -190,9 +190,9 @@
     .upsell-suggest-product-button {
       letter-spacing: 2px;
       margin-top: 7px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
+      {% comment %} margin-left: auto;
+      margin-right: auto; {% endcomment %}
+      {% comment %} width: 100%; {% endcomment %}
     }
     .custom-engraving-note {
       width: 100%;
@@ -232,6 +232,10 @@
       .error-text.empty-text {
         margin: 0px !important;
       }
+    }
+    .product-title-link {
+      margin-bottom: 0px !important;
+      font-weight: bold;
     }
   </style>
   {% if true or amount_away_number < all_products[settings['product-glowstone']].selected_or_first_available_variant.price and will_suggest_upsell_glowstone %}
