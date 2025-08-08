@@ -21,7 +21,7 @@
     padding-right: 40px;
   }
 }
-@media (min-width: 1681px) {
+@media (min-width: 1501px) {
   .section-header {
     max-width: 1500px;
     padding-left: 0px;
