@@ -243,6 +243,15 @@
     .margin-top-10px {
       margin-top: 10px !important;
     }
+    .padding-top-0px {
+      padding-top: 10px !important;
+    }
+    .font-size-12px {
+      font-size: 12px !important;
+    }
+    .margin-bottom-0px {
+      margin-bottom: 0px !important;
+    }
     .custom-engraving-note {
       font-size: 12px !important;
       padding: 4px 8px !important;
@@ -358,7 +367,7 @@
               <div class="upsell-product-price">
                 {{ upsell_product.selected_or_first_available_variant.price | money }} <s><span class="money">{{ upsell_product.selected_or_first_available_variant.compare_at_price | money }} </span></s>
               </div>
-              <button class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}-ppp" data-main-product-id="{{ purchased_main_product_on_cart.id }}" data-product-id="{{ all_products[settings['product-glowstone']].selected_or_first_available_variant.id }}" data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}">Add To Cart</button>
+              <button class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }} upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}-ppp" data-main-product-id="{{ purchased_main_product_on_cart.id }}" data-product-id="{{ will_suggest_upsell_protection_plan_product.selected_or_first_available_variant.id }}" data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}">Add To Cart</button>
             </div>
           </div>
         </div>
@@ -452,13 +461,13 @@
             </div>
             <div class="custom-engraving-input-container">
               <input type="text" class="custom-engraving-note" placeholder="Enter your engraving text here" />
-              <p class="error-text empty-text hide">Please input engraving text here</p>
+              <p class="error-text empty-text hide font-size-12px margin-bottom-0px">Please input engraving text here</p>
             </div>
-            <div class="cart__item-sub">
+            <div class="cart__item-sub padding-top-0px">
               <div class="upsell-product-price">
                 {{ upsell_product.selected_or_first_available_variant.price | money }} <s><span class="money">{{ upsell_product.selected_or_first_available_variant.compare_at_price | money }} </span></s>
               </div>
-              <button class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}-engraving" data-main-product-id="{{ purchased_main_product_on_cart.id }}" data-product-id="{{ all_products[settings['product-glowstone']].selected_or_first_available_variant.id }}" data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}">Add To Cart</button>
+              <button class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }} upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}-engraving" data-main-product-id="{{ purchased_main_product_on_cart.id }}" data-product-id="{{ all_products[settings['product-engraving']].selected_or_first_available_variant.id }}" data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}">Add To Cart</button>
             </div>
           </div>
         </div>
