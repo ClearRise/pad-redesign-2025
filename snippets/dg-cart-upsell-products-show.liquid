@@ -235,15 +235,24 @@
     }
   </style>
   {% if amount_away_number < all_products[settings['product-glowstone']].selected_or_first_available_variant.price and will_suggest_upsell_glowstone %}
-    <div class="upsell-section-for-next-tier">
-      <div class="upsell-product-suggest-text">
-        <span class="suggested-product-title">
-          {% assign upsell_product_price_money = all_products[settings['product-glowstone']].selected_or_first_available_variant.price | divided_by: 100 %}
-          <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'Glowstone Enhancement' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b>
-        </span>
-      </div>
-      <div class="button-container">
-        <button class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}" data-main-product-id="{{ purchased_main_product_on_cart.id }}" data-product-id="{{ all_products[settings['product-glowstone']].selected_or_first_available_variant.id }}" data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}">Add Glowstone Enhancement</button>
+    {% assign upsell_product = all_products[settings['product-glowstone']] %}
+    <div class="upsell-section-for-next-tier upsell-product-inner gift-product">
+      <div class="upsell-product dgCartUpsellInner  border_line mb_10">
+        <div class="upsell-product-image">
+          {{ upsell_product.featured_image |  }}
+        </div>
+        <div class="upsell-product-info">
+          <div class="upsell-product-suggest-text">
+            <span class="suggested-product-title">
+              {% assign upsell_product_price_money = all_products[settings['product-glowstone']].selected_or_first_available_variant.price | divided_by: 100 %}
+              {% comment %} <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'Glowstone Enhancement' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b> {% endcomment %}
+              {{ upsell_product.title }}
+            </span>
+          </div>
+          <div class="button-container">
+            <button class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}" data-main-product-id="{{ purchased_main_product_on_cart.id }}" data-product-id="{{ all_products[settings['product-glowstone']].selected_or_first_available_variant.id }}" data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}">Add To Cart</button>
+          </div>
+        </div>
       </div>
     </div>
     <script>

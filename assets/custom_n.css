@@ -798,7 +798,7 @@ label span.bold_option_element input{
   }
 
   .gift_box .product-title-link {
-    margin-bottom: 5px!important;
+    margin-bottom: 0px!important;
   }
   .mb_10{
     margin-bottom: 0px!important;
@@ -973,16 +973,12 @@ label span.bold_option_element input{
     flex: 1;
   }
   .upsell-product-image {
-    width: 100px !important;
+    width: 80px !important;
     margin-right: 30px !important
   }
   @media (max-width: 767px) {
     .upsell-product-image {
       margin-right: 20px !important;
-    }
-    .upsell-product-image{
-      line-height:0px;
-      width: calc(33.33% - 20px) !important;
     }
   }
   .upsell-collection .upsell-product .upsell-product-info h3 {
