@@ -1070,8 +1070,8 @@ label span.bold_option_element input{
       margin-right: 5px;
     }
     .upsell-collection .upsell-product .upsell-product-info .upsell-add-to-cart {
-      padding: 0 0.8rem!important;
-      font-size: 13px!important;
+      /* padding: 0 0.8rem!important;
+      font-size: 13px!important; */
     }    
     .flickity-slider{
       display: flex;
@@ -1091,15 +1091,15 @@ label span.bold_option_element input{
     min-height: 25px;
   }
   .upsell-collection .upsell-product .upsell-product-info .upsell-add-to-cart {
-    border-radius: 0;
-    background: #138f7e;
-    padding: 0 1.2rem;
-    height: 40px;
-    min-height: 40px;
-    font-size: 14px;
+    /* border-radius: 0; */
+    /* background: #138f7e; */
+    /* padding: 0 1.2rem; */
+    /* height: 40px; */
+    /* min-height: 40px; */
+    /* font-size: 14px; */
     font-weight: 600;
     color: white;
-    letter-spacing: 0.1px;
+    /* letter-spacing: 0.1px; */
   }
   .upsell-collection .upsell-product .upsell-product-info .swatch_options + .upsell-add-to-cart {
     margin-top: 0.3rem;
