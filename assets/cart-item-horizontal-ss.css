@@ -178,7 +178,7 @@
 }
 @media only screen and (max-width: 767px) {
   .main-cart-container-ss {
-    background-color: var(--colorBodyDim);
+    /* background-color: var(--colorBodyDim); */
     font-size: 12px;
   }
   .cart__remove a {
