@@ -354,6 +354,23 @@
         "divider": false
       }
     },
+    "175468403886306bac": {
+      "type": "apps",
+      "blocks": {
+        "aftersell_by_rokt_pdp_upsells_BnMjX8": {
+          "type": "shopify://apps/aftersell-by-rokt/blocks/pdp-upsells/509ec35d-0632-4dfc-a105-fa799cd9d149",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "aftersell_by_rokt_pdp_upsells_BnMjX8"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
     "replo_trust_icons_white_backg_AnTLaL": {
       "type": "replo-trust-icons-white-backg",
       "settings": {}
@@ -590,22 +607,6 @@
       },
       "block_order": [
         "judge_me_reviews_review_widget_Q9CVK3"
-      ],
-      "settings": {
-        "full_width": false,
-        "space_around": true
-      }
-    },
-    "175468403886306bac": {
-      "type": "apps",
-      "blocks": {
-        "aftersell_by_rokt_pdp_upsells_BnMjX8": {
-          "type": "shopify://apps/aftersell-by-rokt/blocks/pdp-upsells/509ec35d-0632-4dfc-a105-fa799cd9d149",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "aftersell_by_rokt_pdp_upsells_BnMjX8"
       ],
       "settings": {
         "full_width": false,
