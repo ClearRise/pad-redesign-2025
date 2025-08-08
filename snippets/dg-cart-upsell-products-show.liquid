@@ -234,7 +234,7 @@
       }
     }
   </style>
-  {% if amount_away_number < all_products[settings['product-glowstone']].selected_or_first_available_variant.price and will_suggest_upsell_glowstone %}
+  {% if true or amount_away_number < all_products[settings['product-glowstone']].selected_or_first_available_variant.price and will_suggest_upsell_glowstone %}
     {% assign upsell_product = all_products[settings['product-glowstone']] %}
     <div class="upsell-section-for-next-tier upsell-product-inner gift-product">
       <div class="upsell-product dgCartUpsellInner  border_line mb_10">
