@@ -4,7 +4,6 @@
 }
 .section-header {
   margin-bottom: 0px !important;
-  display: flex;
   border-bottom: 1px solid rgb(123, 139, 157);
   /* padding-top: 10px;
   padding-bottom: 10px; */
@@ -14,6 +13,9 @@
   padding-right: 17px; */
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.section-header>div {
+  display: flex;
 }
 /* @media (min-width: 768px) {
   .section-header {
@@ -124,7 +126,7 @@
 
 .cart-item-header-ss {
   padding: 10px 20px 10px 50px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgb(224, 230, 235);
   color: rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
   font-size: 14px;
