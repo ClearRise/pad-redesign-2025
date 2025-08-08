@@ -67,18 +67,18 @@
               <div class="product-title-link">
                   <strong class="dci-title">{{ first_gift_product.title }}</strong>
               </div>
-         <div class="cart__item-sub">
-           <div class="upsell-product-price aaaaaaaaa">
-                {% if first_gift_product.price == 0 %}
-                  FREE <s>{{first_gift_product.compare_at_price | money }}</s>
-                {% else %}
-                  {{ first_gift_product.price | money_without_trailing_zeros }}
-                {% endif %}
-            </div>
-      <button {% if first_product_found == false %}data-remove_var="{{ first_gift_product_id }}"{% endif %} data-product-id="{{ first_gift_product_id }}" class="button btn d-block upsell-suggest-product-button {% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">{% if first_product_found == false %}{{ already_added }}{% else %}{{ upsellAtc }}{% endif %}</button>
+              <div class="cart__item-sub">
+                <div class="upsell-product-price aaaaaaaaa">
+                      {% if first_gift_product.price == 0 %}
+                        FREE <s>{{first_gift_product.compare_at_price | money }}</s>
+                      {% else %}
+                        {{ first_gift_product.price | money_without_trailing_zeros }}
+                      {% endif %}
+                  </div>
               
                </div>    
      </div>
+     <button {% if first_product_found == false %}data-remove_var="{{ first_gift_product_id }}"{% endif %} data-product-id="{{ first_gift_product_id }}" class="button btn d-block upsell-suggest-product-button {% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">{% if first_product_found == false %}{{ already_added }}{% else %}{{ upsellAtc }}{% endif %}</button>
         </div>
       </div>
     {% endif %}
@@ -110,9 +110,9 @@
                   {{ second_gift_product.price | money_without_trailing_zeros }}
                 {% endif %}
             </div>
-              <button {% if second_product_found == false %}data-remove_var="{{ second_gift_product_id }}"{% endif %} data-product-id="{{ second_gift_product_id }}" class="upsell-add-to-cart-gift-second {% if second_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">{% if second_product_found == false %}{{ already_added }}{% else %}{{ upsellAtc }}{% endif %}</button>
                     </div>     
           </div>
+          <button {% if second_product_found == false %}data-remove_var="{{ second_gift_product_id }}"{% endif %} data-product-id="{{ second_gift_product_id }}" class="upsell-add-to-cart-gift-second {% if second_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">{% if second_product_found == false %}{{ already_added }}{% else %}{{ upsellAtc }}{% endif %}</button>
         </div>
       </div>
     {% endif %}
