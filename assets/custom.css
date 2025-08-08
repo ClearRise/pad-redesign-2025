@@ -1079,7 +1079,7 @@ label span.bold_option_element input{
     min-height: 25px;
   }
   .upsell-collection .upsell-product .upsell-product-info .upsell-add-to-cart {
-    border-radius: 0;
+    /* border-radius: 0;
     background: #138f7e;
     padding: 0 1.2rem;
     height: 45px;
@@ -1087,7 +1087,7 @@ label span.bold_option_element input{
     font-size: 14px;
     font-weight: 600;
     color: white;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.1px; */
   }
   .upsell-collection .upsell-product .upsell-product-info .swatch_options + .upsell-add-to-cart {
     margin-top: 0.3rem;

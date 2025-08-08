@@ -1147,8 +1147,8 @@ label span.bold_option_element input{
       padding: 0 3rem !important;
     }
    .upsell-collection .upsell-product .upsell-product-info .upsell-add-to-cart{
-      height: 37px;
-      min-height: 37px;
+      /* height: 37px;
+      min-height: 37px; */
     }
   }
   .upsell-collection .upsell-checkout .subtotal .text {
