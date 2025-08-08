@@ -243,14 +243,17 @@
           <img class="dci-image" src="{{ upsell_product.featured_image | img_url: '100x100' }}" alt="{{ upsell_product.title | escape }}">
         </div>
         <div class="upsell-product-info">
-          <div class="upsell-product-suggest-text">
-            <span class="suggested-product-title">
+          <div class="upsell-product-suggest-text product-title-link">
+            <span class="suggested-product-title ">
               {% assign upsell_product_price_money = all_products[settings['product-glowstone']].selected_or_first_available_variant.price | divided_by: 100 %}
               {% comment %} <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'Glowstone Enhancement' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b> {% endcomment %}
               {{ upsell_product.title }}
             </span>
           </div>
-          <div class="button-container">
+          <div class="cart__item-sub">
+            <div class="upsell-product-price aaaaaaaaa">
+              {{ upsell_product.selected_or_first_available_variant.price | money }} <s><span class="money">{{ upsell_product.selected_or_first_available_variant.compare_at_price | money }} </span></s>
+            </div>
             <button class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}" data-main-product-id="{{ purchased_main_product_on_cart.id }}" data-product-id="{{ all_products[settings['product-glowstone']].selected_or_first_available_variant.id }}" data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}">Add To Cart</button>
           </div>
         </div>
