@@ -595,11 +595,28 @@
         "full_width": false,
         "space_around": true
       }
+    },
+    "175468403886306bac": {
+      "type": "apps",
+      "blocks": {
+        "aftersell_by_rokt_pdp_upsells_BnMjX8": {
+          "type": "shopify://apps/aftersell-by-rokt/blocks/pdp-upsells/509ec35d-0632-4dfc-a105-fa799cd9d149",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "aftersell_by_rokt_pdp_upsells_BnMjX8"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
     "main",
     "rich_text_zd3AyU",
+    "175468403886306bac",
     "replo_trust_icons_white_backg_AnTLaL",
     "promo_grid_QUweUP",
     "product_img_with_txt",
