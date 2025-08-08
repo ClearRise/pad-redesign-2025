@@ -436,7 +436,12 @@
             {% comment %} {{ upsell_product.featured_image |  }} {% endcomment %}
             <img class="dci-image" src="{{ upsell_product.featured_image | img_url: '100x100' }}" alt="{{ upsell_product.title | escape }}">
           </div>
+          
           <div class="upsell-product-info">
+            <div class="custom-engraving-input-container">
+              <input type="text" class="custom-engraving-note" placeholder="Enter your engraving text here" />
+              <p class="error-text empty-text hide">Please input engraving text here</p>
+            </div>
             <div class="upsell-product-suggest-text product-title-link">
               <span class="suggested-product-title ">
                 {% assign upsell_product_price_money = all_products[settings['product-glowstone']].selected_or_first_available_variant.price | divided_by: 100 %}
