@@ -185,7 +185,7 @@
                                         <p class="description">
                                             {{ first_gift_product.description | truncate: 100, ". . . " }}
                                         </p>
-                                        <button {% if first_product_found == false %} disabled {% else %} data-remove_var="{{ second_gift_product_id }}" {% endif %} data-product-id="{{ first_gift_product_id }}" class="{% if second_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">
+                                        <button {% if first_product_found == false %} disabled {% else %} data-remove_var="{{ second_gift_product_id }}" {% endif %} data-product-id="{{ first_gift_product_id }}" class="{% if second_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart button btn d-block upsell-suggest-product-button">
                                             {% if first_product_found == false %}
                                                 {{ already_added }}
                                             {% else %}
@@ -224,7 +224,7 @@
                                             <p class="description">
                                                 {{ second_gift_product.description | truncate: 100, ". . . " }}
                                             </p>
-                                            <button {% if second_product_found == false %} disabled {% else %} data-remove_var="{{ first_gift_product_id }}" {% endif %} data-product-id="{{ second_gift_product_id }}" class="{% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">
+                                            <button {% if second_product_found == false %} disabled {% else %} data-remove_var="{{ first_gift_product_id }}" {% endif %} data-product-id="{{ second_gift_product_id }}" class="{% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart button btn d-block upsell-suggest-product-button">
                                                 {% if second_product_found == false %}
                                                     {{ already_added }}
                                                 {% else %}
