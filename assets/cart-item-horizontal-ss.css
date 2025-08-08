@@ -167,7 +167,15 @@
 .upsell-product-price {
   font-size: 12px;
 }
-
+@media (min-width: 768px) {
+  .js-qty__wrapper {
+    margin: 0px;
+  }
+}
+.cart__item.d-flex:last-child {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
 @media only screen and (max-width: 767px) {
   .main-cart-container-ss {
     background-color: var(--colorBodyDim);
