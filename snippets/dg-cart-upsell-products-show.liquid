@@ -239,7 +239,8 @@
     <div class="upsell-section-for-next-tier upsell-product-inner gift-product">
       <div class="upsell-product dgCartUpsellInner  border_line mb_10">
         <div class="upsell-product-image">
-          {{ upsell_product.featured_image |  }}
+          {% comment %} {{ upsell_product.featured_image |  }} {% endcomment %}
+          <img class="dci-image" src="{{ upsell_product.featured_image | img_url: '100x100' }}" alt="{{ upsell_product.title | escape }}">
         </div>
         <div class="upsell-product-info">
           <div class="upsell-product-suggest-text">
