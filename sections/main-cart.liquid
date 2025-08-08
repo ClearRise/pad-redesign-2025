@@ -1,3 +1,11 @@
+<style>
+  .upcart-rewards.styles_TieredRewards__.UpcartDesignSettings__cartTextColor {
+    padding: 1rem;
+    border: 1px solid rgb(224, 230, 235);
+    border-radius: 5px;
+  }
+</style>
+
 {% assign last_added = cart.items.first %}
 {% assign last_added_product = last_added.product %}
 {% assign is_test_product = false %}
@@ -180,7 +188,7 @@
 
     {%- if cart.item_count > 0 -%}
       {% assign main_item_count = 0 %}
-      <form action="{{ routes.cart_url }}" method="post" novalidate data-location="page" id="CartPageForm">
+      <form action="{{ routes.cart_url }}" method="post" novalidate data-location="page" id="CartPageForm" class="page-width">
         <div class="cart__page">
           <div data-products class="cart__page-col">
             {% assign intelligems_total = 0 %}

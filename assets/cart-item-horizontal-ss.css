@@ -27,7 +27,7 @@
     padding-right: 10px;
   }
 } */
-.section-header>* {
+.section-header>div>* {
   flex: 1;
 }
 .section-header .continue-shopping-label {
@@ -87,7 +87,7 @@
 .cart__item {
   margin-bottom: 0;
   padding: 20px 20px 20px 10px;
-  background-color: var(--colorBodyDim);
+  /* background-color: var(--colorBodyDim); */
 }
 .cart__remove a {
   padding: 7px;
