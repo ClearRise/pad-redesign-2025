@@ -66,7 +66,7 @@
                   {{ first_gift_product.price | money_without_trailing_zeros }}
                 {% endif %}
             </div>
-              <button data-product-id="{{ first_gift_product_id }}" class="upsell_button_gtm upsell-add-to-cart">{% if first_product_found == false %} Added to Cart! {% else %} {{ upsellAtc }} {% endif %}</button>
+              <button data-product-id="{{ first_gift_product_id }}" class="button btn d-block upsell-suggest-product-button upsell_button_gtm upsell-add-to-cart">{% if first_product_found == false %} Added to Cart! {% else %} {{ upsellAtc }} {% endif %}</button>
          </div>    
      </div>
         </div>
