@@ -780,7 +780,8 @@ label span.bold_option_element input{
     padding-top: 10px!important;
   }
   .dgCartUpsell {
-      margin-bottom: 0px!important;
+      margin-bottom: 0px !important;
+      margin-bottom: 20px !important;
   }  
   .cart__item-row {
       margin-bottom: 10px;
