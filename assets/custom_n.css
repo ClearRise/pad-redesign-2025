@@ -918,6 +918,7 @@ label span.bold_option_element input{
     margin: 0.5rem 0;
     padding: 0.7rem 0.5rem;
     width: 100% !important;
+    margin-bottom: 0px !important;
   }
   .product-title-link{
     margin-bottom: 5px;
