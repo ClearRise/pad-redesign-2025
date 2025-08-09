@@ -572,26 +572,26 @@
                       <div class="upsell-product-price aaaaaaaaa">
                         FREE <s>{{ first_gift_product.compare_at_price | money_without_trailing_zeros }}</s>
                       </div>
-                      <button
-                        {% if first_product_found == false %}
-                          data-remove_var="{{ first_gift_product_id }}"
-                        {% endif %}
-                        data-product-id="{{ first_gift_product_id }}"
-                        class="button btn d-block upsell-suggest-product-button {% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart upsell-add-to-cart-gift upsell-add-to-cart-gift-first"
-                        {% if first_gift_product.selected_or_first_available_variant.available == false %}
-                          disabled
-                        {% endif %}
-                      >
-                        {% if first_product_found == false -%}
-                          {{- already_added }}
-                        {% elsif first_gift_product.selected_or_first_available_variant.available == false -%}
-                          SOLD OUT
-                        {%- else -%}
-                          {{- upsellAtc -}}
-                        {%- endif %}
-                      </button>
                     </div>
                   </div>
+                  <button
+                    {% if first_product_found == false %}
+                      data-remove_var="{{ first_gift_product_id }}"
+                    {% endif %}
+                    data-product-id="{{ first_gift_product_id }}"
+                    class="button btn d-block upsell-suggest-product-button {% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart upsell-add-to-cart-gift upsell-add-to-cart-gift-first"
+                    {% if first_gift_product.selected_or_first_available_variant.available == false %}
+                      disabled
+                    {% endif %}
+                  >
+                    {% if first_product_found == false -%}
+                      {{- already_added }}
+                    {% elsif first_gift_product.selected_or_first_available_variant.available == false -%}
+                      SOLD OUT
+                    {%- else -%}
+                      {{- upsellAtc -}}
+                    {%- endif %}
+                  </button>
                 </div>
               </div>
             {% endif %}
