@@ -781,7 +781,7 @@ label span.bold_option_element input{
   }
   .dgCartUpsell {
       margin-bottom: 0px !important;
-      margin-bottom: 20px !important;
+      margin-top: 20px !important;
   }  
   .cart__item-row {
       margin-bottom: 10px;
