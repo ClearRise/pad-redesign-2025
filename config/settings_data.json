@@ -195,10 +195,9 @@
           },
           "announcement_BNdmQX": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "PRIME DAY LIMITED OFFER",
-              "link_text": "Buy One Get One Free + Free Gift On Orders $300+",
+              "text": "",
+              "link_text": "Orders $195+ Get a FREE Mystery Gift & $50 for Your Next Purchase",
               "link": "shopify://collections/all-products-new"
             }
           }
