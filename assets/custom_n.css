@@ -20,6 +20,13 @@ h2{
   flex-direction: column;
 }
 
+@media (max-width: 768px) {
+  .cart__item-sub{
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
 img.h_auto[data-sizes=auto]{
   height:auto;
 }
@@ -982,6 +989,10 @@ label span.bold_option_element input{
   @media (max-width: 767px) {
     .upsell-product-image {
       /* margin-right: 20px !important; */
+    }
+    .upsell-collection .upsell-product .upsell-product-info {
+      padding-left: 10px;
+      align-items: flex-start;
     }
   }
   .upsell-collection .upsell-product .upsell-product-info h3 {
