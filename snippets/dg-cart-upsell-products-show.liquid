@@ -282,7 +282,7 @@
     }
     @media (min-width: 768px) {
       .price-and-button-container {
-        flex-direction: row !important;
+        flex-direction: column !important;
       }
     }
   </style>
@@ -303,7 +303,7 @@
               {{ upsell_product.title }}
             </span>
           </div>
-          <div class="cart__item-sub">
+          <div class="cart__item-sub price-and-button-container">
             <div class="upsell-product-price aaaaaaaaa">
               {{ upsell_product.selected_or_first_available_variant.price | money }} <s><span class="money">{% if upsell_product.selected_or_first_available_variant.price != upsell_product.selected_or_first_available_variant.compare_at_price %}{% if upsell_product.selected_or_first_available_variant.price != upsell_product.selected_or_first_available_variant.compare_at_price %}{{ upsell_product.selected_or_first_available_variant.compare_at_price | money }}{% endif %}{% endif %} </span></s>
             </div>
@@ -393,7 +393,7 @@
                 {{ upsell_product.title }}
               </span>
             </div>
-            <div class="cart__item-sub">
+            <div class="cart__item-sub price-and-button-container">
               <div class="upsell-product-price">
                 {{ upsell_product.selected_or_first_available_variant.price | money }} <s><span class="money">{% if upsell_product.selected_or_first_available_variant.price != upsell_product.selected_or_first_available_variant.compare_at_price %}{{ upsell_product.selected_or_first_available_variant.compare_at_price | money }}{% endif %} </span></s>
               </div>
