@@ -164,6 +164,7 @@ $(document).ready(function () {
   productFormSubmit.on("click", function (event) {
     $('.add-to-cart-loader').show();
     event.preventDefault();
+    event.target.disabled = true;
 
     // Tryon
     // add the tryon input
