@@ -164,8 +164,9 @@ $(document).ready(function () {
   productFormSubmit.on("click", function (event) {
     $('.add-to-cart-loader').show();
     event.preventDefault();
-    console.log("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP -- kkkk");
-    return;
+    event.target.disabled = true;
+    {% comment %} console.log("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP -- kkkk");
+    return; {% endcomment %}
 
     // Tryon
     // add the tryon input
