@@ -2934,6 +2934,7 @@ document.addEventListener('DOMContentLoaded', tryonHandlingItem);
 
         evt.preventDefault();
         console.log("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP");
+        return;
 
         if (status.loading) {
           return;
