@@ -414,6 +414,9 @@
             {% if main_item_count == 1 %}
               <p class="right" style="color:red;">{{ section.settings.text_2 }}</p>
             {% endif %}
+            {% if section.settings.show_subtotal_certain_amount == true and cart.total_price > section.settings.subtotal_certain_amount %}
+              <p class="right" style="color:red;">{{ section.settings.text_3 }}</p>
+            {% endif %}
             {% if section.settings.show_entry != false %}
               {% assign total_in_dollars = cart.total_price | divided_by: 100 %}
               <input type="hidden" id="_multiplier" value="{{ section.settings.multiplier }}">
@@ -525,6 +528,26 @@
       "id": "text_2",
       "label": "Text when one item",
       "default": "Add another item to your cart and get the cheaper one for Free"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_subtotal_certain_amount",
+      "label": "Enable Subtotal Amount for Text",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "subtotal_certain_amount",
+      "label": "Subtotal Amount for Text",
+      "min": 100,
+      "max": 1000,
+      "step": 10,
+      "default": 500
+    },
+    {
+      "type": "textarea",
+      "id": "text_3",
+      "label": "Text when subtotal is a certain amount",
     },
     {
       "type": "header",
