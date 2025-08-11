@@ -264,6 +264,11 @@
       display: flex;
       gap: 20px;
     }
+    @media (max-width: 767px) {
+      .upsells-container {
+        flex-direction: column;
+      }
+    }
   </style>
   <div class="upsells-container">
   {% if amount_away_number < all_products[settings['product-glowstone']].selected_or_first_available_variant.price and will_suggest_upsell_glowstone %}
