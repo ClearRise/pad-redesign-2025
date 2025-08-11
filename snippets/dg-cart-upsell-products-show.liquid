@@ -258,7 +258,11 @@
       margin-top: 10px !important;
       max-wdith: 600px !important;
     }
+    .upsells-container {
+      display: flex;
+    }
   </style>
+  <div class="upsells-container">
   {% if amount_away_number < all_products[settings['product-glowstone']].selected_or_first_available_variant.price and will_suggest_upsell_glowstone %}
     {% assign upsell_product = all_products[settings['product-glowstone']] %}
     <div class="upsell-collection dgCartUpsellCont gift-products pad_10 margin-top-10px">
@@ -535,5 +539,6 @@
       </script>
     {% endif %}
   {% comment %} {% endif %} {% endcomment %}
+  </div>
 {% endif %}
 {% comment %} -------------------------------------------------------- {% endcomment %}
