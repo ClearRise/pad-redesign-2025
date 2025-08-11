@@ -63,6 +63,9 @@
       "settings": {
         "text_1": "",
         "text_2": "",
+        "show_subtotal_certain_amount": true,
+        "subtotal_certain_amount": 190,
+        "text_3": "Orders $195+ will receive a $50 Gift Card sent to their email within ~24 hours of initial order confirmation.",
         "show_entry": false,
         "text_entry": "Total Entries with Purchase:",
         "multiplier": "2",
