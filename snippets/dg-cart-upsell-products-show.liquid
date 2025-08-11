@@ -336,7 +336,8 @@
         });
       });
     </script>
-  {% else %}
+  {% endif %}
+  {% comment %} {% else %} {% endcomment %}
     {% if amount_away_number < will_suggest_upsell_protection_plan_product.selected_or_first_available_variant.price and will_suggest_upsell_protection_plan == true %}
       {% comment %} <div class="upsell-section-for-next-tier">
         <div class="upsell-product-suggest-text">
@@ -533,6 +534,6 @@
         });
       </script>
     {% endif %}
-  {% endif %}
+  {% comment %} {% endif %} {% endcomment %}
 {% endif %}
 {% comment %} -------------------------------------------------------- {% endcomment %}
