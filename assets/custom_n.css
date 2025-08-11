@@ -17,7 +17,6 @@ h2{
 
 .cart__item-sub{
   padding-top: 10px;
-  flex-direction: column;
 }
 
 @media (max-width: 768px) {

@@ -280,6 +280,11 @@
         margin-top: 10px !important;
       }
     }
+    @media (min-width: 768px) {
+      .price-and-button-container {
+        flex-direction: row !important;
+      }
+    }
   </style>
   <div class="upsells-container">
   {% if amount_away_number < all_products[settings['product-glowstone']].selected_or_first_available_variant.price and will_suggest_upsell_glowstone %}
@@ -488,7 +493,7 @@
               <input type="text" class="custom-engraving-note" placeholder="Enter your engraving text here" />
               <p class="error-text empty-text hide font-size-12px margin-bottom-0px">Please input engraving text here</p>
             </div>
-            <div class="cart__item-sub padding-top-0px">
+            <div class="cart__item-sub padding-top-0px price-and-button-container">
               <div class="upsell-product-price">
                 {{ upsell_product.selected_or_first_available_variant.price | money }} <s><span class="money">{% if upsell_product.selected_or_first_available_variant.price != upsell_product.selected_or_first_available_variant.compare_at_price %}{{ upsell_product.selected_or_first_available_variant.compare_at_price | money }}{% endif %} </span></s>
               </div>
