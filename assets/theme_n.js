@@ -2933,8 +2933,6 @@ document.addEventListener('DOMContentLoaded', tryonHandlingItem);
         loader.style.display = 'block';
 
         evt.preventDefault();
-        console.log("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP");
-        return;
 
         if (status.loading) {
           return;
