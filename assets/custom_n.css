@@ -966,15 +966,14 @@ label span.bold_option_element input{
     font-family: "HelveticaNeue Regular", Roboto, sans-serif;
   }
   .upsell-collection .upsell-product .upsell-product-info {
-/*     display: flex; */
-    display: block;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* flex-basis: 80%; */
-    padding-left: 0px;
+    padding-left: 0;
     flex: 1;
     width: 100%;
+    align-items: stretch;
   }
   .upsell-product-image {
     width: 80px !important;
