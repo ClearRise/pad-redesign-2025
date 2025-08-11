@@ -127,7 +127,7 @@ $(document).ready(function () {
   productFormSubmit.on("click", function (event) {
     $('.add-to-cart-loader').show();
     event.preventDefault();
-    event.target.disabled = true;
+    {% comment %} event.target.disabled = true; {% endcomment %}
 
     CheckProtectField(); // Check both protection fields
     let engravingValue = engravingInput.val();
