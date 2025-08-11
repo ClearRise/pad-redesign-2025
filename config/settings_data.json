@@ -156,10 +156,9 @@
         "blocks": {
           "announcement_xVJyfX": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "",
-              "link_text": "Buy One Get One Free",
+              "link_text": "Orders $195+ Get a FREE Mystery Gift & $50 for Your Next Purchase",
               "link": "shopify://collections/all-products-new"
             }
           },
