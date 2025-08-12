@@ -44,7 +44,7 @@
     {% if first_product_found == false or second_product_found == false %}
       <h5 class="upsell-heading gift_box_title">Gift will be added at checkout screen</h5>
     {% else %}
-      <h5 class="upsell-heading gift_box_title">{{ settings.gift_box_title_second }}</h5>
+      <h5 class="upsell-heading gift_box_title">{{ settings.gift_box_title_second | default: "Free Gift Offer" }}</h5>
     {% endif %}
 
     <div class="upsell-collection dgCartUpsellCont gift-products pad_10">
