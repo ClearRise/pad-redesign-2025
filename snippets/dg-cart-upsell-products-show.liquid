@@ -269,6 +269,16 @@
       display: flex;
       gap: 20px;
     }
+    .upsells-header-container * {
+      text-align: center;
+      color: rgb(123, 139, 157);
+    }
+    .upsells-variant-text {
+      font-size: 14px;
+    }
+    .upsells-text {
+      font-size: 12px;
+    }
     @media (max-width: 767px) {
       .upsells-container {
         flex-direction: column;
@@ -287,13 +297,13 @@
       }
     }
   </style>
-  
-  <div class="upsells-container">
 
   <div class="upsells-header-container">
     <div class="upsells-variant-text">Add {{ amount_away }} more to unlock your next reward</div>
     <div class="upsells-text">Choose from these premium selections</div>
   </div>
+  
+  <div class="upsells-container">
   {% if amount_away_number < all_products[settings['product-glowstone']].selected_or_first_available_variant.price and will_suggest_upsell_glowstone %}
     {% assign upsell_product = all_products[settings['product-glowstone']] %}
     <div class="upsell-collection dgCartUpsellCont gift-products margin-top-10px">
