@@ -211,7 +211,7 @@
     grid-template-rows: repeat(3, 1fr);
     grid-template-rows: repeat(2, minmax(40px, auto));
     grid-template-columns: 33% 33% 33%;
-    padding: 0px;
+    padding: 10px !important;
     padding-bottom: 10px;
     border-color: var(--colorDrawerTextDark);
   }
