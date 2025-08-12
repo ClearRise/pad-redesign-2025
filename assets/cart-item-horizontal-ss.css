@@ -14,6 +14,12 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+@media (max-width: 767px) {
+  .section-header {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
 .section-header>div {
   display: flex;
 }
@@ -223,7 +229,7 @@
     align-items: flex-start;
   }
   .main-cart-container-ss .section-header {
-    margin-top: 10px;
+    margin-top: 3px;
     margin-bottom: 10px;
   }
   .main-cart-container-ss .section-header .section-header__title {
