@@ -156,6 +156,7 @@
         "blocks": {
           "announcement_xVJyfX": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "",
               "link_text": "Orders $195+ Get a FREE Mystery Gift & $50 for Your Next Purchase",
