@@ -53,6 +53,11 @@
     padding-left: {{ section.settings.gutter_size }}px !important;
     padding-right: 0;
   } {% endcomment %}
+  @media (min-width: 769px) {
+    .flex-grid__item {
+      height: {{ section.settings.block_height_desktop }}vw !important;
+    }
+  }
   @media only screen and (max-width: 768px) {
     {% comment %} .flex-grid__item {
       padding-top: {{ section.settings.gutter_size | divided_by: 2 }}px !important;
@@ -66,6 +71,9 @@
       padding-left: 0 !important;
       padding-right: 0 !important;
     } {% endcomment %}
+    .flex-grid__item {
+      height: {{ section.settings.block_height_mobile }}vw !important;
+    }
     .promo-grid {
       padding: 10px;
     }
