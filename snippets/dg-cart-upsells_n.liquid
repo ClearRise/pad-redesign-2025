@@ -224,15 +224,6 @@
 {% assign upsellAtc = 'Add to cart' %}
 
 <div class="dgCartUpsell dgCartUpSellWrapper appear-delay-3" id="cart_gift_wrap">
-  <!--
-    <div class="overlay" style="display:none;">
-      <div class="overlay__inner">
-        <div class="overlay__content">
-          <span class="spinner"></span>
-        </div>
-      </div>
-    </div>
-  -->
 
   {% assign FirstTierAmountRaw = settings.cart_threshold_amount | times: 100 %}
   {% assign SecondTierMinRaw = 100000000000 %}
@@ -677,6 +668,156 @@
     {% if settings.third_show_gift_box and new_total_price >= ThirdTierAmountRaw %}
       {% render 'thirdtiergift' %}
     {% endif %}
+
+    {% comment %}
+      Smart gift removal based on cart level and tier logic
+    {% endcomment %}
+    
+    {% assign cart_items = cart.items | map: 'id' %}
+    {% assign cart_total = cart.total_price %}
+    
+    {% comment %} Define tier thresholds {% endcomment %}
+    {% assign first_tier_threshold = settings.first_gift_amount | times: 100 %}
+    {% assign second_tier_threshold = settings.second_gift_amount | times: 100 %}
+    {% assign third_tier_threshold = settings.third_gift_amount | times: 100 %}
+    
+    {% comment %} Get all gift product IDs {% endcomment %}
+    {% assign first_tier_product_1_id = settings['product-handle-1'].selected_or_first_available_variant.id %}
+    {% assign first_tier_product_2_id = settings['product-handle-2'].selected_or_first_available_variant.id %}
+    {% assign second_tier_product_1_id = settings['second_product-handle-1'].selected_or_first_available_variant.id %}
+    {% assign second_tier_product_2_id = settings['second_product-handle-2'].selected_or_first_available_variant.id %}
+    {% assign third_tier_product_1_id = settings['third_product-handle-1'].selected_or_first_available_variant.id %}
+    {% assign third_tier_product_2_id = settings['third_product-handle-2'].selected_or_first_available_variant.id %}
+    
+    {% assign gifts_to_remove = '' %}
+    {% assign current_tier = 0 %}
+    
+    {% comment %} Determine current cart tier {% endcomment %}
+    {% if cart_total >= third_tier_threshold %}
+      {% assign current_tier = 3 %}
+    {% elsif cart_total >= second_tier_threshold %}
+      {% assign current_tier = 2 %}
+    {% elsif cart_total >= first_tier_threshold %}
+      {% assign current_tier = 1 %}
+    {% endif %}
+    
+    {% comment %} Remove gifts based on cart level logic {% endcomment %}
+    {% if current_tier == 1 %}
+      {% comment %} If at tier 1, remove any tier 2 and 3 gifts {% endcomment %}
+      {% if cart_items contains second_tier_product_1_id %}
+        {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_1_id | append: ',' %}
+      {% endif %}
+      {% if cart_items contains second_tier_product_2_id %}
+        {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_2_id | append: ',' %}
+      {% endif %}
+      {% if cart_items contains third_tier_product_1_id %}
+        {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_1_id | append: ',' %}
+      {% endif %}
+      {% if cart_items contains third_tier_product_2_id %}
+        {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_2_id | append: ',' %}
+      {% endif %}
+    {% endif %}
+    
+    {% if current_tier == 2 %}
+      {% comment %} If at tier 2, remove any tier 3 gifts {% endcomment %}
+      {% if cart_items contains third_tier_product_1_id %}
+        {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_1_id | append: ',' %}
+      {% endif %}
+      {% if cart_items contains third_tier_product_2_id %}
+        {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_2_id | append: ',' %}
+      {% endif %}
+    {% endif %}
+    
+    {% comment %} Step 3 Logic: If any Step 3 product exists, remove Step 1 and Step 2 gifts {% endcomment %}
+    {% assign has_step3_gift = false %}
+    {% if cart_items contains third_tier_product_1_id or cart_items contains third_tier_product_2_id %}
+      {% assign has_step3_gift = true %}
+    {% endif %}
+    
+    {% if has_step3_gift %}
+      {% comment %} Remove all Step 1 and Step 2 gifts when Step 3 gift is present {% endcomment %}
+      {% if cart_items contains first_tier_product_1_id %}
+        {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_1_id | append: ',' %}
+      {% endif %}
+      {% if cart_items contains first_tier_product_2_id %}
+        {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_2_id | append: ',' %}
+      {% endif %}
+      {% if cart_items contains second_tier_product_1_id %}
+        {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_1_id | append: ',' %}
+      {% endif %}
+      {% if cart_items contains second_tier_product_2_id %}
+        {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_2_id | append: ',' %}
+      {% endif %}
+    {% endif %}
+    
+    {% comment %} Check for mixed tier gifts and remove lower tier gifts {% endcomment %}
+    {% assign has_higher_tier_gift = false %}
+    {% if cart_items contains second_tier_product_1_id or cart_items contains second_tier_product_2_id %}
+      {% assign has_higher_tier_gift = true %}
+    {% endif %}
+    
+    {% if has_higher_tier_gift and has_step3_gift == false %}
+      {% comment %} If higher tier gifts exist (but no Step 3), remove lower tier gifts {% endcomment %}
+      {% if cart_items contains first_tier_product_1_id %}
+        {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_1_id | append: ',' %}
+      {% endif %}
+      {% if cart_items contains first_tier_product_2_id %}
+        {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_2_id | append: ',' %}
+      {% endif %}
+    {% endif %}
+    
+    {% comment %} Remove all identified gifts at once using permalink method {% endcomment %}
+    {% if gifts_to_remove != '' %}
+      {% assign gifts_array = gifts_to_remove | split: ',' %}
+      {% assign unique_gifts = '' %}
+      
+      {% comment %} Remove duplicates {% endcomment %}
+      {% for gift_id in gifts_array %}
+        {% if gift_id != '' and unique_gifts contains gift_id == false %}
+          {% assign unique_gifts = unique_gifts | append: gift_id | append: ',' %}
+        {% endif %}
+      {% endfor %}
+      
+      {% assign final_gifts = unique_gifts | split: ',' %}
+      {% assign permalink_url = '/cart/change?' %}
+      
+      {% comment %} Build permalink URL for multiple product removal {% endcomment %}
+      {% for gift_id in final_gifts %}
+        {% if gift_id != '' %}
+          {% assign permalink_url = permalink_url | append: 'updates[' | append: gift_id | append: ']=0&' %}
+        {% endif %}
+      {% endfor %}
+      
+      {% comment %} Remove trailing '&' from URL {% endcomment %}
+      {% assign permalink_url = permalink_url | remove: '&' %}
+      
+      <script>
+        (function() {
+          const permalinkUrl = {{ permalink_url | json }};
+          
+          if (permalinkUrl && permalinkUrl !== '/cart/change?') {
+            fetch(permalinkUrl, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+              }
+            }).then(response => {
+              if (response.ok) {
+                console.log('Successfully removed multiple gift products via permalink');
+                // Trigger cart update event
+                document.dispatchEvent(new CustomEvent('cart:updated'));
+              } else {
+                console.error('Error removing gifts via permalink');
+              }
+            }).catch(error => {
+              console.error('Error removing gifts via permalink:', error);
+            });
+          }
+        })();
+      </script>
+    {% endif %}
+
+    {% comment %} end {% endcomment %}
   {% endif %}
 
   {% comment %}UPSELL PRODUCTS{% endcomment %}
