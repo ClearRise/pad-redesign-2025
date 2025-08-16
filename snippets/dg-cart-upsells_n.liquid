@@ -293,7 +293,7 @@
   {% assign new_total_price = cart.total_price | minus: hide_price %}
   
   <script>
-    console.log({{ new_total_price | json }})
+    console.log("new total price ----- {{ new_total_price | json }}")
   </script>
 
   {% if settings.enable_collection_based_gifts %}
