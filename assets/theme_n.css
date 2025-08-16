@@ -1500,6 +1500,8 @@ html[dir="rtl"] .grid--center .grid__item {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 100%;
+  gap: 20px;
+  justify-content: center;
 }
 
 [data-center-text="true"] .flex-grid {
@@ -1522,8 +1524,8 @@ html[dir="rtl"] .grid--center .grid__item {
 }
 
 .flex-grid--gutters .flex-grid__item {
-  padding-top: 15px;
-  padding-left: 15px;
+  /* padding-top: 15px;
+  padding-left: 15px; */
 }
 
 .flex-grid__item > * {
@@ -1540,11 +1542,11 @@ html[dir="rtl"] .grid--center .grid__item {
 
 @media only screen and (min-width: 769px) {
   .flex-grid__item--33 {
-    flex-basis: 33.33%;
+    flex: 1 0 calc(33.33% - 20px);
   }
 
   .flex-grid__item--50 {
-    flex-basis: 50%;
+    flex: 1 0 calc(50% - 20px);
   }
 }
 
