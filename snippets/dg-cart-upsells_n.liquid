@@ -283,7 +283,7 @@
   {% endif %}
 
   {% if settings.second_show_gift_box %}
-    {% assign SecondTierMinRaw = settings.cart_threshold_amount | times: 100 %}
+    {% assign SecondTierMinRaw = settings.cart_threshold_amount_second | times: 100 %}
   {% endif %}
 
   {% if settings.third_show_gift_box %}
