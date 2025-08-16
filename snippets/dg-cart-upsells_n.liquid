@@ -301,6 +301,9 @@
       {% assign show_third_tier = true %}
     {% endif %}
 
+    <script>
+      console.log("new total price ----- {{ new_total_price | json }} |||--++ {{ settings.show_gift_box }}")
+    </script>
     {% comment %} {% if show_first_tier and settings.show_gift_box %} {% endcomment %}
     {% if settings.show_gift_box or true %}
       <!-- First Tier Gift Box -->
