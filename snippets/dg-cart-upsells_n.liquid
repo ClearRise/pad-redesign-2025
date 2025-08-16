@@ -291,10 +291,6 @@
   {% endif %}
 
   {% assign new_total_price = cart.total_price | minus: hide_price %}
-  
-  <script>
-    console.log("new total price ----- {{ new_total_price | json }} ||| {{ GiftBoxAmountRaw }}")
-  </script>
 
   {% if settings.enable_collection_based_gifts %}
     {% if show_first_tier and new_total_price >= FirstTierAmountRaw and new_total_price < SecondTierMinRaw %}
@@ -334,6 +330,11 @@
           {% endif %}
         {% endfor %}
       {% endif %}
+
+      
+      <script>
+        console.log("new total price ----- {{ new_total_price | json }} ||| {{ GiftBoxAmountRaw }}")
+      </script>
 
       {% if new_total_price < GiftBoxAmountRaw %}
         <!--
