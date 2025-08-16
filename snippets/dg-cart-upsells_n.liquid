@@ -302,7 +302,7 @@
     {% endif %}
 
     {% comment %} {% if show_first_tier and settings.show_gift_box %} {% endcomment %}
-    {% if settings.show_gift_box %}
+    {% if settings.show_gift_box or true %}
       <!-- First Tier Gift Box -->
       {% assign GiftBoxAmount = settings.cart_threshold_amount %}
       {% assign GiftBoxAmountRaw = settings.cart_threshold_amount | times: 100 %}
