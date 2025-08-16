@@ -117,7 +117,7 @@
     "second_spend_progress": "",
     "second_product-handle-1": "green-glow-burl-carbon-fiber-ring-1",
     "second_product-handle-2": "green-glow-burl-carbon-fiber-bar-pendant-1",
-    "third_show_gift_box": false,
+    "third_show_gift_box": true,
     "third_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
     "gift_box_title_third": "TWO FREE GIFTS - TODAY ONLY",
     "cart_threshold_amount_third": "400",
