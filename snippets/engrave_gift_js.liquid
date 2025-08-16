@@ -165,8 +165,6 @@ $(document).ready(function () {
     $('.add-to-cart-loader').show();
     event.preventDefault();
     event.target.disabled = true;
-    {% comment %} console.log("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP -- kkkk");
-    return; {% endcomment %}
 
     // Tryon
     // add the tryon input
@@ -205,64 +203,6 @@ $(document).ready(function () {
     }
   });
 });
-
-
-function AutoAddEngravingProduct(itemQuantity) {
-  // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
-  var engravingProductID = theme.engraving.engraving_var_id;
-
-  $.ajax({
-    type: "POST",
-    url: "/cart/add.js",
-    data: {
-      quantity: 1*itemQuantity,
-      id: engravingProductID,
-    },
-    dataType: "json",
-    success: function (data) {
-      // Handle success if needed
-      window.location.reload();
-      // setTimeout(function(){
-      //   document.dispatchEvent(new CustomEvent("cart:build"));
-      // }, 500);
-      //document.dispatchEvent(new CustomEvent('cart:open'));
-    },
-    error: function (error) {
-      // Handle error if needed
-      //document.dispatchEvent(new CustomEvent('cart:close'));
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Error!",
-      });
-    },
-  });
-}
-
-// Add the _updateCart function
-function _updateCart(params) {
-  return fetch(params.url, {
-    method: "POST",
-    body: JSON.stringify(params.data),
-    credentials: "same-origin",
-    headers: {
-      "Content-Type": "application/json",
-      "X-Requested-With": "XMLHttpRequest",
-    },
-  })
-    .then((response) => response.json())
-    .then(function (responseData) {
-      return responseData;
-    });
-}
-
-function _getCart() {
-  var url = "".concat(theme.routes.cart, "?t=").concat(Date.now());
-  return fetch(url, {
-    credentials: "same-origin",
-    method: "GET",
-  }).then((response) => response.json());
-}
 
 var first_gift_product = "";
 var second_gift_product = "";
