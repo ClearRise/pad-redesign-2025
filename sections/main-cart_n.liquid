@@ -442,8 +442,8 @@
               {%- render 'cart-item-horizontal', product: item, line: forloop.index, intelligems_discount: intelligems_discount, hidden: hidden -%}
             {%- endfor -%}
 
-            {% comment %} {% render 'dg-cart-upsells_n', hide_price: cart_total_exclude_gift %} {% endcomment %}
-            {% render 'new-cart-upsell' %}
+            {% render 'dg-cart-upsells_n', hide_price: cart_total_exclude_gift %}
+            {% comment %} {% render 'new-cart-upsell' %} {% endcomment %}
             {% render 'dg-cart-upsell-products-show' %}
 
           </div>
