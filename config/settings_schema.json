@@ -1444,6 +1444,34 @@
         "default": false
       },
       {
+        "type": "product",
+        "id": "first_tier_product_1",
+        "label": "First Tier Product 1"
+      },
+      {
+        "type": "product",
+        "id": "first_tier_product_2",
+        "label": "First Tier Product 2"
+      },
+      {
+        "type": "text",
+        "id": "tier_first_name",
+        "label": "First Tier Name",
+        "default": "First Tier"
+      },
+      {
+        "type": "text",
+        "id": "tier_first_text_unreached",
+        "label": "First Tier Text (Unreached)",
+        "default": "Spend $X to unlock this tier"
+      },
+      {
+        "type": "text",
+        "id": "tier_first_text_reached",
+        "label": "First Tier Text (Reached)",
+        "default": "You've unlocked this tier!"
+      },
+      {
         "type": "header",
         "content": "Second Tier"
       },
@@ -1465,6 +1493,34 @@
         "default": false
       },
       {
+        "type": "product",
+        "id": "second_tier_product_1",
+        "label": "Second Tier Product 1"
+      },
+      {
+        "type": "product",
+        "id": "second_tier_product_2",
+        "label": "Second Tier Product 2"
+      },
+      {
+        "type": "text",
+        "id": "tier_second_name",
+        "label": "Second Tier Name",
+        "default": "Second Tier"
+      },
+      {
+        "type": "text",
+        "id": "tier_second_text_unreached",
+        "label": "Second Tier Text (Unreached)",
+        "default": "Spend $X to unlock this tier"
+      },
+      {
+        "type": "text",
+        "id": "tier_second_text_reached",
+        "label": "Second Tier Text (Reached)",
+        "default": "You've unlocked this tier!"
+      },
+      {
         "type": "header",
         "content": "Third Tier"
       },
@@ -1484,6 +1540,34 @@
         "id": "third_tier_allow_two_gifts",
         "label": "Allow Two Gifts in Third Tier",
         "default": false
+      },
+      {
+        "type": "product",
+        "id": "third_tier_product_1",
+        "label": "Third Tier Product 1"
+      },
+      {
+        "type": "product",
+        "id": "third_tier_product_2",
+        "label": "Third Tier Product 2"
+      },
+      {
+        "type": "text",
+        "id": "tier_third_name",
+        "label": "Third Tier Name",
+        "default": "Third Tier"
+      },
+      {
+        "type": "text",
+        "id": "tier_third_text_unreached",
+        "label": "Third Tier Text (Unreached)",
+        "default": "Spend $X to unlock this tier"
+      },
+      {
+        "type": "text",
+        "id": "tier_third_text_reached",
+        "label": "Third Tier Text (Reached)",
+        "default": "You've unlocked this tier!"
       }
     ]
   },
