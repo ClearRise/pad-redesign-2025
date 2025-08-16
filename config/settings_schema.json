@@ -1420,6 +1420,74 @@
     ]
   },
   {
+    "name": "Tier",
+    "settings": [
+      {
+        "type": "header",
+        "content": "First Tier"
+      },
+      {
+        "type": "text",
+        "id": "first_gift_amount",
+        "label": "First Step"
+      },
+      {
+        "type": "checkbox",
+        "id": "first_tier_enabled",
+        "label": "Enable First Tier",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "first_tier_allow_two_gifts",
+        "label": "Allow Two Gifts in First Tier",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Second Tier"
+      },
+      {
+        "type": "text",
+        "id": "second_gift_amount",
+        "label": "Second Step"
+      },
+      {
+        "type": "checkbox",
+        "id": "second_tier_enabled",
+        "label": "Enable Second Tier",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "second_tier_allow_two_gifts",
+        "label": "Allow Two Gifts in Second Tier",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Third Tier"
+      },
+      {
+        "type": "text",
+        "id": "third_gift_amount",
+        "label": "Third Step"
+      },
+      {
+        "type": "checkbox",
+        "id": "third_tier_enabled",
+        "label": "Enable Third Tier",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "third_tier_allow_two_gifts",
+        "label": "Allow Two Gifts in Third Tier",
+        "default": false
+      }
+    ]
+  },
+  {
     "name": "Social media",
     "settings": [
       {
