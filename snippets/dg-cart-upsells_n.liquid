@@ -842,12 +842,11 @@
               }
             }
               
-              console.log('All gift removal requests completed');
+            console.log('All gift removal requests completed');
               // Trigger cart update event
               {% comment %} document.dispatchEvent(new CustomEvent('cart:updated')); {% endcomment %}
               // Reload the page to reflect all changes
               {% comment %} window.location.reload(); {% endcomment %}
-            }
             
             // Start the bulk removal process
             removeAllGiftsAtOnce(giftsToRemove).catch(error => {
