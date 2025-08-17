@@ -864,11 +864,11 @@
       {% endif %}
 
       {% if settings.second_show_gift_box and new_total_price >= SecondTierMinRaw and new_total_price < SecondTierMaxRaw %}
-        {% render 'secondtiergift' %}
+        {% render 'secondtiergift_2' %}
       {% endif %}
 
       {% if settings.third_show_gift_box and new_total_price >= ThirdTierAmountRaw %}
-        {% render 'thirdtiergift' %}
+        {% render 'thirdtiergift_2' %}
       {% endif %}
       {% comment %}
         Smart gift removal based on cart level and tier logic
