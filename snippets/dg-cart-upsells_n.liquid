@@ -842,7 +842,7 @@
                         data-remove_var="{{ second_gift_product_id }}"
                       {% endif %}
                       data-product-id="{{ second_gift_product_id }}"
-                      class="{% if second_gift_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart"
+                      class="button btn d-block upsell-suggest-product-button {% if second_gift_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart"
                       {% if second_gift_product.selected_or_first_available_variant.available == false %}
                         disabled
                       {% endif %}
