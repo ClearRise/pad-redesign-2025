@@ -1018,8 +1018,9 @@
         {% assign final_gifts = unique_gifts | split: ',' %}
         
         <script>
-          console.log("{{ current_tier }}", "{{ GiftBoxAmountRaw }}", "{{  }}")
+          console.log("{{ current_tier }}", "{{ GiftBoxAmountRaw }}", "{{  }}");
           console.log("giftsToRemove: ", {{ final_gifts | json }});
+          console.log("{{ first_tier_threshold }}", "{{ second_tier_threshold }}", "{{ third_tier_threshold }}")
           (function() {
             const giftsToRemove = {{ final_gifts | json }};
             
