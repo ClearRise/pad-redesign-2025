@@ -773,8 +773,10 @@
       
       {% comment %} Remove duplicates {% endcomment %}
       {% for gift_id in gifts_array %}
-        {% if gift_id != '' and unique_gifts contains gift_id == false %}
-          {% assign unique_gifts = unique_gifts | append: gift_id | append: ',' %}
+        {% if gift_id != '' %}
+          {% unless unique_gifts contains gift_id %}
+            {% assign unique_gifts = unique_gifts | append: gift_id | append: ',' %}
+          {% endunless %}
         {% endif %}
       {% endfor %}
       
