@@ -701,11 +701,11 @@
       {% assign current_tier = 1 %}
     {% endif %}
     
-    {% comment %} Unconditionally remove gifts from higher tiers at lower levels {% endcomment %}
+    {% comment %} Logic for removing free gifts based on tier rules {% endcomment %}
     
-    {% comment %} If below tier 1 (cart_total < first_tier_threshold), remove ALL gifts from all tiers {% endcomment %}
+    {% comment %} Rule 1: Remove free gifts from the next higher level {% endcomment %}
     {% if current_tier == 0 %}
-      {% comment %} Below tier 1 - remove all gifts unconditionally {% endcomment %}
+      {% comment %} Below tier 1 - remove all gifts from all tiers {% endcomment %}
       {% if cart_items contains first_tier_product_1_id %}
         {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_1_id | append: ',' %}
       {% endif %}
@@ -726,15 +726,15 @@
       {% endif %}
     {% endif %}
     
-    {% comment %} If at tier 1, remove ALL tier 2 and tier 3 gifts unconditionally {% endcomment %}
     {% if current_tier == 1 %}
-      {% comment %} At tier 1 - remove all tier 2 and tier 3 gifts unconditionally {% endcomment %}
+      {% comment %} At tier 1 - remove gifts from next higher level (tier 2) {% endcomment %}
       {% if cart_items contains second_tier_product_1_id %}
         {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_1_id | append: ',' %}
       {% endif %}
       {% if cart_items contains second_tier_product_2_id %}
         {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_2_id | append: ',' %}
       {% endif %}
+      {% comment %} At tier 1 - remove gifts from next higher level (tier 3) {% endcomment %}
       {% if cart_items contains third_tier_product_1_id %}
         {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_1_id | append: ',' %}
       {% endif %}
@@ -743,9 +743,8 @@
       {% endif %}
     {% endif %}
     
-    {% comment %} If at tier 2, remove ALL tier 3 gifts unconditionally {% endcomment %}
     {% if current_tier == 2 %}
-      {% comment %} At tier 2 - remove all tier 3 gifts unconditionally {% endcomment %}
+      {% comment %} At tier 2 - remove gifts from next higher level (tier 3) {% endcomment %}
       {% if cart_items contains third_tier_product_1_id %}
         {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_1_id | append: ',' %}
       {% endif %}
@@ -754,7 +753,53 @@
       {% endif %}
     {% endif %}
     
-    {% comment %} At tier 3, no removal needed - highest tier {% endcomment %}
+    {% comment %} Rule 2: Remove gifts from lower levels if there is at least one gift from the current level {% endcomment %}
+    
+    {% comment %} Check if there's at least one gift from current tier {% endcomment %}
+    {% assign has_current_tier_gift = false %}
+    {% if current_tier == 1 %}
+      {% if cart_items contains first_tier_product_1_id or cart_items contains first_tier_product_2_id %}
+        {% assign has_current_tier_gift = true %}
+      {% endif %}
+    {% elsif current_tier == 2 %}
+      {% if cart_items contains second_tier_product_1_id or cart_items contains second_tier_product_2_id %}
+        {% assign has_current_tier_gift = true %}
+      {% endif %}
+    {% elsif current_tier == 3 %}
+      {% if cart_items contains third_tier_product_1_id or cart_items contains third_tier_product_2_id %}
+        {% assign has_current_tier_gift = true %}
+      {% endif %}
+    {% endif %}
+    
+    {% comment %} If there's at least one gift from current tier, remove all gifts from lower tiers {% endcomment %}
+    {% if has_current_tier_gift %}
+      {% if current_tier >= 2 %}
+        {% comment %} Remove tier 1 gifts {% endcomment %}
+        {% if cart_items contains first_tier_product_1_id %}
+          {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_1_id | append: ',' %}
+        {% endif %}
+        {% if cart_items contains first_tier_product_2_id %}
+          {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_2_id | append: ',' %}
+        {% endif %}
+      {% endif %}
+      
+      {% if current_tier >= 3 %}
+        {% comment %} Remove tier 2 gifts {% endcomment %}
+        {% if cart_items contains second_tier_product_1_id %}
+          {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_1_id | append: ',' %}
+        {% endif %}
+        {% if cart_items contains second_tier_product_2_id %}
+          {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_2_id | append: ',' %}
+        {% endif %}
+        {% comment %} Remove tier 1 gifts {% endcomment %}
+        {% if cart_items contains first_tier_product_1_id %}
+          {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_1_id | append: ',' %}
+        {% endif %}
+        {% if cart_items contains first_tier_product_2_id %}
+          {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_2_id | append: ',' %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
     
     {% comment %} console here some variables {% endcomment %}
     <script>
