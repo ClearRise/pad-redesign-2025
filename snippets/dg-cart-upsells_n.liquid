@@ -1014,7 +1014,7 @@
             {% endunless %}
           {% endif %}
         {% endfor %}
-                    
+
         {% assign final_gifts = unique_gifts | split: ',' %}
         
         <script>
@@ -1081,6 +1081,7 @@
                 // Log error but don't fallback to permalink - rely only on API
                 console.log('Gift removal completed with some errors, but continuing...');
               });
+              window.location.reload();
             }
           })();
         </script>
