@@ -843,20 +843,16 @@
               
               console.log('All gift removal requests completed');
               // Trigger cart update event
-              document.dispatchEvent(new CustomEvent('cart:updated'));
+              {% comment %} document.dispatchEvent(new CustomEvent('cart:updated')); {% endcomment %}
               // Reload the page to reflect all changes
-              window.location.reload();
+              {% comment %} window.location.reload(); {% endcomment %}
             }
             
             // Start the sequential removal process
             removeGiftsSequentially(giftsToRemove).catch(error => {
               console.error('Error in sequential gift removal:', error);
-              // Fallback to permalink method if all API requests fail
-              const permalinkUrl = {{ permalink_url | json }};
-              if (permalinkUrl && permalinkUrl !== '/cart/change?') {
-                console.log('Falling back to permalink method:', permalinkUrl);
-                window.location.href = permalinkUrl;
-              }
+              // Log error but don't fallback to permalink - rely only on API
+              console.log('Gift removal completed with some errors, but continuing...');
             });
           }
         })();
