@@ -706,9 +706,9 @@
           <!--
             <h4 class="" style="border-top: 1px solid;padding-top: 10px;margin-bottom: 0px;height: 14px; color: #000;font-size: 17px; letter-spacing: 0.1px;">{{ settings.spend_progress }}</h4>
           -->
-          <p class="gift_box_title_empty">{{ settings.empty_cart_text1 }}</p>
-          <p class="gift_box_title_empty">{{ settings.empty_cart_text2 }}</p>
-          <p class="gift_box_title_empty">{{ settings.empty_cart_text3 }}</p>
+          <p class="gift_box_title_empty">{{ settings.empty_cart_text1 | times: 100 | money_without_trailing_zeros }}</p>
+          <p class="gift_box_title_empty">{{ settings.empty_cart_text2 | times: 100 | money_without_trailing_zeros }}</p>
+          <p class="gift_box_title_empty">{{ settings.empty_cart_text3 | times: 100 | money_without_trailing_zeros }}</p>
         {% endif %}
 
         {% if new_total_price >= GiftBoxAmountRaw %}
