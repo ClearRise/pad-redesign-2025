@@ -766,6 +766,13 @@
       {% endif %}
     {% endif %}
     
+    {% comment %} console here some variables {% endcomment %}
+    <script>
+    console.log("gifts_to_remove: ", {{ gifts_to_remove | json }});
+    console.log("cart_items: ", {{ cart_items | json }});
+    console.log("cart_total: ", {{ cart_total | json }});
+    console.log("current_tier: ", {{ current_tier | json }});
+    </script>
     {% comment %} Remove all identified gifts at once using permalink method {% endcomment %}
     {% if gifts_to_remove != '' %}
       {% assign gifts_array = gifts_to_remove | split: ',' %}
