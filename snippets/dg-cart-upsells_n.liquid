@@ -779,7 +779,7 @@
           {% endunless %}
         {% endif %}
       {% endfor %}
-      
+                  
       {% assign final_gifts = unique_gifts | split: ',' %}
       {% assign permalink_url = '/cart/change?' %}
       
@@ -798,22 +798,8 @@
           const permalinkUrl = {{ permalink_url | json }};
           
           if (permalinkUrl && permalinkUrl !== '/cart/change?') {
-            fetch(permalinkUrl, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-              }
-            }).then(response => {
-              if (response.ok) {
-                console.log('Successfully removed multiple gift products via permalink');
-                // Trigger cart update event
-                document.dispatchEvent(new CustomEvent('cart:updated'));
-              } else {
-                console.error('Error removing gifts via permalink');
-              }
-            }).catch(error => {
-              console.error('Error removing gifts via permalink:', error);
-            });
+            alert('Redirecting to remove gifts: ' + permalinkUrl);
+            window.location.href = permalinkUrl;
           }
         })();
       </script>
