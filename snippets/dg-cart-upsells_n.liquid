@@ -795,11 +795,52 @@
       
       <script>
         (function() {
-          const permalinkUrl = {{ permalink_url | json }};
+          const giftsToRemove = {{ final_gifts | json }};
           
-          if (permalinkUrl && permalinkUrl !== '/cart/change?') {
-            alert('Redirecting to remove gifts: ' + permalinkUrl);
-            window.location.href = permalinkUrl;
+          if (giftsToRemove && giftsToRemove.length > 0) {
+            console.log('Removing gifts via API:', giftsToRemove);
+            
+            // Create form data for the cart update
+            const formData = new FormData();
+            
+            // Add each gift to be removed with quantity 0
+            giftsToRemove.forEach(giftId => {
+              if (giftId && giftId !== '') {
+                formData.append(`updates[${giftId}]`, '0');
+              }
+            });
+            
+            // Make the API request to update cart
+            fetch('/cart/update.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(Object.fromEntries(formData))
+            })
+            .then(response => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error('Failed to update cart');
+              }
+            })
+            .then(data => {
+              console.log('Successfully removed gifts via API:', data);
+              // Trigger cart update event to refresh the page
+              document.dispatchEvent(new CustomEvent('cart:updated'));
+              // Reload the page to reflect changes
+              window.location.reload();
+            })
+            .catch(error => {
+              console.error('Error removing gifts via API:', error);
+              // Fallback to permalink method if API fails
+              const permalinkUrl = {{ permalink_url | json }};
+              if (permalinkUrl && permalinkUrl !== '/cart/change?') {
+                console.log('Falling back to permalink method:', permalinkUrl);
+                window.location.href = permalinkUrl;
+              }
+            });
           }
         })();
       </script>
