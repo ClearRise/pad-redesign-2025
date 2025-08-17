@@ -800,46 +800,47 @@
           if (giftsToRemove && giftsToRemove.length > 0) {
             console.log('Removing gifts via API sequentially:', giftsToRemove);
             
-            // Function to remove gifts one by one
-            async function removeGiftsSequentially(giftIds) {
+            // Function to remove all gifts at once
+            async function removeAllGiftsAtOnce(giftIds) {
               const validGiftIds = giftIds.filter(giftId => giftId && giftId !== '');
               
-              for (let i = 0; i < validGiftIds.length; i++) {
-                const giftId = validGiftIds[i];
-                console.log(`Removing gift ${i + 1}/${validGiftIds.length}:`, giftId);
-                
-                try {
-                  // Create payload for single gift removal
-                  const payload = {
-                    giftId: '0'
-                  };
-                  
-                  // Make API request for single gift
-                  const response = await fetch('/cart/update.js', {
-                    method: 'POST',
-                    headers: {
-                      'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(payload)
-                  });
-                  
-                  if (!response.ok) {
-                    throw new Error(`Failed to remove gift ${giftId}: ${response.status}`);
-                  }
-                  
-                  const data = await response.json();
-                  console.log(`Successfully removed gift ${giftId}:`, data);
-                  
-                  // Wait a small delay before next request to avoid overwhelming the server
-                  if (i < validGiftIds.length - 1) {
-                    await new Promise(resolve => setTimeout(resolve, 100));
-                  }
-                  
-                } catch (error) {
-                  console.error(`Error removing gift ${giftId}:`, error);
-                  // Continue with next gift even if one fails
-                }
+              if (validGiftIds.length === 0) {
+                console.log('No valid gifts to remove');
+                return;
               }
+              
+              console.log('Removing all gifts at once:', validGiftIds);
+              
+              try {
+                // Create updates object with all gifts set to quantity 0
+                const updates = {};
+                validGiftIds.forEach(giftId => {
+                  updates[giftId] = 0;
+                });
+                
+                console.log('Updates payload:', updates);
+                
+                // Make single API request to remove all gifts
+                const response = await fetch('/cart/update.js', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({ updates })
+                });
+                
+                if (!response.ok) {
+                  throw new Error(`Failed to remove gifts: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                console.log('Successfully removed all gifts:', data);
+                
+              } catch (error) {
+                console.error('Error removing gifts:', error);
+                throw error;
+              }
+            }
               
               console.log('All gift removal requests completed');
               // Trigger cart update event
@@ -848,9 +849,9 @@
               {% comment %} window.location.reload(); {% endcomment %}
             }
             
-            // Start the sequential removal process
-            removeGiftsSequentially(giftsToRemove).catch(error => {
-              console.error('Error in sequential gift removal:', error);
+            // Start the bulk removal process
+            removeAllGiftsAtOnce(giftsToRemove).catch(error => {
+              console.error('Error in bulk gift removal:', error);
               // Log error but don't fallback to permalink - rely only on API
               console.log('Gift removal completed with some errors, but continuing...');
             });
