@@ -781,19 +781,9 @@
       {% endfor %}
                   
       {% assign final_gifts = unique_gifts | split: ',' %}
-      {% assign permalink_url = '/cart/change?' %}
-      
-      {% comment %} Build permalink URL for multiple product removal {% endcomment %}
-      {% for gift_id in final_gifts %}
-        {% if gift_id != '' %}
-          {% assign permalink_url = permalink_url | append: 'updates[' | append: gift_id | append: ']=0&' %}
-        {% endif %}
-      {% endfor %}
-      
-      {% comment %} Remove trailing '&' from URL {% endcomment %}
-      {% assign permalink_url = permalink_url | remove: '&' %}
       
       <script>
+        console.log("giftsToRemove: ", {{ final_gifts | json }});
         (function() {
           const giftsToRemove = {{ final_gifts | json }};
           
