@@ -878,9 +878,9 @@
       {% assign cart_total = cart.total_price %}
       
       {% comment %} Define tier thresholds {% endcomment %}
-      {% assign first_tier_threshold = settings.first_gift_amount | times: 100 %}
-      {% assign second_tier_threshold = settings.second_gift_amount | times: 100 %}
-      {% assign third_tier_threshold = settings.third_gift_amount | times: 100 %}
+      {% assign first_tier_threshold = settings.cart_threshold_amount | times: 100 %}
+      {% assign second_tier_threshold = settings.cart_threshold_amount_second | times: 100 %}
+      {% assign third_tier_threshold = settings.cart_threshold_amount_third | times: 100 %}
       
       {% comment %} Get all gift product IDs {% endcomment %}
       {% assign first_tier_product_1_id = settings['product-handle-1'].selected_or_first_available_variant.id %}
