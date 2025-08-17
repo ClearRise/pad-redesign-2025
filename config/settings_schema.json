@@ -1127,6 +1127,12 @@
         "info": "(upsell_product_title), (upsell_product_price), (main_product_title)"
       },
       {
+        "type": "checkbox",
+        "label": "Enable placing both gifts in one step",
+        "id": "enable_placing_both_gifts_in_one_step",
+        "default": false
+      },
+      {
         "type": "header",
         "content": "First Tier",
         "info": "Choose any one of product"
@@ -1416,158 +1422,6 @@
         "type": "url",
         "id": "cart_continue_shopping_link",
         "label": "Continue Shopping Link"
-      }
-    ]
-  },
-  {
-    "name": "Tier",
-    "settings": [
-      {
-        "type": "header",
-        "content": "First Tier"
-      },
-      {
-        "type": "text",
-        "id": "first_gift_amount",
-        "label": "First Step"
-      },
-      {
-        "type": "checkbox",
-        "id": "first_tier_enabled",
-        "label": "Enable First Tier",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "first_tier_allow_two_gifts",
-        "label": "Allow Two Gifts in First Tier",
-        "default": false
-      },
-      {
-        "type": "product",
-        "id": "first_tier_product_1",
-        "label": "First Tier Product 1"
-      },
-      {
-        "type": "product",
-        "id": "first_tier_product_2",
-        "label": "First Tier Product 2"
-      },
-      {
-        "type": "text",
-        "id": "tier_first_name",
-        "label": "First Tier Name",
-        "default": "First Tier"
-      },
-      {
-        "type": "text",
-        "id": "tier_first_text_unreached",
-        "label": "First Tier Text (Unreached)",
-        "default": "Spend $X to unlock this tier"
-      },
-      {
-        "type": "text",
-        "id": "tier_first_text_reached",
-        "label": "First Tier Text (Reached)",
-        "default": "You've unlocked this tier!"
-      },
-      {
-        "type": "header",
-        "content": "Second Tier"
-      },
-      {
-        "type": "text",
-        "id": "second_gift_amount",
-        "label": "Second Step"
-      },
-      {
-        "type": "checkbox",
-        "id": "second_tier_enabled",
-        "label": "Enable Second Tier",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "second_tier_allow_two_gifts",
-        "label": "Allow Two Gifts in Second Tier",
-        "default": false
-      },
-      {
-        "type": "product",
-        "id": "second_tier_product_1",
-        "label": "Second Tier Product 1"
-      },
-      {
-        "type": "product",
-        "id": "second_tier_product_2",
-        "label": "Second Tier Product 2"
-      },
-      {
-        "type": "text",
-        "id": "tier_second_name",
-        "label": "Second Tier Name",
-        "default": "Second Tier"
-      },
-      {
-        "type": "text",
-        "id": "tier_second_text_unreached",
-        "label": "Second Tier Text (Unreached)",
-        "default": "Spend $X to unlock this tier"
-      },
-      {
-        "type": "text",
-        "id": "tier_second_text_reached",
-        "label": "Second Tier Text (Reached)",
-        "default": "You've unlocked this tier!"
-      },
-      {
-        "type": "header",
-        "content": "Third Tier"
-      },
-      {
-        "type": "text",
-        "id": "third_gift_amount",
-        "label": "Third Step"
-      },
-      {
-        "type": "checkbox",
-        "id": "third_tier_enabled",
-        "label": "Enable Third Tier",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "third_tier_allow_two_gifts",
-        "label": "Allow Two Gifts in Third Tier",
-        "default": false
-      },
-      {
-        "type": "product",
-        "id": "third_tier_product_1",
-        "label": "Third Tier Product 1"
-      },
-      {
-        "type": "product",
-        "id": "third_tier_product_2",
-        "label": "Third Tier Product 2"
-      },
-      {
-        "type": "text",
-        "id": "tier_third_name",
-        "label": "Third Tier Name",
-        "default": "Third Tier"
-      },
-      {
-        "type": "text",
-        "id": "tier_third_text_unreached",
-        "label": "Third Tier Text (Unreached)",
-        "default": "Spend $X to unlock this tier"
-      },
-      {
-        "type": "text",
-        "id": "tier_third_text_reached",
-        "label": "Third Tier Text (Reached)",
-        "default": "You've unlocked this tier!"
       }
     ]
   },
