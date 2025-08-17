@@ -196,12 +196,13 @@
     }
   }
 
-  .product-2 {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    height: 0 !important;
-  }
-
+  {% if settings.enable_placing_both_gifts_in_one_step == false %}
+    .product-2 {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      height: 0 !important;
+    }
+  {% endif %}
   .dgCartUpsellInner {
     padding: 20px 20px 20px 20px !important;
     border-width: 0px !important;
