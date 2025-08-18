@@ -985,6 +985,11 @@ label span.bold_option_element input{
     width: 80px !important;
     /* margin-right: 30px !important */
   }
+  @media (min-width: 768px) {
+    .upsell-product-image {
+      width: 100px !important;
+    }
+  }
   @media (max-width: 767px) {
     .upsell-product-image {
       /* margin-right: 20px !important; */
