@@ -307,7 +307,7 @@
     <div class="upsells-text">Choose from these premium selections</div>
   </div>
 
-  <div>{{ purchased_main_product_on_cart | json }}</div>
+  {% comment %} <div>{{ purchased_main_product_on_cart | json }}</div> {% endcomment %}
   
   <div class="upsells-container">
   {% if amount_away_number < all_products[settings['product-glowstone']].selected_or_first_available_variant.price and will_suggest_upsell_glowstone %}
