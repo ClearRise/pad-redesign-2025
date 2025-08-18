@@ -1240,23 +1240,6 @@
         "info": "unit: $"
       },
       {
-        "type": "range",
-        "id": "min_cart_threshold_amount",
-        "label": "Minimum Cart Threshold Amount",
-        "default": 285,
-        "min": 0,
-        "max": 500,
-        "step": 5,
-        "unit": "$"
-      },
-      {
-        "type": "text",
-        "id": "max_cart_threshold_amount",
-        "label": "Maximum Cart Threshold Amount",
-        "default": "425",
-        "info": "unit: $"
-      },
-      {
         "type": "text",
         "id": "second_spend_progress",
         "label": "Spend Amount Text",
