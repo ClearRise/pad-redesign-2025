@@ -514,6 +514,7 @@
                 <div class="main-product-title">{{ purchased_main_product_on_cart.product_title }}</div>
                 <div class="main-product-title">{{ purchased_main_product_on_cart["product_title"] }}</div>
                 <div class="main-product-title">{{ purchased_main_product_on_cart.title }}</div>
+                <div class="main-product-title">{{ purchased_main_product_on_cart.title | remove: purchased_main_product_on_cart.variant_title }}</div>
                 <div class="upselll-product-title">{{ upsell_product.title }}</div>
               </span>
             </div>
