@@ -97,7 +97,7 @@
         {% endfor %}
         <div
           product-id="{{ second_gift_product_id }}"
-          class="{% if settings.hide_gift_2 %}product-2 {% endif %} upsell-product-inner gift-product upsell_product-{{ second_gift_product_id }} {% if second_product_found == false %}item_added_to_cart {% else %}show {% endif %}"
+          class="{% if settings.third_hide_gift_2 %}product-2 {% endif %} upsell-product-inner gift-product upsell_product-{{ second_gift_product_id }} {% if second_product_found == false %}item_added_to_cart {% else %}show {% endif %}"
         >
           <div class="upsell-product dgCartUpsellInner   border_line mb_10">
             <div class="upsell-product-image">

@@ -1257,6 +1257,12 @@
         "label": "Gift Product 2"
       },
       {
+        "type": "checkbox",
+        "id": "second_hide_gift_2",
+        "label": "Hide Second Gift",
+        "info": "Second Gift products will be hidden from cart drawer if selected."
+      },
+      {
         "type": "image_picker",
         "id": "reward_bar_second_icon",
         "label": "Reward Bar Second Icon"
@@ -1315,6 +1321,12 @@
         "type": "product",
         "id": "third_product-handle-2",
         "label": "Gift Product 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "third_hide_gift_2",
+        "label": "Hide Second Gift",
+        "info": "Second Gift products will be hidden from cart drawer if selected."
       },
       {
         "type": "image_picker",
