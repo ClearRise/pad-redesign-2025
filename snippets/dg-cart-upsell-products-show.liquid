@@ -512,6 +512,7 @@
                 {% assign upsell_product_price_money = all_products[settings['product-glowstone']].selected_or_first_available_variant.price | divided_by: 100 %}
                 {% comment %} <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'Glowstone Enhancement' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b> {% endcomment %}
                 <div class="main-product-title">{{ purchased_main_product_on_cart.product_title }}</div>
+                <div class="main-product-title">{{ purchased_main_product_on_cart.title }}</div>
                 <div class="upselll-product-title">{{ upsell_product.title }}</div>
               </span>
             </div>
