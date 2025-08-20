@@ -75,7 +75,7 @@
             {{ content_for_logo }}
           </div>
           <div class="sidebar__content">
-           {% if true %} 
+            {% if true %} 
               {% assign free_gift = false %}
               {% for line_item in checkout.line_items %}
                 {% if line_item.product.type contains 'free_gift' %}
@@ -92,7 +92,7 @@
                         justify-content: center;
                         align-items: center;
                         height: 1000vh;
-                       
+                        
                         margin: 0;
                         padding: 0;
                     }
@@ -113,7 +113,7 @@
                         countdownDisplay.textContent = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
             
                         if (timeLeft === 0) {
-                           timeLeft = 10 * 60;
+                            timeLeft = 10 * 60;
                             //clearInterval(countdownInterval);
                         } else {
                             timeLeft--;
@@ -133,10 +133,10 @@
 
     {{ tracking_code }}
     <script>
- const shopCurrency = '{{ shop.money_format }}';
- Shopify.shop= 'patrick-adair-designs.myshopify.com'; 
+  const shopCurrency = '{{ shop.money_format }}';
+  Shopify.shop= 'patrick-adair-designs.myshopify.com'; 
 
-   if (document.querySelector("body > aside > button.order-summary-toggle")) {
+    if (document.querySelector("body > aside > button.order-summary-toggle")) {
     document.querySelector("body > aside > button.order-summary-toggle").click();
   }
 
@@ -168,6 +168,6 @@ observer.observe(document.body, { //document.body is node target to observe
 });  
       
 </script>
-    {% include 'navidium-widget-v6' %}
   </body>
 </html>
+  
