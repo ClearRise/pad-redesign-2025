@@ -1,4 +1,4 @@
-<!-- navidium script start -->
+{% comment %} <!-- navidium script start -->
 <!-- <style>
   .rebuy-product-block.navidium-shipping-protection:has([href*="navidium"]) {
     display: none !important;
@@ -117,4 +117,48 @@
     margin: 0 auto;
 }
   }
+</style> {% endcomment %}
+<!-- navidium script start -->
+<script>
+  const nvdShop = 'patrick-adair-designs.myshopify.com';
+  const nvdShopCurrency = '{{ shop.money_format | strip_html }}';
+  const nvdControls = {
+    subtotal_item: '.bcpo-cart-original-total',
+    CheckoutBtns: '[name="checkout"],[name="checkout"] *',
+    clickTriggers: '[name="add"],[name="add"] *,[href="/cart"],[href="/cart"] *,.upsell-add-to-cart,.upsell-add-to-cart *,.js-qty__adjust,.js-qty__adjust *',
+    changeTrigger: '.js-qty__num',
+    cursorControl: '.nvd-mini',
+    showConsoleMessage: false,
+    iosDeviceListener:'click',
+    trackWidget: false,
+    forceClick: true,
+    forceCheckout: true,
+    redirectCheckout: {
+      upsaleOff: true,
+      noProtection: false
+    },
+  nvdInject:{
+    status:false, // Inject nvd-mini div
+    parent:'parent_class', // parent class for nvd-mini div
+    container:'checkout_button_div' // nvd-mini will added before this div/button
+    }
+  }
+  </script>
+   <script  src="https://d10pwglna6up6p.cloudfront.net/navidium-widgets/js/nvd-js-asset.js"></script>
+<script  src="https://d10pwglna6up6p.cloudfront.net/navidium-widgets/js/nvd-widget-v-jquery.js" defer></script>
+<!-- navidium script end -->
+<style>
+input#shippingProtectionCheckBox {
+  width: 30px !important;
+  height: 15px !important;
+}
+input#shippingProtectionCheckBox::before {
+  display: none;
+}
+li:has([href*="navidium"]) {
+  display: none;
+}
+li:has([href*="navidium"]) {
+  display: none !important;
+}
 </style>
