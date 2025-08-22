@@ -195,7 +195,7 @@
           "scroll_navi_mobile_T4MxJh": {
             "type": "scroll_navi_mobile",
             "settings": {
-              "sub_menu": "<u>Sale</u>",
+              "sub_menu": "<u><b>Sale</b></u>",
               "link_submenu": "shopify://collections/all-products-labor-day-sale"
             }
           },
