@@ -436,7 +436,7 @@
           "type": "text_box",
           "settings": {
             "header": "How It's Made",
-            "description": "Discover the story behind the creation, from cancept to craftsmanship.",
+            "description": "Discover the story behind the creation, from concept to craftsmanship.",
             "width": "100%",
             "alignment": "center"
           }
