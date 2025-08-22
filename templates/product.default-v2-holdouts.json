@@ -19,8 +19,8 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": false,
-            "custom_badge": "BUY ONE GET ONE FREE"
+            "enable_badge": true,
+            "custom_badge": "LABOR DAY SALE"
           }
         },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
@@ -372,7 +372,7 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "CRAFTED BY <br> HAND",
+            "heading": "CRAFTED BY  HAND",
             "textarea": "This ring is handmade<br>  by trade artisans <br>in Utah, USA.",
             "cta_text1": "",
             "cta_link1": "",
@@ -592,7 +592,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_Q9CVK3": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [
