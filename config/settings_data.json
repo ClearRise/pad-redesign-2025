@@ -196,7 +196,7 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "<u>Sale</u>",
-              "link_submenu": "shopify://collections/flash-sale"
+              "link_submenu": "shopify://collections/all-products-labor-day-sale"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
@@ -259,9 +259,9 @@
           "sticky_collection": false,
           "mobile_top_banner_image": "shopify://shop_images/oie_haHVk88If7KC.png",
           "mobile_menu_top_banner_image": "shopify://shop_images/Black_Ceramic-_Purple_Class-removebg-preview.png",
-          "mobile_menu_top_banner_title": "FAREWELL COLLECTION",
-          "mobile_menu_top_banner_link_text": "Up to 50% off - Shop now",
-          "mobile_menu_top_banner_link": "shopify://collections/the-farewell-collection",
+          "mobile_menu_top_banner_title": "LABOR DAY SALE",
+          "mobile_menu_top_banner_link_text": "Up to 35% off - Shop now",
+          "mobile_menu_top_banner_link": "shopify://collections/all-products-labor-day-sale",
           "mobile_menu_top_banner_background": "",
           "announcement_compact": true,
           "announcement_above_header": true,
