@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/mystery_gift_hero_desktop.png",
-            "image_mobile": "shopify://shop_images/mystery_gift_hero_mobile.png",
+            "image": "shopify://shop_images/3_5.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_1_3.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -204,7 +204,7 @@
             "cta_link2": "",
             "image": "shopify://shop_images/lavendar-stackable-1.png",
             "video_url": "",
-            "width": "33",
+            "width": "50",
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -226,7 +226,7 @@
             "cta_link2": "",
             "image": "shopify://shop_images/StarDustRing.png",
             "video_url": "",
-            "width": "33",
+            "width": "50",
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -261,8 +261,9 @@
         },
         "advanced_AgfTfH": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
-            "subheading": "Up to 50% Off<br>LIMITED TIME ONLY",
+            "subheading": "Up to 50% OffLIMITED TIME ONLY",
             "heading": "FAREWELL COLLECTION",
             "textarea": "",
             "cta_text1": "SHOP NOW",
@@ -298,7 +299,9 @@
         "full_width": true,
         "gutter_size": 10,
         "space_above": true,
-        "space_below": false
+        "space_below": false,
+        "block_height_desktop": 24,
+        "block_height_mobile": 70
       }
     },
     "advanced_content_flexible_DTWtRM": {
