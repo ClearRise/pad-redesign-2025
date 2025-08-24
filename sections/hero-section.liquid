@@ -225,7 +225,7 @@
   
                 {%- if hero_text -%}
                   <div class="hero__text-wrap">
-                    <div class="page-width hero__text-content--wrapper {{ block.settings.text_position }} {{ block.settings.mobile_text_position }}">
+                    <div class="page-width hero__text-content {{ block.settings.text_position }} {{ block.settings.mobile_text_position }}">
                       <div class="hero__text-content text-{{ block.settings.text_align }} mobile-text-{{ block.settings.mobile_text_align }}">
                         <div class="hero__text-shadow">
                           {%- unless block.settings.top_subheading == blank -%}
