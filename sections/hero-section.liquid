@@ -154,6 +154,11 @@
                     letter-spacing: 1px;
                     text-transform: none;
                   }
+                  .image--{{ block.id }} .hero__link .btn:hover {
+                    color: {{ block.settings.button_background_color }} !important;
+                    background-color: {{ block.settings.button_text_color }} !important;
+                    border-color: {{ block.settings.button_text_color }} !important;
+                  }
                   @media only screen and (min-width: 769px) {
                     .image--{{ block.id }} .hero__title {
                       font-size: {{ block.settings.title_size }}px;
