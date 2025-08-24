@@ -87,19 +87,12 @@
         "slide_7Rjc7b": {
           "type": "slide",
           "settings": {
-            "text": "poi p poi opi poi poi"
-          }
-        },
-        "slide_CRQktc": {
-          "type": "slide",
-          "settings": {
-            "text": "poi p poi opi poi poi"
+            "text": "| FOR THOSE WHO DREAM OF FAST CARS & BIG TRUCKS"
           }
         }
       },
       "block_order": [
-        "slide_7Rjc7b",
-        "slide_CRQktc"
+        "slide_7Rjc7b"
       ],
       "name": "SS - Scrolling Logo Cloud #3",
       "settings": {
