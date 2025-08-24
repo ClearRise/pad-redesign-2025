@@ -9,6 +9,53 @@
  */
 {
   "sections": {
+    "slideshow_n_H86CUz": {
+      "type": "slideshow_n",
+      "blocks": {
+        "image_BABEKG": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "Endless\npossibilities.",
+            "special_title_color": "",
+            "subheading": "<p>Bring your brand to life</p>",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 40,
+            "base_text_size": 14,
+            "text_bottom_padding_desktop": 30,
+            "text_bottom_padding_mobile": 30,
+            "button_color_1": "white",
+            "button_color_2": "white"
+          }
+        }
+      },
+      "block_order": [
+        "image_BABEKG"
+      ],
+      "name": "Hero Section 2",
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
     "slideshow": {
       "type": "slideshow-2",
       "blocks": {
@@ -80,6 +127,7 @@
         "image_7kTF4N",
         "slideshow-0"
       ],
+      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
@@ -92,6 +140,7 @@
     },
     "trust_icons_new_ss": {
       "type": "trust-icons",
+      "disabled": true,
       "custom_css": [
         "{padding-top: 0px;}"
       ],
@@ -106,6 +155,7 @@
         "liquid_rxiQUQ": {
           "type": "liquid",
           "settings": {
+            "is_collection_banner": false,
             "liquid_name": "",
             "code": "<h2>Unique and Storied like the Men. We make them for</h2>",
             "width": "50%",
@@ -122,6 +172,7 @@
         "liquid_RdVkbe": {
           "type": "liquid",
           "settings": {
+            "is_collection_banner": false,
             "liquid_name": "button-container",
             "code": "<p>Whether it's a fashion piece, an upgrade, or a first wedding band, he deserves a ring that's one-of-a-kind just like him.</p><p>Since 2015, we've handcrafted unique rings from exotic materials like Damascus steel and meteorite. Perfect for fashion, upgrades, or wedding bands, each ring tells a story.</p>",
             "width": "50%",
@@ -154,6 +205,7 @@
         "liquid_RdVkbe",
         "child_block_button_cDigfw"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "show_navigation": false,
@@ -183,7 +235,6 @@
             "image": "shopify://shop_images/Glowstone_Ring_2-_flipped_9f85184e-0502-4a6b-9d57-22cf5248aef4.png",
             "video_url": "",
             "width": "50",
-            "height": 500,
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -206,7 +257,6 @@
             "image": "shopify://shop_images/Sterling_Silver.png",
             "video_url": "",
             "width": "50",
-            "height": 500,
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -229,7 +279,6 @@
             "image": "shopify://shop_images/meteorite-ring.jpg",
             "video_url": "",
             "width": "50",
-            "height": 500,
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -252,7 +301,6 @@
             "image": "shopify://shop_images/Lavendar_Opal_Ring.png",
             "video_url": "",
             "width": "50",
-            "height": 500,
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -276,7 +324,6 @@
             "image": "shopify://shop_images/Pendant_56ae5f17-8dbc-4305-8aaa-5db6424d04ce.png",
             "video_url": "",
             "width": "50",
-            "height": 400,
             "text_size": 105,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -300,7 +347,6 @@
             "image": "shopify://shop_images/earrings.png",
             "video_url": "",
             "width": "50",
-            "height": 400,
             "text_size": 105,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -324,7 +370,6 @@
             "image": "shopify://shop_images/Group_wood_rings_Large_0f57012e-432b-4356-801d-e42746176bb2.png",
             "video_url": "",
             "width": "100",
-            "height": 500,
             "text_size": 120,
             "text_align": "vertical-top horizontal-left",
             "focal_point": "center",
@@ -344,6 +389,7 @@
         "672a52df-0901-41df-bfcc-f5c1e4da1a77",
         "advanced_AgfTfH"
       ],
+      "disabled": true,
       "custom_css": [
         ".promo-grid-overlay {background-color: rgba(0, 0, 0, 0.2); /* Adjust color and opacity here */}"
       ],
@@ -351,7 +397,9 @@
         "full_width": true,
         "gutter_size": 10,
         "space_above": true,
-        "space_below": false
+        "space_below": false,
+        "block_height_desktop": 24,
+        "block_height_mobile": 70
       }
     },
     "featured_collection_carousel_RgiWej": {
@@ -367,6 +415,7 @@
       "block_order": [
         "collection_rcEKnR"
       ],
+      "disabled": true,
       "settings": {
         "title": "Best Sellers",
         "is_collection_list": false,
@@ -445,6 +494,7 @@
         "option_pAzHPw",
         "option_W3mfnE"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "space_around": true,
@@ -499,6 +549,7 @@
         "collection_k7BLBU",
         "collection_KYECUC"
       ],
+      "disabled": true,
       "settings": {
         "title": "Shop By Material",
         "is_collection_list": true,
@@ -532,6 +583,7 @@
         "liquid_Q68qKd": {
           "type": "liquid",
           "settings": {
+            "is_collection_banner": false,
             "liquid_name": "btn-ctn",
             "code": "<h2>Get a Custom Ring</h2><p>We pride ourselves on our ability to make intricate, handmade custom rings made from exotic materials.</p>",
             "width": "60%",
@@ -551,6 +603,7 @@
             "parent_name": "btn-ctn",
             "position": "bottom",
             "button_label": "shop wedding rings",
+            "link": "",
             "button_background_color": "#000000",
             "button_border_color": "#138e7e",
             "button_text_color": "#ffffff",
@@ -573,6 +626,7 @@
         "child_block_button_4J6Qp8",
         "background_block_pJDhcD"
       ],
+      "disabled": true,
       "custom_css": [
         ".liquid-container-ss {max-width: 420px;}",
         ".liquid-container-ss h2 {font-size: 40px;}"
@@ -603,6 +657,7 @@
       "block_order": [
         "judge_me_reviews_featured_carousel_nbYEGU"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true
@@ -654,6 +709,7 @@
         "1646695257b3b83b78-2",
         "1646695257b3b83b78-3"
       ],
+      "disabled": true,
       "settings": {
         "title": "As seen in",
         "logo_opacity": 100,
@@ -669,6 +725,7 @@
     }
   },
   "order": [
+    "slideshow_n_H86CUz",
     "slideshow",
     "trust_icons_new_ss",
     "advanced_content_flexible_DTWtRM",
