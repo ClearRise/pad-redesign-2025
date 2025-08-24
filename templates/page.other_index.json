@@ -81,6 +81,97 @@
         "autoplay_speed": 5
       }
     },
+    "ss_scrolling_logo_cloud_3_f6MJGh": {
+      "type": "ss-scrolling-logo-cloud-3",
+      "blocks": {
+        "slide_7Rjc7b": {
+          "type": "slide",
+          "settings": {
+            "text": "",
+            "link": ""
+          }
+        },
+        "slide_CcAahf": {
+          "type": "slide",
+          "settings": {
+            "text": "",
+            "link": ""
+          }
+        },
+        "slide_z9eGwE": {
+          "type": "slide",
+          "settings": {
+            "text": "",
+            "link": ""
+          }
+        },
+        "slide_FBCfdp": {
+          "type": "slide",
+          "settings": {
+            "text": "",
+            "link": ""
+          }
+        },
+        "slide_RrxH6k": {
+          "type": "slide",
+          "settings": {
+            "text": "",
+            "link": ""
+          }
+        },
+        "slide_7V97bP": {
+          "type": "slide",
+          "settings": {
+            "text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_7Rjc7b",
+        "slide_CcAahf",
+        "slide_z9eGwE",
+        "slide_FBCfdp",
+        "slide_RrxH6k",
+        "slide_7V97bP"
+      ],
+      "name": "SS - Scrolling Logo Cloud #3",
+      "settings": {
+        "section_height_desktop": "0",
+        "section_height_mobile": "0",
+        "height_desktop": "",
+        "height_mobile": "",
+        "position_top_desktop": "",
+        "position_top_mobile": "",
+        "logo_bar_height_desktop": "",
+        "logo_bar_height_mobile": "",
+        "logo_bar_top_desktop": "",
+        "logo_bar_top_mobile": "",
+        "heading_custom": false,
+        "heading_font": "assistant_n4",
+        "header_align": "center",
+        "scrolling_velocity": 10,
+        "pause_hover": false,
+        "shadow": false,
+        "slider_gap": 30,
+        "slider_gap_mobile": 30,
+        "slider_direction": "left",
+        "slider_rotate": 5,
+        "slider_rotate_mobile": 15,
+        "icon_width_desktop": 40,
+        "icon_width_mobile": 34,
+        "logo_text_color": "",
+        "logo_text_font_size_desktop": 20,
+        "logo_text_font_size_mobile": 20,
+        "header_color": "#121212",
+        "border_color": "#ffffff",
+        "background_color": "#ffffff",
+        "slider_background_color": "#9E9B94",
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0
+      }
+    },
     "slideshow_n_H86CUz": {
       "type": "slideshow_n",
       "blocks": {
@@ -799,6 +890,7 @@
   },
   "order": [
     "hero_section_KEAeEn",
+    "ss_scrolling_logo_cloud_3_f6MJGh",
     "slideshow_n_H86CUz",
     "slideshow",
     "trust_icons_new_ss",
