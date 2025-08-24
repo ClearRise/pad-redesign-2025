@@ -2,6 +2,25 @@
   .slideshow-section .hero__text-shadow {
     position: relative;
   }
+  .hero__text-wrap {
+    display: flex;
+  }
+  @media (min-width: 768px) {
+    .align-items-center {
+      align-items: center;
+    }
+    .justify-content-center {
+      justify-content: center;
+    }
+  }
+  @media (max-width: 768px) {
+    .mobile-align-items-center {
+      align-items: center;
+    }
+    .mobile-justify-content-center {
+      justify-content: center;
+    }
+  }
 {% endstyle %}
 
 <div
@@ -225,7 +244,7 @@
   
                 {%- if hero_text -%}
                   <div class="hero__text-wrap">
-                    <div class="page-width hero__text-content {{ block.settings.text_position }} {{ block.settings.mobile_text_position }}">
+                    <div class="hero__text-content {{ block.settings.text_position }} {{ block.settings.mobile_text_position }}">
                       <div class="hero__text-content text-{{ block.settings.text_align }} mobile-text-{{ block.settings.mobile_text_align }}">
                         <div class="hero__text-shadow">
                           {%- unless block.settings.top_subheading == blank -%}
@@ -754,18 +773,18 @@
             "type": "select",
             "id": "text_position",
             "label": "Text Position",
-            "default": "vertical-center horizontal-center",
+            "default": "vertical-center justify-content-center",
             "options": [
               {
-                "value": "vertical-center horizontal-left",
+                "value": "align-items-center horizontal-left",
                 "label": "Center left"
               },
               {
-                "value": "vertical-center horizontal-center",
+                "value": "align-items-center justify-content-center",
                 "label": "Center"
               },
               {
-                "value": "vertical-center horizontal-right",
+                "value": "align-items-center horizontal-right",
                 "label": "Center right"
               },
               {
@@ -773,7 +792,7 @@
                 "label": "Bottom left"
               },
               {
-                "value": "vertical-bottom horizontal-center",
+                "value": "vertical-bottom justify-content-center",
                 "label": "Bottom center"
               },
               {
@@ -785,7 +804,7 @@
                 "label": "Top left"
               },
               {
-                "value": "vertical-top horizontal-center",
+                "value": "vertical-top justify-content-center",
                 "label": "Top center"
               },
               {
