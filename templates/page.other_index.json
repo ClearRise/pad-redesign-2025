@@ -87,15 +87,13 @@
         "slide_7Rjc7b": {
           "type": "slide",
           "settings": {
-            "text": "poi p poi opi poi poi",
-            "link": ""
+            "text": "poi p poi opi poi poi"
           }
         },
         "slide_CRQktc": {
           "type": "slide",
           "settings": {
-            "text": "poi p poi opi poi poi",
-            "link": ""
+            "text": "poi p poi opi poi poi"
           }
         }
       },
@@ -105,9 +103,9 @@
       ],
       "name": "SS - Scrolling Logo Cloud #3",
       "settings": {
-        "section_height_desktop": "40",
+        "section_height_desktop": "50",
         "section_height_mobile": "0",
-        "height_desktop": "40",
+        "height_desktop": "50",
         "height_mobile": "",
         "position_top_desktop": "0",
         "position_top_mobile": "0",
@@ -134,7 +132,7 @@
         "header_color": "#121212",
         "border_color": "#ffffff",
         "background_color": "#ffffff",
-        "slider_background_color": "#9E9B94",
+        "slider_background_color": "#9e9b94",
         "full_width": true,
         "content_width": 120,
         "border_thickness": 0
