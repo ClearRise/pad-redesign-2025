@@ -291,11 +291,7 @@
       {%- when 'slide' -%}
           <div class="scrolling-logo-cloud-slide slide-{{ section.id }}">
             {% if block.settings.link != blank %}<a href="{{ block.settings.link }}" >{% endif %}
-              {%- if block.settings.image != blank -%}
-                <div class="slide-description">{{ block.settings.text }}</div>                
-              {%- else -%}
-                {{ 'product-2' | placeholder_svg_tag: 'scrolling-logo-cloud_placeholder' }}
-              {%- endif -%}
+              <div class="slide-description">{{ block.settings.text }}</div>
             {% if block.settings.link != blank %}</a>{% endif %}
           </div>
     {%- endcase -%}
