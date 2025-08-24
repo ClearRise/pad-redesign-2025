@@ -9,11 +9,6 @@
   .hero__text-content {
     display: flex;
   }
-  .hero-section-{{ section.id }} .hero__link .btn {
-    color: {{ section.settings.button_text_color }} !important;
-    background-color: {{ section.settings.button_background_color }} !important;
-    border-color: {{ section.settings.button_border_color }} !important;
-  }
   @media (min-width: 769px) {
     .align-items-center {
       align-items: center;
@@ -135,6 +130,12 @@
                   .image--{{ block.id }} .hero__subtitle {
                     font-size: {{ block.settings.base_text_size | times: 0.8 }}px;
                     color: {{block.settings.base_text_color}};
+                  }
+                  
+                  .image--{{ block.id }} .hero__link .btn {
+                    color: {{ block.settings.button_text_color }} !important;
+                    background-color: {{ block.settings.button_background_color }} !important;
+                    border-color: {{ block.settings.button_border_color }} !important;
                   }
                   @media only screen and (min-width: 769px) {
                     .image--{{ block.id }} .hero__title {
