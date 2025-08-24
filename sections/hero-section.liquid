@@ -9,6 +9,11 @@
   .hero__text-content {
     display: flex;
   }
+  .hero-section-{{ section.id }} .hero__link .btn {
+    color: {{ section.settings.button_text_color }} !important;
+    background-color: {{ section.settings.button_background_color }} !important;
+    border-color: {{ section.settings.button_border_color }} !important;
+  }
   @media (min-width: 769px) {
     .align-items-center {
       align-items: center;
@@ -33,7 +38,8 @@
 <div
   data-section-id="{{ section.id }}"
   data-section-type="slideshow-section"
-  {% if section.settings.parallax %}data-parallax="true"{% endif %}>
+  {% if section.settings.parallax %}data-parallax="true"{% endif %}
+  class="hero-section-{{ section.id }}">
   {%- if section.settings.use_img_banner -%}
     {%- if section.blocks.size > 0 -%}
       <div class="hero_image_wrapper">
@@ -892,7 +898,7 @@
             "type": "range",
             "id": "title_size",
             "label": "Heading text size",
-            "default": 80,
+            "default": 60,
             "min": 40,
             "max": 100,
             "unit": "px"
@@ -906,6 +912,24 @@
             "max": 100,
             "step": 1,
             "default": 24
+          },
+          {
+            "type": "color",
+            "id": "button_text_color",
+            "label": "Button text color",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "button_background_color",
+            "label": "Button background color",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "button_border_color",
+            "label": "Button border color",
+            "default": "#000000"
           }
         ]
       }
