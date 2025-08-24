@@ -31,7 +31,7 @@
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
-            "title_size": 60,
+            "title_size": 54,
             "base_text_size": 24,
             "button_text_color": "#000000",
             "button_background_color": "#ffffff",
