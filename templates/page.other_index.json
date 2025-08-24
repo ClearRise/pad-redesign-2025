@@ -87,62 +87,30 @@
         "slide_7Rjc7b": {
           "type": "slide",
           "settings": {
-            "text": "",
+            "text": "poi p poi opi poi poi",
             "link": ""
           }
         },
-        "slide_CcAahf": {
+        "slide_CRQktc": {
           "type": "slide",
           "settings": {
-            "text": "",
-            "link": ""
-          }
-        },
-        "slide_z9eGwE": {
-          "type": "slide",
-          "settings": {
-            "text": "",
-            "link": ""
-          }
-        },
-        "slide_FBCfdp": {
-          "type": "slide",
-          "settings": {
-            "text": "",
-            "link": ""
-          }
-        },
-        "slide_RrxH6k": {
-          "type": "slide",
-          "settings": {
-            "text": "",
-            "link": ""
-          }
-        },
-        "slide_7V97bP": {
-          "type": "slide",
-          "settings": {
-            "text": "",
+            "text": "poi p poi opi poi poi",
             "link": ""
           }
         }
       },
       "block_order": [
         "slide_7Rjc7b",
-        "slide_CcAahf",
-        "slide_z9eGwE",
-        "slide_FBCfdp",
-        "slide_RrxH6k",
-        "slide_7V97bP"
+        "slide_CRQktc"
       ],
       "name": "SS - Scrolling Logo Cloud #3",
       "settings": {
-        "section_height_desktop": "0",
+        "section_height_desktop": "40",
         "section_height_mobile": "0",
-        "height_desktop": "",
+        "height_desktop": "40",
         "height_mobile": "",
-        "position_top_desktop": "",
-        "position_top_mobile": "",
+        "position_top_desktop": "0",
+        "position_top_mobile": "0",
         "logo_bar_height_desktop": "",
         "logo_bar_height_mobile": "",
         "logo_bar_top_desktop": "",
@@ -156,8 +124,8 @@
         "slider_gap": 30,
         "slider_gap_mobile": 30,
         "slider_direction": "left",
-        "slider_rotate": 5,
-        "slider_rotate_mobile": 15,
+        "slider_rotate": 0,
+        "slider_rotate_mobile": 0,
         "icon_width_desktop": 40,
         "icon_width_mobile": 34,
         "logo_text_color": "",
