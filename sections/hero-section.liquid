@@ -250,53 +250,51 @@
   
                 {%- if hero_text -%}
                   <div class="hero__text-wrap">
-                    <div class="hero__text-content {{ block.settings.text_position }} {{ block.settings.mobile_text_position }}">
-                      <div class="hero__text-content text-{{ block.settings.text_align }} mobile-text-{{ block.settings.mobile_text_align }}">
-                        <div class="hero__text-shadow">
-                          {%- unless block.settings.top_subheading == blank -%}
-                            <div class="hero__top-subtitle">
+                    <div class="hero__text-content text-{{ block.settings.text_align }} mobile-text-{{ block.settings.mobile_text_align }}">
+                      <div class="hero__text-shadow">
+                        {%- unless block.settings.top_subheading == blank -%}
+                          <div class="hero__top-subtitle">
+                            <div class="animation-cropper">
+                              <div class="animation-contents" style="color: {{block.settings.top_subheading_color}}">
+                                {{ block.settings.top_subheading | escape }}
+                              </div>
+                            </div>
+                          </div>
+                        {%- endunless -%}
+                        {%- unless block.settings.title == blank -%}
+                          <h2 class="h1 hero__title">
+                            <div class="animation-cropper">
+                              <div class="animation-contents" style="--special_title_color: {{block.settings.special_title_color}}">
+                              {{ block.settings.title | newline_to_br }}
+                              </div>
+                            </div>
+                          </h2>
+                        {%- endunless -%}
+                        {%- if block.settings.subheading or block.settings.link or block.settings.link_2 -%}
+                          {%- unless block.settings.subheading == blank -%}
+                            <div class="hero__subtitle">
                               <div class="animation-cropper">
-                                <div class="animation-contents" style="color: {{block.settings.top_subheading_color}}">
-                                  {{ block.settings.top_subheading | escape }}
+                                <div class="animation-contents" style="--special_text_color: {{block.settings.special_text_color}}">
+                                  {{ block.settings.subheading }}
                                 </div>
                               </div>
                             </div>
                           {%- endunless -%}
-                          {%- unless block.settings.title == blank -%}
-                            <h2 class="h1 hero__title">
-                              <div class="animation-cropper">
-                                <div class="animation-contents" style="--special_title_color: {{block.settings.special_title_color}}">
-                                {{ block.settings.title | newline_to_br }}
-                                </div>
-                              </div>
-                            </h2>
-                          {%- endunless -%}
-                          {%- if block.settings.subheading or block.settings.link or block.settings.link_2 -%}
-                            {%- unless block.settings.subheading == blank -%}
-                              <div class="hero__subtitle">
-                                <div class="animation-cropper">
-                                  <div class="animation-contents" style="--special_text_color: {{block.settings.special_text_color}}">
-                                    {{ block.settings.subheading }}
-                                  </div>
-                                </div>
-                              </div>
-                            {%- endunless -%}
-                            {%- if block.settings.link_text != blank or block.settings.link_text_2 != blank -%}
-                              <div class="hero__link">
-                                {%- if block.settings.link_text != blank -%}
-                                  <a href="{{ block.settings.link }}" class="btn{% if block.settings.color_accent contains 'rgba(0,0,0,0)' %} btn--inverse{% endif %}">
-                                    {{ block.settings.link_text }}
-                                  </a>
-                                {%- endif -%}
-                                {%- if block.settings.link_text_2 != blank -%}
-                                  <a href="{{ block.settings.link_2 }}" class="btn{% if block.settings.color_accent contains 'rgba(0,0,0,0)' %} btn--inverse{% endif %}">
-                                    {{ block.settings.link_text_2 }}
-                                  </a>
-                                {%- endif -%}
-                              </div>
-                            {%- endif -%}
+                          {%- if block.settings.link_text != blank or block.settings.link_text_2 != blank -%}
+                            <div class="hero__link">
+                              {%- if block.settings.link_text != blank -%}
+                                <a href="{{ block.settings.link }}" class="btn{% if block.settings.color_accent contains 'rgba(0,0,0,0)' %} btn--inverse{% endif %}">
+                                  {{ block.settings.link_text }}
+                                </a>
+                              {%- endif -%}
+                              {%- if block.settings.link_text_2 != blank -%}
+                                <a href="{{ block.settings.link_2 }}" class="btn{% if block.settings.color_accent contains 'rgba(0,0,0,0)' %} btn--inverse{% endif %}">
+                                  {{ block.settings.link_text_2 }}
+                                </a>
+                              {%- endif -%}
+                            </div>
                           {%- endif -%}
-                        </div>
+                        {%- endif -%}
                       </div>
                     </div>
                   </div>
