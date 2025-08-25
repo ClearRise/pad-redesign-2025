@@ -28,6 +28,8 @@
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "left",
             "mobile_text_align": "left",
+            "image": "shopify://shop_images/download.webp",
+            "image_mobile": "shopify://shop_images/download.avif",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -73,7 +75,7 @@
       "name": "Hero Section - 2",
       "settings": {
         "use_img_banner": true,
-        "section_height": "650px",
+        "section_height": "natural",
         "mobile_height": "auto",
         "parallax": true,
         "style": "bars",
