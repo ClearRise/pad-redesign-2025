@@ -194,6 +194,7 @@
         "image_7kTF4N",
         "slideshow-0"
       ],
+      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
@@ -202,8 +203,7 @@
         "style": "bars",
         "autoplay": true,
         "autoplay_speed": 7
-      },
-      "disabled": true
+      }
     },
     "1646694183f97c4822": {
       "type": "promo-grid-fat",
@@ -375,12 +375,13 @@
         "advanced_AgfTfH"
       ],
       "custom_css": [
-        ".promo-grid-overlay {background-color: rgba(0, 0, 0, 0.2); /* Adjust color and opacity here */}"
+        ".promo-grid-overlay {background-color: rgba(0, 0, 0, 0.2); /* Adjust color and opacity here */}",
+        ".promo-grid {margin-top: 30px; /* adjust to your liking */}"
       ],
       "settings": {
         "full_width": true,
         "gutter_size": 10,
-        "space_above": true,
+        "space_above": false,
         "space_below": false,
         "block_height_desktop": 24,
         "block_height_mobile": 70
