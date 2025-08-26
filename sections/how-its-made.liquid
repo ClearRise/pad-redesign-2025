@@ -44,7 +44,7 @@
     .how-its-made .how-to-work-text-board-ss {
       width: 100%;
       padding: 30px 10vw;
-      background: rgba(19, 142, 126, 0.1);
+      background: {{ section.settings.mobile_background_color }};
       border: 0px;
       color: black;
     }
@@ -237,6 +237,12 @@
       "type": "image_picker",
       "id": "desktop_background",
       "label": "Desktop Background"
+    },
+    {
+      "type": "color",
+      "id": "mobile_background_color",
+      "label": "Mobile Background Color",
+      "default": "#EDE4DA"
     }
   ],
   "blocks": [
