@@ -2154,9 +2154,6 @@ label.variant__label.custom_label{
   [data-section-type="cart"] .section-header {
     margin-bottom: 0;
   }
-  .cart__checkout-wrapper {
-    padding-top: 72.33px;
-  }
 
   .sticky-bar {
     position: fixed;
