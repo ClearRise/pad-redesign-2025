@@ -209,6 +209,19 @@
             "is_tab": false
           }
         },
+        "tab_UmcAEC": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "expanded": false,
+            "style": "box",
+            "title": "TRY BEFORE YOU BUY",
+            "content": "<ul><li>Try up to 2 items</li><li>7-Day Trial</li><li>Easy Returns</li></ul>",
+            "page": "",
+            "enable_readmore": false,
+            "size_chart": ""
+          }
+        },
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
           "settings": {
@@ -304,6 +317,7 @@
         "f1a8f2b3-4268-4aa9-bef1-6bee30df3005",
         "sales_point",
         "description",
+        "tab_UmcAEC",
         "67cf22ff-76d8-4ad2-91e5-80b67524f841",
         "7cf22f7b-2877-4d38-a231-95946286cc18",
         "e4a1127a-fe7b-4aa3-af5f-a5f1222dec86",
