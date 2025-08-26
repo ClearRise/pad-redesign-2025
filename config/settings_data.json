@@ -446,7 +446,7 @@
       },
       "5178053274977549534": {
         "type": "shopify://apps/tryon/blocks/tryOnAppEmbed/95799297-dc1d-40fb-9234-066b30a3012a",
-        "disabled": true,
+        "disabled": false,
         "settings": {
           "tryon-redirect-on-click": "none",
           "tryon-button-location": "after",
@@ -456,7 +456,7 @@
           "description-align-text": "center",
           "tryon-button-description": "Try at home, pay for what you keep",
           "tryon-with-price-in-button": false,
-          "tryon-hide-add-to-cart": true,
+          "tryon-hide-add-to-cart": false,
           "tryon-copy-add-to-cart-styles": true,
           "tryon-text-color": "#ffffff",
           "tryon-background-color": "#000000",
