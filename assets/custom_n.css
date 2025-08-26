@@ -2170,11 +2170,7 @@ label.variant__label.custom_label{
   }
 
   .cart__checkout-wrapper.active .sticky-bar {
-    position: absolute;
-    padding: 0;
-    bottom: auto;
-    top: 0;
-    z-index: initial;
+    position: relative;
   }
 }
 
