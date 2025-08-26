@@ -2168,6 +2168,14 @@ label.variant__label.custom_label{
   .cart__checkout-wrapper.active {
     position: relative;
   }
+
+  .cart__checkout-wrapper.active .sticky-bar {
+    position: absolute;
+    padding: 0;
+    bottom: auto;
+    top: 0;
+    z-index: initial;
+  }
 }
 
 [data-section-type="cart"] .section-header .cart-sales-points {
