@@ -676,7 +676,7 @@ label span.bold_option_element input{
       font-size:14px;
   }
   .cart__item-sub .money{
-    font-size:12px;
+    font-size:14px;
   }
   .drawer__footer .cart__item-row {
     margin-bottom: 10px;
@@ -753,7 +753,7 @@ label span.bold_option_element input{
     margin-bottom: 5px;
   }  
   .dgCartUpsell .dci-title {
-    font-size: 12px!important;
+    font-size: 13px!important;
     letter-spacing: 0.01px;
   }
   .cart__item-details .bold_line_properties{
@@ -1079,7 +1079,7 @@ label span.bold_option_element input{
     min-height: 25px;
   }
   .upsell-collection .upsell-product .upsell-product-info .upsell-add-to-cart {
-    /* border-radius: 0;
+    border-radius: 0;
     background: #138f7e;
     padding: 0 1.2rem;
     height: 45px;
@@ -1087,7 +1087,7 @@ label span.bold_option_element input{
     font-size: 14px;
     font-weight: 600;
     color: white;
-    letter-spacing: 0.1px; */
+    letter-spacing: 0.1px;
   }
   .upsell-collection .upsell-product .upsell-product-info .swatch_options + .upsell-add-to-cart {
     margin-top: 0.3rem;

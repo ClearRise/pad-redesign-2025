@@ -117,6 +117,33 @@
 }  
 </style>
 
+{% if section.settings.full_width_header == false %}
+  <style>
+    .site-nav--has-dropdown {
+      position: relative;
+    }
+    .site-nav__dropdown {
+      min-width: unset !important;
+    }
+    .site-nav__dropdown .li-container h6 {
+      display: none !important;
+    }
+    .site-nav__dropdown .li-container li {
+      padding: 0px !important;
+    }
+    .site-nav__dropdown {
+      padding: 0px !important;
+    }
+    .site-nav__dropdown .li-container {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+    .site-nav__dropdown .featured_collection-container {
+      display: none !important;
+    }
+  </style>
+{% endif %}
+
 <div data-section-id="{{ section.id }}" data-section-type="header">
   {%- if overlay_header or section.settings.announcement_above_header -%}
     {%- render 'announcement-bar', section: section -%}
@@ -260,6 +287,12 @@
   {
     "name": "Header",
     "settings": [
+      {
+        "type": "checkbox",
+        "id": "full_width_header",
+        "label": "Full Width Header",
+        "default": false
+      },
       {
         "type": "link_list",
         "id": "main_menu_link_list",

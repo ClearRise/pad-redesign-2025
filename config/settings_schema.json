@@ -993,16 +993,6 @@
     ]
   },
   {
-    "name": "Glowstone Enhancement",
-    "settings": [
-      {
-        "type": "product",
-        "id": "product-glowstone",
-        "label": "Glowstone Product"
-      }
-    ]
-  },
-  {
     "name": "Cart",
     "settings": [
       {
@@ -1097,43 +1087,6 @@
       },
       {
         "type": "header",
-        "content": "Rewards Bar"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_rewards_bar",
-        "label": "Enable Rewards Bar",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "top_text",
-        "label": "Reward Bar Top Text",
-        "default": "You're (amount) away from (next) Tier",
-        "info": "(amount) shows how much is left until the next step."
-      },
-      {
-        "type": "text",
-        "id": "unlock_text",
-        "label": "Reward Bar Unlock Text",
-        "default": "You've unlocked a (tier?) Free Gift!",
-        "info": "(tier?)"
-      },
-      {
-        "type": "text",
-        "id": "bottom_text",
-        "label": "Reward Bar Bottom Text",
-        "default": "Add a (upsell_product_title)($(upsell_product_price)) for your (main_product_title) to unlock the next tier",
-        "info": "(upsell_product_title), (upsell_product_price), (main_product_title)"
-      },
-      {
-        "type": "checkbox",
-        "label": "Enable placing both gifts in one step",
-        "id": "enable_placing_both_gifts_in_one_step",
-        "default": false
-      },
-      {
-        "type": "header",
         "content": "First Tier",
         "info": "Choose any one of product"
       },
@@ -1191,21 +1144,10 @@
         "label": "Gift Product 2"
       },
       {
-        "type": "image_picker",
-        "id": "reward_bar_first_icon",
-        "label": "Reward Bar First Icon"
-      },
-      {
         "type": "checkbox",
         "id": "hide_gift_2",
         "label": "Hide Second Gift",
         "info": "Second Gift products will be hidden from cart drawer if selected."
-      },
-      {
-        "type": "text",
-        "id": "first_tier_name",
-        "label": "First Tier Name",
-        "default": "Free Shipping"
       },
       {
         "type": "header",
@@ -1233,10 +1175,20 @@
         "info": "Add Gift box title for cart drawer"
       },
       {
+        "type": "range",
+        "id": "min_cart_threshold_amount",
+        "label": "Minimum Cart Threshold Amount",
+        "default": 285,
+        "min": 0,
+        "max": 500,
+        "step": 5,
+        "unit": "$"
+      },
+      {
         "type": "text",
-        "id": "cart_threshold_amount_second",
-        "label": "Second Tier Cart Threshold Amount",
-        "default": "690",
+        "id": "max_cart_threshold_amount",
+        "label": "Maximum Cart Threshold Amount",
+        "default": "425",
         "info": "unit: $"
       },
       {
@@ -1255,23 +1207,6 @@
         "type": "product",
         "id": "second_product-handle-2",
         "label": "Gift Product 2"
-      },
-      {
-        "type": "checkbox",
-        "id": "second_hide_gift_2",
-        "label": "Hide Second Gift",
-        "info": "Second Gift products will be hidden from cart drawer if selected."
-      },
-      {
-        "type": "image_picker",
-        "id": "reward_bar_second_icon",
-        "label": "Reward Bar Second Icon"
-      },
-      {
-        "type": "text",
-        "id": "second_tier_name",
-        "label": "Second Tier Name",
-        "default": "Free Gift"
       },
       {
         "type": "header",
@@ -1321,23 +1256,6 @@
         "type": "product",
         "id": "third_product-handle-2",
         "label": "Gift Product 2"
-      },
-      {
-        "type": "checkbox",
-        "id": "third_hide_gift_2",
-        "label": "Hide Second Gift",
-        "info": "Second Gift products will be hidden from cart drawer if selected."
-      },
-      {
-        "type": "image_picker",
-        "id": "reward_bar_third_icon",
-        "label": "Reward Bar Third Icon"
-      },
-      {
-        "type": "text",
-        "id": "third_tier_name",
-        "label": "Third Tier Name",
-        "default": "Premium Gift"
       },
       {
         "type": "header",

@@ -79,8 +79,8 @@
     "save_badge_type": "badge",
     "product_threshold_amount": 100,
     "product1-img1": "shopify://shop_images/Mystery_Ring_Gif_bf14da19-95c3-4062-bee1-3da32c79205e.gif",
-    "product1-title": "FREE GIFT OFFER",
-    "product1-text": "Get a Free Mystery Gift (Ring or Pendant) on orders $195+",
+    "product1-title": "LABOR DAY SALE",
+    "product1-text": "Get up to 35% off + a Free Mystery Gift (Ring or Pendant) on orders $195+",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -89,7 +89,6 @@
     "product-2": "",
     "show_engraving": true,
     "product-engraving": "laser-engraving-text",
-    "product-glowstone": "glowstone-enhancement-1",
     "cart_type": "page",
     "empty_menu_link_list": "empty-cart-menu",
     "empty_cart_text1": "",
@@ -97,33 +96,30 @@
     "empty_cart_text3": "",
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
-    "top_text": "You're (amount) away from (next) Tier",
-    "bottom_text": "Add a (upsell_product_title)($(upsell_product_price)) for your (main_product_title) to unlock the next tier",
-    "enable_placing_both_gifts_in_one_step": true,
     "show_gift_box": true,
     "first_tier_progress": "You've unlocked a Free Gift!",
-    "gift_box_title": "FREE GIFT OFFER",
+    "gift_box_title": "LABOR DAY SALE OFFER",
     "gift_box_text": "",
-    "cart_threshold_amount": 250,
-    "spend_progress": "Spend $195 and get a free gift!",
+    "cart_threshold_amount": 195,
+    "spend_progress": "",
     "product-handle-1": "mystery-gift",
-    "product-handle-2": "",
+    "product-handle-2": "lavender-burl-carbon-fiber-bar-pendant",
     "hide_gift_2": true,
-    "first_tier_name": "Free Mystery Pendant",
-    "second_show_gift_box": true,
+    "second_show_gift_box": false,
     "second_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
     "gift_box_title_second": "",
-    "cart_threshold_amount_second": "300",
+    "min_cart_threshold_amount": 175,
+    "max_cart_threshold_amount": "10000",
     "second_spend_progress": "",
     "second_product-handle-1": "green-glow-burl-carbon-fiber-ring-1",
     "second_product-handle-2": "green-glow-burl-carbon-fiber-bar-pendant-1",
-    "third_show_gift_box": true,
+    "third_show_gift_box": false,
     "third_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
     "gift_box_title_third": "TWO FREE GIFTS - TODAY ONLY",
-    "cart_threshold_amount_third": "400",
+    "cart_threshold_amount_third": "175",
     "third_spend_progress": "",
-    "third_product-handle-1": "premium-protection-plan-58",
-    "third_product-handle-2": "50-gift-card",
+    "third_product-handle-1": "green-glow-burl-carbon-fiber-ring-1",
+    "third_product-handle-2": "green-glow-burl-carbon-fiber-bar-pendant-1",
     "shipping_protection_product": "navidium-shipping-protection",
     "shipping_protection_learn_more_link": "shopify://pages/navidium-shipping-protection",
     "cart_additional_buttons": true,
@@ -139,8 +135,6 @@
     "predictive_search_enabled": false,
     "show_breadcrumbs": false,
     "show_breadcrumbs_collection_link": true,
-    "min_cart_threshold_amount": 400,
-    "max_cart_threshold_amount": "10000",
     "picker_type": "dropdown",
     "product_swatch_style": "circle",
     "checkout_logo_image": "shopify://shop_images/test5.png",
@@ -165,15 +159,15 @@
             "disabled": true,
             "settings": {
               "text": "",
-              "link_text": "Buy One Get One Free",
+              "link_text": "Orders $195+ Get a FREE Mystery Gift & $50 for Your Next Purchase",
               "link": "shopify://collections/all-products-new"
             }
           },
           "1524770014057": {
             "type": "logo",
             "settings": {
-              "logo": "shopify://shop_images/Logotype_Black.svg",
-              "logo-inverted": "shopify://shop_images/Logomark_lockup_White.svg",
+              "logo": "shopify://shop_images/Logotype_Black.png",
+              "logo-inverted": "shopify://shop_images/Logotype_White.png",
               "desktop_logo_width": 100,
               "mobile_logo_width": 130
             }
@@ -202,8 +196,8 @@
           "scroll_navi_mobile_T4MxJh": {
             "type": "scroll_navi_mobile",
             "settings": {
-              "sub_menu": "<u>Sale</u>",
-              "link_submenu": "shopify://collections/flash-sale"
+              "sub_menu": "<u><b>Sale</b></u>",
+              "link_submenu": "shopify://collections/all-products-labor-day-sale"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
@@ -254,6 +248,7 @@
           "featured_collection_JeUTzx"
         ],
         "settings": {
+          "full_width_header": false,
           "main_menu_link_list": "new-menu-redesign-2-4-2025",
           "mega_menu_images": true,
           "show_menu_img": true,
@@ -265,9 +260,9 @@
           "sticky_collection": false,
           "mobile_top_banner_image": "shopify://shop_images/oie_haHVk88If7KC.png",
           "mobile_menu_top_banner_image": "shopify://shop_images/Black_Ceramic-_Purple_Class-removebg-preview.png",
-          "mobile_menu_top_banner_title": "FLASH SALE",
-          "mobile_menu_top_banner_link_text": "Up to 30% off - Shop now",
-          "mobile_menu_top_banner_link": "shopify://collections/flash-sale",
+          "mobile_menu_top_banner_title": "LABOR DAY SALE",
+          "mobile_menu_top_banner_link_text": "Up to 35% off - Shop now",
+          "mobile_menu_top_banner_link": "shopify://collections/all-products-labor-day-sale",
           "mobile_menu_top_banner_background": "",
           "announcement_compact": true,
           "announcement_above_header": true,
@@ -474,6 +469,11 @@
           "appendable-atc-button": ".buy-buttons-block",
           "tryon-product-form-selector": ""
         }
+      },
+      "11560147490181472608": {
+        "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/app-embed/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
+        "disabled": true,
+        "settings": {}
       }
     }
   },

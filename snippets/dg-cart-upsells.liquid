@@ -2,9 +2,9 @@
   .upsell-heading {
     letter-spacing: 0.8px !important;
   }
-  {% comment %} .gift_box {
+  .gift_box {
     background: #f3f3f3;
-  } {% endcomment %}
+  }
 
   .item_added_to_cart button {
     pointer-events: none;
@@ -17,8 +17,6 @@
     margin: 0;
     font-size: 18px;
     font-weight: 800;
-    padding-left: 40px;
-    text-align: left;
   }
 
   .gift_box_title_empty {
@@ -47,7 +45,6 @@
     /*         margin: 25px auto; */
     max-width: 1170px;
     margin-bottom: 0px;
-    margin-top: 20px;
   }
   .dgCartUpsellCont {
     margin: 0 auto;
@@ -69,7 +66,7 @@
     margin-bottom: 15px;
   }
   .dgCartUpsell .dci-title {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 21px;
     min-height: 45px;
   }
@@ -157,11 +154,6 @@
   .upsell-product-info {
     padding-left: 15px !important;
   }
-  @media (min-width: 768px) {
-    .upsell-collection.dgCartUpsellCont.gift-products {
-      max-width: 400px;
-    }
-  }
 </style>
 {% assign upsellCollection = 'upsells' %}
 {% assign upsellLimit = '3' -%}
@@ -226,11 +218,11 @@
   {% endif %}
 
   {% if settings.second_show_gift_box %}
-    {% assign SecondTierMinRaw = settings.cart_threshold_amount | times: 100 %}
+    {% assign SecondTierMinRaw = settings.min_cart_threshold_amount | times: 100 %}
   {% endif %}
 
   {% if settings.third_show_gift_box %}
-    {% assign SecondTierMaxRaw = settings.cart_threshold_amount_third | times: 100 %}
+    {% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times: 100 %}
   {% endif %}
 
   {% assign new_total_price = cart.total_price | minus: hide_price %}
@@ -348,27 +340,26 @@
                       <div class="upsell-product-price aaaaaaaaa">
                         FREE <s>{{ first_gift_product.compare_at_price | money_without_trailing_zeros }}</s>
                       </div>
-                      
+                      <button
+                        {% if first_product_found == false %}
+                          data-remove_var="{{ first_gift_product_id }}"
+                        {% endif %}
+                        data-product-id="{{ first_gift_product_id }}"
+                        class="{% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart upsell-add-to-cart-gift"
+                        {% if first_gift_product.selected_or_first_available_variant.available == false %}
+                          disabled
+                        {% endif %}
+                      >
+                        {% if first_product_found == false -%}
+                          {{- already_added }}
+                        {% elsif first_gift_product.selected_or_first_available_variant.available == false -%}
+                          SOLD OUT
+                        {%- else -%}
+                          {{- upsellAtc -}}
+                        {%- endif %}
+                      </button>
                     </div>
                   </div>
-                  <button
-                    {% if first_product_found == false %}
-                      data-remove_var="{{ first_gift_product_id }}"
-                    {% endif %}
-                    data-product-id="{{ first_gift_product_id }}"
-                    class="button btn d-block upsell-suggest-product-button {% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart upsell-add-to-cart-gift"
-                    {% if first_gift_product.selected_or_first_available_variant.available == false %}
-                      disabled
-                    {% endif %}
-                  >
-                    {% if first_product_found == false -%}
-                      {{- already_added }}
-                    {% elsif first_gift_product.selected_or_first_available_variant.available == false -%}
-                      SOLD OUT
-                    {%- else -%}
-                      {{- upsellAtc -}}
-                    {%- endif %}
-                  </button>
                 </div>
               </div>
             {% endif %}
@@ -580,26 +571,26 @@
                       <div class="upsell-product-price aaaaaaaaa">
                         FREE <s>{{ first_gift_product.compare_at_price | money_without_trailing_zeros }}</s>
                       </div>
+                      <button
+                        {% if first_product_found == false %}
+                          data-remove_var="{{ first_gift_product_id }}"
+                        {% endif %}
+                        data-product-id="{{ first_gift_product_id }}"
+                        class="{% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart upsell-add-to-cart-gift upsell-add-to-cart-gift-first"
+                        {% if first_gift_product.selected_or_first_available_variant.available == false %}
+                          disabled
+                        {% endif %}
+                      >
+                        {% if first_product_found == false -%}
+                          {{- already_added }}
+                        {% elsif first_gift_product.selected_or_first_available_variant.available == false -%}
+                          SOLD OUT
+                        {%- else -%}
+                          {{- upsellAtc -}}
+                        {%- endif %}
+                      </button>
                     </div>
                   </div>
-                  <button
-                    {% if first_product_found == false %}
-                      data-remove_var="{{ first_gift_product_id }}"
-                    {% endif %}
-                    data-product-id="{{ first_gift_product_id }}"
-                    class="button btn d-block upsell-suggest-product-button {% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart upsell-add-to-cart-gift upsell-add-to-cart-gift-first"
-                    {% if first_gift_product.selected_or_first_available_variant.available == false %}
-                      disabled
-                    {% endif %}
-                  >
-                    {% if first_product_found == false -%}
-                      {{- already_added }}
-                    {% elsif first_gift_product.selected_or_first_available_variant.available == false -%}
-                      SOLD OUT
-                    {%- else -%}
-                      {{- upsellAtc -}}
-                    {%- endif %}
-                  </button>
                 </div>
               </div>
             {% endif %}
@@ -816,13 +807,13 @@
                         {% if product.selected_or_first_available_variant.inventory_quantity < 1 %}
                           <button
                             data-product-id="{{ product_id }}"
-                            class="button btn d-block upsell-suggest-product-button upsell_button_gtm upsell-add-to-cart disabled"
+                            class="upsell_button_gtm upsell-add-to-cart disabled"
                             disabled
                           >
                             SOLD OUT
                           </button>
                         {% else %}
-                          <button data-product-id="{{ product_id }}" class="button btn d-block upsell-suggest-product-button upsell_button_gtm upsell-add-to-cart">
+                          <button data-product-id="{{ product_id }}" class="upsell_button_gtm upsell-add-to-cart">
                             {{ upsellAtc }}
                           </button>
                         {% endif %}

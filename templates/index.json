@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/mystery_gift_hero_desktop.png",
-            "image_mobile": "shopify://shop_images/mystery_gift_hero_mobile.png",
+            "image": "shopify://shop_images/3_5.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_1-3.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -123,13 +123,95 @@
         "autoplay_speed": 7
       }
     },
+    "slideshow_2": {
+      "type": "slideshow-2",
+      "blocks": {
+        "image_7kTF4N": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "Timeless Craftsmanship",
+            "special_title_color": "",
+            "subheading": "<p>Experience the perfect blend of condition and quality with craftsmanship that stands the test of time.</p>",
+            "special_text_color": "",
+            "link": "shopify://collections/best-selling-wedding-rings",
+            "link_text": "Shop Wedding Rings",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "image": "shopify://shop_images/temp-image.jpg",
+            "image_mobile": "shopify://shop_images/temp-image2.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 40,
+            "base_text_size": 14,
+            "text_bottom_padding_desktop": 5,
+            "text_bottom_padding_mobile": 12,
+            "button_color_1": "white",
+            "button_color_2": "white"
+          }
+        },
+        "slideshow-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "shopify://collections/all-products-sunset",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#000000",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "vertical-center horizontal-right",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "image": "shopify://shop_images/Orange_Banner_2_fixed_compressed.png",
+            "image_mobile": "shopify://shop_images/Mobile_-_Orange_Hero_-_Compressed_1x_Medium_e7aeb1ff-9271-40c7-b867-2491171db495.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 50,
+            "base_text_size": 24,
+            "text_bottom_padding_desktop": 30,
+            "text_bottom_padding_mobile": 30,
+            "button_color_1": "white",
+            "button_color_2": "white"
+          }
+        }
+      },
+      "block_order": [
+        "image_7kTF4N",
+        "slideshow-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
     "1646694183f97c4822": {
       "type": "promo-grid-fat",
       "blocks": {
         "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
+            "subheading": "UP TO 35% OFF",
             "heading": "GLOWSTONE RINGS",
             "textarea": "",
             "cta_text1": "SHOP NOW",
@@ -138,8 +220,7 @@
             "cta_link2": "",
             "image": "shopify://shop_images/IMG_3895_1800x1800_85051cc1-74fe-4254-8a8d-9f65fe84cab2.webp",
             "video_url": "",
-            "width": "50",
-            "height": 500,
+            "width": "33",
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -152,7 +233,7 @@
         "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
+            "subheading": "UP TO 35% OFF",
             "heading": "WEDDING   BANDS",
             "textarea": "",
             "cta_text1": "SHOP NOW",
@@ -161,8 +242,7 @@
             "cta_link2": "",
             "image": "shopify://shop_images/1_1.png",
             "video_url": "",
-            "width": "50",
-            "height": 500,
+            "width": "33",
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -175,7 +255,7 @@
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
+            "subheading": "UP TO 35% OFF",
             "heading": "METEORITE RINGS",
             "textarea": "",
             "cta_text1": "SHOP NOW",
@@ -184,32 +264,8 @@
             "cta_link2": "",
             "image": "shopify://shop_images/meteorite-gold.jpg",
             "video_url": "",
-            "width": "50",
-            "height": 500,
+            "width": "33",
             "text_size": 80,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_AgfTfH": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "UP TO 35% OFF",
-            "heading": "Sale Collection",
-            "textarea": "",
-            "cta_text1": "SHOP NOW",
-            "cta_link1": "shopify://collections/flash-sale",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Wood-forged-carbon-gold-accent-ring-1_49b244cc-5924-41e0-a0e0-74ddefee8f3e.png",
-            "video_url": "",
-            "width": "50",
-            "height": 400,
-            "text_size": 105,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
             "dark_overlay": 10,
@@ -221,7 +277,7 @@
         "advanced_gaqMVW": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
+            "subheading": "Bundle + Save",
             "heading": "WOMEN'S BANDS",
             "textarea": "",
             "cta_text1": "SHOP NOW",
@@ -231,7 +287,6 @@
             "image": "shopify://shop_images/lavendar-stackable-1.png",
             "video_url": "",
             "width": "50",
-            "height": 500,
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -254,8 +309,7 @@
             "image": "shopify://shop_images/StarDustRing.png",
             "video_url": "",
             "width": "50",
-            "height": 400,
-            "text_size": 105,
+            "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
             "dark_overlay": 10,
@@ -278,8 +332,30 @@
             "image": "shopify://shop_images/earrings.png",
             "video_url": "",
             "width": "50",
-            "height": 400,
             "text_size": 105,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_AgfTfH": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "Up to 50% OffLIMITED TIME ONLY",
+            "heading": "FAREWELL COLLECTION",
+            "textarea": "",
+            "cta_text1": "SHOP NOW",
+            "cta_link1": "shopify://collections/the-farewell-collection",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/hellfire-halo-glowstone-ring-5.png",
+            "video_url": "",
+            "width": "33",
+            "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
             "dark_overlay": 10,
@@ -293,19 +369,21 @@
         "2f6050a5-96b7-4f7d-b405-7b5952c82699",
         "85a12c0c-6ee7-4aba-a660-0e12f6bdc907",
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02",
-        "advanced_AgfTfH",
         "advanced_gaqMVW",
         "8f48b383-f1c5-4d34-a6cd-eab1f6f524b0",
-        "672a52df-0901-41df-bfcc-f5c1e4da1a77"
+        "672a52df-0901-41df-bfcc-f5c1e4da1a77",
+        "advanced_AgfTfH"
       ],
       "custom_css": [
-        ".promo-grid-overlay {background-color: rgba(0, 0, 0, 0.2); /* Adjust color and opacity here */}"
+        ".promo-grid {margin-top: clamp(0px, 3vw, 30px); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
       ],
       "settings": {
         "full_width": true,
         "gutter_size": 10,
-        "space_above": true,
-        "space_below": false
+        "space_above": false,
+        "space_below": false,
+        "block_height_desktop": 24,
+        "block_height_mobile": 70
       }
     },
     "advanced_content_flexible_DTWtRM": {
@@ -440,7 +518,7 @@
           "type": "text_box",
           "settings": {
             "header": "How It's Made",
-            "description": "Discover the story behind the creation, from cancept to craftsmanship.",
+            "description": "Discover the story behind the creation, from concept to craftsmanship.",
             "width": "100%",
             "alignment": "center"
           }
@@ -772,6 +850,7 @@
   },
   "order": [
     "slideshow",
+    "slideshow_2",
     "1646694183f97c4822",
     "advanced_content_flexible_DTWtRM",
     "featured_collection_carousel_RgiWej",

@@ -1,11 +1,3 @@
-<style>
-  .upcart-rewards.styles_TieredRewards__.UpcartDesignSettings__cartTextColor {
-    padding: 1rem;
-    border: 1px solid rgb(224, 230, 235);
-    border-radius: 5px;
-  }
-</style>
-
 {% assign last_added = cart.items.first %}
 {% assign last_added_product = last_added.product %}
 {% assign is_test_product = false %}
@@ -188,7 +180,7 @@
 
     {%- if cart.item_count > 0 -%}
       {% assign main_item_count = 0 %}
-      <form action="{{ routes.cart_url }}" method="post" novalidate data-location="page" id="CartPageForm" class="page-width">
+      <form action="{{ routes.cart_url }}" method="post" novalidate data-location="page" id="CartPageForm">
         <div class="cart__page">
           <div data-products class="cart__page-col">
             {% assign intelligems_total = 0 %}
@@ -322,6 +314,9 @@
             {% if main_item_count == 1 %}
               <p class="right" style="color:red;">{{ section.settings.text_2 }}</p>
             {% endif %}
+            {% if section.settings.show_subtotal_certain_amount == true and cart.total_price > section.settings.subtotal_certain_amount %}
+              <p class="right" style="color:red;">{{ section.settings.text_3 }}</p>
+            {% endif %}
             {% if section.settings.show_entry != false %}
               {% assign total_in_dollars = cart.total_price | divided_by: 100 %}
               <input type="hidden" id="_multiplier" value="{{ section.settings.multiplier }}">
@@ -364,6 +359,7 @@
             {% endif %}
 
             {%- if settings.shipping_protection_product != blank -%}
+              {%- render 'shipping-protection-product' -%}
             {%- endif -%}
 
             <div class="cart__item-row cart__checkout-wrapper">
@@ -374,7 +370,7 @@
                     <span class="bcpo-cart-original-total"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>{{ cart.total_price | money_without_trailing_zeros }}</span>
                   </div>
                 </div>
-                <div class="nvd-mini"></div>
+                <!-- <div class="nvd-mini"></div> -->
                 <button
                   type="submit"
                   name="checkout"
@@ -432,6 +428,26 @@
       "id": "text_2",
       "label": "Text when one item",
       "default": "Add another item to your cart and get the cheaper one for Free"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_subtotal_certain_amount",
+      "label": "Enable Subtotal Amount for Text",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "subtotal_certain_amount",
+      "label": "Subtotal Amount for Text",
+      "min": 100,
+      "max": 1000,
+      "step": 10,
+      "default": 500
+    },
+    {
+      "type": "textarea",
+      "id": "text_3",
+      "label": "Text when subtotal is a certain amount",
     },
     {
       "type": "header",

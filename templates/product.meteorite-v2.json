@@ -15,8 +15,8 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": false,
-            "custom_badge": ""
+            "enable_badge": true,
+            "custom_badge": "LABOR DAY SALE"
           }
         },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
@@ -279,7 +279,7 @@
         "contact"
       ],
       "settings": {
-        "sku_enable": false,
+        "sku_enable": true,
         "type_enable": false,
         "subtitle_enable": false,
         "subtitle_type": "two",

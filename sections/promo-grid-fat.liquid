@@ -71,6 +71,24 @@
         "id": "space_below",
         "label": "Add bottom spacing",
         "default": true
+      },
+      {
+        "type": "range",
+        "id": "block_height_desktop",
+        "label": "Block Height(Desktop)",
+        "min": 1,
+        "max": 100,
+        "default": 24,
+        "unit": "%"
+      },
+      {
+        "type": "range",
+        "id": "block_height_mobile",
+        "label": "Block Height(Mobile)",
+        "min": 51,
+        "max": 150,
+        "default": 70,
+        "unit": "%"
       }
     ],
     "presets": [{
@@ -170,16 +188,6 @@
                 "label": "100%"
               }
             ]
-          },
-          {
-            "type": "range",
-            "id": "height",
-            "label": "Height",
-            "default": 500,
-            "min": 100,
-            "max": 800,
-            "step": 20,
-            "unit": "px"
           },
           {
             "type": "range",
@@ -635,16 +643,6 @@
                 "label": "100%"
               }
             ]
-          },
-          {
-            "type": "range",
-            "id": "height",
-            "label": "Height",
-            "default": 300,
-            "min": 0,
-            "max": 800,
-            "step": 20,
-            "unit": "px"
           },
           {
             "type": "header",

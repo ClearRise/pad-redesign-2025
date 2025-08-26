@@ -1,7 +1,7 @@
 <!-- Free shipping progress markup -->
 {% assign FirstTierAmountRaw = settings.cart_threshold_amount | times:100 %}
-{% assign SecondTierMinRaw = settings.cart_threshold_amount | times:100 %}
-{% assign SecondTierMaxRaw = settings.cart_threshold_amount_third | times:100 %}
+{% assign SecondTierMinRaw = settings.min_cart_threshold_amount | times:100 %}
+{% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times:100 %}
 {% assign ThirdTierAmountRaw = settings.cart_threshold_amount_third | times:100 %}
 
 <div class="cart-shipping__wrapper">

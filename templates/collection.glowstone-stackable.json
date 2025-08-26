@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/mystery_collection.png",
-            "image_mobile": "shopify://shop_images/mystery_collection_mobile.png",
+            "image": "shopify://shop_images/4_4.jpg",
+            "image_mobile": "shopify://shop_images/2_4.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -82,7 +82,7 @@
         "autoplay_speed": 5
       }
     },
-    "trust_icons_n_7V7LiD": {
+    "trust_icons_n_7A6A4E": {
       "type": "trust-icons_n",
       "name": "Trust Icons(new-2)",
       "settings": {
@@ -97,42 +97,52 @@
         "trust_icon_4_label": "One-of-a-kind Designs"
       }
     },
-    "advanced_content_flexible_pEAW8a": {
+    "replo_trust_icons_white_backg_Wc7kJ7": {
+      "type": "replo-trust-icons-white-backg",
+      "disabled": true,
+      "custom_css": [
+        "{padding: 10 px;}"
+      ],
+      "settings": {}
+    },
+    "advanced_content_flexible_H9pwNF": {
       "type": "advanced-content-flexible",
       "blocks": {
-        "image_6VQejX": {
+        "image_HRU7Pz": {
           "type": "image",
           "settings": {
             "iamge_name": "",
             "image": "shopify://shop_images/3rings2.jpg",
-            "link": "shopify://pages/womens-stackable-bundle-builder",
+            "link": "shopify://pages/womens-bundle-builder",
             "width": "33%",
             "alignment": "center"
           }
         },
-        "liquid_XXkUyH": {
+        "liquid_QJ7cza": {
           "type": "liquid",
           "settings": {
             "is_collection_banner": false,
             "liquid_name": "",
-            "code": "<h2>Women's Stackable Bundle</h2><p>Build your own Glowstone Stackable Ring Bundle from 20 of our best selling designs and save up to 45% off! Stack them on the same finger or wear them on separate fingers, the choice is yours!</p><br><a href=\"https://patrickadairdesigns.com/pages/womens-stackable-bundle\"><b><u>CLICK HERE TO SHOP THE BUNDLE</b></u></a>",
+            "code": "<h2>Women's Stackable Bundle</h2><p>Build your own Glowstone Stackable Ring Bundle from 20 of our best selling designs and save up to 45% off! Stack them on the same finger or wear them on separate fingers, the choice is yours!</p><br><a href=\"https://patrickadairdesigns.com/pages/womens-bundle-builder\"><b><u>CLICK HERE TO SHOP THE BUNDLE</b></u></a>",
             "width": "50%",
             "alignment": "center",
             "text_color": "#000000",
             "simple_background_color": "#ffffff",
-            "variant_padding": true,
+            "variant_padding": false,
             "padding_left": 0,
             "padding_top": 0,
             "padding_bottom": 0,
-            "padding_right": 30
+            "padding_right": 0
           }
         }
       },
       "block_order": [
-        "image_6VQejX",
-        "liquid_XXkUyH"
+        "image_HRU7Pz",
+        "liquid_QJ7cza"
       ],
-      "disabled": true,
+      "custom_css": [
+        "@media (min-width: 769px) {.liquid-container-ss {padding-left: 40px !important; }}"
+      ],
       "name": "Advanced content - 2",
       "settings": {
         "full_width": false,
@@ -147,16 +157,9 @@
         "additional_class": ""
       }
     },
-    "replo_trust_icons_white_backg_Wc7kJ7": {
-      "type": "replo-trust-icons-white-backg",
-      "disabled": true,
-      "custom_css": [
-        "{padding: 10 px;}"
-      ],
-      "settings": {}
-    },
     "featured_collection_hgQGGg": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "NEW STACKABLE RINGS",
         "home_featured_products": "new-glowstone-stackable-rings",
@@ -304,9 +307,9 @@
   },
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
-    "trust_icons_n_7V7LiD",
-    "advanced_content_flexible_pEAW8a",
+    "trust_icons_n_7A6A4E",
     "replo_trust_icons_white_backg_Wc7kJ7",
+    "advanced_content_flexible_H9pwNF",
     "featured_collection_hgQGGg",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",

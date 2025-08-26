@@ -204,6 +204,64 @@ $(document).ready(function () {
   });
 });
 
+
+function AutoAddEngravingProduct(itemQuantity) {
+  // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
+  var engravingProductID = theme.engraving.engraving_var_id;
+
+  $.ajax({
+    type: "POST",
+    url: "/cart/add.js",
+    data: {
+      quantity: 1*itemQuantity,
+      id: engravingProductID,
+    },
+    dataType: "json",
+    success: function (data) {
+      // Handle success if needed
+      window.location.reload();
+      // setTimeout(function(){
+      //   document.dispatchEvent(new CustomEvent("cart:build"));
+      // }, 500);
+      //document.dispatchEvent(new CustomEvent('cart:open'));
+    },
+    error: function (error) {
+      // Handle error if needed
+      //document.dispatchEvent(new CustomEvent('cart:close'));
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Error!",
+      });
+    },
+  });
+}
+
+// Add the _updateCart function
+function _updateCart(params) {
+  return fetch(params.url, {
+    method: "POST",
+    body: JSON.stringify(params.data),
+    credentials: "same-origin",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Requested-With": "XMLHttpRequest",
+    },
+  })
+    .then((response) => response.json())
+    .then(function (responseData) {
+      return responseData;
+    });
+}
+
+function _getCart() {
+  var url = "".concat(theme.routes.cart, "?t=").concat(Date.now());
+  return fetch(url, {
+    credentials: "same-origin",
+    method: "GET",
+  }).then((response) => response.json());
+}
+
 var first_gift_product = "";
 var second_gift_product = "";
 var first_gift_product_var = "";
@@ -360,7 +418,6 @@ jQuery(document).ready(function($) {
     // const variantSelector = document.querySelector(".change-gift-size-options");
     // Add gift product
     $(document).on('click', '.upsell_button_gtm', async function(e) {
-      {% comment %} alert("ppppp"); {% endcomment %}
         e.preventDefault();
         let variantSelector = e.target.classList.contains("upsell-add-to-cart-gift-first") ? document.querySelector(".change-gift-size-options-first") : document.querySelector(".change-gift-size-options-second");
         const id = variantSelector ? variantSelector.value : $(this).attr('data-product-id');
@@ -389,25 +446,6 @@ jQuery(document).ready(function($) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
 
-            {% comment %} if (!e.target.classList.contains("upsell-add-to-cart-gift-first")) {
-              let firstVariantSelector = {{ first_gift_product_id_var }};
-              if (firstVariantSelector) {
-                var updates = {};
-                updates[firstVariantSelector] = 0;
-                let firstVariantID = firstVariantSelector;
-                await fetch('/cart/update.js', {
-                  method: 'POST',
-                  headers: {
-                      'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify({
-                        {% comment %} id: firstVariantSelector,
-                        quantity: 0 {% endcomment %}
-                        updates
-                  })
-                });
-              }
-            } {% endcomment %}
             // await updateCart();
             location.reload();
         } catch (error) {
@@ -546,8 +584,8 @@ function updatedgCartUpsell($remove_this, $remove) {
   .then(cart => {
     {% assign GiftBoxAmount = settings.cart_threshold_amount %}
     {% assign GiftBoxAmountRaw = settings.cart_threshold_amount | times:100 %}
-    {% assign SecondTierMinRaw = settings.cart_threshold_amount | times:100 %}
-    {% assign SecondTierMaxRaw = settings.cart_threshold_amount_third | times:100 %}
+    {% assign SecondTierMinRaw = settings.min_cart_threshold_amount | times:100 %}
+    {% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times:100 %}
     {% assign ThirdTierAmountRaw = settings.cart_threshold_amount_third | times:100 %}
 
     console.log(cart.items);

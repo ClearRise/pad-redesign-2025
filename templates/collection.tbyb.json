@@ -171,7 +171,7 @@
         "trust_icon_1_label": "",
         "trust_icon_2_label": "",
         "trust_icon_3_label": "",
-        "trust_icon_4_label": ""
+        "trust_icon_4_label": "One-of-a-kind Designs"
       }
     },
     "replo_trust_icons_fy9XYw": {
@@ -355,8 +355,8 @@
         "question_4heaRU": {
           "type": "question",
           "settings": {
-            "title": "Are Try Before You Buy Orders Eligible For a Free Gift?",
-            "text": "<p>Unfortunately, due to the nature of Try Before You Buy, orders containing Try Before You Buy products are NOT eligible for free gifts during promotions.</p>"
+            "title": "Are Try Before You Buy Orders Eligible For a Free Gift or Other Promotions?",
+            "text": "<p>Unfortunately, due to the nature of Try Before You Buy, orders containing Try Before You Buy products are NOT eligible for free gifts or other relevant promotions.</p>"
           }
         }
       },
