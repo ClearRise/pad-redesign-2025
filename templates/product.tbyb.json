@@ -135,36 +135,6 @@
             "tooltip_content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>"
           }
         },
-        "tryon_try_on_app_block_UQPtjy": {
-          "type": "shopify://apps/tryon/blocks/tryOnAppBlock/95799297-dc1d-40fb-9234-066b30a3012a",
-          "settings": {
-            "open-tryon-modal-on-button-click": false,
-            "show-tryon-description": true,
-            "tryon-description-color": "#000000",
-            "description-align-text": "center",
-            "tryon-button-description": "Try at home, pay for what you keep",
-            "tryon-with-price-in-button": false,
-            "tryon-hide-add-to-cart": false,
-            "tryon-copy-add-to-cart-styles": true,
-            "tryon-text-color": "#FFFFFF",
-            "tryon-background-color": "#000000",
-            "tryon-modal-background-color": "#435a8d",
-            "tryon-modal-primary-color": "#ffde7a",
-            "tryon-modal-text-primary-color": "#FFFFFF",
-            "tryon-modal-text-secondary-color": "#000",
-            "tryon-modal-header": "Try at home before you pay",
-            "tryon-modal-stage1-header": "Pay $0 today",
-            "tryon-modal-stage1-description": "At checkout, we'll temporarily place an authorization hold on your card but won't charge you anything.",
-            "tryon-modal-stage2-header": "Trial",
-            "tryon-modal-stage2-description": "Your trial starts upon the items' arrival. Comfortably try them at home and send us back the items you don't want.",
-            "tryon-modal-stage3-header": "Pay",
-            "tryon-modal-stage3-description": "Upon the return of your unwanted items, we will only charge you for the items you choose to keep.",
-            "tryon-redirect-on-click": "cart",
-            "tryon-handling-variant-id": "",
-            "tryon-product-form-selector": "",
-            "tryon-atc-selector": ""
-          }
-        },
         "pdp_icon_list_Aw6Xw4": {
           "type": "pdp_icon_list",
           "settings": {
@@ -333,7 +303,6 @@
         "glowstone_enhancement_rzHWHW",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
         "buy_buttons",
-        "tryon_try_on_app_block_UQPtjy",
         "pdp_icon_list_Aw6Xw4",
         "7621462d-9edd-432d-a525-b5bcbfe07deb",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
