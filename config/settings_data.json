@@ -45,6 +45,8 @@
     "type_header_capitalize": false,
     "type_headers_align_text": true,
     "type_base_font_family": "futura_n4",
+    "use_custom_body_font": true,
+    "custom_type_base_font_family": "ITC Korinna LT Bold",
     "type_base_spacing": "50",
     "type_base_size": 16,
     "type_base_line_height": 1.4,
