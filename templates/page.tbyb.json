@@ -65,6 +65,52 @@
         "autoplay_speed": 5
       }
     },
+    "how_it_works_2_L7gGkd": {
+      "type": "how-it-works-2",
+      "blocks": {
+        "step_E7tnym": {
+          "type": "step",
+          "settings": {
+            "title": "<b>TRY UP TO 2 ITEMS</b>",
+            "description": "Fill your cart to find something you love."
+          }
+        },
+        "step_JnnAhC": {
+          "type": "step",
+          "settings": {
+            "title": "<b>7-DAY TRIAL</b>",
+            "description": "Try it on in the comfort of your home."
+          }
+        },
+        "step_rErCaE": {
+          "type": "step",
+          "settings": {
+            "title": "RETURNS ARE EASY",
+            "description": "Only pay for what you keep."
+          }
+        }
+      },
+      "block_order": [
+        "step_E7tnym",
+        "step_JnnAhC",
+        "step_rErCaE"
+      ],
+      "name": "How It Works 2",
+      "settings": {
+        "full_width": false,
+        "max_width": 1600,
+        "background_color": "",
+        "title": "",
+        "title_font_size_desktop": 26,
+        "title_font_size_mobile": 24,
+        "step_title_color": "#000000",
+        "step_title_font_size_desktop": 18,
+        "step_title_font_size_mobile": 18,
+        "step_description_font_size_desktop": 14,
+        "step_description_font_size_mobile": 14,
+        "step_description_color": "#000000"
+      }
+    },
     "17337712779db4757c": {
       "type": "apps",
       "settings": {
@@ -128,13 +174,14 @@
       ],
       "name": "FAQ",
       "settings": {
-        "title": "FAQs"
+        "title": "Try Before You Buy FAQs"
       }
     }
   },
   "order": [
     "main",
     "slideshow_n_M94N7t",
+    "how_it_works_2_L7gGkd",
     "17337712779db4757c",
     "faq_9MRnN3"
   ]
