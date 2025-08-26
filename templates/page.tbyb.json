@@ -111,6 +111,22 @@
         "step_description_color": "#000000"
       }
     },
+    "background_image_text_8xPYpq": {
+      "type": "background-image-text",
+      "name": "Large image with text box",
+      "settings": {
+        "subtitle": "$0 upfront payment",
+        "title": "Try Before You Buy",
+        "text": "",
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/all-products-new",
+        "focal_point": "center",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": false
+      }
+    },
     "17337712779db4757c": {
       "type": "apps",
       "settings": {
@@ -182,6 +198,7 @@
     "main",
     "slideshow_n_M94N7t",
     "how_it_works_2_L7gGkd",
+    "background_image_text_8xPYpq",
     "17337712779db4757c",
     "faq_9MRnN3"
   ]
