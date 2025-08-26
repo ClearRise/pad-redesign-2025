@@ -21,10 +21,70 @@
         "full_width": false,
         "space_around": true
       }
+    },
+    "faq_9MRnN3": {
+      "type": "faq",
+      "blocks": {
+        "question_kaYVgA": {
+          "type": "question",
+          "settings": {
+            "title": "When do I have to return my items by?",
+            "text": "<p>Your trial starts the day your items are marked delivered by the shipping courier. The trial period is 7 days.</p><p>Initiate your return before your trial ends by emailing us at support@patrickadairdesigns.com with your order # and the items you wish to return.</p><p>Once a return is initiated, you then have 5 days to return the products. You are responsible for return shipping costs on any products being returned.</p>"
+          }
+        },
+        "question_TXeGPE": {
+          "type": "question",
+          "settings": {
+            "title": "Why is there an authorization on my card?",
+            "text": "<p>Similar to booking a hotel or rideshare, we reserve the funds in case you decide to keep all your items. An authorization is not a charge - you'll only be charged for what you keep.</p>"
+          }
+        },
+        "question_yAA6JH": {
+          "type": "question",
+          "settings": {
+            "title": "Do I get free shipping or free returns?",
+            "text": "<p>Try Before You Buy Orders are NOT eligible for free shipping on returns.</p>"
+          }
+        },
+        "question_JCK7Gz": {
+          "type": "question",
+          "settings": {
+            "title": "I initiated my return, why is my card being re-authorized?",
+            "text": "<p>Banks have limits for how long a hold can be valid. We are likely still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations.</p>"
+          }
+        },
+        "question_TVQF3U": {
+          "type": "question",
+          "settings": {
+            "title": "Why is my card being re-authorized after already initiating a return or before my order has shipped?",
+            "text": "<p>Banks have limits for how long a hold can be valid. In the event of a return, we are still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations. If your order has not shipped yet, it will ship shortly.</p>"
+          }
+        },
+        "question_QD9Hxt": {
+          "type": "question",
+          "settings": {
+            "title": "My trial ended and I was charged, but now I want to return something. Is this still possible?",
+            "text": "<p>Yes, you can still return eligible items within the our return window. Check out our <a href=\"/pages/limited-lifetime-warranty-and-return-policy\" target=\"_blank\" title=\"Limited Lifetime Warranty and Return Policy\">returns policy</a> for more details.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_kaYVgA",
+        "question_TXeGPE",
+        "question_yAA6JH",
+        "question_JCK7Gz",
+        "question_TVQF3U",
+        "question_QD9Hxt"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "title": "FAQs"
+      }
     }
   },
   "order": [
     "main",
-    "17337712779db4757c"
+    "17337712779db4757c",
+    "faq_9MRnN3"
   ]
 }
