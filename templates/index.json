@@ -382,8 +382,8 @@
         "gutter_size": 10,
         "space_above": false,
         "space_below": false,
-        "block_height_desktop": 24,
-        "block_height_mobile": 70
+        "block_height_desktop": 500,
+        "block_height_mobile": 300
       }
     },
     "advanced_content_flexible_DTWtRM": {
