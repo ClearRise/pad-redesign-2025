@@ -218,12 +218,11 @@
         },
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
-          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
-            "title": "Additional Details",
-            "content": "<p>• {{ product.metafields.global.additional_details_1 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_2 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_3 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_4 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_5 | metafield_tag }}</p><p>• {{ product.metafields.global.additional_details_6 | metafield_tag }}</p>",
+            "title": "Try Before You Buy",
+            "content": "<ul><li>Try up to 2 items</li><li>7-Day Trial</li><li>Easy Returns</li></ul><p><a href=\"https://patrickadairdesigns.com/pages/try-before-you-buy\" target=\"_blank\" title=\"https://patrickadairdesigns.com/pages/try-before-you-buy\"><span style=\"text-decoration:underline\"><strong>Learn More</strong></span></a></p>",
             "page": "",
             "enable_readmore": false,
             "size_chart": ""
