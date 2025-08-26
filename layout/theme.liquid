@@ -1,6 +1,46 @@
 <!doctype html>
   <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
   <head>
+
+  {% comment %} Tryon {% endcomment %}
+  {% assign tryon_selling_plan = 1848737874 %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Log the current Shopify template name to the console
+    console.log("Current template.name:", "{{ template }}");
+
+    {% if template == 'product.tbyb' %}
+      console.log("Running in the template tbyb")
+      // Check via Liquid if the product has the try-on selling plan
+      {% assign has_tryon_selling_plan = false %}
+      {% for group in product.selling_plan_groups %}
+        {% for selling_plan in group.selling_plans %}
+          {% if selling_plan.id == tryon_selling_plan %}
+            {% assign has_tryon_selling_plan = true %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+
+      {% if has_tryon_selling_plan %}
+        // Wait for the .add-to-cart button to appear and then hide it
+        let elapsed = 0;
+        const maxWait = 5000; // 5 seconds
+        const interval = setInterval(function () {
+          const addToCartBtn = document.querySelector('.buy-buttons-block');
+          if (addToCartBtn) {
+            addToCartBtn.style.display = 'none';
+            clearInterval(interval);
+          } else if ((elapsed += 100) >= maxWait) {
+            clearInterval(interval);
+          }
+        }, 100);
+      {% endif %}
+    {% endif %}
+  });
+</script> 
+
+  {% comment %} End Tryon {% endcomment %}
     
   <script>
       window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
@@ -448,8 +488,6 @@
     };
   </script>
   <script src="https://c.albss.com/p/l/loader.iife.js" async></script>
-
-
     <!-- Tryon -->
     <script>
       (function waitForInputAndWrapSetter() {
@@ -526,3 +564,5 @@
       }
     }
   </style>
+
+  
