@@ -1,18 +1,36 @@
 {%- style -%}
   :root {
-    --typeHeaderPrimary: {{ settings.type_header_font_family.family }};
-    --typeHeaderFallback: {{ settings.type_header_font_family.fallback_families }};
-    --typeHeaderSize: {{ settings.type_header_base_size | default: '32' | append: 'px' }};
-    --typeHeaderWeight: {{ settings.type_header_font_family.weight }};
-    --typeHeaderLineHeight: {{ settings.type_header_line_height | default: 1.4 }};
+    {% if settings.use_custom_heading_font == true %}
+      --typeHeaderPrimary: {{ settings.custom_type_header_font_family }};
+      --typeHeaderFallback: {{ settings.custom_type_header_font_family.fallback_families }};
+      --typeHeaderSize: {{ settings.type_header_base_size | default: '32' | append: 'px' }};
+      --typeHeaderWeight: {{ settings.type_header_font_family.weight }};
+      --typeHeaderLineHeight: {{ settings.type_header_line_height | default: 1.4 }};
+    {% else %}
+      --typeHeaderPrimary: {{ settings.type_header_font_family.family }};
+      --typeHeaderFallback: {{ settings.type_header_font_family.fallback_families }};
+      --typeHeaderSize: {{ settings.type_header_base_size | default: '32' | append: 'px' }};
+      --typeHeaderWeight: {{ settings.type_header_font_family.weight }};
+      --typeHeaderLineHeight: {{ settings.type_header_line_height | default: 1.4 }};
+    {% endif %}
+
     --typeHeaderSpacing: {{ settings.type_header_spacing | default: '25' | divided_by: 1000.00 | append: 'em' }};
 
-    --typeBasePrimary:{{ settings.type_base_font_family.family }};
-    --typeBaseFallback:{{ settings.type_base_font_family.fallback_families }};
-    --typeBaseSize: {{ settings.type_base_size | default: 16 | append: 'px' }};
-    --typeBaseWeight: {{ settings.type_base_font_family.weight }};
-    --typeBaseSpacing: {{ settings.type_base_spacing | default: '50' | divided_by: 1000.00 | append: 'em' }};
-    --typeBaseLineHeight: {{ settings.type_base_line_height | default: 1.4 }};
+    {% if settings.use_custom_body_font == true %}
+      --typeBasePrimary: {{ settings.custom_type_base_font_family }};
+      --typeBaseFallback: {{ settings.custom_type_base_font_family.fallback_families }};
+      --typeBaseSize: {{ settings.type_base_size | default: 16 | append: 'px' }};
+      --typeBaseWeight: {{ settings.type_base_font_family.weight }};
+      --typeBaseSpacing: {{ settings.type_base_spacing | default: '50' | divided_by: 1000.00 | append: 'em' }};
+      --typeBaseLineHeight: {{ settings.type_base_line_height | default: 1.4 }};
+    {% else %}
+      --typeBasePrimary:{{ settings.type_base_font_family.family }};
+      --typeBaseFallback:{{ settings.type_base_font_family.fallback_families }};
+      --typeBaseSize: {{ settings.type_base_size | default: 16 | append: 'px' }};
+      --typeBaseWeight: {{ settings.type_base_font_family.weight }};
+      --typeBaseSpacing: {{ settings.type_base_spacing | default: '50' | divided_by: 1000.00 | append: 'em' }};
+      --typeBaseLineHeight: {{ settings.type_base_line_height | default: 1.4 }};
+    {% endif %}
 
     --typeCollectionTitle: {{ settings.type_collection_size | append: 'px' }};
 
