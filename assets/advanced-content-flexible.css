@@ -10,7 +10,7 @@
 .liquid-container-ss h2 {
   font-size: 56px;
   font-weight: 450;
-  font-family: 'Futura PT';
+  font-family: var(--typeHeaderPrimary), var(--typeHeaderFallback);
 }
 .liquid-container-ss h3 {
   font-size: 32px;
