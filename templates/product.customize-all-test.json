@@ -218,6 +218,7 @@
         },
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
