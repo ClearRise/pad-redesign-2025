@@ -96,6 +96,91 @@
   font-display: swap;
 }
 
+/* 
+https://cdn.shopify.com/s/files/1/2126/0063/files/ITC__Korinna_Bold_1ea7c809-be4b-4d16-9d9b-526a0bef461a.ttf?v=1756205455
+https://cdn.shopify.com/s/files/1/2126/0063/files/ITC__Korinna_Normal_a9ea604b-a4b2-4104-b71a-ce402978858b.ttf?v=1756205455
+https://cdn.shopify.com/s/files/1/2126/0063/files/ITC_Korinna_Std_Kursiv_d7daa31e-65e1-4e29-a2be-51f14c84b337.otf?v=1756205455
+https://cdn.shopify.com/s/files/1/2126/0063/files/ITC_Korinna_Std_Bold_74e3c704-afd3-4fe2-9bd1-de454dbb4d10.otf?v=1756205455
+https://cdn.shopify.com/s/files/1/2126/0063/files/ITC_Korinna_LT_Bold_73bb773f-3289-4767-be6a-10aeec96f216.otf?v=1756205455
+https://cdn.shopify.com/s/files/1/2126/0063/files/ITC_Korinna_Regular_0c14f577-1e02-4894-beab-ab7028200fc7.otf?v=1756205455
+https://cdn.shopify.com/s/files/1/2126/0063/files/ITC_Korinna_Std_Heavy_23dd1a46-f94c-43a2-99b7-2d0e8520c2c7.otf?v=1756205455
+https://cdn.shopify.com/s/files/1/2126/0063/files/ITC_Korinna_LT_Regular_e63cdcbe-733a-4610-8129-42ffe5317c3a.otf?v=1756205455
+https://cdn.shopify.com/s/files/1/2126/0063/files/ITC_Korinna_Bold_61027fd2-f117-4e70-9ea1-382ebd76ebe0.otf?v=1756205454
+*/
+
+/* ITC Korinna Font Face Declarations */
+@font-face {
+  font-family: 'ITC Korinna Regular';
+  src: url('https://cdn.shopify.com/s/files/1/2126/0063/files/ITC_Korinna_Regular_0c14f577-1e02-4894-beab-ab7028200fc7.otf?v=1756205455') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Korinna Bold';
+  src: url('https://cdn.shopify.com/s/files/1/2126/0063/files/ITC_Korinna_Bold_61027fd2-f117-4e70-9ea1-382ebd76ebe0.otf?v=1756205454') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Korinna LT Bold';
+  src: url('https://cdn.shopify.com/s/files/1/2126/0063/files/ITC_Korinna_LT_Bold_73bb773f-3289-4767-be6a-10aeec96f216.otf?v=1756205455') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Korinna LT Regular';
+  src: url('https://cdn.shopify.com/s/files/1/2126/0063/files/ITC_Korinna_LT_Regular_e63cdcbe-733a-4610-8129-42ffe5317c3a.otf?v=1756205455') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Korinna Std Bold';
+  src: url('https://cdn.shopify.com/s/files/1/2126/0063/files/ITC_Korinna_Std_Bold_74e3c704-afd3-4fe2-9bd1-de454dbb4d10.otf?v=1756205455') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Korinna Std Heavy';
+  src: url('https://cdn.shopify.com/s/files/1/2126/0063/files/ITC_Korinna_Std_Heavy_23dd1a46-f94c-43a2-99b7-2d0e8520c2c7.otf?v=1756205455') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Korinna Std Kursiv';
+  src: url('https://cdn.shopify.com/s/files/1/2126/0063/files/ITC_Korinna_Std_Kursiv_d7daa31e-65e1-4e29-a2be-51f14c84b337.otf?v=1756205455') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC_Korinna Bold (TTF)';
+  src: url('https://cdn.shopify.com/s/files/1/2126/0063/files/ITC__Korinna_Bold_1ea7c809-be4b-4d16-9d9b-526a0bef461a.ttf?v=1756205455') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC_Korinna Normal (TTF)';
+  src: url('https://cdn.shopify.com/s/files/1/2126/0063/files/ITC__Korinna_Normal_a9ea604b-a4b2-4104-b71a-ce402978858b.ttf?v=1756205455') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @media only screen and (min-width: 769px) {
   :root {
     --grid-gutter: 22px;
