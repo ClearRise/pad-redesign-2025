@@ -120,6 +120,7 @@
         "text": "",
         "button_label": "SHOP NOW",
         "button_link": "shopify://collections/all-products-new",
+        "image": "shopify://shop_images/AmethystGlowstoneRing.png",
         "focal_point": "center",
         "layout": "left",
         "height": 550,
