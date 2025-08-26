@@ -232,6 +232,56 @@
         "default": "poppins_n7"
       },
       {
+        "type": "checkbox",
+        "id": "use_custom_heading_font",
+        "label": "Use custom heading font",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "custom_type_header_font_family",
+        "label": "Custom font",
+        "default": "ITC Korinna Regular",
+        "options": [
+          {
+            "value": "ITC Korinna Regular",
+            "label": "ITC Korinna Regular"
+          },
+          {
+            "value": "ITC Korinna Bold",
+            "label": "ITC Korinna Bold"
+          },
+          {
+            "value": "ITC Korinna LT Bold",
+            "label": "ITC Korinna LT Bold"
+          },
+          {
+            "value": "ITC Korinna LT Regular",
+            "label": "ITC Korinna LT Regular"
+          },
+          {
+            "value": "ITC Korinna Std Bold",
+            "label": "ITC Korinna Std Bold"
+          },
+          {
+            "value": "ITC Korinna Std Heavy",
+            "label": "ITC Korinna Std Heavy"
+          },
+          {
+            "value": "ITC Korinna Std Kursiv",
+            "label": "ITC Korinna Std Kursiv"
+          },
+          {
+            "value": "ITC_Korinna Bold (TTF)",
+            "label": "ITC_Korinna Bold (TTF)"
+          },
+          {
+            "value": "ITC_Korinna Normal (TTF)",
+            "label": "ITC_Korinna Normal (TTF)"
+          }
+        ]
+      },
+      {
         "type": "select",
         "id": "type_header_spacing",
         "label": "Letter spacing",
@@ -320,6 +370,56 @@
         "id": "type_base_font_family",
         "label": "Font",
         "default": "poppins_n5"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_custom_body_font",
+        "label": "Use custom body font",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "custom_type_base_font_family",
+        "label": "Custom font",
+        "default": "ITC Korinna Regular",
+        "options": [
+          {
+            "value": "ITC Korinna Regular",
+            "label": "ITC Korinna Regular"
+          },
+          {
+            "value": "ITC Korinna Bold",
+            "label": "ITC Korinna Bold"
+          },
+          {
+            "value": "ITC Korinna LT Bold",
+            "label": "ITC Korinna LT Bold"
+          },
+          {
+            "value": "ITC Korinna LT Regular",
+            "label": "ITC Korinna LT Regular"
+          },
+          {
+            "value": "ITC Korinna Std Bold",
+            "label": "ITC Korinna Std Bold"
+          },
+          {
+            "value": "ITC Korinna Std Heavy",
+            "label": "ITC Korinna Std Heavy"
+          },
+          {
+            "value": "ITC Korinna Std Kursiv",
+            "label": "ITC Korinna Std Kursiv"
+          },
+          {
+            "value": "ITC_Korinna Bold (TTF)",
+            "label": "ITC_Korinna Bold (TTF)"
+          },
+          {
+            "value": "ITC_Korinna Normal (TTF)",
+            "label": "ITC_Korinna Normal (TTF)"
+          }
+        ]
       },
       {
         "type": "select",
