@@ -1541,6 +1541,16 @@
     ]
   },
   {
+    "name": "Logo",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logomark",
+        "label": "Logo Mark"
+      }
+    ]
+  },
+  {
     "name": "Search",
     "settings": [
       {
