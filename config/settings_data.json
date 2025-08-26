@@ -444,6 +444,11 @@
         "disabled": true,
         "settings": {}
       },
+      "10840395464443086010": {
+        "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
+        "disabled": false,
+        "settings": {}
+      },
       "5178053274977549534": {
         "type": "shopify://apps/tryon/blocks/tryOnAppEmbed/95799297-dc1d-40fb-9234-066b30a3012a",
         "disabled": false,
@@ -460,8 +465,8 @@
           "tryon-copy-add-to-cart-styles": true,
           "tryon-text-color": "#ffffff",
           "tryon-background-color": "#000000",
-          "tryon-modal-background-color": "#435a8d",
-          "tryon-modal-primary-color": "#ffde7a",
+          "tryon-modal-background-color": "#8ead97",
+          "tryon-modal-primary-color": "#ede4da",
           "tryon-modal-text-primary-color": "#ffffff",
           "tryon-modal-text-secondary-color": "#000000",
           "tryon-modal-header": "Try at home before you pay",
@@ -474,16 +479,6 @@
           "appendable-atc-button": ".buy-buttons-block",
           "tryon-product-form-selector": ""
         }
-      },
-      "11560147490181472608": {
-        "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/app-embed/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
-        "disabled": true,
-        "settings": {}
-      },
-      "10840395464443086010": {
-        "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
-        "disabled": false,
-        "settings": {}
       }
     }
   },
