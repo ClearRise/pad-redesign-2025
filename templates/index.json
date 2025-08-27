@@ -664,7 +664,7 @@
             "code": "<h2>Get a Custom Ring</h2><p>We pride ourselves on our ability to make intricate, handmade custom rings made from exotic materials.</p>",
             "width": "60%",
             "alignment": "center",
-            "text_color": "#ffffff",
+            "text_color": "#000000",
             "simple_background_color": "rgba(0,0,0,0)",
             "variant_padding": false,
             "padding_left": 150,
@@ -680,9 +680,9 @@
             "position": "bottom",
             "button_label": "shop custom rings",
             "link": "shopify://collections/custom-rings",
-            "button_background_color": "#000000",
+            "button_background_color": "rgba(0,0,0,0)",
             "button_border_color": "#138e7e",
-            "button_text_color": "#ffffff",
+            "button_text_color": "#000000",
             "inclue_right_arrow": false
           }
         },
