@@ -220,7 +220,7 @@
             "cta_link2": "",
             "image": "shopify://shop_images/IMG_3895_1800x1800_85051cc1-74fe-4254-8a8d-9f65fe84cab2.webp",
             "video_url": "",
-            "width": "33",
+            "width": "50",
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -242,7 +242,7 @@
             "cta_link2": "",
             "image": "shopify://shop_images/1_1.png",
             "video_url": "",
-            "width": "33",
+            "width": "50",
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -264,7 +264,7 @@
             "cta_link2": "",
             "image": "shopify://shop_images/meteorite-gold.jpg",
             "video_url": "",
-            "width": "33",
+            "width": "50",
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -298,6 +298,7 @@
         },
         "8f48b383-f1c5-4d34-a6cd-eab1f6f524b0": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "$0 UPFRONT",
             "heading": "TRY BEFORE YOU BUY",
@@ -375,7 +376,7 @@
         "advanced_AgfTfH"
       ],
       "custom_css": [
-        ".promo-grid {margin-top: clamp(0px, 3vw, 30px); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+        ".promo-grid {margin-top: clamp( 0px, 3vw, 30px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
       ],
       "settings": {
         "full_width": true,
@@ -567,7 +568,8 @@
       "settings": {
         "full_width": true,
         "space_around": true,
-        "desktop_background": "shopify://shop_images/ring_fcea0cd3-97c1-4394-8a16-bec5e8107ec7.jpg"
+        "desktop_background": "shopify://shop_images/ring_fcea0cd3-97c1-4394-8a16-bec5e8107ec7.jpg",
+        "mobile_background_color": "#ede4da"
       }
     },
     "featured-collection1234": {
