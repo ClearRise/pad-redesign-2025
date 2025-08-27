@@ -375,7 +375,7 @@
         "advanced_AgfTfH"
       ],
       "custom_css": [
-        ".promo-grid {margin-top: clamp(0px, 3vw, 30px); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+        ".promo-grid {margin-top: clamp( 0px, 3vw, 30px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
       ],
       "settings": {
         "full_width": true,
@@ -567,7 +567,8 @@
       "settings": {
         "full_width": true,
         "space_around": true,
-        "desktop_background": "shopify://shop_images/ring_fcea0cd3-97c1-4394-8a16-bec5e8107ec7.jpg"
+        "desktop_background": "shopify://shop_images/ring_fcea0cd3-97c1-4394-8a16-bec5e8107ec7.jpg",
+        "mobile_background_color": "#ede4da"
       }
     },
     "featured-collection1234": {
@@ -690,8 +691,8 @@
           "settings": {
             "position": "right",
             "width": 65,
-            "background": "#000001",
-            "top_left_background_color": "#db9036"
+            "background": "#ede4da",
+            "top_left_background_color": "#ede4da"
           }
         }
       },
