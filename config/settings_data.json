@@ -460,7 +460,7 @@
           "tryon-description-color": "#000000",
           "description-align-text": "center",
           "tryon-button-description": "Try at home, pay for what you keep",
-          "tryon-with-price-in-button": true,
+          "tryon-with-price-in-button": false,
           "tryon-hide-add-to-cart": false,
           "tryon-copy-add-to-cart-styles": true,
           "tryon-text-color": "#ffffff",
