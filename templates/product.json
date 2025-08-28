@@ -411,6 +411,30 @@
     "collection-return": {
       "type": "collection-return",
       "settings": {}
+    },
+    "1756395810648881ca": {
+      "type": "apps",
+      "blocks": {
+        "rivo_loyalty_rewards_referrals_potential_points_P9LmEX": {
+          "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/potential-points/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
+          "settings": {
+            "panel_color": "#FFFFFF",
+            "panel_padding": 10,
+            "title": "Order and get [potential_points] reward points",
+            "subtext": "Earn points by signing up for our rewards program",
+            "show_icon": false,
+            "logged_out_only": false,
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "rivo_loyalty_rewards_referrals_potential_points_P9LmEX"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
@@ -421,6 +445,7 @@
     "sub",
     "product-recommendations",
     "recently-viewed",
-    "collection-return"
+    "collection-return",
+    "1756395810648881ca"
   ]
 }
