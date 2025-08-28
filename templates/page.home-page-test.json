@@ -416,8 +416,9 @@
         },
         "advanced_tWbteU": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
-            "subheading": "Up to 50% Off<br>LIMITED TIME ONLY",
+            "subheading": "Up to 50% OffLIMITED TIME ONLY",
             "heading": "THE FAREWELL COLLECTION",
             "textarea": "<u> SHOP NOW </u>",
             "cta_text1": "",
