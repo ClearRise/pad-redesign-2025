@@ -500,7 +500,7 @@
             "button_label": "discover yours",
             "link": "shopify://collections/all",
             "button_background_color": "#ffffff",
-            "button_border_color": "#138E7E",
+            "button_border_color": "#138e7e",
             "button_text_color": "#000000",
             "inclue_right_arrow": true
           }
@@ -633,10 +633,12 @@
     },
     "replo_trust_icons_white_backg_bLLqh7": {
       "type": "replo-trust-icons-white-backg",
+      "disabled": true,
       "settings": {}
     },
     "featured_collection_RTcdPC": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Best Sellers",
         "home_featured_products": "best-sellers",
@@ -652,6 +654,7 @@
     },
     "replo_ethos_FPf3qh": {
       "type": "replo-ethos",
+      "disabled": true,
       "settings": {}
     },
     "rich_text_JaHgJW": {
@@ -675,6 +678,7 @@
         "heading_mVKhB4",
         "text_wNKzG8"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
@@ -727,6 +731,7 @@
         "logo_image_paqp87",
         "logo_image_WFW4ML"
       ],
+      "disabled": true,
       "settings": {
         "title": "AS SEEN ON",
         "logo_opacity": 100,
