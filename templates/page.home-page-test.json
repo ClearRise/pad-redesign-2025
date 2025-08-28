@@ -35,9 +35,9 @@
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
-            "title": "Endlesspossibilities.",
+            "title": "",
             "special_title_color": "",
-            "subheading": "<p>Bring your brand to life</p>",
+            "subheading": "",
             "special_text_color": "",
             "link": "",
             "link_text": "Optional button",
@@ -90,7 +90,6 @@
         "image_9nnCw6",
         "image_kfPpHT"
       ],
-      "disabled": true,
       "name": "Hero Section(New)",
       "settings": {
         "use_img_banner": true,
@@ -140,6 +139,7 @@
       "block_order": [
         "image_RQk33G"
       ],
+      "disabled": true,
       "name": "Hero Section 2",
       "settings": {
         "use_img_banner": true,
