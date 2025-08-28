@@ -27,6 +27,55 @@
         "mobile_image": "shopify://shop_images/Mobile_-_BF_Image.png"
       }
     },
+    "slideshow_n_afjexp": {
+      "type": "slideshow_n",
+      "blocks": {
+        "image_RQk33G": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "image": "shopify://shop_images/3_7.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_1_5.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 40,
+            "base_text_size": 14,
+            "text_bottom_padding_desktop": 30,
+            "text_bottom_padding_mobile": 30,
+            "button_color_1": "white",
+            "button_color_2": "white"
+          }
+        }
+      },
+      "block_order": [
+        "image_RQk33G"
+      ],
+      "name": "Hero Section 2",
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
     "slideshow_gQY9qw": {
       "type": "slideshow",
       "blocks": {
@@ -69,83 +118,6 @@
         "style": "bars",
         "autoplay": true,
         "autoplay_speed": 7
-      }
-    },
-    "slideshow_n_afjexp": {
-      "type": "slideshow_n",
-      "blocks": {
-        "image_RQk33G": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "Endless\npossibilities.",
-            "special_title_color": "",
-            "subheading": "<p>Bring your brand to life</p>",
-            "special_text_color": "",
-            "link": "",
-            "link_text": "Optional button",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_position": "vertical-center horizontal-center",
-            "text_align": "left",
-            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
-            "mobile_text_align": "left",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 40,
-            "base_text_size": 14,
-            "text_bottom_padding_desktop": 30,
-            "text_bottom_padding_mobile": 30,
-            "button_color_1": "white",
-            "button_color_2": "white"
-          }
-        },
-        "image_nFnKkr": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "Two linetitle slide.",
-            "special_title_color": "",
-            "subheading": "<p>And big, beautiful imagery</p>",
-            "special_text_color": "",
-            "link": "",
-            "link_text": "Optional button",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_position": "vertical-center horizontal-center",
-            "text_align": "left",
-            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
-            "mobile_text_align": "left",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 40,
-            "base_text_size": 14,
-            "text_bottom_padding_desktop": 30,
-            "text_bottom_padding_mobile": 30,
-            "button_color_1": "white",
-            "button_color_2": "white"
-          }
-        }
-      },
-      "block_order": [
-        "image_RQk33G",
-        "image_nFnKkr"
-      ],
-      "name": "Hero Section 2",
-      "settings": {
-        "use_img_banner": true,
-        "section_height": "natural",
-        "mobile_height": "auto",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": false,
-        "autoplay_speed": 5
       }
     },
     "how_it_works_2_XVYfNT": {
@@ -569,8 +541,8 @@
   },
   "order": [
     "promotional_section_mGEFMz",
-    "slideshow_gQY9qw",
     "slideshow_n_afjexp",
+    "slideshow_gQY9qw",
     "how_it_works_2_XVYfNT",
     "main",
     "promo_grid_4iW6mW",
