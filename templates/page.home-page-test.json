@@ -689,6 +689,37 @@
     },
     "custom_review_section_iKtJzk": {
       "type": "custom-review-section",
+      "blocks": {
+        "review_3HqkCx": {
+          "type": "review",
+          "settings": {
+            "title": "Amazingly Light",
+            "name": "Brett P.",
+            "text": "I absolutely love my new ring. I had lost my wedding ring in a lake on a recent trip and had always followed PAD on Youtube and thought their rings were beautiful. They look even better than the photos in person!"
+          }
+        },
+        "review_49faXM": {
+          "type": "review",
+          "settings": {
+            "title": "Wedding Band",
+            "name": "Amber A.",
+            "text": ""
+          }
+        },
+        "review_fz8dk7": {
+          "type": "review",
+          "settings": {
+            "title": "Picture does not do it justice",
+            "name": "Ben",
+            "text": "Ill be honest, the pictures of this ring make it seem a little bland. When it arrived, I was pleasantly surprised at how beautiful it was. Feels and looks amazing! Well worth it."
+          }
+        }
+      },
+      "block_order": [
+        "review_3HqkCx",
+        "review_49faXM",
+        "review_fz8dk7"
+      ],
       "name": "Custom Review Section",
       "settings": {
         "title": "Customer Testimonials",
