@@ -738,6 +738,58 @@
         "padding_bottom_mobile": 20
       }
     },
+    "advanced_content_flexible_qXngJC": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "image_yJkMeT": {
+          "type": "image",
+          "settings": {
+            "iamge_name": "",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "liquid_69DFCQ": {
+          "type": "liquid",
+          "settings": {
+            "is_collection_banner": false,
+            "liquid_name": "",
+            "code": "<h2>Custom content</h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.</p>",
+            "width": "50%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_yJkMeT",
+        "liquid_69DFCQ"
+      ],
+      "custom_css": [
+        ".liquid-container-ss {max-width: 420px;}",
+        ".liquid-container-ss h2 {font-size: 40px;}"
+      ],
+      "name": "Advanced content - 2",
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": true,
+        "background_color": "#ffffff",
+        "small_image": true,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 16,
+        "additional_class": ""
+      }
+    },
     "featured_collections_werMCq": {
       "type": "featured-collections",
       "blocks": {
@@ -946,6 +998,7 @@
     "how_its_made_rCbMTR",
     "featured_collection_carousel_Wjkr9V",
     "custom_review_section_iKtJzk",
+    "advanced_content_flexible_qXngJC",
     "featured_collections_werMCq",
     "replo_trust_icons_white_backg_bLLqh7",
     "featured_collection_RTcdPC",
