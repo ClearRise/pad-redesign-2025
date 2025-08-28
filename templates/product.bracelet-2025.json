@@ -211,6 +211,7 @@
         },
         "tab_UmcAEC": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
