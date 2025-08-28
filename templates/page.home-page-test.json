@@ -745,8 +745,9 @@
           "type": "image",
           "settings": {
             "iamge_name": "",
+            "image": "shopify://shop_images/custom_ring.jpg",
             "link": "",
-            "width": "50%",
+            "width": "40%",
             "alignment": "center"
           }
         },
