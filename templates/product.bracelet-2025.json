@@ -23,6 +23,19 @@
             "custom_badge": "LABOR DAY SALE"
           }
         },
+        "rivo_loyalty_rewards_referrals_potential_points_tzhzhW": {
+          "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/potential-points/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
+          "disabled": true,
+          "settings": {
+            "panel_color": "#FFFFFF",
+            "panel_padding": 10,
+            "title": "[potential_points] Entries",
+            "subtext": "Earn entries by making a purchase",
+            "show_icon": false,
+            "logged_out_only": false,
+            "custom_css": ""
+          }
+        },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
           "type": "text",
           "settings": {
@@ -299,6 +312,7 @@
       "block_order": [
         "judge_me_reviews_preview_badge_6bMyn3",
         "price",
+        "rivo_loyalty_rewards_referrals_potential_points_tzhzhW",
         "94c49419-9d53-4cfe-8c63-edaf9a145c94",
         "separator",
         "variant_picker",
@@ -338,6 +352,13 @@
         "mobile_layout": "full",
         "enable_video_looping": true,
         "product_video_style": "muted"
+      }
+    },
+    "17563958449821061e": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
       }
     },
     "rich_text_zd3AyU": {
@@ -652,6 +673,7 @@
   },
   "order": [
     "main",
+    "17563958449821061e",
     "rich_text_zd3AyU",
     "replo_trust_icons_white_backg_AnTLaL",
     "promo_grid_QUweUP",
