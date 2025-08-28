@@ -151,6 +151,53 @@
         "autoplay_speed": 5
       }
     },
+    "ss_scrolling_logo_cloud_3_9dHCRB": {
+      "type": "ss-scrolling-logo-cloud-3",
+      "blocks": {
+        "slide_w8etJH": {
+          "type": "slide",
+          "settings": {
+            "text": "| Vacations Worth Remembering | Rings Worth Keeping"
+          }
+        }
+      },
+      "block_order": [
+        "slide_w8etJH"
+      ],
+      "name": "Scrolling Text",
+      "settings": {
+        "section_height_desktop": "50",
+        "section_height_mobile": "50",
+        "height_desktop": "50",
+        "height_mobile": "50",
+        "position_top_desktop": "",
+        "position_top_mobile": "",
+        "logo_bar_height_desktop": "",
+        "logo_bar_height_mobile": "",
+        "logo_bar_top_desktop": "",
+        "logo_bar_top_mobile": "",
+        "heading_custom": false,
+        "heading_font": "assistant_n4",
+        "header_align": "center",
+        "scrolling_velocity": 20,
+        "pause_hover": false,
+        "shadow": false,
+        "slider_gap": 10,
+        "slider_gap_mobile": 10,
+        "slider_direction": "left",
+        "slider_rotate": 0,
+        "slider_rotate_mobile": 0,
+        "icon_width_desktop": 40,
+        "icon_width_mobile": 34,
+        "logo_text_color": "",
+        "logo_text_font_size_desktop": 24,
+        "logo_text_font_size_mobile": 24,
+        "slider_background_color": "#8ead97",
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0
+      }
+    },
     "slideshow_gQY9qw": {
       "type": "slideshow",
       "blocks": {
@@ -399,6 +446,7 @@
         "advanced_YdUhC6",
         "advanced_tWbteU"
       ],
+      "custom_css": [],
       "settings": {
         "full_width": false,
         "gutter_size": 20,
@@ -618,6 +666,7 @@
     "promotional_section_mGEFMz",
     "hero_section_ckiQCF",
     "slideshow_n_afjexp",
+    "ss_scrolling_logo_cloud_3_9dHCRB",
     "slideshow_gQY9qw",
     "how_it_works_2_XVYfNT",
     "main",
