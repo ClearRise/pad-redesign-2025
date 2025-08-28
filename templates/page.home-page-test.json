@@ -638,7 +638,25 @@
         "collection_qtgR46": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "meteorite-rings"
+          }
+        },
+        "collection_K8VrWW": {
+          "type": "collection",
+          "settings": {
+            "collection": "tungsten-rings"
+          }
+        },
+        "collection_PkTLqQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "mens-wood-wedding-bands"
+          }
+        },
+        "collection_TRLJze": {
+          "type": "collection",
+          "settings": {
+            "collection": "ceramic-rings"
           }
         }
       },
@@ -646,7 +664,10 @@
         "collection_4ppRWC",
         "collection_TaFDEK",
         "collection_xAmbXb",
-        "collection_qtgR46"
+        "collection_qtgR46",
+        "collection_K8VrWW",
+        "collection_PkTLqQ",
+        "collection_TRLJze"
       ],
       "name": "Featured collection(C)",
       "settings": {
