@@ -614,6 +614,51 @@
         "mobile_background_color": "#EDE4DA"
       }
     },
+    "featured_collection_carousel_Wjkr9V": {
+      "type": "featured-collection-carousel",
+      "blocks": {
+        "collection_4ppRWC": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-glowstone-series"
+          }
+        },
+        "collection_TaFDEK": {
+          "type": "collection",
+          "settings": {
+            "collection": "opal-rings"
+          }
+        },
+        "collection_xAmbXb": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_4ppRWC",
+        "collection_TaFDEK",
+        "collection_xAmbXb"
+      ],
+      "name": "Featured collection(C)",
+      "settings": {
+        "title": "Shop By Material",
+        "is_collection_list": true,
+        "home_featured_products": "best-sellers",
+        "slides_per_view_desktop": "4.2",
+        "slides_per_view_tablet": "3.2",
+        "slides_per_view_mobile": "1.3",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
     "featured_collections_werMCq": {
       "type": "featured-collections",
       "blocks": {
@@ -820,6 +865,7 @@
     "advanced_content_flexible_GcWtgn",
     "featured_collection_carousel_F9yCMj",
     "how_its_made_rCbMTR",
+    "featured_collection_carousel_Wjkr9V",
     "featured_collections_werMCq",
     "replo_trust_icons_white_backg_bLLqh7",
     "featured_collection_RTcdPC",
