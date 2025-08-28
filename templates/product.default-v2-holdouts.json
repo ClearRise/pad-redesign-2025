@@ -218,6 +218,7 @@
         },
         "67cf22ff-76d8-4ad2-91e5-80b67524f841": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "expanded": false,
             "style": "box",
@@ -441,7 +442,7 @@
           "settings": {
             "subheading": "LIMITED TIME ONLY",
             "heading": "FREE GIFT OFFER",
-            "textarea": "Get a Free Mystery Gift (Ring or Pendant) on orders $195+",
+            "textarea": "Get up to 35% off + a Free Mystery Gift (Ring or Pendant) on orders $175+",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
