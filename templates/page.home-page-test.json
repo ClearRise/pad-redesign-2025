@@ -632,6 +632,12 @@
         "collection_xAmbXb": {
           "type": "collection",
           "settings": {
+            "collection": "gold-rings"
+          }
+        },
+        "collection_qtgR46": {
+          "type": "collection",
+          "settings": {
             "collection": ""
           }
         }
@@ -639,7 +645,8 @@
       "block_order": [
         "collection_4ppRWC",
         "collection_TaFDEK",
-        "collection_xAmbXb"
+        "collection_xAmbXb",
+        "collection_qtgR46"
       ],
       "name": "Featured collection(C)",
       "settings": {
@@ -650,10 +657,10 @@
         "slides_per_view_tablet": "3.2",
         "slides_per_view_mobile": "1.3",
         "type_enable": false,
-        "subtitle_enable": false,
+        "subtitle_enable": true,
         "subtitle_type": "two",
-        "per_row": 4,
-        "rows": 1,
+        "per_row": 5,
+        "rows": 2,
         "mobile_scrollable": true,
         "view_all": true,
         "divider": false
