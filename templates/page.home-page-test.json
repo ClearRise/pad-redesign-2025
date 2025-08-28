@@ -545,6 +545,75 @@
         "divider": false
       }
     },
+    "how_its_made_rCbMTR": {
+      "type": "how-its-made",
+      "blocks": {
+        "image_VKYcbp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ring-image.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "text_box_XFfanx": {
+          "type": "text_box",
+          "settings": {
+            "header": "How It's Made",
+            "description": "Discover the story behind the creation, from concept to craftsmanship.",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "option_ELqEir": {
+          "type": "option",
+          "settings": {
+            "label": "One of a Kind"
+          }
+        },
+        "option_x9r6xA": {
+          "type": "option",
+          "settings": {
+            "label": "Hand Crafted by Skilled Artisans"
+          }
+        },
+        "option_qyy6Bq": {
+          "type": "option",
+          "settings": {
+            "label": "100M+ Viewers"
+          }
+        },
+        "option_4jzn9j": {
+          "type": "option",
+          "settings": {
+            "label": "Unique Materials"
+          }
+        },
+        "option_eDLeYF": {
+          "type": "option",
+          "settings": {
+            "label": "A Story in every Ring"
+          }
+        }
+      },
+      "block_order": [
+        "image_VKYcbp",
+        "text_box_XFfanx",
+        "option_ELqEir",
+        "option_x9r6xA",
+        "option_qyy6Bq",
+        "option_4jzn9j",
+        "option_eDLeYF"
+      ],
+      "name": "How its Made",
+      "settings": {
+        "full_width": true,
+        "space_around": true,
+        "desktop_background": "shopify://shop_images/ring_fcea0cd3-97c1-4394-8a16-bec5e8107ec7.jpg",
+        "mobile_background_color": "#EDE4DA"
+      }
+    },
     "featured_collections_werMCq": {
       "type": "featured-collections",
       "blocks": {
@@ -750,6 +819,7 @@
     "promo_grid_4iW6mW",
     "advanced_content_flexible_GcWtgn",
     "featured_collection_carousel_F9yCMj",
+    "how_its_made_rCbMTR",
     "featured_collections_werMCq",
     "replo_trust_icons_white_backg_bLLqh7",
     "featured_collection_RTcdPC",
