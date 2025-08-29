@@ -32,8 +32,6 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: {{ section.settings.vertical_block_position_on_desktop }};
-      align-items: {{ section.settings.horizontal_block_position_on_desktop }};
     }
     .hero__image-wrapper {
       height: unset !important;
@@ -302,6 +300,14 @@
                 {%- endif -%}
   
                 {%- if hero_text -%}
+                  {% style %}
+                    @media (min-width: 769px) {
+                      .hero__text-content {
+                        justify-content: {{ block.settings.vertical_block_position_on_desktop }};
+                        align-items: {{ block.settings.horizontal_block_position_on_desktop }};
+                      }
+                    }
+                  {% endstyle %}
                   <div class="hero__text-wrap">
                     <div class="hero__text-content text-{{ block.settings.text_align }} mobile-text-{{ block.settings.mobile_text_align }}">
                       <div class="hero__text-shadow">
