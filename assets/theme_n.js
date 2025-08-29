@@ -7918,7 +7918,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                       });
 
                       if (price > 0) {
-                        tempText += `<span class="bold_option_value_title bold_option_value_price_label">$${price}</span>`;
+                        tempText += `<span class="bold_option_value_title bold_option_value_price_label">(+$${price})</span>`;
                       }
 
                       targetWrapper.querySelector(
@@ -7981,7 +7981,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                 });
 
                 if (price > 0) {
-                  tempText += `<span class="bold_option_value_title bold_option_value_price_label">$${price}</span>`;
+                  tempText += `<span class="bold_option_value_title bold_option_value_price_label">(+$${price})</span>`;
                 }
 
                 boldOptionSwatchItem.querySelector(
