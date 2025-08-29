@@ -306,10 +306,17 @@
                         justify-content: {{ block.settings.vertical_block_position_on_desktop }};
                         align-items: {{ block.settings.horizontal_block_position_on_desktop }};
                       }
+                      .hero__text-shadow {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        max-width: {{ block.settings.max_width_on_desktop }}%;
+                      }
                     }
                   {% endstyle %}
                   <div class="hero__text-wrap">
-                    <div class="hero__text-content text-{{ block.settings.text_align }} mobile-text-{{ block.settings.mobile_text_align }}">
+                    <div class="hero__text-content">
                       <div class="hero__text-shadow">
                         {%- unless block.settings.top_subheading == blank -%}
                           <div class="hero__top-subtitle">
@@ -583,8 +590,8 @@
   
                 {%- if hero_text -%}
                   <div class="hero__text-wrap">
-                    <div class="page-width {{ block.settings.text_position }} {{ block.settings.mobile_text_position }}">
-                      <div class="hero__text-content text-{{ block.settings.text_align }} mobile-text-{{ block.settings.mobile_text_align }}">
+                    <div class="page-width">
+                      <div class="hero__text-content">
                         <div class="hero__text-shadow">
                           {%- unless block.settings.top_subheading == blank -%}
                             <div class="hero__top-subtitle">
@@ -873,42 +880,13 @@
             "default": "flex-start"
           },
           {
-            "type": "select",
-            "id": "text_align",
-            "label": "Text align",
-            "options": [
-              {
-                "value": "left",
-                "label": "Left"
-              },
-              {
-                "value": "center",
-                "label": "Center"
-              },
-              {
-                "value": "right",
-                "label": "Right"
-              }
-            ]
-          },
-          {
-            "type": "select",
-            "id": "mobile_text_align",
-            "label": "Mobile Text align",
-            "options": [
-              {
-                "value": "left",
-                "label": "Left"
-              },
-              {
-                "value": "center",
-                "label": "Center"
-              },
-              {
-                "value": "right",
-                "label": "Right"
-              }
-            ]
+            "type": "range",
+            "id": "max_width_on_desktop",
+            "label": "Max width on desktop",
+            "default": 60,
+            "min": 10,
+            "max": 100,
+            "unit": "%"
           },
           {
             "type": "image_picker",
