@@ -29,7 +29,6 @@
     .hero__text-content {
       margin-left: 5vw;
       margin-right: 5vw;
-      height: 100%;
       display: flex;
       flex-direction: column;
     }
@@ -308,6 +307,7 @@
                       .hero__text-content {
                         justify-content: {{ block.settings.vertical_block_position_on_desktop }};
                         align-items: {{ block.settings.horizontal_block_position_on_desktop }};
+                        height: {{ block.settings.block_height_on_desktop }}%;
                       }
                       .hero__text-shadow {
                         display: flex;
@@ -881,6 +881,15 @@
               }
             ],
             "default": "flex-start"
+          },
+          {
+            "type": "range",
+            "id": "block_height_on_desktop",
+            "label": "Block height on desktop",
+            "default": 85,
+            "min": 10,
+            "max": 100,
+            "unit": "%"
           },
           {
             "type": "range",
