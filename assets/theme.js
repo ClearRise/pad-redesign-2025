@@ -7695,6 +7695,22 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                         // targetWrapper.querySelector('.bold_option_title').innerHTML += `<span class="bold_option_value_title">${item}</span>`;
                         tempText += `<span class="bold_option_value_title">${item}</span>`;
                       });
+                      var boldOptions = tempWrap.querySelectorAll('.bold_option_value_element');
+                      console.log("keyword", boldOptions);
+                      let price = 0;
+                      [ ...boldOptions].forEach(function(boldOptionItem) {
+                        if (boldOptionItem.classList.contains("bold_swatch_selected")) {
+                          let optionPrice = boldOptionItem.parentElement?.querySelector('span.money')?.innerHTML.replace('$', '');
+                          if (isNaN(Number(optionPrice))) {
+                            optionPrice = 0;
+                          }
+                          price += Number(optionPrice);
+                        }
+                      });
+
+                      if (price > 0) {
+                        tempText += `<span class="bold_option_value_title bold_option_value_price_label">$${price}</span>`;
+                      }
                       targetWrapper.querySelector(
                         ".bold_option_title"
                       ).innerHTML = tempText;
@@ -7746,6 +7762,22 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                   // targetWrapper.querySelector('.bold_option_title').innerHTML += `<span class="bold_option_value_title">${item}</span>`;
                   tempText += `<span class="bold_option_value_title">${item}</span>`;
                 });
+                var boldOptions = tempWrap.querySelectorAll('.bold_option_value_element');
+                console.log("keyword", boldOptions);
+                let price = 0;
+                [ ...boldOptions].forEach(function(boldOptionItem) {
+                  if (boldOptionItem.classList.contains("bold_swatch_selected")) {
+                    let optionPrice = boldOptionItem.parentElement?.querySelector('span.money')?.innerHTML.replace('$', '');
+                    if (isNaN(Number(optionPrice))) {
+                      optionPrice = 0;
+                    }
+                    price += Number(optionPrice);
+                  }
+                });
+
+                if (price > 0) {
+                  tempText += `<span class="bold_option_value_title bold_option_value_price_label">$${price}</span>`;
+                }
                 boldOptionSwatchItem.querySelector(
                   ".bold_option_title"
                 ).innerHTML = tempText;
