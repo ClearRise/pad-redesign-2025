@@ -2023,7 +2023,7 @@ label.variant__label.custom_label{
   content: " , ";
 }
 .bold_option_title .bold_option_value_price_label::before {
-  content: " + ";
+  content: " ";
 }
 
 .bold_option_title .bold_option_value_price {
