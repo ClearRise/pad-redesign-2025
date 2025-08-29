@@ -27,7 +27,7 @@
           "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/potential-points/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
           "disabled": true,
           "settings": {
-            "panel_color": "#FFFFFF",
+            "panel_color": "#ffffff",
             "panel_padding": 10,
             "title": "[potential_points] Entries",
             "subtext": "Earn entries by making a purchase",
@@ -403,7 +403,7 @@
           "settings": {
             "subheading": "LABOR DAY SALE",
             "heading": "UP TO 35% OFF + FREE GIFT",
-            "textarea": "Get up to 35% off + a Free Mystery Gift (Ring or Pendant) on orders $175+",
+            "textarea": "Get up to 35% off + a Free Mystery Glowstone Ring\n<br>THIS WEEKEND ONLY",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
