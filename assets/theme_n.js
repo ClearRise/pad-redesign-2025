@@ -7796,9 +7796,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
               }
             });
 
-            // --------------------------------------------------------
             document.addEventListener("click", function (e) {
-              // console.log("ooooooooooooo", e.target);
               if (e.target.type == "checkbox") {
                 if (e.target.closest(".bold_option_value") != undefined) {
                   if (e.target.checked) {
@@ -7864,7 +7862,6 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                     ".bold_option.bold_option_swatch"
                   );
                   if (targetWrapper != undefined) {
-                    // var targetWrapperTitle = targetWrapper.querySelector('.bold_option_title').innerHTML;
                     var tempWrap = targetWrapper.querySelector(
                       ".bold_option_element"
                     );
@@ -7873,9 +7870,6 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                     //-------------
                     var items =
                       checkboxs[checkboxs.length - 1].value.split(",");
-                    // console.log(items);
-                    //-------------
-                    // console.log(checkboxs, "checkboxs");
                     setTimeout(function () {
                       //-- start new code (1/2 -- 2024/11/5)
                       var targetWrapperTitleText =
@@ -7909,6 +7903,24 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                         // targetWrapper.querySelector('.bold_option_title').innerHTML += `<span class="bold_option_value_title">${item}</span>`;
                         tempText += `<span class="bold_option_value_title">${item}</span>`;
                       });
+
+                      var boldOptions = tempWrap.querySelectorAll('.bold_option_value_element');
+                      console.log("keyword", boldOptions);
+                      let price = 0;
+                      [ ...boldOptions].forEach(function(boldOptionItem) {
+                        if (boldOptionItem.classList.contains("bold_swatch_selected")) {
+                          let optionPrice = boldOptionItem.parentElement?.querySelector('span.money')?.innerHTML.replace('$', '');
+                          if (isNaN(Number(optionPrice))) {
+                            optionPrice = 0;
+                          }
+                          price += Number(optionPrice);
+                        }
+                      });
+
+                      if (price > 0) {
+                        tempText += `<span class="bold_option_value_title bold_option_value_price_label">$${price}</span>`;
+                      }
+
                       targetWrapper.querySelector(
                         ".bold_option_title"
                       ).innerHTML = tempText;
@@ -7921,7 +7933,6 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
               document.getElementsByClassName("bold_option_swatch");
             [...domBoldOptionSwatch].forEach(function (boldOptionSwatchItem) {
               if (boldOptionSwatchItem != undefined) {
-                // var targetWrapperTitle = boldOptionSwatchItem.querySelector('.bold_option_title').innerHTML;
                 var tempWrap = boldOptionSwatchItem.querySelector(
                   ".bold_option_element"
                 );
@@ -7930,13 +7941,9 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                 }
                 var checkboxs = tempWrap.getElementsByTagName("input");
 
-                //-------------
+                console.log(checkboxs, "checkboxs");
+
                 var items = checkboxs[checkboxs.length - 1].value.split(",");
-                // console.log(JSON.stringify(items), checkboxs[checkboxs.length - 1], "init---------");
-                //-------------
-                // console.log(checkboxs, "checkboxs");
-                //setTimeout(function () {
-                //-- start new code (1/2 -- 2024/11/5)
                 var targetWrapperTitleText =
                   boldOptionSwatchItem.querySelector(
                     ".bold_option_title"
@@ -7953,20 +7960,33 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                     targetWrapperTitleText.indexOf(" ") + 1
                   );
                 }
-                //-- end
-                // console.log(targetWrapperTitle, "targetWrapperTitle");
 
                 var items = checkboxs[checkboxs.length - 1].value.split(",");
-                // targetWrapper.querySelector('.bold_option_title').innerHTML = targetWrapperTitle;
                 var tempText = targetWrapperTitleText;
                 items.forEach(function (item) {
-                  // targetWrapper.querySelector('.bold_option_title').innerHTML += `<span class="bold_option_value_title">${item}</span>`;
                   tempText += `<span class="bold_option_value_title">${item}</span>`;
                 });
+                
+                var boldOptions = tempWrap.querySelectorAll('.bold_option_value_element');
+                console.log("keyword", boldOptions);
+                let price = 0;
+                [ ...boldOptions].forEach(function(boldOptionItem) {
+                  if (boldOptionItem.classList.contains("bold_swatch_selected")) {
+                    let optionPrice = boldOptionItem.parentElement?.querySelector('span.money')?.innerHTML.replace('$', '');
+                    if (isNaN(Number(optionPrice))) {
+                      optionPrice = 0;
+                    }
+                    price += Number(optionPrice);
+                  }
+                });
+
+                if (price > 0) {
+                  tempText += `<span class="bold_option_value_title bold_option_value_price_label">$${price}</span>`;
+                }
+
                 boldOptionSwatchItem.querySelector(
                   ".bold_option_title"
                 ).innerHTML = tempText;
-                //}, 100);
               }
             });
             var optionType =
@@ -7986,7 +8006,6 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                   .querySelector(`input[name="properties[${optionType}]"]`)
                   .closest(".bold_option")
                   .querySelector('input[type="checkbox"]');
-                // console.log("->>>>>>>>>>>>>>>>>>>", targetElement);
                 if (!targetElement.checked) {
                   targetElement.click();
                 }
@@ -7995,7 +8014,6 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
           }
         );
       },
-      // -----------------------------------------------------
 
       engravingPopup: function () {
         if (
