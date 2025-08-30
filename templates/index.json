@@ -26,7 +26,7 @@
             "link_2": "",
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
-            "vertical_block_position_on_desktop": "flex-end",
+            "vertical_block_position_on_desktop": "center",
             "horizontal_block_position_on_desktop": "flex-end",
             "block_height_on_desktop": 85,
             "max_width_on_desktop": 51,
@@ -77,6 +77,9 @@
         "image_c38K3A"
       ],
       "disabled": true,
+      "custom_css": [
+        "@media (min-width: 769px) {.hero__link {position: relative; top: 7vw; width: 40%; max-width: 500px; } .hero__link a {width: 100%; }}"
+      ],
       "name": "Hero Section(New)",
       "settings": {
         "use_img_banner": true,
