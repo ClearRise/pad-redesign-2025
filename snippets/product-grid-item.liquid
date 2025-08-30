@@ -103,7 +103,13 @@ if tag contains '_label_'
               <div class="price igSavingsPrice">
                 {{ saved_amount }} Off
               </div>
-            </div>            
+            </div>
+          {% elsif section.settings.saved_amount_option == 'display_entries' -%}
+            {%- assign multiplier = section.settings.entries_multiplier -%}
+            {%- assign entries_value = product.price | divided_by: 100.0 | times: multiplier | round -%}
+            <div class="grid-product__tag grid-product__tag--sale" data-product-id="{{ product.id }}">
+              <div class="price igSavingsPrice">{{ entries_value }} Entries</div>
+            </div>
           {% else %}
             <div class="grid-product__tag grid-product__tag--sale  display-percent"  data-product-id="{{ product.id }}">
               <div class="percent igSavingsPercentage">
