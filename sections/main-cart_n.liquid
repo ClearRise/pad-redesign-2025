@@ -420,7 +420,22 @@
             {% if section.settings.show_entry != false %}
               {% assign total_in_dollars = cart.total_price | divided_by: 100 %}
               <input type="hidden" id="_multiplier" value="{{ section.settings.multiplier }}">
-              <p class="right" style="color:black;">{{ section.settings.text_entry }} <span id="_entry_val">{{ total_in_dollars | times: section.settings.multiplier }}</span> {% if section.settings.hyper_linklist %}&nbsp;&nbsp;&nbsp; <span><a href="{{ section.settings.hyper_linklist }}" style="font-size: 13px;text-decoration: underline;">{{ section.settings.link_txt }}</a></span>{% endif %}</p>
+              <p class="right" style="color:black; display: flex; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <span style="
+                  display: inline-block;
+                  background: #DC3030;
+                  padding: 3px 15px;
+                  border-radius: 20px;
+                  color: white;
+                  font-size: 14px;">
+                  {{ section.settings.text_entry }} <span id="_entry_val">{{ total_in_dollars | times: section.settings.multiplier }}</span>
+                </span> 
+                {% if section.settings.hyper_linklist %}
+                  <span>
+                    <a href="{{ section.settings.hyper_linklist }}" style="font-size: 13px;text-decoration: underline;">{{ section.settings.link_txt }}</a>
+                  </span>
+                {% endif %}
+              </p>
             {% endif %}          
             {% render 'dg-cart-upsells_n', hide_price: cart_total_exclude_gift %}
             {% if settings.cart_notes_enable %}
