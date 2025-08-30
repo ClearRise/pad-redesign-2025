@@ -308,6 +308,40 @@
         "type": "checkbox",
         "id": "load_more",
         "label": "Load more"
+      },
+      {
+        "type": "header",
+        "content": "Badge Settings"
+      },
+      {
+        "type": "select",
+        "id": "saved_amount_option",
+        "label": "Saved amount option",
+        "default": "basic_logic",
+        "options": [
+          {
+            "value": "basic_logic",
+            "label": "Basic logic"
+          },
+          {
+            "value": "display_price",
+            "label": "Display price"
+          },
+          {
+            "value": "display_entries",
+            "label": "Display entries"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "entries_multiplier",
+        "label": "Entries multiplier",
+        "default": 1,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "info": "Multiplier for converting price to entries (e.g., 2.0 = $100 shows as 200 Entries)"
       }
     ],
     "blocks": [
