@@ -107,7 +107,7 @@
             {% elsif section.settings.saved_amount_option == 'display_entries' -%}
               {%- assign multiplier = section.settings.entries_multiplier -%}
               {%- assign entries_value = product.price | divided_by: 100.0 | times: multiplier | round -%}
-              <div class="grid-product__tag grid-product__tag--entries" data-product-id="{{ product.id }}">
+              <div class="grid-product__tag grid-product__tag--sale" data-product-id="{{ product.id }}">
                 <div class="price igSavingsPrice">{{ entries_value }} Entries</div>
               </div>
             {% else %}
