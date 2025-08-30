@@ -76,10 +76,9 @@
         "image_JQkUiV",
         "image_c38K3A"
       ],
-      "disabled": true,
       "custom_css": [
         "@media (min-width: 769px) {.hero__link {position: relative; top: 7vw; width: 40%; max-width: 500px; } .hero__link a {width: 100%; }}",
-        "@media (max-width: 768px) {.hero__link {width: 30%; margin: auto; position: relative; top: -50vw; } .hero__link a {font-size: 12px !important; padding: 5px 10px; }}"
+        "@media (max-width: 768px) {.hero__link {width: 30%; margin: auto; position: relative; top: -48vw; } .hero__link a {font-size: 12px !important; padding: 5px 10px; }}"
       ],
       "name": "Hero Section(New)",
       "settings": {
