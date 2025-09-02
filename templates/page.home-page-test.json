@@ -671,6 +671,79 @@
         "mobile_background_color": "#ede4da"
       }
     },
+    "promo_grid_fNrj9X": {
+      "type": "promo-grid",
+      "blocks": {
+        "banner_bixk4p": {
+          "type": "banner",
+          "settings": {
+            "heading": "HOW IT WORKS",
+            "text": "",
+            "link": "",
+            "label": "",
+            "color_tint": "#000000",
+            "color_tint_opacity": 8,
+            "framed": false
+          }
+        },
+        "image_Q7DeqF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_4.jpg",
+            "link": "",
+            "width": "50"
+          }
+        },
+        "image_ihL8gw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_5.jpg",
+            "link": "",
+            "width": "50"
+          }
+        },
+        "image_CBMAjw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_6.jpg",
+            "link": "",
+            "width": "50"
+          }
+        },
+        "image_YNhdpU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3.jpg",
+            "link": "",
+            "width": "50"
+          }
+        },
+        "image_GykgJh": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Artboard_7.jpg",
+            "link": "",
+            "width": "33"
+          }
+        }
+      },
+      "block_order": [
+        "banner_bixk4p",
+        "image_Q7DeqF",
+        "image_ihL8gw",
+        "image_CBMAjw",
+        "image_YNhdpU",
+        "image_GykgJh"
+      ],
+      "name": "Promotional grid",
+      "settings": {
+        "full_width": true,
+        "gutter_size": 0,
+        "space_above": false,
+        "space_below": false
+      }
+    },
     "featured_collection_carousel_Wjkr9V": {
       "type": "featured-collection-carousel",
       "blocks": {
@@ -1071,6 +1144,7 @@
     "advanced_content_flexible_GcWtgn",
     "featured_collection_carousel_F9yCMj",
     "how_its_made_rCbMTR",
+    "promo_grid_fNrj9X",
     "featured_collection_carousel_Wjkr9V",
     "advanced_content_flexible_qXngJC",
     "custom_review_section_iKtJzk",
