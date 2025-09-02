@@ -451,7 +451,9 @@
         "advanced_YdUhC6",
         "advanced_tWbteU"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".promo-grid {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+      ],
       "settings": {
         "full_width": false,
         "gutter_size": 20,
