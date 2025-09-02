@@ -786,7 +786,7 @@
         "per_row": 5,
         "rows": 2,
         "mobile_scrollable": true,
-        "view_all": true,
+        "view_all": false,
         "divider": false,
         "saved_amount_option": "basic_logic",
         "entries_multiplier": 1
