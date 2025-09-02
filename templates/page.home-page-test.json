@@ -459,6 +459,54 @@
         "space_below": false
       }
     },
+    "hero_section_w4facH": {
+      "type": "hero-section",
+      "blocks": {
+        "image_AmYcJ7": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "vertical_block_position_on_desktop": "center",
+            "horizontal_block_position_on_desktop": "flex-start",
+            "block_height_on_desktop": 85,
+            "max_width_on_desktop": 60,
+            "image": "shopify://shop_images/Artboard_12.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_13.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#000000",
+            "button_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_AmYcJ7"
+      ],
+      "name": "Hero Section(New)",
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
     "advanced_content_flexible_GcWtgn": {
       "type": "advanced-content-flexible",
       "blocks": {
@@ -546,7 +594,9 @@
         "rows": 2,
         "mobile_scrollable": true,
         "view_all": true,
-        "divider": false
+        "divider": false,
+        "saved_amount_option": "basic_logic",
+        "entries_multiplier": 1
       }
     },
     "how_its_made_rCbMTR": {
@@ -688,7 +738,9 @@
         "rows": 2,
         "mobile_scrollable": true,
         "view_all": true,
-        "divider": false
+        "divider": false,
+        "saved_amount_option": "basic_logic",
+        "entries_multiplier": 1
       }
     },
     "advanced_content_flexible_qXngJC": {
@@ -1012,6 +1064,7 @@
     "how_it_works_2_XVYfNT",
     "main",
     "promo_grid_4iW6mW",
+    "hero_section_w4facH",
     "advanced_content_flexible_GcWtgn",
     "featured_collection_carousel_F9yCMj",
     "how_its_made_rCbMTR",
