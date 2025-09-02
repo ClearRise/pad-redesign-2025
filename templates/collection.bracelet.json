@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/4-3.jpg",
-            "image_mobile": "shopify://shop_images/2-3.jpg",
+            "image": "shopify://shop_images/4-4.jpg",
+            "image_mobile": "shopify://shop_images/2-4.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -190,6 +190,7 @@
         "subtitle_type": "two",
         "custom_badge": "",
         "saved_amount_option": "basic_logic",
+        "entries_multiplier": 1,
         "load_more": false
       }
     }
