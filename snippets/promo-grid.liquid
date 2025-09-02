@@ -17,6 +17,9 @@
     padding-top: {{ section.settings.gutter_size }}px;
     padding-left: {{ section.settings.gutter_size }}px;
   }
+  .promo-grid__container {
+    flex-direction: column;
+  }
 
   @media only screen and (max-width: 589px) {
     .flex-grid--{{ section.id }} {
@@ -41,6 +44,26 @@
 {%- endstyle -%}
 
 <div class="promo-grid{% if section.settings.space_above %} promo-grid--space-top{% endif %}{% if section.settings.space_below %} promo-grid--space-bottom{% endif %}">
+  {%- if section.settings.show_title == true -%}
+    <div class="header-container">
+      <h2 class="section-header__title 
+        {%- case section.settings.align_title -%}
+          {% when 'center' %} text-center
+          {% when 'right' %} text-right
+        {% endcase %}">
+        {{ section.settings.title }}
+      </h2>
+      {%- if section.settings.sub_title -%}
+        <h3 class="section-header__sub_title
+          {%- case section.settings.align_sub_title -%}
+            {% when 'center' %} text-center
+            {% when 'right' %} text-right
+          {% endcase %}">
+          {{ section.settings.sub_title }}
+        </h3>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
   <div class="flex-grid flex-grid--gutters flex-grid--{{ section.id }}">
     {%- for block in section.blocks -%}
       <style>
@@ -366,7 +389,7 @@
                         role="presentation"
                         alt="{{ block.settings.image.alt }}">
                     <noscript>
-                      <img class="lazyloaded" src="{{ block.settings.image | img_url: '600x' }}" alt="{{ block.settings.image.alt }}">
+                      {% comment %} <img class="lazyloaded" src="{{ block.settings.image | img_url: '600x' }}" alt="{{ block.settings.image.alt }}"> {% endcomment %}
                     </noscript>
                   </div>
                 {%- else -%}
@@ -374,6 +397,10 @@
                 {%- endif -%}
               {%- if block.settings.link -%}
                 </a>
+              {%- endif -%}
+
+              {%- if section.settings.show_img_title == true -%}
+                <div class="w-100p text-center grid-product__title grid-product__title--body">{{ block.settings.image_title }}</div>
               {%- endif -%}
             </div>
 
