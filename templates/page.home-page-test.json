@@ -598,7 +598,7 @@
         "mobile_scrollable": true,
         "view_all": true,
         "divider": false,
-        "saved_amount_option": "basic_logic",
+        "saved_amount_option": "display_entries",
         "entries_multiplier": 1
       }
     },
@@ -663,6 +663,7 @@
         "option_4jzn9j",
         "option_eDLeYF"
       ],
+      "disabled": true,
       "name": "How its Made",
       "settings": {
         "full_width": true,
