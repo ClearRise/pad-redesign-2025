@@ -745,6 +745,47 @@
         "space_below": false
       }
     },
+    "promo_grid_qK9aWM": {
+      "type": "promo-grid",
+      "blocks": {
+        "image_zc9WXD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Womens-lavender-Glowstone-Ring-1.png",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_9qn7NF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/MeteoriteSplitBraceletMasked.png",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_xUXJJP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Mystery_Ring_Gif_bf14da19-95c3-4062-bee1-3da32c79205e.gif",
+            "link": "",
+            "width": "33"
+          }
+        }
+      },
+      "block_order": [
+        "image_zc9WXD",
+        "image_9qn7NF",
+        "image_xUXJJP"
+      ],
+      "name": "Promotional grid",
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true
+      }
+    },
     "featured_collection_carousel_Wjkr9V": {
       "type": "featured-collection-carousel",
       "blocks": {
@@ -1162,11 +1203,6 @@
         "divider": false
       }
     },
-    "replo_ethos_FPf3qh": {
-      "type": "replo-ethos",
-      "disabled": true,
-      "settings": {}
-    },
     "rich_text_JaHgJW": {
       "type": "rich-text",
       "blocks": {
@@ -1263,6 +1299,7 @@
     "featured_collection_carousel_F9yCMj",
     "how_its_made_rCbMTR",
     "promo_grid_fNrj9X",
+    "promo_grid_qK9aWM",
     "featured_collection_carousel_Wjkr9V",
     "advanced_content_flexible_qXngJC",
     "hero_section_P7XPJ4",
@@ -1272,7 +1309,6 @@
     "featured_collections_werMCq",
     "replo_trust_icons_white_backg_bLLqh7",
     "featured_collection_RTcdPC",
-    "replo_ethos_FPf3qh",
     "rich_text_JaHgJW",
     "logo_list_8yzTJ8"
   ]
