@@ -804,7 +804,7 @@
       "settings": {
         "show_title": true,
         "title": "Promotional",
-        "align_title": "left",
+        "align_title": "center",
         "sub_title": "notification",
         "align_sub_title": "left",
         "show_img_title": true,
