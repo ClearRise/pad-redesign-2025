@@ -800,14 +800,13 @@
         "image_9qn7NF",
         "image_xUXJJP"
       ],
-      "disabled": true,
       "name": "Promotional grid",
       "settings": {
         "show_title": true,
         "title": "Earn 2x Entries",
-        "align_title": "center",
-        "sub_title": "Increase your Chances by Purchasing From These Curated Collections",
-        "align_sub_title": "center",
+        "align_title": "left",
+        "sub_title": "Increase Your Chances by Earning 2x Entries on These Collections",
+        "align_sub_title": "left",
         "show_img_title": true,
         "full_width": false,
         "gutter_size": 20,
@@ -842,6 +841,7 @@
         "collection_TaFDEK",
         "collection_xAmbXb"
       ],
+      "disabled": true,
       "name": "Featured collection(C)",
       "settings": {
         "title": "Earn 2x Entries",
