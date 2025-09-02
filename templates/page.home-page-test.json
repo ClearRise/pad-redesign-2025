@@ -752,7 +752,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Womens-lavender-Glowstone-Ring-1.png",
-            "link": "",
+            "link": "shopify://collections/womens-wedding-bands-glowstone",
             "width": "33"
           }
         },
@@ -760,7 +760,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/MeteoriteSplitBraceletMasked.png",
-            "link": "",
+            "link": "shopify://collections/accessories",
             "width": "33"
           }
         },
@@ -768,7 +768,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Mystery_Ring_Gif_bf14da19-95c3-4062-bee1-3da32c79205e.gif",
-            "link": "",
+            "link": "shopify://collections/mystery-rings",
             "width": "33"
           }
         }
