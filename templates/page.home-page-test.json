@@ -772,7 +772,7 @@
           "settings": {
             "image": "shopify://shop_images/Womens-lavender-Glowstone-Ring-1.png",
             "link": "shopify://collections/womens-wedding-bands-glowstone",
-            "image_title": "image",
+            "image_title": "Stackable Glowstone Rings",
             "width": "33"
           }
         },
@@ -781,7 +781,7 @@
           "settings": {
             "image": "shopify://shop_images/MeteoriteSplitBraceletMasked.png",
             "link": "shopify://collections/accessories",
-            "image_title": "image",
+            "image_title": "Accessories",
             "width": "33"
           }
         },
@@ -790,7 +790,7 @@
           "settings": {
             "image": "shopify://shop_images/Mystery_Ring_Gif_bf14da19-95c3-4062-bee1-3da32c79205e.gif",
             "link": "shopify://collections/mystery-rings",
-            "image_title": "image",
+            "image_title": "Mystery Rings",
             "width": "33"
           }
         }
@@ -803,10 +803,10 @@
       "name": "Promotional grid",
       "settings": {
         "show_title": true,
-        "title": "Promotional",
+        "title": "Earn 2x Entries",
         "align_title": "center",
-        "sub_title": "notification",
-        "align_sub_title": "left",
+        "sub_title": "Increase your Chances by Purchasing From These Curated Collections",
+        "align_sub_title": "center",
         "show_img_title": true,
         "full_width": false,
         "gutter_size": 20,
