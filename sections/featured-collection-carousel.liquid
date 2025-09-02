@@ -17,14 +17,14 @@
     justify-content: space-between;
     align-items: flex-end;
   }
-  #CollectionSection-{{ section.id }} .section-header h2 + div {
+  #CollectionSection-{{ section.id }} .section-header .header-container + div {
     display: flex;
   }
-  #CollectionSection-{{ section.id }} .section-header h2 + div a {
+  #CollectionSection-{{ section.id }} .section-header .header-container + div a {
     text-transform: uppercase;
   }
-  #CollectionSection-{{ section.id }} .section-header h2 + div .swiper-button-prev,
-  #CollectionSection-{{ section.id }} .section-header h2 + div .swiper-button-next {
+  #CollectionSection-{{ section.id }} .section-header .header-container + div .swiper-button-prev,
+  #CollectionSection-{{ section.id }} .section-header .header-container + div .swiper-button-next {
     position: relative;
     left: unset;
     right: unset;
@@ -40,8 +40,8 @@
     width: 36px !important;
   }
   @media (max-width: 550px) {
-    #CollectionSection-{{ section.id }} .section-header h2 + div .swiper-button-prev,
-    #CollectionSection-{{ section.id }} .section-header h2 + div .swiper-button-next {
+    #CollectionSection-{{ section.id }} .section-header .header-container + div .swiper-button-prev,
+    #CollectionSection-{{ section.id }} .section-header .header-container + div .swiper-button-next {
       display: none;
     }
   }
