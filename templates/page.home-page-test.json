@@ -751,7 +751,7 @@
         "image_GykgJh"
       ],
       "custom_css": [
-        ".type-banner__content {background: white !important;}"
+        ".flex-grid__item--banner_bixk4p .promo-grid__container--tint:before {background: white !important;}"
       ],
       "name": "Promotional grid",
       "settings": {
