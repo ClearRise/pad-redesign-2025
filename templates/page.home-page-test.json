@@ -750,6 +750,9 @@
         "image_YNhdpU",
         "image_GykgJh"
       ],
+      "custom_css": [
+        ".type-banner__content {background: white !important;}"
+      ],
       "name": "Promotional grid",
       "settings": {
         "show_title": false,
