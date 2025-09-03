@@ -771,7 +771,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Womens-lavender-Glowstone-Ring-1.png",
-            "link": "shopify://collections/womens-wedding-bands-glowstone",
+            "link": "shopify://collections/glowstone-stackable-rings",
             "image_title": "Stackable Glowstone Rings",
             "width": "33"
           }
@@ -820,7 +820,7 @@
         "collection_4ppRWC": {
           "type": "collection",
           "settings": {
-            "collection": "womens-wedding-bands-glowstone"
+            "collection": "glowstone-stackable-rings"
           }
         },
         "collection_TaFDEK": {
@@ -848,7 +848,7 @@
         "show_sub_title": true,
         "sub_title": "Increase Your Chances by Earning 2x Entries on These Collections",
         "is_collection_list": true,
-        "home_featured_products": "womens-wedding-bands-glowstone",
+        "home_featured_products": "glowstone-stackable-rings",
         "slides_per_view_desktop": "4.2",
         "slides_per_view_tablet": "3.2",
         "slides_per_view_mobile": "1.3",
