@@ -753,7 +753,7 @@
       "custom_css": [
         ".flex-grid__item--banner_bixk4p .promo-grid__container--tint:before {background: white !important;}",
         ".type-banner__content {justify-content: flex-start !important;}",
-        ".type-banner__content h3 {text-align: left !important;}"
+        ".type-banner__content p {text-align: left !important;}"
       ],
       "name": "Promotional grid",
       "settings": {
