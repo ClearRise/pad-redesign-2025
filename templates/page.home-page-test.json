@@ -479,7 +479,7 @@
             "special_title_color": "",
             "subheading": "",
             "special_text_color": "",
-            "link": "https://patrickadairdesigns.com/pages/sweepstakes-email-and-sms-free-sign-up",
+            "link": "",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
@@ -686,7 +686,7 @@
         "banner_bixk4p": {
           "type": "banner",
           "settings": {
-            "heading": "How It Works",
+            "heading": "<b>How It Works</b>",
             "text": "",
             "link": "",
             "label": "",
@@ -806,7 +806,7 @@
       "name": "Promotional grid",
       "settings": {
         "show_title": true,
-        "title": "Earn 2x Entries",
+        "title": "<b>Earn 2x Entries</b>",
         "align_title": "left",
         "sub_title": "Increase Your Chances by Earning 2x Entries on These Collections",
         "align_sub_title": "left",
