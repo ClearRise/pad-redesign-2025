@@ -623,10 +623,10 @@
                         {%- endif -%}
                         <span data-save-price class="product__price-savings{% if hide_sale_price %} hide{% endif %}">
                           {%- unless hide_sale_price -%}
-                            {%- if section.settings.savings_or_entries == 'savings' -%}
+                            {%- if settings.savings_or_entries == 'savings' -%}
                               {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
-                            {% elsif section.settings.savings_or_entries == 'entries' -%}
-                              {%- assign multiplier = section.settings.entries_multiplier -%}
+                            {% elsif settings.savings_or_entries == 'entries' -%}
+                              {%- assign multiplier = settings.entries_multiplier -%}
                               {%- assign entries_value = product.price | divided_by: 100.0 | times: multiplier | round -%}
                               {{ entries_value }} Entries
                             {%- endif -%}
