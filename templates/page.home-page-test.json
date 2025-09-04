@@ -686,7 +686,7 @@
         "banner_bixk4p": {
           "type": "banner",
           "settings": {
-            "heading": "<b>How It Work</b>",
+            "heading": "How It Work",
             "text": "",
             "link": "",
             "label": "",
@@ -751,7 +751,8 @@
         "image_GykgJh"
       ],
       "custom_css": [
-        ".flex-grid__item--banner_bixk4p .promo-grid__container--tint:before {background: white !important;}"
+        "-start.flex-grid__item--banner_bixk4p .promo-grid__container--tint:before {background: white !important;}",
+        ".type-banner__content {justify-content: flex-start !important}"
       ],
       "name": "Promotional grid",
       "settings": {
