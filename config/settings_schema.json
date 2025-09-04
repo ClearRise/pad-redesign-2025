@@ -1555,5 +1555,32 @@
         "label": "Disable zoom animations"
       }
     ]
+  },
+  {
+    "name": "PDP badge settings",
+    "settings": [
+      {
+        "type": "select",
+        "id": "savings_or_entries",
+        "label": "Savings or Entries",
+        "default": "savings",
+        "options": [
+          {
+            "value": "savings",
+            "label": "Savings"
+          },
+          {
+            "value": "entries",
+            "label": "Entries"
+          }
+        ]
+      },
+      {
+        "type": "number",
+        "id": "entries_multiplier",
+        "label": "Entries multiplier",
+        "default": 1
+      }
+    ]
   }
 ]
