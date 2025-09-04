@@ -1562,7 +1562,7 @@
       {
         "type": "select",
         "id": "savings_or_entries",
-        "label": "Savings or Entries",
+        "label": "Show Savings or Entries",
         "default": "savings",
         "options": [
           {
