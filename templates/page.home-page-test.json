@@ -590,7 +590,7 @@
       "type": "featured-collection-carousel",
       "name": "Featured collection(C)",
       "settings": {
-        "title": "Best Sellers",
+        "title": "<b>Best Sellers</b>",
         "show_sub_title": false,
         "sub_title": "",
         "is_collection_list": false,
@@ -686,7 +686,7 @@
         "banner_bixk4p": {
           "type": "banner",
           "settings": {
-            "heading": "<b>How It Works</b>",
+            "heading": "How It Work",
             "text": "",
             "link": "",
             "label": "",
