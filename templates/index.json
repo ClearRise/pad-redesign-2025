@@ -568,7 +568,7 @@
         "mobile_scrollable": true,
         "view_all": true,
         "divider": false,
-        "saved_amount_option": "display_entries",
+        "saved_amount_option": "basic_logic",
         "entries_multiplier": 1
       }
     },
