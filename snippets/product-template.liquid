@@ -627,17 +627,11 @@
                           {%- endunless -%}
                         </span>
                         
-                        {%- if settings.savings_or_entries == 'savings' -%}
-                          {% if block.settings.enable_badge == true and block.settings.custom_badge != blank %}
-                            <span class="save_badge {{settings.save_badge_type}} custom">{{block.settings.custom_badge}}</span>
-                          {% elsif settings.save_badget_text and settings.display_save_badge == 'true' %}
-                            <span class="save_badge {{settings.save_badge_type}}">{{settings.save_badget_text}}</span>
-                          {% endif %}
-                        {% elsif settings.savings_or_entries == 'entries' -%}
-                          {%- assign multiplier = settings.entries_multiplier -%}
-                          {%- assign entries_value = product.price | divided_by: 100.0 | times: multiplier | round -%}
-                          {{ entries_value }} Entries
-                        {%- endif -%}
+                        {% if block.settings.enable_badge == true and block.settings.custom_badge != blank %}
+                          <span class="save_badge {{settings.save_badge_type}} custom">{{block.settings.custom_badge}}</span>
+                        {% elsif settings.save_badget_text and settings.display_save_badge == 'true' %}
+                          <span class="save_badge {{settings.save_badge_type}}">{{settings.save_badget_text}}</span>
+                        {% endif %}
                       {%- endif -%}
 
                       <div
