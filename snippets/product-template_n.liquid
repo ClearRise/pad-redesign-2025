@@ -738,7 +738,9 @@
                         {% elsif settings.savings_or_entries == 'entries' -%}
                           {%- assign multiplier = settings.entries_multiplier -%}
                           {%- assign entries_value = product.price | divided_by: 100.0 | times: multiplier | round -%}
-                          <span class="save_badge {{settings.save_badge_type}}">{{ entries_value }} Entries</span>
+                            <div class="buy-one-get-one-free">
+                              <span>{{ entries_value }} Entries</span>
+                            </div>
                         {%- endif -%}
                       {% endif %}
                     </div>
