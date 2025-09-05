@@ -699,7 +699,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Artboard_4.jpg",
-            "link": "",
+            "link": "https://patrickadairdesigns.com/pages/sweepstakes-rules",
             "image_title": "image",
             "width": "50"
           }
@@ -708,7 +708,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Artboard_5.jpg",
-            "link": "",
+            "link": "shopify://collections/all-products-new",
             "image_title": "image",
             "width": "50"
           }
