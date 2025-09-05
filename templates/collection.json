@@ -296,7 +296,7 @@
         "subtitle_enable": true,
         "subtitle_type": "two",
         "custom_badge": "",
-        "saved_amount_option": "display_entries",
+        "saved_amount_option": "basic_logic",
         "entries_multiplier": 1,
         "load_more": false
       }
