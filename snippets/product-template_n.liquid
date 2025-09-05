@@ -689,20 +689,21 @@
                             {% comment %} <span class="separate-dot"> {% endcomment %}
                               {% render 'icon-dot', color: '#138E7E66' %}
                             {% comment %} </span> {% endcomment %}
-                            {%- if settings.savings_or_entries == 'savings' -%}
                               {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
-                            {% elsif settings.savings_or_entries == 'entries' -%}
-                              {%- assign multiplier = settings.entries_multiplier -%}
-                              {%- assign entries_value = product.price | divided_by: 100.0 | times: multiplier | round -%}
-                              {{ entries_value }} Entries
-                            {%- endif -%}
                           {%- endunless -%}
                         </span>
-                        {% if block.settings.enable_badge == true and block.settings.custom_badge != blank %}
-                          {% comment %} <span class="save_badge {{settings.save_badge_type}} custom">{{block.settings.custom_badge}}</span> {% endcomment %}
-                        {% elsif settings.save_badget_text and settings.display_save_badge == 'true' %}
-                          <span class="save_badge {{settings.save_badge_type}}">{{settings.save_badget_text}}</span>
-                        {% endif %}
+                        
+                        {%- if settings.savings_or_entries == 'savings' -%}
+                          {% if block.settings.enable_badge == true and block.settings.custom_badge != blank %}
+                            {% comment %} <span class="save_badge {{settings.save_badge_type}} custom">{{block.settings.custom_badge}}</span> {% endcomment %}
+                          {% elsif settings.save_badget_text and settings.display_save_badge == 'true' %}
+                            <span class="save_badge {{settings.save_badge_type}}">{{settings.save_badget_text}}</span>
+                          {% endif %}
+                        {% elsif settings.savings_or_entries == 'entries' -%}
+                          {%- assign multiplier = settings.entries_multiplier -%}
+                          {%- assign entries_value = product.price | divided_by: 100.0 | times: multiplier | round -%}
+                          {{ entries_value }} Entries
+                        {%- endif -%}
                       {%- endif -%}
 
                       <div
