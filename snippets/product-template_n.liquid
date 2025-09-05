@@ -693,17 +693,12 @@
                           {%- endunless -%}
                         </span>
                         
-                        {%- if settings.savings_or_entries == 'savings' -%}
-                          {% if block.settings.enable_badge == true and block.settings.custom_badge != blank %}
-                            {% comment %} <span class="save_badge {{settings.save_badge_type}} custom">{{block.settings.custom_badge}}</span> {% endcomment %}
-                          {% elsif settings.save_badget_text and settings.display_save_badge == 'true' %}
-                            <span class="save_badge {{settings.save_badge_type}}">{{settings.save_badget_text}}</span>
-                          {% endif %}
-                        {% elsif settings.savings_or_entries == 'entries' -%}
-                          {%- assign multiplier = settings.entries_multiplier -%}
-                          {%- assign entries_value = product.price | divided_by: 100.0 | times: multiplier | round -%}
-                          <span class="save_badge {{settings.save_badge_type}}">{{ entries_value }} Entries</span>
-                        {%- endif -%}
+                        {% if block.settings.enable_badge == true and block.settings.custom_badge != blank %}
+                          {% comment %} <span class="save_badge {{settings.save_badge_type}} custom">{{block.settings.custom_badge}}</span> {% endcomment %}
+                        {% elsif settings.save_badget_text and settings.display_save_badge == 'true' %}
+                          <span class="save_badge {{settings.save_badge_type}}">{{settings.save_badget_text}}</span>
+                        {% endif %}
+                        
                       {%- endif -%}
 
                       <div
@@ -733,10 +728,18 @@
                           {%- endif -%}
                         </div>
                       {%- endif -%}
-                      {% if block.settings.enable_badge == true and block.settings.custom_badge != blank %}
-                        <div class="buy-one-get-one-free">
-                          <span>{{ block.settings.custom_badge }}</span>
-                        </div>
+                      {% if block.settings.enable_badge %}
+                        {% if settings.savings_or_entries == 'savings' -%}
+                          {% if block.settings.custom_badge != blank %}
+                            <div class="buy-one-get-one-free">
+                              <span>{{ block.settings.custom_badge }}</span>
+                            </div>
+                          {% endif %}
+                        {% elsif settings.savings_or_entries == 'entries' -%}
+                          {%- assign multiplier = settings.entries_multiplier -%}
+                          {%- assign entries_value = product.price | divided_by: 100.0 | times: multiplier | round -%}
+                          <span class="save_badge {{settings.save_badge_type}}">{{ entries_value }} Entries</span>
+                        {%- endif -%}
                       {% endif %}
                     </div>
                   {%- when 'quantity_selector' -%}
