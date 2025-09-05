@@ -777,7 +777,7 @@
         "image_zc9WXD": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Womens-lavender-Glowstone-Ring-1.png",
+            "image": "shopify://shop_images/aquaglow.png",
             "link": "shopify://collections/glowstone-stackable-rings",
             "image_title": "Stackable Glowstone Rings",
             "width": "33"
@@ -786,7 +786,7 @@
         "image_9qn7NF": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/MeteoriteSplitBraceletMasked.png",
+            "image": "shopify://shop_images/Meteorite_Necklace_Photo_1.jpg",
             "link": "shopify://collections/accessories",
             "image_title": "Accessories",
             "width": "33"
@@ -810,7 +810,7 @@
       "name": "Promotional grid",
       "settings": {
         "show_title": true,
-        "title": "<b>Earn 2x Entries</b>",
+        "title": "Earn 2x Entries",
         "align_title": "left",
         "sub_title": "Increase Your Chances by Earning 2x Entries on These Collections",
         "align_sub_title": "left",
