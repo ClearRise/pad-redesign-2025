@@ -810,7 +810,7 @@
       "name": "Promotional grid",
       "settings": {
         "show_title": true,
-        "title": "Earn 2x Entries",
+        "title": "<b>Earn 2x Entries</b>",
         "align_title": "left",
         "sub_title": "Increase Your Chances by Earning 2x Entries on These Collections",
         "align_sub_title": "left",
