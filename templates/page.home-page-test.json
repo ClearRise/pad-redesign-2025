@@ -686,7 +686,7 @@
         "banner_bixk4p": {
           "type": "banner",
           "settings": {
-            "heading": "How It Work",
+            "heading": "<b>How It Works</b>",
             "text": "",
             "link": "",
             "label": "",
