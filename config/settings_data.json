@@ -136,7 +136,7 @@
     "show_breadcrumbs": false,
     "show_breadcrumbs_collection_link": true,
     "savings_or_entries": "savings",
-    "entries_multiplier": 1.5,
+    "entries_multiplier": 1,
     "picker_type": "dropdown",
     "product_swatch_style": "circle",
     "checkout_logo_image": "shopify://shop_images/test5.png",
