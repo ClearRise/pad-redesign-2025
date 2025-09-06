@@ -481,6 +481,11 @@
         "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
         "disabled": true,
         "settings": {}
+      },
+      "7860399670564181960": {
+        "type": "shopify://apps/profy-banner-countdown-timer/blocks/app_embed/243a639f-ca73-4afe-b6aa-3a23277fb424",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
