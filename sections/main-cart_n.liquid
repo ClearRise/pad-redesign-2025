@@ -525,6 +525,104 @@
 
     scrollbar();
     window.addEventListener('scroll', scrollbar, false);
+
+    // Cart validation and tier-based gift removal logic
+    document.addEventListener('DOMContentLoaded', function() {
+      validateAndRemoveInvalidGifts();
+    });
+
+    // Monitor cart changes and remove invalid gifts
+    document.addEventListener('cart:updated', function() {
+      validateAndRemoveInvalidGifts();
+    });
+
+    document.addEventListener('ajaxProduct:added', function() {
+      validateAndRemoveInvalidGifts();
+    });
+
+    async function validateAndRemoveInvalidGifts() {
+      try {
+        const response = await fetch('/cart.js');
+        const cart = await response.json();
+        
+        const secondTierMin = {{ settings.min_cart_threshold_amount | times: 100 }};
+        const secondTierMax = {{ settings.max_cart_threshold_amount | times: 100 }};
+        
+        // Get first tier gift product IDs
+        const firstTierGiftIds = [];
+        {% if settings.show_gift_box %}
+          {% if settings.product-handle-1 %}
+            firstTierGiftIds.push('{{ settings.product-handle-1.selected_or_first_available_variant.id }}');
+          {% endif %}
+          {% if settings.product-handle-2 %}
+            firstTierGiftIds.push('{{ settings.product-handle-2.selected_or_first_available_variant.id }}');
+          {% endif %}
+        {% endif %}
+        
+        // Get second tier gift product IDs
+        const secondTierGiftIds = [];
+        {% if settings.second_show_gift_box %}
+          {% if settings.second_product-handle-1 %}
+            secondTierGiftIds.push('{{ settings.second_product-handle-1.selected_or_first_available_variant.id }}');
+          {% endif %}
+          {% if settings.second_product-handle-2 %}
+            secondTierGiftIds.push('{{ settings.second_product-handle-2.selected_or_first_available_variant.id }}');
+          {% endif %}
+        {% endif %}
+
+        // Check if cart meets second tier requirements
+        const cartTotal = cart.total_price;
+        const meetsSecondTierRequirements = cartTotal >= secondTierMin && cartTotal <= secondTierMax;
+
+        // Find and remove invalid gifts based on tier
+        const itemsToRemove = [];
+        cart.items.forEach(item => {
+          const isFirstTierGift = firstTierGiftIds.includes(item.variant_id.toString());
+          const isSecondTierGift = secondTierGiftIds.includes(item.variant_id.toString());
+          
+          if (isFirstTierGift && meetsSecondTierRequirements) {
+            // Remove first tier gifts when second tier requirements are met
+            itemsToRemove.push({
+              id: item.key,
+              title: item.title,
+              variant_id: item.variant_id,
+              tier: 'first'
+            });
+          } else if (isSecondTierGift && !meetsSecondTierRequirements) {
+            // Remove second tier gifts when second tier requirements are not met
+            itemsToRemove.push({
+              id: item.key,
+              title: item.title,
+              variant_id: item.variant_id,
+              tier: 'second'
+            });
+          }
+        });
+
+        // Remove invalid gifts
+        if (itemsToRemove.length > 0) {
+          console.log('Removing invalid tier gifts:', itemsToRemove);
+          
+          for (const item of itemsToRemove) {
+            await fetch('/cart/change.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                id: item.id,
+                quantity: 0
+              })
+            });
+          }
+          
+          // Refresh the page to update the display
+          window.location.reload();
+        }
+      } catch (error) {
+        console.error('Error validating cart gifts:', error);
+      }
+    }
   </script>
 
 {% schema %}
