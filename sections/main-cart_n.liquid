@@ -570,9 +570,15 @@
           {% endif %}
         {% endif %}
 
+
         // Check if cart meets second tier requirements
         const cartTotal = cart.total_price;
-        const meetsSecondTierRequirements = cartTotal >= secondTierMin && cartTotal <= secondTierMax;
+        
+        {% if settings.second_show_gift_box == true %}
+          const meetsSecondTierRequirements = cartTotal >= secondTierMin && cartTotal <= secondTierMax;
+        {% else %}
+          const meetsSecondTierRequirements = false;
+        {% endif %}
 
         // Find and remove invalid gifts based on tier
         const itemsToRemove = [];
