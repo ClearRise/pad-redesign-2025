@@ -423,10 +423,10 @@
                 {% assign total_entries = 0 %}
                 {% for item in cart.items %}
                   {% if item.product.metafields.custom.entries_multiplier != blank %}
-                    {% assign new_entries = item.product.metafields.custom.entries_multiplier | times: item.price | times: item.quantity %}
+                    {% assign new_entries = item.product.metafields.custom.entries_multiplier | times: item.price | times: item.quantity | divided_by: 100 %}
                     {% assign total_entries = total_entries | plus: new_entries%}
                   {% else %}
-                    {% assign new_entries = settings.entries_multiplier | times: item.price | times: item.quantity %}
+                    {% assign new_entries = settings.entries_multiplier | times: item.price | times: item.quantity | divided_by: 100 %}
                     {% assign total_entries = total_entries | plus: new_entries %}
                   {% endif %}
                 {% endfor %}
