@@ -722,7 +722,6 @@
     },
     "trust_icons_new_ss": {
       "type": "trust-icons_n",
-      "disabled": true,
       "custom_css": [
         "{padding-top: 0px;}"
       ],
