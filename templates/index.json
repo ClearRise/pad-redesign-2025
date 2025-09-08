@@ -807,6 +807,35 @@
         "divider": false
       }
     },
+    "rich_text_Jmj6Ek": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Niq4if": {
+          "type": "heading",
+          "settings": {
+            "title": "Earn 2x Entries"
+          }
+        },
+        "text_ri4AVa": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Increase Your Chances by Earning 2x Entries on These Collections<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Niq4if",
+        "text_ri4AVa"
+      ],
+      "disabled": true,
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "trust_icons_new_ss": {
       "type": "trust-icons_n",
       "custom_css": [
@@ -1188,6 +1217,7 @@
     "featured_collection_carousel_RgiWej",
     "rich_text_bj7VnU",
     "text_columns_mzdGxP",
+    "rich_text_Jmj6Ek",
     "trust_icons_new_ss",
     "advanced_content_QHBLxq",
     "featured-collection1234",
