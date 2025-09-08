@@ -736,7 +736,11 @@
                             </div>
                           {% endif %}
                         {% elsif settings.savings_or_entries == 'entries' -%}
-                          {%- assign multiplier = settings.entries_multiplier -%}
+                          {% if section.settings.use_custom_entries_multiplier == true %}
+                            {%- assign multiplier = section.settings.entries_multiplier -%}
+                          {% else %}
+                            {%- assign multiplier = settings.entries_multiplier -%}
+                          {% endif %}
                           {%- assign entries_value = product.price | divided_by: 100.0 | times: multiplier | round -%}
                             <div class="buy-one-get-one-free">
                               <span>{{ entries_value }} Entries</span>
