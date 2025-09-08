@@ -741,6 +741,72 @@
         "divider": false
       }
     },
+    "text_columns_mzdGxP": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_mNt6f9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Artboard_4.jpg",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "https://patrickadairdesigns.com/pages/patrick-adair-designs-2025-summer-sweepstakes-rules"
+          }
+        },
+        "text_block_kdBbm6": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Artboard_5.jpg",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_tFpJfd": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Artboard_6.jpg",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_DDJCat": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Artboard_3-3.jpg",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_mNt6f9",
+        "text_block_kdBbm6",
+        "text_block_tFpJfd",
+        "text_block_DDJCat"
+      ],
+      "disabled": true,
+      "name": "Text columns with images",
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
     "trust_icons_new_ss": {
       "type": "trust-icons_n",
       "custom_css": [
@@ -1121,6 +1187,7 @@
     "advanced_content_flexible_DTWtRM",
     "featured_collection_carousel_RgiWej",
     "rich_text_bj7VnU",
+    "text_columns_mzdGxP",
     "trust_icons_new_ss",
     "advanced_content_QHBLxq",
     "featured-collection1234",
