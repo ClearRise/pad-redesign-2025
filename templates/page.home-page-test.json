@@ -94,6 +94,7 @@
         "image_9nnCw6",
         "image_kfPpHT"
       ],
+      "custom_css": [],
       "name": "Hero Section(New)",
       "settings": {
         "use_img_banner": true,
@@ -168,6 +169,7 @@
       "block_order": [
         "slide_w8etJH"
       ],
+      "custom_css": [],
       "name": "Scrolling Text",
       "settings": {
         "section_height_desktop": "50",
@@ -236,6 +238,7 @@
       "block_order": [
         "image_rppjPX"
       ],
+      "custom_css": [],
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
@@ -976,6 +979,9 @@
       "block_order": [
         "image_whyCbK"
       ],
+      "custom_css": [
+        ".hero-section-template--15612662415442__hero_section_P7XPJ4 {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+      ],
       "name": "Hero Section(New)",
       "settings": {
         "use_img_banner": true,
@@ -1024,6 +1030,9 @@
       "block_order": [
         "image_LW6aCw"
       ],
+      "custom_css": [
+        ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+      ],
       "name": "Hero Section(New)",
       "settings": {
         "use_img_banner": true,
@@ -1071,6 +1080,9 @@
       },
       "block_order": [
         "image_jXQdzj"
+      ],
+      "custom_css": [
+        ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
       ],
       "name": "Hero Section(New)",
       "settings": {
