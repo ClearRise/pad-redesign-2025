@@ -147,6 +147,13 @@
       ],
       "settings": {}
     },
+    "replo_sweepstakes_explainer_qPQ7NQ": {
+      "type": "replo-sweepstakes-explainer",
+      "name": "Sweepstakes Explainer",
+      "settings": {
+        "replo_text_bb4a45a4-62a3-46ab-90ea-65ef30da380c": "<p>WIN YOUR DREAM HONEYMOON: $50,000 TOWARDS THE TRIP OF A LIFETIME + $25,000 TOWARDS A JEWELRY UPGRADE (OR $75,000 CASH)</p>"
+      }
+    },
     "trust_icons_EDYTbe": {
       "type": "trust-icons_n",
       "settings": {
@@ -319,6 +326,7 @@
     "advanced_content_eYLzPF",
     "17347204-928a-46d1-8166-ac8c007f382d",
     "replo_trust_icons_white_backg_Wc7kJ7",
+    "replo_sweepstakes_explainer_qPQ7NQ",
     "trust_icons_EDYTbe",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
