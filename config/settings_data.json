@@ -175,7 +175,7 @@
             "type": "announcement",
             "settings": {
               "text": "$75,000 Sweepstakes giveaway",
-              "link_text": "<span>Shop now for a chance at a once in a lifetime trip</span><span>Orders $195+ Get a FREE Mystery Gift&nbsp;&nbsp;</span>",
+              "link_text": "<span>Shop now for a chance at a once in a lifetime trip</span><span>Orders $195+ Get a FREE Mystery Gift  </span>",
               "link": "shopify://collections/all-products-new"
             }
           },
@@ -263,6 +263,10 @@
           "announcement_BNdmQX",
           "featured_collection_FXBcwx",
           "featured_collection_JeUTzx"
+        ],
+        "custom_css": [
+          "@media (min-width: 769px) {.announcement-link-text {display: inline-flex; gap: 10px; }}",
+          "@media (max-width: 768px) {.announcement-link-text {display: inline-flex; flex-direction: column; }}"
         ],
         "settings": {
           "full_width_header": false,
