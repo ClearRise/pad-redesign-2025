@@ -720,6 +720,27 @@
         "entries_multiplier": 1
       }
     },
+    "rich_text_bj7VnU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bxdWXA": {
+          "type": "heading",
+          "settings": {
+            "title": "How It Works"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bxdWXA"
+      ],
+      "disabled": true,
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "trust_icons_new_ss": {
       "type": "trust-icons_n",
       "custom_css": [
@@ -1099,6 +1120,7 @@
     "hero_section_XitKqn",
     "advanced_content_flexible_DTWtRM",
     "featured_collection_carousel_RgiWej",
+    "rich_text_bj7VnU",
     "trust_icons_new_ss",
     "advanced_content_QHBLxq",
     "featured-collection1234",
