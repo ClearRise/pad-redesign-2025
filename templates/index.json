@@ -121,6 +121,78 @@
         "border_thickness": 0
       }
     },
+    "slideshow_yGiMnW": {
+      "type": "slideshow",
+      "blocks": {
+        "image_XidVDD": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "image": "shopify://shop_images/Artboard_2_32625ec6-28b4-424a-b669-d30d40f4919e.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_2_32625ec6-28b4-424a-b669-d30d40f4919e.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24
+          }
+        },
+        "image_rxkF47": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "Two line\ntitle slide.",
+            "special_title_color": "",
+            "subheading": "<p>And big, beautiful imagery</p>",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_XidVDD",
+        "image_rxkF47"
+      ],
+      "disabled": true,
+      "name": "Hero (optional slideshow)",
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
     "slideshow": {
       "type": "slideshow-2",
       "blocks": {
@@ -973,6 +1045,7 @@
     "timer_banner_section",
     "hero_section_MKWdHX",
     "ss_scrolling_logo_cloud_3_3FKe6R",
+    "slideshow_yGiMnW",
     "slideshow",
     "slideshow_2",
     "1646694183f97c4822",
