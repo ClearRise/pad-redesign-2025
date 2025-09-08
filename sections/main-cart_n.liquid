@@ -426,7 +426,7 @@
                     {% assign new_entries = item.product.metafields.custom.entries_multiplier | times: item.price | times: item.quantity %}
                     {% assign total_entries = total_entries | plus: new_entries%}
                   {% else %}
-                    {% assign new_entries = settings.multiplier | times: item.price | times: item.quantity %}
+                    {% assign new_entries = settings.entries_multiplier | times: item.price | times: item.quantity %}
                     {% assign total_entries = total_entries | plus: new_entries %}
                   {% endif %}
                 {% endfor %}
