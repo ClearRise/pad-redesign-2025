@@ -676,6 +676,9 @@
       "block_order": [
         "heading_bxdWXA"
       ],
+      "custom_css": [
+        "@media (max-width: 768px) {.theme-block {text-align: left;}}"
+      ],
       "name": "Rich text",
       "settings": {
         "align_text": "center",
