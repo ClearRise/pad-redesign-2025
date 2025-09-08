@@ -681,7 +681,7 @@
       ],
       "name": "Rich text",
       "settings": {
-        "align_text": "left",
+        "align_text": "center",
         "narrow_column": true,
         "divider": false
       }
