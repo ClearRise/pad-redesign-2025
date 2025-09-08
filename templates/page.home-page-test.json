@@ -94,6 +94,7 @@
         "image_9nnCw6",
         "image_kfPpHT"
       ],
+      "custom_css": [],
       "name": "Hero Section(New)",
       "settings": {
         "use_img_banner": true,
@@ -237,6 +238,7 @@
       "block_order": [
         "image_rppjPX"
       ],
+      "custom_css": [],
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
@@ -1080,7 +1082,7 @@
         "image_jXQdzj"
       ],
       "custom_css": [
-        ".hero{margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+        ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
       ],
       "name": "Hero Section(New)",
       "settings": {
