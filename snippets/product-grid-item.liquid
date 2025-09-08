@@ -114,7 +114,11 @@ if tag contains '_label_'
         {%- endif -%}
       {%- endif -%}    
       {% if section.settings.saved_amount_option == 'display_entries' -%}
-        {%- assign multiplier = section.settings.entries_multiplier -%}
+        {% if product.metafields.custom.entries_multiplier != blank %}
+          {%- assign multiplier = product.metafields.custom.entries_multiplier -%}
+        {% else %}
+          {%- assign multiplier = settings.entries_multiplier -%}
+        {% endif %}
         {%- assign entries_value = product.price | divided_by: 100.0 | times: multiplier | round -%}
         <div class="grid-product__tag grid-product__tag--sale" data-product-id="{{ product.id }}">
           <div class="price igSavingsPrice">{{ entries_value }} Entries</div>
