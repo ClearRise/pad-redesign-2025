@@ -836,6 +836,59 @@
         "divider": false
       }
     },
+    "text_columns_aKQYnb": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_4rinhP": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/aquaglow.png",
+            "image_width": 650,
+            "title": "Stackable Glow",
+            "text": "",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/glowstone-stackable-rings"
+          }
+        },
+        "text_block_VLBz4F": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Meteorite_Necklace_Photo_1_88163c59-bc65-43c7-9eeb-a4d70aa6ba2e.jpg",
+            "image_width": 650,
+            "title": "Accessories",
+            "text": "",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/accessories"
+          }
+        },
+        "text_block_KDaUB8": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Mystery_Ring_Gif_bf14da19-95c3-4062-bee1-3da32c79205e.gif",
+            "image_width": 650,
+            "title": "Mystery Ring",
+            "text": "",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/mystery-ring"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_4rinhP",
+        "text_block_VLBz4F",
+        "text_block_KDaUB8"
+      ],
+      "disabled": true,
+      "name": "Text columns with images",
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
     "trust_icons_new_ss": {
       "type": "trust-icons_n",
       "custom_css": [
@@ -1218,6 +1271,7 @@
     "rich_text_bj7VnU",
     "text_columns_mzdGxP",
     "rich_text_Jmj6Ek",
+    "text_columns_aKQYnb",
     "trust_icons_new_ss",
     "advanced_content_QHBLxq",
     "featured-collection1234",
