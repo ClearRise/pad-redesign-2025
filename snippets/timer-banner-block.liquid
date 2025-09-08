@@ -1,0 +1,169 @@
+{% style %}
+  .timer-banner {
+    text-align: center;
+    padding: 12px 20px;
+    position: relative;
+    z-index: 1000;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .timer-banner.hidden {
+    display: none !important;
+  }
+  
+  .timer-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .timer-banner-text {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  }
+  
+  .timer-banner-text.timer-banner-link {
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+    color: inherit !important;
+  }
+  
+  .timer-banner-text.timer-banner-link:hover {
+    opacity: 0.8;
+    color: inherit !important;
+  }
+  
+  .timer-banner a.timer-banner-text {
+    color: inherit !important;
+  }
+  
+  .timer-banner a.timer-banner-text:hover {
+    color: inherit !important;
+  }
+  
+  .timer-countdown {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  
+  .timer-unit {
+    background: rgba(255,255,255,0.2);
+    padding: 4px 8px;
+    border-radius: 4px;
+    min-width: 30px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  .timer-separator {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 768px) {
+    .timer-banner {
+      padding: 10px 15px;
+    }
+    
+    .timer-banner-content {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .timer-banner-text {
+      font-size: 14px;
+    }
+    
+    .timer-countdown {
+      font-size: 14px;
+    }
+    
+    .timer-unit {
+      min-width: 25px;
+      padding: 3px 6px;
+    }
+  }
+{% endstyle %}
+
+{% if block.settings.enable_timer_banner %}
+  <div class="timer-banner" id="timer-banner" style="background: {{ block.settings.background_color | default: '#ff6b35' }}; color: {{ block.settings.text_color | default: '#ffffff' }};">
+    <div class="timer-banner-content">
+      {% if block.settings.banner_link != blank %}
+        <a href="{{ block.settings.banner_link }}" class="timer-banner-text timer-banner-link">
+          {{ block.settings.banner_text | default: "LABOR DAY SALE Up to 35% off" }}
+        </a>
+      {% else %}
+        <p class="timer-banner-text">
+          {{ block.settings.banner_text | default: "LABOR DAY SALE Up to 35% off" }}
+        </p>
+      {% endif %}
+      
+      {% if block.settings.enable_countdown %}
+        <div class="timer-countdown" id="countdown-timer">
+          <span class="timer-unit">
+            <span id="days">00</span>
+          </span>
+          <span class="timer-separator">:</span>
+          <span class="timer-unit">
+            <span id="hours">00</span>
+          </span>
+          <span class="timer-separator">:</span>
+          <span class="timer-unit">
+            <span id="minutes">00</span>
+          </span>
+          <span class="timer-separator">:</span>
+          <span class="timer-unit">
+            <span id="seconds">00</span>
+          </span>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      {% if block.settings.enable_countdown %}
+        // Timer functionality
+        function updateCountdown() {
+          const endDate = new Date('{{ block.settings.countdown_end_date | default: "2024-12-31 23:59:59" }}').getTime();
+          const now = new Date().getTime();
+          const timeLeft = endDate - now;
+          
+          if (timeLeft > 0) {
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+          } else {
+            // Timer expired - hide banner or show expired message
+            {% if block.settings.hide_when_expired %}
+              document.getElementById('timer-banner').classList.add('hidden');
+            {% else %}
+              document.getElementById('countdown-timer').innerHTML = '<span style="font-weight: bold;">EXPIRED</span>';
+            {% endif %}
+          }
+        }
+        
+        // Update countdown every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+      {% endif %}
+    });
+  </script>
+{% endif %}
