@@ -158,7 +158,6 @@
         "blocks": {
           "timer_banner_CAtMWy": {
             "type": "timer_banner",
-            "disabled": true,
             "settings": {
               "enable_timer_banner": true,
               "banner_text": "LABOR DAY SALE Up to 35% off",
