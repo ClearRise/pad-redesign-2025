@@ -173,10 +173,9 @@
           },
           "announcement_xVJyfX": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "",
-              "link_text": "Orders $195+ Get a FREE Mystery Gift & $50 for Your Next Purchase",
+              "text": "$75,000 Sweepstakes giveaway",
+              "link_text": "Order now for a chance at a once in a lifetime trip<br>Orders $195+ Get a FREE Mystery Gift",
               "link": "shopify://collections/all-products-new"
             }
           },
@@ -496,11 +495,6 @@
       "10840395464443086010": {
         "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
         "disabled": true,
-        "settings": {}
-      },
-      "1744161739547163668": {
-        "type": "shopify://apps/hextom-timer-bar/blocks/ctb-embeded-block/f7b88b6e-2e87-46bc-87a9-3e3638a24fa9",
-        "disabled": false,
         "settings": {}
       }
     }
