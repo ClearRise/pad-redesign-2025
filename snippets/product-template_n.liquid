@@ -736,8 +736,8 @@
                             </div>
                           {% endif %}
                         {% elsif settings.savings_or_entries == 'entries' -%}
-                          {% if section.settings.use_custom_entries_multiplier == true %}
-                            {%- assign multiplier = section.settings.entries_multiplier -%}
+                          {% if product.metafields.custom.entries_multiplier != blank %}
+                            {%- assign multiplier = product.metafields.custom.entries_multiplier -%}
                           {% else %}
                             {%- assign multiplier = settings.entries_multiplier -%}
                           {% endif %}
