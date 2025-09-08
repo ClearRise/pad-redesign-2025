@@ -11,6 +11,7 @@
   "sections": {
     "timer_banner_section": {
       "type": "timer-banner",
+      "disabled": true,
       "settings": {
         "enable_timer_banner": true,
         "banner_text": "LABOR DAY SALE Up to 35% off",
@@ -21,8 +22,7 @@
         "enable_countdown": true,
         "countdown_end_date": "2025-12-31 23:59:59",
         "hide_when_expired": true
-      },
-      "disabled": true
+      }
     },
     "hero_section_czQRLj": {
       "type": "hero-section",

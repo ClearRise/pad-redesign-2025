@@ -156,6 +156,21 @@
       "header": {
         "type": "header",
         "blocks": {
+          "timer_banner_CAtMWy": {
+            "type": "timer_banner",
+            "disabled": true,
+            "settings": {
+              "enable_timer_banner": true,
+              "banner_text": "LABOR DAY SALE Up to 35% off",
+              "banner_link": "",
+              "banner_link_text": "Shop now",
+              "background_color": "#000000",
+              "text_color": "#ffffff",
+              "enable_countdown": true,
+              "countdown_end_date": "2025-12-31 23:59:59",
+              "hide_when_expired": true
+            }
+          },
           "announcement_xVJyfX": {
             "type": "announcement",
             "disabled": true,
@@ -238,6 +253,7 @@
           }
         },
         "block_order": [
+          "timer_banner_CAtMWy",
           "announcement_xVJyfX",
           "1524770014057",
           "30d9274d-f502-4710-bb39-866381456103",
