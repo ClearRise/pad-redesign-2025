@@ -175,7 +175,7 @@
             "type": "announcement",
             "settings": {
               "text": "$75,000 Sweepstakes giveaway",
-              "link_text": "Shop now for a chance at a once in a lifetime trip<br>Orders $195+ Get a FREE Mystery Gift",
+              "link_text": "<span>&nbsp;&nbsp;Shop now for a chance at a once in a lifetime trip&nbsp;&nbsp;</span><span>&nbsp;&nbsp;Orders $195+ Get a FREE Mystery Gift&nbsp;&nbsp;</span>",
               "link": "shopify://collections/all-products-new"
             }
           },
