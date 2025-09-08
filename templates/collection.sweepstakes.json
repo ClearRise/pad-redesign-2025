@@ -300,6 +300,19 @@
         "entries_multiplier": 1,
         "load_more": false
       }
+    },
+    "replo_sweepstakes_how_it_works_7ctaik": {
+      "type": "replo-sweepstakes-how-it-works",
+      "custom_css": [],
+      "name": "Sweepstakes How it Works",
+      "settings": {
+        "replo_text_70e47713-86d5-4477-b934-90ed36c1799c": "<p>Enter our Sweepstakes for your chance to win a $75,000 Dream Honeymoon/Vacation + Jewelry Upgrade</p>"
+      }
+    },
+    "replo_sweepstakes_three_image_JUPytx": {
+      "type": "replo-sweepstakes-three-image",
+      "name": "Sweepstakes Three Image",
+      "settings": {}
     }
   },
   "order": [
@@ -311,6 +324,8 @@
     "rich_text_G9LH7U",
     "collection-header",
     "promo-grid",
-    "main-collection"
+    "main-collection",
+    "replo_sweepstakes_how_it_works_7ctaik",
+    "replo_sweepstakes_three_image_JUPytx"
   ]
 }
