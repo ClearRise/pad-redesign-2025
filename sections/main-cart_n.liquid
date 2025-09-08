@@ -418,9 +418,18 @@
               <p class="right" style="color:red;">{{ section.settings.text_3 }}</p>
             {% endif %}
             {% if section.settings.show_entry != false %}
-              {% assign total_in_dollars = cart.total_price | divided_by: 100 %}
               <input type="hidden" id="_multiplier" value="{{ section.settings.multiplier }}">
               <p class="right" style="color:black; display: flex; align-items: center; flex-wrap: wrap; gap: 20px;">
+                {% assign total_entries = 0 %}
+                {% for item in cart.items %}
+                  {% if item.product.metafields.custom.entries_multiplier != blank %}
+                    {% assign new_entries = item.product.metafields.custom.entries_multiplier | times: item.price | times: item.quantity %}
+                    {% assign total_entries = total_entries | plus: new_entries%}
+                  {% else %}
+                    {% assign new_entries = settings.multiplier | times: item.price | times: item.quantity %}
+                    {% assign total_entries = total_entries | plus: new_entries %}
+                  {% endif %}
+                {% endfor %}
                 <span style="
                   display: inline-block;
                   background: #DC3030;
@@ -428,7 +437,7 @@
                   border-radius: 20px;
                   color: white;
                   font-size: 14px;">
-                  {{ section.settings.text_entry }} <span id="_entry_val">{{ total_in_dollars | times: section.settings.multiplier }}</span>
+                  {{ section.settings.text_entry }} <span id="_entry_val">{{ total_entries }}</span>
                 </span> 
                 {% if section.settings.hyper_linklist %}
                   <span>
