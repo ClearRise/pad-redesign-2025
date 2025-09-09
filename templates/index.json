@@ -153,7 +153,7 @@
             "special_text_color": "",
             "link": "shopify://collections/all-products-new",
             "link_text": "SHOP NOW",
-            "link_2": "https://patrickadairdesigns.com/pages/sweepstakes-learn-more",
+            "link_2": "shopify://pages/sweepstakes-landing-page",
             "link_text_2": "LEARN MORE",
             "color_accent": "rgba(0,0,0,0)",
             "vertical_block_position_on_desktop": "flex-end",
