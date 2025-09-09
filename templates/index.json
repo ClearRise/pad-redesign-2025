@@ -546,6 +546,7 @@
       "block_order": [
         "image_Jtmx37"
       ],
+      "disabled": true,
       "custom_css": [
         ".hero {margin-top: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
       ],
