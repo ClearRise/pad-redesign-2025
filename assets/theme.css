@@ -1556,6 +1556,7 @@ html {
 .page-width {
   max-width: 1500px;
   margin: 0 auto;
+  overflow-y: hidden;
 }
 
 .page-full,
