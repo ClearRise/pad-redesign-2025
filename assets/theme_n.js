@@ -69,6 +69,8 @@ async function applyTryonPlanToProtection(tryonSellingPlanId) {
     !item.selling_plan_allocation // only add if it doesn't already have one
   );
 
+  console.log("Tryon targets: " + JSON.stringify(targets))
+
   if (!targets.length) {
     // Nothing to update; return current cart
     return cart;
