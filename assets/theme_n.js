@@ -102,7 +102,7 @@ function tryonHandlingItem() {
         }
 
         // add Tryon selling plan to protection items
-        console.log("items: " + items)
+        alert("items: " + items)
       }
     });
   // // Run on page load
