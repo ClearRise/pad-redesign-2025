@@ -189,6 +189,18 @@ $(document).ready(function () {
 
     console.log("protectionInputs: " + protectionInputs)
     $('.CircleSpinner').addClass('LoadComplete');
+
+    {% comment %} Tryon {% endcomment %}
+     let bodyInputs = {}
+
+    if (!isTryonButtonClicked){
+      bodyInputs = protectionInputs.map(item => ({id: item, quantity: 1}))
+    }
+    else {
+      {% comment %} add tryon selling plan id to all protection items {% endcomment %}
+      bodyInputs = protectionInputs.map(item => ({id: item, quantity: 1, selling_plan: tryonSellingPlanId}))
+    }
+    {% comment %} End Tryon {% endcomment %}
     // Add all selected protection plans
     if (protectionInputs.length > 0) {
       fetch('/cart/add.js', {
