@@ -66,10 +66,20 @@ async function applyTryonPlanToProtection(tryonSellingPlanId) {
   console.log("Tryon cart: " + JSON.stringify(cart))
 
   // 2) Find targets: protection items missing a selling plan
-  const targets = cart.items.filter(item =>
-    item.title?.includes("Premium Protection") &&
-    !item.selling_plan_allocation // only add if it doesn't already have one
-  );
+  // list of substrings you want to match (case-insensitive)
+  const matchOptions = [
+    "premium protection",
+    "inlay materials"
+  ];
+
+  const targets = cart.items.filter(item => {
+    const title = (item.title || "").toLowerCase();
+
+    // does the title contain ANY of the substrings in matchOptions?
+    const matches = matchOptions.some(opt => title.includes(opt));
+
+    return matches && !item.selling_plan_allocation;
+  });
 
   console.log("Tryon targets: " + JSON.stringify(targets))
 
