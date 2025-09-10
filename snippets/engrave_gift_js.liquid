@@ -190,6 +190,7 @@ $(document).ready(function () {
     $('.CircleSpinner').addClass('LoadComplete');
     
     alert("nonTryonAtcButtton clicked")
+    return
     // Add all selected protection plans
     if (protectionInputs.length > 0) {
       fetch('/cart/add.js', {
@@ -235,6 +236,7 @@ $(document).ready(function () {
       $('.CircleSpinner').addClass('LoadComplete');
       
       alert("tryonAtcButtton clicked")
+      return
       // Add all selected protection plans
       if (protectionInputs.length > 0) {
         fetch('/cart/add.js', {
