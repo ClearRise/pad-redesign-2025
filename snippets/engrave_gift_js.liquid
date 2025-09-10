@@ -190,7 +190,7 @@ $(document).ready(function () {
     console.log("protectionInputs: " + protectionInputs)
     $('.CircleSpinner').addClass('LoadComplete');
     
-    alert("nonTryonAtcButtton clicked, event: " + JSON.stringify(event))
+    alert("nonTryonAtcButtton clicked")
     return
     // Add all selected protection plans
     if (protectionInputs.length > 0) {
@@ -252,13 +252,13 @@ $(document).ready(function () {
           },
           method: 'POST'
         })
-        .then(response => setTimeout(() => {
+        {% comment %} .then(response => setTimeout(() => {
           productForm.submit();
         }, 2000));
       } else {
         setTimeout(() => {
           productForm.submit();
-        }, 2000)
+        }, 2000) {% endcomment %}
       }
     });
   {% comment %} End Tryon {% endcomment %}
