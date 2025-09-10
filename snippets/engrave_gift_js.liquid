@@ -2,6 +2,11 @@
 
   // Tryon
   // Handle selling plan input and create the event listener for tryon-button click
+
+  const tryonSellingPlanId = tryonProduct?.selling_plan_groups
+          ?.flatMap(group => group.selling_plans || [])
+          ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon").id
+
   function handleTryonSellingPlanInput(tryonInput, tryonButton) {
     try {
   
@@ -19,9 +24,9 @@
       }
   
       tryonButton.addEventListener("click", () => {
-        const tryonSellingPlanId = tryonProduct?.selling_plan_groups
+        {% comment %} const tryonSellingPlanId = tryonProduct?.selling_plan_groups
           ?.flatMap(group => group.selling_plans || [])
-          ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon").id
+          ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon").id {% endcomment %}
   
         console.log("tryonSellingPlanId: " + tryonSellingPlanId)
         // alert("tryonSellingPlanId: " + tryonSellingPlanId)
