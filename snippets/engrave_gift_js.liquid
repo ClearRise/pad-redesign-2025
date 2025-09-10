@@ -2,7 +2,6 @@
 
   // Tryon
   // Handle selling plan input and create the event listener for tryon-button click
-  alert("hi")
   const tryonSellingPlanId = tryonProduct?.selling_plan_groups
           ?.flatMap(group => group.selling_plans || [])
           ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon").id
