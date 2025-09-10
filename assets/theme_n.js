@@ -64,7 +64,7 @@ function tryonHandlingItem() {
 
       console.log(`hasTryonProduct: ${hasTryonProduct}`)
       console.log(`hasTryonFeeItem: ${hasTryonFeeItem}`)
-
+      alert("has or not")
       if (hasTryonProduct && !hasTryonFeeItem) {
         // ✅ Add Tryon fee product
         fetch('/cart/add.js', {
