@@ -83,7 +83,7 @@ async function applyTryonPlanToProtection(tryonSellingPlanId) {
     return matches && !item.selling_plan_allocation;
   });
 
-  console.log("Tryon targets: " + JSON.stringify(targets))
+  console.log("Tryon targets: " + JSON.stringify(targets.map(item => {"title": item.title})))
 
   if (!targets.length) {
     // Nothing to update; return current cart
