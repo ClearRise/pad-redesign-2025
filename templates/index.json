@@ -200,6 +200,7 @@
       "block_order": [
         "slide_G3mMMp"
       ],
+      "disabled": true,
       "name": "Scrolling Text",
       "settings": {
         "section_height_desktop": "60",
