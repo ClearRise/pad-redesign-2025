@@ -96,9 +96,9 @@
       const tryonButton = document.querySelector(".tryon-button");
   
       if (tryonInput && tryonButton) {
+        alert("Handle tryon selling plan input: ")
         handleTryonSellingPlanInput(tryonInput, tryonButton);
         // handleAddingButtonElements(tryonButton);
-        alert("Handle tryon selling plan input: " + tryonSellingPlanId)
       } else if (Date.now() - startTime < maxWaitTime) {
         setTimeout(waitForTryonInput, pollInterval);
       } else {
