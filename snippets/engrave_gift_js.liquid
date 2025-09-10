@@ -165,11 +165,8 @@ $(document).ready(function () {
   }
 
   
-  const nonTryonAtcButtton = $(".product-block>.add-to-cart");
-  const tryonAtcButtton = $("tryon-button");
 
-  nonTryonAtcButtton.on("click", async function (event) {
-    setTimeout ( () => {
+  productFormSubmit.on("click", async function (event) {
     $('.add-to-cart-loader').show();
     event.preventDefault();
     event.target.disabled = true;
@@ -190,7 +187,7 @@ $(document).ready(function () {
     console.log("protectionInputs: " + protectionInputs)
     $('.CircleSpinner').addClass('LoadComplete');
     
-    {% comment %} alert("nonTryonAtcButtton clicked") {% endcomment %}
+    alert("productFormSubmit clicked")
     // Add all selected protection plans
     if (protectionInputs.length > 0) {
       fetch('/cart/add.js', {
@@ -212,56 +209,8 @@ $(document).ready(function () {
         productForm.submit();
       }, 2000)
     }
-  }, 0);
   });
-  {% comment %} Tryon {% endcomment %}
-  tryonAtcButtton.on("click", async function (event) {
-      $('.add-to-cart-loader').show();
-      event.preventDefault();
-      event.target.disabled = true;
-      console.log(JSON.stringify(event))
-  
-      // Tryon
-      // add the tryon input
-      $(".tryon-input").value = 1848737874
-  
-      CheckProtectField(); // Check both protection fields
-      let engravingValue = engravingInput.val();
-      console.log(engravingValue);
-  
-      if (engravingValue !== '' && engravingValue != undefined) {
-        protectionInputs.push(engravingProductID);
-      }
-  
-      console.log("protectionInputs: " + protectionInputs)
-      $('.CircleSpinner').addClass('LoadComplete');
-      
-      {% comment %} alert("tryonAtcButtton clicked") {% endcomment %}
-      // Add all selected protection plans
-      if (protectionInputs.length > 0) {
-        fetch('/cart/add.js', {
-          body: JSON.stringify(
-            {items: protectionInputs.map(item => ({id: item, quantity: 1, selling_plan: tryonSellingPlanId}))}
-          ),
-          credentials: 'same-origin',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-Requested-With':'xmlhttprequest'
-          },
-          method: 'POST'
-        })
-        .then(response => setTimeout(() => {
-          productForm.submit();
-        }, 2000));
-      } else {
-        setTimeout(() => {
-          productForm.submit();
-        }, 2000)
-      }
-    });
-  {% comment %} End Tryon {% endcomment %}
 });
-
 
 
 function AutoAddEngravingProduct(itemQuantity) {
