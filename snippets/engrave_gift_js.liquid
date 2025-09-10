@@ -98,6 +98,7 @@
       if (tryonInput && tryonButton) {
         handleTryonSellingPlanInput(tryonInput, tryonButton);
         // handleAddingButtonElements(tryonButton);
+        alert("Handle tryon selling plan input: " + tryonSellingPlanId)
       } else if (Date.now() - startTime < maxWaitTime) {
         setTimeout(waitForTryonInput, pollInterval);
       } else {
