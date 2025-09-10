@@ -100,6 +100,9 @@ function tryonHandlingItem() {
               location.reload(); // reload to update cart view
             });
         }
+
+        // add Tryon selling plan to protection items
+        console.log("items: " + items)
       }
     });
   // // Run on page load
