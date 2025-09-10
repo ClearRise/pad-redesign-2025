@@ -101,6 +101,11 @@ function tryonHandlingItem() {
             });
         }
       }
+
+      if(hasTryonProduct){
+        // move all protection items to Tryon selling plan
+        alert("items: " + items)
+      }
     });
   // // Run on page load
   // document.addEventListener('DOMContentLoaded', updateCartForTryon);
