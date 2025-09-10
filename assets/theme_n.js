@@ -69,7 +69,9 @@ async function applyTryonPlanToProtection(tryonSellingPlanId) {
   // list of substrings you want to match (case-insensitive)
   const matchOptions = [
     "premium protection",
-    "inlay materials"
+    "inlay materials",
+    "glowstone enhancement",
+    "laser engraving"
   ];
 
   const targets = cart.items.filter(item => {
