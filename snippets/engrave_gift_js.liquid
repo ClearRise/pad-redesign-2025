@@ -201,10 +201,9 @@ $(document).ready(function () {
       bodyInputs = protectionInputs.map(item => ({id: item, quantity: 1, selling_plan: tryonSellingPlanId}))
     }
     console.log("bodyInputs: " + bodyInputs);
-    return
     {% comment %} End Tryon {% endcomment %}
     // Add all selected protection plans
-    if (protectionInputs.length > 0) {
+    {% comment %} if (protectionInputs.length > 0) {
       fetch('/cart/add.js', {
         body: JSON.stringify(
           {items: bodyInputs}
@@ -224,7 +223,7 @@ $(document).ready(function () {
       setTimeout(() => {
         productForm.submit();
       }, 2000)
-    }
+    } {% endcomment %}
   });
 });
 
