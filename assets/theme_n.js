@@ -63,7 +63,7 @@ async function applyTryonPlanToProtection(tryonSellingPlanId) {
   // 1) Get current cart
   const cart = await fetch('/cart.js', { credentials: 'same-origin' }).then(r => r.json());
 
-  console.log("Tryon cart: " + JSON.stringify(cart))
+  // console.log("Tryon cart: " + JSON.stringify(cart))
 
   // 2) Find targets: protection items missing a selling plan
   // list of substrings you want to match (case-insensitive)
@@ -83,7 +83,7 @@ async function applyTryonPlanToProtection(tryonSellingPlanId) {
     return matches && !item.selling_plan_allocation;
   });
 
-  console.log("Tryon targets: " + JSON.stringify(targets))
+  // console.log("Tryon targets: " + JSON.stringify(targets))
 
   if (!targets.length) {
     // Nothing to update; return current cart
