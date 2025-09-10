@@ -191,7 +191,6 @@ $(document).ready(function () {
     $('.CircleSpinner').addClass('LoadComplete');
     
     alert("nonTryonAtcButtton clicked")
-    return
     // Add all selected protection plans
     if (protectionInputs.length > 0) {
       fetch('/cart/add.js', {
@@ -237,13 +236,12 @@ $(document).ready(function () {
       console.log("protectionInputs: " + protectionInputs)
       $('.CircleSpinner').addClass('LoadComplete');
       
-      alert("tryonAtcButtton clicked")
-      return
+      {% comment %} alert("tryonAtcButtton clicked") {% endcomment %}
       // Add all selected protection plans
       if (protectionInputs.length > 0) {
         fetch('/cart/add.js', {
           body: JSON.stringify(
-            {items: protectionInputs.map(item => ({id: item, quantity: 1}))}
+            {items: protectionInputs.map(item => ({id: item, quantity: 1, selling_plan: tryonSellingPlanId}))}
           ),
           credentials: 'same-origin',
           headers: {
@@ -252,7 +250,14 @@ $(document).ready(function () {
           },
           method: 'POST'
         })
-        
+        .then(response => setTimeout(() => {
+          productForm.submit();
+        }, 2000));
+      } else {
+        setTimeout(() => {
+          productForm.submit();
+        }, 2000)
+      }
     });
   {% comment %} End Tryon {% endcomment %}
 });
