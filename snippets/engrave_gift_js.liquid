@@ -28,7 +28,6 @@
           ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon").id
   
         console.log("tryonSellingPlanId: " + tryonSellingPlanId)
-        // alert("tryonSellingPlanId: " + tryonSellingPlanId)
         if (tryonSellingPlanId) {
           console.log("newInput: ")
           console.log(newInput)
@@ -167,8 +166,6 @@ $(document).ready(function () {
   
 
   productFormSubmit.on("click", async function (event) {
-    alert(JSON.stringify(event))
-
     $('.add-to-cart-loader').show();
     event.preventDefault();
     event.target.disabled = true;
