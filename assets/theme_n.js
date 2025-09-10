@@ -104,7 +104,7 @@ function tryonHandlingItem() {
 
       if(hasTryonProduct){
         // move all protection items to Tryon selling plan
-        alert("items: " + items)
+        console.log("Tryon all items: " + items)
       }
     });
   // // Run on page load
