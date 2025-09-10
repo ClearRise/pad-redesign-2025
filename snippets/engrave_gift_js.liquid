@@ -203,7 +203,7 @@ $(document).ready(function () {
     console.log("bodyInputs: " + bodyInputs);
     {% comment %} End Tryon {% endcomment %}
     // Add all selected protection plans
-    {% comment %} if (protectionInputs.length > 0) {
+    if (protectionInputs.length > 0) {
       fetch('/cart/add.js', {
         body: JSON.stringify(
           {items: bodyInputs}
@@ -218,12 +218,12 @@ $(document).ready(function () {
       })
       .then(response => setTimeout(() => {
         productForm.submit();
-      }, 2000));
+      }, 20000));
     } else {
       setTimeout(() => {
         productForm.submit();
-      }, 2000)
-    } {% endcomment %}
+      }, 20000)
+    }
   });
 });
 
