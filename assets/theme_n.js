@@ -44,6 +44,64 @@ window.lazySizesConfig = window.lazySizesConfig || {};
 lazySizesConfig.expFactor = 4;
 
 // Tryon
+
+/**
+ * Apply Tryon selling plan to any "Premium Protection" cart items.
+ * Uses /cart/change.js with the line item KEY (recommended).
+ *
+ * @param {number|string} tryonSellingPlanId
+ * @returns {Promise<object>} updated cart object
+ */
+async function applyTryonPlanToProtection(tryonSellingPlanId) {
+  if (!tryonSellingPlanId) {
+    console.warn("No tryonSellingPlanId provided; skipping.");
+    const cart = await fetch('/cart.js').then(r => r.json());
+    return cart;
+  }
+
+  // 1) Get current cart
+  const cart = await fetch('/cart.js', { credentials: 'same-origin' }).then(r => r.json());
+
+  // 2) Find targets: protection items missing a selling plan
+  const targets = cart.items.filter(item =>
+    item.title?.includes("Premium Protection") &&
+    !item.selling_plan_allocation // only add if it doesn't already have one
+  );
+
+  if (!targets.length) {
+    // Nothing to update; return current cart
+    return cart;
+  }
+
+  // 3) Update each target line using its *key* to avoid ambiguity
+  //    We keep the same quantity and attach selling_plan
+  await Promise.all(
+    targets.map(item =>
+      fetch('/cart/change.js', {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: item.key,                       // line item key (preferred)
+          quantity: item.quantity,            // keep quantity
+          selling_plan: tryonSellingPlanId    // apply plan
+        })
+      }).then(res => {
+        if (!res.ok) {
+          return res.text().then(t => {
+            throw new Error(`Failed to set selling_plan for "${item.title}": ${res.status} ${t}`);
+          });
+        }
+      })
+    )
+  );
+
+  // 4) Return a fresh cart snapshot after updates
+  const updated = await fetch('/cart.js', { credentials: 'same-origin' }).then(r => r.json());
+  return updated;
+}
+
+
 function tryonHandlingItem() {
   const TRYON_VARIANT_ID = 42097358766162;
   const TRYON_DESCRIPTION = 'tryon';
