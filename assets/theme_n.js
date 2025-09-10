@@ -53,6 +53,7 @@ lazySizesConfig.expFactor = 4;
  * @returns {Promise<object>} updated cart object
  */
 async function applyTryonPlanToProtection(tryonSellingPlanId) {
+  console.log("applying Tryon selling plan to protection items")
   if (!tryonSellingPlanId) {
     console.warn("No tryonSellingPlanId provided; skipping.");
     const cart = await fetch('/cart.js').then(r => r.json());
