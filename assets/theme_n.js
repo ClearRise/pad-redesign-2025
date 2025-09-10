@@ -163,6 +163,8 @@ function tryonHandlingItem() {
       if(hasTryonProduct){
         // move all protection items to Tryon selling plan
         console.log("Tryon all items: " + JSON.stringify(items))
+        const tryonSellingPlanId = 1848737874
+        await applyTryonPlanToProtection(tryonSellingPlanId)
       }
     });
   // // Run on page load
