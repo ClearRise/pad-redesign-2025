@@ -190,7 +190,7 @@ $(document).ready(function () {
     console.log("protectionInputs: " + protectionInputs)
     $('.CircleSpinner').addClass('LoadComplete');
     
-    alert("nonTryonAtcButtton clicked")
+    {% comment %} alert("nonTryonAtcButtton clicked") {% endcomment %}
     // Add all selected protection plans
     if (protectionInputs.length > 0) {
       fetch('/cart/add.js', {
