@@ -111,6 +111,9 @@ function tryonHandlingItem() {
 document.addEventListener('cart:updated', tryonHandlingItem);
 document.addEventListener('DOMContentLoaded', tryonHandlingItem);
 
+document.addEventListener('cart:updated', updateProtectionInputsTryon);
+document.addEventListener('DOMContentLoaded', updateProtectionInputsTryon);
+
 // End Tryon
 
 (function () {
