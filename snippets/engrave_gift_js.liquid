@@ -6,6 +6,8 @@
   const tryonSellingPlanId = tryonProduct?.selling_plan_groups
           ?.flatMap(group => group.selling_plans || [])
           ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon").id
+  
+  let isTryonButtonClicked = false;
 
   function handleTryonSellingPlanInput(tryonInput, tryonButton) {
     try {
@@ -38,6 +40,8 @@
           // Dispatch input and change events to notify the form
           newInput.dispatchEvent(new Event("input", { bubbles: true }));
           newInput.dispatchEvent(new Event("change", { bubbles: true }));
+
+          isTryonButtonClicked = true;
   
         } else {
           console.warn("Tryon selling plan ID not found");
