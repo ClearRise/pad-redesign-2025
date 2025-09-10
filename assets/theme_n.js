@@ -63,6 +63,8 @@ async function applyTryonPlanToProtection(tryonSellingPlanId) {
   // 1) Get current cart
   const cart = await fetch('/cart.js', { credentials: 'same-origin' }).then(r => r.json());
 
+  console.log("Tryon cart: " + JSON.stringify(cart))
+
   // 2) Find targets: protection items missing a selling plan
   const targets = cart.items.filter(item =>
     item.title?.includes("Premium Protection") &&
