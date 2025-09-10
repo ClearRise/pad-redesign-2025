@@ -23,6 +23,7 @@
       }
   
       tryonButton.addEventListener("click", () => {
+        alert("Tryon button clicked")
         tryonSellingPlanId = tryonProduct?.selling_plan_groups
           ?.flatMap(group => group.selling_plans || [])
           ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon").id
@@ -30,7 +31,6 @@
         console.log("tryonSellingPlanId: " + tryonSellingPlanId)
         // alert("tryonSellingPlanId: " + tryonSellingPlanId)
         if (tryonSellingPlanId) {
-          alert("Tryon button clicked")
           console.log("newInput: ")
           console.log(newInput)
           newInput.value = tryonSellingPlanId;
