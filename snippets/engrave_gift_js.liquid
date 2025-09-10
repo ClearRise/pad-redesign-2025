@@ -169,6 +169,7 @@ $(document).ready(function () {
   const tryonAtcButtton = $("tryon-button");
 
   nonTryonAtcButtton.on("click", async function (event) {
+    setTimeout ( () => {
     $('.add-to-cart-loader').show();
     event.preventDefault();
     event.target.disabled = true;
@@ -212,7 +213,8 @@ $(document).ready(function () {
         productForm.submit();
       }, 2000)
     }
-  });
+  }, 2500)
+  };
   {% comment %} Tryon {% endcomment %}
   tryonAtcButtton.on("click", async function (event) {
       $('.add-to-cart-loader').show();
