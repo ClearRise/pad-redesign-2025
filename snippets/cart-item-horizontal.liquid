@@ -1,5 +1,5 @@
 <div
-  class="cart__item rm_border d-flex"
+  class="cart__item rm_border d-flex product-line-item-{{ product.variant_id }}"
   data-quantity="{{ product.quantity }}"
   data-key="{{ product.key }}"
   data-handle="{{ product.product.handle }}"
@@ -228,24 +228,34 @@
       <!-- End Tryon -->
     </div>
   </div>
-  <div class="cart-item-price-container-ss d-flex justify-content-flex-end">
-    <div class="cart__item-price-col text-right">
-      {% if product.original_price != product.final_price %}
-        {% if product.final_price == 0 %}
-          <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
-          <small class="cart__price cart__price--strikethrough  black_txt">
-            <span>
-              <span
-                class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price"
-                data-item-key="{{item.key}}"
-                style="display:none !important;"
-              ></span>
-              <span class="igPrice" data-variant-id="{{ product.id }}">
-                {{- product.original_price | money_without_trailing_zeros -}}
+    <div class="cart-item-price-container-ss d-flex justify-content-flex-end">
+      <div class="cart__item-price-col text-right">
+        {%- comment -%} Check if this is a tryon item (sales plan 1848737874) {%- endcomment -%}
+        {%- assign is_tryon_item = false -%}
+        {%- if product.selling_plan_allocation != empty and product.selling_plan_allocation.selling_plan.id == 1848737874 -%}
+          {%- assign is_tryon_item = true -%}
+        {%- endif -%}
+
+        {% if product.original_price != product.final_price %}
+          {% if product.final_price == 0 %}
+            <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+            <small class="cart__price cart__price--strikethrough  black_txt">
+              <span>
+                <span
+                  class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price"
+                  data-item-key="{{item.key}}"
+                  style="display:none !important;"
+                ></span>
+                <span class="igPrice" data-variant-id="{{ product.id }}">
+                  {%- if is_tryon_item -%}
+                    {{ 0 | money_without_trailing_zeros }}
+                  {%- else -%}
+                    {{- product.original_price | money_without_trailing_zeros -}}
+                  {%- endif -%}
+                </span>
               </span>
-            </span>
-          </small>
-        {% else %}
+            </small>
+          {% else %}
           {% if intelligems_discount == 0 %}
             <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
             <small class="cart__price cart__price--strikethrough  black_txt">
@@ -261,23 +271,32 @@
                 </div>
                 <span class="real-_-price-{{ product.id }} real-_-price-engraving-{{ product.id }}">
                   {%- if property_size > 0 and e_product_id != blank %}
-                    {{
-                      product.original_price
-                      | plus: engrave_product.selected_or_first_available_variant.price
-                      | money_without_trailing_zeros
-                    }}
+                    {%- if is_tryon_item -%}
+                      {{ engrave_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                    {%- else -%}
+                      {{
+                        product.original_price
+                        | plus: engrave_product.selected_or_first_available_variant.price
+                        | money_without_trailing_zeros
+                      }}
+                    {%- endif -%}
                   {% else %}
-                    {{ product.original_price | money_without_trailing_zeros }}
+                    {%- if is_tryon_item -%}
+                      {{ 0 | money_without_trailing_zeros }}
+                    {%- else -%}
+                      {{ product.original_price | money_without_trailing_zeros }}
+                    {%- endif -%}
                   {% endif %}
                 </span>
               </span>
               {% comment %} here script {% endcomment %}
               <script>
                 (function() {
+                  const productLineItem = document.querySelector('.product-line-item-{{ product.variant_id }}');
                   const productId = {{ product.id }};
-                  const originalPriceElement = document.querySelector('.real-_-price-original-' + productId);
-                  const engravingPriceElement = document.querySelector('.real-_-price-engraving-' + productId);
-                  const finalPriceElement = document.querySelector('.real-_-price-' + productId);
+                  const originalPriceElement = productLineItem.querySelector('.real-_-price-original-' + productId);
+                  const engravingPriceElement = productLineItem.querySelector('.real-_-price-engraving-' + productId);
+                  const finalPriceElement = productLineItem.querySelector('.real-_-price-' + productId);
 
                   if (originalPriceElement && engravingPriceElement && finalPriceElement) {
                     // Function to update the final price
@@ -319,7 +338,11 @@
         <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
         <span class="cart__price cart__discount black_txt">
           <span class="bcpo-cart-item-price" data-key="{{product.key}}">
-            {{- product.final_price | money_without_trailing_zeros -}}
+            {%- if is_tryon_item -%}
+              {{ 0 | money_without_trailing_zeros }}
+            {%- else -%}
+              {{- product.final_price | money_without_trailing_zeros -}}
+            {%- endif -%}
           </span>
         </span>
       {% else %}
@@ -343,13 +366,21 @@
               </div>
               <span class="real-_-price-{{ product.id }} real-_-price-engraving-{{ product.id }}">
                 {%- if property_size > 0 and e_product_id != blank %}
-                  {{
-                    product.original_price
-                    | plus: engrave_product.selected_or_first_available_variant.price
-                    | money_without_trailing_zeros
-                  }}
+                  {%- if is_tryon_item -%}
+                    {{ engrave_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                  {%- else -%}
+                    {{
+                      product.original_price
+                      | plus: engrave_product.selected_or_first_available_variant.price
+                      | money_without_trailing_zeros
+                    }}
+                  {%- endif -%}
                 {% else %}
-                  {{ product.original_price | money_without_trailing_zeros }}
+                  {%- if is_tryon_item -%}
+                    {{ 0 | money_without_trailing_zeros }}
+                  {%- else -%}
+                    {{ product.original_price | money_without_trailing_zeros }}
+                  {%- endif -%}
                 {% endif %}
               </span>
               {% comment %} here script {% endcomment %}
@@ -399,7 +430,11 @@
                 data-item-key="{{item.key}}"
                 style="display:none !important;"
               ></span>
-              {{ product.final_price | money_without_trailing_zeros }}
+              {%- if is_tryon_item -%}
+                {{ 0 | money_without_trailing_zeros }}
+              {%- else -%}
+                {{ product.final_price | money_without_trailing_zeros }}
+              {%- endif -%}
             {% endif %}
           </span>
         </span>
