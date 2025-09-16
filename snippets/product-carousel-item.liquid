@@ -88,7 +88,7 @@
           {%- capture saved_percent -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
           {% assign saved_percent = saved_percent | plus: 0 %}
           {% assign saved_amount_cents = product.compare_at_price | minus: product.price | plus: 0 %}
-          {% if saved_amount_cents > 0 and section.settings.saved_amount_option != 'display_entries' %}
+          {% if saved_amount_cents > 0 %}
             {% if section.settings.saved_amount_option == 'basic_logic' %}
               <div class="grid-product__tag grid-product__tag--sale  {% if saved_amount_value > 10000 %}display-price{% else %}display-percent{% endif %}"  data-product-id="{{ product.id }}">
                 <div class="price igSavingsPrice">
@@ -103,7 +103,7 @@
                 <div class="price igSavingsPrice">
                   {{ saved_amount }} Off
                 </div>
-              </div>
+              </div>            
             {% else %}
               <div class="grid-product__tag grid-product__tag--sale  display-percent"  data-product-id="{{ product.id }}">
                 <div class="percent igSavingsPercentage">
@@ -111,18 +111,7 @@
                 </div>
               </div>            
             {% endif %}
-          {%- endif -%}   
-        {%- endif -%} 
-        {% if section.settings.saved_amount_option == 'display_entries' -%}
-          {% if product.metafields.custom.entries_multiplier != blank %}
-            {%- assign multiplier = product.metafields.custom.entries_multiplier -%}
-          {% else %}
-            {%- assign multiplier = settings.entries_multiplier -%}
-          {% endif %}
-          {%- assign entries_value = product.price | divided_by: 100.0 | times: multiplier | round -%}
-          <div class="grid-product__tag grid-product__tag--sale" data-product-id="{{ product.id }}">
-            <div class="price igSavingsPrice">{{ entries_value }} Entries</div>
-          </div>
+          {%- endif -%}    
         {%- endif -%}
       {%- endif -%}
   

@@ -51,16 +51,16 @@
     {% if settings.second_product-handle-1 %}
       {% assign first_gift_product = settings.second_product-handle-1 %}
       {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
-      {% assign first_gift_found = true %}
+      {% assign gift_product_found = true %}
       {% for item in cart.items %}
           {% if item.id == first_gift_product_id %}
-              {% assign first_gift_found = false %}
+              {% assign gift_product_found = false %}
           {% endif %}
       {% endfor %}
-      <div product-id="{{ first_gift_product_id }}" class="upsell-product-inner gift-product upsell_product-{{ first_gift_product_id }}  {% if first_gift_found == false %}hide {% else %}show {% endif %}">
+      <div product-id="{{ first_gift_product_id }}" class="upsell-product-inner gift-product upsell_product-{{ first_gift_product_id }}  {% if second_product_found == false %}hide {% else %}show {% endif %}">
         <div class="upsell-product dgCartUpsellInner   border_line mb_10">
           <div class="upsell-product-image">
-            <img class="dci-image" src="{{ first_gift_product | img_url: '100x100' }}" alt="{{ first_gift_product.title | escape }}" width="100" height="100">
+            <img class="dci-image" src="{{ first_gift_product | img_url: '100x100' }}" alt="{{ first_gift_product.title | escape }}">
             
           </div>
           <div class="upsell-product-info">
@@ -75,7 +75,7 @@
                   {{ first_gift_product.price | money_without_trailing_zeros }}
                 {% endif %}
             </div>
-      <button data-product-id="{{ first_gift_product_id }}" class="upsell_button_gtm upsell-add-to-cart">{% if first_gift_product.selected_or_first_available_variant.available == false %}SOLD OUT{% else %}{{ upsellAtc }}{% endif %}</button>
+      <button {% if first_product_found == false %}data-remove_var="{{ first_gift_product_id }}"{% endif %} data-product-id="{{ first_gift_product_id }}" class="{% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">{% if first_product_found == false %}{{ already_added }}{% else %}{{ upsellAtc }}{% endif %}</button>
               
                </div>    
      </div>
@@ -86,16 +86,16 @@
     {% if settings.second_product-handle-2 %}
       {% assign second_gift_product = settings.second_product-handle-2 %}
       {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
-      {% assign second_gift_found = true %}
+      {% assign gift_product_found = true %}
       {% for item in cart.items %}
           {% if item.id == second_gift_product_id %}
-              {% assign second_gift_found = false %}
+              {% assign gift_product_found = false %}
           {% endif %}
       {% endfor %}
-      <div product-id="{{ second_gift_product_id }}" class="upsell-product-inner gift-product upsell_product-{{ second_gift_product_id }} {% if second_gift_found == false %}hide {% else %}show {% endif %}">
+      <div product-id="{{ second_gift_product_id }}" class="upsell-product-inner gift-product upsell_product-{{ second_gift_product_id }} {% if first_product_found == false %}hide {% else %}show {% endif %}">
         <div class="upsell-product dgCartUpsellInner  border_line mb_10">
           <div class="upsell-product-image">
-            <img class="dci-image" src="{{ second_gift_product | img_url: '100x100' }}" alt="{{ second_gift_product.title | escape }}" width="100" height="100">
+            <img class="dci-image" src="{{ second_gift_product | img_url: '100x100' }}" alt="{{ second_gift_product.title | escape }}">
             
           </div>
           <div class="upsell-product-info">
@@ -110,7 +110,7 @@
                   {{ second_gift_product.price | money_without_trailing_zeros }}
                 {% endif %}
             </div>
-              <button data-product-id="{{ second_gift_product_id }}" class="upsell_button_gtm upsell-add-to-cart">{% if second_gift_product.selected_or_first_available_variant.available == false %}SOLD OUT{% else %}{{ upsellAtc }}{% endif %}</button>
+              <button {% if second_product_found == false %}data-remove_var="{{ second_gift_product_id }}"{% endif %} data-product-id="{{ second_gift_product_id }}" class="{% if second_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart">{% if second_product_found == false %}{{ already_added }}{% else %}{{ upsellAtc }}{% endif %}</button>
                     </div>     
           </div>
         </div>
@@ -119,85 +119,3 @@
   </div>
 </div>
 {% endif %}
-
-<script>
-// Monitor cart changes and remove gifts from wrong tier
-document.addEventListener('DOMContentLoaded', function() {
-  const secondTierMin = {{ SecondTierMinRaw }};
-  const secondTierMax = {{ SecondTierMaxRaw }};
-  const firstGiftProductId = '{{ first_gift_product_id }}';
-  const secondGiftProductId = '{{ second_gift_product_id }}';
-  
-  // Function to check if cart meets second tier requirements
-  function checkTierRequirements() {
-    fetch('/cart.js')
-      .then(response => response.json())
-      .then(cart => {
-        const cartTotal = cart.total_price;
-        
-        // Get first tier gift IDs (from settings)
-        const firstTierGiftIds = [];
-        {% if settings.show_gift_box %}
-          {% if settings.product-handle-1 %}
-            firstTierGiftIds.push('{{ settings.product-handle-1.selected_or_first_available_variant.id }}');
-          {% endif %}
-          {% if settings.product-handle-2 %}
-            firstTierGiftIds.push('{{ settings.product-handle-2.selected_or_first_available_variant.id }}');
-          {% endif %}
-        {% endif %}
-        
-        // Get second tier gift IDs
-        const secondTierGiftIds = [firstGiftProductId, secondGiftProductId];
-        
-        const itemsToRemove = [];
-        
-        cart.items.forEach(item => {
-          const isFirstTierGift = firstTierGiftIds.includes(item.variant_id.toString());
-          const isSecondTierGift = secondTierGiftIds.includes(item.variant_id.toString());
-          
-          if (isFirstTierGift && cartTotal >= secondTierMin && cartTotal <= secondTierMax) {
-            // Remove first tier gifts when second tier requirements are met
-            itemsToRemove.push(item);
-          } else if (isSecondTierGift && (cartTotal < secondTierMin || cartTotal > secondTierMax)) {
-            // Remove second tier gifts when second tier requirements are not met
-            itemsToRemove.push(item);
-          }
-        });
-        
-        if (itemsToRemove.length > 0) {
-          console.log('Removing wrong tier gifts:', itemsToRemove);
-          
-          // Remove each gift item
-          itemsToRemove.forEach(item => {
-            fetch('/cart/change.js', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                id: item.key,
-                quantity: 0
-              })
-            })
-            .then(response => response.json())
-            .then(data => {
-              console.log('Removed gift:', item.title);
-            })
-            .catch(error => console.error('Error removing gift:', error));
-          });
-          
-          // Refresh the page to update the display
-          window.location.reload();
-        }
-      })
-      .catch(error => console.error('Error checking cart:', error));
-  }
-  
-  // Check on page load
-  checkTierRequirements();
-  
-  // Listen for cart updates
-  document.addEventListener('cart:updated', checkTierRequirements);
-  document.addEventListener('ajaxProduct:added', checkTierRequirements);
-});
-</script>

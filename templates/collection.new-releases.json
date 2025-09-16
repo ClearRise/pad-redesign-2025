@@ -81,7 +81,6 @@
           "settings": {
             "size_chart": "",
             "variant_labels": true,
-            "picker_type": "button",
             "color_swatches": false
           }
         },
@@ -99,7 +98,6 @@
         "variant_picker_HBAaJd",
         "buy_buttons_YEXLtE"
       ],
-      "disabled": true,
       "settings": {
         "featured_product": "the-patriot-striped-glowstone-ring",
         "divider": false,

@@ -1085,11 +1085,6 @@ html[dir="rtl"] .grid__item {
 .grid--flush-bottom > .grid__item {
   margin-bottom: 22px;
 }
-@media (max-width: 768px) {
-  .grid--flush-bottom>.grid__item {
-    margin-bottom: 0px;
-  }
-}
 
 .grid--center {
   text-align: center;
@@ -1556,7 +1551,6 @@ html {
 .page-width {
   max-width: 1500px;
   margin: 0 auto;
-  overflow-y: hidden;
 }
 
 .page-full,

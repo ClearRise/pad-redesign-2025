@@ -2022,9 +2022,6 @@ label.variant__label.custom_label{
 .bold_option_title .bold_option_value_title:before {
   content: " , ";
 }
-.bold_option_title .bold_option_value_price_label::before {
-  content: " ";
-}
 
 .bold_option_title .bold_option_value_price {
   content: " (+";
@@ -2157,6 +2154,9 @@ label.variant__label.custom_label{
   [data-section-type="cart"] .section-header {
     margin-bottom: 0;
   }
+  .cart__checkout-wrapper {
+    padding-top: 72.33px;
+  }
 
   .sticky-bar {
     position: fixed;
@@ -2173,7 +2173,11 @@ label.variant__label.custom_label{
   }
   
   .cart__checkout-wrapper.active .sticky-bar {
-    position: relative;
+    position: absolute;
+    padding: 0;
+    bottom: auto;
+    top: 0;
+    z-index: initial;
   }
 }
 

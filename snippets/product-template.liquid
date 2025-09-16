@@ -626,7 +626,6 @@
                             {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
                           {%- endunless -%}
                         </span>
-                        
                         {% if block.settings.enable_badge == true and block.settings.custom_badge != blank %}
                           <span class="save_badge {{settings.save_badge_type}} custom">{{block.settings.custom_badge}}</span>
                         {% elsif settings.save_badget_text and settings.display_save_badge == 'true' %}

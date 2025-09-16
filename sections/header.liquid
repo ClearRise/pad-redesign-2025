@@ -145,13 +145,6 @@
 {% endif %}
 
 <div data-section-id="{{ section.id }}" data-section-type="header">
-  {%- comment -%} Timer Banner Block {%- endcomment -%}
-  {%- for block in section.blocks -%}
-    {%- if block.type == 'timer_banner' -%}
-      {%- render 'timer-banner-block', block: block -%}
-    {%- endif -%}
-  {%- endfor -%}
-
   {%- if overlay_header or section.settings.announcement_above_header -%}
     {%- render 'announcement-bar', section: section -%}
   {%- endif -%}
@@ -572,7 +565,7 @@
           {
             "type": "text",
             "id": "link_text",
-            "label": "liquid",
+            "label": "Text",
             "default": "30-day postage paid returns"
           },
           {
@@ -626,86 +619,9 @@
             "label": "Link"
           }
         ]
-      },
-      {
-        "type": "timer_banner",
-        "name": "Timer Banner",
-        "limit": 1,
-        "settings": [
-          {
-            "type": "checkbox",
-            "id": "enable_timer_banner",
-            "label": "Enable Timer Banner",
-            "default": true
-          },
-          {
-            "type": "text",
-            "id": "banner_text",
-            "label": "Banner Text",
-            "default": "LABOR DAY SALE Up to 35% off"
-          },
-          {
-            "type": "url",
-            "id": "banner_link",
-            "label": "Banner Link URL"
-          },
-          {
-            "type": "text",
-            "id": "banner_link_text",
-            "label": "Banner Link Text",
-            "default": "Shop now"
-          },
-          {
-            "type": "color",
-            "id": "background_color",
-            "label": "Background Color",
-            "default": "#ff6b35"
-          },
-          {
-            "type": "color",
-            "id": "text_color",
-            "label": "Text Color",
-            "default": "#ffffff"
-          },
-          {
-            "type": "checkbox",
-            "id": "enable_countdown",
-            "label": "Enable Countdown Timer",
-            "default": true
-          },
-          {
-            "type": "text",
-            "id": "countdown_end_date",
-            "label": "Countdown End Date",
-            "info": "Format: YYYY-MM-DD HH:MM:SS (e.g., 2024-12-31 23:59:59)",
-            "default": "2025-12-31 23:59:59"
-          },
-          {
-            "type": "checkbox",
-            "id": "hide_when_expired",
-            "label": "Hide Banner When Timer Expires",
-            "default": true
-          }
-        ]
       }    
     ],
     "default": {
-      "blocks": [
-        {
-          "type": "timer_banner",
-          "settings": {
-            "enable_timer_banner": true,
-            "banner_text": "LABOR DAY SALE Up to 35% off",
-            "banner_link": "/collections/sale",
-            "banner_link_text": "Shop now",
-            "background_color": "#ff6b35",
-            "text_color": "#ffffff",
-            "enable_countdown": true,
-            "countdown_end_date": "2025-12-31 23:59:59",
-            "hide_when_expired": true
-          }
-        }
-      ],
       "settings": {}
     }
   }
