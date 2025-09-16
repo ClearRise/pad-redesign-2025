@@ -290,6 +290,7 @@
                 </span>
               </span>
               {% comment %} here script {% endcomment %}
+              {% unless is_tryon_item %}
               <script>
                 (function() {
                   const productLineItem = document.querySelector('.product-line-item-{{ product.variant_id }}');
@@ -331,6 +332,7 @@
                   }
                 })();
               </script>
+              {% endunless %}
             </small>
           {% endif %}
         {% endif %}
@@ -384,47 +386,49 @@
                 {% endif %}
               </span>
               {% comment %} here script {% endcomment %}
-              <script>
-                (function() {
-                  const productId = {{ product.id }};
-                  const originalPriceElement = document.querySelector('.real-_-price-original-' + productId);
-                  const engravingPriceElement = document.querySelector('.real-_-price-engraving-' + productId);
-                  const finalPriceElement = document.querySelector('.real-_-price-' + productId);
+              {% unless is_tryon_item %}
+                <script>
+                  (function() {
+                    const productId = {{ product.id }};
+                    const originalPriceElement = document.querySelector('.real-_-price-original-' + productId);
+                    const engravingPriceElement = document.querySelector('.real-_-price-engraving-' + productId);
+                    const finalPriceElement = document.querySelector('.real-_-price-' + productId);
 
-                  if (originalPriceElement && engravingPriceElement && finalPriceElement) {
-                    // Function to update the final price
-                    function updateFinalPrice() {
-                      const originalPrice = parseFloat(originalPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0;
-                      const engravingPrice = parseFloat(engravingPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0;
-                      const totalPrice = originalPrice + engravingPrice;
+                    if (originalPriceElement && engravingPriceElement && finalPriceElement) {
+                      // Function to update the final price
+                      function updateFinalPrice() {
+                        const originalPrice = parseFloat(originalPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0;
+                        const engravingPrice = parseFloat(engravingPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0;
+                        const totalPrice = originalPrice + engravingPrice;
 
-                      // Format the price as currency (assuming USD format)
-                      const formattedPrice = '$' + totalPrice.toFixed(2);
-                      finalPriceElement.textContent = formattedPrice;
-                    }
+                        // Format the price as currency (assuming USD format)
+                        const formattedPrice = '$' + totalPrice.toFixed(2);
+                        finalPriceElement.textContent = formattedPrice;
+                      }
 
-                    // Create a MutationObserver to watch for changes in the original price element
-                    const observer = new MutationObserver(function(mutations) {
-                      mutations.forEach(function(mutation) {
-                        if (mutation.type === 'childList' || mutation.type === 'characterData') {
-                          updateFinalPrice();
-                        }
+                      // Create a MutationObserver to watch for changes in the original price element
+                      const observer = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutation) {
+                          if (mutation.type === 'childList' || mutation.type === 'characterData') {
+                            updateFinalPrice();
+                          }
+                        });
                       });
-                    });
 
-                    // Start observing the original price element
-                    observer.observe(originalPriceElement, {
-                      childList: true,
-                      characterData: true,
-                      subtree: true
-                    });
+                      // Start observing the original price element
+                      observer.observe(originalPriceElement, {
+                        childList: true,
+                        characterData: true,
+                        subtree: true
+                      });
 
-                    // Initial calculation
-                    updateFinalPrice();
-                  }
-                })();
-              </script>
-            {% else %}
+                      // Initial calculation
+                      updateFinalPrice();
+                    }
+                  })();
+                </script>
+              {% endunless %}
+              {% else %}
               <span
                 class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price"
                 data-item-key="{{item.key}}"
