@@ -235,6 +235,9 @@
         {%- if product.selling_plan_allocation != empty and product.selling_plan_allocation.selling_plan.id == 1848737874 -%}
           {%- assign is_tryon_item = true -%}
         {%- endif -%}
+        <script>
+          console.log(is_tryon_item, "is_tryon_item");
+        </script>
 
         {% if product.original_price != product.final_price %}
           {% if product.final_price == 0 %}
