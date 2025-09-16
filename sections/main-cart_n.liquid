@@ -1,305 +1,732 @@
-  {{'cart-item-horizontal-ss.css' | asset_url | stylesheet_tag }}
+{{ 'cart-item-horizontal-ss.css' | asset_url | stylesheet_tag }}
 
-  <div data-section-type="cart" class="page-width page-content main-cart-container-ss">
-    {%- render 'breadcrumbs_n' -%}
+{% comment %} Prepare cart data for JavaScript {% endcomment %}
+{% assign cart_items_json = cart.items | json %}
+{% assign selling_plan_id = 1848737874 %}
 
-    <div
-      id="adding-product-modal"
-      class="add-to-cart-loader-cart Modal Modal--dark"
-      aria-hidden="true"
-      role="dialog"
-      data-scrollable=""
-      style="display: none;"
-    >
-      <div class="Modal__Content Rte">
-        <div class="CircleSpinner cart-loader">
-          <div class="Checkmark Draw"></div>
-        </div>
-        <div class="Message">Checking out...</div>
+<script>
+  // Cart data from Liquid
+  const cartItems = {{ cart_items_json }};
+  const sellingPlanId = {{ selling_plan_id }};
+  
+  console.log(cartItems, "cart.items from main-cart_n.liquid");  // line 2867
+
+  // get all cart item via rest api
+  async function getCartItems() {
+    const response = await fetch('/cart.js');
+    const cart = await response.json();
+    return cart.items;
+  }
+  
+  // Find tryon products with selling plan ID
+  (async function() {
+    {% comment %} var waitForTryon = false;
+    cartItems.forEach((item) => {
+      if (item.selling_plan_allocation && 
+          item.selling_plan_allocation.selling_plan && 
+          item.selling_plan_allocation.selling_plan.id === sellingPlanId) {
+        waitForTryon = true;
+      }
+    });
+
+    console.log(waitForTryon, "waitForTryon");
+
+    async function sleep() {
+      return new Promise(resolve => setTimeout(resolve, 1000));
+    }
+
+    if (waitForTryon) {
+      $(".overlay").show();
+      await sleep();
+      console.log("cartItems_new !!!!");
+      $(".overlay").show();
+    } {% endcomment %}
+
+    let firstProcess = true;
+    let productWillUpdate = true;
+
+    do {
+      let tryonProducts = [];
+      let relativeProductsToUpdate = [];
+      let boldOptionsProductsToUpdate = [];
+      let cartItems_new = await getCartItems();
+
+      console.log(cartItems_new, "cartItems_new !!!!");
+
+      cartItems_new.forEach((item) => {
+        $(".overlay").show();
+        if (item.selling_plan_allocation && 
+            item.selling_plan_allocation.selling_plan && 
+            item.selling_plan_allocation.selling_plan.id === sellingPlanId) {
+          
+          // Check if _main_product property is not 'false'
+          if (item.properties && item.properties._main_product === undefined) {
+            tryonProducts.push(item);
+            
+            // Extract variant names and quantities for sales plan update
+            if (item.properties._boldVariantNames && item.properties._boldVariantIds) {
+              const variantNames = item.properties._boldVariantNames.split(',');
+              const variantIds = item.properties._boldVariantIds.split(',');
+              const variantQtys = item.properties._boldVariantQtys ? item.properties._boldVariantQtys.split(',') : [];
+              const boldBuilderId = item.properties._boldBuilderId;
+              
+              // Create array of products that need sales plan update
+              // Process each variant and add to boldOptionsProductsToUpdate array
+              variantNames.forEach((name, index) => {
+                const variantName = name.trim();
+                const variantId = variantIds[index] ? variantIds[index].trim() : '';
+                const quantity = variantQtys[index] ? parseInt(variantQtys[index].trim()) : 1;
+  
+                // Find the cart item index and key for this variant
+                const line_property = cartItems_new.findIndex(cartItem => cartItem.variant_id == variantId && cartItem.properties._boldBuilderId == item.properties._boldBuilderId);
+                const cartItemKey = line_property !== -1 ? cartItems_new[line_property].key : '';
+                
+                const existingIndex = boldOptionsProductsToUpdate.findIndex(product => 
+                  product.variantId === variantId && 
+                  product._boldBuilderId === item.properties._boldBuilderId
+                );
+                
+                if (existingIndex !== -1) {
+                  // If variant already exists, update the quantity
+                  const oldQuantity = boldOptionsProductsToUpdate[existingIndex].quantity;
+                  boldOptionsProductsToUpdate[existingIndex].quantity += quantity;
+                  console.log(`Updated ${variantName}: ${oldQuantity} + ${quantity} = ${boldOptionsProductsToUpdate[existingIndex].quantity}`);
+                } else {
+                  if (line_property !== -1 && cartItems_new[line_property].properties._main_product === undefined) {
+                    // If variant doesn't exist, add it to the array
+                    boldOptionsProductsToUpdate.push({
+                      variantName: variantName,
+                      variantId: variantId,
+                      quantity: quantity,
+                      line: line_property !== -1 ? line_property + 1 : boldOptionsProductsToUpdate.length + 1,
+                      key: cartItemKey,
+                      _boldBuilderId: item.properties._boldBuilderId
+                    });
+                    console.log(`Added new variant: ${variantName} with line: ${line_property !== -1 ? line_property + 1 : boldOptionsProductsToUpdate.length + 1}`);
+                  }
+                }
+              });
+            }
+              
+            // Add Protection Plan if exists
+            if (item.properties['Protection Plan'] === 'Yes') {
+              // Debug: log all properties to see what's available
+              console.log("Protection Plan properties:", item.properties);
+  
+              // Try different property names for protection plan title
+              const protectionPlanTitle = item.properties["_prot-product-title"];
+  
+              // get protection plan id on cart.items 
+              const line_property = cartItems_new.findIndex((cartItem) => 
+                cartItem.product_title === protectionPlanTitle
+              );
+  
+              const protectionPlanId = cartItems_new[line_property] ? cartItems_new[line_property].variant_id : '';
+                
+              const protectionPlan = {
+                variantName: protectionPlanTitle,
+                variantId: protectionPlanId,
+                quantity: 1,
+                type: 'protection_plan',
+                line: line_property !== -1 ? line_property + 1 : relativeProductsToUpdate.length + 1,
+                key: line_property !== -1 ? cartItems_new[line_property].key : '',
+                _boldBuilderId: item.properties._boldBuilderId
+              };
+  
+              // Check if this variant already exists in the array
+              const existingIndex = relativeProductsToUpdate.findIndex(product => 
+                product.type === 'protection_plan' && product.variantName === protectionPlanTitle && product.variantId === protectionPlanId
+              );
+  
+              if (existingIndex !== -1) {
+                // If protection plan already exists, update the quantity
+                const oldQuantity = relativeProductsToUpdate[existingIndex].quantity;
+                relativeProductsToUpdate[existingIndex].quantity += 1;
+                console.log(`Updated Protection Plan: ${oldQuantity} + 1 = ${relativeProductsToUpdate[existingIndex].quantity}`);
+              } else {
+                if (cartItems_new[line_property !== -1 ? line_property : relativeProductsToUpdate.length].properties._main_product === undefined) {
+                  // If protection plan doesn't exist, add it to the array
+                  relativeProductsToUpdate.push(protectionPlan);
+                  console.log(`Added Protection Plan: ${item.properties._prot_product_title}`);
+                }
+              }
+            }
+  
+            // Add Glowstone Enhancement if exists
+            if (item.properties._glowstone_enhancement === 'Yes' && item.properties._main_product === undefined) {
+              const glowstoneEnhancementTitle = 'Glowstone Enhancement';
+  
+              // get glowstone enhancement id on cart.items 
+              const glowstoneEnhancementItem = cartItems_new.find(cartItem => 
+                cartItem.product_title === glowstoneEnhancementTitle
+              );
+  
+              const glowstoneEnhancementId = glowstoneEnhancementItem ? glowstoneEnhancementItem.variant_id : '';
+                
+              const glowstoneEnhancement = {
+                variantName: glowstoneEnhancementTitle,
+                variantId: glowstoneEnhancementId,
+                quantity: 1,
+                type: 'glowstone_enhancement',
+                line: glowstoneEnhancementItem ? cartItems_new.indexOf(glowstoneEnhancementItem) + 1 : relativeProductsToUpdate.length + 1,
+                key: glowstoneEnhancementItem ? glowstoneEnhancementItem.key : '',
+                _boldBuilderId: item.properties._boldBuilderId
+              };
+  
+              // Check if this variant already exists in the array
+              const existingIndex = relativeProductsToUpdate.findIndex(product => 
+                product.type === 'glowstone_enhancement' && product.variantName === glowstoneEnhancementTitle && product.variantId === glowstoneEnhancementId
+              );
+  
+              if (existingIndex !== -1) {
+                // If glowstone enhancement already exists, update the quantity
+                const oldQuantity = relativeProductsToUpdate[existingIndex].quantity;
+                relativeProductsToUpdate[existingIndex].quantity += 1;
+                console.log(`Updated Glowstone Enhancement: ${oldQuantity} + 1 = ${relativeProductsToUpdate[existingIndex].quantity}`);
+              } else {
+                if (cartItems_new[glowstoneEnhancementItem ? cartItems_new.indexOf(glowstoneEnhancementItem) : relativeProductsToUpdate.length].properties._main_product === undefined) {
+                // If glowstone enhancement doesn't exist, add it to the array
+                  relativeProductsToUpdate.push(glowstoneEnhancement);
+                }
+              }
+            }
+  
+            // Add Engraving if exists
+            if (item.properties.engraving && item.properties.engraving.trim() !== '' && item.properties._main_product === undefined) {
+              const engravingTitle = 'Laser Engraving Text';
+  
+              // get engraving id on cart.items 
+              const engravingItem = cartItems_new.find(cartItem => 
+                cartItem.product_title === engravingTitle
+              );
+  
+              const engravingId = engravingItem ? engravingItem.variant_id : '';
+                
+              const engraving = {
+                variantName: engravingTitle,
+                variantId: engravingId,
+                quantity: 1,
+                type: 'engraving',
+                line: engravingItem ? cartItems_new.indexOf(engravingItem) + 1 : relativeProductsToUpdate.length + 1,
+                key: engravingItem ? engravingItem.key : '',
+                _boldBuilderId: item.properties._boldBuilderId
+              };
+  
+              // Check if this variant already exists in the array
+              const existingIndex = relativeProductsToUpdate.findIndex(product => 
+                product.type === 'engraving' && product.variantName === engravingTitle && product.variantId === engravingId
+              );
+  
+              if (existingIndex !== -1) {
+                // If engraving already exists, update the quantity
+                const oldQuantity = relativeProductsToUpdate[existingIndex].quantity;
+                relativeProductsToUpdate[existingIndex].quantity += 1;
+                console.log(`Updated Engraving: ${oldQuantity} + 1 = ${relativeProductsToUpdate[existingIndex].quantity}`);
+              } else {
+                if (cartItems_new[engravingItem ? cartItems_new.indexOf(engravingItem) : relativeProductsToUpdate.length].properties._main_product === undefined) {
+                // If engraving doesn't exist, add it to the array
+                  relativeProductsToUpdate.push(engraving);
+                }
+              }
+            }
+          }
+        }
+      });
+
+      firstProcess = false;
+
+      console.log("Add new variant:", boldOptionsProductsToUpdate.length);
+
+      if (relativeProductsToUpdate.length > 0 || boldOptionsProductsToUpdate.length > 0) {
+        if (relativeProductsToUpdate.length > 0) {
+          let product = relativeProductsToUpdate[0];
+          if (product.variantId && product.variantId !== '') {
+            // Prepare the data for cart update using the correct Shopify Cart API format
+            const updateData = {
+              'line': product.line,
+              'selling_plan': sellingPlanId,
+              'properties': {
+                '_main_product': "No"
+              }
+            };
+            
+            // Fetch cart/change.js
+            await fetch('/cart/change.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(updateData)
+            })
+            .then(async response => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+              }
+            })
+            .then(async result => {
+              console.log(`Successfully updated ${product.variantName}:`, result);
+              
+              // Check if selling plan was applied
+              if (result.items) {
+                const updatedItem = result.items.find(item => item.variant_id == product.variantId);
+                if (updatedItem && updatedItem.selling_plan_allocation) {
+                  console.log(`✅ Selling plan applied to ${product.variantName}:`, updatedItem.selling_plan_allocation);
+                } else {
+                  console.log(`⚠️ No selling plan found for ${product.variantName} after update`);
+                }
+              }
+            })
+            .catch(async error => {
+              console.error(`Failed to update ${product.variantName}:`, error);
+            });
+  
+            console.log(`cart.items Prepared update data for ${product.variantName}:`, updateData);
+          } else {
+            console.log(`Skipping ${product.variantName} - no variant ID, cart.items`);
+          }
+          continue;
+        }
+        if (boldOptionsProductsToUpdate.length > 0) {
+          let product = boldOptionsProductsToUpdate[0];
+          if (product.variantId && product.variantId !== '') {
+            // Prepare the data for cart update using the correct Shopify Cart API format
+            const updateData = {
+              'line': product.line,
+              'selling_plan': sellingPlanId,
+              'properties': {
+                '_main_product': "No",
+                '_boldBuilderId': product._boldBuilderId
+              }
+            };
+            
+            // Fetch cart/change.js
+            await fetch('/cart/change.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(updateData)
+            })
+            .then(async response => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+              }
+            })
+            .then(async result => {
+              console.log(`Successfully updated ${product.variantName}:`, result);
+              
+              // Check if selling plan was applied
+              if (result.items) {
+                const updatedItem = result.items.find(item => item.variant_id == product.variantId);
+                if (updatedItem && updatedItem.selling_plan_allocation) {
+                  console.log(`✅ Selling plan applied to ${product.variantName}:`, updatedItem.selling_plan_allocation);
+                } else {
+                  console.log(`⚠️ No selling plan found for ${product.variantName} after update`);
+                }
+              }
+            })
+            .catch(async error => {
+              console.error(`Failed to update ${product.variantName}:`, error);
+            });
+            
+            console.log(`cart.items Prepared update data for ${product.variantName}:`, updateData);
+          } else {
+            console.log(`Skipping ${product.variantName} - no variant ID, cart.items`);
+          }
+          continue;
+        }
+      } else {
+        productWillUpdate = false;
+
+        {% comment %} // Tryon
+        function handleTryonSellingPlanInput(tryonInput, tryonButton) {
+          try {
+        
+            const newInput = tryonInput.cloneNode(true);
+            newInput.id = "patrick-selling-plan-input";
+        
+            // Replace the old input with the new one
+            tryonInput.parentNode.replaceChild(newInput, tryonInput);
+        
+            // Add event listener to the tryon button
+            // const tryonButton = document.querySelector("#tryon-button");
+            if (!tryonButton) {
+              console.log("Tryon button not found");
+              return;
+            }
+        
+            tryonButton.addEventListener("click", () => {
+              const tryonSellingPlanId = tryonProduct?.selling_plan_groups
+                ?.flatMap(group => group.selling_plans || [])
+                ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon").id
+        
+              console.log("tryonSellingPlanId: " + tryonSellingPlanId)
+              // alert("tryonSellingPlanId: " + tryonSellingPlanId)
+              if (tryonSellingPlanId) {
+                console.log("newInput: ")
+                console.log(newInput)
+                newInput.value = tryonSellingPlanId;
+        
+                // Dispatch input and change events to notify the form
+                newInput.dispatchEvent(new Event("input", { bubbles: true }));
+                newInput.dispatchEvent(new Event("change", { bubbles: true }));
+        
+              } else {
+                console.warn("Tryon selling plan ID not found");
+              }
+            });
+          } catch (error) {
+            console.error("Error with tryon input handling:", error);
+          }
+        }
+        // Poll for #tryon-input and run logic on document load
+        const maxWaitTime = 3000; // 3 seconds
+        const pollInterval = 200;
+        const startTime = Date.now();
+      
+        async function waitForTryonInput() {
+          const tryonInput = document.querySelector("#tryon-input");
+          const tryonButton = document.querySelector(".tryon-button");
+
+          let cartItems = await getCartItems();
+          var totalTryonProducts = 0;
+          var customTryonProduct = 0;
+
+          cartItems.forEach(item => {
+            if (item.selling_plan_allocation && item.selling_plan_allocation.selling_plan && item.selling_plan_allocation.selling_plan.id === sellingPlanId) {
+              totalTryonProducts++;
+              if (item.properties && item.properties._main_product === "No") {
+                customTryonProduct++;
+              }
+            }
+          });
+
+          console.log(cartItems, totalTryonProducts, customTryonProduct, "conosle");
+          
+          if (tryonInput && tryonButton) {
+            tryonButton.options.maxProducts = 3 + customTryonProduct;
+            tryonButton.cartUpdated();
+            handleTryonSellingPlanInput(tryonInput, tryonButton);
+          } else if (Date.now() - startTime < maxWaitTime) {
+            setTimeout(waitForTryonInput, pollInterval);
+          } else {
+            console.log("tryon-input not found within 3 seconds");
+          }
+        } {% endcomment %}
+      
+        setTimeout(() => {
+          $(".overlay").hide();
+        }, 200);
+        // End Tryon
+      }
+    } while (productWillUpdate);
+  })(); // Close the async function
+</script>
+
+<div data-section-type="cart" class="page-width page-content main-cart-container-ss">
+  {%- render 'breadcrumbs_n' -%}
+
+  <div
+    id="adding-product-modal"
+    class="add-to-cart-loader-cart Modal Modal--dark"
+    aria-hidden="true"
+    role="dialog"
+    data-scrollable=""
+    style="display: none;"
+  >
+    <div class="Modal__Content Rte">
+      <div class="CircleSpinner cart-loader">
+        <div class="Checkmark Draw"></div>
       </div>
+      <div class="Message">Checking out...</div>
     </div>
+  </div>
 
-    <header class="section-header text{% if cart.item_count == 0 %}-center section-header--404 {% else %}-center {% endif %}">
-      {% assign intelligems_total = 0 %}
-      {% assign cart_total_exclude_gift = 0 %}
-      {% for item in cart.items %}
-        {% if item.product.metafields.custom.hide_free_gift.value == true %}
-          {% assign cart_total_exclude_gift = cart_total_exclude_gift
-            | plus: item.final_price
-            | times: item.quantity
-          %}
-        {% endif %}
-
-        {% case item.properties._igp %}
-          {% when '0', null, blank %}
-            {% assign intelligems_discount = 0 %}
-          {% else %}
-            {% assign intelligems_discount = item.properties._igp | plus: 0 %}
-            {% assign intelligems_total = intelligems_total
-              | plus: item.properties._igp
-              | times: item.quantity
-            %}
-        {% endcase %}
-        {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
-        {%- if item.properties._boldBuilderId and item.properties._boldVariantIds == null -%}
-          <input
-            type="hidden"
-            name="updates[]"
-            id="updates_{{- item.key -}}"
-            class="bold_hidden_input cart__product-qty"
-            value="{{- item.quantity -}}"
-            min="0"
-            data-id="{{- item.key -}}"
-          >
-          {%- continue -%}
-        {%- endif -%}
-
-        {% assign match_gift_product = false %}
-        {% assign match_engraving_product = false %}
-        {% assign match_protection_product = false %}
-        {% assign e_product_id = '' %}
-        {% assign p_product_id = '' %}
-
-        
-        {% if settings.show_gift_box %}
-          {% assign first_gift_product = settings['product-handle-1'] %}
-          {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
-          {% assign second_gift_product = settings['product-handle-2'] %}
-          {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
-          {% if first_gift_product_id == item.id or second_gift_product_id == item.id %}
-            {% assign match_gift_product = true %}
-          {% endif %}
-        {% endif %}
-
-        {% if settings.second_show_gift_box %}
-          {% assign second_tier_first_gift_product = settings['second_product-handle-1'] %}
-          {% assign second_tier_first_gift_product_id = second_tier_first_gift_product.selected_or_first_available_variant.id %}
-          {% assign second_tier_second_gift_product = settings['second_product-handle-2'] %}
-          {% assign second_tier_second_gift_product_id = second_tier_second_gift_product.selected_or_first_available_variant.id %}
-          {% if second_tier_first_gift_product_id == item.id or second_tier_second_gift_product_id == item.id %}
-            {% assign match_gift_product = true %}
-          {% endif %}
-        {% endif %}
-        {% if settings.third_show_gift_box %}
-          {% assign third_tier_first_gift_product = settings['third_product-handle-1'] %}
-          {% assign third_tier_first_gift_product_id = third_tier_first_gift_product.selected_or_first_available_variant.id %}
-          {% assign third_tier_second_gift_product = settings['third_product-handle-2'] %}
-          {% assign third_tier_second_gift_product_id = third_tier_second_gift_product.selected_or_first_available_variant.id %}
-          {% if third_tier_first_gift_product_id == item.id or third_tier_second_gift_product_id == item.id %}
-            {% assign match_gift_product = true %}
-          {% endif %}
-        {% endif %}
-        {% if settings.show_engraving and settings['product-engraving'] %}
-          {% assign engraving_product = settings['product-engraving'] %}
-          {% assign engraving_product_id = engraving_product.id %}
-          {% assign engraving_product_id_var = engraving_product.selected_or_first_available_variant.id %}
-          {% if engraving_product_id_var == item.id %}
-            {% assign match_engraving_product = true %}
-          {% endif %}
-        {% endif %}
-        
-        {% if item.product.metafields.custom.premium_protection_product %}
-          {% liquid
-            assign protection_product = all_products[item.product.metafields.custom.premium_protection_product]
-            assign protection_product_id = protection_product.id
-            assign first_protection_product_id_var = protection_product.selected_or_first_available_variant.id
-            if first_protection_product_id_var == item.id
-              assign match_protection_product = true
-            endif
-          %}
-        {% endif %}
-
-        {% assign hidden = false %}
-        
-        {% if match_engraving_product %} 
-          {% assign hidden = true %}
-        {% endif %}
-        {% if match_protection_product %}
-          {% assign hidden = true %}
-        {% endif %}
-        {% if item.product.tags contains 'hidden' or item.product.tags contains 'OPTIONS_HIDDEN_PRODUCT' %}
-          {% assign hidden = true %}
-        {% endif %}
-        {% if item.product.title contains 'Navidium Shipping Protection' %}
-          {% assign hidden = true %}
-        {% endif %}
-        {% if match_gift_product %}
-          {% assign hidden = true %}
-        {% endif %}
-        {% if hidden == false %}
-          {% assign main_item_count = main_item_count | plus: 1 %}
-        {% endif %}
-      {%- endfor -%}
-      {% if main_item_count > 0 %}
-        <h2 class="section-header__title">Your Cart&nbsp;({{ main_item_count }})</h2>
+  <header class="section-header text{% if cart.item_count == 0 %}-center section-header--404 {% else %}-center {% endif %}">
+    {% assign intelligems_total = 0 %}
+    {% assign cart_total_exclude_gift = 0 %}
+    {% for item in cart.items %}
+      {% if item.product.metafields.custom.hide_free_gift.value == true %}
+        {% assign cart_total_exclude_gift = cart_total_exclude_gift | plus: item.final_price | times: item.quantity %}
       {% endif %}
-      <div class="rte text-spacing">
-        {%- if cart.item_count == 0 -%}
-          <p>{{ 'cart.general.empty' | t }}</p>
-          {% if section.settings.text_1 != blank %}
-            <p style="color:red;">{{ section.settings.text_1 }}</p>
-          {% endif %}
 
-          <div class="dgCartUpsell dgCartUpSellWrapper  appear-delay-3" id="cart_gift_wrap"></div>
-        {%- endif -%}
-        <p class="text-center"><a href="{{ settings.cart_continue_shopping_link }}">Continue shopping</a></p>
-        {% if cart.item_count > 0 %}
-          <p class="text-center"><a href="/cart/clear">Clear cart</a></p>
+      {% case item.properties._igp %}
+        {% when '0', null, blank %}
+          {% assign intelligems_discount = 0 %}
+        {% else %}
+          {% assign intelligems_discount = item.properties._igp | plus: 0 %}
+          {% assign intelligems_total = intelligems_total | plus: item.properties._igp | times: item.quantity %}
+      {% endcase %}
+      {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
+      {%- if item.properties._boldBuilderId and item.properties._boldVariantIds == null -%}
+        <input
+          type="hidden"
+          name="updates[]"
+          id="updates_{{- item.key -}}"
+          class="bold_hidden_input cart__product-qty"
+          value="{{- item.quantity -}}"
+          min="0"
+          data-id="{{- item.key -}}"
+        >
+        {%- continue -%}
+      {%- endif -%}
 
-          <ul class="cart-sales-points">
-            {% for block in section.blocks %}
-              <li class="sales-point">
-                <span class="icon-and-text custom_icon_wrap">
-                  {% case block.settings.icon %}
-                    {% when 'checkmark' %}
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="icon icon-circle-checkmark"
-                        viewBox="0 0 64 64"
-                      >
-                        <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M52.68 24.48A22 22 0 1 1 47 15.93M21 32l8.5 8.5L57 13"/>
-                      </svg>
-                    {% when 'gift' %}
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="icon icon-gift"
-                        viewBox="0 0 64 64"
-                      >
-                        <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M9 20.23h46v8.68H9zM13.34 28.91h36.89v24.3H13.34zM27.82 20.66v32.98M35.91 20.88v32.98M20.52 11.43a3.73 3.73 0 0 0-.74 2.87 4.57 4.57 0 0 0 .8 2.27C22 18.09 25.15 20 32 20.23a12 12 0 0 0-2.43-7 7.52 7.52 0 0 0-5.66-3.12 4 4 0 0 0-3.39 1.32z"/><path class="a" d="M43.37 11.43a3.73 3.73 0 0 1 .74 2.87 4.48 4.48 0 0 1-.8 2.27c-1.42 1.52-4.57 3.41-11.42 3.66a12.08 12.08 0 0 1 2.43-7A7.56 7.56 0 0 1 40 10.14a4 4 0 0 1 3.37 1.29z"/>
-                      </svg>
-                    {% when 'globe' %}
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="icon icon-globe"
-                        viewBox="0 0 64 64"
-                      >
-                        <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><circle class="a" cx="32" cy="32" r="22"/><path class="a" d="M13 21h38M10 32h44M13 43h38M32 10c-12 8-12 37 0 44M32 10c12 8 12 37 0 44"/>
-                      </svg>
-                    {% when 'heart' %}
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="icon icon-heart"
-                        viewBox="0 0 64 64"
-                      >
-                        <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M51.27 15.05a13 13 0 0 0-18.44 0l-.83.83-.83-.83a13 13 0 0 0-18.44 18.44l.83.83L32 52.77l18.44-18.45.83-.83a13 13 0 0 0 0-18.44z"/>
-                      </svg>
-                    {% when 'leaf' %}
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="icon icon-leaf"
-                        viewBox="0 0 64 64"
-                      >
-                        <defs><style>.a{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="a" d="M52 11L13 50M35 13v15h16"/><path class="a" d="M52 11c6 24-16.72 47.29-33 32C7 22 29 10 52 11z"/>
-                      </svg>
-                    {% when 'lock' %}
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="icon icon-lock"
-                        viewBox="0 0 64 64"
-                      >
-                        <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M19.45 23.6v-3.2c0-7 5.89-11.75 12.55-11.75 7.21 0 12.55 5.49 12.55 11.75v3.2M10 23.6h44v31.75H10zM32 37.47v7.47"/><circle class="a" cx="32" cy="35.87" r="1.6"/>
-                      </svg>
-                    {% when 'package' %}
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="icon icon-package"
-                        viewBox="0 0 64 64"
-                      >
-                        <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M32 54.52L10 41.95v-19.9L32 9.48l22 12.57v19.9L32 54.52z"/><path class="a" d="M32 54.52v-19.9l22-12.57M32 34.62L10 22.05M41.7 15.02L21 28.33v8.38"/>
-                      </svg>
-                    {% when 'phone' %}
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="icon icon-phone"
-                        viewBox="0 0 64 64"
-                      >
-                        <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M18.4 9.65l10.2 10.2-6.32 6.32c2.1 7 6.89 12.46 15.55 15.55l6.32-6.32 10.2 10.2-8.75 8.75C25.71 50.3 13.83 38.21 9.65 18.4z"/>
-                      </svg>
-                    {% when 'ribbon' %}
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="icon icon-ribbon"
-                        viewBox="0 0 64 64"
-                      >
-                        <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M28.57 42.31l-8.36 13.07-2.6-7.17-7.61.65 8.35-13.07a17.05 17.05 0 0 0 8.12 5.94 17.3 17.3 0 0 0 1.74.5zM54 48.86l-7.61-.65-2.61 7.17-8.36-13.07.37-.08a16.4 16.4 0 0 0 1.73-.5 17 17 0 0 0 8.12-5.93z"/><path class="a" d="M49 25.64a16.79 16.79 0 0 1-3.14 9.85 3.55 3.55 0 0 1-.23.31 17 17 0 0 1-8.12 5.93 16.4 16.4 0 0 1-1.73.5l-.37.08a16.74 16.74 0 0 1-3.42.35 16.91 16.91 0 0 1-3.43-.35l-.36-.08a17.3 17.3 0 0 1-1.74-.5 17.05 17.05 0 0 1-8.12-5.94c-.07-.09-.15-.19-.22-.3A16.86 16.86 0 0 1 15 25.64a17 17 0 0 1 34 0z"/><path class="a" d="M36.09 27.78l.96 5.63L32 30.75l-5.05 2.66.96-5.63-4.09-3.98 5.65-.82L32 17.86l2.53 5.12 5.64.82-4.08 3.98z"/>
-                      </svg>
-                    {% when 'shield' %}
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="icon icon-shield"
-                        viewBox="0 0 64 64"
-                      >
-                        <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M21.18 31.69L28.54 39l15.91-15.88"/><path class="a" d="M53 12.54v15.24a31.41 31.41 0 0 1-3.7 14.95A25.46 25.46 0 0 1 32 56a25.46 25.46 0 0 1-17.3-13.27A31.41 31.41 0 0 1 11 27.78V12.54C24.88 13.67 32 8 32 8s7.12 5.67 21 4.54z"/>
-                      </svg>
-                    {% when 'tag' %}
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="icon icon-tag"
-                        viewBox="0 0 64 64"
-                      >
-                        <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M46.69 10.34l-10.55.07-25.8 25.8 17.45 17.45 25.8-25.8.07-10.55-6.97-6.97z"/><circle class="a" cx="43.95" cy="20.05" r="3.53"/><path class="a" d="M14.4 32.15L31.85 49.6"/>
-                      </svg>
-                    {% when 'truck' %}
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="icon icon-truck"
-                        viewBox="0 0 64 64"
-                      >
-                        <defs><style>.a{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="a" d="M16.5 43.22H6.88V16.5h33.14v26.72H23.94M45.42 43.22h-5.4V30.4h17.1v12.82h-4.23M57.12 30.4l-6.41-8.56H40.02"/><circle class="a" cx="20.24" cy="43.76" r="3.74"/><path class="a" d="M45.42 43.23a3.82 3.82 0 1 1 0 .37v-.37"/>
-                      </svg>
-                  {% endcase %}
-                  <span class="icon_txt">{{ block.settings.title }}</span>
-                </span>
-              </li>
-            {% endfor %}
-          </ul>
+      {% assign match_gift_product = false %}
+      {% assign match_engraving_product = false %}
+      {% assign match_protection_product = false %}
+      {% assign e_product_id = '' %}
+      {% assign p_product_id = '' %}
+
+      {% if settings.show_gift_box %}
+        {% assign first_gift_product = settings['product-handle-1'] %}
+        {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
+        {% assign second_gift_product = settings['product-handle-2'] %}
+        {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
+        {% if first_gift_product_id == item.id or second_gift_product_id == item.id %}
+          {% assign match_gift_product = true %}
         {% endif %}
-      </div>
-    </header>
+      {% endif %}
 
-    {%- if cart.item_count > 0 -%}
-      {% assign main_item_count = 0 %}
-      <form action="{{ routes.cart_url }}" method="post" novalidate data-location="page" id="CartPageForm">
-        <div class="cart__page">
-          <div data-products class="cart__page-col">
-            <div class="cart-item-header-ss d-flex">
-              <div class="cart-item-product-header-ss">
-                PRODUCT
-              </div>
-              <div class="cart-item-quantity-header-ss">
-                {{ 'cart.label.quantity' | t }}
-              </div>
-              <div class="cart-item-price-header-ss">
-                {{ 'cart.label.price' | t }}
-              </div>
+      {% if settings.second_show_gift_box %}
+        {% assign second_tier_first_gift_product = settings['second_product-handle-1'] %}
+        {% assign second_tier_first_gift_product_id = second_tier_first_gift_product.selected_or_first_available_variant.id %}
+        {% assign second_tier_second_gift_product = settings['second_product-handle-2'] %}
+        {% assign second_tier_second_gift_product_id = second_tier_second_gift_product.selected_or_first_available_variant.id %}
+        {% if second_tier_first_gift_product_id == item.id or second_tier_second_gift_product_id == item.id %}
+          {% assign match_gift_product = true %}
+        {% endif %}
+      {% endif %}
+      {% if settings.third_show_gift_box %}
+        {% assign third_tier_first_gift_product = settings['third_product-handle-1'] %}
+        {% assign third_tier_first_gift_product_id = third_tier_first_gift_product.selected_or_first_available_variant.id %}
+        {% assign third_tier_second_gift_product = settings['third_product-handle-2'] %}
+        {% assign third_tier_second_gift_product_id = third_tier_second_gift_product.selected_or_first_available_variant.id %}
+        {% if third_tier_first_gift_product_id == item.id or third_tier_second_gift_product_id == item.id %}
+          {% assign match_gift_product = true %}
+        {% endif %}
+      {% endif %}
+      {% if settings.show_engraving and settings['product-engraving'] %}
+        {% assign engraving_product = settings['product-engraving'] %}
+        {% assign engraving_product_id = engraving_product.id %}
+        {% assign engraving_product_id_var = engraving_product.selected_or_first_available_variant.id %}
+        {% if engraving_product_id_var == item.id %}
+          {% assign match_engraving_product = true %}
+        {% endif %}
+      {% endif %}
+
+      {% if item.product.metafields.custom.premium_protection_product %}
+        {% liquid
+          assign protection_product = all_products[item.product.metafields.custom.premium_protection_product]
+          assign protection_product_id = protection_product.id
+          assign first_protection_product_id_var = protection_product.selected_or_first_available_variant.id
+          if first_protection_product_id_var == item.id
+            assign match_protection_product = true
+          endif
+        %}
+      {% endif %}
+
+      {% assign hidden = false %}
+
+      {% if match_engraving_product %}
+        {% assign hidden = true %}
+      {% endif %}
+      {% if match_protection_product %}
+        {% assign hidden = true %}
+      {% endif %}
+      {% if item.product.tags contains 'hidden' or item.product.tags contains 'OPTIONS_HIDDEN_PRODUCT' %}
+        {% assign hidden = true %}
+      {% endif %}
+      {% if item.product.title contains 'Navidium Shipping Protection' %}
+        {% assign hidden = true %}
+      {% endif %}
+      {% if match_gift_product %}
+        {% assign hidden = true %}
+      {% endif %}
+      {% if hidden == false %}
+        {% assign main_item_count = main_item_count | plus: 1 %}
+      {% endif %}
+    {%- endfor -%}
+    {% if main_item_count > 0 %}
+      <h2 class="section-header__title">Your Cart&nbsp;({{ main_item_count }})</h2>
+    {% endif %}
+    <div class="rte text-spacing">
+      {%- if cart.item_count == 0 -%}
+        <p>{{ 'cart.general.empty' | t }}</p>
+        {% if section.settings.text_1 != blank %}
+          <p style="color:red;">{{ section.settings.text_1 }}</p>
+        {% endif %}
+
+        <div class="dgCartUpsell dgCartUpSellWrapper  appear-delay-3" id="cart_gift_wrap"></div>
+      {%- endif -%}
+      <p class="text-center"><a href="{{ settings.cart_continue_shopping_link }}">Continue shopping</a></p>
+      {% if cart.item_count > 0 %}
+        <p class="text-center"><a href="/cart/clear">Clear cart</a></p>
+
+        <ul class="cart-sales-points">
+          {% for block in section.blocks %}
+            <li class="sales-point">
+              <span class="icon-and-text custom_icon_wrap">
+                {% case block.settings.icon %}
+                  {% when 'checkmark' %}
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-circle-checkmark"
+                      viewBox="0 0 64 64"
+                    >
+                      <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M52.68 24.48A22 22 0 1 1 47 15.93M21 32l8.5 8.5L57 13"/>
+                    </svg>
+                  {% when 'gift' %}
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-gift"
+                      viewBox="0 0 64 64"
+                    >
+                      <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M9 20.23h46v8.68H9zM13.34 28.91h36.89v24.3H13.34zM27.82 20.66v32.98M35.91 20.88v32.98M20.52 11.43a3.73 3.73 0 0 0-.74 2.87 4.57 4.57 0 0 0 .8 2.27C22 18.09 25.15 20 32 20.23a12 12 0 0 0-2.43-7 7.52 7.52 0 0 0-5.66-3.12 4 4 0 0 0-3.39 1.32z"/><path class="a" d="M43.37 11.43a3.73 3.73 0 0 1 .74 2.87 4.48 4.48 0 0 1-.8 2.27c-1.42 1.52-4.57 3.41-11.42 3.66a12.08 12.08 0 0 1 2.43-7A7.56 7.56 0 0 1 40 10.14a4 4 0 0 1 3.37 1.29z"/>
+                    </svg>
+                  {% when 'globe' %}
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-globe"
+                      viewBox="0 0 64 64"
+                    >
+                      <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><circle class="a" cx="32" cy="32" r="22"/><path class="a" d="M13 21h38M10 32h44M13 43h38M32 10c-12 8-12 37 0 44M32 10c12 8 12 37 0 44"/>
+                    </svg>
+                  {% when 'heart' %}
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-heart"
+                      viewBox="0 0 64 64"
+                    >
+                      <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M51.27 15.05a13 13 0 0 0-18.44 0l-.83.83-.83-.83a13 13 0 0 0-18.44 18.44l.83.83L32 52.77l18.44-18.45.83-.83a13 13 0 0 0 0-18.44z"/>
+                    </svg>
+                  {% when 'leaf' %}
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-leaf"
+                      viewBox="0 0 64 64"
+                    >
+                      <defs><style>.a{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="a" d="M52 11L13 50M35 13v15h16"/><path class="a" d="M52 11c6 24-16.72 47.29-33 32C7 22 29 10 52 11z"/>
+                    </svg>
+                  {% when 'lock' %}
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-lock"
+                      viewBox="0 0 64 64"
+                    >
+                      <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M19.45 23.6v-3.2c0-7 5.89-11.75 12.55-11.75 7.21 0 12.55 5.49 12.55 11.75v3.2M10 23.6h44v31.75H10zM32 37.47v7.47"/><circle class="a" cx="32" cy="35.87" r="1.6"/>
+                    </svg>
+                  {% when 'package' %}
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-package"
+                      viewBox="0 0 64 64"
+                    >
+                      <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M32 54.52L10 41.95v-19.9L32 9.48l22 12.57v19.9L32 54.52z"/><path class="a" d="M32 54.52v-19.9l22-12.57M32 34.62L10 22.05M41.7 15.02L21 28.33v8.38"/>
+                    </svg>
+                  {% when 'phone' %}
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-phone"
+                      viewBox="0 0 64 64"
+                    >
+                      <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M18.4 9.65l10.2 10.2-6.32 6.32c2.1 7 6.89 12.46 15.55 15.55l6.32-6.32 10.2 10.2-8.75 8.75C25.71 50.3 13.83 38.21 9.65 18.4z"/>
+                    </svg>
+                  {% when 'ribbon' %}
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-ribbon"
+                      viewBox="0 0 64 64"
+                    >
+                      <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M28.57 42.31l-8.36 13.07-2.6-7.17-7.61.65 8.35-13.07a17.05 17.05 0 0 0 8.12 5.94 17.3 17.3 0 0 0 1.74.5zM54 48.86l-7.61-.65-2.61 7.17-8.36-13.07.37-.08a16.4 16.4 0 0 0 1.73-.5 17 17 0 0 0 8.12-5.93z"/><path class="a" d="M49 25.64a16.79 16.79 0 0 1-3.14 9.85 3.55 3.55 0 0 1-.23.31 17 17 0 0 1-8.12 5.93 16.4 16.4 0 0 1-1.73.5l-.37.08a16.74 16.74 0 0 1-3.42.35 16.91 16.91 0 0 1-3.43-.35l-.36-.08a17.3 17.3 0 0 1-1.74-.5 17.05 17.05 0 0 1-8.12-5.94c-.07-.09-.15-.19-.22-.3A16.86 16.86 0 0 1 15 25.64a17 17 0 0 1 34 0z"/><path class="a" d="M36.09 27.78l.96 5.63L32 30.75l-5.05 2.66.96-5.63-4.09-3.98 5.65-.82L32 17.86l2.53 5.12 5.64.82-4.08 3.98z"/>
+                    </svg>
+                  {% when 'shield' %}
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-shield"
+                      viewBox="0 0 64 64"
+                    >
+                      <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M21.18 31.69L28.54 39l15.91-15.88"/><path class="a" d="M53 12.54v15.24a31.41 31.41 0 0 1-3.7 14.95A25.46 25.46 0 0 1 32 56a25.46 25.46 0 0 1-17.3-13.27A31.41 31.41 0 0 1 11 27.78V12.54C24.88 13.67 32 8 32 8s7.12 5.67 21 4.54z"/>
+                    </svg>
+                  {% when 'tag' %}
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-tag"
+                      viewBox="0 0 64 64"
+                    >
+                      <defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M46.69 10.34l-10.55.07-25.8 25.8 17.45 17.45 25.8-25.8.07-10.55-6.97-6.97z"/><circle class="a" cx="43.95" cy="20.05" r="3.53"/><path class="a" d="M14.4 32.15L31.85 49.6"/>
+                    </svg>
+                  {% when 'truck' %}
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-truck"
+                      viewBox="0 0 64 64"
+                    >
+                      <defs><style>.a{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="a" d="M16.5 43.22H6.88V16.5h33.14v26.72H23.94M45.42 43.22h-5.4V30.4h17.1v12.82h-4.23M57.12 30.4l-6.41-8.56H40.02"/><circle class="a" cx="20.24" cy="43.76" r="3.74"/><path class="a" d="M45.42 43.23a3.82 3.82 0 1 1 0 .37v-.37"/>
+                    </svg>
+                {% endcase %}
+                <span class="icon_txt">{{ block.settings.title }}</span>
+              </span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </header>
+
+  {%- if cart.item_count > 0 -%}
+    {% assign main_item_count = 0 %}
+    <form action="{{ routes.cart_url }}" method="post" novalidate data-location="page" id="CartPageForm">
+      <div class="cart__page">
+        <div data-products class="cart__page-col">
+          <div class="cart-item-header-ss d-flex">
+            <div class="cart-item-product-header-ss">PRODUCT</div>
+            <div class="cart-item-quantity-header-ss">
+              {{ 'cart.label.quantity' | t }}
             </div>
-            {% assign intelligems_total = 0 %}
-            {% assign cart_total_exclude_gift = 0 %}
-            {% for item in cart.items %}
+            <div class="cart-item-price-header-ss">
+              {{ 'cart.label.price' | t }}
+            </div>
+          </div>
+          {% assign intelligems_total = 0 %}
+          {% assign cart_total_exclude_gift = 0 %}
+          {% assign cart_total_exclude_tryon = 0 %}
+          {% for item in cart.items %}
+            {% assign is_gift_product = false %}
+            {% for gift_product in gift_products %}
+              {% if item.variant_id == all_products[gift_product].selected_or_first_available_variant.id %}
+                {% assign is_gift_product = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+            {% if is_gift_product == false %}
               {% if item.product.metafields.custom.hide_free_gift.value == true %}
                 {% assign cart_total_exclude_gift = cart_total_exclude_gift
                   | plus: item.final_price
@@ -312,11 +739,21 @@
                   {% assign intelligems_discount = 0 %}
                 {% else %}
                   {% assign intelligems_discount = item.properties._igp | plus: 0 %}
-                  {% assign intelligems_total = intelligems_total
-                    | plus: item.properties._igp
-                    | times: item.quantity
-                  %}
+                  {% assign intelligems_total = intelligems_total | plus: item.properties._igp | times: item.quantity %}
               {% endcase %}
+
+              {%- comment -%} Calculate cart total excluding tryon items {%- endcomment -%}
+              {%- assign is_tryon_item = false -%}
+              {%- if item.selling_plan_allocation != empty and item.selling_plan_allocation.selling_plan.id == 1848737874 -%}
+                {%- assign is_tryon_item = true -%}
+              {%- endif -%}
+              
+              {%- unless is_tryon_item -%}
+                {%- assign cart_total_exclude_tryon = cart_total_exclude_tryon
+                  | plus: item.final_price
+                  | times: item.quantity
+                -%}
+              {%- endunless -%}
               {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
               {%- if item.properties._boldBuilderId and item.properties._boldVariantIds == null -%}
                 <input
@@ -337,7 +774,6 @@
               {% assign e_product_id = '' %}
               {% assign p_product_id = '' %}
 
-              
               {% if settings.show_gift_box %}
                 {% assign first_gift_product = settings['product-handle-1'] %}
                 {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
@@ -374,7 +810,7 @@
                   {% assign match_engraving_product = true %}
                 {% endif %}
               {% endif %}
-              
+
               {% if item.product.metafields.custom.premium_protection_product %}
                 {% liquid
                   assign protection_product = all_products[item.product.metafields.custom.premium_protection_product]
@@ -387,8 +823,8 @@
               {% endif %}
 
               {% assign hidden = false %}
-              
-              {% if match_engraving_product %} 
+
+              {% if match_engraving_product %}
                 {% assign hidden = true %}
               {% endif %}
               {% if match_protection_product %}
@@ -407,238 +843,327 @@
                 {% assign main_item_count = main_item_count | plus: 1 %}
               {% endif %}
 
-              {%- render 'cart-item-horizontal', product: item, line: forloop.index, intelligems_discount: intelligems_discount, hidden: hidden -%}
-            {%- endfor -%}
-          </div>
-          <div class="cart__page-col">
-            {% if main_item_count == 1 %}
-              <p class="right" style="color:red;">{{ section.settings.text_2 }}</p>
+              {%- render 'cart-item-horizontal',
+                product: item,
+                line: forloop.index,
+                intelligems_discount: intelligems_discount,
+                hidden: hidden
+              -%}
             {% endif %}
-            {% if section.settings.show_subtotal_certain_amount == true and cart.total_price > section.settings.subtotal_certain_amount %}
-              <p class="right" style="color:red;">{{ section.settings.text_3 }}</p>
-            {% endif %}
-            {% if section.settings.show_entry != false %}
-              <input type="hidden" id="_multiplier" value="{{ section.settings.multiplier }}">
-              <p class="right" style="color:black; display: flex; align-items: center; flex-wrap: wrap; gap: 20px;">
-                {% assign total_entries = 0 %}
-                {% for item in cart.items %}
-                  {% if item.product.metafields.custom.entries_multiplier != blank %}
-                    {% assign new_entries = item.product.metafields.custom.entries_multiplier | times: item.price | times: item.quantity | divided_by: 100 %}
-                    {% assign total_entries = total_entries | plus: new_entries | round %}
-                  {% else %}
-                    {% assign new_entries = settings.entries_multiplier | times: item.price | times: item.quantity | divided_by: 100 %}
-                    {% assign total_entries = total_entries | plus: new_entries | round %}
-                  {% endif %}
-                {% endfor %}
-                <span style="
+          {%- endfor -%}
+        </div>
+        <div class="cart__page-col">
+          {% if main_item_count == 1 %}
+            <p class="right" style="color:red;">{{ section.settings.text_2 }}</p>
+          {% endif %}
+          {% if section.settings.show_subtotal_certain_amount == true
+            and cart_total_exclude_tryon > section.settings.subtotal_certain_amount
+          %}
+            <p class="right" style="color:red;">{{ section.settings.text_3 }}</p>
+          {% endif %}
+          {% if section.settings.show_entry != false %}
+            <input type="hidden" id="_multiplier" value="{{ section.settings.multiplier }}">
+            <p class="right" style="color:black; display: flex; align-items: center; flex-wrap: wrap; gap: 20px;">
+              {% assign total_entries = 0 %}
+              {% for item in cart.items %}
+                {% if item.product.metafields.custom.entries_multiplier != blank %}
+                  {% assign new_entries = item.product.metafields.custom.entries_multiplier
+                    | times: item.price
+                    | times: item.quantity
+                    | divided_by: 100
+                  %}
+                  {% assign total_entries = total_entries | plus: new_entries | round %}
+                {% else %}
+                  {% assign new_entries = settings.entries_multiplier
+                    | times: item.price
+                    | times: item.quantity
+                    | divided_by: 100
+                  %}
+                  {% assign total_entries = total_entries | plus: new_entries | round %}
+                {% endif %}
+              {% endfor %}
+              <span
+                style="
                   display: inline-block;
                   background: #DC3030;
                   padding: 3px 15px;
                   border-radius: 20px;
                   color: white;
-                  font-size: 14px;">
-                  {{ section.settings.text_entry }} <span id="_entry_val">{{ total_entries }}</span>
-                </span> 
-                {% if section.settings.hyper_linklist %}
-                  <span>
-                    <a href="{{ section.settings.hyper_linklist }}" style="font-size: 13px;text-decoration: underline;">{{ section.settings.link_txt }}</a>
-                  </span>
+                  font-size: 14px;
+                "
+              >
+                {{ section.settings.text_entry }}
+                <span id="_entry_val">{{ total_entries }}</span>
+              </span>
+              {% if section.settings.hyper_linklist %}
+                <span>
+                  <a href="{{ section.settings.hyper_linklist }}" style="font-size: 13px;text-decoration: underline;">
+                    {{- section.settings.link_txt -}}
+                  </a>
+                </span>
+              {% endif %}
+            </p>
+          {% endif %}
+          {% render 'dg-cart-upsells_n', hide_price: cart_total_exclude_gift %}
+          {% if settings.cart_notes_enable %}
+            <div>
+              <label for="CartNote">{{ 'cart.general.note' | t }}</label>
+              <textarea name="note" class="input-full cart-notes" id="CartNote">{{ cart.note }}</textarea>
+            </div>
+          {% endif %}
+
+          <div data-discounts>
+            {% if cart.cart_level_discount_applications != blank %}
+              <div class="cart__discounts cart__item-sub cart__item-row">
+                <div>{{ 'cart.general.discounts' | t }}</div>
+                <div class="text-right">
+                  {% for cart_discount in cart.cart_level_discount_applications %}
+                    <div class="cart__discount">
+                      {{ cart_discount.title }} (-
+                      {{- cart_discount.total_allocated_amount | money_without_trailing_zeros -}}
+                      )
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+
+          {% if settings.cart_terms_conditions_enable %}
+            <div class="cart__item-row cart__terms">
+              <input type="checkbox" id="CartTerms" class="cart__terms-checkbox">
+              <label for="CartTerms">
+                {% if settings.cart_terms_conditions_page != blank %}
+                  {{ 'cart.general.terms_html' | t: url: settings.cart_terms_conditions_page.url }}
+                {% else %}
+                  {{ 'cart.general.terms' | t }}
                 {% endif %}
-              </p>
-            {% endif %}          
-            {% render 'dg-cart-upsells_n', hide_price: cart_total_exclude_gift %}
-            {% if settings.cart_notes_enable %}
-              <div>
-                <label for="CartNote">{{ 'cart.general.note' | t }}</label>
-                <textarea name="note" class="input-full cart-notes" id="CartNote">{{ cart.note }}</textarea>
-              </div>
-            {% endif %}
+              </label>
+            </div>
+          {% endif %}
 
-            <div data-discounts>
-              {% if cart.cart_level_discount_applications != blank %}
-                <div class="cart__discounts cart__item-sub cart__item-row">
-                  <div>{{ 'cart.general.discounts' | t }}</div>
-                  <div class="text-right">
-                    {% for cart_discount in cart.cart_level_discount_applications %}
-                      <div class="cart__discount">
-                        {{ cart_discount.title }} (-{{ cart_discount.total_allocated_amount | money_without_trailing_zeros }})
-                      </div>
-                    {% endfor %}
-                  </div>
+          {%- if settings.shipping_protection_product != blank -%}
+          {%- endif -%}
+
+          <div class="nvd-mini"></div>
+          <div class="cart__item-row cart__checkout-wrapper">
+            <div class="sticky-bar">
+              <div class="cart__item-sub cart__item-row">
+                <div>{{ 'cart.general.subtotal' | t }}</div>
+                <div data-subtotal class="cart-subtotal">
+                  <span class="bcpo-cart-original-total"
+                    ><span
+                      class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total"
+                      style="display:none !important;"
+                    ></span>
+                    {{- cart_total_exclude_tryon | money_without_trailing_zeros -}}
+                  </span>
                 </div>
-              {% endif %}
+              </div>
+              <button
+                type="submit"
+                name="checkout"
+                data-terms-required="{{ settings.cart_terms_conditions_enable }}"
+                class="btn cart__checkout btn-primary-secondary-primary"
+              >
+                {{ 'cart.general.checkout' | t }}
+              </button>
             </div>
 
-            {% if settings.cart_terms_conditions_enable %}
-              <div class="cart__item-row cart__terms">
-                <input type="checkbox" id="CartTerms" class="cart__terms-checkbox">
-                <label for="CartTerms">
-                  {% if settings.cart_terms_conditions_page != blank %}
-                    {{ 'cart.general.terms_html' | t: url: settings.cart_terms_conditions_page.url }}
-                  {% else %}
-                    {{ 'cart.general.terms' | t }}
-                  {% endif %}
-                </label>
-              </div>
+            {% if additional_checkout_buttons and settings.cart_additional_buttons %}
+              <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
             {% endif %}
+          </div>
 
-            {%- if settings.shipping_protection_product != blank -%}
-            {%- endif -%}
-
-            <div class="nvd-mini"></div>
-            <div class="cart__item-row cart__checkout-wrapper">
-              <div class="sticky-bar">
-                <div class="cart__item-sub cart__item-row">
-                  <div>{{ 'cart.general.subtotal' | t }}</div>
-                  <div data-subtotal class="cart-subtotal">
-                    <span class="bcpo-cart-original-total"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>{{ cart.total_price | money_without_trailing_zeros }}</span>
-                  </div>
-                </div>
-                <button
-                  type="submit"
-                  name="checkout"
-                  data-terms-required="{{ settings.cart_terms_conditions_enable }}"
-                  class="btn cart__checkout btn-primary-secondary-primary"
-                >
-                  {{ 'cart.general.checkout' | t }}
-                </button>
-              </div>
-
-              {% if additional_checkout_buttons and settings.cart_additional_buttons %}
-                <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
-              {% endif %}
-            </div>
-
-            <div class="cart__item-row text-center">
-              <small>
-                {{ 'cart.general.shipping_at_checkout' | t -}}
-                <br>
-              </small>
-            </div>
+          <div class="cart__item-row text-center">
+            <small>
+              {{ 'cart.general.shipping_at_checkout' | t -}}
+              <br>
+            </small>
           </div>
         </div>
-      </form>
-    {%- endif -%}
-  </div>
+      </div>
+    </form>
+  {%- endif -%}
+</div>
 
-  <script>
-    function scrollbar() {
-      var rect = document.querySelector('.cart__checkout-wrapper').getBoundingClientRect();
-      var innerheight = window.innerHeight - 100;
-      if (innerheight > rect.top && rect.top > -100 ) {
-        document.querySelector('.cart__checkout-wrapper').classList.add('active');
-      } else {
-        document.querySelector('.cart__checkout-wrapper').classList.remove('active');
-      }
+<script>
+  function scrollbar() {
+    var rect = document.querySelector('.cart__checkout-wrapper').getBoundingClientRect();
+    var innerheight = window.innerHeight - 100;
+    if (innerheight > rect.top && rect.top > -100 ) {
+      document.querySelector('.cart__checkout-wrapper').classList.add('active');
+    } else {
+      document.querySelector('.cart__checkout-wrapper').classList.remove('active');
     }
+  }
 
-    scrollbar();
-    window.addEventListener('scroll', scrollbar, false);
+  scrollbar();
+  window.addEventListener('scroll', scrollbar, false);
 
-    // Cart validation and tier-based gift removal logic
-    document.addEventListener('DOMContentLoaded', function() {
-      validateAndRemoveInvalidGifts();
-    });
+  // Cart validation and tier-based gift removal logic
+  document.addEventListener('DOMContentLoaded', function() {
+    validateAndRemoveInvalidGifts();
+  });
 
-    // Monitor cart changes and remove invalid gifts
-    document.addEventListener('cart:updated', function() {
-      validateAndRemoveInvalidGifts();
-    });
+  // Monitor cart changes and remove invalid gifts
+  document.addEventListener('cart:updated', function() {
+    validateAndRemoveInvalidGifts();
+  });
 
-    document.addEventListener('ajaxProduct:added', function() {
-      validateAndRemoveInvalidGifts();
-    });
+  document.addEventListener('ajaxProduct:added', function() {
+    validateAndRemoveInvalidGifts();
+  });
 
-    async function validateAndRemoveInvalidGifts() {
-      try {
-        const response = await fetch('/cart.js');
-        const cart = await response.json();
-        
-        const secondTierMin = {{ settings.min_cart_threshold_amount | times: 100 }};
-        const secondTierMax = {{ settings.max_cart_threshold_amount | times: 100 }};
-        
-        // Get first tier gift product IDs
-        const firstTierGiftIds = [];
-        {% if settings.show_gift_box %}
-          {% if settings.product-handle-1 %}
-            firstTierGiftIds.push('{{ settings.product-handle-1.selected_or_first_available_variant.id }}');
-          {% endif %}
-          {% if settings.product-handle-2 %}
-            firstTierGiftIds.push('{{ settings.product-handle-2.selected_or_first_available_variant.id }}');
-          {% endif %}
+  async function validateAndRemoveInvalidGifts() {
+    try {
+      const response = await fetch('/cart.js');
+      const cart = await response.json();
+
+      const secondTierMin = {{ settings.min_cart_threshold_amount | times: 100 }};
+      const secondTierMax = {{ settings.max_cart_threshold_amount | times: 100 }};
+
+      // Get first tier gift product IDs
+      const firstTierGiftIds = [];
+      {% if settings.show_gift_box %}
+        {% if settings.product-handle-1 %}
+          firstTierGiftIds.push('{{ settings.product-handle-1.selected_or_first_available_variant.id }}');
         {% endif %}
-        
-        // Get second tier gift product IDs
-        const secondTierGiftIds = [];
-        {% if settings.second_show_gift_box %}
-          {% if settings.second_product-handle-1 %}
-            secondTierGiftIds.push('{{ settings.second_product-handle-1.selected_or_first_available_variant.id }}');
-          {% endif %}
-          {% if settings.second_product-handle-2 %}
-            secondTierGiftIds.push('{{ settings.second_product-handle-2.selected_or_first_available_variant.id }}');
-          {% endif %}
+        {% if settings.product-handle-2 %}
+          firstTierGiftIds.push('{{ settings.product-handle-2.selected_or_first_available_variant.id }}');
         {% endif %}
+      {% endif %}
 
-
-        // Check if cart meets second tier requirements
-        const cartTotal = cart.total_price;
-        
-        {% if settings.second_show_gift_box == true %}
-          const meetsSecondTierRequirements = cartTotal >= secondTierMin && cartTotal <= secondTierMax;
-        {% else %}
-          const meetsSecondTierRequirements = false;
+      // Get second tier gift product IDs
+      const secondTierGiftIds = [];
+      {% if settings.second_show_gift_box %}
+        {% if settings.second_product-handle-1 %}
+          secondTierGiftIds.push('{{ settings.second_product-handle-1.selected_or_first_available_variant.id }}');
         {% endif %}
+        {% if settings.second_product-handle-2 %}
+          secondTierGiftIds.push('{{ settings.second_product-handle-2.selected_or_first_available_variant.id }}');
+        {% endif %}
+      {% endif %}
 
-        // Find and remove invalid gifts based on tier
-        const itemsToRemove = [];
+
+      // Check if cart meets second tier requirements
+      // Calculate cart total excluding tryon items
+      let cartTotal = 0;
+      cart.items.forEach(item => {
+        const isTryonItem = item.selling_plan_allocation && 
+                           item.selling_plan_allocation.selling_plan && 
+                           item.selling_plan_allocation.selling_plan.id === 1848737874;
+        if (!isTryonItem) {
+          cartTotal += item.final_line_price;
+        }
+      });
+
+      {% if settings.second_show_gift_box == true %}
+        const meetsSecondTierRequirements = cartTotal >= secondTierMin && cartTotal <= secondTierMax;
+      {% else %}
+        const meetsSecondTierRequirements = false;
+      {% endif %}
+
+      // Find and remove invalid gifts based on tier
+      const itemsToRemove = [];
+      cart.items.forEach(item => {
+        const isFirstTierGift = firstTierGiftIds.includes(item.variant_id.toString());
+        const isSecondTierGift = secondTierGiftIds.includes(item.variant_id.toString());
+
+        if (isFirstTierGift && meetsSecondTierRequirements) {
+          // Remove first tier gifts when second tier requirements are met
+          itemsToRemove.push({
+            id: item.key,
+            title: item.title,
+            variant_id: item.variant_id,
+            tier: 'first'
+          });
+        } else if (isSecondTierGift && !meetsSecondTierRequirements) {
+          // Remove second tier gifts when second tier requirements are not met
+          itemsToRemove.push({
+            id: item.key,
+            title: item.title,
+            variant_id: item.variant_id,
+            tier: 'second'
+          });
+        }
+      });
+
+      // Remove invalid gifts
+      if (itemsToRemove.length > 0) {
+        console.log('Removing invalid tier gifts:', itemsToRemove);
+
+        for (const item of itemsToRemove) {
+          await fetch('/cart/change.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              id: item.id,
+              quantity: 0
+            })
+          });
+        }
+
+        // Refresh the page to update the display
+        window.location.reload();
+      }
+    } catch (error) {
+      console.error('Error validating cart gifts:', error);
+    }
+  }
+</script>
+<script>
+  // Function to refresh cart subtotal every 3 seconds
+  function refreshCartSubtotal() {
+    fetch('/cart.js')
+      .then(response => response.json())
+      .then(cart => {
+        // Calculate cart total excluding tryon items
+        let cartTotal = 0;
         cart.items.forEach(item => {
-          const isFirstTierGift = firstTierGiftIds.includes(item.variant_id.toString());
-          const isSecondTierGift = secondTierGiftIds.includes(item.variant_id.toString());
-          
-          if (isFirstTierGift && meetsSecondTierRequirements) {
-            // Remove first tier gifts when second tier requirements are met
-            itemsToRemove.push({
-              id: item.key,
-              title: item.title,
-              variant_id: item.variant_id,
-              tier: 'first'
-            });
-          } else if (isSecondTierGift && !meetsSecondTierRequirements) {
-            // Remove second tier gifts when second tier requirements are not met
-            itemsToRemove.push({
-              id: item.key,
-              title: item.title,
-              variant_id: item.variant_id,
-              tier: 'second'
-            });
+          const isTryonItem = item.selling_plan_allocation && 
+                             item.selling_plan_allocation.selling_plan && 
+                             item.selling_plan_allocation.selling_plan.id === 1848737874;
+          if (!isTryonItem) {
+            cartTotal += item.final_line_price;
           }
         });
 
-        // Remove invalid gifts
-        if (itemsToRemove.length > 0) {
-          console.log('Removing invalid tier gifts:', itemsToRemove);
-          
-          for (const item of itemsToRemove) {
-            await fetch('/cart/change.js', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                id: item.id,
-                quantity: 0
-              })
-            });
-          }
-          
-          // Refresh the page to update the display
-          window.location.reload();
+        // Format the price as currency
+        const formattedPrice = new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: 'USD',
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        }).format(cartTotal / 100);
+
+        // Update the subtotal display
+        const subtotalElement = document.querySelector('.cart-subtotal .bcpo-cart-original-total');
+        if (subtotalElement) {
+          subtotalElement.textContent = formattedPrice;
         }
-      } catch (error) {
-        console.error('Error validating cart gifts:', error);
-      }
-    }
-  </script>
+      })
+      .catch(error => {
+        console.error('Error refreshing cart subtotal:', error);
+      });
+  }
+
+  // Start refreshing every 3 seconds when page loads
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initial refresh
+    refreshCartSubtotal();
+    
+    // Set up interval to refresh every 3 seconds
+    setInterval(refreshCartSubtotal, 3000);
+  });
+
+  // Also refresh when cart is updated
+  document.addEventListener('cart:updated', function() {
+    refreshCartSubtotal();
+  });
+</script>
 
 {% schema %}
 {
@@ -674,18 +1199,18 @@
     {
       "type": "textarea",
       "id": "text_3",
-      "label": "Text when subtotal is a certain amount",
+      "label": "Text when subtotal is a certain amount"
     },
     {
       "type": "header",
-      "content":"Entry"
-    }, 
+      "content": "Entry"
+    },
     {
       "type": "checkbox",
       "id": "show_entry",
       "label": "Show entry",
       "default": false
-    },    
+    },
     {
       "type": "text",
       "id": "text_entry",
