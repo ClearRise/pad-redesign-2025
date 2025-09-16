@@ -236,7 +236,7 @@
           {%- assign is_tryon_item = true -%}
         {%- endif -%}
         <script>
-          console.log(is_tryon_item, "is_tryon_item");
+          console.log({{ is_tryon_item | json }}, "is_tryon_item");
         </script>
 
         {% if product.original_price != product.final_price %}
