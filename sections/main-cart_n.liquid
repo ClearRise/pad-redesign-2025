@@ -59,6 +59,7 @@
             item.selling_plan_allocation.selling_plan && 
             item.selling_plan_allocation.selling_plan.id === sellingPlanId) {
           
+          let productBoldBuilderId = item.properties._boldBuilderId;
           // Check if _main_product property is not 'false'
           if (item.properties && item.properties._main_product === undefined) {
             tryonProducts.push(item);
@@ -246,7 +247,8 @@
               'line': product.line,
               'selling_plan': sellingPlanId,
               'properties': {
-                '_main_product': "No"
+                '_main_product': "No",
+                '_boldBuilderId': productBoldBuilderId
               }
             };
             
