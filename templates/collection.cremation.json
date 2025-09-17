@@ -1,1 +1,399 @@
-{"sections":{"advanced_content_eYLzPF":{"type":"advanced-content-flexible","blocks":{"liquid_DNKzNA":{"type":"liquid","settings":{"is_collection_banner":true,"liquid_name":"","code":"<h2>Glow Stone Series<\/h2><p>Experience the perfect blend of tradition and quality with craftsmanship that stands the test of time.<\/p>","width":"50%","alignment":"center","text_color":"#000000","simple_background_color":"#ffffff","variant_padding":true,"padding_left":0,"padding_top":0,"padding_bottom":0,"padding_right":30}},"image_khDkUk":{"type":"image","settings":{"iamge_name":"","image":"shopify:\/\/shop_images\/a.jpg","link":"","width":"50%","alignment":"center"}}},"block_order":["liquid_DNKzNA","image_khDkUk"],"disabled":true,"settings":{"full_width":true,"show_navigation":true,"image_first":true,"space_around":false,"background_color":"#ffffff","small_image":false,"is_top_line":false,"is_bottom_line":false,"top_logo_size":30,"additional_class":""}},"17347204-928a-46d1-8166-ac8c007f382d":{"type":"slideshow_n","blocks":{"image_WfWU9Q":{"type":"image","settings":{"top_subheading":"","top_subheading_color":"","title":"","special_title_color":"","subheading":"","special_text_color":"","link":"","link_text":"","link_2":"","link_text_2":"","color_accent":"rgba(0,0,0,0)","text_position":"vertical-center horizontal-center","text_align":"left","mobile_text_position":"mobile-vertical-center mobile-horizontal-center","mobile_text_align":"left","image":"shopify:\/\/shop_images\/4_4.jpg","image_mobile":"shopify:\/\/shop_images\/2_4.jpg","overlay_opacity":0,"focal_point":"center center","base_text_color":"#ffffff","title_size":80,"base_text_size":24,"text_bottom_padding_desktop":30,"text_bottom_padding_mobile":30,"button_color_1":"white","button_color_2":"white"}}},"block_order":["image_WfWU9Q"],"settings":{"use_img_banner":true,"section_height":"natural","mobile_height":"auto","parallax":false,"style":"bars","autoplay":false,"autoplay_speed":5}},"how_it_works_2_NTW4aQ":{"type":"how-it-works-2","blocks":{"step_zPWLMh":{"type":"step","settings":{"title":"<b>DESIGN YOUR RING<\/b>","description":"Choose among our most popular designs or customize your own to honor your loved one."}},"step_zEY6MV":{"type":"step","settings":{"title":"<b>SEND US CREMAINS<\/b>","description":"We provide a paid secure collection kit with clear instructions for mailing the ashes."}},"step_kEbceP":{"type":"step","settings":{"title":"<b>CRAFTED & DELIVERED<\/b>","description":"We handcraft your ring with care and respect, then ship it directly to your door."}}},"block_order":["step_zPWLMh","step_zEY6MV","step_kEbceP"],"name":"How It Works 2","settings":{"full_width":false,"max_width":1600,"background_color":"","title":"<b>CREMATION JEWELRY<\/b>","title_font_size_desktop":40,"title_font_size_mobile":24,"step_title_color":"#000000","step_title_font_size_desktop":18,"step_title_font_size_mobile":18,"step_description_font_size_desktop":14,"step_description_font_size_mobile":14,"step_description_color":"#000000"}},"replo_trust_icons_white_backg_Wc7kJ7":{"type":"replo-trust-icons-white-backg","disabled":true,"custom_css":["{padding: 10 px;}"],"settings":{}},"trust_icons_EDYTbe":{"type":"trust-icons_n","settings":{"section_background":"#eeeeee","top_padding":20,"bottom_padding":20,"show_bottom_break_line":false,"top_logo_size":16,"trust_icon_1_label":"","trust_icon_2_label":"","trust_icon_3_label":"","trust_icon_4_label":"One-of-a-kind Designs"}},"replo_trust_icons_fy9XYw":{"type":"replo-trust-icons","disabled":true,"settings":{}},"rich_text_G9LH7U":{"type":"rich-text","blocks":{"text_Up6xTw":{"type":"text","settings":{"enlarge_text":false,"text":"<h2><strong>LIMITED TIME OFFER<\/strong><\/h2><p>Buy One Get One Free (of equal or lesser value) <\/p><p>AND<\/p><p>Spend $250 and get $50 back<\/p><p><strong>This Weekend ONLY<\/strong><\/p>"}}},"block_order":["text_Up6xTw"],"disabled":true,"settings":{"align_text":"left","narrow_column":true,"divider":false}},"collection-header":{"type":"collection-header","disabled":true,"settings":{"enable":true,"collection_image_enable":false,"parallax":true}},"promo-grid":{"type":"promo-grid","blocks":{"banner":{"type":"banner","disabled":true,"settings":{"heading":"","text":"","link":"","label":"","color_tint":"#e95454","color_tint_opacity":8,"framed":false}},"advanced":{"type":"advanced","settings":{"subheading":"Limited time","heading":"Announce your promotion","textarea":"Include the smaller details of your promotion in text below the title.","cta_text1":"Shop This","cta_link1":"","cta_text2":"Shop All","cta_link2":"","image":"shopify:\/\/shop_images\/Ring_Main_Focus_Shot.jpg","video_url":"","width":"100","height":500,"text_size":120,"text_align":"vertical-center horizontal-center","focal_point":"center","dark_overlay":10,"color_accent":"rgba(0,0,0,0)","boxed":false,"framed":false}}},"block_order":["banner","advanced"],"disabled":true,"settings":{"full_width":false,"gutter_size":20,"space_above":true,"space_below":false}},"main-collection":{"type":"main-collection_n","blocks":{"collection_description":{"type":"collection_description","disabled":true,"settings":{}},"subcollections":{"type":"subcollections","disabled":true,"settings":{"subcollections_per_row":5}},"product_grid":{"type":"product_grid","settings":{"enable_collection_count":true,"per_row":3,"rows_per_page":20,"mobile_flush_grid":true}}},"block_order":["collection_description","subcollections","product_grid"],"settings":{"title":"","padding_horizontal":50,"enable_sidebar":true,"collapsed":true,"filter_style":"sidebar","enable_color_swatches":false,"enable_sort":true,"type_enable":false,"subtitle_enable":true,"subtitle_type":"two","custom_badge":"","saved_amount_option":"basic_logic","load_more":false}},"faq_VdwH4a":{"type":"faq","blocks":{"question_dTFxTP":{"type":"question","settings":{"title":"Can I choose how the ashes are incorporated?","text":"<p>We typically will sprinkle the ashes throughout the ring on top of the design to act as a compliment. <\/p><p>If you are wanting a ring that is predominantly filled with ashes or for the ashes to be completely hidden as a base layer, please reach out to us.<\/p>"}},"question_ye4zpL":{"type":"question","settings":{"title":"Can I send Pet Cremains and Fur?","text":"<p>Yes, we accept both Pet and Human cremains in addition to Fur\/Hair!<\/p>"}},"question_nWPfzJ":{"type":"question","settings":{"title":"How many cremains should I send to you?","text":"<p>We typically only require roughly 2 teaspoons per ring.<\/p>"}},"question_WNkRQy":{"type":"question","settings":{"title":"Will you send back any unused cremains?","text":"<p>Yes, if you send us more than we need, we will send back any excess cremains with your order. If you do not receive any cremains back with your finished ring, it means we used them all.<\/p>"}},"question_DYNtCH":{"type":"question","settings":{"title":"How does the Vial Kit Process work?","text":"<p>If you order a cremation product with a vial kit included, we will ship you a vial kit within 24-48 business hours after you place your order. <\/p><p>Once received, you will fill the vial kit with the remains and you will be emailed instructions on how to send the cremains back to us.<\/p>"}},"question_78TDdL":{"type":"question","settings":{"title":"How do I send you Cremains if I choose to not purchase the Vial Kit Add On?","text":"<p>You are welcome to send us the cremains using your own method but please note the only way to send cremains legally through the US is through USPS Priority Mail Express.<\/p>"}},"question_4heaRU":{"type":"question","settings":{"title":"Are Cremation Rings Eligible For a Resize, Return, or Exchange?","text":"<p>Unfortunately, due to the nature of cremation jewelry, unless you purchase the Premium Protection Plan associated with the product, all cremation jewelry is NOT eligible for a free resize or exchange and is non refundable.<\/p>"}},"question_kTcTaU":{"type":"question","settings":{"title":"Can I choose a different pre-set design that isn't listed for a Cremation Ring?","text":"<p>Yes, just send us an email at support@patrickadairdesigns.com with the pre-set design you are looking to use!<\/p>"}}},"block_order":["question_dTFxTP","question_ye4zpL","question_nWPfzJ","question_WNkRQy","question_DYNtCH","question_78TDdL","question_4heaRU","question_kTcTaU"],"name":"FAQ","settings":{"title":"Cremation Jewelry FAQs"}}},"order":["advanced_content_eYLzPF","17347204-928a-46d1-8166-ac8c007f382d","how_it_works_2_NTW4aQ","replo_trust_icons_white_backg_Wc7kJ7","trust_icons_EDYTbe","replo_trust_icons_fy9XYw","rich_text_G9LH7U","collection-header","promo-grid","main-collection","faq_VdwH4a"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "advanced_content_eYLzPF": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "liquid_DNKzNA": {
+          "type": "liquid",
+          "settings": {
+            "is_collection_banner": true,
+            "liquid_name": "",
+            "code": "<h2>Glow Stone Series</h2><p>Experience the perfect blend of tradition and quality with craftsmanship that stands the test of time.</p>",
+            "width": "50%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "image_khDkUk": {
+          "type": "image",
+          "settings": {
+            "iamge_name": "",
+            "image": "shopify://shop_images/a.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_DNKzNA",
+        "image_khDkUk"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "show_navigation": true,
+        "image_first": true,
+        "space_around": false,
+        "background_color": "#ffffff",
+        "small_image": false,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 30,
+        "additional_class": ""
+      }
+    },
+    "17347204-928a-46d1-8166-ac8c007f382d": {
+      "type": "slideshow_n",
+      "blocks": {
+        "image_WfWU9Q": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "image": "shopify://shop_images/4_92ee4eaa-d0c4-4ec0-ace9-1ecd684aa51c.jpg",
+            "image_mobile": "shopify://shop_images/2_2_51c1f35a-f8d9-495a-9aa1-905537726c6a.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24,
+            "text_bottom_padding_desktop": 30,
+            "text_bottom_padding_mobile": 30,
+            "button_color_1": "white",
+            "button_color_2": "white"
+          }
+        }
+      },
+      "block_order": [
+        "image_WfWU9Q"
+      ],
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
+    "how_it_works_2_NTW4aQ": {
+      "type": "how-it-works-2",
+      "blocks": {
+        "step_zPWLMh": {
+          "type": "step",
+          "settings": {
+            "title": "<b>DESIGN YOUR RING</b>",
+            "description": "Choose among our most popular designs or customize your own to honor your loved one."
+          }
+        },
+        "step_zEY6MV": {
+          "type": "step",
+          "settings": {
+            "title": "<b>SEND US CREMAINS</b>",
+            "description": "We provide a paid secure collection kit with clear instructions for mailing the ashes."
+          }
+        },
+        "step_kEbceP": {
+          "type": "step",
+          "settings": {
+            "title": "<b>CRAFTED & DELIVERED</b>",
+            "description": "We handcraft your ring with care and respect, then ship it directly to your door."
+          }
+        }
+      },
+      "block_order": [
+        "step_zPWLMh",
+        "step_zEY6MV",
+        "step_kEbceP"
+      ],
+      "name": "How It Works 2",
+      "settings": {
+        "full_width": false,
+        "max_width": 1600,
+        "background_color": "",
+        "title": "<b>CREMATION JEWELRY</b>",
+        "title_font_size_desktop": 40,
+        "title_font_size_mobile": 24,
+        "step_title_color": "#000000",
+        "step_title_font_size_desktop": 18,
+        "step_title_font_size_mobile": 18,
+        "step_description_font_size_desktop": 14,
+        "step_description_font_size_mobile": 14,
+        "step_description_color": "#000000"
+      }
+    },
+    "replo_trust_icons_white_backg_Wc7kJ7": {
+      "type": "replo-trust-icons-white-backg",
+      "disabled": true,
+      "custom_css": [
+        "{padding: 10 px;}"
+      ],
+      "settings": {}
+    },
+    "trust_icons_EDYTbe": {
+      "type": "trust-icons_n",
+      "settings": {
+        "section_background": "#eeeeee",
+        "top_padding": 20,
+        "bottom_padding": 20,
+        "show_bottom_break_line": false,
+        "top_logo_size": 16,
+        "trust_icon_1_label": "",
+        "trust_icon_2_label": "",
+        "trust_icon_3_label": "",
+        "trust_icon_4_label": "One-of-a-kind Designs"
+      }
+    },
+    "replo_trust_icons_fy9XYw": {
+      "type": "replo-trust-icons",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_G9LH7U": {
+      "type": "rich-text",
+      "blocks": {
+        "text_Up6xTw": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2><strong>LIMITED TIME OFFER</strong></h2><p>Buy One Get One Free (of equal or lesser value) </p><p>AND</p><p>Spend $250 and get $50 back</p><p><strong>This Weekend ONLY</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_Up6xTw"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "collection-header": {
+      "type": "collection-header",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "collection_image_enable": false,
+        "parallax": true
+      }
+    },
+    "promo-grid": {
+      "type": "promo-grid",
+      "blocks": {
+        "banner": {
+          "type": "banner",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "text": "",
+            "link": "",
+            "label": "",
+            "color_tint": "#e95454",
+            "color_tint_opacity": 8,
+            "framed": false
+          }
+        },
+        "advanced": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Limited time",
+            "heading": "Announce your promotion",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "cta_text1": "Shop This",
+            "cta_link1": "",
+            "cta_text2": "Shop All",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Ring_Main_Focus_Shot.jpg",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "banner",
+        "advanced"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection_n",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "disabled": true,
+          "settings": {}
+        },
+        "subcollections": {
+          "type": "subcollections",
+          "disabled": true,
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 3,
+            "rows_per_page": 20,
+            "mobile_flush_grid": true
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "subcollections",
+        "product_grid"
+      ],
+      "settings": {
+        "title": "",
+        "padding_horizontal": 50,
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true,
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "custom_badge": "",
+        "saved_amount_option": "basic_logic",
+        "load_more": false
+      }
+    },
+    "faq_VdwH4a": {
+      "type": "faq",
+      "blocks": {
+        "question_dTFxTP": {
+          "type": "question",
+          "settings": {
+            "title": "Can I choose how the ashes are incorporated?",
+            "text": "<p>We typically will sprinkle the ashes throughout the ring on top of the design to act as a compliment. </p><p>If you are wanting a ring that is predominantly filled with ashes or for the ashes to be completely hidden as a base layer, please reach out to us.</p>"
+          }
+        },
+        "question_ye4zpL": {
+          "type": "question",
+          "settings": {
+            "title": "Can I send Pet Cremains and Fur?",
+            "text": "<p>Yes, we accept both Pet and Human cremains in addition to Fur/Hair!</p>"
+          }
+        },
+        "question_nWPfzJ": {
+          "type": "question",
+          "settings": {
+            "title": "How many cremains should I send to you?",
+            "text": "<p>We typically only require roughly 2 teaspoons per ring.</p>"
+          }
+        },
+        "question_WNkRQy": {
+          "type": "question",
+          "settings": {
+            "title": "Will you send back any unused cremains?",
+            "text": "<p>Yes, if you send us more than we need, we will send back any excess cremains with your order. If you do not receive any cremains back with your finished ring, it means we used them all.</p>"
+          }
+        },
+        "question_DYNtCH": {
+          "type": "question",
+          "settings": {
+            "title": "How does the Vial Kit Process work?",
+            "text": "<p>If you order a cremation product with a vial kit included, we will ship you a vial kit within 24-48 business hours after you place your order. </p><p>Once received, you will fill the vial kit with the remains and you will be emailed instructions on how to send the cremains back to us.</p>"
+          }
+        },
+        "question_78TDdL": {
+          "type": "question",
+          "settings": {
+            "title": "How do I send you Cremains if I choose to not purchase the Vial Kit Add On?",
+            "text": "<p>You are welcome to send us the cremains using your own method but please note the only way to send cremains legally through the US is through USPS Priority Mail Express.</p>"
+          }
+        },
+        "question_4heaRU": {
+          "type": "question",
+          "settings": {
+            "title": "Are Cremation Rings Eligible For a Resize, Return, or Exchange?",
+            "text": "<p>Unfortunately, due to the nature of cremation jewelry, unless you purchase the Premium Protection Plan associated with the product, all cremation jewelry is NOT eligible for a free resize or exchange and is non refundable.</p>"
+          }
+        },
+        "question_kTcTaU": {
+          "type": "question",
+          "settings": {
+            "title": "Can I choose a different pre-set design that isn't listed for a Cremation Ring?",
+            "text": "<p>Yes, just send us an email at support@patrickadairdesigns.com with the pre-set design you are looking to use!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_dTFxTP",
+        "question_ye4zpL",
+        "question_nWPfzJ",
+        "question_WNkRQy",
+        "question_DYNtCH",
+        "question_78TDdL",
+        "question_4heaRU",
+        "question_kTcTaU"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "title": "Cremation Jewelry FAQs"
+      }
+    }
+  },
+  "order": [
+    "advanced_content_eYLzPF",
+    "17347204-928a-46d1-8166-ac8c007f382d",
+    "how_it_works_2_NTW4aQ",
+    "replo_trust_icons_white_backg_Wc7kJ7",
+    "trust_icons_EDYTbe",
+    "replo_trust_icons_fy9XYw",
+    "rich_text_G9LH7U",
+    "collection-header",
+    "promo-grid",
+    "main-collection",
+    "faq_VdwH4a"
+  ]
+}
