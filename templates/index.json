@@ -623,6 +623,8 @@
       ],
       "settings": {
         "title": "Best Sellers",
+        "show_sub_title": false,
+        "sub_title": "",
         "is_collection_list": false,
         "home_featured_products": "best-sellers",
         "slides_per_view_desktop": "4.2",
@@ -635,7 +637,9 @@
         "rows": 2,
         "mobile_scrollable": true,
         "view_all": true,
-        "divider": false
+        "divider": false,
+        "saved_amount_option": "display_entries",
+        "entries_multiplier": 1
       }
     },
     "rich_text_bj7VnU": {
@@ -1155,6 +1159,8 @@
       "disabled": true,
       "settings": {
         "title": "Shop By Material",
+        "show_sub_title": false,
+        "sub_title": "",
         "is_collection_list": true,
         "home_featured_products": "best-sellers",
         "slides_per_view_desktop": "4.2",
@@ -1167,7 +1173,9 @@
         "rows": 2,
         "mobile_scrollable": true,
         "view_all": true,
-        "divider": false
+        "divider": false,
+        "saved_amount_option": "basic_logic",
+        "entries_multiplier": 1
       }
     },
     "advanced_content_flexible_EWdeYp": {
