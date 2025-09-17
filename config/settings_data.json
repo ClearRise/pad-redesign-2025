@@ -204,6 +204,7 @@
           },
           "scroll_navi_mobile_CqAMD8": {
             "type": "scroll_navi_mobile",
+            "disabled": true,
             "settings": {
               "sub_menu": "<u>Try Free</u>",
               "link_submenu": "shopify://collections/try-before-you-buy"
@@ -270,7 +271,7 @@
         ],
         "settings": {
           "full_width_header": false,
-          "main_menu_link_list": "new-menu-redesign-2-4-2025",
+          "main_menu_link_list": "tbyb-menu-test",
           "mega_menu_images": true,
           "show_menu_img": true,
           "menu_img": "shopify://shop_images/carbon-fiber-ring.jpg",
