@@ -51,14 +51,11 @@
       let boldOptionsProductsToUpdate = [];
       let cartItems_new = await getCartItems();
 
-      console.log(cartItems_new, "cartItems_new !!!!");
-
       cartItems_new.forEach((item) => {
         $(".overlay").show();
         if (item.selling_plan_allocation && 
             item.selling_plan_allocation.selling_plan && 
             item.selling_plan_allocation.selling_plan.id === sellingPlanId) {
-          
           // Check if _main_product property is not 'false'
           if (item.properties && item.properties._main_product === undefined) {
             tryonProducts.push(item);
@@ -246,7 +243,8 @@
               'line': product.line,
               'selling_plan': sellingPlanId,
               'properties': {
-                '_main_product': "No"
+                '_main_product': "No",
+                '_boldBuilderId': product._boldBuilderId
               }
             };
             
@@ -1156,7 +1154,7 @@
     refreshCartSubtotal();
     
     // Set up interval to refresh every 3 seconds
-    setInterval(refreshCartSubtotal, 3000);
+    setInterval(refreshCartSubtotal, 2000);
   });
 
   // Also refresh when cart is updated

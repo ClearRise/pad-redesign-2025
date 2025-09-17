@@ -308,7 +308,7 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "FLASH SALE - <b>4x Entries</b>",
+            "heading": "FLASH SALE - 4x Entries",
             "textarea": "Up to 35% off This Week Only",
             "cta_text1": "SHOP NOW",
             "cta_link1": "shopify://collections/flash-sale",
@@ -689,7 +689,7 @@
             "title": "",
             "text": "",
             "button_label": "",
-            "button_link": ""
+            "button_link": "shopify://collections/all-products-new"
           }
         },
         "text_block_tFpJfd": {
@@ -743,7 +743,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>Increase Your Chances by Earning 2x Entries on These Collections<br/><br/></p>"
+            "text": "<p>Increase Your Chances by Earning 2x Entries on These Collections</p>"
           }
         }
       },
