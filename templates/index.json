@@ -848,6 +848,156 @@
         "autoplay_speed": 5
       }
     },
+    "hero_section_z9cDbL": {
+      "type": "hero-section",
+      "blocks": {
+        "image_XURz6r": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "vertical_block_position_on_desktop": "center",
+            "horizontal_block_position_on_desktop": "flex-start",
+            "block_height_on_desktop": 85,
+            "max_width_on_desktop": 60,
+            "image": "shopify://shop_images/Artboard_9_21b6eb95-6f8b-442f-9c50-1ca3dc235ec1.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_11.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#000000",
+            "button_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_XURz6r"
+      ],
+      "custom_css": [
+        ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+      ],
+      "name": "Hero Section(New)",
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "hero_section_x7C94i": {
+      "type": "hero-section",
+      "blocks": {
+        "image_ANr4RF": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "shopify://collections/all-products-new",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "vertical_block_position_on_desktop": "center",
+            "horizontal_block_position_on_desktop": "flex-start",
+            "block_height_on_desktop": 85,
+            "max_width_on_desktop": 60,
+            "image": "shopify://shop_images/3_copy_7aa92ab3-5cec-4e06-a18a-e70d8582b55d.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_1_copy_1.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#000000",
+            "button_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_ANr4RF"
+      ],
+      "custom_css": [
+        ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+      ],
+      "name": "Hero Section(New)",
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "hero_section_kBN4Yq": {
+      "type": "hero-section",
+      "blocks": {
+        "image_gReGxt": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "https://patrickadairdesigns.com/pages/patrick-adair-designs-2025-summer-sweepstakes-rules",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "vertical_block_position_on_desktop": "center",
+            "horizontal_block_position_on_desktop": "flex-start",
+            "block_height_on_desktop": 85,
+            "max_width_on_desktop": 60,
+            "image": "shopify://shop_images/Artboard_14_031dfc65-c2bd-4b11-89c0-26f8f3a36e88.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_15_7f451586-a6ed-4f65-9819-fdee60862017.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#000000",
+            "button_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_gReGxt"
+      ],
+      "name": "Hero Section(New)",
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
     "custom_review_section_HBhxaX": {
       "type": "custom-review-section",
       "blocks": {
@@ -886,7 +1036,7 @@
         "title": "Customer Testimonials",
         "subtitle": "3,000 + Five Star Reviews",
         "main_image": "shopify://shop_images/c3ae3ed3-e451-445c-894e-80586731a90b.jpg",
-        "show_top_break_line": true,
+        "show_top_break_line": false,
         "show_bottom_break_line": true,
         "prev_button_image": "shopify://shop_images/arrow-circle-left-thin-svgrepo-com.svg",
         "next_button_image": "shopify://shop_images/arrow-circle-right-thin-svgrepo-com.svg",
@@ -993,6 +1143,9 @@
     "advanced_content_flexible_EWdeYp",
     "text_columns_UheHQK",
     "hero_section_mNx9zm",
+    "hero_section_z9cDbL",
+    "hero_section_x7C94i",
+    "hero_section_kBN4Yq",
     "custom_review_section_HBhxaX",
     "17403389388eff6532",
     "1646695257dcd29238",
