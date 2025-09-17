@@ -619,6 +619,7 @@
         "collection_KYECUC",
         "collection_eHXDrA"
       ],
+      "disabled": true,
       "settings": {
         "title": "Shop By Material",
         "is_collection_list": true,
@@ -633,6 +634,37 @@
         "rows": 2,
         "mobile_scrollable": true,
         "view_all": true,
+        "divider": false
+      }
+    },
+    "rich_text_3jh33w": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JiAPWX": {
+          "type": "heading",
+          "settings": {
+            "title": "Earn 2x Entries"
+          }
+        },
+        "text_cxnLpn": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Increase Your Chances by Earning 2x Entries on These Collections</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JiAPWX",
+        "text_cxnLpn"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.theme-block {text-align: left; }}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
         "divider": false
       }
     },
@@ -695,6 +727,7 @@
         "child_block_button_4J6Qp8",
         "background_block_pJDhcD"
       ],
+      "disabled": true,
       "custom_css": [
         ".liquid-container-ss {max-width: 420px;}",
         ".liquid-container-ss h2 {font-size: 40px;}"
@@ -853,6 +886,7 @@
     "trust_icons_new_ss",
     "advanced_content_QHBLxq",
     "featured-collection1234",
+    "rich_text_3jh33w",
     "advanced_content_flexible_EWdeYp",
     "custom_review_section_HBhxaX",
     "17403389388eff6532",
