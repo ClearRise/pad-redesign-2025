@@ -411,6 +411,70 @@
         "divider": false
       }
     },
+    "text_columns_MAEJ88": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_9gXHdR": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Artboard_4_1.jpg",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_VNiUbh": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Artboard_5_2.jpg",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://collections/all-products-new"
+          }
+        },
+        "text_block_wHDMYj": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "text_block_8JQWFH": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_9gXHdR",
+        "text_block_VNiUbh",
+        "text_block_wHDMYj",
+        "text_block_8JQWFH"
+      ],
+      "custom_css": [],
+      "name": "Text columns with images",
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
     "trust_icons_new_ss": {
       "type": "trust-icons_n",
       "disabled": true,
@@ -783,6 +847,7 @@
     "advanced_content_flexible_DTWtRM",
     "featured_collection_carousel_RgiWej",
     "rich_text_My4x3a",
+    "text_columns_MAEJ88",
     "trust_icons_new_ss",
     "advanced_content_QHBLxq",
     "featured-collection1234",
