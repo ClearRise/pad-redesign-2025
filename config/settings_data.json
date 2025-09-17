@@ -107,12 +107,12 @@
     "hide_gift_2": true,
     "second_show_gift_box": false,
     "second_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
-    "gift_box_title_second": "",
-    "min_cart_threshold_amount": 175,
+    "gift_box_title_second": "LABOR DAY SALE OFFER",
+    "min_cart_threshold_amount": 205,
     "max_cart_threshold_amount": "10000",
     "second_spend_progress": "",
-    "second_product-handle-1": "green-glow-burl-carbon-fiber-ring-1",
-    "second_product-handle-2": "green-glow-burl-carbon-fiber-bar-pendant-1",
+    "second_product-handle-1": "mystery-gift",
+    "second_product-handle-2": "",
     "third_show_gift_box": false,
     "third_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
     "gift_box_title_third": "TWO FREE GIFTS - TODAY ONLY",
@@ -135,6 +135,8 @@
     "predictive_search_enabled": false,
     "show_breadcrumbs": false,
     "show_breadcrumbs_collection_link": true,
+    "savings_or_entries": "entries",
+    "entries_multiplier": 1,
     "picker_type": "dropdown",
     "product_swatch_style": "circle",
     "checkout_logo_image": "shopify://shop_images/test5.png",
@@ -154,11 +156,26 @@
       "header": {
         "type": "header",
         "blocks": {
+          "timer_banner_CAtMWy": {
+            "type": "timer_banner",
+            "disabled": true,
+            "settings": {
+              "enable_timer_banner": true,
+              "banner_text": "LABOR DAY SALE Up to 35% off",
+              "banner_link": "",
+              "banner_link_text": "Shop now",
+              "background_color": "#000000",
+              "text_color": "#ffffff",
+              "enable_countdown": true,
+              "countdown_end_date": "2025-12-31 23:59:59",
+              "hide_when_expired": true
+            }
+          },
           "announcement_xVJyfX": {
             "type": "announcement",
             "settings": {
               "text": "$75,000 Sweepstakes giveaway",
-              "link_text": "<span>Shop now for a chance at a once in a lifetime trip</span><span> Orders $195+ Get a FREE Mystery Gift  </span>",
+              "link_text": "<span>Shop now for a chance at a once in a lifetime trip</span><span>Orders $195+ Get a FREE Mystery Gift  </span>",
               "link": "shopify://collections/all-products-new"
             }
           },
@@ -185,7 +202,7 @@
               "link_submenu": "https://patrickadairdesigns.com/collections/best-selling-wedding-bands-v1"
             }
           },
-          "scroll_navi_mobile_UFP4e7": {
+          "scroll_navi_mobile_CqAMD8": {
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "<u>Try Free</u>",
@@ -235,16 +252,21 @@
           }
         },
         "block_order": [
+          "timer_banner_CAtMWy",
           "announcement_xVJyfX",
           "1524770014057",
           "30d9274d-f502-4710-bb39-866381456103",
           "966bc6e1-31db-4261-b34d-773ca4a79259",
-          "scroll_navi_mobile_UFP4e7",
+          "scroll_navi_mobile_CqAMD8",
           "scroll_navi_mobile_T4MxJh",
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc",
           "announcement_BNdmQX",
           "featured_collection_FXBcwx",
           "featured_collection_JeUTzx"
+        ],
+        "custom_css": [
+          "@media (min-width: 769px) {.announcement-link-text {display: inline-flex; gap: 10px; }}",
+          "@media (max-width: 768px) {.announcement-link-text {display: inline-flex; flex-direction: column; }}"
         ],
         "settings": {
           "full_width_header": false,
@@ -260,7 +282,7 @@
           "mobile_top_banner_image": "shopify://shop_images/oie_haHVk88If7KC.png",
           "mobile_menu_top_banner_image": "shopify://shop_images/Black_Ceramic-_Purple_Class-removebg-preview.png",
           "mobile_menu_top_banner_title": "FLASH SALE",
-          "mobile_menu_top_banner_link_text": "Up to 35% off - This Week Only<br><b>4x Entries</b>",
+          "mobile_menu_top_banner_link_text": "Up to 35% off - This Week Only",
           "mobile_menu_top_banner_link": "shopify://collections/flash-sale",
           "mobile_menu_top_banner_background": "",
           "announcement_compact": true,
@@ -438,9 +460,24 @@
           "swatch_option_identifiers": "Color, Couleur, Colore, Farbe,\nPattern, Patrón, Motif, Muster, Motivo,\nMaterial, Matériau, Materiale,\nFinish, Finition, Finitura, Oberfläche, Acabado"
         }
       },
+      "11560147490181472608": {
+        "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/app-embed/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
+        "disabled": false,
+        "settings": {}
+      },
+      "10840395464443086010": {
+        "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
+        "disabled": true,
+        "settings": {}
+      },
+      "2786716548061469553": {
+        "type": "shopify://apps/axon/blocks/app-embed/baa0f014-62ea-462f-a8aa-a94befb1cbad",
+        "disabled": false,
+        "settings": {}
+      },
       "5178053274977549534": {
         "type": "shopify://apps/tryon/blocks/tryOnAppEmbed/95799297-dc1d-40fb-9234-066b30a3012a",
-        "disabled": true,
+        "disabled": false,
         "settings": {
           "tryon-redirect-on-click": "none",
           "tryon-button-location": "after",
@@ -450,12 +487,12 @@
           "description-align-text": "center",
           "tryon-button-description": "Try at home, pay for what you keep",
           "tryon-with-price-in-button": false,
-          "tryon-hide-add-to-cart": true,
+          "tryon-hide-add-to-cart": false,
           "tryon-copy-add-to-cart-styles": true,
           "tryon-text-color": "#ffffff",
           "tryon-background-color": "#000000",
-          "tryon-modal-background-color": "#435a8d",
-          "tryon-modal-primary-color": "#ffde7a",
+          "tryon-modal-background-color": "#8ead97",
+          "tryon-modal-primary-color": "#ede4da",
           "tryon-modal-text-primary-color": "#ffffff",
           "tryon-modal-text-secondary-color": "#000000",
           "tryon-modal-header": "Try at home before you pay",
