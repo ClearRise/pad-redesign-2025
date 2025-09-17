@@ -58,14 +58,14 @@
       "name": "Trust Icons(new-2)",
       "settings": {
         "section_background": "#eeeeee",
-        "top_padding": 0,
-        "bottom_padding": 0,
+        "top_padding": 20,
+        "bottom_padding": 20,
         "show_bottom_break_line": false,
         "top_logo_size": 16,
         "trust_icon_1_label": "",
         "trust_icon_2_label": "",
         "trust_icon_3_label": "",
-        "trust_icon_4_label": ""
+        "trust_icon_4_label": "One-of-a-kind Designs"
       }
     },
     "replo_trust_icons_white_backg_Wc7kJ7": {
