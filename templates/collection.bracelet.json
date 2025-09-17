@@ -1,1 +1,206 @@
-{"sections":{"17347204-928a-46d1-8166-ac8c007f382d":{"type":"slideshow","blocks":{"image_be3MfE":{"type":"image","settings":{"top_subheading":"","top_subheading_color":"","title":"","special_title_color":"","subheading":"","special_text_color":"","link":"","link_text":"","link_2":"","link_text_2":"","color_accent":"rgba(0,0,0,0)","text_position":"vertical-center horizontal-center","text_align":"left","mobile_text_position":"mobile-vertical-center mobile-horizontal-center","mobile_text_align":"left","image":"shopify:\/\/shop_images\/4_4.jpg","image_mobile":"shopify:\/\/shop_images\/2_4.jpg","overlay_opacity":0,"focal_point":"center center","base_text_color":"#ffffff","title_size":80,"base_text_size":24}}},"block_order":["image_be3MfE"],"settings":{"use_img_banner":true,"section_height":"natural","mobile_height":"auto","parallax":false,"style":"bars","autoplay":false,"autoplay_speed":5}},"replo_trust_icons_white_backg_Wc7kJ7":{"type":"replo-trust-icons-white-backg","disabled":true,"custom_css":["{padding: 10 px;}"],"settings":{}},"replo_trust_icons_fy9XYw":{"type":"replo-trust-icons","disabled":true,"settings":{}},"rich_text_G9LH7U":{"type":"rich-text","blocks":{"text_Up6xTw":{"type":"text","settings":{"enlarge_text":false,"text":"<h2><strong>LIMITED TIME OFFER<\/strong><\/h2><p>Buy One Get One Free (of equal or lesser value) <\/p><p>AND<\/p><p>Spend $250 and get $50 back<\/p><p><strong>This Weekend ONLY<\/strong><\/p>"}}},"block_order":["text_Up6xTw"],"disabled":true,"settings":{"align_text":"left","narrow_column":true,"divider":false}},"collection-header":{"type":"collection-header","disabled":true,"settings":{"enable":true,"collection_image_enable":false,"parallax":true}},"promo-grid":{"type":"promo-grid","blocks":{"banner":{"type":"banner","disabled":true,"settings":{"heading":"","text":"","link":"","label":"","color_tint":"#e95454","color_tint_opacity":8,"framed":false}},"advanced":{"type":"advanced","settings":{"subheading":"Limited time","heading":"Announce your promotion","textarea":"Include the smaller details of your promotion in text below the title.","cta_text1":"Shop This","cta_link1":"","cta_text2":"Shop All","cta_link2":"","image":"shopify:\/\/shop_images\/Ring_Main_Focus_Shot.jpg","video_url":"","width":"100","height":500,"text_size":120,"text_align":"vertical-center horizontal-center","focal_point":"center","dark_overlay":10,"color_accent":"rgba(0,0,0,0)","boxed":false,"framed":false}}},"block_order":["banner","advanced"],"disabled":true,"settings":{"full_width":false,"gutter_size":20,"space_above":true,"space_below":false}},"main-collection":{"type":"main-collection","blocks":{"collection_description":{"type":"collection_description","disabled":true,"settings":{}},"subcollections":{"type":"subcollections","disabled":true,"settings":{"subcollections_per_row":5}},"product_grid":{"type":"product_grid","settings":{"enable_collection_count":true,"per_row":3,"rows_per_page":20,"mobile_flush_grid":true}}},"block_order":["collection_description","subcollections","product_grid"],"settings":{"title":"","enable_sidebar":true,"collapsed":true,"filter_style":"sidebar","enable_color_swatches":false,"enable_sort":true,"type_enable":false,"subtitle_enable":true,"subtitle_type":"two","custom_badge":"","saved_amount_option":"basic_logic","load_more":false}}},"order":["17347204-928a-46d1-8166-ac8c007f382d","replo_trust_icons_white_backg_Wc7kJ7","replo_trust_icons_fy9XYw","rich_text_G9LH7U","collection-header","promo-grid","main-collection"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "17347204-928a-46d1-8166-ac8c007f382d": {
+      "type": "slideshow",
+      "blocks": {
+        "image_be3MfE": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "image": "shopify://shop_images/4_92ee4eaa-d0c4-4ec0-ace9-1ecd684aa51c.jpg",
+            "image_mobile": "shopify://shop_images/2_2_51c1f35a-f8d9-495a-9aa1-905537726c6a.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_be3MfE"
+      ],
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
+    "replo_trust_icons_white_backg_Wc7kJ7": {
+      "type": "replo-trust-icons-white-backg",
+      "disabled": true,
+      "custom_css": [
+        "{padding: 10 px;}"
+      ],
+      "settings": {}
+    },
+    "replo_trust_icons_fy9XYw": {
+      "type": "replo-trust-icons",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_G9LH7U": {
+      "type": "rich-text",
+      "blocks": {
+        "text_Up6xTw": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2><strong>LIMITED TIME OFFER</strong></h2><p>Buy One Get One Free (of equal or lesser value) </p><p>AND</p><p>Spend $250 and get $50 back</p><p><strong>This Weekend ONLY</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_Up6xTw"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "collection-header": {
+      "type": "collection-header",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "collection_image_enable": false,
+        "parallax": true
+      }
+    },
+    "promo-grid": {
+      "type": "promo-grid",
+      "blocks": {
+        "banner": {
+          "type": "banner",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "text": "",
+            "link": "",
+            "label": "",
+            "color_tint": "#e95454",
+            "color_tint_opacity": 8,
+            "framed": false
+          }
+        },
+        "advanced": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Limited time",
+            "heading": "Announce your promotion",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "cta_text1": "Shop This",
+            "cta_link1": "",
+            "cta_text2": "Shop All",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Ring_Main_Focus_Shot.jpg",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "banner",
+        "advanced"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "disabled": true,
+          "settings": {}
+        },
+        "subcollections": {
+          "type": "subcollections",
+          "disabled": true,
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 3,
+            "rows_per_page": 20,
+            "mobile_flush_grid": true
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "subcollections",
+        "product_grid"
+      ],
+      "settings": {
+        "title": "",
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true,
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "custom_badge": "",
+        "saved_amount_option": "basic_logic",
+        "load_more": false
+      }
+    }
+  },
+  "order": [
+    "17347204-928a-46d1-8166-ac8c007f382d",
+    "replo_trust_icons_white_backg_Wc7kJ7",
+    "replo_trust_icons_fy9XYw",
+    "rich_text_G9LH7U",
+    "collection-header",
+    "promo-grid",
+    "main-collection"
+  ]
+}
