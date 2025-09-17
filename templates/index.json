@@ -442,10 +442,11 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify://shop_images/Artboard_6_ff024c66-38fb-4a32-9de1-fde848bc4c54.jpg",
             "image_width": 650,
-            "title": "Example title",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
-            "button_label": "Optional button",
+            "title": "",
+            "text": "",
+            "button_label": "",
             "button_link": ""
           }
         },
@@ -453,10 +454,11 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify://shop_images/Artboard_3_0474103f-0dc6-4fd9-8dfd-4dba04ee29fb.jpg",
             "image_width": 650,
-            "title": "Example title",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
-            "button_label": "Optional button",
+            "title": "",
+            "text": "",
+            "button_label": "",
             "button_link": ""
           }
         }
