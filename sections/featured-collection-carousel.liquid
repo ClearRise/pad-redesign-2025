@@ -17,14 +17,14 @@
     justify-content: space-between;
     align-items: flex-end;
   }
-  #CollectionSection-{{ section.id }} .section-header h2 + div {
+  #CollectionSection-{{ section.id }} .section-header .header-container + div {
     display: flex;
   }
-  #CollectionSection-{{ section.id }} .section-header h2 + div a {
+  #CollectionSection-{{ section.id }} .section-header .header-container + div a {
     text-transform: uppercase;
   }
-  #CollectionSection-{{ section.id }} .section-header h2 + div .swiper-button-prev,
-  #CollectionSection-{{ section.id }} .section-header h2 + div .swiper-button-next {
+  #CollectionSection-{{ section.id }} .section-header .header-container + div .swiper-button-prev,
+  #CollectionSection-{{ section.id }} .section-header .header-container + div .swiper-button-next {
     position: relative;
     left: unset;
     right: unset;
@@ -40,8 +40,8 @@
     width: 36px !important;
   }
   @media (max-width: 550px) {
-    #CollectionSection-{{ section.id }} .section-header h2 + div .swiper-button-prev,
-    #CollectionSection-{{ section.id }} .section-header h2 + div .swiper-button-next {
+    #CollectionSection-{{ section.id }} .section-header .header-container + div .swiper-button-prev,
+    #CollectionSection-{{ section.id }} .section-header .header-container + div .swiper-button-next {
       display: none;
     }
   }
@@ -60,6 +60,26 @@
   #CollectionSection-{{ section.id }} .swiper-slide>div {
     width: 280px !important;
   }
+  .header-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-container .section-header__title {
+    text-align: left;
+  }
+  .header-container .section-header__sub_title {
+    font-size: 23px;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 683px) {
+    .header-container .section-header__sub_title {
+      font-size: 12px !important;
+      margin-top: 10px !important;
+    }
+  }
 </style>
 
 <div
@@ -70,9 +90,18 @@
   {%- if section.settings.title != blank -%}
     <div class="page-width">
       <div class="section-header{% if section.settings.view_all %}{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}{% endif %}">
-        <h2 class="section-header__title">
-          {{ section.settings.title }}
-        </h2>
+        <div class="header-container">
+          <h2 class="section-header__title">
+            {{ section.settings.title }}
+          </h2>
+          {%- if section.settings.show_sub_title -%}
+            {%- if section.settings.sub_title -%}
+              <h3 class="section-header__sub_title">
+                {{ section.settings.sub_title }}
+              </h3>
+            {%- endif -%}
+          {%- endif -%}
+        </div>
         <div>
           {%- if section.settings.view_all -%}
             {%- if section.settings.rows > 1 -%}
@@ -302,10 +331,24 @@
   "class": "index-section",
   "settings": [
     {
+      "type": "header",
+      "content": "Main Settings"
+    },
+    {
       "type": "text",
       "id": "title",
-      "label": "Heading",
-      "default": "Featured collection"
+      "label": "Heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sub_title",
+      "label": "Show Sub Heading",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "Sub Heading"
     },
     {
       "type": "checkbox",
@@ -400,6 +443,40 @@
       "id": "divider",
       "label": "Show section divider",
       "default": false
+    },
+    {
+      "type": "header",
+      "content": "Badge Settings"
+    },
+    {
+      "type": "select",
+      "id": "saved_amount_option",
+      "label": "Saved amount option",
+      "default": "basic_logic",
+      "options": [
+        {
+          "value": "basic_logic",
+          "label": "Basic logic"
+        },
+        {
+          "value": "display_price",
+          "label": "Display price"
+        },
+        {
+          "value": "display_entries",
+          "label": "Display entries"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "entries_multiplier",
+      "label": "Entries multiplier",
+      "default": 1,
+      "min": 0.1,
+      "max": 10,
+      "step": 0.1,
+      "info": "Multiplier for converting price to entries (e.g., 2.0 = $100 shows as 200 Entries)"
     }
   ],
   "blocks": [
