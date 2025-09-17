@@ -126,6 +126,28 @@
             "framed": false
           }
         },
+        "672a52df-0901-41df-bfcc-f5c1e4da1a77": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "FLASH SALE - 4x Entries",
+            "textarea": "Up to 35% off This Week Only",
+            "cta_text1": "SHOP NOW",
+            "cta_link1": "shopify://collections/flash-sale",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Wood-forged-carbon-gold-accent-ring-1_49b244cc-5924-41e0-a0e0-74ddefee8f3e.png",
+            "video_url": "",
+            "width": "33",
+            "text_size": 80,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
         "advanced_gaqMVW": {
           "type": "advanced",
           "settings": {
@@ -138,7 +160,7 @@
             "cta_link2": "",
             "image": "shopify://shop_images/lavendar-stackable-1.png",
             "video_url": "",
-            "width": "50",
+            "width": "33",
             "text_size": 80,
             "text_align": "vertical-bottom horizontal-center",
             "focal_point": "center",
@@ -160,32 +182,9 @@
             "cta_link2": "",
             "image": "shopify://shop_images/StarDustRing.png",
             "video_url": "",
-            "width": "50",
+            "width": "33",
             "text_size": 80,
             "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "672a52df-0901-41df-bfcc-f5c1e4da1a77": {
-          "type": "advanced",
-          "disabled": true,
-          "settings": {
-            "subheading": "",
-            "heading": "ALL EARRINGS",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "https://patrickadairdesigns.com/collections/earrings",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/earrings.png",
-            "video_url": "",
-            "width": "50",
-            "text_size": 105,
-            "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
             "dark_overlay": 10,
             "color_accent": "rgba(0,0,0,0)",
@@ -221,9 +220,9 @@
         "2f6050a5-96b7-4f7d-b405-7b5952c82699",
         "85a12c0c-6ee7-4aba-a660-0e12f6bdc907",
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02",
+        "672a52df-0901-41df-bfcc-f5c1e4da1a77",
         "advanced_gaqMVW",
         "8f48b383-f1c5-4d34-a6cd-eab1f6f524b0",
-        "672a52df-0901-41df-bfcc-f5c1e4da1a77",
         "advanced_AgfTfH"
       ],
       "custom_css": [
