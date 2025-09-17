@@ -745,6 +745,58 @@
         "additional_class": ""
       }
     },
+    "text_columns_UheHQK": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_MfTHhW": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/aquaglow.png",
+            "image_width": 650,
+            "title": "Stackable Glow",
+            "text": "",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/glowstone-stackable-rings"
+          }
+        },
+        "text_block_mp9Gp4": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Meteorite_Necklace_Photo_1_88163c59-bc65-43c7-9eeb-a4d70aa6ba2e.jpg",
+            "image_width": 650,
+            "title": "Accessories",
+            "text": "",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/accessories"
+          }
+        },
+        "text_block_66LHkn": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Mystery_Ring_Gif_cc057da2-4ddc-4819-ac3e-681518e6d19b.gif",
+            "image_width": 650,
+            "title": "Mystery Ring",
+            "text": "",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/mystery-rings"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_MfTHhW",
+        "text_block_mp9Gp4",
+        "text_block_66LHkn"
+      ],
+      "name": "Text columns with images",
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
     "custom_review_section_HBhxaX": {
       "type": "custom-review-section",
       "blocks": {
@@ -888,6 +940,7 @@
     "featured-collection1234",
     "rich_text_3jh33w",
     "advanced_content_flexible_EWdeYp",
+    "text_columns_UheHQK",
     "custom_review_section_HBhxaX",
     "17403389388eff6532",
     "1646695257dcd29238",
