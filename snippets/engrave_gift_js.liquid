@@ -119,6 +119,7 @@
       if (tryonInput && tryonButton) {
         handleTryonSellingPlanInput(tryonInput, tryonButton);
         // add here max items without extra items
+        console.log("Filtering Tryon")
         excludeExtraitemsFromTryonMax();
         // handleAddingButtonElements(tryonButton);
       } else if (Date.now() - startTime < maxWaitTime) {
