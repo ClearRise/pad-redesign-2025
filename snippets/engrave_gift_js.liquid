@@ -90,7 +90,7 @@
           ?.flatMap(group => group.selling_plans || [])
           ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon")
 
-      const tryonSelingPlanId = tryonSellingPlan.id
+      const tryonSellingPlanId = tryonSellingPlan.id
       const tryonDefaultMaxItems = tryonSellingPlan?.options[0].value
       console.log("tryonSellingPlanId: " + tryonSellingPlanId)
       console.log("tryonDefaultMaxItems: " + tryonDefaultMaxItems)
