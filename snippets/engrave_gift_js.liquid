@@ -76,7 +76,7 @@
     console.log("SVG and $0 appended to Tryon button:", tryonButton);
   }
 
-  async function excludeExtraitemsFromTryonMax() {
+  async function excludeExtraitemsFromTryonMax(tryonButton) {
   try {
       // Fetch cart data from Shopify
       const response = await fetch("/cart.js");
@@ -125,7 +125,7 @@
       // handle max tryon items - exclude extra items
       if(tryonButton) {
         console.log("Filtering Tryon")
-        excludeExtraitemsFromTryonMax();
+        excludeExtraitemsFromTryonMax(tryonButton);
       }
   
       if (tryonInput && tryonButton) {
