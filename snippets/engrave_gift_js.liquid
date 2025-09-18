@@ -91,7 +91,7 @@
           ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon")
 
       const tryonSellingPlanId = tryonSellingPlan.id
-      const tryonDefaultMaxItems = tryonSellingPlan?.options[0].value?.maxProducts
+      const tryonDefaultMaxItems = JSON.parse(tryonSellingPlan?.options[0].value)?.maxProducts
       console.log("tryonSellingPlanId: " + tryonSellingPlanId)
       console.log("tryonDefaultMaxItems: " + tryonDefaultMaxItems)
       // Filter items
@@ -99,7 +99,7 @@
         const hasSellingPlan = item.selling_plan_allocation?.selling_plan?.id == tryonSellingPlanId;
         const lowerTitle = item.title.toLowerCase();
         const isExcluded = exclusions.some(ex => lowerTitle.includes(ex));
-        return hasSellingPlan && !isExcluded;
+        return hasSellingPlan && isExcluded;
       });
 
       console.log("filteredItems: " + JSON.stringify(filteredItems))
@@ -107,8 +107,8 @@
       // Count them
       const count = filteredItems.reduce((sum, item) => sum + item.quantity, 0);
 
-      // Updating the Tryon button's max items
-      tryonButton.options.maxProducts = 3
+      // Updating the Tryon button's max items. We increase the default max items by the count of the items we want to exclude from the max
+      tryonButton.options.maxProducts = tryonDefaultMaxItems + count
       return count;
     } catch (error) {
       console.error("Error fetching cart:", error);
