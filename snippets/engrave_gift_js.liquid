@@ -112,7 +112,7 @@
       tryonButton.options.maxProducts = tryonNewMaxItems
       
       tryonButton.cartUpdated()
-      console.log
+      console.log("Updated tryon max items from " + tryonDefaultMaxItems + " to " + tryonNewMaxItems)
     } catch (error) {
       console.error("Error fetching cart:", error);
     }
