@@ -115,12 +115,15 @@
     function waitForTryonInput() {
       const tryonInput = document.querySelector("#tryon-input");
       const tryonButton = document.querySelector(".tryon-button");
+
+      // handle max tryon items - exclude extra items
+      if(tryonButton) {
+        console.log("Filtering Tryon")
+        excludeExtraitemsFromTryonMax();
+      }
   
       if (tryonInput && tryonButton) {
         handleTryonSellingPlanInput(tryonInput, tryonButton);
-        // add here max items without extra items
-        console.log("Filtering Tryon")
-        excludeExtraitemsFromTryonMax();
         // handleAddingButtonElements(tryonButton);
       } else if (Date.now() - startTime < maxWaitTime) {
         setTimeout(waitForTryonInput, pollInterval);
