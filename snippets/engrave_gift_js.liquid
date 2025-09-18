@@ -76,6 +76,35 @@
     console.log("SVG and $0 appended to Tryon button:", tryonButton);
   }
 
+  async function excludeExtraitemsFromTryonMax() {
+  try {
+      // Fetch cart data from Shopify
+      const response = await fetch("/cart.js");
+      const cart = await response.json();
+
+      // Normalize exclusion strings to lowercase
+      const exclusions = ["inlay materials", "premium protection plan"];
+
+      // Filter items
+      const filteredItems = cart.items.filter(item => {
+        const hasSellingPlan = item.selling_plan_allocation?.selling_plan?.id == 123 
+                            || item.selling_plan_id == 123; // depends on Shopify API version
+        const lowerTitle = item.title.toLowerCase();
+        const isExcluded = exclusions.some(ex => lowerTitle.includes(ex));
+        return hasSellingPlan && !isExcluded;
+      });
+
+      // Count them
+      const count = filteredItems.reduce((sum, item) => sum + item.quantity, 0);
+
+      console.log("Filtered TryonMax items count:", count);
+      return count;
+    } catch (error) {
+      console.error("Error fetching cart:", error);
+      return 0;
+    }
+  }
+
   
   // Poll for #tryon-input and run logic on document load
   document.addEventListener("DOMContentLoaded", () => {
@@ -89,6 +118,8 @@
   
       if (tryonInput && tryonButton) {
         handleTryonSellingPlanInput(tryonInput, tryonButton);
+        // add here max items without extra items
+        excludeExtraitemsFromTryonMax();
         // handleAddingButtonElements(tryonButton);
       } else if (Date.now() - startTime < maxWaitTime) {
         setTimeout(waitForTryonInput, pollInterval);
