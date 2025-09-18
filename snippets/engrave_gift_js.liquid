@@ -86,10 +86,13 @@
       const exclusions = ["inlay materials", "premium protection plan", "cobalt"];
 
       console.log("cart.items: " + JSON.stringify(cart.items))
+      const tryonSellingPlanId = tryonProduct?.selling_plan_groups
+          ?.flatMap(group => group.selling_plans || [])
+          ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon").id
+      console.log("tryonSellingPlanId: " + tryonSellingPlanId)
       // Filter items
       const filteredItems = cart.items.filter(item => {
-        const hasSellingPlan = item.selling_plan_allocation?.selling_plan?.id == 123 
-                            || item.selling_plan_id == 123; // depends on Shopify API version
+        const hasSellingPlan = item.selling_plan_allocation?.selling_plan?.id == tryonSellingPlanId;
         const lowerTitle = item.title.toLowerCase();
         const isExcluded = exclusions.some(ex => lowerTitle.includes(ex));
         return hasSellingPlan && !isExcluded;
