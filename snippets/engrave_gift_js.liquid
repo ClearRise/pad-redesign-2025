@@ -109,10 +109,10 @@
 
       // Updating the Tryon button's max items. We increase the default max items by the count of the items we want to exclude from the max
       tryonButton.options.maxProducts = tryonDefaultMaxItems + count
-      return count;
+      
+      tryonButton.cartUpdated()
     } catch (error) {
       console.error("Error fetching cart:", error);
-      return 0;
     }
   }
 
