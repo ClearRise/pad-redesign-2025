@@ -85,7 +85,7 @@
       // Normalize exclusion strings to lowercase
       const exclusions = ["inlay materials", "premium protection plan", "cobalt"];
 
-      console.log("cart.items: " + cart.items)
+      console.log("cart.items: " + JSON.stringify(cart.items))
       // Filter items
       const filteredItems = cart.items.filter(item => {
         const hasSellingPlan = item.selling_plan_allocation?.selling_plan?.id == 123 
