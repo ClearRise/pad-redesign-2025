@@ -85,13 +85,13 @@
       // Normalize exclusion strings to lowercase
       const exclusions = ["inlay materials", "premium protection plan", "cobalt"];
 
-      console.log("cart.items: " + JSON.stringify(cart.items))
+      //console.log("cart.items: " + JSON.stringify(cart.items))
       const tryonSellingPlan = tryonProduct?.selling_plan_groups
           ?.flatMap(group => group.selling_plans || [])
           ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon")
 
       const tryonSellingPlanId = tryonSellingPlan.id
-      const tryonDefaultMaxItems = tryonSellingPlan?.options[0].value
+      const tryonDefaultMaxItems = tryonSellingPlan?.options[0].value?.maxProducts
       console.log("tryonSellingPlanId: " + tryonSellingPlanId)
       console.log("tryonDefaultMaxItems: " + tryonDefaultMaxItems)
       // Filter items
