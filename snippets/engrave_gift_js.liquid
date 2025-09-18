@@ -83,7 +83,7 @@
       const cart = await response.json();
 
       // Normalize exclusion strings to lowercase
-      const exclusions = ["inlay materials", "premium protection plan"];
+      const exclusions = ["inlay materials", "premium protection plan", "cobalt"];
 
       // Filter items
       const filteredItems = cart.items.filter(item => {
