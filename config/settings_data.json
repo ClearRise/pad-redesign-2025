@@ -482,7 +482,7 @@
           "tryon-redirect-on-click": "none",
           "tryon-button-location": "after",
           "open-tryon-modal-on-button-click": false,
-          "show-tryon-description": false,
+          "show-tryon-description": true,
           "tryon-description-color": "#000000",
           "description-align-text": "center",
           "tryon-button-description": "Try at home, pay for what you keep",
