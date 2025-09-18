@@ -350,6 +350,7 @@
         },
         "8f48b383-f1c5-4d34-a6cd-eab1f6f524b0": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "$0 UPFRONT",
             "heading": "TRY BEFORE YOU BUY",
