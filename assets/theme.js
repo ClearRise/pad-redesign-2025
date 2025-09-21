@@ -8116,7 +8116,13 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
       updateColorName: function (evt) {
         console.log(evt);
         var index = evt.detail.index;
-        var colorArray = evt.detail.value.split(" ");
+        var color = "";
+        if (evt.detail.value.includes("Gold")) {
+          color = evt.detail.value;
+        } else {
+          let colorArray = evt.detail.value.split(" ");
+          color = colorArray[0];
+        }
         var color = colorArray[0];
         console.log(this.selectors.colorLabel + `[data-index="${index}"`);
         // Updates on radio button change, not variant.js
