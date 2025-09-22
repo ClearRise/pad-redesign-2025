@@ -307,9 +307,9 @@
         "advanced_FVhCCq": {
           "type": "advanced",
           "settings": {
-            "subheading": "",
-            "heading": "FLASH SALE - 4x Entries",
-            "textarea": "Up to 35% off This Week Only",
+            "subheading": "Up to 35% off this week only",
+            "heading": "FLASH SALE - <b>4X entries</b>",
+            "textarea": "",
             "cta_text1": "SHOP NOW",
             "cta_link1": "shopify://collections/flash-sale",
             "cta_text2": "",
