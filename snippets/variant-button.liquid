@@ -25,14 +25,10 @@
         data-index="option{{ forloop.index }}"
         data-option-index="{{ color_option_index }}">
         {% if is_color %}
-          {% if option.selected_value contains 'Gold' %}
-            {{ option.selected_value }}
-          {% else %}
-            {%- liquid
-              assign color_swatch_tmp =  option.selected_value | split: ' ' | first
-            -%}
-            {{ color_swatch_tmp }}
-          {% endif %}
+          {%- liquid
+             assign color_swatch_tmp =  option.selected_value | split: ' ' | first
+          -%}
+          {{ color_swatch_tmp }}
         {% else %}        
           {{ option.selected_value }}
         {% endif %}
