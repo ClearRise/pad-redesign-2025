@@ -76,16 +76,62 @@
     console.log("SVG and $0 appended to Tryon button:", tryonButton);
   }
 
+  async function excludeExtraitemsFromTryonMax(tryonButton) {
+  try {
+      // Fetch cart data from Shopify
+      const response = await fetch("/cart.js");
+      const cart = await response.json();
+
+      // Normalize exclusion strings to lowercase
+      const exclusions = ["inlay materials", "premium protection plan", "laser engraving text", "glowstone enhancement"];
+
+      //console.log("cart.items: " + JSON.stringify(cart.items))
+      const tryonSellingPlan = tryonProduct?.selling_plan_groups
+          ?.flatMap(group => group.selling_plans || [])
+          ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon")
+
+      const tryonSellingPlanId = tryonSellingPlan.id
+      const tryonDefaultMaxItems = JSON.parse(tryonSellingPlan?.options[0].value)?.maxProducts
+      console.log("tryonSellingPlanId: " + tryonSellingPlanId)
+      console.log("tryonDefaultMaxItems: " + tryonDefaultMaxItems)
+      // Filter items
+      const filteredItems = cart.items.filter(item => {
+        const hasSellingPlan = item.selling_plan_allocation?.selling_plan?.id == tryonSellingPlanId;
+        const lowerTitle = item.title.toLowerCase();
+        const isExcluded = exclusions.some(ex => lowerTitle.includes(ex));
+        return hasSellingPlan && isExcluded;
+      });
+
+      // Count them
+      const count = filteredItems.reduce((sum, item) => sum + item.quantity, 0);
+
+      // Updating the Tryon button's max items. We increase the default max items by the count of the items we want to exclude from the max
+      const tryonNewMaxItems = tryonDefaultMaxItems + count
+      tryonButton.options.maxProducts = tryonNewMaxItems
+      
+      tryonButton.cartUpdated()
+      console.log("Updated tryon max items from " + tryonDefaultMaxItems + " to " + tryonNewMaxItems)
+    } catch (error) {
+      console.error("Error fetching cart:", error);
+    }
+  }
+
   
   // Poll for #tryon-input and run logic on document load
   document.addEventListener("DOMContentLoaded", () => {
-    const maxWaitTime = 3000; // 3 seconds
+    const maxWaitTime = 5000; // 5 seconds
     const pollInterval = 200;
     const startTime = Date.now();
   
     function waitForTryonInput() {
       const tryonInput = document.querySelector("#tryon-input");
       const tryonButton = document.querySelector(".tryon-button");
+
+      // handle max tryon items - exclude extra items
+      if(tryonButton) {
+        console.log("Filtering Tryon")
+        {% comment %} excludeExtraitemsFromTryonMax(tryonButton); {% endcomment %}
+      }
   
       if (tryonInput && tryonButton) {
         handleTryonSellingPlanInput(tryonInput, tryonButton);
@@ -93,7 +139,7 @@
       } else if (Date.now() - startTime < maxWaitTime) {
         setTimeout(waitForTryonInput, pollInterval);
       } else {
-        console.log("tryon-input not found within 3 seconds");
+        console.log("tryon-input not found within 5 seconds");
       }
     }
   
