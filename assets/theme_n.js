@@ -8326,7 +8326,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
           let colorArray = evt.detail.value.split(" ");
           color = colorArray[0];
         }
-        console.log(this.selectors.colorLabel + `[data-index="${index}"`);
+        console.log('SetColor:::::::::::', this.selectors.colorLabel + `[data-index="${index}"`);
         // Updates on radio button change, not variant.js
         this.container.querySelector(
           this.selectors.colorLabel + `[data-index="${index}"`
