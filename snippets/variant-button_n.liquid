@@ -90,9 +90,9 @@
             assign color_file_name = value | handle | append: '.' | append: swatch_file_extension
             assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
             if value contains "Gold"
-              assign color_swatch_fallback = "Gold"; 
+              assign color_swatch_fallback = "Gold" 
             else
-              assign color_swatch_fallback = value | split: ' ' | last;
+              assign color_swatch_fallback = value | split: ' ' | last
             endif
           -%}
           <label
