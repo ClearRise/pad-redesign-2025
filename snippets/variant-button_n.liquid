@@ -89,7 +89,11 @@
           {%- liquid
             assign color_file_name = value | handle | append: '.' | append: swatch_file_extension
             assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
-            assign color_swatch_fallback = value | split: ' ' | last 
+            if value contains "Gold"
+              assign color_swatch_fallback = "Gold"; 
+            else
+              assign color_swatch_fallback = value | split: ' ' | last;
+            endif
           -%}
           <label
             for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
