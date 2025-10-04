@@ -14,10 +14,10 @@
       "disabled": true,
       "settings": {
         "enable_timer_banner": true,
-        "banner_text": "LABOR DAY SALE Up to 35% off",
+        "banner_text": "Free Gift w/ Orders $195+",
         "banner_link": "/collections/sale",
         "banner_link_text": "Shop now",
-        "background_color": "#000000",
+        "background_color": "#8ead97",
         "text_color": "#ffffff",
         "enable_countdown": true,
         "countdown_end_date": "2025-12-31 23:59:59",
