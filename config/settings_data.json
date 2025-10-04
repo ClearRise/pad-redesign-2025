@@ -172,6 +172,7 @@
           },
           "announcement_xVJyfX": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "$75,000 Sweepstakes giveaway",
               "link_text": "<span>Shop now for a chance at a once in a lifetime trip</span><span>Orders $195+ Get a FREE Mystery Gift  </span>",
