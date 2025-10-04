@@ -158,17 +158,16 @@
         "blocks": {
           "timer_banner_CAtMWy": {
             "type": "timer_banner",
-            "disabled": true,
             "settings": {
               "enable_timer_banner": true,
-              "banner_text": "LABOR DAY SALE Up to 35% off",
+              "banner_text": "Free Mystery Box Ends This Weekend",
               "banner_link": "",
               "banner_link_text": "Shop now",
-              "background_color": "#000000",
-              "text_color": "#ffffff",
+              "background_color": "#8ead97",
+              "text_color": "#111111",
               "enable_countdown": true,
-              "countdown_end_date": "2025-12-31 23:59:59",
-              "hide_when_expired": true
+              "countdown_end_date": "2025-10-5 23:59:59",
+              "hide_when_expired": false
             }
           },
           "announcement_xVJyfX": {
