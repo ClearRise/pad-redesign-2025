@@ -397,7 +397,7 @@
           "settings": {
             "subheading": "",
             "heading": "FREE GIFT OFFER",
-            "textarea": "Get a Free Green Burl Carbon Fiber Ring or Pendant on orders $195+",
+            "textarea": "Get a Free Green Glow Burl Carbon Fiber Ring or Pendant on orders $145+<br><b>LIMITED TIME ONLY</b>",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
@@ -424,6 +424,12 @@
         "advanced_eReELk"
       ],
       "settings": {
+        "show_title": false,
+        "title": "",
+        "align_title": "left",
+        "sub_title": "",
+        "align_sub_title": "left",
+        "show_img_title": false,
         "full_width": false,
         "gutter_size": 20,
         "space_above": false,
