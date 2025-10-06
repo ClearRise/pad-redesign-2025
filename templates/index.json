@@ -176,6 +176,9 @@
       "block_order": [
         "image_TdFgGQ"
       ],
+      "custom_css": [
+        "@media (min-width: 769px) {.hero__text-shadow {max-width: 37%; }}"
+      ],
       "name": "Hero Section(New)",
       "settings": {
         "use_img_banner": true,
