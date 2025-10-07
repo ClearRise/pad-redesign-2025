@@ -742,10 +742,12 @@
 
               {%- comment -%} Calculate cart total excluding tryon items {%- endcomment -%}
               {%- assign is_tryon_item = false -%}
-              {%- if item.selling_plan_allocation != empty and item.selling_plan_allocation.selling_plan.id == 1848737874 -%}
+              {%- if item.selling_plan_allocation != empty
+                and item.selling_plan_allocation.selling_plan.id == 1848737874
+              -%}
                 {%- assign is_tryon_item = true -%}
               {%- endif -%}
-              
+
               {%- unless is_tryon_item -%}
                 {%- assign cart_total_exclude_tryon = cart_total_exclude_tryon
                   | plus: item.final_price
@@ -1048,8 +1050,8 @@
       // Calculate cart total excluding tryon items
       let cartTotal = 0;
       cart.items.forEach(item => {
-        const isTryonItem = item.selling_plan_allocation && 
-                           item.selling_plan_allocation.selling_plan && 
+        const isTryonItem = item.selling_plan_allocation &&
+                           item.selling_plan_allocation.selling_plan &&
                            item.selling_plan_allocation.selling_plan.id === 1848737874;
         if (!isTryonItem) {
           cartTotal += item.final_line_price;
@@ -1116,14 +1118,15 @@
   // Function to refresh cart subtotal every 3 seconds
   function refreshCartSubtotal() {
     fetch('/cart.js')
-      .then(response => response.json())
-      .then(cart => {
+      .then((response) => response.json())
+      .then((cart) => {
         // Calculate cart total excluding tryon items
         let cartTotal = 0;
-        cart.items.forEach(item => {
-          const isTryonItem = item.selling_plan_allocation && 
-                             item.selling_plan_allocation.selling_plan && 
-                             item.selling_plan_allocation.selling_plan.id === 1848737874;
+        cart.items.forEach((item) => {
+          const isTryonItem =
+            item.selling_plan_allocation &&
+            item.selling_plan_allocation.selling_plan &&
+            item.selling_plan_allocation.selling_plan.id === 1848737874;
           if (!isTryonItem) {
             cartTotal += item.final_line_price;
           }
@@ -1134,7 +1137,7 @@
           style: 'currency',
           currency: 'USD',
           minimumFractionDigits: 2,
-          maximumFractionDigits: 2
+          maximumFractionDigits: 2,
         }).format(cartTotal / 100);
 
         // Update the subtotal display
@@ -1143,22 +1146,22 @@
           subtotalElement.textContent = formattedPrice;
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Error refreshing cart subtotal:', error);
       });
   }
 
   // Start refreshing every 3 seconds when page loads
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     // Initial refresh
     refreshCartSubtotal();
-    
+
     // Set up interval to refresh every 3 seconds
     setInterval(refreshCartSubtotal, 2000);
   });
 
   // Also refresh when cart is updated
-  document.addEventListener('cart:updated', function() {
+  document.addEventListener('cart:updated', function () {
     refreshCartSubtotal();
   });
 </script>
