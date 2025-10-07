@@ -11968,8 +11968,13 @@ html[dir="rtl"] .background-media-text__text {
 
 .cart__item-name {
   display: block;
-  font-size: calc(var(--typeBaseSize) + 1px);
-  margin-bottom: 8px;
+  font-size: 14px !important;
+  margin-bottom: 4px;
+}
+@media (max-width: 768px) {
+  .cart__item-name {
+    font-size: 12px !important;
+  }
 }
 
 .cart__item--variants {
