@@ -1,14 +1,14 @@
 <!-- 2nd tier  gift box -->
 {% assign upsellAtc = 'Add to cart' %}
 {% assign upsellTitle = settings.gift_box_title_second %}
-{% assign SecondTierMin = settings.cart_threshold_amount_second %}
-{% assign SecondTierMinRaw = settings.cart_threshold_amount_second | times: 100 %}
+{% assign SecondTierMin = settings.min_cart_threshold_amount %}
+{% assign SecondTierMinRaw = settings.min_cart_threshold_amount | times: 100 %}
 
 {% assign SecondTierMaxRaw = 100000000000 %}
 
 {% if settings.third_show_gift_box %}
-  {% assign SecondTierMax = settings.cart_threshold_amount_third %}
-  {% assign SecondTierMaxRaw = settings.cart_threshold_amount_third | times: 100 %}
+  {% assign SecondTierMax = settings.max_cart_threshold_amount %}
+  {% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times: 100 %}
 {% endif %}
 
 {% assign already_added = 'Change Gift' %}
@@ -40,11 +40,11 @@
 {% endif %}
 
 {% if cart.total_price >= SecondTierMinRaw and cart.total_price <= SecondTierMaxRaw %}
-  <div class="gift_box mmmmmmmmmmmmmmmmmm">
+  <div class="gift_box">
     {% if first_product_found == false or second_product_found == false %}
       <h5 class="upsell-heading gift_box_title">Gift will be added at checkout screen</h5>
     {% else %}
-      <h5 class="upsell-heading gift_box_title">{{ settings.gift_box_title_second | default: 'Free Gift Offer' }}</h5>
+      <h5 class="upsell-heading gift_box_title">{{ settings.gift_box_title_second }}</h5>
     {% endif %}
 
     <div class="upsell-collection dgCartUpsellCont gift-products pad_10">
@@ -132,7 +132,6 @@
         </div>
       {% endif %}
 
-      {% comment %} Display second gift - hide if already added {% endcomment %}
       {% if settings['second_product-handle-2'] %}
         {% assign second_gift_product = settings['second_product-handle-2'] %}
         {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
@@ -199,3 +198,85 @@
     </div>
   </div>
 {% endif %}
+
+<script>
+  // Monitor cart changes and remove gifts from wrong tier
+  document.addEventListener('DOMContentLoaded', function() {
+    const secondTierMin = {{ SecondTierMinRaw }};
+    const secondTierMax = {{ SecondTierMaxRaw }};
+    const firstGiftProductId = '{{ first_gift_product_id }}';
+    const secondGiftProductId = '{{ second_gift_product_id }}';
+
+    // Function to check if cart meets second tier requirements
+    function checkTierRequirements() {
+      fetch('/cart.js')
+        .then(response => response.json())
+        .then(cart => {
+          const cartTotal = cart.total_price;
+
+          // Get first tier gift IDs (from settings)
+          const firstTierGiftIds = [];
+          {% if settings.show_gift_box %}
+            {% if settings.product-handle-1 %}
+              firstTierGiftIds.push('{{ settings.product-handle-1.selected_or_first_available_variant.id }}');
+            {% endif %}
+            {% if settings.product-handle-2 %}
+              firstTierGiftIds.push('{{ settings.product-handle-2.selected_or_first_available_variant.id }}');
+            {% endif %}
+          {% endif %}
+
+          // Get second tier gift IDs
+          const secondTierGiftIds = [firstGiftProductId, secondGiftProductId];
+
+          const itemsToRemove = [];
+
+          cart.items.forEach(item => {
+            const isFirstTierGift = firstTierGiftIds.includes(item.variant_id.toString());
+            const isSecondTierGift = secondTierGiftIds.includes(item.variant_id.toString());
+
+            if (isFirstTierGift && cartTotal >= secondTierMin && cartTotal <= secondTierMax) {
+              // Remove first tier gifts when second tier requirements are met
+              itemsToRemove.push(item);
+            } else if (isSecondTierGift && (cartTotal < secondTierMin || cartTotal > secondTierMax)) {
+              // Remove second tier gifts when second tier requirements are not met
+              itemsToRemove.push(item);
+            }
+          });
+
+          if (itemsToRemove.length > 0) {
+            console.log('Removing wrong tier gifts:', itemsToRemove);
+
+            // Remove each gift item
+            itemsToRemove.forEach(item => {
+              fetch('/cart/change.js', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  id: item.key,
+                  quantity: 0
+                })
+              })
+              .then(response => response.json())
+              .then(data => {
+                console.log('Removed gift:', item.title);
+              })
+              .catch(error => console.error('Error removing gift:', error));
+            });
+
+            // Refresh the page to update the display
+            window.location.reload();
+          }
+        })
+        .catch(error => console.error('Error checking cart:', error));
+    }
+
+    // Check on page load
+    checkTierRequirements();
+
+    // Listen for cart updates
+    document.addEventListener('cart:updated', checkTierRequirements);
+    document.addEventListener('ajaxProduct:added', checkTierRequirements);
+  });
+</script>
