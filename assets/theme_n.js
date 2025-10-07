@@ -7904,12 +7904,20 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                         tempText += `<span class="bold_option_value_title">${item}</span>`;
                       });
 
-                      var boldOptions = tempWrap.querySelectorAll('.bold_option_value_element');
+                      var boldOptions = tempWrap.querySelectorAll(
+                        ".bold_option_value_element"
+                      );
                       console.log("keyword", boldOptions);
                       let price = 0;
-                      [ ...boldOptions].forEach(function(boldOptionItem) {
-                        if (boldOptionItem.classList.contains("bold_swatch_selected")) {
-                          let optionPrice = boldOptionItem.parentElement?.querySelector('span.money')?.innerHTML.replace('$', '');
+                      [...boldOptions].forEach(function (boldOptionItem) {
+                        if (
+                          boldOptionItem.classList.contains(
+                            "bold_swatch_selected"
+                          )
+                        ) {
+                          let optionPrice = boldOptionItem.parentElement
+                            ?.querySelector("span.money")
+                            ?.innerHTML.replace("$", "");
                           if (isNaN(Number(optionPrice))) {
                             optionPrice = 0;
                           }
@@ -7966,13 +7974,19 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                 items.forEach(function (item) {
                   tempText += `<span class="bold_option_value_title">${item}</span>`;
                 });
-                
-                var boldOptions = tempWrap.querySelectorAll('.bold_option_value_element');
+
+                var boldOptions = tempWrap.querySelectorAll(
+                  ".bold_option_value_element"
+                );
                 console.log("keyword", boldOptions);
                 let price = 0;
-                [ ...boldOptions].forEach(function(boldOptionItem) {
-                  if (boldOptionItem.classList.contains("bold_swatch_selected")) {
-                    let optionPrice = boldOptionItem.parentElement?.querySelector('span.money')?.innerHTML.replace('$', '');
+                [...boldOptions].forEach(function (boldOptionItem) {
+                  if (
+                    boldOptionItem.classList.contains("bold_swatch_selected")
+                  ) {
+                    let optionPrice = boldOptionItem.parentElement
+                      ?.querySelector("span.money")
+                      ?.innerHTML.replace("$", "");
                     if (isNaN(Number(optionPrice))) {
                       optionPrice = 0;
                     }
@@ -8326,7 +8340,10 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
           let colorArray = evt.detail.value.split(" ");
           color = colorArray[0];
         }
-        console.log('SetColor:::::::::::', this.selectors.colorLabel + `[data-index="${index}"`);
+        console.log(
+          "SetColor:::::::::::",
+          this.selectors.colorLabel + `[data-index="${index}"`
+        );
         // Updates on radio button change, not variant.js
         this.container.querySelector(
           this.selectors.colorLabel + `[data-index="${index}"`
