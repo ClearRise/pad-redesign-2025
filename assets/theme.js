@@ -24,9 +24,9 @@ theme.config = {
   vimeoLoading: false,
   isTouch:
     "ontouchstart" in window ||
-    (window.DocumentTouch && window.document instanceof DocumentTouch) ||
-    window.navigator.maxTouchPoints ||
-    window.navigator.msMaxTouchPoints
+      (window.DocumentTouch && window.document instanceof DocumentTouch) ||
+      window.navigator.maxTouchPoints ||
+      window.navigator.msMaxTouchPoints
       ? true
       : false,
   stickyHeader: false,
@@ -40,8 +40,8 @@ if (theme.config.isTouch) {
 if (console && console.log) {
   console.log(
     "Impulse theme (" +
-      theme.settings.themeVersion +
-      ") by ARCHΞTYPE | Learn more at https://archetypethemes.co"
+    theme.settings.themeVersion +
+    ") by ARCHΞTYPE | Learn more at https://archetypethemes.co"
   );
 }
 
@@ -70,7 +70,7 @@ function tryonHandlingItem() {
           item.selling_plan_allocation &&
           item.selling_plan_allocation.selling_plan &&
           item.selling_plan_allocation.selling_plan.description ===
-            TRYON_DESCRIPTION
+          TRYON_DESCRIPTION
       );
 
       const hasTryonFeeItem = items.some(
@@ -244,8 +244,8 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
             if (!option.selected) return;
             arr.push(
               encodeURIComponent(field.name) +
-                "=" +
-                encodeURIComponent(option.value)
+              "=" +
+              encodeURIComponent(option.value)
             );
           });
           return;
@@ -446,7 +446,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
       return variant.unit_price_measurement.reference_value === 1
         ? variant.unit_price_measurement.reference_unit
         : variant.unit_price_measurement.reference_value +
-            variant.unit_price_measurement.reference_unit;
+        variant.unit_price_measurement.reference_unit;
     }
 
     return {
@@ -625,7 +625,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
       if (!library) return;
       if (library.status === status.requested) return;
 
-      callback = callback || function () {};
+      callback = callback || function () { };
       if (library.status === status.loaded) {
         callback();
         return;
@@ -1613,9 +1613,8 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
         const updatedParams = this.getUpdatedParams(currentParams, newParams);
 
         const sectionRenders = this.sections.map((section) => {
-          const url = `${basePath}?section_id=${
-            section.sectionId
-          }&${updatedParams.toString()}`;
+          const url = `${basePath}?section_id=${section.sectionId
+            }&${updatedParams.toString()}`;
           const cachedSectionUrl = (cachedSection) => cachedSection.url === url;
 
           return this.cachedSections.some(cachedSectionUrl)
@@ -1711,8 +1710,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
         history.pushState(
           {},
           "",
-          `${window.location.pathname}${
-            searchParams && "?".concat(searchParams)
+          `${window.location.pathname}${searchParams && "?".concat(searchParams)
           }`
         );
       },
@@ -2100,7 +2098,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                 );
               }.bind(this)
             )
-            .catch(function (XMLHttpRequest) {});
+            .catch(function (XMLHttpRequest) { });
         }
         if (
           window.BOLD &&
@@ -2167,7 +2165,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                 );
               }.bind($this)
             )
-            .catch(function (XMLHttpRequest) {});
+            .catch(function (XMLHttpRequest) { });
         });
       },
 
@@ -6090,8 +6088,8 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
       getImageData: function () {
         this.images = this.inSlideshow
           ? this.container.querySelectorAll(
-              selectors.slideshowTrack + selectors.images
-            )
+            selectors.slideshowTrack + selectors.images
+          )
           : this.container.querySelectorAll(selectors.images);
 
         var items = [];
@@ -7698,7 +7696,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                       var boldOptions = tempWrap.querySelectorAll('.bold_option_value_element');
                       console.log("keyword", boldOptions);
                       let price = 0;
-                      [ ...boldOptions].forEach(function(boldOptionItem) {
+                      [...boldOptions].forEach(function (boldOptionItem) {
                         if (boldOptionItem.classList.contains("bold_swatch_selected")) {
                           let optionPrice = boldOptionItem.parentElement?.querySelector('span.money')?.innerHTML.replace('$', '');
                           if (isNaN(Number(optionPrice))) {
@@ -7765,7 +7763,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                 var boldOptions = tempWrap.querySelectorAll('.bold_option_value_element');
                 console.log("keyword", boldOptions);
                 let price = 0;
-                [ ...boldOptions].forEach(function(boldOptionItem) {
+                [...boldOptions].forEach(function (boldOptionItem) {
                   if (boldOptionItem.classList.contains("bold_swatch_selected")) {
                     let optionPrice = boldOptionItem.parentElement?.querySelector('span.money')?.innerHTML.replace('$', '');
                     if (isNaN(Number(optionPrice))) {
@@ -8081,8 +8079,8 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
         if (this.settings.imageSetName) {
           var variantWrapper = this.container.querySelector(
             '.variant-input-wrap[data-handle="' +
-              this.settings.imageSetName +
-              '"]'
+            this.settings.imageSetName +
+            '"]'
           );
           if (variantWrapper) {
             this.settings.imageSetIndex = variantWrapper.dataset.index;
@@ -8237,8 +8235,8 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
         var variant = variant
           ? variant
           : this.variants
-          ? this.variants.currentVariant
-          : null;
+            ? this.variants.currentVariant
+            : null;
         if (!variant) return;
 
         var setValue = (this.settings.currentImageSet = this.getImageSetName(
@@ -8262,8 +8260,8 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
         var variant = evt
           ? evt.detail.variant
           : this.variants
-          ? this.variants.currentVariant
-          : null;
+            ? this.variants.currentVariant
+            : null;
         if (!variant) {
           return;
         }
@@ -8693,18 +8691,18 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
 
         var prevSlide = this.cache.mainSlider.querySelector(
           '.product-main-slide[data-index="' +
-            this.settings.currentSlideIndex +
-            '"]'
+          this.settings.currentSlideIndex +
+          '"]'
         );
 
         // If imageSetName exists, use a more specific selector
         var nextSlide = this.settings.imageSetName
           ? this.cache.mainSlider.querySelectorAll(
-              ".flickity-slider .product-main-slide"
-            )[index]
+            ".flickity-slider .product-main-slide"
+          )[index]
           : this.cache.mainSlider.querySelector(
-              '.product-main-slide[data-index="' + index + '"]'
-            );
+            '.product-main-slide[data-index="' + index + '"]'
+          );
 
         prevSlide.setAttribute("tabindex", "-1");
         nextSlide.setAttribute("tabindex", 0);
@@ -8961,9 +8959,9 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
           function () {
             var currentMedia = this.container.querySelector(
               this.selectors.productMediaWrapper +
-                ":not(." +
-                self.classes.hidden +
-                ")"
+              ":not(." +
+              self.classes.hidden +
+              ")"
             );
             currentMedia.dispatchEvent(
               new CustomEvent("xrLaunch", {
