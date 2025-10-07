@@ -330,7 +330,13 @@
                             {% endif %}
                           >
                             {% comment %} {{ gift_variant.title }} {% endcomment %}
-                            {{ first_gift_product.options[0] }} - {{ gift_variant.option1 }} {% if first_gift_product.options[1] %}, {{ first_gift_product.options[1] }} - {{ gift_variant.option2 }} {% endif %} {% if first_gift_product.options[2] %}, {{ first_gift_product.options[2] }} - {{ gift_variant.option3 }} {% endif %}
+                            {{ first_gift_product.options[0] }} - {{ gift_variant.option1 }}
+                            {% if first_gift_product.options[1] -%}
+                              , {{ first_gift_product.options[1] }} - {{ gift_variant.option2 }}
+                            {% endif %}
+                            {% if first_gift_product.options[2] -%}
+                              , {{ first_gift_product.options[2] }} - {{ gift_variant.option3 }}
+                            {% endif %}
                           </option>
                         {% endfor %}
                       </select>
@@ -365,14 +371,16 @@
             {% endif %}
 
             {% if settings['product-handle-2'] %}
-              {% comment %} {% assign second_gift_product = settings['product-handle-2'] %}
-              {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
-              {% assign gift_product_found = true %}
-              {% for item in cart.items %}
-                {% if item.id == second_gift_product_id %}
-                  {% assign gift_product_found = false %}
-                {% endif %}
-              {% endfor %} {% endcomment %}
+              {% comment %}
+                {% assign second_gift_product = settings['product-handle-2'] %}
+                {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
+                {% assign gift_product_found = true %}
+                {% for item in cart.items %}
+                  {% if item.id == second_gift_product_id %}
+                    {% assign gift_product_found = false %}
+                  {% endif %}
+                {% endfor %}
+              {% endcomment %}
               <div style="display:none;">
                 {{ second_gift_product | json }}, "second product",
                 {{ second_gift_product.selected_or_first_available_variant | json }}
@@ -410,7 +418,13 @@
                             {% endif %}
                           >
                             {% comment %} {{ gift_variant.title }} {% endcomment %}
-                            {{ second_gift_product.options[0] }} - {{ gift_variant.option1 }} {% if second_gift_product.options[1] %}, {{ second_gift_product.options[1] }} - {{ gift_variant.option2 }} {% endif %} {% if second_gift_product.options[2] %}, {{ second_gift_product.options[2] }} - {{ gift_variant.option3 }} {% endif %}
+                            {{ second_gift_product.options[0] }} - {{ gift_variant.option1 }}
+                            {% if second_gift_product.options[1] -%}
+                              , {{ second_gift_product.options[1] }} - {{ gift_variant.option2 }}
+                            {% endif %}
+                            {% if second_gift_product.options[2] -%}
+                              , {{ second_gift_product.options[2] }} - {{ gift_variant.option3 }}
+                            {% endif %}
                           </option>
                         {% endfor %}
                       </select>
@@ -561,7 +575,13 @@
                             {% endif %}
                           >
                             {% comment %} {{ gift_variant.title }} {% endcomment %}
-                            {{ first_gift_product.options[0] }} - {{ gift_variant.option1 }} {% if first_gift_product.options[1] %}, {{ first_gift_product.options[1] }} - {{ gift_variant.option2 }} {% endif %} {% if first_gift_product.options[2] %}, {{ first_gift_product.options[2] }} - {{ gift_variant.option3 }} {% endif %}
+                            {{ first_gift_product.options[0] }} - {{ gift_variant.option1 }}
+                            {% if first_gift_product.options[1] -%}
+                              , {{ first_gift_product.options[1] }} - {{ gift_variant.option2 }}
+                            {% endif %}
+                            {% if first_gift_product.options[2] -%}
+                              , {{ first_gift_product.options[2] }} - {{ gift_variant.option3 }}
+                            {% endif %}
                           </option>
                         {% endfor %}
                       </select>
@@ -596,14 +616,16 @@
             {% endif %}
 
             {% if settings['product-handle-2'] %}
-              {% comment %} {% assign second_gift_product = settings['product-handle-2'] %}
-              {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
-              {% assign gift_product_found = true %}
-              {% for item in cart.items %}
-                {% if item.id == second_gift_product_id %}
-                  {% assign gift_product_found = false %}
-                {% endif %}
-              {% endfor %} {% endcomment %}
+              {% comment %}
+                {% assign second_gift_product = settings['product-handle-2'] %}
+                {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
+                {% assign gift_product_found = true %}
+                {% for item in cart.items %}
+                  {% if item.id == second_gift_product_id %}
+                    {% assign gift_product_found = false %}
+                  {% endif %}
+                {% endfor %}
+              {% endcomment %}
               <div style="display:none;">
                 {{ second_gift_product | json }}, "second product",
                 {{ second_gift_product.selected_or_first_available_variant | json }}
@@ -641,7 +663,13 @@
                             {% endif %}
                           >
                             {% comment %} {{ gift_variant.title }} {% endcomment %}
-                            {{ second_gift_product.options[0] }} - {{ gift_variant.option1 }} {% if second_gift_product.options[1] %}, {{ second_gift_product.options[1] }} - {{ gift_variant.option2 }} {% endif %} {% if second_gift_product.options[2] %}, {{ second_gift_product.options[2] }} - {{ gift_variant.option3 }} {% endif %}
+                            {{ second_gift_product.options[0] }} - {{ gift_variant.option1 }}
+                            {% if second_gift_product.options[1] -%}
+                              , {{ second_gift_product.options[1] }} - {{ gift_variant.option2 }}
+                            {% endif %}
+                            {% if second_gift_product.options[2] -%}
+                              , {{ second_gift_product.options[2] }} - {{ gift_variant.option3 }}
+                            {% endif %}
                           </option>
                         {% endfor %}
                       </select>
