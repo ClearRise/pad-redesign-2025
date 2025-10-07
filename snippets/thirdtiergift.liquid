@@ -74,11 +74,14 @@
                     {{ first_gift_product.price | money_without_trailing_zeros }}
                   {% endif %}
                 </div>
-                <button data-product-id="{{ first_gift_product_id }}" class="upsell_button_gtm upsell-add-to-cart">
-                  {% if first_product_found == false %} Added to Cart! {% else %} {{ upsellAtc }} {% endif %}
-                </button>
               </div>
             </div>
+            <button
+              data-product-id="{{ first_gift_product_id }}"
+              class="button btn d-block upsell-suggest-product-button upsell_button_gtm upsell-add-to-cart"
+            >
+              {% if first_product_found == false %} Added to Cart! {% else %} {{ upsellAtc }} {% endif %}
+            </button>
           </div>
         </div>
       {% endif %}
@@ -94,7 +97,7 @@
         {% endfor %}
         <div
           product-id="{{ second_gift_product_id }}"
-          class="{% if settings.hide_gift_2 %}product-2 {% endif %} upsell-product-inner gift-product upsell_product-{{ second_gift_product_id }} {% if second_product_found == false %}item_added_to_cart {% else %}show {% endif %}"
+          class="{% if settings.third_hide_gift_2 %}product-2 {% endif %} upsell-product-inner gift-product upsell_product-{{ second_gift_product_id }} {% if second_product_found == false %}item_added_to_cart {% else %}show {% endif %}"
         >
           <div class="upsell-product dgCartUpsellInner   border_line mb_10">
             <div class="upsell-product-image">
@@ -116,11 +119,14 @@
                     {{ second_gift_product.price | money_without_trailing_zeros }}
                   {% endif %}
                 </div>
-                <button data-product-id="{{ second_gift_product_id }}" class="upsell_button_gtm upsell-add-to-cart">
-                  {% if second_product_found == false %} Added to Cart! {% else %} {{ upsellAtc }} {% endif %}
-                </button>
               </div>
             </div>
+            <button
+              data-product-id="{{ second_gift_product_id }}"
+              class="button btn d-block upsell-suggest-product-button upsell_button_gtm upsell-add-to-cart"
+            >
+              {% if second_product_found == false %} Added to Cart! {% else %} {{ upsellAtc }} {% endif %}
+            </button>
           </div>
         </div>
       {% endif %}
