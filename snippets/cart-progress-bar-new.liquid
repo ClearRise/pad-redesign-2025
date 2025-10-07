@@ -1,7 +1,7 @@
 <!-- Free shipping progress markup -->
-{% assign FirstTierAmountRaw = settings.cart_threshold_amount | times:100 %}
-{% assign SecondTierMinRaw = settings.min_cart_threshold_amount | times:100 %}
-{% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times:100 %}
+{% assign FirstTierAmountRaw = settings.cart_threshold_amount | times:100 %}}
+{% assign SecondTierMinRaw = settings.cart_threshold_amount | times:100 %}
+{% assign SecondTierMaxRaw = settings.cart_threshold_amount_third | times:100 %}
 {% assign ThirdTierAmountRaw = settings.cart_threshold_amount_third | times:100 %}
 
 <div class="cart-shipping__wrapper">
@@ -57,7 +57,7 @@
         <span title="1 Free Gift">1 Free Gift</span>
       </div>
       <div class="checkpoint-image-wrapper" style="max-height: 42px;max-width: 42px;left: max(68%, calc(30px / 2));transform: translateY(-50%) translateX(-100%);display: flex;--checkpoint-images-size: 30px;">
-        <div style="font-size: 12px; position: relative;width: 100%;padding-top: 100%;"> ${{ settings.min_cart_threshold_amount }} </div>
+        <div style="font-size: 12px; position: relative;width: 100%;padding-top: 100%;"> ${{ settings.cart_threshold_amount }} </div>
       </div>  
       <div class="checkpoint-title" style="top: max(6px, 6px);left: max(69%, calc(var(--width) / 2)); --width:0px;transform: translateY(-50%) translateX(-100%);">
        {% if cart.total_price < SecondTierMinRaw %}
