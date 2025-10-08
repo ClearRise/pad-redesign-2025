@@ -1313,6 +1313,12 @@
         "info": "Both Gift products will appear in the cart drawer if selected."
       },
       {
+        "type": "checkbox",
+        "id": "show_gift_box_third",
+        "label": "Show Gift Box Third Tier",
+        "info": "Both Gift products will appear in the cart drawer if selected."
+      },
+      {
         "type": "text",
         "id": "third_tier_label",
         "label": "Third tier label",
