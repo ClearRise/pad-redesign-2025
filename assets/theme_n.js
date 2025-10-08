@@ -2033,6 +2033,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
       ==============================================================================*/
       initQtySelectors: function () {
         this.form.querySelectorAll(selectors.qtySelector).forEach((el) => {
+          console.log("2036 line theme_n.js......")
           var selector = new theme.QtySelector(el, {
             namespace: this.namespace,
             isCart: true,
@@ -3571,6 +3572,9 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
     };
 
     function QtySelector(el, options) {
+      if (!el.innerHTML.includes("js-qty__adjust")) {
+        return;
+      }
       this.wrapper = el;
       this.plus = el.querySelector(selectors.plus);
       this.minus = el.querySelector(selectors.minus);
@@ -3632,7 +3636,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
 
         this.input.value = qty;
 
-        console.log(this.options.isCart);
+        console.log("this.options.isCart(theme_n.js 3635): ", this.options.isCart);
 
         if (this.options.isCart) {
           document.dispatchEvent(
