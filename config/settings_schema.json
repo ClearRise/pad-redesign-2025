@@ -1219,6 +1219,12 @@
         "info": "Second Gift products will be hidden from cart drawer if selected."
       },
       {
+        "type": "checkbox",
+        "id": "allow_adding_both_gifts_tier_1",
+        "label": "Allow Adding Both Gifts",
+        "info": "Allow adding both gifts to the cart if selected."
+      },
+      {
         "type": "text",
         "id": "first_tier_name",
         "label": "First Tier Name",
@@ -1262,6 +1268,11 @@
       },
       {
         "type": "text",
+        "id": "description_tier_2",
+        "label": "Description Text"
+      },
+      {
+        "type": "text",
         "id": "cart_threshold_amount_second",
         "label": "Second Tier Cart Threshold Amount",
         "default": "690",
@@ -1291,6 +1302,18 @@
         "info": "Second Gift products will be hidden from cart drawer if selected."
       },
       {
+        "type": "checkbox",
+        "id": "hide_all_gifts_tier_2",
+        "label": "Hide All Gifts",
+        "info": "Second Gift products will be hidden from cart drawer if selected."
+      },
+      {
+        "type": "checkbox",
+        "id": "allow_adding_both_gifts_tier_2",
+        "label": "Allow Adding Both Gifts",
+        "info": "Allow adding both gifts to the cart if selected."
+      },
+      {
         "type": "image_picker",
         "id": "reward_bar_second_icon",
         "label": "Reward Bar Second Icon"
@@ -1310,12 +1333,6 @@
         "type": "checkbox",
         "id": "third_show_gift_box",
         "label": "Enable Third Tier",
-        "info": "Both Gift products will appear in the cart drawer if selected."
-      },
-      {
-        "type": "checkbox",
-        "id": "show_gift_box_third",
-        "label": "Show Gift Box Third Tier",
         "info": "Both Gift products will appear in the cart drawer if selected."
       },
       {
@@ -1342,6 +1359,11 @@
         "type": "text",
         "id": "unlock_text_third",
         "label": "Reward Bar Unlock Text"
+      },
+      {
+        "type": "text",
+        "id": "description_tier_3",
+        "label": "Description Text"
       },
       {
         "type": "text",
@@ -1372,6 +1394,18 @@
         "id": "third_hide_gift_2",
         "label": "Hide Second Gift",
         "info": "Second Gift products will be hidden from cart drawer if selected."
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_all_gifts_tier_3",
+        "label": "Hide All Gifts",
+        "info": "Second Gift products will be hidden from cart drawer if selected."
+      },
+      {
+        "type": "checkbox",
+        "id": "allow_adding_both_gifts_tier_3",
+        "label": "Allow Adding Both Gifts",
+        "info": "Allow adding both gifts to the cart if selected."
       },
       {
         "type": "image_picker",

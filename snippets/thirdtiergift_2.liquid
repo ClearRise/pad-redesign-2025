@@ -32,7 +32,9 @@
   </h4>
 {% endif %}
 
-{% if cart.total_price >= ThirdTierAmountRaw %}
+{% if cart.total_price >= ThirdTierAmountRaw 
+      and settings.hide_all_gifts_tier_3 == false 
+%}
   <div class="gift_box">
     {% if first_product_found == false or second_product_found == false %}
       <h5 class="upsell-heading gift_box_title">Gifts will be added at checkout screen</h5>
@@ -126,7 +128,7 @@
       {% endif %}
 
       {% comment %} Display second gift - hide if already added {% endcomment %}
-      {% if settings['third_product-handle-2'] %}
+      {% if settings['third_product-handle-2'] and settings.third_hide_gift_2 == false %}
         {% assign second_gift_product = settings['third_product-handle-2'] %}
         {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
         {% assign second_gift_product_found = true %}

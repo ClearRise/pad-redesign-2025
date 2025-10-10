@@ -1,14 +1,13 @@
 <!-- 2nd tier  gift box -->
 {% assign upsellAtc = 'Add to cart' %}
 {% assign upsellTitle = settings.gift_box_title_second %}
-{% assign SecondTierMin = settings.min_cart_threshold_amount %}
-{% assign SecondTierMinRaw = settings.min_cart_threshold_amount | times: 100 %}
+{% assign SecondTierMin = settings.cart_threshold_amount_second %}
+{% assign SecondTierMinRaw = settings.cart_threshold_amount_second | times: 100 %}
 
-{% assign SecondTierMaxRaw = 100000000000 %}
 
 {% if settings.third_show_gift_box %}
-  {% assign SecondTierMax = settings.max_cart_threshold_amount %}
-  {% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times: 100 %}
+  {% assign SecondTierMax = settings.cart_threshold_amount_third %}
+  {% assign SecondTierMaxRaw = settings.cart_threshold_amount_third | times: 100 %}
 {% endif %}
 
 {% assign already_added = 'Change Gift' %}

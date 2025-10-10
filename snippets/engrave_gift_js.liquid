@@ -1,6 +1,6 @@
 <script>
 
-  // Tryon
+// Tryon
   // Handle selling plan input and create the event listener for tryon-button click
   function handleTryonSellingPlanInput(tryonInput, tryonButton) {
     try {
@@ -76,7 +76,6 @@
     console.log("SVG and $0 appended to Tryon button:", tryonButton);
   }
 
-  
   // Poll for #tryon-input and run logic on document load
   document.addEventListener("DOMContentLoaded", () => {
     const maxWaitTime = 3000; // 3 seconds
@@ -101,109 +100,108 @@
   });
 // End Tryon
 
-$(document).ready(function () {
-  const productForm = $(".product-single__form");
-  const productFormSubmit = $(".add-to-cart");
-  const productFormSubmitBtn = $(".add-to-cart span");
-  const engravingInput = $(".product-page-engraving-input");
-  const protectField = $(".protection-plan");
-  const protectField2 = $(".protection-plan-glow"); // New field
+// Protection Plan
+  $(document).ready(function () {
+    const productForm = $(".product-single__form");
+    const productFormSubmit = $(".add-to-cart");
+    const productFormSubmitBtn = $(".add-to-cart span");
+    const engravingInput = $(".product-page-engraving-input");
+    const protectField = $(".protection-plan");
+    const protectField2 = $(".protection-plan-glow"); // New field
 
-  let protectionInputs = []; // Array to store multiple protection plan IDs
-  const engravingProductID = theme.engraving.engraving_var_id;
-  let hiddenFieldsAdded = false;
+    let protectionInputs = []; // Array to store multiple protection plan IDs
+    const engravingProductID = theme.engraving.engraving_var_id;
+    let hiddenFieldsAdded = false;
 
-  if (engravingInput.length) {
-    engravingInput.on("input", function () {
+    if (engravingInput.length) {
+      engravingInput.on("input", function () {
+        let engravingValue = engravingInput.val();
+        let field = $(this);
+
+        if (engravingValue !== "") {
+          productFormSubmitBtn.html("<span>ADD TO CART + ENGRAVING</span>");
+        } else if (engravingValue === "") {
+          productFormSubmitBtn.html("<span>ADD TO CART</span>");
+        }
+      });
+    }
+
+    protectField.click(function () {
+      CheckProtectField();
+    });
+
+    protectField2.click(function () { // New field event listener
+      CheckProtectField();
+    });
+
+    function CheckProtectField() {
+      protectionInputs = []; // Reset the array
+      if ($(protectField).is(":checked")) {
+        protectionInputs.push($(protectField).attr("data-protection")); // Add first protection plan
+      }
+      if ($(protectField2).is(":checked")) { // New field logic
+        protectionInputs.push($(protectField2).attr("data-protection")); // Add second protection plan
+      }
+      console.log(protectionInputs); // Log all selected protection plans
+    }
+
+    function ProtectionPlanAjaxAdd(productId) {
+      console.log(productId+'added');
+      return $.ajax({
+        type: "POST",
+        url: "/cart/add.js",
+        data: {
+          quantity: 1,
+          id: productId,
+        },
+        dataType: "json",
+        async: true
+      });
+    }
+
+    productFormSubmit.on("click", function (event) {
+      $('.add-to-cart-loader').show();
+      event.preventDefault();
+      event.target.disabled = true;
+
+      // Tryon
+      // add the tryon input
+      $(".tryon-input").value = 1848737874
+
+      CheckProtectField(); // Check both protection fields
       let engravingValue = engravingInput.val();
-      let field = $(this);
+      console.log(engravingValue);
 
-      if (engravingValue !== "") {
-        productFormSubmitBtn.html("<span>ADD TO CART + ENGRAVING</span>");
-      } else if (engravingValue === "") {
-        productFormSubmitBtn.html("<span>ADD TO CART</span>");
+      if (engravingValue !== '' && engravingValue != undefined) {
+        protectionInputs.push(engravingProductID);
+      }
+
+      console.log("protectionInputs: " + protectionInputs)
+      $('.CircleSpinner').addClass('LoadComplete');
+      // Add all selected protection plans
+      if (protectionInputs.length > 0) {
+        fetch('/cart/add.js', {
+          body: JSON.stringify(
+            {items: protectionInputs.map(item => ({id: item, quantity: 1}))}
+          ),
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With':'xmlhttprequest'
+          },
+          method: 'POST'
+        })
+        .then(response => setTimeout(() => {
+          productForm.submit();
+        }, 2000));
+      } else {
+        setTimeout(() => {
+          productForm.submit();
+        }, 2000)
       }
     });
-  }
-
-  protectField.click(function () {
-    CheckProtectField();
   });
-
-  protectField2.click(function () { // New field event listener
-    CheckProtectField();
-  });
-
-  function CheckProtectField() {
-    protectionInputs = []; // Reset the array
-    if ($(protectField).is(":checked")) {
-      protectionInputs.push($(protectField).attr("data-protection")); // Add first protection plan
-    }
-    if ($(protectField2).is(":checked")) { // New field logic
-      protectionInputs.push($(protectField2).attr("data-protection")); // Add second protection plan
-    }
-    console.log(protectionInputs); // Log all selected protection plans
-  }
-
-  function ProtectionPlanAjaxAdd(productId) {
-    console.log(productId+'added');
-    return $.ajax({
-      type: "POST",
-      url: "/cart/add.js",
-      data: {
-        quantity: 1,
-        id: productId,
-      },
-      dataType: "json",
-      async: true
-    });
-  }
-
-  
-
-  productFormSubmit.on("click", function (event) {
-    $('.add-to-cart-loader').show();
-    event.preventDefault();
-    event.target.disabled = true;
-
-    // Tryon
-    // add the tryon input
-    $(".tryon-input").value = 1848737874
-
-    CheckProtectField(); // Check both protection fields
-    let engravingValue = engravingInput.val();
-    console.log(engravingValue);
-
-    if (engravingValue !== '' && engravingValue != undefined) {
-      protectionInputs.push(engravingProductID);
-    }
-
-    console.log("protectionInputs: " + protectionInputs)
-    $('.CircleSpinner').addClass('LoadComplete');
-    // Add all selected protection plans
-    if (protectionInputs.length > 0) {
-      fetch('/cart/add.js', {
-        body: JSON.stringify(
-          {items: protectionInputs.map(item => ({id: item, quantity: 1}))}
-        ),
-        credentials: 'same-origin',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Requested-With':'xmlhttprequest'
-        },
-        method: 'POST'
-      })
-      .then(response => setTimeout(() => {
-        productForm.submit();
-      }, 2000));
-    } else {
-      setTimeout(() => {
-        productForm.submit();
-      }, 2000)
-    }
-  });
-});
-
+// End Protection Plan
 
 function AutoAddEngravingProduct(itemQuantity) {
   // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
@@ -276,7 +274,7 @@ var thirdtier_second_gift_product = "";
 var thirdtier_first_gift_product_var = "";
 var thirdtier_second_gift_product_var = "";
 
-{% if settings.show_gift_box %}    
+{% if settings.show_gift_box %}
   {% assign first_gift_product = settings.product-handle-1 %}
   {% assign first_gift_product_id = first_gift_product.id %} 
   {% assign first_gift_product_id_var = first_gift_product.selected_or_first_available_variant.id %}
@@ -323,169 +321,169 @@ var thirdtier_second_gift_product_var = "";
 
 {% endif %}
       
-  
 jQuery(document).ready(function($) {
     const overlay = document.querySelector('.overlay');
 
     async function updateGiftBoxes() {
-        try {
-            // Update cart page gift boxes
-            const cartPage = document.querySelector('.cart__page');
-            if (cartPage) {
-                const response = await fetch(window.location.href);
-                const html = await response.text();
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = html;
-                
-                const newCartPage = tempDiv.querySelector('.cart__page');
-                if (newCartPage) {
-                    const giftBoxes = cartPage.querySelectorAll('.gift_box');
-                    const newGiftBoxes = newCartPage.querySelectorAll('.gift_box');
-                    
-                    giftBoxes.forEach((box, index) => {
-                        if (newGiftBoxes[index]) {
-                            box.innerHTML = newGiftBoxes[index].innerHTML;
-                        }
-                    });
-                }
-            }
-    
-            // Update mini-cart gift boxes
-            const cartDrawer = document.querySelector('#CartDrawer');
-            if (cartDrawer) {
-                const response = await fetch(`${window.location.pathname}?view=cart-drawer`);
-                const html = await response.text();
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = html;
-                
-                const newCartDrawer = tempDiv.querySelector('#CartDrawer');
-                if (newCartDrawer) {
-                    const giftBoxes = cartDrawer.querySelectorAll('.gift_box');
-                    const newGiftBoxes = newCartDrawer.querySelectorAll('.gift_box');
-                    
-                    giftBoxes.forEach((box, index) => {
-                        if (newGiftBoxes[index]) {
-                            box.innerHTML = newGiftBoxes[index].innerHTML;
-                        }
-                    });
-                }
-            }
-        } catch (error) {
-            console.error('Error updating gift boxes:', error);
+      try {
+        // Update cart page gift boxes
+        const cartPage = document.querySelector('.cart__page');
+        if (cartPage) {
+          const response = await fetch(window.location.href);
+          const html = await response.text();
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = html;
+          
+          const newCartPage = tempDiv.querySelector('.cart__page');
+          if (newCartPage) {
+              const giftBoxes = cartPage.querySelectorAll('.gift_box');
+              const newGiftBoxes = newCartPage.querySelectorAll('.gift_box');
+              
+              giftBoxes.forEach((box, index) => {
+                  if (newGiftBoxes[index]) {
+                      box.innerHTML = newGiftBoxes[index].innerHTML;
+                  }
+              });
+          }
         }
-    }
 
+        // Update mini-cart gift boxes
+        const cartDrawer = document.querySelector('#CartDrawer');
+        if (cartDrawer) {
+            const response = await fetch(`${window.location.pathname}?view=cart-drawer`);
+            const html = await response.text();
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+            
+            const newCartDrawer = tempDiv.querySelector('#CartDrawer');
+            if (newCartDrawer) {
+                const giftBoxes = cartDrawer.querySelectorAll('.gift_box');
+                const newGiftBoxes = newCartDrawer.querySelectorAll('.gift_box');
+                
+                giftBoxes.forEach((box, index) => {
+                    if (newGiftBoxes[index]) {
+                        box.innerHTML = newGiftBoxes[index].innerHTML;
+                    }
+                });
+            }
+        }
+      } catch (error) {
+        console.error('Error updating gift boxes:', error);
+      }
+    }
 
     async function updateCart(isFreeGift = false) {
-        try {
-            const response = await fetch('/cart.js');
-            const cart = await response.json();
-            
-            // Update cart drawer if it exists
-            const cartDrawerItems = document.querySelector('cart-drawer-items');
-            if (cartDrawerItems) {
-                const sectionResponse = await fetch(`?sections=cart-drawer,cart-icon-bubble`);
-                const sectionsData = await sectionResponse.json();
-                
-                if (sectionsData['cart-drawer']) {
-                    cartDrawerItems.innerHTML = sectionsData['cart-drawer'];
-                }
-            }
+      console.log("updateCart called...");
+      try {
+          const response = await fetch('/cart.js');
+          const cart = await response.json();
+          
+          // Update cart drawer if it exists
+          const cartDrawerItems = document.querySelector('cart-drawer-items');
+          if (cartDrawerItems) {
+              const sectionResponse = await fetch(`?sections=cart-drawer,cart-icon-bubble`);
+              const sectionsData = await sectionResponse.json();
+              
+              if (sectionsData['cart-drawer']) {
+                  cartDrawerItems.innerHTML = sectionsData['cart-drawer'];
+              }
+          }
 
-            // Update gift boxes
-            await updateGiftBoxes();
+          // Update gift boxes
+          await updateGiftBoxes();
 
-            if (!isFreeGift) {
-              // Dispatch all necessary cart update events
-              document.dispatchEvent(new CustomEvent('cart:refresh'));
-              document.dispatchEvent(new CustomEvent('cart:build'));
-              document.dispatchEvent(new CustomEvent('cart.requestComplete'));
-              document.dispatchEvent(new CustomEvent('cart:updated', {
-                  detail: { cart: cart }
-              }));
-            }
+          if (!isFreeGift) {
+            // Dispatch all necessary cart update events
+            document.dispatchEvent(new CustomEvent('cart:refresh'));
+            document.dispatchEvent(new CustomEvent('cart:build'));
+            document.dispatchEvent(new CustomEvent('cart.requestComplete'));
+            document.dispatchEvent(new CustomEvent('cart:updated', {
+                detail: { cart: cart }
+            }));
+          }
 
-            // Reload cart sections if available
-            if (window.Shopify && window.Shopify.section) {
-                window.Shopify.section.load('cart-drawer');
-                window.Shopify.section.load('cart-icon-bubble');
-            }
-        } catch (error) {
-            console.error('Error updating cart:', error);
-        }
+          // Reload cart sections if available
+          if (window.Shopify && window.Shopify.section) {
+              window.Shopify.section.load('cart-drawer');
+              window.Shopify.section.load('cart-icon-bubble');
+          }
+      } catch (error) {
+          console.error('Error updating cart:', error);
+      }
     }
 
-    // const variantSelector = document.querySelector(".change-gift-size-options");
     // Add gift product
     $(document).on('click', '.upsell_button_gtm', async function(e) {
-        e.preventDefault();
-        let variantSelector = e.target.classList.contains("upsell-add-to-cart-gift-first") ? document.querySelector(".change-gift-size-options-first") : document.querySelector(".change-gift-size-options-second");
-        const id = variantSelector ? variantSelector.value : $(this).attr('data-product-id');
-        const quantity = 1;
+      console.log("add gift product...");
+      e.preventDefault();
+      let variantSelector = e.target.classList.contains("upsell-add-to-cart-gift-first") ? document.querySelector(".change-gift-size-options-first") : document.querySelector(".change-gift-size-options-second");
+      const id = variantSelector ? variantSelector.value : $(this).attr('data-product-id');
+      const quantity = 1;
 
-        try {
-            overlay.style.display = 'block';
-            
-            const response = await fetch('/cart/add.js', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    items: [{
-                        id: id,
-                        quantity: quantity,
-                        properties: {
-                            '_gift_product': 'true'
-                        }
-                    }]
-                })
-            });
+      try {
+        overlay.style.display = 'block';
+        
+        const response = await fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                items: [{
+                    id: id,
+                    quantity: quantity,
+                    properties: {
+                        '_gift_product': 'true'
+                    }
+                }]
+            })
+        });
 
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            // await updateCart();
-            location.reload();
-        } catch (error) {
-            console.error('Failed to add gift:', error);
-        } finally {
-            overlay.style.display = 'none';
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
+
+        // await updateCart();
+        location.reload();
+      } catch (error) {
+          console.error('Failed to add gift:', error);
+      } finally {
+          overlay.style.display = 'none';
+      }
     });
 
     // Remove gift product
     $(document).on('click', '.change_free_gift', async function(e) {
-        e.preventDefault();
-        let variantSelector = e.target.classList.contains("upsell-add-to-cart-gift-first") ? document.querySelector(".change-gift-size-options-first") : document.querySelector(".change-gift-size-options-second");
-        const variantId = variantSelector ? variantSelector.value : $(this).attr('data-remove_var');
+      console.log("remove gift product...");
+      e.preventDefault();
+      let variantSelector = e.target.classList.contains("upsell-add-to-cart-gift-first") ? document.querySelector(".change-gift-size-options-first") : document.querySelector(".change-gift-size-options-second");
+      const variantId = variantSelector ? variantSelector.value : $(this).attr('data-remove_var');
 
-        try {
-            overlay.style.display = 'block';
-            
-            const response = await fetch('/cart/change.js', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    id: variantId,
-                    quantity: 0
-                })
-            });
+      try {
+          overlay.style.display = 'block';
+          
+          const response = await fetch('/cart/change.js', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                  id: variantId,
+                  quantity: 0
+              })
+          });
 
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+          if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+          }
 
-            location.reload();
-            // await updateCart();
-        } catch (error) {
-            console.error('Failed to remove gift:', error);
-        } finally {
-            overlay.style.display = 'none';
-        }
+          location.reload();
+          // await updateCart();
+      } catch (error) {
+          console.error('Failed to remove gift:', error);
+      } finally {
+          overlay.style.display = 'none';
+      }
     });
 
 
@@ -561,12 +559,8 @@ jQuery(document).ready(function($) {
     }
 });
 
-
-  
-
 function updatedgCartUpsell($remove_this, $remove) {
   const loader = document.querySelector('.overlay');
-  //loader.style.display = 'block';
 
   fetch("".concat(theme.routes.cartPage, "?").concat("timestamp=").concat(Date.now()), {
     credentials: 'same-origin',
@@ -584,8 +578,8 @@ function updatedgCartUpsell($remove_this, $remove) {
   .then(cart => {
     {% assign GiftBoxAmount = settings.cart_threshold_amount %}
     {% assign GiftBoxAmountRaw = settings.cart_threshold_amount | times:100 %}
-    {% assign SecondTierMinRaw = settings.min_cart_threshold_amount | times:100 %}
-    {% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times:100 %}
+    {% assign SecondTierMinRaw = settings.cart_threshold_amount_second | times:100 %}
+    {% assign SecondTierMaxRaw = settings.cart_threshold_amount_third | times:100 %}
     {% assign ThirdTierAmountRaw = settings.cart_threshold_amount_third | times:100 %}
 
     console.log(cart.items);
@@ -597,64 +591,45 @@ function updatedgCartUpsell($remove_this, $remove) {
       Cookies.set('FirstTier', 'false');
       Cookies.set('SecondTier', 'false');
       Cookies.set('ThirdTier', 'false');
-    //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift_grey.svg?v=1680028788";
-    //   document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift_grey.svg?v=1680028788";
-    //   document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift_grey.svg?v=1680028788";
     }
     else if(cart.total_price > {{GiftBoxAmountRaw}}){
       {% if settings.show_gift_box %} 
-      Cookies.set('FirstTier', 'true');
-      Cookies.set('SecondTier', 'false');
-      Cookies.set('ThirdTier', 'false');
-    //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //  document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
-    //  document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
+        Cookies.set('FirstTier', 'true');
+        Cookies.set('SecondTier', 'false');
+        Cookies.set('ThirdTier', 'false');
       {% endif %}
     }
     else if(cart.total_price < {{SecondTierMinRaw}}){
       {% if settings.show_gift_box %} 
-      Cookies.set('FirstTier', 'true');
-      Cookies.set('SecondTier', 'false');
-      Cookies.set('ThirdTier', 'false');
-    //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //  document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
-    //  document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
+        Cookies.set('FirstTier', 'true');
+        Cookies.set('SecondTier', 'false');
+        Cookies.set('ThirdTier', 'false');
       {% endif %}
     }
     else if(cart.total_price < {{SecondTierMaxRaw}}){
       {% if settings.second_show_gift_box %}
-      Cookies.set('FirstTier', 'false');
-      Cookies.set('SecondTier', 'true');
-      Cookies.set('ThirdTier', 'false');
-    //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //  document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //   document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
+        Cookies.set('FirstTier', 'false');
+        Cookies.set('SecondTier', 'true');
+        Cookies.set('ThirdTier', 'false');
       {% endif %}
     }
     else if(cart.total_price > {{SecondTierMaxRaw}} && cart.total_price < {{ThirdTierAmountRaw}}){
       {% if settings.second_show_gift_box and settings.third_show_gift_box %}
-      Cookies.set('FirstTier', 'false');
-      Cookies.set('SecondTier', 'false');
-      Cookies.set('ThirdTier', 'false');
-    //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //  document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //   document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
+        Cookies.set('FirstTier', 'false');
+        Cookies.set('SecondTier', 'false');
+        Cookies.set('ThirdTier', 'false');
       {% endif %}
     }  
     else if(cart.total_price > {{ThirdTierAmountRaw}}){
       {% if settings.third_show_gift_box %}
-      Cookies.set('FirstTier', 'false');
-      Cookies.set('SecondTier', 'false');
-      Cookies.set('ThirdTier', 'true');
-    //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //   document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //   document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
+        Cookies.set('FirstTier', 'false');
+        Cookies.set('SecondTier', 'false');
+        Cookies.set('ThirdTier', 'true');
       {% endif %}
     }
     
     setTimeout(function(){
       if(Cookies.get('FirstTier') == 'false' && Cookies.get('SecondTier') == 'false' && Cookies.get('ThirdTier') == 'false') {
-        console.log('testttinggg 1');
         for(var i = 0; i < items.length; i++){
           if (items[i].product_id == first_gift_product){
             remove_auto_gift(first_gift_product_var);
@@ -677,7 +652,6 @@ function updatedgCartUpsell($remove_this, $remove) {
         }
       }
       else if(Cookies.get('FirstTier') == 'true' && Cookies.get('SecondTier') == 'false' && Cookies.get('ThirdTier') == 'false') {
-        console.log('testttinggg 2');
         for(var i = 0; i < items.length; i++){
           if (items[i].product_id == secondtier_first_gift_product){
             remove_auto_gift(secondtier_first_gift_product_var);
@@ -694,7 +668,6 @@ function updatedgCartUpsell($remove_this, $remove) {
         }
       }
       else if(Cookies.get('FirstTier') == 'false' && Cookies.get('SecondTier') == 'true' && Cookies.get('ThirdTier') == 'false') {
-        console.log('testttinggg 3');
         for(var i = 0; i < items.length; i++){
           if (items[i].product_id == first_gift_product){
             remove_auto_gift(first_gift_product_var);
@@ -711,7 +684,6 @@ function updatedgCartUpsell($remove_this, $remove) {
         }
       }
       else if(Cookies.get('FirstTier') == 'false' && Cookies.get('SecondTier') == 'false' && Cookies.get('ThirdTier') == 'true') {
-        console.log('testttinggg 4');
         for(var i = 0; i < items.length; i++){
           if (items[i].product_id == first_gift_product){
             remove_auto_gift(first_gift_product_var);
@@ -735,16 +707,15 @@ function updatedgCartUpsell($remove_this, $remove) {
     }, 700); 
   });
 }
+
 document.addEventListener('cart:updated', function(evt) {
   var cart_obj = evt.detail.cart.items;
-    updatedgCartUpsell();
+  updatedgCartUpsell();
 });
 
 document.addEventListener('ajaxProduct:added', function(evt) {
     updatedgCartUpsell();
 });
-
-
 
 function remove_auto_gift($prod_id){
   console.log('removed');
@@ -862,7 +833,7 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
               dataType: "json",
               success: function (data) {
                 console.log('success');
-                  remove_all($remove_url);
+                remove_all($remove_url);
                       
               },
               error: function (error) {
@@ -888,21 +859,18 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
     }
 }
 
+function remove_all(url){
+  return fetch(url, {
+    credentials: "same-origin",
+    method: "GET",
+  }).then(function (response) {
+    console.log(response);
+    // Handle the response data here
+    setTimeout(function(){
+      updatedgCartUpsell();  
+      $('.overlay').hide();
+    }, 800)
+  });
+}
 
-  function remove_all(url){
-      return fetch(url, {
-          credentials: "same-origin",
-          method: "GET",
-        }).then(function (response) {
-          console.log(response);
-                          // Handle the response data here
-                  setTimeout(function(){
-                    updatedgCartUpsell();  
-                    $('.overlay').hide();
-                  }, 800)
-                              
-                        });
-  }
-  
-  
 </script>
