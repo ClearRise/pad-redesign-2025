@@ -1066,8 +1066,6 @@
   });
 
   async function validateAndRemoveInvalidGifts() {
-    console.log("validateAndRemoveInvalidGifts called...");
-
     try {
       const response = await fetch('/cart.js');
       const cart = await response.json();

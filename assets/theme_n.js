@@ -2033,7 +2033,6 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
       ==============================================================================*/
       initQtySelectors: function () {
         this.form.querySelectorAll(selectors.qtySelector).forEach((el) => {
-          console.log("2036 line theme_n.js......")
           var selector = new theme.QtySelector(el, {
             namespace: this.namespace,
             isCart: true,

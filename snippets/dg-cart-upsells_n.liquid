@@ -898,6 +898,14 @@
 
       {% assign cart_items = cart.items | map: 'id' %}
       {% assign cart_total = cart.total_price %}
+      
+      {% comment %} Build list of user-selected gift IDs (those with _gift_product property) {% endcomment %}
+      {% assign user_selected_gifts = '' %}
+      {% for item in cart.items %}
+        {% if item.properties._gift_product == 'true' %}
+          {% assign user_selected_gifts = user_selected_gifts | append: item.id | append: ',' %}
+        {% endif %}
+      {% endfor %}
 
       {% comment %} Define tier thresholds {% endcomment %}
       {% assign first_tier_threshold = settings.cart_threshold_amount | times: 100 %}
@@ -928,51 +936,75 @@
 
       {% comment %} Rule 1: Remove free gifts from the next higher level {% endcomment %}
       {% if current_tier == 0 %}
-        {% comment %} Below tier 1 - remove all gifts from all tiers {% endcomment %}
+        {% comment %} Below tier 1 - remove all gifts from all tiers (except user-selected) {% endcomment %}
         {% if cart_items contains first_tier_product_1_id %}
-          {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_1_id | append: ',' %}
+          {% unless user_selected_gifts contains first_tier_product_1_id %}
+            {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_1_id | append: ',' %}
+          {% endunless %}
         {% endif %}
         {% if cart_items contains first_tier_product_2_id %}
-          {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_2_id | append: ',' %}
+          {% unless user_selected_gifts contains first_tier_product_2_id %}
+            {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_2_id | append: ',' %}
+          {% endunless %}
         {% endif %}
         {% if cart_items contains second_tier_product_1_id %}
-          {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_1_id | append: ',' %}
+          {% unless user_selected_gifts contains second_tier_product_1_id %}
+            {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_1_id | append: ',' %}
+          {% endunless %}
         {% endif %}
         {% if cart_items contains second_tier_product_2_id %}
-          {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_2_id | append: ',' %}
+          {% unless user_selected_gifts contains second_tier_product_2_id %}
+            {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_2_id | append: ',' %}
+          {% endunless %}
         {% endif %}
         {% if cart_items contains third_tier_product_1_id %}
-          {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_1_id | append: ',' %}
+          {% unless user_selected_gifts contains third_tier_product_1_id %}
+            {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_1_id | append: ',' %}
+          {% endunless %}
         {% endif %}
         {% if cart_items contains third_tier_product_2_id %}
-          {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_2_id | append: ',' %}
+          {% unless user_selected_gifts contains third_tier_product_2_id %}
+            {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_2_id | append: ',' %}
+          {% endunless %}
         {% endif %}
       {% endif %}
 
       {% if current_tier == 1 %}
-        {% comment %} At tier 1 - remove gifts from next higher level (tier 2) {% endcomment %}
+        {% comment %} At tier 1 - remove gifts from next higher level (tier 2, except user-selected) {% endcomment %}
         {% if cart_items contains second_tier_product_1_id %}
-          {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_1_id | append: ',' %}
+          {% unless user_selected_gifts contains second_tier_product_1_id %}
+            {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_1_id | append: ',' %}
+          {% endunless %}
         {% endif %}
         {% if cart_items contains second_tier_product_2_id %}
-          {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_2_id | append: ',' %}
+          {% unless user_selected_gifts contains second_tier_product_2_id %}
+            {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_2_id | append: ',' %}
+          {% endunless %}
         {% endif %}
-        {% comment %} At tier 1 - remove gifts from next higher level (tier 3) {% endcomment %}
+        {% comment %} At tier 1 - remove gifts from next higher level (tier 3, except user-selected) {% endcomment %}
         {% if cart_items contains third_tier_product_1_id %}
-          {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_1_id | append: ',' %}
+          {% unless user_selected_gifts contains third_tier_product_1_id %}
+            {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_1_id | append: ',' %}
+          {% endunless %}
         {% endif %}
         {% if cart_items contains third_tier_product_2_id %}
-          {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_2_id | append: ',' %}
+          {% unless user_selected_gifts contains third_tier_product_2_id %}
+            {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_2_id | append: ',' %}
+          {% endunless %}
         {% endif %}
       {% endif %}
 
       {% if current_tier == 2 %}
-        {% comment %} At tier 2 - remove gifts from next higher level (tier 3) {% endcomment %}
+        {% comment %} At tier 2 - remove gifts from next higher level (tier 3, except user-selected) {% endcomment %}
         {% if cart_items contains third_tier_product_1_id %}
-          {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_1_id | append: ',' %}
+          {% unless user_selected_gifts contains third_tier_product_1_id %}
+            {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_1_id | append: ',' %}
+          {% endunless %}
         {% endif %}
         {% if cart_items contains third_tier_product_2_id %}
-          {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_2_id | append: ',' %}
+          {% unless user_selected_gifts contains third_tier_product_2_id %}
+            {% assign gifts_to_remove = gifts_to_remove | append: third_tier_product_2_id | append: ',' %}
+          {% endunless %}
         {% endif %}
       {% endif %}
 
@@ -994,32 +1026,44 @@
         {% endif %}
       {% endif %}
 
-      {% comment %} If there's at least one gift from current tier, remove all gifts from lower tiers {% endcomment %}
+      {% comment %} If there's at least one gift from current tier, remove all gifts from lower tiers (except user-selected) {% endcomment %}
       {% if has_current_tier_gift %}
         {% if current_tier >= 2 %}
-          {% comment %} Remove tier 1 gifts {% endcomment %}
+          {% comment %} Remove tier 1 gifts (except user-selected) {% endcomment %}
           {% if cart_items contains first_tier_product_1_id %}
-            {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_1_id | append: ',' %}
+            {% unless user_selected_gifts contains first_tier_product_1_id %}
+              {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_1_id | append: ',' %}
+            {% endunless %}
           {% endif %}
           {% if cart_items contains first_tier_product_2_id %}
-            {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_2_id | append: ',' %}
+            {% unless user_selected_gifts contains first_tier_product_2_id %}
+              {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_2_id | append: ',' %}
+            {% endunless %}
           {% endif %}
         {% endif %}
 
         {% if current_tier >= 3 %}
-          {% comment %} Remove tier 2 gifts {% endcomment %}
+          {% comment %} Remove tier 2 gifts (except user-selected) {% endcomment %}
           {% if cart_items contains second_tier_product_1_id %}
-            {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_1_id | append: ',' %}
+            {% unless user_selected_gifts contains second_tier_product_1_id %}
+              {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_1_id | append: ',' %}
+            {% endunless %}
           {% endif %}
           {% if cart_items contains second_tier_product_2_id %}
-            {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_2_id | append: ',' %}
+            {% unless user_selected_gifts contains second_tier_product_2_id %}
+              {% assign gifts_to_remove = gifts_to_remove | append: second_tier_product_2_id | append: ',' %}
+            {% endunless %}
           {% endif %}
-          {% comment %} Remove tier 1 gifts {% endcomment %}
+          {% comment %} Remove tier 1 gifts (except user-selected) {% endcomment %}
           {% if cart_items contains first_tier_product_1_id %}
-            {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_1_id | append: ',' %}
+            {% unless user_selected_gifts contains first_tier_product_1_id %}
+              {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_1_id | append: ',' %}
+            {% endunless %}
           {% endif %}
           {% if cart_items contains first_tier_product_2_id %}
-            {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_2_id | append: ',' %}
+            {% unless user_selected_gifts contains first_tier_product_2_id %}
+              {% assign gifts_to_remove = gifts_to_remove | append: first_tier_product_2_id | append: ',' %}
+            {% endunless %}
           {% endif %}
         {% endif %}
       {% endif %}
@@ -1044,6 +1088,7 @@
           console.log("giftsToRemove: ", {{ final_gifts | json }});
           console.log("{{ first_tier_threshold }}", "{{ second_tier_threshold }}", "{{ third_tier_threshold }}");
           (function() {
+            return;
             const giftsToRemove = {{ final_gifts | json }};
             
             if (giftsToRemove && giftsToRemove.length > 0) {

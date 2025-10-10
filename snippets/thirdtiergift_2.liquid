@@ -128,7 +128,7 @@
       {% endif %}
 
       {% comment %} Display second gift - hide if already added {% endcomment %}
-      {% if settings['third_product-handle-2'] and settings.third_hide_gift_2 == false %}
+      {% if settings['third_product-handle-2'].available == true and settings.third_hide_gift_2 == false %}
         {% assign second_gift_product = settings['third_product-handle-2'] %}
         {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
         {% assign second_gift_product_found = true %}

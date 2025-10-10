@@ -274,6 +274,16 @@ var thirdtier_second_gift_product = "";
 var thirdtier_first_gift_product_var = "";
 var thirdtier_second_gift_product_var = "";
 
+// Settings for allowing both gifts per tier
+var allow_both_tier_1 = {{ settings.allow_adding_both_gifts_tier_1 | default: false }};
+var allow_both_tier_2 = {{ settings.allow_adding_both_gifts_tier_2 | default: false }};
+var allow_both_tier_3 = {{ settings.allow_adding_both_gifts_tier_3 | default: false }};
+
+console.log('⚙️ Gift Tier Settings:');
+console.log('  Tier 1 - Allow both gifts:', allow_both_tier_1);
+console.log('  Tier 2 - Allow both gifts:', allow_both_tier_2);
+console.log('  Tier 3 - Allow both gifts:', allow_both_tier_3);
+
 {% if settings.show_gift_box %}
   {% assign first_gift_product = settings.product-handle-1 %}
   {% assign first_gift_product_id = first_gift_product.id %} 
@@ -320,6 +330,11 @@ var thirdtier_second_gift_product_var = "";
   var thirdtier_second_gift_product_var = "{{ thirdtier_second_gift_product_id_var }}";
 
 {% endif %}
+
+console.log('📌 Gift Variant IDs:');
+console.log('  Tier 1: Gift 1 =', first_gift_product_var, ', Gift 2 =', second_gift_product_var);
+console.log('  Tier 2: Gift 1 =', secondtier_first_gift_product_var, ', Gift 2 =', secondtier_second_gift_product_var);
+console.log('  Tier 3: Gift 1 =', thirdtier_first_gift_product_var, ', Gift 2 =', thirdtier_second_gift_product_var);
       
 jQuery(document).ready(function($) {
     const overlay = document.querySelector('.overlay');
@@ -412,6 +427,48 @@ jQuery(document).ready(function($) {
       }
     }
 
+    // Helper function to determine which tier a gift variant belongs to
+    function getGiftTier(variantId) {
+      const vid = variantId.toString();
+      // Tier 1
+      if (vid === first_gift_product_var.toString() || vid === second_gift_product_var.toString()) {
+        return 1;
+      }
+      // Tier 2
+      if (vid === secondtier_first_gift_product_var.toString() || vid === secondtier_second_gift_product_var.toString()) {
+        return 2;
+      }
+      // Tier 3
+      if (vid === thirdtier_first_gift_product_var.toString() || vid === thirdtier_second_gift_product_var.toString()) {
+        return 3;
+      }
+      return 0; // Not a gift
+    }
+
+    // Helper function to get all gift variant IDs from a tier
+    function getTierGiftVariants(tier) {
+      switch(tier) {
+        case 1:
+          return [first_gift_product_var, second_gift_product_var].filter(v => v).map(v => v.toString());
+        case 2:
+          return [secondtier_first_gift_product_var, secondtier_second_gift_product_var].filter(v => v).map(v => v.toString());
+        case 3:
+          return [thirdtier_first_gift_product_var, thirdtier_second_gift_product_var].filter(v => v).map(v => v.toString());
+        default:
+          return [];
+      }
+    }
+
+    // Helper function to check if "allow both gifts" is enabled for a tier
+    function isAllowBothGifts(tier) {
+      switch(tier) {
+        case 1: return allow_both_tier_1;
+        case 2: return allow_both_tier_2;
+        case 3: return allow_both_tier_3;
+        default: return false;
+      }
+    }
+
     // Add gift product
     $(document).on('click', '.upsell_button_gtm', async function(e) {
       console.log("add gift product...");
@@ -420,9 +477,67 @@ jQuery(document).ready(function($) {
       const id = variantSelector ? variantSelector.value : $(this).attr('data-product-id');
       const quantity = 1;
 
-      try {
+       try {
         overlay.style.display = 'block';
         
+        // Determine which tier this gift belongs to
+        const giftTier = getGiftTier(id);
+        console.log('🎁 Adding gift variant ID:', id);
+        console.log('🎁 Detected tier:', giftTier);
+        
+        // Check if we allow both gifts for this tier
+        const allowBoth = isAllowBothGifts(giftTier);
+        console.log('⚙️ Allow both gifts for tier ' + giftTier + ':', allowBoth);
+        
+        // If we don't allow both gifts, remove any existing gift from the same tier
+        if (!allowBoth && giftTier > 0) {
+          console.log('🔄 Single gift mode - checking for existing gifts to replace...');
+          const cart = await fetch('/cart.js').then(res => res.json());
+          const tierGiftVariants = getTierGiftVariants(giftTier);
+          
+          console.log('📋 Tier ' + giftTier + ' gift variant IDs:', tierGiftVariants);
+          console.log('📋 Cart items:', cart.items.map(i => ({ title: i.title, variant_id: i.variant_id, properties: i.properties })));
+          
+          // Find existing gifts from the same tier
+          const existingGiftsFromTier = cart.items.filter(item => {
+            const isUserGift = item.properties && item.properties._gift_product === 'true';
+            const isFromSameTier = tierGiftVariants.includes(item.variant_id.toString());
+            const isDifferentVariant = item.variant_id.toString() !== id.toString();
+            
+            console.log('🔍 Checking item:', item.title, {
+              variant_id: item.variant_id,
+              isUserGift: isUserGift,
+              isFromSameTier: isFromSameTier,
+              isDifferentVariant: isDifferentVariant
+            });
+            
+            return isUserGift && isFromSameTier && isDifferentVariant;
+          });
+          
+          console.log('📦 Found ' + existingGiftsFromTier.length + ' existing gifts from tier ' + giftTier + ':', existingGiftsFromTier.map(g => g.title));
+          
+          // Remove existing gifts from the same tier
+          for (const existingGift of existingGiftsFromTier) {
+            console.log('🗑️ Removing existing gift:', existingGift.title, '(variant:', existingGift.variant_id + ')');
+            await fetch('/cart/change.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                id: existingGift.key,
+                quantity: 0
+              })
+            });
+            console.log('✅ Removed:', existingGift.title);
+          }
+        } else if (allowBoth) {
+          console.log('✅ Allow both gifts enabled for tier ' + giftTier + ' - not removing existing gifts');
+        } else if (giftTier === 0) {
+          console.log('⚠️ Warning: Could not detect gift tier for variant ID:', id);
+        }
+        
+        // Now add the new gift
         const response = await fetch('/cart/add.js', {
             method: 'POST',
             headers: {
@@ -443,8 +558,17 @@ jQuery(document).ready(function($) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        // await updateCart();
-        location.reload();
+        const addedItem = await response.json();
+        console.log('Gift added successfully:', addedItem);
+        
+        // Update UI without reload - dispatch event for other components
+        document.dispatchEvent(new CustomEvent('gift:added', {
+            detail: { item: addedItem }
+        }));
+        
+        // Optionally update gift box UI elements here
+        await updateGiftBoxes();
+        
       } catch (error) {
           console.error('Failed to add gift:', error);
       } finally {
@@ -477,8 +601,16 @@ jQuery(document).ready(function($) {
               throw new Error(`HTTP error! status: ${response.status}`);
           }
 
-          location.reload();
-          // await updateCart();
+          const removedItem = await response.json();
+          console.log('Gift removed successfully:', removedItem);
+          
+          // Update UI without reload
+          await updateGiftBoxes();
+          
+          document.dispatchEvent(new CustomEvent('gift:removed', {
+              detail: { item: removedItem }
+          }));
+          
       } catch (error) {
           console.error('Failed to remove gift:', error);
       } finally {
@@ -541,17 +673,30 @@ jQuery(document).ready(function($) {
                     'Content-Type': 'application/json',
                   },
                   body: JSON.stringify({
-                    items: itemsData
-                  })
-                });
-                // await updateCart(true);
-                // purchaseInfo.dataset.variantId = newVariant;
-                location.reload();
-              } catch (error) {
-                  console.error('Failed to add gift:', error);
-              } finally {
-                  overlay.style.display = 'none';
+                  items: itemsData
+                })
+              });
+
+              if (!response2.ok) {
+                throw new Error(`HTTP error! status: ${response2.status}`);
               }
+
+              const changedItem = await response2.json();
+              console.log('Gift changed successfully:', changedItem);
+              
+              // Update dataset and UI
+              purchaseInfo.dataset.variantId = newVariant;
+              await updateGiftBoxes();
+              
+              document.dispatchEvent(new CustomEvent('gift:changed', {
+                  detail: { item: changedItem }
+              }));
+              
+            } catch (error) {
+                console.error('Failed to change gift:', error);
+            } finally {
+                overlay.style.display = 'none';
+            }
             }
           }
         });
@@ -872,5 +1017,4 @@ function remove_all(url){
     }, 800)
   });
 }
-
 </script>
