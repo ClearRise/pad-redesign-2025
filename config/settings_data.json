@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_body_bg": "#f5f5f5",
@@ -120,6 +129,7 @@
     "third_spend_progress": "",
     "third_product-handle-1": "green-glow-burl-carbon-fiber-ring-1",
     "third_product-handle-2": "green-glow-burl-carbon-fiber-bar-pendant-1",
+    "hide_all_gifts_tier_3": true,
     "shipping_protection_product": "navidium-shipping-protection",
     "shipping_protection_learn_more_link": "shopify://pages/navidium-shipping-protection",
     "cart_additional_buttons": true,
