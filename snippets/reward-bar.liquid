@@ -414,7 +414,7 @@
       <div class="upcart-rewards-message">
         <p><b>{{ banner_text | replace: '(amount)' }}</b></p>
       </div>
-      {% if settings.show_gift_box_second == false 
+      {% if settings.show_gift_box_second == true 
         and settings.description_tier_2 != blank 
         and pass_second_tier == false %}
         <div class="upcart-rewards-description">
@@ -422,7 +422,7 @@
         </div>
       {% endif %}
 
-      {% if settings.hide_all_gifts_tier_2 == false 
+      {% if settings.hide_all_gifts_tier_2 == true 
         and settings.description_tier_2 != blank 
         and pass_second_tier == true %}
         <div class="upcart-rewards-description">
@@ -430,7 +430,7 @@
         </div>
       {% endif %}
 
-      {% if settings.hide_all_gifts_tier_3 == false 
+      {% if settings.hide_all_gifts_tier_3 == true 
         and settings.description_tier_3 != blank 
         and pass_third_tier == true %}
         <div class="upcart-rewards-description">
