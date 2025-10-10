@@ -537,7 +537,7 @@
         {% endif %}
 
         {% if new_total_price >= GiftBoxAmountRaw %}
-          <div class="gift_box ffffffffffff">
+          <div class="gift_box only-one-gift-show">
             {% if first_product_found == false or second_product_found == false %}
               <h5 class="upsell-heading gift_box_title">Gifts will be added at checkout screen</h5>
             {% else %}
@@ -726,7 +726,7 @@
         {% endif %}
 
         {% if new_total_price >= GiftBoxAmountRaw %}
-          <div class="gift_box ffffffffffff">
+          <div class="gift_box both-gifts-show">
             {% if first_product_found == false or second_product_found == false %}
               <h5 class="upsell-heading gift_box_title">Gifts will be added at checkout screen</h5>
             {% else %}
@@ -817,7 +817,7 @@
               {% endif %}
 
               {% comment %} Display second gift - hide if already added {% endcomment %}
-              {% if settings['product-handle-2'] %}
+              {% if settings['product-handle-2'].title != blank %}
                 {% assign second_gift_product = settings['product-handle-2'] %}
                 {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
                 {% assign second_gift_product_found = true %}

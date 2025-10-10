@@ -954,7 +954,7 @@
               {% endif %}
             </p>
           {% endif %}
-          {% render 'dg-cart-upsells_n', hide_price: cart_total_exclude_gift %}
+          {% comment %} {% render 'dg-cart-upsells_n', hide_price: cart_total_exclude_gift %} {% endcomment %}
           {% if settings.cart_notes_enable %}
             <div>
               <label for="CartNote">{{ 'cart.general.note' | t }}</label>
@@ -1066,12 +1066,14 @@
   });
 
   async function validateAndRemoveInvalidGifts() {
+    console.log("validateAndRemoveInvalidGifts called...");
+
     try {
       const response = await fetch('/cart.js');
       const cart = await response.json();
 
-      const secondTierMin = {{ settings.min_cart_threshold_amount | times: 100 }};
-      const secondTierMax = {{ settings.max_cart_threshold_amount | times: 100 }};
+      const secondTierMin = {{ settings.cart_threshold_amount_second | times: 100 }};
+      const secondTierMax = {{ settings.cart_threshold_amount_third | times: 100 }};
 
       // Get first tier gift product IDs
       const firstTierGiftIds = [];
@@ -1094,7 +1096,6 @@
           secondTierGiftIds.push('{{ settings.second_product-handle-2.selected_or_first_available_variant.id }}');
         {% endif %}
       {% endif %}
-
 
       // Check if cart meets second tier requirements
       // Calculate cart total excluding tryon items
@@ -1139,10 +1140,9 @@
         }
       });
 
+      console.log("itemsToRemove: ", itemsToRemove);
       // Remove invalid gifts
       if (itemsToRemove.length > 0) {
-        console.log('Removing invalid tier gifts:', itemsToRemove);
-
         for (const item of itemsToRemove) {
           await fetch('/cart/change.js', {
             method: 'POST',

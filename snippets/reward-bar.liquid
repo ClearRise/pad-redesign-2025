@@ -91,6 +91,11 @@
       .upcart-rewards-bar-title-span {
         font-weight: bold;
       }
+      
+      .upcart-rewards-description {
+        font-size: 12px;
+        margin-top: 10px;
+      }
       .cart-total-price-and-gift-total-price {
         font-size: 12px;
       }
@@ -409,6 +414,29 @@
       <div class="upcart-rewards-message">
         <p><b>{{ banner_text | replace: '(amount)' }}</b></p>
       </div>
+      {% if settings.show_gift_box_second == false 
+        and settings.description_tier_2 != blank 
+        and pass_second_tier == false %}
+        <div class="upcart-rewards-description">
+          <p>{{ settings.description_tier_2 }}</p>
+        </div>
+      {% endif %}
+
+      {% if settings.hide_all_gifts_tier_2 == false 
+        and settings.description_tier_2 != blank 
+        and pass_second_tier == true %}
+        <div class="upcart-rewards-description">
+          <p>{{ settings.description_tier_2 }}</p>
+        </div>
+      {% endif %}
+
+      {% if settings.hide_all_gifts_tier_3 == false 
+        and settings.description_tier_3 != blank 
+        and pass_third_tier == true %}
+        <div class="upcart-rewards-description">
+          <p>{{ settings.description_tier_3 }}</p>
+        </div>
+      {% endif %}
     </div>
   
     {% comment %} <style>
