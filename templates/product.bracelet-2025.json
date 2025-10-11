@@ -98,14 +98,6 @@
             "description": "<p>Our <a href=\"/pages/premium-protection-plan\" title=\"Premium Protection Plan | Patrick Adair Designs\"><strong>Premium Protection Plan</strong></a> covers your product for a lifetime in the event it needs a repair, refinish, or resize.</p><p>{{ product.metafields.custom.premium_protection_plan.value }}</p>"
           }
         },
-        "engraving_YpGMkM": {
-          "type": "engraving",
-          "settings": {
-            "form_style": "checkbox",
-            "style": "inline",
-            "save_badge": "For Limited Time Only"
-          }
-        },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
           "settings": {
@@ -124,6 +116,14 @@
             "border_color": "",
             "bg_color": "",
             "text_color": ""
+          }
+        },
+        "engraving_YpGMkM": {
+          "type": "engraving",
+          "settings": {
+            "form_style": "checkbox",
+            "style": "inline",
+            "save_badge": "For Limited Time Only"
           }
         },
         "buy_buttons": {
@@ -321,8 +321,8 @@
         "inventory_status",
         "glowstone_enhancement_bWeLXn",
         "premium_protection_plan_AhxfM9",
-        "engraving_YpGMkM",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
+        "engraving_YpGMkM",
         "buy_buttons",
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
         "pdp_icon_list_eaVUhJ",
@@ -404,7 +404,7 @@
           "settings": {
             "subheading": "",
             "heading": "FREE GIFT OFFER",
-            "textarea": "Get a Free Green Glow Burl Carbon Fiber Ring or Pendant on orders $145+<br><b>LIMITED TIME ONLY</b>",
+            "textarea": "Get a Free Blue Burl Carbon Fiber Ring or Pendant on orders $145+<br><b>LIMITED TIME ONLY</b>",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
@@ -659,6 +659,8 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget",
             "max_width": 1200
           }
         }
