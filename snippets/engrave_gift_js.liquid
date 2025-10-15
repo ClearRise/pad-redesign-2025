@@ -1,6 +1,6 @@
 <script>
 
-  // Tryon
+// Tryon
   // Handle selling plan input and create the event listener for tryon-button click
   function handleTryonSellingPlanInput(tryonInput, tryonButton) {
     try {
@@ -76,7 +76,6 @@
     console.log("SVG and $0 appended to Tryon button:", tryonButton);
   }
 
-  
   // Poll for #tryon-input and run logic on document load
   document.addEventListener("DOMContentLoaded", () => {
     const maxWaitTime = 3000; // 3 seconds
@@ -101,109 +100,108 @@
   });
 // End Tryon
 
-$(document).ready(function () {
-  const productForm = $(".product-single__form");
-  const productFormSubmit = $(".add-to-cart");
-  const productFormSubmitBtn = $(".add-to-cart span");
-  const engravingInput = $(".product-page-engraving-input");
-  const protectField = $(".protection-plan");
-  const protectField2 = $(".protection-plan-glow"); // New field
+// Protection Plan
+  $(document).ready(function () {
+    const productForm = $(".product-single__form");
+    const productFormSubmit = $(".add-to-cart");
+    const productFormSubmitBtn = $(".add-to-cart span");
+    const engravingInput = $(".product-page-engraving-input");
+    const protectField = $(".protection-plan");
+    const protectField2 = $(".protection-plan-glow"); // New field
 
-  let protectionInputs = []; // Array to store multiple protection plan IDs
-  const engravingProductID = theme.engraving.engraving_var_id;
-  let hiddenFieldsAdded = false;
+    let protectionInputs = []; // Array to store multiple protection plan IDs
+    const engravingProductID = theme.engraving.engraving_var_id;
+    let hiddenFieldsAdded = false;
 
-  if (engravingInput.length) {
-    engravingInput.on("input", function () {
+    if (engravingInput.length) {
+      engravingInput.on("input", function () {
+        let engravingValue = engravingInput.val();
+        let field = $(this);
+
+        if (engravingValue !== "") {
+          productFormSubmitBtn.html("<span>ADD TO CART + ENGRAVING</span>");
+        } else if (engravingValue === "") {
+          productFormSubmitBtn.html("<span>ADD TO CART</span>");
+        }
+      });
+    }
+
+    protectField.click(function () {
+      CheckProtectField();
+    });
+
+    protectField2.click(function () { // New field event listener
+      CheckProtectField();
+    });
+
+    function CheckProtectField() {
+      protectionInputs = []; // Reset the array
+      if ($(protectField).is(":checked")) {
+        protectionInputs.push($(protectField).attr("data-protection")); // Add first protection plan
+      }
+      if ($(protectField2).is(":checked")) { // New field logic
+        protectionInputs.push($(protectField2).attr("data-protection")); // Add second protection plan
+      }
+      console.log(protectionInputs); // Log all selected protection plans
+    }
+
+    function ProtectionPlanAjaxAdd(productId) {
+      console.log(productId+'added');
+      return $.ajax({
+        type: "POST",
+        url: "/cart/add.js",
+        data: {
+          quantity: 1,
+          id: productId,
+        },
+        dataType: "json",
+        async: true
+      });
+    }
+
+    productFormSubmit.on("click", function (event) {
+      $('.add-to-cart-loader').show();
+      event.preventDefault();
+      event.target.disabled = true;
+
+      // Tryon
+      // add the tryon input
+      $(".tryon-input").value = 1848737874
+
+      CheckProtectField(); // Check both protection fields
       let engravingValue = engravingInput.val();
-      let field = $(this);
+      console.log(engravingValue);
 
-      if (engravingValue !== "") {
-        productFormSubmitBtn.html("<span>ADD TO CART + ENGRAVING</span>");
-      } else if (engravingValue === "") {
-        productFormSubmitBtn.html("<span>ADD TO CART</span>");
+      if (engravingValue !== '' && engravingValue != undefined) {
+        protectionInputs.push(engravingProductID);
+      }
+
+      console.log("protectionInputs: " + protectionInputs)
+      $('.CircleSpinner').addClass('LoadComplete');
+      // Add all selected protection plans
+      if (protectionInputs.length > 0) {
+        fetch('/cart/add.js', {
+          body: JSON.stringify(
+            {items: protectionInputs.map(item => ({id: item, quantity: 1}))}
+          ),
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With':'xmlhttprequest'
+          },
+          method: 'POST'
+        })
+        .then(response => setTimeout(() => {
+          productForm.submit();
+        }, 2000));
+      } else {
+        setTimeout(() => {
+          productForm.submit();
+        }, 2000)
       }
     });
-  }
-
-  protectField.click(function () {
-    CheckProtectField();
   });
-
-  protectField2.click(function () { // New field event listener
-    CheckProtectField();
-  });
-
-  function CheckProtectField() {
-    protectionInputs = []; // Reset the array
-    if ($(protectField).is(":checked")) {
-      protectionInputs.push($(protectField).attr("data-protection")); // Add first protection plan
-    }
-    if ($(protectField2).is(":checked")) { // New field logic
-      protectionInputs.push($(protectField2).attr("data-protection")); // Add second protection plan
-    }
-    console.log(protectionInputs); // Log all selected protection plans
-  }
-
-  function ProtectionPlanAjaxAdd(productId) {
-    console.log(productId+'added');
-    return $.ajax({
-      type: "POST",
-      url: "/cart/add.js",
-      data: {
-        quantity: 1,
-        id: productId,
-      },
-      dataType: "json",
-      async: true
-    });
-  }
-
-  
-
-  productFormSubmit.on("click", function (event) {
-    $('.add-to-cart-loader').show();
-    event.preventDefault();
-    event.target.disabled = true;
-
-    // Tryon
-    // add the tryon input
-    $(".tryon-input").value = 1848737874
-
-    CheckProtectField(); // Check both protection fields
-    let engravingValue = engravingInput.val();
-    console.log(engravingValue);
-
-    if (engravingValue !== '' && engravingValue != undefined) {
-      protectionInputs.push(engravingProductID);
-    }
-
-    console.log("protectionInputs: " + protectionInputs)
-    $('.CircleSpinner').addClass('LoadComplete');
-    // Add all selected protection plans
-    if (protectionInputs.length > 0) {
-      fetch('/cart/add.js', {
-        body: JSON.stringify(
-          {items: protectionInputs.map(item => ({id: item, quantity: 1}))}
-        ),
-        credentials: 'same-origin',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Requested-With':'xmlhttprequest'
-        },
-        method: 'POST'
-      })
-      .then(response => setTimeout(() => {
-        productForm.submit();
-      }, 2000));
-    } else {
-      setTimeout(() => {
-        productForm.submit();
-      }, 2000)
-    }
-  });
-});
-
+// End Protection Plan
 
 function AutoAddEngravingProduct(itemQuantity) {
   // Replace 'ENGRAVING_PRODUCT_ID' with the actual product ID of the engraving product
@@ -276,7 +274,17 @@ var thirdtier_second_gift_product = "";
 var thirdtier_first_gift_product_var = "";
 var thirdtier_second_gift_product_var = "";
 
-{% if settings.show_gift_box %}    
+// Settings for allowing both gifts per tier
+var allow_both_tier_1 = {{ settings.allow_adding_both_gifts_tier_1 | default: false }};
+var allow_both_tier_2 = {{ settings.allow_adding_both_gifts_tier_2 | default: false }};
+var allow_both_tier_3 = {{ settings.allow_adding_both_gifts_tier_3 | default: false }};
+
+console.log('⚙️ Gift Tier Settings:');
+console.log('  Tier 1 - Allow both gifts:', allow_both_tier_1);
+console.log('  Tier 2 - Allow both gifts:', allow_both_tier_2);
+console.log('  Tier 3 - Allow both gifts:', allow_both_tier_3);
+
+{% if settings.show_gift_box %}
   {% assign first_gift_product = settings.product-handle-1 %}
   {% assign first_gift_product_id = first_gift_product.id %} 
   {% assign first_gift_product_id_var = first_gift_product.selected_or_first_available_variant.id %}
@@ -322,170 +330,292 @@ var thirdtier_second_gift_product_var = "";
   var thirdtier_second_gift_product_var = "{{ thirdtier_second_gift_product_id_var }}";
 
 {% endif %}
+
+console.log('📌 Gift Variant IDs:');
+console.log('  Tier 1: Gift 1 =', first_gift_product_var, ', Gift 2 =', second_gift_product_var);
+console.log('  Tier 2: Gift 1 =', secondtier_first_gift_product_var, ', Gift 2 =', secondtier_second_gift_product_var);
+console.log('  Tier 3: Gift 1 =', thirdtier_first_gift_product_var, ', Gift 2 =', thirdtier_second_gift_product_var);
       
-  
 jQuery(document).ready(function($) {
     const overlay = document.querySelector('.overlay');
 
     async function updateGiftBoxes() {
-        try {
-            // Update cart page gift boxes
-            const cartPage = document.querySelector('.cart__page');
-            if (cartPage) {
-                const response = await fetch(window.location.href);
-                const html = await response.text();
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = html;
-                
-                const newCartPage = tempDiv.querySelector('.cart__page');
-                if (newCartPage) {
-                    const giftBoxes = cartPage.querySelectorAll('.gift_box');
-                    const newGiftBoxes = newCartPage.querySelectorAll('.gift_box');
-                    
-                    giftBoxes.forEach((box, index) => {
-                        if (newGiftBoxes[index]) {
-                            box.innerHTML = newGiftBoxes[index].innerHTML;
-                        }
-                    });
-                }
-            }
-    
-            // Update mini-cart gift boxes
-            const cartDrawer = document.querySelector('#CartDrawer');
-            if (cartDrawer) {
-                const response = await fetch(`${window.location.pathname}?view=cart-drawer`);
-                const html = await response.text();
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = html;
-                
-                const newCartDrawer = tempDiv.querySelector('#CartDrawer');
-                if (newCartDrawer) {
-                    const giftBoxes = cartDrawer.querySelectorAll('.gift_box');
-                    const newGiftBoxes = newCartDrawer.querySelectorAll('.gift_box');
-                    
-                    giftBoxes.forEach((box, index) => {
-                        if (newGiftBoxes[index]) {
-                            box.innerHTML = newGiftBoxes[index].innerHTML;
-                        }
-                    });
-                }
-            }
-        } catch (error) {
-            console.error('Error updating gift boxes:', error);
+      try {
+        // Update cart page gift boxes
+        const cartPage = document.querySelector('.cart__page');
+        if (cartPage) {
+          const response = await fetch(window.location.href);
+          const html = await response.text();
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = html;
+          
+          const newCartPage = tempDiv.querySelector('.cart__page');
+          if (newCartPage) {
+              const giftBoxes = cartPage.querySelectorAll('.gift_box');
+              const newGiftBoxes = newCartPage.querySelectorAll('.gift_box');
+              
+              giftBoxes.forEach((box, index) => {
+                  if (newGiftBoxes[index]) {
+                      box.innerHTML = newGiftBoxes[index].innerHTML;
+                  }
+              });
+          }
         }
-    }
 
+        // Update mini-cart gift boxes
+        const cartDrawer = document.querySelector('#CartDrawer');
+        if (cartDrawer) {
+            const response = await fetch(`${window.location.pathname}?view=cart-drawer`);
+            const html = await response.text();
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+            
+            const newCartDrawer = tempDiv.querySelector('#CartDrawer');
+            if (newCartDrawer) {
+                const giftBoxes = cartDrawer.querySelectorAll('.gift_box');
+                const newGiftBoxes = newCartDrawer.querySelectorAll('.gift_box');
+                
+                giftBoxes.forEach((box, index) => {
+                    if (newGiftBoxes[index]) {
+                        box.innerHTML = newGiftBoxes[index].innerHTML;
+                    }
+                });
+            }
+        }
+      } catch (error) {
+        console.error('Error updating gift boxes:', error);
+      }
+    }
 
     async function updateCart(isFreeGift = false) {
-        try {
-            const response = await fetch('/cart.js');
-            const cart = await response.json();
-            
-            // Update cart drawer if it exists
-            const cartDrawerItems = document.querySelector('cart-drawer-items');
-            if (cartDrawerItems) {
-                const sectionResponse = await fetch(`?sections=cart-drawer,cart-icon-bubble`);
-                const sectionsData = await sectionResponse.json();
-                
-                if (sectionsData['cart-drawer']) {
-                    cartDrawerItems.innerHTML = sectionsData['cart-drawer'];
-                }
-            }
+      console.log("updateCart called...");
+      try {
+          const response = await fetch('/cart.js');
+          const cart = await response.json();
+          
+          // Update cart drawer if it exists
+          const cartDrawerItems = document.querySelector('cart-drawer-items');
+          if (cartDrawerItems) {
+              const sectionResponse = await fetch(`?sections=cart-drawer,cart-icon-bubble`);
+              const sectionsData = await sectionResponse.json();
+              
+              if (sectionsData['cart-drawer']) {
+                  cartDrawerItems.innerHTML = sectionsData['cart-drawer'];
+              }
+          }
 
-            // Update gift boxes
-            await updateGiftBoxes();
+          // Update gift boxes
+          await updateGiftBoxes();
 
-            if (!isFreeGift) {
-              // Dispatch all necessary cart update events
-              document.dispatchEvent(new CustomEvent('cart:refresh'));
-              document.dispatchEvent(new CustomEvent('cart:build'));
-              document.dispatchEvent(new CustomEvent('cart.requestComplete'));
-              document.dispatchEvent(new CustomEvent('cart:updated', {
-                  detail: { cart: cart }
-              }));
-            }
+          if (!isFreeGift) {
+            // Dispatch all necessary cart update events
+            document.dispatchEvent(new CustomEvent('cart:refresh'));
+            document.dispatchEvent(new CustomEvent('cart:build'));
+            document.dispatchEvent(new CustomEvent('cart.requestComplete'));
+            document.dispatchEvent(new CustomEvent('cart:updated', {
+                detail: { cart: cart }
+            }));
+          }
 
-            // Reload cart sections if available
-            if (window.Shopify && window.Shopify.section) {
-                window.Shopify.section.load('cart-drawer');
-                window.Shopify.section.load('cart-icon-bubble');
-            }
-        } catch (error) {
-            console.error('Error updating cart:', error);
-        }
+          // Reload cart sections if available
+          if (window.Shopify && window.Shopify.section) {
+              window.Shopify.section.load('cart-drawer');
+              window.Shopify.section.load('cart-icon-bubble');
+          }
+      } catch (error) {
+          console.error('Error updating cart:', error);
+      }
     }
 
-    // const variantSelector = document.querySelector(".change-gift-size-options");
+    // Helper function to determine which tier a gift variant belongs to
+    function getGiftTier(variantId) {
+      const vid = variantId.toString();
+      // Tier 1
+      if (vid === first_gift_product_var.toString() || vid === second_gift_product_var.toString()) {
+        return 1;
+      }
+      // Tier 2
+      if (vid === secondtier_first_gift_product_var.toString() || vid === secondtier_second_gift_product_var.toString()) {
+        return 2;
+      }
+      // Tier 3
+      if (vid === thirdtier_first_gift_product_var.toString() || vid === thirdtier_second_gift_product_var.toString()) {
+        return 3;
+      }
+      return 0; // Not a gift
+    }
+
+    // Helper function to get all gift variant IDs from a tier
+    function getTierGiftVariants(tier) {
+      switch(tier) {
+        case 1:
+          return [first_gift_product_var, second_gift_product_var].filter(v => v).map(v => v.toString());
+        case 2:
+          return [secondtier_first_gift_product_var, secondtier_second_gift_product_var].filter(v => v).map(v => v.toString());
+        case 3:
+          return [thirdtier_first_gift_product_var, thirdtier_second_gift_product_var].filter(v => v).map(v => v.toString());
+        default:
+          return [];
+      }
+    }
+
+    // Helper function to check if "allow both gifts" is enabled for a tier
+    function isAllowBothGifts(tier) {
+      switch(tier) {
+        case 1: return allow_both_tier_1;
+        case 2: return allow_both_tier_2;
+        case 3: return allow_both_tier_3;
+        default: return false;
+      }
+    }
+
     // Add gift product
     $(document).on('click', '.upsell_button_gtm', async function(e) {
-        e.preventDefault();
-        let variantSelector = e.target.classList.contains("upsell-add-to-cart-gift-first") ? document.querySelector(".change-gift-size-options-first") : document.querySelector(".change-gift-size-options-second");
-        const id = variantSelector ? variantSelector.value : $(this).attr('data-product-id');
-        const quantity = 1;
+      console.log("add gift product...");
+      e.preventDefault();
+      let variantSelector = e.target.classList.contains("upsell-add-to-cart-gift-first") ? document.querySelector(".change-gift-size-options-first") : document.querySelector(".change-gift-size-options-second");
+      const id = variantSelector ? variantSelector.value : $(this).attr('data-product-id');
+      const quantity = 1;
 
-        try {
-            overlay.style.display = 'block';
+       try {
+        overlay.style.display = 'block';
+        
+        // Determine which tier this gift belongs to
+        const giftTier = getGiftTier(id);
+        console.log('🎁 Adding gift variant ID:', id);
+        console.log('🎁 Detected tier:', giftTier);
+        
+        // Check if we allow both gifts for this tier
+        const allowBoth = isAllowBothGifts(giftTier);
+        console.log('⚙️ Allow both gifts for tier ' + giftTier + ':', allowBoth);
+        
+        // If we don't allow both gifts, remove any existing gift from the same tier
+        if (!allowBoth && giftTier > 0) {
+          console.log('🔄 Single gift mode - checking for existing gifts to replace...');
+          const cart = await fetch('/cart.js').then(res => res.json());
+          const tierGiftVariants = getTierGiftVariants(giftTier);
+          
+          console.log('📋 Tier ' + giftTier + ' gift variant IDs:', tierGiftVariants);
+          console.log('📋 Cart items:', cart.items.map(i => ({ title: i.title, variant_id: i.variant_id, properties: i.properties })));
+          
+          // Find existing gifts from the same tier
+          const existingGiftsFromTier = cart.items.filter(item => {
+            const isUserGift = item.properties && item.properties._gift_product === 'true';
+            const isFromSameTier = tierGiftVariants.includes(item.variant_id.toString());
+            const isDifferentVariant = item.variant_id.toString() !== id.toString();
             
-            const response = await fetch('/cart/add.js', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    items: [{
-                        id: id,
-                        quantity: quantity,
-                        properties: {
-                            '_gift_product': 'true'
-                        }
-                    }]
-                })
+            console.log('🔍 Checking item:', item.title, {
+              variant_id: item.variant_id,
+              isUserGift: isUserGift,
+              isFromSameTier: isFromSameTier,
+              isDifferentVariant: isDifferentVariant
             });
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            // await updateCart();
-            location.reload();
-        } catch (error) {
-            console.error('Failed to add gift:', error);
-        } finally {
-            overlay.style.display = 'none';
+            
+            return isUserGift && isFromSameTier && isDifferentVariant;
+          });
+          
+          console.log('📦 Found ' + existingGiftsFromTier.length + ' existing gifts from tier ' + giftTier + ':', existingGiftsFromTier.map(g => g.title));
+          
+          // Remove existing gifts from the same tier
+          for (const existingGift of existingGiftsFromTier) {
+            console.log('🗑️ Removing existing gift:', existingGift.title, '(variant:', existingGift.variant_id + ')');
+            await fetch('/cart/change.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                id: existingGift.key,
+                quantity: 0
+              })
+            });
+            console.log('✅ Removed:', existingGift.title);
+          }
+        } else if (allowBoth) {
+          console.log('✅ Allow both gifts enabled for tier ' + giftTier + ' - not removing existing gifts');
+        } else if (giftTier === 0) {
+          console.log('⚠️ Warning: Could not detect gift tier for variant ID:', id);
         }
+        
+        // Now add the new gift
+        const response = await fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                items: [{
+                    id: id,
+                    quantity: quantity,
+                    properties: {
+                        '_gift_product': 'true'
+                    }
+                }]
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const addedItem = await response.json();
+        console.log('Gift added successfully:', addedItem);
+        
+        // Update UI without reload - dispatch event for other components
+        document.dispatchEvent(new CustomEvent('gift:added', {
+            detail: { item: addedItem }
+        }));
+        
+        // Optionally update gift box UI elements here
+        await updateGiftBoxes();
+        
+      } catch (error) {
+          console.error('Failed to add gift:', error);
+      } finally {
+          overlay.style.display = 'none';
+      }
     });
 
     // Remove gift product
     $(document).on('click', '.change_free_gift', async function(e) {
-        e.preventDefault();
-        let variantSelector = e.target.classList.contains("upsell-add-to-cart-gift-first") ? document.querySelector(".change-gift-size-options-first") : document.querySelector(".change-gift-size-options-second");
-        const variantId = variantSelector ? variantSelector.value : $(this).attr('data-remove_var');
+      console.log("remove gift product...");
+      e.preventDefault();
+      let variantSelector = e.target.classList.contains("upsell-add-to-cart-gift-first") ? document.querySelector(".change-gift-size-options-first") : document.querySelector(".change-gift-size-options-second");
+      const variantId = variantSelector ? variantSelector.value : $(this).attr('data-remove_var');
 
-        try {
-            overlay.style.display = 'block';
-            
-            const response = await fetch('/cart/change.js', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    id: variantId,
-                    quantity: 0
-                })
-            });
+      try {
+          overlay.style.display = 'block';
+          
+          const response = await fetch('/cart/change.js', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                  id: variantId,
+                  quantity: 0
+              })
+          });
 
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+          if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+          }
 
-            location.reload();
-            // await updateCart();
-        } catch (error) {
-            console.error('Failed to remove gift:', error);
-        } finally {
-            overlay.style.display = 'none';
-        }
+          const removedItem = await response.json();
+          console.log('Gift removed successfully:', removedItem);
+          
+          // Update UI without reload
+          await updateGiftBoxes();
+          
+          document.dispatchEvent(new CustomEvent('gift:removed', {
+              detail: { item: removedItem }
+          }));
+          
+      } catch (error) {
+          console.error('Failed to remove gift:', error);
+      } finally {
+          overlay.style.display = 'none';
+      }
     });
 
 
@@ -543,17 +673,30 @@ jQuery(document).ready(function($) {
                     'Content-Type': 'application/json',
                   },
                   body: JSON.stringify({
-                    items: itemsData
-                  })
-                });
-                // await updateCart(true);
-                // purchaseInfo.dataset.variantId = newVariant;
-                location.reload();
-              } catch (error) {
-                  console.error('Failed to add gift:', error);
-              } finally {
-                  overlay.style.display = 'none';
+                  items: itemsData
+                })
+              });
+
+              if (!response2.ok) {
+                throw new Error(`HTTP error! status: ${response2.status}`);
               }
+
+              const changedItem = await response2.json();
+              console.log('Gift changed successfully:', changedItem);
+              
+              // Update dataset and UI
+              purchaseInfo.dataset.variantId = newVariant;
+              await updateGiftBoxes();
+              
+              document.dispatchEvent(new CustomEvent('gift:changed', {
+                  detail: { item: changedItem }
+              }));
+              
+            } catch (error) {
+                console.error('Failed to change gift:', error);
+            } finally {
+                overlay.style.display = 'none';
+            }
             }
           }
         });
@@ -561,12 +704,8 @@ jQuery(document).ready(function($) {
     }
 });
 
-
-  
-
 function updatedgCartUpsell($remove_this, $remove) {
   const loader = document.querySelector('.overlay');
-  //loader.style.display = 'block';
 
   fetch("".concat(theme.routes.cartPage, "?").concat("timestamp=").concat(Date.now()), {
     credentials: 'same-origin',
@@ -584,8 +723,8 @@ function updatedgCartUpsell($remove_this, $remove) {
   .then(cart => {
     {% assign GiftBoxAmount = settings.cart_threshold_amount %}
     {% assign GiftBoxAmountRaw = settings.cart_threshold_amount | times:100 %}
-    {% assign SecondTierMinRaw = settings.min_cart_threshold_amount | times:100 %}
-    {% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times:100 %}
+    {% assign SecondTierMinRaw = settings.cart_threshold_amount_second | times:100 %}
+    {% assign SecondTierMaxRaw = settings.cart_threshold_amount_third | times:100 %}
     {% assign ThirdTierAmountRaw = settings.cart_threshold_amount_third | times:100 %}
 
     console.log(cart.items);
@@ -597,64 +736,45 @@ function updatedgCartUpsell($remove_this, $remove) {
       Cookies.set('FirstTier', 'false');
       Cookies.set('SecondTier', 'false');
       Cookies.set('ThirdTier', 'false');
-    //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift_grey.svg?v=1680028788";
-    //   document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift_grey.svg?v=1680028788";
-    //   document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift_grey.svg?v=1680028788";
     }
     else if(cart.total_price > {{GiftBoxAmountRaw}}){
       {% if settings.show_gift_box %} 
-      Cookies.set('FirstTier', 'true');
-      Cookies.set('SecondTier', 'false');
-      Cookies.set('ThirdTier', 'false');
-    //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //  document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
-    //  document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
+        Cookies.set('FirstTier', 'true');
+        Cookies.set('SecondTier', 'false');
+        Cookies.set('ThirdTier', 'false');
       {% endif %}
     }
     else if(cart.total_price < {{SecondTierMinRaw}}){
       {% if settings.show_gift_box %} 
-      Cookies.set('FirstTier', 'true');
-      Cookies.set('SecondTier', 'false');
-      Cookies.set('ThirdTier', 'false');
-    //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //  document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
-    //  document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
+        Cookies.set('FirstTier', 'true');
+        Cookies.set('SecondTier', 'false');
+        Cookies.set('ThirdTier', 'false');
       {% endif %}
     }
     else if(cart.total_price < {{SecondTierMaxRaw}}){
       {% if settings.second_show_gift_box %}
-      Cookies.set('FirstTier', 'false');
-      Cookies.set('SecondTier', 'true');
-      Cookies.set('ThirdTier', 'false');
-    //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //  document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //   document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
+        Cookies.set('FirstTier', 'false');
+        Cookies.set('SecondTier', 'true');
+        Cookies.set('ThirdTier', 'false');
       {% endif %}
     }
     else if(cart.total_price > {{SecondTierMaxRaw}} && cart.total_price < {{ThirdTierAmountRaw}}){
       {% if settings.second_show_gift_box and settings.third_show_gift_box %}
-      Cookies.set('FirstTier', 'false');
-      Cookies.set('SecondTier', 'false');
-      Cookies.set('ThirdTier', 'false');
-    //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //  document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //   document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift-grey.jpg?v=1680035764";
+        Cookies.set('FirstTier', 'false');
+        Cookies.set('SecondTier', 'false');
+        Cookies.set('ThirdTier', 'false');
       {% endif %}
     }  
     else if(cart.total_price > {{ThirdTierAmountRaw}}){
       {% if settings.third_show_gift_box %}
-      Cookies.set('FirstTier', 'false');
-      Cookies.set('SecondTier', 'false');
-      Cookies.set('ThirdTier', 'true');
-    //  document.getElementById("FirstTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //   document.getElementById("SecondTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
-    //   document.getElementById("ThirdTier").src="https://cdn.shopify.com/s/files/1/2126/0063/files/gift.jpg?v=1679941718";
+        Cookies.set('FirstTier', 'false');
+        Cookies.set('SecondTier', 'false');
+        Cookies.set('ThirdTier', 'true');
       {% endif %}
     }
     
     setTimeout(function(){
       if(Cookies.get('FirstTier') == 'false' && Cookies.get('SecondTier') == 'false' && Cookies.get('ThirdTier') == 'false') {
-        console.log('testttinggg 1');
         for(var i = 0; i < items.length; i++){
           if (items[i].product_id == first_gift_product){
             remove_auto_gift(first_gift_product_var);
@@ -677,7 +797,6 @@ function updatedgCartUpsell($remove_this, $remove) {
         }
       }
       else if(Cookies.get('FirstTier') == 'true' && Cookies.get('SecondTier') == 'false' && Cookies.get('ThirdTier') == 'false') {
-        console.log('testttinggg 2');
         for(var i = 0; i < items.length; i++){
           if (items[i].product_id == secondtier_first_gift_product){
             remove_auto_gift(secondtier_first_gift_product_var);
@@ -694,7 +813,6 @@ function updatedgCartUpsell($remove_this, $remove) {
         }
       }
       else if(Cookies.get('FirstTier') == 'false' && Cookies.get('SecondTier') == 'true' && Cookies.get('ThirdTier') == 'false') {
-        console.log('testttinggg 3');
         for(var i = 0; i < items.length; i++){
           if (items[i].product_id == first_gift_product){
             remove_auto_gift(first_gift_product_var);
@@ -711,7 +829,6 @@ function updatedgCartUpsell($remove_this, $remove) {
         }
       }
       else if(Cookies.get('FirstTier') == 'false' && Cookies.get('SecondTier') == 'false' && Cookies.get('ThirdTier') == 'true') {
-        console.log('testttinggg 4');
         for(var i = 0; i < items.length; i++){
           if (items[i].product_id == first_gift_product){
             remove_auto_gift(first_gift_product_var);
@@ -735,16 +852,15 @@ function updatedgCartUpsell($remove_this, $remove) {
     }, 700); 
   });
 }
+
 document.addEventListener('cart:updated', function(evt) {
   var cart_obj = evt.detail.cart.items;
-    updatedgCartUpsell();
+  updatedgCartUpsell();
 });
 
 document.addEventListener('ajaxProduct:added', function(evt) {
     updatedgCartUpsell();
 });
-
-
 
 function remove_auto_gift($prod_id){
   console.log('removed');
@@ -862,7 +978,7 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
               dataType: "json",
               success: function (data) {
                 console.log('success');
-                  remove_all($remove_url);
+                remove_all($remove_url);
                       
               },
               error: function (error) {
@@ -888,21 +1004,17 @@ function removeEngrageShippingItems($productId, $remove_url, itemQuantity){
     }
 }
 
-
-  function remove_all(url){
-      return fetch(url, {
-          credentials: "same-origin",
-          method: "GET",
-        }).then(function (response) {
-          console.log(response);
-                          // Handle the response data here
-                  setTimeout(function(){
-                    updatedgCartUpsell();  
-                    $('.overlay').hide();
-                  }, 800)
-                              
-                        });
-  }
-  
-  
+function remove_all(url){
+  return fetch(url, {
+    credentials: "same-origin",
+    method: "GET",
+  }).then(function (response) {
+    console.log(response);
+    // Handle the response data here
+    setTimeout(function(){
+      updatedgCartUpsell();  
+      $('.overlay').hide();
+    }, 800)
+  });
+}
 </script>

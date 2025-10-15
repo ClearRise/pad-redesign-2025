@@ -1113,6 +1113,12 @@
       },
       {
         "type": "text",
+        "id": "rewards_bar_subtitle",
+        "label": "Reward Bar Subtitle",
+        "default": "Unlock one reward per order based on your cart total."
+      },
+      {
+        "type": "text",
         "id": "top_text",
         "label": "Reward Bar Top Text",
         "default": "You're (amount) away from (next) Tier",
@@ -1219,6 +1225,12 @@
         "info": "Second Gift products will be hidden from cart drawer if selected."
       },
       {
+        "type": "checkbox",
+        "id": "allow_adding_both_gifts_tier_1",
+        "label": "Allow Adding Both Gifts",
+        "info": "Allow adding both gifts to the cart if selected."
+      },
+      {
         "type": "text",
         "id": "first_tier_name",
         "label": "First Tier Name",
@@ -1262,6 +1274,11 @@
       },
       {
         "type": "text",
+        "id": "description_tier_2",
+        "label": "Description Text"
+      },
+      {
+        "type": "text",
         "id": "cart_threshold_amount_second",
         "label": "Second Tier Cart Threshold Amount",
         "default": "690",
@@ -1289,6 +1306,18 @@
         "id": "second_hide_gift_2",
         "label": "Hide Second Gift",
         "info": "Second Gift products will be hidden from cart drawer if selected."
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_all_gifts_tier_2",
+        "label": "Hide All Gifts",
+        "info": "Second Gift products will be hidden from cart drawer if selected."
+      },
+      {
+        "type": "checkbox",
+        "id": "allow_adding_both_gifts_tier_2",
+        "label": "Allow Adding Both Gifts",
+        "info": "Allow adding both gifts to the cart if selected."
       },
       {
         "type": "image_picker",
@@ -1339,6 +1368,11 @@
       },
       {
         "type": "text",
+        "id": "description_tier_3",
+        "label": "Description Text"
+      },
+      {
+        "type": "text",
         "id": "cart_threshold_amount_third",
         "label": "Third Tier Cart Threshold Amount",
         "default": "485",
@@ -1366,6 +1400,18 @@
         "id": "third_hide_gift_2",
         "label": "Hide Second Gift",
         "info": "Second Gift products will be hidden from cart drawer if selected."
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_all_gifts_tier_3",
+        "label": "Hide All Gifts",
+        "info": "Second Gift products will be hidden from cart drawer if selected."
+      },
+      {
+        "type": "checkbox",
+        "id": "allow_adding_both_gifts_tier_3",
+        "label": "Allow Adding Both Gifts",
+        "info": "Allow adding both gifts to the cart if selected."
       },
       {
         "type": "image_picker",

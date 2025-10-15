@@ -1,14 +1,14 @@
 <!-- 2nd tier  gift box -->
 {% assign upsellAtc = 'Add to cart' %}
 {% assign upsellTitle = settings.gift_box_title_second %}
-{% assign SecondTierMin = settings.min_cart_threshold_amount %}
-{% assign SecondTierMinRaw = settings.min_cart_threshold_amount | times: 100 %}
+{% assign SecondTierMin = settings.cart_threshold_amount_second %}
+{% assign SecondTierMinRaw = settings.cart_threshold_amount_second | times: 100 %}
 
 {% assign SecondTierMaxRaw = 100000000000 %}
 
 {% if settings.third_show_gift_box %}
-  {% assign SecondTierMax = settings.max_cart_threshold_amount %}
-  {% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times: 100 %}
+  {% assign SecondTierMax = settings.cart_threshold_amount_third %}
+  {% assign SecondTierMaxRaw = settings.cart_threshold_amount_third | times: 100 %}
 {% endif %}
 
 {% assign already_added = 'Change Gift' %}
@@ -39,7 +39,10 @@
   </h4>
 {% endif %}
 
-{% if cart.total_price >= SecondTierMinRaw and cart.total_price <= SecondTierMaxRaw %}
+{% if cart.total_price >= SecondTierMinRaw
+      and cart.total_price <= SecondTierMaxRaw
+      and settings.hide_all_gifts_tier_2 == false
+%}
   <div class="gift_box">
     {% if first_product_found == false or second_product_found == false %}
       <h5 class="upsell-heading gift_box_title">Gift will be added at checkout screen</h5>
@@ -132,7 +135,7 @@
         </div>
       {% endif %}
 
-      {% if settings['second_product-handle-2'] %}
+      {% if settings['second_product-handle-2'].available == true and settings.second_hide_gift_2 == false %}
         {% assign second_gift_product = settings['second_product-handle-2'] %}
         {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
         {% assign second_gift_product_found = true %}
