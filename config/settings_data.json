@@ -99,6 +99,7 @@
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
     "rewards_bar_title": "Unlock a Special Offer",
+    "rewards_bar_subtitle": "Unlock one reward per order based on your cart total.",
     "top_text": "You're (amount) away from the (next) Tier",
     "unlock_text": "You've unlocked a new Reward",
     "bottom_text": "Add a (upsell_product_title)($(upsell_product_price)) for your (main_product_title) to unlock the next tier",
