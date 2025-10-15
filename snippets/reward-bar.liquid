@@ -50,19 +50,20 @@
         display: flex;
         justify-content: space-between;
         margin-top: -25px;
+        margin-bottom: 20px;
       }
       .styles_TieredRewards__tierCircleAndDescription--leftOfCenter__ {
-        margin-left: -20px;
-        transform: translate(20px);
+        {% comment %} margin-left: -20px; {% endcomment %}
+        {% comment %} transform: translate(20px); {% endcomment %}
       }
       .styles_TieredRewards__tierCircleAndDescription__ {
         align-items: center;
         display: flex;
         flex-direction: column;
-        max-height: 100px;
-        max-width: 75px;
+        {% comment %} max-height: 100px; {% endcomment %}
+        {% comment %} max-width: 75px; {% endcomment %}
         min-width: 75px;
-        width: 75px;
+        {% comment %} width: 75px; {% endcomment %}
       }
       .styles_rewardsDescription__ {
         word-wrap: normal;
@@ -91,7 +92,10 @@
       .upcart-rewards-bar-title-span {
         font-weight: bold;
       }
-      
+      .upcart-rewards-bar-subtitle {
+        font-style: italic;
+        margin-top: 10px;
+      }
       .upcart-rewards-description {
         font-size: 12px;
         margin-top: 10px;
@@ -290,6 +294,10 @@
         <span class="upcart-rewards-bar-title-span">{{ settings.rewards_bar_title }}</span>
         <span class="cart-total-price-and-gift-total-price">${{ new_total_price | divided_by: 100 }} / ${{ total_gift_box_amount | divided_by: 100 }}</span>
       </div>
+      <div class="upcart-rewards-bar-subtitle">
+        {{ settings.rewards_bar_subtitle }}
+      </div>
+      <div>
       <div
         class="upcart-rewards-bar-background styles_TieredRewards__progressBar__"
         style="background-color: rgb(238, 238, 238); border-radius: 50px;"
@@ -324,7 +332,15 @@
               {% endif %}
             </div>
           </div>
-          <div class="upcart-rewards-tier-description styles_rewardsDescription__">{{ settings.first_tier_label }}</div>
+          {% comment %} <div class="upcart-rewards-tier-description styles_rewardsDescription__">{{ settings.first_tier_label }}</div> {% endcomment %}
+          <div class="tier-name-wrapper">
+            <div class="tier-step">
+              {{ settings.first_tier_label }}: ${{ first_cart_threshold_amount_number | divided_by: 100 }}
+            </div>
+            <div class="tier-name">
+              {{ settings.first_tier_name }}
+            </div>
+          </div>
         </div>
         {% if second_show_gift_box == true %}
           <div class="upcart-rewards-tier styles_TieredRewards__tierCircleAndDescription__ styles_TieredRewards__tierCircleAndDescription--leftOfCenter__">
@@ -346,7 +362,15 @@
                 {% endif %}
               </div>
             </div>
-            <div class="upcart-rewards-tier-description styles_rewardsDescription__">{{ settings.second_tier_label }}</div>
+            {% comment %} <div class="upcart-rewards-tier-description styles_rewardsDescription__">{{ settings.second_tier_label }}</div> {% endcomment %}
+            <div class="tier-name-wrapper">
+              <div class="tier-step">
+                {{ settings.second_tier_label }}: ${{ second_cart_threshold_amount_number | divided_by: 100 }}
+              </div>
+              <div class="tier-name">
+                {{ settings.second_tier_name }}
+              </div>
+            </div>
           </div>
         {% endif %}
         {% if third_show_gift_box == true %}
@@ -369,7 +393,15 @@
                 {% endif %}
               </div>
             </div>
-            <div class="upcart-rewards-tier-description styles_rewardsDescription__">{{ settings.third_tier_label }}</div>
+            {% comment %} <div class="upcart-rewards-tier-description styles_rewardsDescription__">{{ settings.third_tier_label }}</div> {% endcomment %}
+            <div class="tier-name-wrapper">
+              <div class="tier-step">
+                {{ settings.third_tier_label }}: ${{ third_cart_threshold_amount_number | divided_by: 100 }}
+              </div>
+              <div class="tier-name">
+                {{ settings.third_tier_name }}
+              </div>
+            </div>
           </div>
         {% endif %}
       </div>
@@ -380,7 +412,7 @@
           {% endif %}
         }
       {% endstyle %}    
-      <div class="tier-names-container">
+      {% comment %} <div class="tier-names-container">
         <div class="tier-name-wrapper">
           <div class="tier-step">
             {{ settings.first_tier_label }}: ${{ first_cart_threshold_amount_number | divided_by: 100 }}
@@ -409,7 +441,7 @@
             </div>
           </div>
         {% endif %}
-      </div>
+      </div> {% endcomment %}
   
       <div class="upcart-rewards-message">
         <p><b>{{ banner_text | replace: '(amount)' }}</b></p>

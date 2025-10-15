@@ -1113,6 +1113,12 @@
       },
       {
         "type": "text",
+        "id": "rewards_bar_subtitle",
+        "label": "Reward Bar Subtitle",
+        "default": "Unlock one reward per order based on your cart total."
+      },
+      {
+        "type": "text",
         "id": "top_text",
         "label": "Reward Bar Top Text",
         "default": "You're (amount) away from (next) Tier",
