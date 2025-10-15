@@ -13,12 +13,8 @@
   {% if settings['product-engraving'] and settings.show_engraving %}
     <div
       class="engraving_div"
-      {% if product.type contains 'Ring' or product.type contains 'Bands' %}
-        {% if product.tags contains 'hide_engrave' or product.metafields.custom.hide_engrave %}
+      {% if product.metafields.custom.hide_engrave %}
           style="visibility: hidden; height: 0;"
-        {% endif %}
-      {% else %}
-        style="visibility: hidden; height: 0;"
       {% endif %}
     >
       {% assign engrave_product = settings['product-engraving'] %}
@@ -43,7 +39,7 @@
                 data-engraving="{{ product.selected_or_first_available_variant.id }}"
               >
             </span>
-            <span class="bold_option_title">CUSTOM ENGRAVING</span>
+            <span class="bold_option_title ddd">CUSTOM ENGRAVING</span>
             <span class="bold_option_value_price">
               (+{{ price | money_without_trailing_zeros }})
             </span>

@@ -269,7 +269,6 @@
           endif
         endfor
         #if purchased_ring == 1
-          assign will_suggest_upsell_engraving = false
           for property in purchased_main_product_on_cart.properties
             if property[0] == "engraving"
               if property[1] == ""

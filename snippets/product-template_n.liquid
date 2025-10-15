@@ -249,46 +249,46 @@
                     </div>
                   {%- when 'glowstone_enhancement' -%}
 
-                 {%- assign selected_collection = block.settings.in_collection -%}
+                    {%- assign selected_collection = block.settings.in_collection -%}
 
                   
 
-                   {% assign found = false %}
-                  {% if selected_collection != blank %}
-                    {% for collection in product.collections %}
-                      {% if collection.handle == selected_collection %}
-                        {% assign found = true %}
-                      {% endif %}
-                    {% endfor %}
+                    {% assign found = false %}
+                    {% if selected_collection != blank %}
+                      {% for collection in product.collections %}
+                        {% if collection.handle == selected_collection %}
+                          {% assign found = true %}
+                        {% endif %}
+                      {% endfor %}
 
-                    {% comment %}
-                    {% for product_col in collections[block.settings.in_collection].products %}
+                      {% comment %}
+                      {% for product_col in collections[block.settings.in_collection].products %}
 
-                      {{ product_col.id }}
+                        {{ product_col.id }}
+                        
+                        {% if product_col.id == product.id %}
+                          {% assign found = true %}
+                        {% endif %}
+                      {% endfor %}
+                      {% endcomment %}
                       
-                      {% if product_col.id == product.id %}
-                        {% assign found = true %}
-                      {% endif %}
-                    {% endfor %}
-                    {% endcomment %}
-                    
-                   {% elsif selected_collection == blank %} 
-                     {% assign found = true %}
-                   {% else %}
-                     {% assign found = false %}
-                  {% endif %}
+                    {% elsif selected_collection == blank %} 
+                      {% assign found = true %}
+                    {% else %}
+                      {% assign found = false %}
+                    {% endif %}
 
-                  {% if found %}
+                    {% if found %}
 
                        {% style %}
-                    .custom_enhancement_block ._u_upsell-product {
-                      background: {{block.settings.bg_color}};
-                      color: {{block.settings.text_color}};
-                      border-color: {{block.settings.border_color}}!important;
-                    }
-                    {% endstyle %}
-                    {% assign selected_product = block.settings.up_product %}
-                    {% if selected_product and selected_product != blank  %}
+                      .custom_enhancement_block ._u_upsell-product {
+                        background: {{block.settings.bg_color}};
+                        color: {{block.settings.text_color}};
+                        border-color: {{block.settings.border_color}}!important;
+                      }
+                      {% endstyle %}
+                      {% assign selected_product = block.settings.up_product %}
+                      {% if selected_product and selected_product != blank  %}
                       <div class="product-block custom_enhancement_block" {{ block.shopify_attributes }}>                         
                          <div class="_u_upsell-collection _b_dgCartUpsellCont"> 
                               <div  class="show" >
