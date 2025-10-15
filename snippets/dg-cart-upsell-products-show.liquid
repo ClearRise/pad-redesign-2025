@@ -100,11 +100,19 @@
 
     assign purchased_ring = 0
     assign purchased_other_main = 0
+    assign cheapest_price = nil
     for purchased_product in cart.items
-      if purchased_product.product.metafields.custom.product_type != blank
-        assign purchased_other_main = purchased_other_main | plus: 1
+      assign item_price = purchased_product.final_line_price | divided_by: purchased_product.quantity
+      if cheapest_price == nil or item_price < cheapest_price
+        assign cheapest_price = item_price
         assign purchased_main_product_on_cart = purchased_product
         assign purchased_main_product = purchased_product.product
+      endif
+
+      if purchased_product.product.metafields.custom.product_type != blank
+        assign purchased_other_main = purchased_other_main | plus: 1
+        #assign purchased_main_product_on_cart = purchased_product
+        #assign purchased_main_product = purchased_product.product
 
         if purchased_product.product.metafields.custom.product_type == 'Ring'
           assign purchased_ring = purchased_ring | plus: 1
@@ -139,14 +147,18 @@
         endif
       endfor
       # if purchased_ring == 1
-      assign will_suggest_upsell_engraving = false
-      for property in purchased_main_product_on_cart.properties
-        if property[0] == 'engraving'
-          if property[1] == ''
-            assign will_suggest_upsell_engraving = true
-          endif
-        endif
-      endfor
+      assign will_suggest_upsell_engraving = true
+      if purchased_main_product.metafields.custom.hide_engrave
+        assign will_suggest_upsell_engraving = false
+      endif
+      #assign will_suggest_upsell_engraving = false
+      #for property in purchased_main_product_on_cart.properties
+      #  if property[0] == 'engraving'
+      #    if property[1] == ''
+      #      assign will_suggest_upsell_engraving = true
+      #    endif
+      #  endif
+      #endfor
       # endif
       assign will_suggest_upsell_glowstone = true
       for property in purchased_main_product_on_cart.properties
@@ -570,7 +582,7 @@
         </div>
       {% endcomment %}
       {% assign upsell_product = all_products[settings['product-engraving']] %}
-      <div class="upsell-collection dgCartUpsellCont gift-products margin-top-10px">
+      <div class="upsell-collection dgCartUpsellCont gift-products margin-top-10px qqqq">
         <div class="upsell-product dgCartUpsellInner  border_line mb_10">
           <div class="upsell-product-image">
             {% comment %} {{ upsell_product.featured_image |  }} {% endcomment %}
