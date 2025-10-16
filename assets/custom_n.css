@@ -976,7 +976,6 @@ label span.bold_option_element input {
 
 .cart__item-sub > div:first-child {
   align-items: center;
-  justify-content: center;
   display: flex;
   color: #000;
 }
