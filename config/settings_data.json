@@ -506,6 +506,22 @@
           "appendable-atc-button": ".buy-buttons-block",
           "tryon-product-form-selector": ""
         }
+      },
+      "7944482028155771153": {
+        "type": "shopify://apps/bold-product-upsell/blocks/Offer/0ea05cdc-3862-4d90-9a1b-14eafaef80dd",
+        "disabled": false,
+        "settings": {
+          "offer-modal-preview": false,
+          "offer-preview-product": "",
+          "title-font-size": 24,
+          "subtitle-font-size": 12,
+          "product-title-font-size": 15,
+          "title-color": "#121212",
+          "subtitle-color": "#343333",
+          "product-title-color": "#121212",
+          "modal-background-color": "#FFFFFF",
+          "modal-border-color": "#DEDEDE"
+        }
       }
     }
   },
