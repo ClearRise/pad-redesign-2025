@@ -298,7 +298,10 @@
     }
     .upsells-container {
       display: flex;
-      gap: 20px;
+      gap: 10px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
     }
     .upsells-header-container {
       margin-top: 30px;
@@ -705,7 +708,7 @@
         </div>
       {% endcomment %}
       {% assign upsell_product = all_products[settings['product-engraving']] %}
-      <div class="upsell-collection dgCartUpsellCont gift-products margin-top-10px qqqq">
+      <div class="upsell-collection dgCartUpsellCont gift-products qqqq">
         <div class="upsell-product upsell-product-desktop dgCartUpsellInner  border_line mb_10">
           <div class="upsell-product-image">
             {% comment %} {{ upsell_product.featured_image |  }} {% endcomment %}
