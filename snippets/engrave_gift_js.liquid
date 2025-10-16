@@ -560,7 +560,7 @@ jQuery(document).ready(function($) {
 
         const addedItem = await response.json();
         console.log('Gift added successfully:', addedItem);
-        
+        window.location.reload();
         // Update UI without reload - dispatch event for other components
         document.dispatchEvent(new CustomEvent('gift:added', {
             detail: { item: addedItem }
@@ -683,11 +683,12 @@ jQuery(document).ready(function($) {
 
               const changedItem = await response2.json();
               console.log('Gift changed successfully:', changedItem);
+              window.location.reload();
               
               // Update dataset and UI
               purchaseInfo.dataset.variantId = newVariant;
-              await updateGiftBoxes();
               
+              await updateGiftBoxes();
               document.dispatchEvent(new CustomEvent('gift:changed', {
                   detail: { item: changedItem }
               }));
