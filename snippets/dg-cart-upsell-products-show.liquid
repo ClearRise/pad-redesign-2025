@@ -118,7 +118,7 @@
     assign cheapest_price = nil
     for purchased_product in cart.items
       assign item_price = purchased_product.final_line_price | divided_by: purchased_product.quantity
-      if item_price == 0
+      if item_price == 0 or purchased_product.title contains 'Try Before You Buy'
         continue
       endif
 
@@ -165,6 +165,7 @@
           endif
         endif
       endfor
+
       # if purchased_ring == 1
       assign will_suggest_upsell_engraving = true
       if purchased_main_product.metafields.custom.hide_engrave
@@ -172,6 +173,7 @@
       elsif purchased_main_product_on_cart.properties['engraving'] != blank
         assign will_suggest_upsell_engraving = false
       endif
+
       #assign will_suggest_upsell_engraving = false
       #for property in purchased_main_product_on_cart.properties
       #  if property[0] == 'engraving'
@@ -191,6 +193,11 @@
       endfor
     endif
 
+    if purchased_main_product_on_cart.selling_plan_allocation.selling_plan.description == 'tryon'
+      assign will_suggest_upsell_engraving = false
+      assign will_suggest_upsell_protection_plan = false
+      assign will_suggest_upsell_glowstone = false
+    endif
     assign reward_bar_main_color = "#138f7e"
     assign reward_secondary_color = "rgb(238, 238, 238)"
   -%}
@@ -353,6 +360,7 @@
 
   {% if new_total_price < third_cart_threshold_amount %}
     <div class="upsells-header-container">
+      {% comment %} <h2>Infor: {{ purchased_main_product_on_cart.selling_plan_allocation.selling_plan.description }}</h2> {% endcomment %}
       <div class="upsells-variant-text">Add {{ amount_away }} more to unlock your next reward</div>
       {% if amount_away_number < all_products[settings['product-glowstone']].selected_or_first_available_variant.price
         and will_suggest_upsell_glowstone
