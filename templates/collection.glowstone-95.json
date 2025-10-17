@@ -111,54 +111,11 @@
     },
     "replo_flash_sale_timer_96YQTa": {
       "type": "replo-flash-sale-timer",
+      "custom_css": [
+        ".alchemy__element{margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+      ],
       "name": "Flash Sale Timer",
       "settings": {}
-    },
-    "how_it_works_2_NTW4aQ": {
-      "type": "how-it-works-2",
-      "blocks": {
-        "step_zPWLMh": {
-          "type": "step",
-          "settings": {
-            "title": "<b>DESIGN YOUR RING</b>",
-            "description": "Choose among our most popular designs or customize your own to honor your loved one."
-          }
-        },
-        "step_zEY6MV": {
-          "type": "step",
-          "settings": {
-            "title": "<b>SEND US CREMAINS</b>",
-            "description": "We provide a paid secure collection kit with clear instructions for mailing the ashes."
-          }
-        },
-        "step_kEbceP": {
-          "type": "step",
-          "settings": {
-            "title": "<b>CRAFTED & DELIVERED</b>",
-            "description": "We handcraft your ring with care and respect, then ship it directly to your door."
-          }
-        }
-      },
-      "block_order": [
-        "step_zPWLMh",
-        "step_zEY6MV",
-        "step_kEbceP"
-      ],
-      "name": "How It Works 2",
-      "settings": {
-        "full_width": false,
-        "max_width": 1600,
-        "background_color": "",
-        "title": "CREMATION JEWELRY",
-        "title_font_size_desktop": 40,
-        "title_font_size_mobile": 24,
-        "step_title_color": "#000000",
-        "step_title_font_size_desktop": 18,
-        "step_title_font_size_mobile": 18,
-        "step_description_font_size_desktop": 14,
-        "step_description_font_size_mobile": 14,
-        "step_description_color": "#000000"
-      }
     },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
@@ -402,7 +359,6 @@
     "advanced_content_eYLzPF",
     "17347204-928a-46d1-8166-ac8c007f382d",
     "replo_flash_sale_timer_96YQTa",
-    "how_it_works_2_NTW4aQ",
     "replo_trust_icons_white_backg_Wc7kJ7",
     "trust_icons_EDYTbe",
     "replo_trust_icons_fy9XYw",
