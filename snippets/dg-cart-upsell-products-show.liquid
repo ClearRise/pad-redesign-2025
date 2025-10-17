@@ -118,6 +118,10 @@
     assign cheapest_price = nil
     for purchased_product in cart.items
       assign item_price = purchased_product.final_line_price | divided_by: purchased_product.quantity
+      if item_price == 0
+        continue
+      endif
+
       if cheapest_price == nil or item_price < cheapest_price
         assign cheapest_price = item_price
         assign purchased_main_product_on_cart = purchased_product

@@ -491,12 +491,8 @@ jQuery(document).ready(function($) {
         
         // If we don't allow both gifts, remove any existing gift from the same tier
         if (!allowBoth && giftTier > 0) {
-          console.log('🔄 Single gift mode - checking for existing gifts to replace...');
           const cart = await fetch('/cart.js').then(res => res.json());
           const tierGiftVariants = getTierGiftVariants(giftTier);
-          
-          console.log('📋 Tier ' + giftTier + ' gift variant IDs:', tierGiftVariants);
-          console.log('📋 Cart items:', cart.items.map(i => ({ title: i.title, variant_id: i.variant_id, properties: i.properties })));
           
           // Find existing gifts from the same tier
           const existingGiftsFromTier = cart.items.filter(item => {
@@ -567,7 +563,7 @@ jQuery(document).ready(function($) {
         }));
         
         // Optionally update gift box UI elements here
-        await updateGiftBoxes();
+        {% comment %} await updateGiftBoxes(); {% endcomment %}
         
       } catch (error) {
           console.error('Failed to add gift:', error);
