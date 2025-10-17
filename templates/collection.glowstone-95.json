@@ -96,6 +96,9 @@
       "block_order": [
         "image_WfWU9Q"
       ],
+      "custom_css": [
+        ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+      ],
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
