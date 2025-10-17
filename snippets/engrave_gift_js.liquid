@@ -85,6 +85,7 @@
     function waitForTryonInput() {
       const tryonInput = document.querySelector("#tryon-input");
       const tryonButton = document.querySelector(".tryon-button");
+        console.log("tryonInput and tryonButton found");
   
       if (tryonInput && tryonButton) {
         handleTryonSellingPlanInput(tryonInput, tryonButton);
@@ -341,11 +342,13 @@ jQuery(document).ready(function($) {
 
     async function updateGiftBoxes() {
       try {
+        console.log("update gift box ui start.....");
         // Update cart page gift boxes
         const cartPage = document.querySelector('.cart__page');
         if (cartPage) {
           const response = await fetch(window.location.href);
           const html = await response.text();
+          console.log("getting new change result: ", html);
           const tempDiv = document.createElement('div');
           tempDiv.innerHTML = html;
           
@@ -382,6 +385,7 @@ jQuery(document).ready(function($) {
                 });
             }
         }
+        console.log("update gift box ui end.....");
       } catch (error) {
         console.error('Error updating gift boxes:', error);
       }
@@ -556,12 +560,7 @@ jQuery(document).ready(function($) {
 
         const addedItem = await response.json();
         console.log('Gift added successfully:', addedItem);
-        window.location.reload();
-        // Update UI without reload - dispatch event for other components
-        document.dispatchEvent(new CustomEvent('gift:added', {
-            detail: { item: addedItem }
-        }));
-        
+        {% comment %} window.location.reload(); {% endcomment %}
         // Optionally update gift box UI elements here
         {% comment %} await updateGiftBoxes(); {% endcomment %}
         
@@ -569,6 +568,7 @@ jQuery(document).ready(function($) {
           console.error('Failed to add gift:', error);
       } finally {
           overlay.style.display = 'none';
+          window.location.reload();
       }
     });
 
