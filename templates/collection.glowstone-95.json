@@ -117,6 +117,45 @@
       "name": "Flash Sale Timer",
       "settings": {}
     },
+    "how_it_works_2_YzWC8m": {
+      "type": "how-it-works-2",
+      "blocks": {
+        "step_8iEj9N": {
+          "type": "step",
+          "disabled": true,
+          "settings": {
+            "title": "<b>THIS WEEKEND ONLY</b>",
+            "description": ""
+          }
+        },
+        "step_AkyzAk": {
+          "type": "step",
+          "settings": {
+            "title": "<b>3X SWEEPSTAKES ENTRIES</b>",
+            "description": "Purchase now for a chance to win a $75,000 Dream Vacation"
+          }
+        }
+      },
+      "block_order": [
+        "step_8iEj9N",
+        "step_AkyzAk"
+      ],
+      "name": "How It Works 2",
+      "settings": {
+        "full_width": false,
+        "max_width": 1600,
+        "background_color": "",
+        "title": "",
+        "title_font_size_desktop": 26,
+        "title_font_size_mobile": 24,
+        "step_title_color": "#000000",
+        "step_title_font_size_desktop": 18,
+        "step_title_font_size_mobile": 18,
+        "step_description_font_size_desktop": 14,
+        "step_description_font_size_mobile": 14,
+        "step_description_color": "#000000"
+      }
+    },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
       "disabled": true,
@@ -360,6 +399,7 @@
     "advanced_content_eYLzPF",
     "17347204-928a-46d1-8166-ac8c007f382d",
     "replo_flash_sale_timer_96YQTa",
+    "how_it_works_2_YzWC8m",
     "replo_trust_icons_white_backg_Wc7kJ7",
     "trust_icons_EDYTbe",
     "replo_trust_icons_fy9XYw",
