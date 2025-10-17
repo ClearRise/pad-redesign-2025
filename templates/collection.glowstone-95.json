@@ -112,7 +112,7 @@
     "replo_flash_sale_timer_96YQTa": {
       "type": "replo-flash-sale-timer",
       "custom_css": [
-        ".alchemy__element{margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+        ".alchemy__element {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
       ],
       "name": "Flash Sale Timer",
       "settings": {}
@@ -349,6 +349,7 @@
         "question_4heaRU",
         "question_kTcTaU"
       ],
+      "disabled": true,
       "name": "FAQ",
       "settings": {
         "title": "Cremation Jewelry FAQs"
