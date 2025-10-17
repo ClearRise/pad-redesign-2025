@@ -282,9 +282,9 @@
           "sticky_collection": false,
           "mobile_top_banner_image": "shopify://shop_images/oie_haHVk88If7KC.png",
           "mobile_menu_top_banner_image": "shopify://shop_images/Black_Ceramic-_Purple_Class-removebg-preview.png",
-          "mobile_menu_top_banner_title": "PRIME DAY SALE",
-          "mobile_menu_top_banner_link_text": "40% off - Limited Time Only",
-          "mobile_menu_top_banner_link": "shopify://collections/all-products-new",
+          "mobile_menu_top_banner_title": "FLASH SALE",
+          "mobile_menu_top_banner_link_text": "Up to 70% off - This Weekend Only",
+          "mobile_menu_top_banner_link": "shopify://collections/glowstone-flash-sale",
           "mobile_menu_top_banner_background": "",
           "announcement_compact": true,
           "announcement_above_header": true,
@@ -505,22 +505,6 @@
           "tryon-modal-stage3-description": "Upon the return of your unwanted items, we will only charge you for the items you choose to keep.",
           "appendable-atc-button": ".buy-buttons-block",
           "tryon-product-form-selector": ""
-        }
-      },
-      "7944482028155771153": {
-        "type": "shopify://apps/bold-product-upsell/blocks/Offer/0ea05cdc-3862-4d90-9a1b-14eafaef80dd",
-        "disabled": false,
-        "settings": {
-          "offer-modal-preview": false,
-          "offer-preview-product": "",
-          "title-font-size": 24,
-          "subtitle-font-size": 12,
-          "product-title-font-size": 15,
-          "title-color": "#121212",
-          "subtitle-color": "#343333",
-          "product-title-color": "#121212",
-          "modal-background-color": "#FFFFFF",
-          "modal-border-color": "#DEDEDE"
         }
       }
     }
