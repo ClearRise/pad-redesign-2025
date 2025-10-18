@@ -436,6 +436,9 @@ klarna-placement div.container.default.auto-size span {
   width: 100%;
   align-items: center;
 }
+.sticky-bar .buy-button-wrapper {
+  width: 75%;
+}
 @media (max-width: 768px) {
   .sticky-bar .page-width {
     flex-direction: column;
@@ -452,7 +455,7 @@ klarna-placement div.container.default.auto-size span {
   .sticky-bar .page-width .product-info {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 80%;
   }
   .sticky-bar .page-width .product-info .pdp-product-block--price-ss {
     align-items: flex-start;
@@ -460,7 +463,7 @@ klarna-placement div.container.default.auto-size span {
     justify-content: center;
   }
   .sticky-bar .buy-button-wrapper {
-    width: 70%;
+    width: 100%;
   }
   .sticky-bar .page-width .product-info .pdp-product-block--price-ss {
     margin-left: 10px;
@@ -476,7 +479,7 @@ klarna-placement div.container.default.auto-size span {
 }
 @media (max-width: 520px) {
   .sticky-bar .buy-button-wrapper {
-    width: 70%;
+    /* width: 70%; */
   }
   .sticky-bar .page-width .product-info .pdp-product-block--price-ss {
     margin-left: 10px;
