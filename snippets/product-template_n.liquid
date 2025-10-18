@@ -76,6 +76,44 @@
       text-align: left;
     }
   }
+
+  /** sticky buy button wrapper style start **/
+  .buy-button-wrapper-sticky {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 60%;
+    justify-content: flex-end;
+    .product-block {
+      margin-bottom: 0px !important;
+    }
+  }
+  .sticky-bar #tryon-wrapper {
+    width: 75%;
+    .tryon-button {
+      margin-top: 0 !important;
+      font-size: inherit !important;
+    }
+    .tryon-desc-span {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .sticky-bar #tryon-wrapper {
+      width: 100%;
+      .tryon-button {
+        font-size: max(calc(var(--typeBaseSize) - 5px), 11px) !important;
+        padding: 4px 6px !important;
+      }
+    }
+  }
+  @media (max-width: 520px) {
+    .buy-button-wrapper-sticky {
+      width: 80% !important;
+    }
+  }
+
+  /*******************************************/
 </style>
 
 <div id="adding-product-modal" class="add-to-cart-loader Modal Modal--dark" aria-hidden="true" role="dialog" data-scrollable="" style="display: none;">
@@ -1035,7 +1073,9 @@
         {%- endif -%}
       </div>
     </div>
-    <div class="buy-button-wrapper product-block"></div>
+    <div class="buy-button-wrapper-sticky">
+      <div class="buy-button-wrapper buy-buttons-block product-block"></div>
+    </div>
   </div>
 </div>
 

@@ -12459,8 +12459,9 @@ html[dir="rtl"] .product-single__meta .rte {
   font-size: calc(var(--typeBaseSize) * 2);
 }
 .product__price.on-sale {
-  padding-right: 5px;
+  /* padding-right: 5px; */
   font-size: calc(var(--typeBaseSize) * 2);
+  margin-top: 5px;
 }
 .pdp-product-block--price-ss .product__price.on-sale {
   margin-right: 15px;
@@ -12473,7 +12474,7 @@ html[dir="rtl"] .product-single__meta .rte {
 @media (max-width: 520px) {
   .pdp-product-block--price-ss .product__price.on-sale {
     /* width: 100%; */
-    margin-right: 3px;
+    margin-right: 0px;
     font-size: calc(var(--typeBaseSize) * 1.5);
   }
 }
