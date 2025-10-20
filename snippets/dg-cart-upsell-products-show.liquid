@@ -1,18 +1,5 @@
 {% comment %} -------------------------------------------------------- {% endcomment %}
-<style>
-.upsell-product-mobile {
-  display: none !important;
-}
 
-@media (max-width: 768px) {
-  .upsell-product-desktop {
-    display: none !important;
-  }
-  .upsell-product-mobile {
-    display: flex !important;
-  }
-}
-</style>
 
 {%- liquid
   if settings.enable_rewards_bar
@@ -231,7 +218,7 @@
     }
     .upsell-suggest-product-button {
       letter-spacing: 2px;
-      margin-top: 7px;
+      {% comment %} margin-top: 7px; {% endcomment %}
       {% comment %} margin-left: auto;
       margin-right: auto; {% endcomment %}
       {% comment %} width: 100%; {% endcomment %}
@@ -350,7 +337,7 @@
     }
     @media (min-width: 768px) {
       .price-and-button-container {
-        flex-direction: column !important;
+        /* flex-direction: column !important; */
       }
     }
   </style>
@@ -386,55 +373,7 @@
     %}
       {% assign upsell_product = all_products[settings['product-glowstone']] %}
       <div class="upsell-collection dgCartUpsellCont gift-products margin-top-10px">
-        <div class="upsell-product upsell-product-desktop dgCartUpsellInner  border_line mb_10">
-          <div class="upsell-product-image">
-            {% comment %} {{ upsell_product.featured_image |  }} {% endcomment %}
-            <img
-              class="dci-image"
-              src="{{ upsell_product.featured_image | img_url: '100x100' }}"
-              alt="{{ upsell_product.title | escape }}"
-            >
-          </div>
-          <div class="upsell-product-info">
-            <div class="upsell-product-suggest-text product-title-link">
-              <span class="suggested-product-title ">
-                {% assign upsell_product_price_money = all_products[settings['product-glowstone']].selected_or_first_available_variant.price
-                  | divided_by: 100
-                %}
-                {% comment %} <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'Glowstone Enhancement' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b> {% endcomment %}
-                <div class="main-product-title">{{ purchased_main_product_on_cart.product.title }}</div>
-                <div class="upselll-product-title">{{ upsell_product.title }}</div>
-              </span>
-            </div>
-            <div class="cart__item-sub price-and-button-container">
-              <div class="upsell-product-price abc">
-                {{ upsell_product.selected_or_first_available_variant.price | money }}
-                <s
-                  ><span class="money">
-                    {%- if upsell_product.selected_or_first_available_variant.price
-                        != upsell_product.selected_or_first_available_variant.compare_at_price
-                    -%}
-                      {%- if upsell_product.selected_or_first_available_variant.price
-                          != upsell_product.selected_or_first_available_variant.compare_at_price
-                      -%}
-                        {{- upsell_product.selected_or_first_available_variant.compare_at_price | money -}}
-                      {%- endif -%}
-                    {%- endif %}
-                  </span></s
-                >
-              </div>
-            </div>
-          </div>
-          <button
-            class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}"
-            data-main-product-id="{{ purchased_main_product_on_cart.id }}"
-            data-product-id="{{ all_products[settings['product-glowstone']].selected_or_first_available_variant.id }}"
-            data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}"
-          >
-            Add To Cart
-          </button>
-        </div>
-        <div class="upsell-product upsell-product-mobile dgCartUpsellInner  border_line mb_10">
+        <div class="upsell-product dgCartUpsellInner  border_line mb_10">
           <div class="upsell-product-image">
             {% comment %} {{ upsell_product.featured_image |  }} {% endcomment %}
             <img
@@ -555,51 +494,7 @@
       {% endcomment %}
       {% assign upsell_product = will_suggest_upsell_protection_plan_product %}
       <div class="upsell-collection dgCartUpsellCont gift-products margin-top-10px">
-        <div class="upsell-product upsell-product-desktop dgCartUpsellInner  border_line mb_10">
-          <div class="upsell-product-image">
-            {% comment %} {{ upsell_product.featured_image |  }} {% endcomment %}
-            <img
-              class="dci-image"
-              src="{{ upsell_product.featured_image | img_url: '100x100' }}"
-              alt="{{ upsell_product.title | escape }}"
-            >
-          </div>
-          <div class="upsell-product-info">
-            <div class="upsell-product-suggest-text product-title-link">
-              <span class="suggested-product-title ">
-                {% assign upsell_product_price_money = all_products[settings['product-glowstone']].selected_or_first_available_variant.price
-                  | divided_by: 100
-                %}
-                {% comment %} <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'Glowstone Enhancement' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b> {% endcomment %}
-                <div class="main-product-title">{{ purchased_main_product_on_cart.product.title }}</div>
-                <div class="upselll-product-title">{{ upsell_product.title }}</div>
-              </span>
-            </div>
-            <div class="cart__item-sub price-and-button-container">
-              <div class="upsell-product-price">
-                {{ upsell_product.selected_or_first_available_variant.price | money }}
-                <s
-                  ><span class="money">
-                    {%- if upsell_product.selected_or_first_available_variant.price
-                        != upsell_product.selected_or_first_available_variant.compare_at_price
-                    -%}
-                      {{- upsell_product.selected_or_first_available_variant.compare_at_price | money -}}
-                    {%- endif %}
-                  </span></s
-                >
-              </div>
-            </div>
-          </div>
-          <button
-            class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }} upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}-ppp"
-            data-main-product-id="{{ purchased_main_product_on_cart.id }}"
-            data-product-id="{{ will_suggest_upsell_protection_plan_product.selected_or_first_available_variant.id }}"
-            data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}"
-          >
-            Add To Cart
-          </button>
-        </div>
-        <div class="upsell-product upsell-product-mobile dgCartUpsellInner  border_line mb_10">
+        <div class="upsell-product dgCartUpsellInner  border_line mb_10">
           <div class="upsell-product-image">
             {% comment %} {{ upsell_product.featured_image |  }} {% endcomment %}
             <img
@@ -721,57 +616,7 @@
       {% endcomment %}
       {% assign upsell_product = all_products[settings['product-engraving']] %}
       <div class="upsell-collection dgCartUpsellCont gift-products qqqq">
-        <div class="upsell-product upsell-product-desktop dgCartUpsellInner  border_line mb_10">
-          <div class="upsell-product-image">
-            {% comment %} {{ upsell_product.featured_image |  }} {% endcomment %}
-            <img
-              class="dci-image"
-              src="{{ upsell_product.featured_image | img_url: '100x100' }}"
-              alt="{{ upsell_product.title | escape }}"
-            >
-          </div>
-          <div class="upsell-product-info">
-            <div class="upsell-product-suggest-text product-title-link">
-              <span class="suggested-product-title ">
-                {% assign upsell_product_price_money = all_products[settings['product-glowstone']].selected_or_first_available_variant.price
-                  | divided_by: 100
-                %}
-                {% comment %} <b>{{ settings.bottom_text | replace: '(upsell_product_title)', 'Glowstone Enhancement' | replace: '(upsell_product_price)', upsell_product_price_money | replace: '(main_product_title)', purchased_main_product.title }}</b> {% endcomment %}
-                <div class="main-product-title">{{ purchased_main_product_on_cart.product.title }}</div>
-                <div class="upselll-product-title">{{ upsell_product.title }}</div>
-              </span>
-            </div>
-            <div class="custom-engraving-input-container">
-              <input type="text" class="custom-engraving-note" placeholder="Enter your engraving text here">
-              <p class="error-text empty-text hide font-size-12px margin-bottom-0px">
-                Please input engraving text here
-              </p>
-            </div>
-            <div class="cart__item-sub padding-top-0px price-and-button-container">
-              <div class="upsell-product-price">
-                {{ upsell_product.selected_or_first_available_variant.price | money }}
-                <s
-                  ><span class="money">
-                    {%- if upsell_product.selected_or_first_available_variant.price
-                        != upsell_product.selected_or_first_available_variant.compare_at_price
-                    -%}
-                      {{- upsell_product.selected_or_first_available_variant.compare_at_price | money -}}
-                    {%- endif %}
-                  </span></s
-                >
-              </div>
-            </div>
-          </div>
-          <button
-            class="button btn d-block upsell-suggest-product-button upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }} upsell-suggest-product-button-{{ purchased_main_product_on_cart.id }}-engraving"
-            data-main-product-id="{{ purchased_main_product_on_cart.id }}"
-            data-product-id="{{ all_products[settings['product-engraving']].selected_or_first_available_variant.id }}"
-            data-main-product-cart-id="{{ purchased_main_product_on_cart.id }}"
-          >
-            Add To Cart
-          </button>
-        </div>
-        <div class="upsell-product upsell-product-mobile dgCartUpsellInner  border_line mb_10">
+        <div class="upsell-product dgCartUpsellInner  border_line mb_10">
           <div class="upsell-product-image">
             {% comment %} {{ upsell_product.featured_image |  }} {% endcomment %}
             <img

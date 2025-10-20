@@ -2,7 +2,7 @@
 
 // Tryon
   // Handle selling plan input and create the event listener for tryon-button click
-  function handleTryonSellingPlanInput(tryonInput, tryonButton) {
+  function handleTryonSellingPlanInput(tryonInput, tryonButtons) {
     try {
   
       const newInput = tryonInput.cloneNode(true);
@@ -13,12 +13,13 @@
   
       // Add event listener to the tryon button
       // const tryonButton = document.querySelector("#tryon-button");
-      if (!tryonButton) {
+      if (tryonButtons.length === 0) {
         console.log("Tryon button not found");
         return;
       }
   
-      tryonButton.addEventListener("click", () => {
+      tryonButtons.forEach((button) => {
+        button.addEventListener("click", () => {
         const tryonSellingPlanId = tryonProduct?.selling_plan_groups
           ?.flatMap(group => group.selling_plans || [])
           ?.find(plan => JSON.parse(plan.options[0].value).app === "tryon").id
@@ -36,7 +37,8 @@
   
         } else {
           console.warn("Tryon selling plan ID not found");
-        }
+          }
+        });
       });
     } catch (error) {
       console.error("Error with tryon input handling:", error);
@@ -84,12 +86,11 @@
   
     function waitForTryonInput() {
       const tryonInput = document.querySelector("#tryon-input");
-      const tryonButton = document.querySelector(".tryon-button");
-        console.log("tryonInput and tryonButton found");
+      const tryonButtons = document.querySelectorAll(".tryon-button");
+        console.log("tryonInput and tryonButton found", tryonInput, tryonButtons);
   
-      if (tryonInput && tryonButton) {
-        handleTryonSellingPlanInput(tryonInput, tryonButton);
-        // handleAddingButtonElements(tryonButton);
+      if (tryonInput && tryonButtons.length > 0) {
+          handleTryonSellingPlanInput(tryonInput, tryonButtons);
       } else if (Date.now() - startTime < maxWaitTime) {
         setTimeout(waitForTryonInput, pollInterval);
       } else {
