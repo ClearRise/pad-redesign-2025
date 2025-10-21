@@ -209,6 +209,54 @@
         "divider": false
       }
     },
+    "hero_section_FLBniK": {
+      "type": "hero-section",
+      "blocks": {
+        "image_z6cJcW": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "vertical_block_position_on_desktop": "center",
+            "horizontal_block_position_on_desktop": "flex-start",
+            "block_height_on_desktop": 85,
+            "max_width_on_desktop": 60,
+            "image": "shopify://shop_images/Artboard_1_6_e47805fa-0498-4cbd-b02d-9e286fa8af8b.jpg",
+            "image_mobile": "shopify://shop_images/1_copy.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#000000",
+            "button_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_z6cJcW"
+      ],
+      "name": "Hero Section(New)",
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
     "collection-header": {
       "type": "collection-header",
       "disabled": true,
@@ -332,6 +380,7 @@
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
     "featured_collection_JBTDeD",
+    "hero_section_FLBniK",
     "collection-header",
     "promo-grid",
     "main-collection"
