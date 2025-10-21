@@ -424,6 +424,97 @@
         "entries_multiplier": 1,
         "load_more": false
       }
+    },
+    "hero_section_bJKyMX": {
+      "type": "hero-section",
+      "blocks": {
+        "image_xnqcgq": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "shopify://pages/limited-lifetime-warranty-and-return-policy",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "vertical_block_position_on_desktop": "center",
+            "horizontal_block_position_on_desktop": "flex-start",
+            "block_height_on_desktop": 85,
+            "max_width_on_desktop": 60,
+            "image": "shopify://shop_images/Artboard_5_ab1eec51-4617-423d-a9e2-c51e421b780a.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_4_3.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#000000",
+            "button_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_xnqcgq"
+      ],
+      "name": "Hero Section(New)",
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "faq_YBRgVr": {
+      "type": "faq",
+      "blocks": {
+        "question_8aMRh9": {
+          "type": "question",
+          "settings": {
+            "title": "<b>BRIGHTER GLOW</b>",
+            "text": "<p>Glowstone Rings now shine brighter in the dark, thanks to a higher concentration of glow powder and color pigments that’s been tested and proven.</p>"
+          }
+        },
+        "question_UKi7Hn": {
+          "type": "question",
+          "settings": {
+            "title": "<b>ENHANCED CRAFTSMANSHIP</b>",
+            "text": "<p>Thanks to a brand new production method to go along with a rigorous inspection and quality assurance process, our Glowstone Rings now have <strong>clearer inlays, added depth, and shinier band finishes</strong>.</p>"
+          }
+        },
+        "question_zmNmCw": {
+          "type": "question",
+          "settings": {
+            "title": "<b>EXPANDED MATERIALS</b>",
+            "text": "<p><br/>Choose from a wider range of inlay options — rare stones, vibrant pigments, and unique blends — giving you more ways to create a truly one-of-a-kind ring.<br/><br/></p>"
+          }
+        },
+        "question_fxtix4": {
+          "type": "question",
+          "settings": {
+            "title": "<b>LIFETIME WARRANTY</b>",
+            "text": "<p>Built to last with premium resins and scratch-resistant bands, every Glowstone Ring is backed by our lifetime warranty, including free size exchanges on non-custom designs.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_8aMRh9",
+        "question_UKi7Hn",
+        "question_zmNmCw",
+        "question_fxtix4"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "title": "What is Glowstone 2.0?"
+      }
     }
   },
   "order": [
@@ -438,6 +529,8 @@
     "hero_section_Bqm3NL",
     "collection-header",
     "promo-grid",
-    "main-collection"
+    "main-collection",
+    "hero_section_bJKyMX",
+    "faq_YBRgVr"
   ]
 }
