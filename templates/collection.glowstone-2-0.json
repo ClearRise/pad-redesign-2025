@@ -150,15 +150,15 @@
     "trust_icons_EDYTbe": {
       "type": "trust-icons_n",
       "settings": {
-        "section_background": "#eeeeee",
+        "section_background": "#d8d8d8",
         "top_padding": 20,
         "bottom_padding": 20,
         "show_bottom_break_line": false,
         "top_logo_size": 16,
-        "trust_icon_1_label": "",
-        "trust_icon_2_label": "",
-        "trust_icon_3_label": "",
-        "trust_icon_4_label": "One-of-a-kind Designs"
+        "trust_icon_1_label": "Brighter Glow",
+        "trust_icon_2_label": "Improved Comfort",
+        "trust_icon_3_label": "Enhanced Design",
+        "trust_icon_4_label": "Lifetime Warranty"
       }
     },
     "replo_trust_icons_fy9XYw": {
@@ -169,21 +169,43 @@
     "rich_text_G9LH7U": {
       "type": "rich-text",
       "blocks": {
+        "heading_zKXfK3": {
+          "type": "heading",
+          "settings": {
+            "title": "GLOWSTONE 2.0"
+          }
+        },
         "text_Up6xTw": {
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<h2><strong>LIMITED TIME OFFER</strong></h2><p>Buy One Get One Free (of equal or lesser value) </p><p>AND</p><p>Spend $250 and get $50 back</p><p><strong>This Weekend ONLY</strong></p>"
+            "text": "<p>Sharper | Brighter | Bolder</p>"
           }
         }
       },
       "block_order": [
+        "heading_zKXfK3",
         "text_Up6xTw"
       ],
-      "disabled": true,
       "settings": {
         "align_text": "left",
         "narrow_column": true,
+        "divider": false
+      }
+    },
+    "featured_collection_JBTDeD": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "",
+        "home_featured_products": "glowstone-2-0",
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
         "divider": false
       }
     },
@@ -309,6 +331,7 @@
     "trust_icons_EDYTbe",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
+    "featured_collection_JBTDeD",
     "collection-header",
     "promo-grid",
     "main-collection"
