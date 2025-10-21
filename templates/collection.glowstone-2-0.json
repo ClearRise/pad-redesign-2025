@@ -246,6 +246,57 @@
       "block_order": [
         "image_z6cJcW"
       ],
+      "custom_css": [
+        ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+      ],
+      "name": "Hero Section(New)",
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "hero_section_Bqm3NL": {
+      "type": "hero-section",
+      "blocks": {
+        "image_Lfpqzt": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "shopify://pages/limited-lifetime-warranty-and-return-policy",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "vertical_block_position_on_desktop": "center",
+            "horizontal_block_position_on_desktop": "flex-start",
+            "block_height_on_desktop": 85,
+            "max_width_on_desktop": 60,
+            "image": "shopify://shop_images/Artboard_3_1.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_2_1_a280c7bb-95fb-42ba-b0da-0de6dee030a4.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#000000",
+            "button_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_Lfpqzt"
+      ],
       "name": "Hero Section(New)",
       "settings": {
         "use_img_banner": true,
@@ -381,6 +432,7 @@
     "rich_text_G9LH7U",
     "featured_collection_JBTDeD",
     "hero_section_FLBniK",
+    "hero_section_Bqm3NL",
     "collection-header",
     "promo-grid",
     "main-collection"
