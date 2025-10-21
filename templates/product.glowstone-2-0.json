@@ -153,10 +153,10 @@
         "pdp_icon_list_dix4kX": {
           "type": "pdp_icon_list",
           "settings": {
-            "label_1": "",
-            "label_2": "One-of-a-kind Designs",
-            "label_3": "",
-            "label_4": "Satisfaction Guaranteed"
+            "label_1": "Brighter Glow",
+            "label_2": "Improved Comfort",
+            "label_3": "Enhanced Design",
+            "label_4": "Lifetime Warranty"
           }
         },
         "7621462d-9edd-432d-a525-b5bcbfe07deb": {
@@ -500,6 +500,108 @@
       "block_order": [
         "image_LmdwqH"
       ],
+      "custom_css": [
+        ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+      ],
+      "name": "Hero Section(New)",
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "hero_section_LDPntB": {
+      "type": "hero-section",
+      "blocks": {
+        "image_6nm3R3": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "vertical_block_position_on_desktop": "center",
+            "horizontal_block_position_on_desktop": "flex-start",
+            "block_height_on_desktop": 85,
+            "max_width_on_desktop": 60,
+            "image": "shopify://shop_images/Artboard_1-2_1.jpg",
+            "image_mobile": "shopify://shop_images/1_copy-2.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#000000",
+            "button_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_6nm3R3"
+      ],
+      "custom_css": [
+        ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+      ],
+      "name": "Hero Section(New)",
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "hero_section_Mtrdfp": {
+      "type": "hero-section",
+      "blocks": {
+        "image_HABBtj": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "vertical_block_position_on_desktop": "center",
+            "horizontal_block_position_on_desktop": "flex-start",
+            "block_height_on_desktop": 85,
+            "max_width_on_desktop": 60,
+            "image": "shopify://shop_images/Artboard_5_ab1eec51-4617-423d-a9e2-c51e421b780a.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_4_3.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 60,
+            "base_text_size": 24,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#000000",
+            "button_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_HABBtj"
+      ],
       "name": "Hero Section(New)",
       "settings": {
         "use_img_banner": true,
@@ -797,8 +899,10 @@
     "rich_text_zd3AyU",
     "replo_trust_icons_white_backg_AnTLaL",
     "promo_carousel_EMH4nT",
-    "hero_section_W4Vfjq",
     "promo_grid_QUweUP",
+    "hero_section_W4Vfjq",
+    "hero_section_LDPntB",
+    "hero_section_Mtrdfp",
     "product_img_with_txt",
     "product_how_to_work",
     "sub",
