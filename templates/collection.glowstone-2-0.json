@@ -297,6 +297,9 @@
       "block_order": [
         "image_Lfpqzt"
       ],
+      "custom_css": [
+        ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+      ],
       "name": "Hero Section(New)",
       "settings": {
         "use_img_banner": true,
@@ -416,7 +419,7 @@
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
-        "custom_badge": "",
+        "custom_badge": "2.0 FEATURES",
         "saved_amount_option": "display_entries",
         "entries_multiplier": 1,
         "load_more": false
