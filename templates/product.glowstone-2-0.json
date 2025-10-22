@@ -153,9 +153,13 @@
         "pdp_icon_list_dix4kX": {
           "type": "pdp_icon_list",
           "settings": {
+            "icon_1": "shopify://shop_images/Icons1.png",
             "label_1": "Brighter Glow",
+            "icon_2": "shopify://shop_images/Icons3.png",
             "label_2": "Improved Comfort",
+            "icon_3": "shopify://shop_images/Icons2.png",
             "label_3": "Enhanced Design",
+            "icon_4": "shopify://shop_images/Icons4.png",
             "label_4": "Lifetime Warranty"
           }
         },
@@ -463,6 +467,152 @@
         "space_below": true
       }
     },
+    "promo_grid_QUweUP": {
+      "type": "promo-grid_n",
+      "blocks": {
+        "advanced_KyqEAm": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "FREE GIFT OFFER",
+            "textarea": "Get a Free Mystery Gift (ring or pendant with guaranteed MSRP of $250+) on orders $145+<br><b>LIMITED TIME ONLY</b>",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "background_color": "#000000",
+            "text_color": "#ffffff",
+            "video_url": "",
+            "width": "100",
+            "height": 200,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "dark_overlay": 0,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_nqeHQA": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "",
+            "heading": "CRAFTED BY  HAND",
+            "textarea": "This product is handmade<br>  by trade artisans",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "background_color": "#000000",
+            "text_color": "#ffffff",
+            "image": "shopify://shop_images/Handcrafted_V2.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_hEMdLL": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "",
+            "heading": "EXOTIC MATERIALS",
+            "textarea": "Go beyond silver and <br> gold and find something <br>that's truly you.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "background_color": "#000000",
+            "text_color": "#ffffff",
+            "image": "shopify://shop_images/Glowing_Vial.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_TwEqdf": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "",
+            "heading": "EVERY RING <br> IS UNIQUE",
+            "textarea": "Your ring is made to <br>order just for you. <br>No two rings are <br> the same.",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "background_color": "#000000",
+            "text_color": "#ffffff",
+            "image": "shopify://shop_images/Meteorite_Stack_Square.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_eReELk": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "",
+            "heading": "FREE GIFT OFFER",
+            "textarea": "Get a free Mystery Gift on orders $195+",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "background_color": "#000000",
+            "text_color": "#ffffff",
+            "image": "shopify://shop_images/BOGO_1ad22304-9dc6-4a8c-aa06-7960583eb1a0.png",
+            "video_url": "",
+            "width": "100",
+            "height": 660,
+            "text_size": 120,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "advanced_KyqEAm",
+        "advanced_nqeHQA",
+        "advanced_hEMdLL",
+        "advanced_TwEqdf",
+        "advanced_eReELk"
+      ],
+      "settings": {
+        "full_width": true,
+        "gutter_size": 0,
+        "space_above": true,
+        "space_below": false
+      }
+    },
     "hero_section_W4Vfjq": {
       "type": "hero-section",
       "blocks": {
@@ -611,152 +761,6 @@
         "style": "bars",
         "autoplay": true,
         "autoplay_speed": 5
-      }
-    },
-    "promo_grid_QUweUP": {
-      "type": "promo-grid_n",
-      "blocks": {
-        "advanced_KyqEAm": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "FREE GIFT OFFER",
-            "textarea": "Get a Free Mystery Gift (ring or pendant with guaranteed MSRP of $250+) on orders $145+<br><b>LIMITED TIME ONLY</b>",
-            "cta_text1": "",
-            "cta_link1": "",
-            "cta_text2": "",
-            "cta_link2": "",
-            "background_color": "#000000",
-            "text_color": "#ffffff",
-            "video_url": "",
-            "width": "100",
-            "height": 200,
-            "text_size": 120,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "dark_overlay": 0,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_nqeHQA": {
-          "type": "advanced",
-          "disabled": true,
-          "settings": {
-            "subheading": "",
-            "heading": "CRAFTED BY  HAND",
-            "textarea": "This product is handmade<br>  by trade artisans",
-            "cta_text1": "",
-            "cta_link1": "",
-            "cta_text2": "",
-            "cta_link2": "",
-            "background_color": "#000000",
-            "text_color": "#ffffff",
-            "image": "shopify://shop_images/Handcrafted_V2.png",
-            "video_url": "",
-            "width": "33",
-            "height": 500,
-            "text_size": 100,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_hEMdLL": {
-          "type": "advanced",
-          "disabled": true,
-          "settings": {
-            "subheading": "",
-            "heading": "EXOTIC MATERIALS",
-            "textarea": "Go beyond silver and <br> gold and find something <br>that's truly you.",
-            "cta_text1": "",
-            "cta_link1": "",
-            "cta_text2": "",
-            "cta_link2": "",
-            "background_color": "#000000",
-            "text_color": "#ffffff",
-            "image": "shopify://shop_images/Glowing_Vial.png",
-            "video_url": "",
-            "width": "33",
-            "height": 500,
-            "text_size": 100,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_TwEqdf": {
-          "type": "advanced",
-          "disabled": true,
-          "settings": {
-            "subheading": "",
-            "heading": "EVERY RING <br> IS UNIQUE",
-            "textarea": "Your ring is made to <br>order just for you. <br>No two rings are <br> the same.",
-            "cta_text1": "",
-            "cta_link1": "",
-            "cta_text2": "",
-            "cta_link2": "",
-            "background_color": "#000000",
-            "text_color": "#ffffff",
-            "image": "shopify://shop_images/Meteorite_Stack_Square.png",
-            "video_url": "",
-            "width": "33",
-            "height": 500,
-            "text_size": 120,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_eReELk": {
-          "type": "advanced",
-          "disabled": true,
-          "settings": {
-            "subheading": "",
-            "heading": "FREE GIFT OFFER",
-            "textarea": "Get a free Mystery Gift on orders $195+",
-            "cta_text1": "",
-            "cta_link1": "",
-            "cta_text2": "",
-            "cta_link2": "",
-            "background_color": "#000000",
-            "text_color": "#ffffff",
-            "image": "shopify://shop_images/BOGO_1ad22304-9dc6-4a8c-aa06-7960583eb1a0.png",
-            "video_url": "",
-            "width": "100",
-            "height": 660,
-            "text_size": 120,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        }
-      },
-      "block_order": [
-        "advanced_KyqEAm",
-        "advanced_nqeHQA",
-        "advanced_hEMdLL",
-        "advanced_TwEqdf",
-        "advanced_eReELk"
-      ],
-      "settings": {
-        "full_width": true,
-        "gutter_size": 0,
-        "space_above": true,
-        "space_below": false
       }
     },
     "product_img_with_txt": {
