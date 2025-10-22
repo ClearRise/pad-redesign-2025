@@ -149,6 +149,7 @@
     },
     "trust_icons_EDYTbe": {
       "type": "trust-icons_n",
+      "disabled": true,
       "settings": {
         "section_background": "#d8d8d8",
         "top_padding": 20,
@@ -163,7 +164,6 @@
     },
     "replo_trust_icons_fy9XYw": {
       "type": "replo-trust-icons",
-      "disabled": true,
       "settings": {}
     },
     "rich_text_G9LH7U": {
