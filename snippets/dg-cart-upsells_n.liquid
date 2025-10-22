@@ -690,7 +690,7 @@
 
     {% else %}
       {% comment %} modify code only this block {% endcomment %}
-      {% if settings.show_gift_box and new_total_price >= FirstTierAmountRaw and new_total_price < SecondTierMinRaw %}
+      {% if settings.hide_all_gifts_tier_1 == false and settings.show_gift_box and new_total_price >= FirstTierAmountRaw and new_total_price < SecondTierMinRaw %}
         <!-- gift box -->
         {% assign GiftBoxAmount = settings.cart_threshold_amount %}
         {% assign GiftBoxAmountRaw = settings.cart_threshold_amount | times: 100 %}
