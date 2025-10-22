@@ -479,28 +479,28 @@
         "question_8aMRh9": {
           "type": "question",
           "settings": {
-            "title": "BRIGHTER GLOW",
+            "title": "<b>BRIGHTER GLOW</b>",
             "text": "<p>Glowstone Rings now shine brighter in the dark, thanks to a higher concentration of glow powder and color pigments that’s been tested and proven.</p>"
           }
         },
         "question_UKi7Hn": {
           "type": "question",
           "settings": {
-            "title": "ENHANCED CRAFTSMANSHIP",
+            "title": "<b>ENHANCED CRAFTSMANSHIP</b>",
             "text": "<p>Thanks to a brand new production method to go along with a rigorous inspection and quality assurance process, our Glowstone Rings now have <strong>clearer inlays, added depth, and shinier band finishes</strong>.</p>"
           }
         },
         "question_zmNmCw": {
           "type": "question",
           "settings": {
-            "title": "EXPANDED MATERIALS",
+            "title": "<b>EXPANDED MATERIALS</b>",
             "text": "<p><br/>Choose from a wider range of inlay options — rare stones, vibrant pigments, and unique blends — giving you more ways to create a truly one-of-a-kind ring.<br/><br/></p>"
           }
         },
         "question_fxtix4": {
           "type": "question",
           "settings": {
-            "title": "LIFETIME WARRANTY",
+            "title": "<b>LIFETIME WARRANTY</b>",
             "text": "<p>Built to last with premium resins and scratch-resistant bands, every Glowstone Ring is backed by our lifetime warranty, including free size exchanges on non-custom designs.</p>"
           }
         }
