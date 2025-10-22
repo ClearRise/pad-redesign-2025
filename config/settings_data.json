@@ -115,6 +115,7 @@
     "product-handle-1": "mystery-gift",
     "product-handle-2": "green-glow-burl-carbon-fiber-bar-pendant-1",
     "hide_gift_2": true,
+    "hide_all_gifts_tier_1": true,
     "allow_adding_both_gifts_tier_1": false,
     "first_tier_name": "Unlock a Mystery Gift",
     "second_show_gift_box": true,
