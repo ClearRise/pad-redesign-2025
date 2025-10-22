@@ -1226,6 +1226,12 @@
       },
       {
         "type": "checkbox",
+        "id": "hide_all_gifts_tier_1",
+        "label": "Hide All Gifts",
+        "info": "First Gift products will be hidden from cart drawer if selected."
+      },
+      {
+        "type": "checkbox",
         "id": "allow_adding_both_gifts_tier_1",
         "label": "Allow Adding Both Gifts",
         "info": "Allow adding both gifts to the cart if selected."
