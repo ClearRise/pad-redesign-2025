@@ -566,7 +566,7 @@ const nvd_init = async () => {
             document.querySelectorAll('.nvd-mini').forEach((item) => {
               item.innerHTML = widgetContent
             })
-          checkWidgetView()
+          checkWidgetView();
         } else {
           useConsole(
             'cart variant and api variant is not same.swapping them now'
