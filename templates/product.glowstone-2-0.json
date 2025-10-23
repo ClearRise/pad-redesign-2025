@@ -23,6 +23,16 @@
             "custom_badge": "LABOR DAY SALE"
           }
         },
+        "71160726-c2e7-4e18-bcb9-e14abb7b42b0": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-auto-size",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "10",
+            "messagePrefix": ""
+          }
+        },
         "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
           "type": "text",
           "settings": {
@@ -138,16 +148,6 @@
             "enable_tooltip": false,
             "tooltip_header": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
             "tooltip_content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>"
-          }
-        },
-        "71160726-c2e7-4e18-bcb9-e14abb7b42b0": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "settings": {
-            "data_key": "credit-promotion-auto-size",
-            "theme": "default",
-            "topPadding": "0",
-            "bottomPadding": "10",
-            "messagePrefix": ""
           }
         },
         "pdp_icon_list_dix4kX": {
@@ -313,6 +313,7 @@
       "block_order": [
         "judge_me_reviews_preview_badge_6bMyn3",
         "price",
+        "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
         "94c49419-9d53-4cfe-8c63-edaf9a145c94",
         "separator",
         "variant_picker",
@@ -325,7 +326,6 @@
         "relative_product_carousel_UBEHtr",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
         "buy_buttons",
-        "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
         "pdp_icon_list_dix4kX",
         "7621462d-9edd-432d-a525-b5bcbfe07deb",
         "07bdb91c-b9ed-4326-8127-0098675d0092",
