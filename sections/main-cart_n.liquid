@@ -62,6 +62,7 @@
     let firstProcess = true;
     let productWillUpdate = true;
 
+    $(".overlay").show();
     do {
       let tryonProducts = [];
       let relativeProductsToUpdate = [];
@@ -69,7 +70,7 @@
       let cartItems_new = await getCartItems();
 
       cartItems_new.forEach((item) => {
-        $(".overlay").show();
+        {% comment %} $(".overlay").show(); {% endcomment %}
         if (item.selling_plan_allocation && 
             item.selling_plan_allocation.selling_plan && 
             item.selling_plan_allocation.selling_plan.id === sellingPlanId) {
@@ -433,12 +434,12 @@
           }
         } {% endcomment %}
       
-        setTimeout(() => {
-          $(".overlay").hide();
-        }, 200);
         // End Tryon
       }
     } while (productWillUpdate);
+    setTimeout(() => {
+      $(".overlay").hide();
+    }, 200);
   })(); // Close the async function
 </script>
 
