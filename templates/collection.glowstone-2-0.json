@@ -198,7 +198,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "",
-        "home_featured_products": "glowstone-2-0",
+        "home_featured_products": "glowstone-2-0-features",
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
