@@ -360,7 +360,7 @@ const calculateProtection = async (cartTotal, nvdConfig) => {
 }
 
 const nvd_init = async () => {
-  console.time('nvd_init')
+  console.time('nvd_init_start')
   localStorage.setItem('nvd_running', true)
   // TODO: check nvd_config in sessionStorage
   let shopConfig = sessionStorage.getItem('nvdconfig')
@@ -631,7 +631,7 @@ const nvd_init = async () => {
     )
     localStorage.setItem('nvd_running', false)
   }
-  console.timeEnd('nvd_init')
+  console.timeEnd('nvd_init end')
 
   setTimeout(nvdCursorEvent('enabled'), 1500)
 }
@@ -2434,6 +2434,7 @@ window.addEventListener(
 window.addEventListener(
   'change',
   (ev) => {
+    console.log("2437 line navidium.js......")
     const navidiumTriggers = Array.from(
       document.querySelectorAll(nvdControls.changeTrigger)
     )

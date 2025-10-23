@@ -7698,7 +7698,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                       var boldOptions = tempWrap.querySelectorAll('.bold_option_value_element');
                       console.log("keyword", boldOptions);
                       let price = 0;
-                      [ ...boldOptions].forEach(function(boldOptionItem) {
+                      [...boldOptions].forEach(function (boldOptionItem) {
                         if (boldOptionItem.classList.contains("bold_swatch_selected")) {
                           let optionPrice = boldOptionItem.parentElement?.querySelector('span.money')?.innerHTML.replace('$', '');
                           if (isNaN(Number(optionPrice))) {
@@ -7765,7 +7765,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
                 var boldOptions = tempWrap.querySelectorAll('.bold_option_value_element');
                 console.log("keyword", boldOptions);
                 let price = 0;
-                [ ...boldOptions].forEach(function(boldOptionItem) {
+                [...boldOptions].forEach(function (boldOptionItem) {
                   if (boldOptionItem.classList.contains("bold_swatch_selected")) {
                     let optionPrice = boldOptionItem.parentElement?.querySelector('span.money')?.innerHTML.replace('$', '');
                     if (isNaN(Number(optionPrice))) {
