@@ -187,8 +187,9 @@
         "heading_zKXfK3",
         "text_Up6xTw"
       ],
+      "custom_css": [],
       "settings": {
-        "align_text": "left",
+        "align_text": "center",
         "narrow_column": true,
         "divider": false
       }
