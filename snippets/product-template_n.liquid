@@ -76,6 +76,44 @@
       text-align: left;
     }
   }
+
+  /** sticky buy button wrapper style start **/
+  .buy-button-wrapper-sticky {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 60%;
+    justify-content: flex-end;
+    .product-block {
+      margin-bottom: 0px !important;
+    }
+  }
+  .sticky-bar #tryon-wrapper {
+    width: 75%;
+    .tryon-button {
+      margin-top: 0 !important;
+      font-size: inherit !important;
+    }
+    .tryon-desc-span {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .sticky-bar #tryon-wrapper {
+      width: 100%;
+      .tryon-button {
+        font-size: max(calc(var(--typeBaseSize) - 6px), 10px) !important;
+        padding: 10px 0px !important;
+      }
+    }
+  }
+  @media (max-width: 520px) {
+    .buy-button-wrapper-sticky {
+      width: 80% !important;
+    }
+  }
+
+  /*******************************************/
 </style>
 
 <div id="adding-product-modal" class="add-to-cart-loader Modal Modal--dark" aria-hidden="true" role="dialog" data-scrollable="" style="display: none;">
@@ -249,46 +287,46 @@
                     </div>
                   {%- when 'glowstone_enhancement' -%}
 
-                 {%- assign selected_collection = block.settings.in_collection -%}
+                    {%- assign selected_collection = block.settings.in_collection -%}
 
                   
 
-                   {% assign found = false %}
-                  {% if selected_collection != blank %}
-                    {% for collection in product.collections %}
-                      {% if collection.handle == selected_collection %}
-                        {% assign found = true %}
-                      {% endif %}
-                    {% endfor %}
+                    {% assign found = false %}
+                    {% if selected_collection != blank %}
+                      {% for collection in product.collections %}
+                        {% if collection.handle == selected_collection %}
+                          {% assign found = true %}
+                        {% endif %}
+                      {% endfor %}
 
-                    {% comment %}
-                    {% for product_col in collections[block.settings.in_collection].products %}
+                      {% comment %}
+                      {% for product_col in collections[block.settings.in_collection].products %}
 
-                      {{ product_col.id }}
+                        {{ product_col.id }}
+                        
+                        {% if product_col.id == product.id %}
+                          {% assign found = true %}
+                        {% endif %}
+                      {% endfor %}
+                      {% endcomment %}
                       
-                      {% if product_col.id == product.id %}
-                        {% assign found = true %}
-                      {% endif %}
-                    {% endfor %}
-                    {% endcomment %}
-                    
-                   {% elsif selected_collection == blank %} 
-                     {% assign found = true %}
-                   {% else %}
-                     {% assign found = false %}
-                  {% endif %}
+                    {% elsif selected_collection == blank %} 
+                      {% assign found = true %}
+                    {% else %}
+                      {% assign found = false %}
+                    {% endif %}
 
-                  {% if found %}
+                    {% if found %}
 
                        {% style %}
-                    .custom_enhancement_block ._u_upsell-product {
-                      background: {{block.settings.bg_color}};
-                      color: {{block.settings.text_color}};
-                      border-color: {{block.settings.border_color}}!important;
-                    }
-                    {% endstyle %}
-                    {% assign selected_product = block.settings.up_product %}
-                    {% if selected_product and selected_product != blank  %}
+                      .custom_enhancement_block ._u_upsell-product {
+                        background: {{block.settings.bg_color}};
+                        color: {{block.settings.text_color}};
+                        border-color: {{block.settings.border_color}}!important;
+                      }
+                      {% endstyle %}
+                      {% assign selected_product = block.settings.up_product %}
+                      {% if selected_product and selected_product != blank  %}
                       <div class="product-block custom_enhancement_block" {{ block.shopify_attributes }}>                         
                          <div class="_u_upsell-collection _b_dgCartUpsellCont"> 
                               <div  class="show" >
@@ -1035,7 +1073,9 @@
         {%- endif -%}
       </div>
     </div>
-    <div class="buy-button-wrapper product-block"></div>
+    <div class="buy-button-wrapper-sticky">
+      <div class="buy-button-wrapper buy-buttons-block product-block"></div>
+    </div>
   </div>
 </div>
 

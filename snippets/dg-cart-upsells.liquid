@@ -2,9 +2,9 @@
   .upsell-heading {
     letter-spacing: 0.8px !important;
   }
-  .gift_box {
+  {% comment %} .gift_box {
     background: #f3f3f3;
-  }
+  } {% endcomment %}
 
   .item_added_to_cart button {
     pointer-events: none;
@@ -17,6 +17,8 @@
     margin: 0;
     font-size: 18px;
     font-weight: 800;
+    padding-left: 40px;
+    text-align: left;
   }
 
   .gift_box_title_empty {
@@ -45,6 +47,7 @@
     /*         margin: 25px auto; */
     max-width: 1170px;
     margin-bottom: 0px;
+    margin-top: 20px;
   }
   .dgCartUpsellCont {
     margin: 0 auto;
@@ -66,7 +69,7 @@
     margin-bottom: 15px;
   }
   .dgCartUpsell .dci-title {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 21px;
     min-height: 45px;
   }
@@ -154,6 +157,11 @@
   .upsell-product-info {
     padding-left: 15px !important;
   }
+  @media (min-width: 768px) {
+    .upsell-collection.dgCartUpsellCont.gift-products {
+      max-width: 400px;
+    }
+  }
 </style>
 {% assign upsellCollection = 'upsells' %}
 {% assign upsellLimit = '3' -%}
@@ -218,11 +226,11 @@
   {% endif %}
 
   {% if settings.second_show_gift_box %}
-    {% assign SecondTierMinRaw = settings.min_cart_threshold_amount | times: 100 %}
+    {% assign SecondTierMinRaw = settings.cart_threshold_amount | times: 100 %}
   {% endif %}
 
   {% if settings.third_show_gift_box %}
-    {% assign SecondTierMaxRaw = settings.max_cart_threshold_amount | times: 100 %}
+    {% assign SecondTierMaxRaw = settings.cart_threshold_amount_third | times: 100 %}
   {% endif %}
 
   {% assign new_total_price = cart.total_price | minus: hide_price %}
@@ -330,7 +338,13 @@
                             {% endif %}
                           >
                             {% comment %} {{ gift_variant.title }} {% endcomment %}
-                            {{ first_gift_product.options[0] }} - {{ gift_variant.option1 }} {% if first_gift_product.options[1] %}, {{ first_gift_product.options[1] }} - {{ gift_variant.option2 }} {% endif %} {% if first_gift_product.options[2] %}, {{ first_gift_product.options[2] }} - {{ gift_variant.option3 }} {% endif %}
+                            {{ first_gift_product.options[0] }} - {{ gift_variant.option1 }}
+                            {% if first_gift_product.options[1] -%}
+                              , {{ first_gift_product.options[1] }} - {{ gift_variant.option2 }}
+                            {% endif %}
+                            {% if first_gift_product.options[2] -%}
+                              , {{ first_gift_product.options[2] }} - {{ gift_variant.option3 }}
+                            {% endif %}
                           </option>
                         {% endfor %}
                       </select>
@@ -340,39 +354,41 @@
                       <div class="upsell-product-price aaaaaaaaa">
                         FREE <s>{{ first_gift_product.compare_at_price | money_without_trailing_zeros }}</s>
                       </div>
-                      <button
-                        {% if first_product_found == false %}
-                          data-remove_var="{{ first_gift_product_id }}"
-                        {% endif %}
-                        data-product-id="{{ first_gift_product_id }}"
-                        class="{% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart upsell-add-to-cart-gift"
-                        {% if first_gift_product.selected_or_first_available_variant.available == false %}
-                          disabled
-                        {% endif %}
-                      >
-                        {% if first_product_found == false -%}
-                          {{- already_added }}
-                        {% elsif first_gift_product.selected_or_first_available_variant.available == false -%}
-                          SOLD OUT
-                        {%- else -%}
-                          {{- upsellAtc -}}
-                        {%- endif %}
-                      </button>
                     </div>
                   </div>
+                  <button
+                    {% if first_product_found == false %}
+                      data-remove_var="{{ first_gift_product_id }}"
+                    {% endif %}
+                    data-product-id="{{ first_gift_product_id }}"
+                    class="button btn d-block upsell-suggest-product-button {% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart upsell-add-to-cart-gift"
+                    {% if first_gift_product.selected_or_first_available_variant.available == false %}
+                      disabled
+                    {% endif %}
+                  >
+                    {% if first_product_found == false -%}
+                      {{- already_added }}
+                    {% elsif first_gift_product.selected_or_first_available_variant.available == false -%}
+                      SOLD OUT
+                    {%- else -%}
+                      {{- upsellAtc -}}
+                    {%- endif %}
+                  </button>
                 </div>
               </div>
             {% endif %}
 
             {% if settings['product-handle-2'] %}
-              {% comment %} {% assign second_gift_product = settings['product-handle-2'] %}
-              {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
-              {% assign gift_product_found = true %}
-              {% for item in cart.items %}
-                {% if item.id == second_gift_product_id %}
-                  {% assign gift_product_found = false %}
-                {% endif %}
-              {% endfor %} {% endcomment %}
+              {% comment %}
+                {% assign second_gift_product = settings['product-handle-2'] %}
+                {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
+                {% assign gift_product_found = true %}
+                {% for item in cart.items %}
+                  {% if item.id == second_gift_product_id %}
+                    {% assign gift_product_found = false %}
+                  {% endif %}
+                {% endfor %}
+              {% endcomment %}
               <div style="display:none;">
                 {{ second_gift_product | json }}, "second product",
                 {{ second_gift_product.selected_or_first_available_variant | json }}
@@ -410,7 +426,13 @@
                             {% endif %}
                           >
                             {% comment %} {{ gift_variant.title }} {% endcomment %}
-                            {{ second_gift_product.options[0] }} - {{ gift_variant.option1 }} {% if second_gift_product.options[1] %}, {{ second_gift_product.options[1] }} - {{ gift_variant.option2 }} {% endif %} {% if second_gift_product.options[2] %}, {{ second_gift_product.options[2] }} - {{ gift_variant.option3 }} {% endif %}
+                            {{ second_gift_product.options[0] }} - {{ gift_variant.option1 }}
+                            {% if second_gift_product.options[1] -%}
+                              , {{ second_gift_product.options[1] }} - {{ gift_variant.option2 }}
+                            {% endif %}
+                            {% if second_gift_product.options[2] -%}
+                              , {{ second_gift_product.options[2] }} - {{ gift_variant.option3 }}
+                            {% endif %}
                           </option>
                         {% endfor %}
                       </select>
@@ -561,7 +583,13 @@
                             {% endif %}
                           >
                             {% comment %} {{ gift_variant.title }} {% endcomment %}
-                            {{ first_gift_product.options[0] }} - {{ gift_variant.option1 }} {% if first_gift_product.options[1] %}, {{ first_gift_product.options[1] }} - {{ gift_variant.option2 }} {% endif %} {% if first_gift_product.options[2] %}, {{ first_gift_product.options[2] }} - {{ gift_variant.option3 }} {% endif %}
+                            {{ first_gift_product.options[0] }} - {{ gift_variant.option1 }}
+                            {% if first_gift_product.options[1] -%}
+                              , {{ first_gift_product.options[1] }} - {{ gift_variant.option2 }}
+                            {% endif %}
+                            {% if first_gift_product.options[2] -%}
+                              , {{ first_gift_product.options[2] }} - {{ gift_variant.option3 }}
+                            {% endif %}
                           </option>
                         {% endfor %}
                       </select>
@@ -571,39 +599,41 @@
                       <div class="upsell-product-price aaaaaaaaa">
                         FREE <s>{{ first_gift_product.compare_at_price | money_without_trailing_zeros }}</s>
                       </div>
-                      <button
-                        {% if first_product_found == false %}
-                          data-remove_var="{{ first_gift_product_id }}"
-                        {% endif %}
-                        data-product-id="{{ first_gift_product_id }}"
-                        class="{% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart upsell-add-to-cart-gift upsell-add-to-cart-gift-first"
-                        {% if first_gift_product.selected_or_first_available_variant.available == false %}
-                          disabled
-                        {% endif %}
-                      >
-                        {% if first_product_found == false -%}
-                          {{- already_added }}
-                        {% elsif first_gift_product.selected_or_first_available_variant.available == false -%}
-                          SOLD OUT
-                        {%- else -%}
-                          {{- upsellAtc -}}
-                        {%- endif %}
-                      </button>
                     </div>
                   </div>
+                  <button
+                    {% if first_product_found == false %}
+                      data-remove_var="{{ first_gift_product_id }}"
+                    {% endif %}
+                    data-product-id="{{ first_gift_product_id }}"
+                    class="button btn d-block upsell-suggest-product-button {% if first_product_found == false %}change_free_gift{% else %}upsell_button_gtm{% endif %} upsell-add-to-cart upsell-add-to-cart-gift upsell-add-to-cart-gift-first"
+                    {% if first_gift_product.selected_or_first_available_variant.available == false %}
+                      disabled
+                    {% endif %}
+                  >
+                    {% if first_product_found == false -%}
+                      {{- already_added }}
+                    {% elsif first_gift_product.selected_or_first_available_variant.available == false -%}
+                      SOLD OUT
+                    {%- else -%}
+                      {{- upsellAtc -}}
+                    {%- endif %}
+                  </button>
                 </div>
               </div>
             {% endif %}
 
             {% if settings['product-handle-2'] %}
-              {% comment %} {% assign second_gift_product = settings['product-handle-2'] %}
-              {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
-              {% assign gift_product_found = true %}
-              {% for item in cart.items %}
-                {% if item.id == second_gift_product_id %}
-                  {% assign gift_product_found = false %}
-                {% endif %}
-              {% endfor %} {% endcomment %}
+              {% comment %}
+                {% assign second_gift_product = settings['product-handle-2'] %}
+                {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
+                {% assign gift_product_found = true %}
+                {% for item in cart.items %}
+                  {% if item.id == second_gift_product_id %}
+                    {% assign gift_product_found = false %}
+                  {% endif %}
+                {% endfor %}
+              {% endcomment %}
               <div style="display:none;">
                 {{ second_gift_product | json }}, "second product",
                 {{ second_gift_product.selected_or_first_available_variant | json }}
@@ -641,7 +671,13 @@
                             {% endif %}
                           >
                             {% comment %} {{ gift_variant.title }} {% endcomment %}
-                            {{ second_gift_product.options[0] }} - {{ gift_variant.option1 }} {% if second_gift_product.options[1] %}, {{ second_gift_product.options[1] }} - {{ gift_variant.option2 }} {% endif %} {% if second_gift_product.options[2] %}, {{ second_gift_product.options[2] }} - {{ gift_variant.option3 }} {% endif %}
+                            {{ second_gift_product.options[0] }} - {{ gift_variant.option1 }}
+                            {% if second_gift_product.options[1] -%}
+                              , {{ second_gift_product.options[1] }} - {{ gift_variant.option2 }}
+                            {% endif %}
+                            {% if second_gift_product.options[2] -%}
+                              , {{ second_gift_product.options[2] }} - {{ gift_variant.option3 }}
+                            {% endif %}
                           </option>
                         {% endfor %}
                       </select>
@@ -807,13 +843,16 @@
                         {% if product.selected_or_first_available_variant.inventory_quantity < 1 %}
                           <button
                             data-product-id="{{ product_id }}"
-                            class="upsell_button_gtm upsell-add-to-cart disabled"
+                            class="button btn d-block upsell-suggest-product-button upsell_button_gtm upsell-add-to-cart disabled"
                             disabled
                           >
                             SOLD OUT
                           </button>
                         {% else %}
-                          <button data-product-id="{{ product_id }}" class="upsell_button_gtm upsell-add-to-cart">
+                          <button
+                            data-product-id="{{ product_id }}"
+                            class="button btn d-block upsell-suggest-product-button upsell_button_gtm upsell-add-to-cart"
+                          >
                             {{ upsellAtc }}
                           </button>
                         {% endif %}
