@@ -176,21 +176,21 @@
         "blocks": {
           "timer_banner_CAtMWy": {
             "type": "timer_banner",
-            "disabled": true,
             "settings": {
               "enable_timer_banner": true,
-              "banner_text": "Free Mystery Box Ends This Weekend",
-              "banner_link": "",
+              "banner_text": "$75,000 Sweepstakes + Sale Ends Friday",
+              "banner_link": "shopify://collections/all-products-new",
               "banner_link_text": "Shop now",
               "background_color": "#8ead97",
               "text_color": "#111111",
               "enable_countdown": true,
-              "countdown_end_date": "2025-10-5 23:59:59",
+              "countdown_end_date": "2025-10-31 23:59:59",
               "hide_when_expired": false
             }
           },
           "announcement_xVJyfX": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "$75,000 Sweepstakes giveaway + 40% off",
               "link_text": "<span>Shop now for a chance at a once in a lifetime trip</span><span>Orders $145+ Get a FREE Mystery Gift  </span>",
