@@ -92,7 +92,6 @@
     width: 75%;
     .tryon-button {
       margin-top: 0 !important;
-      font-size: inherit !important;
     }
     .tryon-desc-span {
       display: none;
@@ -101,9 +100,8 @@
   @media (max-width: 768px) {
     .sticky-bar #tryon-wrapper {
       width: 100%;
-      .tryon-button {
-        font-size: max(calc(var(--typeBaseSize) - 6px), 10px) !important;
-        padding: 10px 0px !important;
+      .tryon-selling-plan-name-span {
+        font-size: max(calc(var(--typeBaseSize) - 5px), 11px);
       }
     }
   }
@@ -1020,7 +1018,7 @@
   </div>
 </div>
 
-<div class="sticky-bar" id="add-to-cart-sticky-bar">
+<div class="qwe sticky-bar" id="add-to-cart-sticky-bar">
   <div class="page-width">
     <div class="product-info">
       <div>
@@ -1096,7 +1094,7 @@
           buyButtonWrapper.append(addToCartButton.parentElement.removeChild(addToCartButton));
 
           stickyBar.classList.remove("hidden");
-          addToCartHiddenButton.classList.remove("bold_hidden");
+          addToCartHiddenButton.classList.remove("hide");
           addToCartHiddenButton.style.display = "flex";
           observerDefualtButton.observe(addToCartHiddenButton);
         } else {
@@ -1109,7 +1107,7 @@
       ([entry]) => {
         if (entry.isIntersecting) {
           observerDefualtButton.disconnect();
-          addToCartHiddenButton.classList.add("bold_hidden");
+          addToCartHiddenButton.classList.add("hide");
           addToCartHiddenButton.style.display = "none";
 
           defaultButtonWrapper.append(addToCartButton.parentElement.removeChild(addToCartButton));
@@ -1124,7 +1122,8 @@
     )
   
     var getAddToCartButton = setInterval(() => {
-      addToCartButton = document.querySelector(".add-to-cart.bold_clone");
+      // Get the visible add to cart button (first one without .hide class)
+      addToCartButton = document.querySelector(".add-to-cart:not(.hide)");
       
       if (addToCartButton) {
         buttonTop = addToCartButton.getBoundingClientRect().top + window.scrollY;
@@ -1132,7 +1131,8 @@
         clearInterval(getAddToCartButton);
         stickyBar = document.getElementById("add-to-cart-sticky-bar");
         defaultButtonWrapper = addToCartButton.parentElement;
-        addToCartHiddenButton = document.querySelector(".add-to-cart.bold_hidden");
+        // Get the hidden add to cart button (with .hide class)
+        addToCartHiddenButton = document.querySelector(".add-to-cart.hide");
         buyButtonWrapper = document.querySelector(".buy-button-wrapper");
 
         observer.observe(addToCartButton);
@@ -1148,7 +1148,7 @@
             buyButtonWrapper.append(addToCartButton.parentElement.removeChild(addToCartButton));
 
             stickyBar.classList.remove("hidden");
-            addToCartHiddenButton.classList.remove("bold_hidden");
+            addToCartHiddenButton.classList.remove("hide");
             addToCartHiddenButton.style.display = "flex";
             observerDefualtButton.observe(addToCartHiddenButton);
           }
