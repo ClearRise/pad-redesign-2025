@@ -1186,7 +1186,6 @@
         "collection_KYECUC",
         "collection_eHXDrA"
       ],
-      "disabled": true,
       "settings": {
         "title": "Shop By Material",
         "show_sub_title": false,
@@ -1229,7 +1228,7 @@
             "code": "<h2>Get a Custom Ring</h2><p>We pride ourselves on our ability to make intricate, handmade custom rings made from exotic materials.</p>",
             "width": "60%",
             "alignment": "center",
-            "text_color": "#ffffff",
+            "text_color": "#111111",
             "simple_background_color": "rgba(0,0,0,0)",
             "variant_padding": false,
             "padding_left": 150,
@@ -1279,8 +1278,8 @@
         "space_around": true,
         "background_color": "#ffffff",
         "small_image": true,
-        "is_top_line": false,
-        "is_bottom_line": false,
+        "is_top_line": true,
+        "is_bottom_line": true,
         "top_logo_size": 16,
         "additional_class": ""
       }
