@@ -98,6 +98,7 @@
     "empty_cart_text3": "",
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
+    "enable_rewards_bar": false,
     "rewards_bar_title": "Unlock Free Shipping",
     "rewards_bar_subtitle": "",
     "top_text": "You're (amount) away from Free Shipping",
