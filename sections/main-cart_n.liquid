@@ -600,9 +600,6 @@
       <div class="rte text-spacing">
         {%- if cart.item_count == 0 -%}
           <p>{{ 'cart.general.empty' | t }}</p>
-          {% if section.settings.text_1 != blank %}
-            <p style="color:red;">{{ section.settings.text_1 }}</p>
-          {% endif %}
 
           <div class="dgCartUpsell dgCartUpSellWrapper  appear-delay-3" id="cart_gift_wrap"></div>
         {%- endif -%}
@@ -823,34 +820,6 @@
               {% assign e_product_id = '' %}
               {% assign p_product_id = '' %}
 
-              {% if settings.show_gift_box %}
-                {% assign first_gift_product = settings['product-handle-1'] %}
-                {% assign first_gift_product_id = first_gift_product.selected_or_first_available_variant.id %}
-                {% assign second_gift_product = settings['product-handle-2'] %}
-                {% assign second_gift_product_id = second_gift_product.selected_or_first_available_variant.id %}
-                {% if first_gift_product_id == item.id or second_gift_product_id == item.id %}
-                  {% assign match_gift_product = true %}
-                {% endif %}
-              {% endif %}
-
-              {% if settings.second_show_gift_box %}
-                {% assign second_tier_first_gift_product = settings['second_product-handle-1'] %}
-                {% assign second_tier_first_gift_product_id = second_tier_first_gift_product.selected_or_first_available_variant.id %}
-                {% assign second_tier_second_gift_product = settings['second_product-handle-2'] %}
-                {% assign second_tier_second_gift_product_id = second_tier_second_gift_product.selected_or_first_available_variant.id %}
-                {% if second_tier_first_gift_product_id == item.id or second_tier_second_gift_product_id == item.id %}
-                  {% assign match_gift_product = true %}
-                {% endif %}
-              {% endif %}
-              {% if settings.third_show_gift_box %}
-                {% assign third_tier_first_gift_product = settings['third_product-handle-1'] %}
-                {% assign third_tier_first_gift_product_id = third_tier_first_gift_product.selected_or_first_available_variant.id %}
-                {% assign third_tier_second_gift_product = settings['third_product-handle-2'] %}
-                {% assign third_tier_second_gift_product_id = third_tier_second_gift_product.selected_or_first_available_variant.id %}
-                {% if third_tier_first_gift_product_id == item.id or third_tier_second_gift_product_id == item.id %}
-                  {% assign match_gift_product = true %}
-                {% endif %}
-              {% endif %}
               {% if settings.show_engraving and settings['product-engraving'] %}
                 {% assign engraving_product = settings['product-engraving'] %}
                 {% assign engraving_product_id = engraving_product.id %}
@@ -873,6 +842,9 @@
 
               {% assign hidden = false %}
 
+              {% comment %} {% if item.product.price == 0 %}
+                {% assign hidden = true %}
+              {% endif %} {% endcomment %}
               {% if match_engraving_product %}
                 {% assign hidden = true %}
               {% endif %}
@@ -885,12 +857,10 @@
               {% if item.product.title contains 'Navidium Shipping Protection' %}
                 {% assign hidden = true %}
               {% endif %}
-              {% if match_gift_product %}
-                {% assign hidden = true %}
-              {% endif %}
-              {% if hidden == false %}
+
+              {% unless item.product.price == 0 %}
                 {% assign main_item_count = main_item_count | plus: 1 %}
-              {% endif %}
+              {% endunless %}
 
               {%- render 'cart-item-horizontal',
                 product: item,
@@ -905,6 +875,9 @@
           {%- endif -%}
         </div>
         <div class="cart__page-col">
+          {% if main_item_count == 0 %}
+            <p class="right" style="color:red;">{{ section.settings.text_1 }}</p>
+          {% endif %}
           {% if main_item_count == 1 %}
             <p class="right" style="color:red;">{{ section.settings.text_2 }}</p>
           {% endif %}
