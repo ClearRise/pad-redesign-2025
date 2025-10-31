@@ -106,7 +106,7 @@
     "enable_placing_both_gifts_in_one_step": true,
     "show_gift_box": true,
     "first_tier_label": "FREE SHIPPING",
-    "first_tier_progress": "You've unlocked a Free Shipping!",
+    "first_tier_progress": "You've unlocked Free Shipping!",
     "gift_box_title": "FREE MYSTERY GIFT",
     "gift_box_text": "",
     "unlock_text_first": "You've unlocked a Free Shipping!",
