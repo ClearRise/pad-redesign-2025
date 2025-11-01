@@ -144,7 +144,6 @@
       "blocks": {
         "image_haGxFE": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -175,6 +174,7 @@
         },
         "image_TdFgGQ": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -276,7 +276,7 @@
         "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
           "type": "advanced",
           "settings": {
-            "subheading": "40% OFF - LIMITED TIME ONLY",
+            "subheading": "BUY ONE GET ONE FREE",
             "heading": "GLOWSTONE 2.0",
             "textarea": "NEW FEATURES",
             "cta_text1": "SHOP NOW",
@@ -321,7 +321,7 @@
         "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
           "type": "advanced",
           "settings": {
-            "subheading": "40% OFF - LIMITED TIME ONLY",
+            "subheading": "BUY ONE GET ONE FREE",
             "heading": "WEDDING BANDS",
             "textarea": "",
             "cta_text1": "SHOP NOW",
@@ -343,7 +343,7 @@
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
           "type": "advanced",
           "settings": {
-            "subheading": "40% OFF - LIMITED TIME ONLY",
+            "subheading": "BUY ONE GET ONE FREE",
             "heading": "METEORITE RINGS",
             "textarea": "",
             "cta_text1": "SHOP NOW",
@@ -388,7 +388,7 @@
         "advanced_gaqMVW": {
           "type": "advanced",
           "settings": {
-            "subheading": "40% OFF - LIMITED TIME ONLY",
+            "subheading": "BUY ONE GET ONE FREE",
             "heading": "WOMEN'S BANDS",
             "textarea": "Bundle + Save",
             "cta_text1": "SHOP NOW",
@@ -505,6 +505,7 @@
       "blocks": {
         "image_XidVDD": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -534,6 +535,7 @@
       "block_order": [
         "image_XidVDD"
       ],
+      "disabled": true,
       "custom_css": [
         ".hero {margin-top: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
       ],
@@ -716,6 +718,7 @@
       "block_order": [
         "heading_bxdWXA"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 768px) {.theme-block {text-align: left; }}"
       ],
@@ -784,6 +787,7 @@
         "text_block_tFpJfd",
         "text_block_DDJCat"
       ],
+      "disabled": true,
       "name": "Text columns with images",
       "settings": {
         "title": "",
@@ -812,6 +816,7 @@
         "heading_Niq4if",
         "text_ri4AVa"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 768px) {.theme-block {text-align: left; }}"
       ],
@@ -867,6 +872,7 @@
         "text_block_VLBz4F",
         "text_block_KDaUB8"
       ],
+      "disabled": true,
       "name": "Text columns with images",
       "settings": {
         "title": "",
@@ -911,6 +917,7 @@
       "block_order": [
         "image_WihxVc"
       ],
+      "disabled": true,
       "custom_css": [
         ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
       ],
@@ -962,6 +969,7 @@
       "block_order": [
         "image_RLTVTn"
       ],
+      "disabled": true,
       "custom_css": [
         ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
       ],
@@ -1013,6 +1021,7 @@
       "block_order": [
         "image_aWAM3n"
       ],
+      "disabled": true,
       "custom_css": [
         ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
       ],
@@ -1064,6 +1073,7 @@
       "block_order": [
         "image_AydWe6"
       ],
+      "disabled": true,
       "name": "Hero Section(New)",
       "settings": {
         "use_img_banner": true,
@@ -1077,7 +1087,6 @@
     },
     "trust_icons_new_ss": {
       "type": "trust-icons_n",
-      "disabled": true,
       "custom_css": [
         "{padding-top: 0px;}"
       ],
@@ -1154,7 +1163,6 @@
         "option_pAzHPw",
         "option_W3mfnE"
       ],
-      "disabled": true,
       "custom_css": [],
       "settings": {
         "full_width": true,
@@ -1298,7 +1306,6 @@
         "child_block_button_4J6Qp8",
         "background_block_pJDhcD"
       ],
-      "disabled": true,
       "custom_css": [
         ".liquid-container-ss {max-width: 420px;}",
         ".liquid-container-ss h2 {font-size: 40px;}"
