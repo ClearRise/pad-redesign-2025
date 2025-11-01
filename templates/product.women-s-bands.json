@@ -16,7 +16,7 @@
           "type": "price",
           "settings": {
             "enable_badge": true,
-            "custom_badge": "LABOR DAY SALE"
+            "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
         "text_BLakNm": {
@@ -358,8 +358,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "FREE GIFT OFFER",
-            "textarea": "Get a Free Blue Burl Carbon Fiber Ring or Pendant on orders $145+<br><b>LIMITED TIME ONLY</b>",
+            "heading": "BLACK FRIDAY SALE",
+            "textarea": "BUY ONE GET ONE FREE: Add two items to your cart and get the cheapest one for FREE",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",

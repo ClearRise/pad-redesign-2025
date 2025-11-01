@@ -103,7 +103,7 @@
     "unlock_text": "You've unlocked a new Reward",
     "bottom_text": "Add a (upsell_product_title)($(upsell_product_price)) for your (main_product_title) to unlock the next tier",
     "enable_placing_both_gifts_in_one_step": true,
-    "show_gift_box": true,
+    "show_gift_box": false,
     "first_tier_label": "Tier 1",
     "first_tier_progress": "You've unlocked a Free Gift!",
     "gift_box_title": "FREE MYSTERY GIFT",
@@ -117,7 +117,7 @@
     "hide_all_gifts_tier_1": true,
     "allow_adding_both_gifts_tier_1": false,
     "first_tier_name": "Unlock a Mystery Gift",
-    "second_show_gift_box": true,
+    "second_show_gift_box": false,
     "second_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
     "gift_box_title_second": "FREE GLOWSTONE RING",
     "cart_threshold_amount_second": "195",
@@ -127,7 +127,7 @@
     "second_hide_gift_2": true,
     "hide_all_gifts_tier_2": true,
     "second_tier_name": "Unlock a Free Glowstone Ring",
-    "third_show_gift_box": true,
+    "third_show_gift_box": false,
     "third_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
     "gift_box_title_third": "BUY ONE GET ONE FREE",
     "unlock_text_third": "Exclusive BOGO Savings Unlocked",
@@ -153,7 +153,7 @@
     "predictive_search_enabled": false,
     "show_breadcrumbs": false,
     "show_breadcrumbs_collection_link": true,
-    "savings_or_entries": "entries",
+    "savings_or_entries": "savings",
     "entries_multiplier": 1,
     "picker_type": "dropdown",
     "product_swatch_style": "circle",
@@ -176,6 +176,7 @@
         "blocks": {
           "timer_banner_CAtMWy": {
             "type": "timer_banner",
+            "disabled": true,
             "settings": {
               "enable_timer_banner": true,
               "banner_text": "$75,000 Sweepstakes + Sale Ends Friday",
@@ -190,10 +191,9 @@
           },
           "announcement_xVJyfX": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "$75,000 Sweepstakes giveaway + 40% off",
-              "link_text": "<span>Shop now for a chance at a once in a lifetime trip</span><span>Orders $145+ Get a FREE Mystery Gift  </span>",
+              "text": "BLACK FRIDAY SALE",
+              "link_text": "BUY ONE GET ONE FREE",
               "link": "shopify://collections/all-products-new"
             }
           },
@@ -300,8 +300,8 @@
           "sticky_collection": false,
           "mobile_top_banner_image": "shopify://shop_images/oie_haHVk88If7KC.png",
           "mobile_menu_top_banner_image": "shopify://shop_images/Black_Ceramic-_Purple_Class-removebg-preview.png",
-          "mobile_menu_top_banner_title": "PRIME DAY SALE",
-          "mobile_menu_top_banner_link_text": "40% off Sitewide",
+          "mobile_menu_top_banner_title": "BLACK FRIDAY SALE",
+          "mobile_menu_top_banner_link_text": "Buy One Get One Free",
           "mobile_menu_top_banner_link": "shopify://collections/all-products-new",
           "mobile_menu_top_banner_background": "",
           "announcement_compact": true,

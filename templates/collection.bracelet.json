@@ -194,7 +194,7 @@
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
-        "custom_badge": "",
+        "custom_badge": "BUY ONE GET ONE FREE",
         "saved_amount_option": "display_entries",
         "entries_multiplier": 1,
         "load_more": false

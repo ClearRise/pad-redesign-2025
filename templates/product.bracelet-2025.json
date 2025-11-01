@@ -20,7 +20,7 @@
           "type": "price",
           "settings": {
             "enable_badge": true,
-            "custom_badge": "LABOR DAY SALE"
+            "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
         "rivo_loyalty_rewards_referrals_potential_points_tzhzhW": {
@@ -100,6 +100,7 @@
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
+          "disabled": true,
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
@@ -403,8 +404,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "FREE GIFT OFFER",
-            "textarea": "Get a Free Mystery Gift (ring or pendant with guaranteed MSRP of $250+) on orders $145+<br><b>LIMITED TIME ONLY</b>",
+            "heading": "BLACK FRIDAY SALE",
+            "textarea": "BUY ONE GET ONE FREE: Add two items to your cart and get the cheapest one for FREE",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
@@ -659,9 +660,9 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
+            "max_width": 1200,
             "show_shop_reviews": false,
-            "empty_state": "empty_widget",
-            "max_width": 1200
+            "empty_state": "empty_widget"
           }
         }
       },
