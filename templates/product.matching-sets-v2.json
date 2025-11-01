@@ -16,7 +16,7 @@
           "type": "price",
           "settings": {
             "enable_badge": true,
-            "custom_badge": "BUY ONE GET ONE FREE"
+            "custom_badge": "BUY ONE GET ONE FREE - 50% OFF"
           }
         },
         "judge_me_reviews_preview_badge_wyndin": {
@@ -361,7 +361,7 @@
           "settings": {
             "subheading": "",
             "heading": "BLACK FRIDAY SALE",
-            "textarea": "BUY ONE GET ONE FREE: Add two items to your cart and get the cheapest one for FREE",
+            "textarea": "BUY ONE GET ONE FREE: All matching sets 50% off",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",
