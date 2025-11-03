@@ -133,8 +133,16 @@
       "blocks": {
         "heading_dpKprJ": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "title": "AS UNIQUE AND STORIED AS THE MEN WE CRAFT THEM FOR"
+          }
+        },
+        "text_KXNAmm": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h3><strong>AS UNIQUE AND STORIED AS THE MEN WE CRAFT THEM FOR</strong></h3>"
           }
         },
         "text_tdTJpE": {
@@ -147,8 +155,10 @@
       },
       "block_order": [
         "heading_dpKprJ",
+        "text_KXNAmm",
         "text_tdTJpE"
       ],
+      "custom_css": [],
       "name": "Rich text",
       "settings": {
         "align_text": "left",
