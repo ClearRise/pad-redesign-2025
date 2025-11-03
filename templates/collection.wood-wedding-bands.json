@@ -140,6 +140,7 @@
         },
         "text_KXNAmm": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "enlarge_text": true,
             "text": "<h3><strong>AS UNIQUE AND STORIED AS THE MEN WE CRAFT THEM FOR</strong></h3>"
@@ -149,14 +150,23 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>Every ring we make begins with materials that have already lived a lifetime. Koa wood shaped by island winds, whiskey barrels seasoned through years of aging, and deer antler gathered from the wild. Each carries its own story before it ever becomes part of yours.</p><p>We bring those stories together by hand, crafting bands that honor tradition, time, and the people who wear them. More than a ring, it’s a reminder of strength, character, and history worth carrying forward.</p><p>Give a gift that’s handcrafted to stand the test of time, with our best prices of the year.</p>"
+            "text": "<h3><strong>AS UNIQUE AND STORIED AS THE MEN WE CRAFT THEM FOR</strong></h3><p>Every ring we make begins with materials that have already lived a lifetime. Koa Wood shaped by island winds, Whiskey Barrels seasoned through years of aging, and Deer Antler gathered from the wild. Each carries its own story before it ever becomes part of yours.</p><p>We bring those stories together by hand, crafting bands that honor tradition, time, and the people who wear them. More than a ring, it’s a reminder of strength, character, and history worth carrying forward.</p><p>Give a gift that’s handcrafted to stand the test of time, with our best prices of the year.</p>"
+          }
+        },
+        "text_TUY7pw": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
           }
         }
       },
       "block_order": [
         "heading_dpKprJ",
         "text_KXNAmm",
-        "text_tdTJpE"
+        "text_tdTJpE",
+        "text_TUY7pw"
       ],
       "custom_css": [],
       "name": "Rich text",
