@@ -16,7 +16,7 @@
 {{ 'main-collection.css' | asset_url | stylesheet_tag: preload:true }}
 
 <div
-  class="collection-content custom_collection_content"
+  class="current collection-content custom_collection_content"
   data-section-id="{{ section.id }}"
   data-section-type="collection-grid"
 >
@@ -322,6 +322,22 @@
         "type": "checkbox",
         "id": "load_more",
         "label": "Load more"
+      },
+      {
+        "type": "header",
+        "content": "Tryon Badge"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_tryon_badge",
+        "label": "Show Tryon Badge",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tryon_badge_text",
+        "label": "Tryon Badge Text",
+        "default": "Try Free"
       }
     ],
     "blocks": [
