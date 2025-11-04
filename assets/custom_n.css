@@ -2698,3 +2698,22 @@ label.variant__label.custom_label {
     display: none;
   }
 }
+
+
+/* Tryon Badge */
+.grid-product__subtitle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.grid-product__tryon-badge {
+  background-color: var(--colorSaleTag) !important;
+  color: var(--colorBtnPrimaryText);
+  font-size: calc(var(--typeBaseSize) * .85);
+  padding: 2px 12px;
+  transition: opacity .4s ease;
+  border-radius: 20px;
+  text-align: center;
+  min-width: 5em;
+}
+/* End Tryon Badge */
