@@ -318,6 +318,7 @@
         "blocks": {
           "1494292487693": {
             "type": "newsletter",
+            "disabled": true,
             "settings": {
               "show_footer_title": true,
               "title": "patrick adair",
@@ -327,6 +328,7 @@
           },
           "1494301487049": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "show_footer_title": true,
               "menu": "footer-shop-menu",
@@ -335,6 +337,7 @@
           },
           "38235289-faf5-4ce6-96f4-f6489ba7e199": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "show_footer_title": true,
               "menu": "footer",
@@ -343,6 +346,7 @@
           },
           "c53a7c74-707e-4385-bf44-c1dc2610f22a": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "show_footer_title": true,
               "menu": "footer-menu-legal",
@@ -361,6 +365,7 @@
           },
           "contact_8bmYdX": {
             "type": "contact",
+            "disabled": true,
             "settings": {
               "show_footer_title": true,
               "title": "CONTACT",
