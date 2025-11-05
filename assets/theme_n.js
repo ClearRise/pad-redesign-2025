@@ -57,6 +57,7 @@ lazySizesConfig.expFactor = 4;
 function tryonHandlingItem() {
   const TRYON_VARIANT_ID = 42097358766162;
   const TRYON_DESCRIPTION = "tryon";
+  const TRYON_SELLING_PLAN_ID = 1848737874;
 
   console.log("updateCartForTryon");
   fetch("/cart.js")
@@ -87,6 +88,7 @@ function tryonHandlingItem() {
           body: JSON.stringify({
             id: TRYON_VARIANT_ID,
             quantity: 1,
+            selling_plan: TRYON_SELLING_PLAN_ID
           }),
         })
           .then((res) => res.json())
