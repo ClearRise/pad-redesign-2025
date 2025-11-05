@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "replo_bfcm_offer_template_Czgizp": {
+      "type": "replo-bfcm-offer-template",
+      "name": "BFCM Offer Template",
+      "settings": {
+        "replo_text_b88264e7-f181-4af8-8302-cc2956afbc17": "<p><strong>Better Than Black Friday Sale</strong></p>",
+        "replo_text_d02c27e6-9152-40cd-bbbc-3f163bb6ecc4": "<p>Create your perfect bundle of Glowstone rings and accessories curated by you. Choose from our most iconic designs and save big this Black Friday with predetermined markdown pricing. Mix, match, and make your own set, crafted to shine your way.</p>"
+      }
+    },
     "main": {
       "type": "main-product_n",
       "blocks": {
@@ -533,6 +541,7 @@
         "advanced_TwEqdf",
         "advanced_eReELk"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "gutter_size": 0,
@@ -676,6 +685,7 @@
     }
   },
   "order": [
+    "replo_bfcm_offer_template_Czgizp",
     "main",
     "17563958449821061e",
     "rich_text_zd3AyU",
