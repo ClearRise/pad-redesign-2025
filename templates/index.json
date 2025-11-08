@@ -277,10 +277,10 @@
           "type": "advanced",
           "settings": {
             "subheading": "BUY ONE GET ONE FREE",
-            "heading": "GLOWSTONE 2.0",
-            "textarea": "NEW FEATURES",
+            "heading": "GLOWSTONE RINGS",
+            "textarea": "",
             "cta_text1": "SHOP NOW",
-            "cta_link1": "shopify://collections/glowstone-2-0",
+            "cta_link1": "shopify://collections/all-glowstone-rings",
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify://shop_images/IMG_3895_1800x1800_85051cc1-74fe-4254-8a8d-9f65fe84cab2.webp",
@@ -702,7 +702,9 @@
         "view_all": true,
         "divider": false,
         "saved_amount_option": "display_entries",
-        "entries_multiplier": 1
+        "entries_multiplier": 1,
+        "show_tryon_badge": false,
+        "tryon_badge_text": "Try Free"
       }
     },
     "rich_text_bj7VnU": {
@@ -1244,7 +1246,9 @@
         "view_all": true,
         "divider": false,
         "saved_amount_option": "basic_logic",
-        "entries_multiplier": 1
+        "entries_multiplier": 1,
+        "show_tryon_badge": false,
+        "tryon_badge_text": "Try Free"
       }
     },
     "advanced_content_flexible_EWdeYp": {
