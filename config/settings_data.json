@@ -537,7 +537,7 @@
       },
       "14660309866608708618": {
         "type": "shopify://apps/spd-split-payment/blocks/app-embed/35a708d6-4cb9-406a-9fdb-e05a89b032c6",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     }
