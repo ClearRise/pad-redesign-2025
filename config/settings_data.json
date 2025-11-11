@@ -531,6 +531,11 @@
         "type": "shopify://apps/bogos-io-free-gift/blocks/app-embed/0432bba6-720a-4e95-be5a-b868386f7aa6",
         "disabled": false,
         "settings": {}
+      },
+      "14660309866608708618": {
+        "type": "shopify://apps/spd-split-payment/blocks/app-embed/35a708d6-4cb9-406a-9fdb-e05a89b032c6",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
