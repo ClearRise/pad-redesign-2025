@@ -862,7 +862,7 @@
                 {% assign main_item_count = main_item_count | plus: 1 %}
               {% endunless %}
 
-              {%- render 'cart-item-horizontal',
+              {%- render 'cart-item-horizontal_n',
                 product: item,
                 line: forloop.index,
                 intelligems_discount: intelligems_discount,
