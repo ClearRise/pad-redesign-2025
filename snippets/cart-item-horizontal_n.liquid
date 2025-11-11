@@ -112,7 +112,7 @@
             {% if property.first contains '_relative_product_' %}
               {% assign is_relative_product = true %}
               {% assign relative_product_id = property.last %}
-              
+
               <div class="product-option action_icons">
                 <input
                   type="hidden"
@@ -150,7 +150,7 @@
                   {% assign p_product_id = protection_product.selected_or_first_available_variant.id %}
 
                   {% assign is_premium_protection_product = true %}
-                  {% assign relative_premium_protection_product_id = protection_product.selected_or_first_available_variant.id %}
+                  {% assign relative_premium_protection_product_id = p_product_id %}
 
                   <div class="product-option action_icons">
                     <input
@@ -173,7 +173,7 @@
                   {% assign e_product_id = engrave_product.selected_or_first_available_variant.id %}
 
                   {% assign is_engraving_product = true %}
-                  {% assign relative_engraving_product_id = engrave_product.selected_or_first_available_variant.id%}
+                  {% assign relative_engraving_product_id = e_product_id %}
 
                   <div class="product-option action_icons">
                     <input type="hidden" name="engraving" class="engraving_p" value="true">
@@ -483,7 +483,7 @@
                       product.original_price
                       | plus: engrave_product.selected_or_first_available_variant.price
                       | money_without_trailing_zeros
-                    }}asf
+                    }}
                   {%- endif -%}
                 {% else %}
                   {%- if is_tryon_item -%}
@@ -513,6 +513,7 @@
                     const relativePremiumProtectionProductId = {{ relative_premium_protection_product_id | json }};
                     const relativeEngravingProductId = {{ relative_engraving_product_id | json }};
                     const relativeGlowstoneEnhancementId = {{ relative_glowstone_enhancement_id | json }};
+                    {% comment %} alert("relativeProductId: " + relativeProductId + " relativePremiumProtectionProductId: " + relativePremiumProtectionProductId + " relativeEngravingProductId: " + relativeEngravingProductId + " relativeGlowstoneEnhancementId:  " + relativeGlowstoneEnhancementId); {% endcomment %}
 
                     if (originalPriceElement && finalPriceElement) {
                       // Function to fetch cart and calculate total price with all related products
