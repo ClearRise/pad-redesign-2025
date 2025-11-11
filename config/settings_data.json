@@ -222,10 +222,9 @@
           },
           "scroll_navi_mobile_CqAMD8": {
             "type": "scroll_navi_mobile",
-            "disabled": true,
             "settings": {
               "sub_menu": "<u>Try Free</u>",
-              "link_submenu": "shopify://collections/try-before-you-buy"
+              "link_submenu": "https://patrickadairdesigns.com/pages/try-before-you-buy"
             }
           },
           "scroll_navi_mobile_T4MxJh": {
