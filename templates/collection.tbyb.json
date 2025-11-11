@@ -255,6 +255,12 @@
       ],
       "disabled": true,
       "settings": {
+        "show_title": false,
+        "title": "",
+        "align_title": "left",
+        "sub_title": "",
+        "align_sub_title": "left",
+        "show_img_title": false,
         "full_width": false,
         "gutter_size": 20,
         "space_above": true,
@@ -304,7 +310,10 @@
         "subtitle_type": "two",
         "custom_badge": "Try Before You Buy",
         "saved_amount_option": "basic_logic",
-        "load_more": false
+        "entries_multiplier": 1,
+        "load_more": false,
+        "show_tryon_badge": false,
+        "tryon_badge_text": "Try Free"
       }
     },
     "faq_VdwH4a": {
@@ -338,25 +347,11 @@
             "text": "<p>Banks have limits for how long a hold can be valid. We are likely still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations.</p>"
           }
         },
-        "question_DYNtCH": {
-          "type": "question",
-          "settings": {
-            "title": "Why is my card being re-authorized after already initiating a return or before my order has shipped?",
-            "text": "<p>Banks have limits for how long a hold can be valid. In the event of a return, we are still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations. If your order has not shipped yet, it will ship shortly.</p>"
-          }
-        },
         "question_78TDdL": {
           "type": "question",
           "settings": {
             "title": "My trial ended and I was charged, but now I want to return something. Is this still possible?",
             "text": "<p>Yes, you can still return eligible items within the our return window. Check out our <a href=\"/pages/limited-lifetime-warranty-and-return-policy\" target=\"_blank\" title=\"Limited Lifetime Warranty and Return Policy\">returns policy</a> for more details.</p>"
-          }
-        },
-        "question_4heaRU": {
-          "type": "question",
-          "settings": {
-            "title": "Are Try Before You Buy Orders Eligible For a Free Gift or Other Promotions?",
-            "text": "<p>Unfortunately, due to the nature of Try Before You Buy, orders containing Try Before You Buy products are NOT eligible for free gifts or other relevant promotions.</p>"
           }
         }
       },
@@ -365,9 +360,7 @@
         "question_ye4zpL",
         "question_nWPfzJ",
         "question_WNkRQy",
-        "question_DYNtCH",
-        "question_78TDdL",
-        "question_4heaRU"
+        "question_78TDdL"
       ],
       "name": "FAQ",
       "settings": {
