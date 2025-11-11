@@ -1,0 +1,663 @@
+{% liquid
+  assign is_relative_product = false
+  assign is_glowstone_enhancement = false
+  assign is_engraving_product = false
+  assign is_premium_protection_product = false
+
+  assign relative_product_id = ''
+  assign relative_premium_protection_product_id = ''
+  assign relative_engraving_product_id = ''
+  assign relative_glowstone_enhancement_id = ''
+%}
+
+<div
+  class="cart__item rm_border d-flex product-line-item-{{ product.variant_id }}"
+  data-quantity="{{ product.quantity }}"
+  data-key="{{ product.key }}"
+  data-handle="{{ product.product.handle }}"
+
+  {% if hidden %}
+    style="
+      height: 0 !important;
+      opacity: 0;
+      visibility: hidden;
+      padding: 0;
+      display: none;
+    "
+  {% endif %}
+>
+  {%- assign img_url = product | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+  <div class="cart__image cart-image-for-mobile">
+    <a
+      href="{{ product.url }}"
+      style="height: 0; padding-bottom: {{ 100 | divided_by: product.image.aspect_ratio }}%;"
+    >
+      <img
+        class="lazyload"
+        data-src="{{ img_url }}"
+        data-widths="[180, 360, 540]"
+        data-aspectratio="{{ product.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ product.product.title | escape }}"
+      >
+      <noscript>
+        <img
+          class="lazyloaded"
+          src="{{ product | img_url: '400x' }}"
+          alt="{{ product.product.title | escape }}"
+        >
+      </noscript>
+    </a>
+  </div>
+  <div class="cart-item-product flex-1 d-flex">
+    <div class="cart__remove flex-grid--center d-flex">
+      <a
+        href="{{ routes.cart_change_url }}?id={{ product.key }}&amp;quantity=0"
+        data-product-id="{{product.variant_id}}"
+        class="text-link"
+        alt=" {{ 'cart.general.remove' | t }}"
+      >
+        {% render 'icon-delete_n' %}
+      </a>
+    </div>
+    <div class="cart__image d-flex flex-grid--center">
+      <a
+        href="{{ product.url }}"
+        style="height: 0; padding-bottom: {{ 100 | divided_by: product.image.aspect_ratio }}%;"
+      >
+        <img
+          class="lazyload"
+          data-src="{{ img_url }}"
+          data-widths="[180, 360, 540]"
+          data-aspectratio="{{ product.aspect_ratio }}"
+          data-sizes="auto"
+          alt="{{ product.product.title | escape }}"
+        >
+        <noscript>
+          <img
+            class="lazyloaded"
+            src="{{ product | img_url: '400x' }}"
+            alt="{{ product.product.title | escape }}"
+          >
+        </noscript>
+      </a>
+    </div>
+    <div class="cart__item-details">
+      <div class="cart__item-title ">
+        <a href="{{ product.url }}" class="cart__item-name black_txt">
+          {{ product.product.title }}
+        </a>
+        {%- unless product.product.has_only_default_variant -%}
+          <div class="cart__item--variants">
+            {%- for option in product.options_with_values -%}
+              <div class="black_txt">
+                <span>{{ option.name }}:</span> {{ option.value }}
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endunless -%}
+
+        {%- if product.selling_plan_allocation != empty and product.selling_plan_allocation.selling_plan.name != blank -%}
+          <div class="cart__item--variants selling_plan">
+            {{ product.selling_plan_allocation.selling_plan.name }}
+          </div>
+        {%- endif -%}
+        {%- assign property_size = product.properties | size -%}
+        <span class="bold_load_cart_item_properties black_txt"></span>
+
+        <!-- relational products start (webdev 11/11/2025) -->
+        {% if property_size > 0 %}
+          <!-- relative product -->
+          {% for property in product.properties %}
+            {% if property.first contains '_relative_product_' %}
+              {% assign is_relative_product = true %}
+              {% assign relative_product_id = property.last %}
+              
+              <div class="product-option action_icons">
+                <input
+                  type="hidden"
+                  name="relative_product"
+                  class="relative_product"
+                  value="{{ property.last }}"
+                  data-product-id="{{ property.last }}"
+                >
+              </div>
+            {% endif %}
+          {% endfor %}
+          <!-- end relative product -->
+          <!-- glowstone enhancement -->
+          {% if product.properties._glowstone_enhancement == 'Yes' %}
+            {% assign is_glowstone_enhancement = true %}
+            {% assign relative_glowstone_enhancement_id = product.properties._prot-glowstone_enhancement_id %}
+            <div class="product-option action_icons">
+              <input
+                type="hidden"
+                class="Protection_p_glow"
+                value="true"
+                data-product-id="{{ product.properties._prot-glowstone_enhancement_id }}"
+              >
+            </div>
+          {% endif %}
+          <!-- end glowstone enhancement -->
+          <!-- protection plan -->
+          {% for p in product.properties %}
+            {% if product.product.metafields.custom.premium_protection_product %}
+              {% if p.first contains 'Protection Plan' %}
+                {% unless p.last == '' or p.last == null %}
+
+                  {% assign protection_product = all_products[product.product.metafields.custom.premium_protection_product] %}
+                  {% assign protection_product_id = protection_product.selected_or_first_available_variant.id %}
+                  {% assign p_product_id = protection_product.selected_or_first_available_variant.id %}
+
+                  {% assign is_premium_protection_product = true %}
+                  {% assign relative_premium_protection_product_id = protection_product.selected_or_first_available_variant.id %}
+
+                  <div class="product-option action_icons">
+                    <input
+                      type="hidden"
+                      name="Protection"
+                      class="Protection_p"
+                      value="true"
+                      data-product-id="{{ protection_product_id }}"
+                    >
+                  </div>
+                {% endunless %}
+              {% endif %}
+            {% endif %}
+            <!-- engraving -->
+            {% if settings.show_engraving and settings['product-engraving'] %}
+              {% if p.first contains 'engraving' %}
+                {% unless p.last == '' or p.last == null %}
+                  {% assign engrave_product = settings['product-engraving'] %}
+                  {% assign first_gift_product_id_var = engrave_product.selected_or_first_available_variant.id %}
+                  {% assign e_product_id = engrave_product.selected_or_first_available_variant.id %}
+
+                  {% assign is_engraving_product = true %}
+                  {% assign relative_engraving_product_id = engrave_product.selected_or_first_available_variant.id%}
+
+                  <div class="product-option action_icons">
+                    <input type="hidden" name="engraving" class="engraving_p" value="true">
+                  </div>
+                {% endunless %}
+              {% endif %}
+            {% endif %}
+            <!-- end engraving -->
+          {% endfor %}
+        {% endif %}
+        <!-- relational products end (webdev 11/11/2025) -->
+
+        <div class="bold_edit_in_cart"></div>
+      </div>
+
+      {%- if product.line_level_discount_allocations != blank -%}
+        <div class="custom_discount_wrap">
+          {%- for discount_allocation in product.line_level_discount_allocations -%}
+            {% if discount_allocation.amount > 0 %}
+              {% unless discount_allocation.discount_application.title == 'Discount' %}
+                <small class="cart__discount">
+                  {{- discount_allocation.discount_application.title }} (-
+                  {{- discount_allocation.amount | money_without_trailing_zeros -}}
+                  )
+                </small>
+              {% endunless %}
+            {% endif %}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+  <div class="cart-item-quantity d-flex flex-grid--center">
+    <div class="js-qty__wrapper">
+      <!-- Tryon -->
+      <!-- Show quantity selector only if not a Tryon item -->
+      {% unless product.selling_plan_allocation
+        and product.selling_plan_allocation.selling_plan.description == 'tryon'
+      %}
+        <!-- End Tryon -->
+        <label for="cart_updates_{{ product.key }}" class="hidden-label">{{ 'cart.label.quantity' | t }}</label>
+        <input
+          type="text"
+          {% if match_gift_product %}
+            style="pointer-events: none;"
+          {% endif %}
+          id="cart_updates_{{ product.key }}"
+          name="updates[]"
+          class="js-qty__num black_txt"
+          value="{{ product.quantity }}"
+          min="0"
+          pattern="[0-9]*"
+          data-id="{{ product.key }}"
+          data-engraving="{{ e_product_id }}"
+          data-protection="{{ p_product_id }}"
+          {%- if product.properties._glowstone_enhancement == 'Yes' -%}
+            data-glowston="{{ product.properties._prot-glowstone_enhancement_id }}"
+          {%- endif -%}
+          data-quantity="{{ product.quantity }}"
+        >
+        <button
+          type="button"
+          class="js-qty__adjust js-qty__adjust--minus"
+          aria-label="{{ 'cart.general.reduce_quantity' | t }}"
+        >
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" viewBox="0 0 20 20">
+            <path fill="#444" d="M17.543 11.029H2.1A1.032 1.032 0 0 1 1.071 10c0-.566.463-1.029 1.029-1.029h15.443c.566 0 1.029.463 1.029 1.029 0 .566-.463 1.029-1.029 1.029z"/>
+          </svg>
+          <span class="icon__fallback-text" aria-hidden="true">&minus;</span>
+        </button>
+        <button
+          {% if match_gift_product %}
+            style="pointer-events: none;"
+          {% endif %}
+          type="button"
+          class="js-qty__adjust js-qty__adjust--plus"
+          aria-label="{{ 'cart.general.increase_quantity' | t }}"
+        >
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 20 20">
+            <path fill="#444" d="M17.409 8.929h-6.695V2.258c0-.566-.506-1.029-1.071-1.029s-1.071.463-1.071 1.029v6.671H1.967C1.401 8.929.938 9.435.938 10s.463 1.071 1.029 1.071h6.605V17.7c0 .566.506 1.029 1.071 1.029s1.071-.463 1.071-1.029v-6.629h6.695c.566 0 1.029-.506 1.029-1.071s-.463-1.071-1.029-1.071z"/>
+          </svg>
+          <span class="icon__fallback-text" aria-hidden="true">+</span>
+        </button>
+        <!-- Tryon -->
+      {% endunless %}
+      <!-- End Tryon -->
+    </div>
+  </div>
+    <div class="cart-item-price-container-ss d-flex justify-content-flex-end">
+      <div class="cart__item-price-col text-right">
+        {%- comment -%} Check if this is a tryon item (sales plan 1848737874) {%- endcomment -%}
+        {%- assign is_tryon_item = false -%}
+        {%- if product.selling_plan_allocation != empty and product.selling_plan_allocation.selling_plan.id == 1848737874 -%}
+          {%- assign is_tryon_item = true -%}
+        {%- endif -%}
+        <script>
+          console.log({{ is_tryon_item | json }}, "is_tryon_item");
+        </script>
+
+        {% if product.original_price != product.final_price %}
+          {% if product.final_price == 0 %}
+            <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+            <small class="cart__price cart__price--strikethrough  black_txt">
+              <span>
+                <span
+                  class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price"
+                  data-item-key="{{item.key}}"
+                  style="display:none !important;"
+                ></span>
+                <span class="igPrice" data-variant-id="{{ product.id }}">
+                  {%- if is_tryon_item -%}
+                    {{ 0 | money_without_trailing_zeros }}
+                  {%- else -%}
+                    {{- product.original_price | money_without_trailing_zeros -}}
+                  {%- endif -%}
+                </span>
+              </span>
+            </small>
+          {% else %}
+          {% if intelligems_discount == 0 %}
+            <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+            <small class="cart__price cart__price--strikethrough  black_txt">
+              <span>
+                <span
+                  class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price"
+                  data-item-key="{{item.key}}"
+                  style="display:none !important;"
+                ></span>
+                <div style="display: none;" class="real-_-price-original-{{ product.id }}">
+                  {{ product.original_price | divided_by: 100 }}
+                </div>
+                <div style="display: none;" class="real-_-price-engraving-{{ product.id }}">
+                  {{ engrave_product.selected_or_first_available_variant.price | divided_by: 100 }}
+                </div>
+                <span class="real-_-price-{{ product.id }} real-_-price-engraving-{{ product.id }}">
+                  {%- if property_size > 0 and e_product_id != blank %}
+                    {%- if is_tryon_item -%}
+                      {{ engrave_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                    {%- else -%}
+                      {{
+                        product.original_price
+                        | plus: engrave_product.selected_or_first_available_variant.price
+                        | money_without_trailing_zeros
+                      }}
+                    {%- endif -%}
+                  {% else %}
+                    {%- if is_tryon_item -%}
+                      {{ 0 | money_without_trailing_zeros }}
+                    {%- else -%}
+                      {{ product.original_price | money_without_trailing_zeros }}
+                    {%- endif -%}
+                  {% endif %}
+                </span>
+              </span>
+              {% comment %} here script {% endcomment %}
+              {% unless is_tryon_item %}
+              <script>
+                (function() {
+                  const productLineItem = document.querySelector('.product-line-item-{{ product.variant_id }}');
+                  const productId = {{ product.id }};
+                  const originalPriceElement = productLineItem ? productLineItem.querySelector('.real-_-price-original-' + productId) : null;
+                  const engravingPriceElement = productLineItem ? productLineItem.querySelector('.real-_-price-engraving-' + productId) : null;
+                  const finalPriceElement = productLineItem ? productLineItem.querySelector('.real-_-price-' + productId) : null;
+
+                  // Flags and variant IDs from Liquid
+                  const isRelativeProduct = {{ is_relative_product | json }};
+                  const isGlowstoneEnhancement = {{ is_glowstone_enhancement | json }};
+                  const isEngravingProduct = {{ is_engraving_product | json }};
+                  const isPremiumProtectionProduct = {{ is_premium_protection_product | json }};
+                  
+                  const relativeProductId = {{ relative_product_id | json }};
+                  const relativePremiumProtectionProductId = {{ relative_premium_protection_product_id | json }};
+                  const relativeEngravingProductId = {{ relative_engraving_product_id | json }};
+                  const relativeGlowstoneEnhancementId = {{ relative_glowstone_enhancement_id | json }};
+
+                  if (originalPriceElement && finalPriceElement) {
+                    // Function to fetch cart and calculate total price with all related products
+                    async function updateFinalPrice() {
+                      try {
+                        // Fetch cart data
+                        const cartResponse = await fetch('/cart.js');
+                        const cart = await cartResponse.json();
+                        
+                        // Start with original price
+                        const originalPrice = parseFloat(originalPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0;
+                        let totalPrice = originalPrice;
+                        
+                        // Add engraving price if exists
+                        if (engravingPriceElement) {
+                          const engravingPrice = parseFloat(engravingPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0;
+                          totalPrice += engravingPrice;
+                        }
+                        
+                        // Check and add relative product price
+                        if (isRelativeProduct && relativeProductId) {
+                          const relativeItem = cart.items.find(item => item.variant_id == relativeProductId);
+                          if (relativeItem) {
+                            totalPrice += relativeItem.final_price / 100; // Convert from cents to dollars
+                          }
+                        }
+                        
+                        // Check and add premium protection product price
+                        if (isPremiumProtectionProduct && relativePremiumProtectionProductId) {
+                          const protectionItem = cart.items.find(item => item.variant_id == relativePremiumProtectionProductId);
+                          if (protectionItem) {
+                            totalPrice += protectionItem.final_price / 100;
+                          }
+                        }
+                        
+                        // Check and add engraving product price (if not already added via engravingPriceElement)
+                        if (isEngravingProduct && relativeEngravingProductId && !engravingPriceElement) {
+                          const engravingItem = cart.items.find(item => item.variant_id == relativeEngravingProductId);
+                          if (engravingItem) {
+                            totalPrice += engravingItem.final_price / 100;
+                          }
+                        }
+                        
+                        // Check and add glowstone enhancement price
+                        if (isGlowstoneEnhancement && relativeGlowstoneEnhancementId) {
+                          const glowstoneItem = cart.items.find(item => item.variant_id == relativeGlowstoneEnhancementId);
+                          if (glowstoneItem) {
+                            totalPrice += glowstoneItem.final_price / 100;
+                          }
+                        }
+                        
+                        // Format the price as currency (assuming USD format)
+                        const formattedPrice = '$' + totalPrice.toFixed(2);
+                        finalPriceElement.textContent = formattedPrice;
+                      } catch (error) {
+                        console.error('Error fetching cart data:', error);
+                        // Fallback to original calculation if AJAX fails
+                        const originalPrice = parseFloat(originalPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0;
+                        const engravingPrice = engravingPriceElement ? parseFloat(engravingPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0 : 0;
+                        const totalPrice = originalPrice + engravingPrice;
+                        const formattedPrice = '$' + totalPrice.toFixed(2);
+                        finalPriceElement.textContent = formattedPrice;
+                      }
+                    }
+
+                    // Create a MutationObserver to watch for changes in the original price element
+                    const observer = new MutationObserver(function(mutations) {
+                      mutations.forEach(function(mutation) {
+                        if (mutation.type === 'childList' || mutation.type === 'characterData') {
+                          updateFinalPrice();
+                        }
+                      });
+                    });
+
+                    // Start observing the original price element
+                    observer.observe(originalPriceElement, {
+                      childList: true,
+                      characterData: true,
+                      subtree: true
+                    });
+
+                    // Listen for cart updates
+                    document.addEventListener('cart:updated', updateFinalPrice);
+                    document.addEventListener('ajaxProduct:added', updateFinalPrice);
+
+                    // Initial calculation
+                    updateFinalPrice();
+                  }
+                })();
+              </script>
+              {% endunless %}
+            </small>
+          {% endif %}
+        {% endif %}
+
+        <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+        <span class="cart__price cart__discount black_txt">
+          <span class="bcpo-cart-item-price" data-key="{{product.key}}">
+            {%- if is_tryon_item -%}
+              {{ 0 | money_without_trailing_zeros }}
+            {%- else -%}
+              {{- product.final_price | money_without_trailing_zeros -}}
+            {%- endif -%}
+          </span>
+        </span>
+      {% else %}
+        <!-- Tryon -->
+        <!-- Show quantity selector only if not a Tryon item -->
+        {% if product.selling_plan_allocation and product.selling_plan_allocation.selling_plan.description == 'tryon' %}
+          <span style="font-weight: bold"> {{ product.quantity }} × </span>
+        {% endif %}
+        <!-- End Tryon -->
+        <span class="123 cart__price  black_txt">
+          <span>
+            <span
+              class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price"
+              data-item-key="{{item.key}}"
+              style="display:none !important;"
+            ></span>
+            {% if intelligems_discount == 0 %}
+              <div style="display: none;" class="real-_-price-original-{{ product.id }}">
+                {{ product.original_price | divided_by: 100 }}
+              </div>
+              <div style="display: none;" class="real-_-price-engraving-{{ product.id }}">
+                {{ engrave_product.selected_or_first_available_variant.price | divided_by: 100 }}
+              </div>
+              <span class="real-_-price-{{ product.id }} real-_-price-engraving-{{ product.id }}">
+                {%- if property_size > 0 and e_product_id != blank %}
+                  {%- if is_tryon_item -%}
+                    {{ engrave_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                  {%- else -%}
+                    {{
+                      product.original_price
+                      | plus: engrave_product.selected_or_first_available_variant.price
+                      | money_without_trailing_zeros
+                    }}asf
+                  {%- endif -%}
+                {% else %}
+                  {%- if is_tryon_item -%}
+                    {{ 0 | money_without_trailing_zeros }}
+                  {%- else -%}
+                    {{ product.original_price | money_without_trailing_zeros }}
+                  {%- endif -%}
+                {% endif %}
+              </span>
+              {% comment %} here script {% endcomment %}
+              {% unless is_tryon_item %}
+                <script>
+                  (function() {
+                    const productId = {{ product.id }};
+                    const productLineItem = document.querySelector('.product-line-item-{{ product.variant_id }}');
+                    const originalPriceElement = productLineItem ? productLineItem.querySelector('.real-_-price-original-' + productId) : document.querySelector('.real-_-price-original-' + productId);
+                    const engravingPriceElement = productLineItem ? productLineItem.querySelector('.real-_-price-engraving-' + productId) : document.querySelector('.real-_-price-engraving-' + productId);
+                    const finalPriceElement = productLineItem ? productLineItem.querySelector('.real-_-price-' + productId) : document.querySelector('.real-_-price-' + productId);
+
+                    // Flags and variant IDs from Liquid
+                    const isRelativeProduct = {{ is_relative_product | json }};
+                    const isGlowstoneEnhancement = {{ is_glowstone_enhancement | json }};
+                    const isEngravingProduct = {{ is_engraving_product | json }};
+                    const isPremiumProtectionProduct = {{ is_premium_protection_product | json }};
+                    
+                    const relativeProductId = {{ relative_product_id | json }};
+                    const relativePremiumProtectionProductId = {{ relative_premium_protection_product_id | json }};
+                    const relativeEngravingProductId = {{ relative_engraving_product_id | json }};
+                    const relativeGlowstoneEnhancementId = {{ relative_glowstone_enhancement_id | json }};
+
+                    if (originalPriceElement && finalPriceElement) {
+                      // Function to fetch cart and calculate total price with all related products
+                      async function updateFinalPrice() {
+                        try {
+                          // Fetch cart data
+                          const cartResponse = await fetch('/cart.js');
+                          const cart = await cartResponse.json();
+                          
+                          // Start with original price
+                          const originalPrice = parseFloat(originalPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0;
+                          let totalPrice = originalPrice;
+                          
+                          // Add engraving price if exists
+                          if (engravingPriceElement) {
+                            const engravingPrice = parseFloat(engravingPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0;
+                            totalPrice += engravingPrice;
+                          }
+                          
+                          // Check and add relative product price
+                          if (isRelativeProduct && relativeProductId) {
+                            const relativeItem = cart.items.find(item => item.variant_id == relativeProductId);
+                            if (relativeItem) {
+                              totalPrice += relativeItem.final_price / 100; // Convert from cents to dollars
+                            }
+                          }
+                          
+                          // Check and add premium protection product price
+                          if (isPremiumProtectionProduct && relativePremiumProtectionProductId) {
+                            const protectionItem = cart.items.find(item => item.variant_id == relativePremiumProtectionProductId);
+                            if (protectionItem) {
+                              totalPrice += protectionItem.final_price / 100;
+                            }
+                          }
+                          
+                          // Check and add engraving product price (if not already added via engravingPriceElement)
+                          if (isEngravingProduct && relativeEngravingProductId && !engravingPriceElement) {
+                            const engravingItem = cart.items.find(item => item.variant_id == relativeEngravingProductId);
+                            if (engravingItem) {
+                              totalPrice += engravingItem.final_price / 100;
+                            }
+                          }
+                          
+                          // Check and add glowstone enhancement price
+                          if (isGlowstoneEnhancement && relativeGlowstoneEnhancementId) {
+                            const glowstoneItem = cart.items.find(item => item.variant_id == relativeGlowstoneEnhancementId);
+                            if (glowstoneItem) {
+                              totalPrice += glowstoneItem.final_price / 100;
+                            }
+                          }
+                          
+                          // Format the price as currency (assuming USD format)
+                          const formattedPrice = '$' + totalPrice.toFixed(2);
+                          finalPriceElement.textContent = formattedPrice;
+                        } catch (error) {
+                          console.error('Error fetching cart data:', error);
+                          // Fallback to original calculation if AJAX fails
+                          const originalPrice = parseFloat(originalPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0;
+                          const engravingPrice = engravingPriceElement ? parseFloat(engravingPriceElement.textContent.replace(/[^0-9.-]+/g, '')) || 0 : 0;
+                          const totalPrice = originalPrice + engravingPrice;
+                          const formattedPrice = '$' + totalPrice.toFixed(2);
+                          finalPriceElement.textContent = formattedPrice;
+                        }
+                      }
+
+                      // Create a MutationObserver to watch for changes in the original price element
+                      const observer = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutation) {
+                          if (mutation.type === 'childList' || mutation.type === 'characterData') {
+                            updateFinalPrice();
+                          }
+                        });
+                      });
+
+                      // Start observing the original price element
+                      observer.observe(originalPriceElement, {
+                        childList: true,
+                        characterData: true,
+                        subtree: true
+                      });
+
+                      // Listen for cart updates
+                      document.addEventListener('cart:updated', updateFinalPrice);
+                      document.addEventListener('ajaxProduct:added', updateFinalPrice);
+
+                      // Initial calculation
+                      updateFinalPrice();
+                    }
+                  })();
+                </script>
+              {% endunless %}
+            {% else %}
+              <span
+                class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price"
+                data-item-key="{{item.key}}"
+                style="display:none !important;"
+              ></span>
+              {%- if is_tryon_item -%}
+                {{ 0 | money_without_trailing_zeros }}
+              {%- else -%}
+                {{ product.final_price | money_without_trailing_zeros }}
+              {%- endif -%}
+            {% endif %}
+          </span>
+        </span>
+      {% endif %}
+
+      {% if false %}
+        {%- if product.line_level_discount_allocations != blank -%}
+          {%- for discount_allocation in product.line_level_discount_allocations -%}
+            {% unless discount_allocation.discount_application.title == 'Discount' %}
+              <small class="cart__discount">
+                {{- discount_allocation.discount_application.title }} (-
+                {{- discount_allocation.amount | money_without_trailing_zeros -}}
+                )</small
+              >
+            {% endunless %}
+          {%- endfor -%}
+        {%- endif -%}
+      {% endif %}
+
+      {%- if product.unit_price_measurement -%}
+        {%- capture unit_price_base_unit -%}
+          <span class="unit-price-base">
+            {%- if product.unit_price_measurement -%}
+              {%- if product.unit_price_measurement.reference_value != 1 -%}
+                {{ product.unit_price_measurement.reference_value }}
+              {%- endif -%}
+              {{ product.unit_price_measurement.reference_unit }}
+            {%- endif -%}
+          </span>
+        {%- endcapture -%}
+
+        <div class="product__unit-price">
+          {{ product.unit_price | money_without_trailing_zeros }}/{{ unit_price_base_unit }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+<!-- bcpo done -->
+
+<script>
+  $('.cart__item .custom_discount_wrap .cart__discount:contains(Intelligems)').each(function () {
+    $(this).addClass('hide');
+  });
+</script>
