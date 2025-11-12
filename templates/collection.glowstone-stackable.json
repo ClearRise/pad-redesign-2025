@@ -308,7 +308,9 @@
         "custom_badge": "BUY ONE GET ONE FREE",
         "saved_amount_option": "display_entries",
         "entries_multiplier": 2,
-        "load_more": false
+        "load_more": false,
+        "show_tryon_badge": true,
+        "tryon_badge_text": "Try Free"
       }
     }
   },
