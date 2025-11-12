@@ -308,11 +308,11 @@
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
-        "custom_badge": "Try Before You Buy",
+        "custom_badge": "BUY ONE GET ONE FREE",
         "saved_amount_option": "basic_logic",
         "entries_multiplier": 1,
         "load_more": false,
-        "show_tryon_badge": false,
+        "show_tryon_badge": true,
         "tryon_badge_text": "Try Free"
       }
     },
