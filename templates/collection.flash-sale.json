@@ -161,12 +161,14 @@
         "enable_color_swatches": false,
         "enable_sort": true,
         "type_enable": false,
-        "subtitle_enable": false,
+        "subtitle_enable": true,
         "subtitle_type": "two",
         "custom_badge": "",
         "saved_amount_option": "basic_logic",
         "entries_multiplier": 1,
-        "load_more": false
+        "load_more": false,
+        "show_tryon_badge": true,
+        "tryon_badge_text": "Try Free"
       }
     }
   },
