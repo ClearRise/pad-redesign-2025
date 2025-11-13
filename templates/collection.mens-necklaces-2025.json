@@ -9,54 +9,35 @@
  */
 {
   "sections": {
-    "advanced_content_eYLzPF": {
-      "type": "advanced-content-flexible",
+    "17629930521fca3145": {
+      "type": "_blocks",
       "blocks": {
-        "liquid_DNKzNA": {
-          "type": "liquid",
+        "ai_gen_block_78985ae_RyVafR": {
+          "type": "ai_gen_block_78985ae",
           "settings": {
-            "is_collection_banner": false,
-            "liquid_name": "",
-            "code": "<h2>Glow Stone Series</h2><p>Experience the perfect blend of tradition and quality with craftsmanship that stands the test of time.</p>",
-            "width": "50%",
-            "alignment": "center",
-            "text_color": "#000000",
-            "simple_background_color": "#ffffff",
-            "variant_padding": true,
-            "padding_left": 0,
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "padding_right": 30
-          }
-        },
-        "image_khDkUk": {
-          "type": "image",
-          "settings": {
-            "iamge_name": "",
-            "image": "shopify://shop_images/2-2.jpg",
-            "link": "",
-            "width": "50%",
-            "alignment": "center"
-          }
+            "offer_1": "Black Friday: Buy One Get One Free",
+            "offer_2": "Risk Free",
+            "offer_3": "Limited Time: Buy 2 Get 1 Free",
+            "offer_4": "",
+            "offer_5": "",
+            "background_color": "#f68e36",
+            "text_color": "#ffffff",
+            "text_size": 14,
+            "text_weight": "500",
+            "bar_height": 12,
+            "separator": "",
+            "separator_color": "#ffffff",
+            "separator_spacing": 20,
+            "scroll_speed": 30,
+            "item_spacing": 20
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "liquid_DNKzNA",
-        "image_khDkUk"
+        "ai_gen_block_78985ae_RyVafR"
       ],
-      "disabled": true,
-      "settings": {
-        "full_width": true,
-        "show_navigation": true,
-        "image_first": true,
-        "space_around": false,
-        "background_color": "#ffffff",
-        "small_image": false,
-        "is_top_line": false,
-        "is_bottom_line": false,
-        "top_logo_size": 30,
-        "additional_class": ""
-      }
+      "settings": {}
     },
     "17347204-928a-46d1-8166-ac8c007f382d": {
       "type": "slideshow_n",
@@ -106,14 +87,6 @@
         "autoplay_speed": 5
       }
     },
-    "replo_trust_icons_white_backg_Wc7kJ7": {
-      "type": "replo-trust-icons-white-backg",
-      "disabled": true,
-      "custom_css": [
-        "{padding: 10 px;}"
-      ],
-      "settings": {}
-    },
     "trust_icons_EDYTbe": {
       "type": "trust-icons_n",
       "settings": {
@@ -128,28 +101,31 @@
         "trust_icon_4_label": "One-of-a-kind Designs"
       }
     },
-    "replo_trust_icons_fy9XYw": {
-      "type": "replo-trust-icons",
-      "disabled": true,
-      "settings": {}
-    },
-    "rich_text_G9LH7U": {
+    "rich_text_mEyziK": {
       "type": "rich-text",
       "blocks": {
-        "text_Up6xTw": {
+        "heading_pazeYr": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Pendants & Chains"
+          }
+        },
+        "text_hgi94X": {
           "type": "text",
           "settings": {
-            "enlarge_text": false,
-            "text": "<h2><strong>LIMITED TIME OFFER</strong></h2><p>Buy One Get One Free (of equal or lesser value) </p><p>AND</p><p>Spend $250 and get $50 back</p><p><strong>This Weekend ONLY</strong></p>"
+            "enlarge_text": true,
+            "text": "<h3><strong>Pendants & Chains</strong></h3><p>Handcrafted from meteorite, glowstone, and more, to be as unique and storied as the people who wear them. </p>"
           }
         }
       },
       "block_order": [
-        "text_Up6xTw"
+        "heading_pazeYr",
+        "text_hgi94X"
       ],
-      "disabled": true,
+      "name": "Rich text",
       "settings": {
-        "align_text": "left",
+        "align_text": "center",
         "narrow_column": true,
         "divider": false
       }
@@ -161,64 +137,6 @@
         "enable": true,
         "collection_image_enable": false,
         "parallax": true
-      }
-    },
-    "promo-grid": {
-      "type": "promo-grid",
-      "blocks": {
-        "banner": {
-          "type": "banner",
-          "disabled": true,
-          "settings": {
-            "heading": "",
-            "text": "",
-            "link": "",
-            "label": "",
-            "color_tint": "#e95454",
-            "color_tint_opacity": 8,
-            "framed": false
-          }
-        },
-        "advanced": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "Limited time",
-            "heading": "Announce your promotion",
-            "textarea": "Include the smaller details of your promotion in text below the title.",
-            "cta_text1": "Shop This",
-            "cta_link1": "",
-            "cta_text2": "Shop All",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Ring_Main_Focus_Shot.jpg",
-            "video_url": "",
-            "width": "100",
-            "height": 500,
-            "text_size": 120,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        }
-      },
-      "block_order": [
-        "banner",
-        "advanced"
-      ],
-      "disabled": true,
-      "settings": {
-        "show_title": false,
-        "title": "",
-        "align_title": "left",
-        "sub_title": "",
-        "align_sub_title": "left",
-        "show_img_title": false,
-        "full_width": false,
-        "gutter_size": 20,
-        "space_above": true,
-        "space_below": false
       }
     },
     "main-collection": {
@@ -269,17 +187,63 @@
         "show_tryon_badge": true,
         "tryon_badge_text": "Try Free"
       }
+    },
+    "advanced_content_flexible_mUdCHp": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "image_eYfdgR": {
+          "type": "image",
+          "settings": {
+            "iamge_name": "",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "liquid_y9bT8R": {
+          "type": "liquid",
+          "settings": {
+            "is_collection_banner": false,
+            "liquid_name": "",
+            "code": "<h2>Custom content</h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.</p>",
+            "width": "50%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_eYfdgR",
+        "liquid_y9bT8R"
+      ],
+      "name": "Advanced content - 2",
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": true,
+        "background_color": "#ffffff",
+        "small_image": false,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 16,
+        "additional_class": ""
+      }
     }
   },
   "order": [
-    "advanced_content_eYLzPF",
+    "17629930521fca3145",
     "17347204-928a-46d1-8166-ac8c007f382d",
-    "replo_trust_icons_white_backg_Wc7kJ7",
     "trust_icons_EDYTbe",
-    "replo_trust_icons_fy9XYw",
-    "rich_text_G9LH7U",
+    "rich_text_mEyziK",
     "collection-header",
-    "promo-grid",
-    "main-collection"
+    "main-collection",
+    "advanced_content_flexible_mUdCHp"
   ]
 }
