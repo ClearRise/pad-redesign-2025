@@ -15,21 +15,21 @@
         "ai_gen_block_78985ae_RyVafR": {
           "type": "ai_gen_block_78985ae",
           "settings": {
-            "offer_1": "Black Friday: Buy One Get One Free",
-            "offer_2": "Risk Free",
-            "offer_3": "Limited Time: Buy 2 Get 1 Free",
-            "offer_4": "",
-            "offer_5": "",
-            "background_color": "#f68e36",
+            "offer_1": "BLACK FRIDAY BOGO",
+            "offer_2": "Buy any item and get a second item of equal or lesser value FREE",
+            "offer_3": "BLACK FRIDAY BOGO",
+            "offer_4": "Buy any item and get a second item of equal or lesser value FREE",
+            "offer_5": "BLACK FRIDAY BOGO",
+            "background_color": "#8ead97",
             "text_color": "#ffffff",
             "text_size": 14,
             "text_weight": "500",
             "bar_height": 12,
             "separator": "",
             "separator_color": "#ffffff",
-            "separator_spacing": 20,
+            "separator_spacing": 10,
             "scroll_speed": 30,
-            "item_spacing": 20
+            "item_spacing": 10
           },
           "blocks": {}
         }
@@ -90,7 +90,7 @@
     "trust_icons_EDYTbe": {
       "type": "trust-icons_n",
       "settings": {
-        "section_background": "#eeeeee",
+        "section_background": "#eee5da",
         "top_padding": 20,
         "bottom_padding": 20,
         "show_bottom_break_line": false,
@@ -187,54 +187,6 @@
         "show_tryon_badge": true,
         "tryon_badge_text": "Try Free"
       }
-    },
-    "advanced_content_flexible_mUdCHp": {
-      "type": "advanced-content-flexible",
-      "blocks": {
-        "image_eYfdgR": {
-          "type": "image",
-          "settings": {
-            "iamge_name": "",
-            "link": "",
-            "width": "50%",
-            "alignment": "center"
-          }
-        },
-        "liquid_y9bT8R": {
-          "type": "liquid",
-          "settings": {
-            "is_collection_banner": false,
-            "liquid_name": "",
-            "code": "<h2>Custom content</h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.</p>",
-            "width": "50%",
-            "alignment": "center",
-            "text_color": "#000000",
-            "simple_background_color": "#ffffff",
-            "variant_padding": true,
-            "padding_left": 0,
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "padding_right": 30
-          }
-        }
-      },
-      "block_order": [
-        "image_eYfdgR",
-        "liquid_y9bT8R"
-      ],
-      "name": "Advanced content - 2",
-      "settings": {
-        "full_width": false,
-        "show_navigation": false,
-        "image_first": false,
-        "space_around": true,
-        "background_color": "#ffffff",
-        "small_image": false,
-        "is_top_line": false,
-        "is_bottom_line": false,
-        "top_logo_size": 16,
-        "additional_class": ""
-      }
     }
   },
   "order": [
@@ -243,7 +195,6 @@
     "trust_icons_EDYTbe",
     "rich_text_mEyziK",
     "collection-header",
-    "main-collection",
-    "advanced_content_flexible_mUdCHp"
+    "main-collection"
   ]
 }
