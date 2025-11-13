@@ -9,36 +9,6 @@
  */
 {
   "sections": {
-    "17629930521fca3145": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_78985ae_RyVafR": {
-          "type": "ai_gen_block_78985ae",
-          "settings": {
-            "offer_1": "TRY BEFORE YOU BUY",
-            "offer_2": "Get your pendants shipped for $0 today and only pay for what you keep.",
-            "offer_3": "Get your pendants shipped for $0 today and only pay for what you keep.",
-            "offer_4": "Buy any item and get a second item of equal or lesser value FREE",
-            "offer_5": "TRY BEFORE YOU BUY",
-            "background_color": "#8ead97",
-            "text_color": "#ffffff",
-            "text_size": 14,
-            "text_weight": "500",
-            "bar_height": 8,
-            "separator": "",
-            "separator_color": "#ffffff",
-            "separator_spacing": 10,
-            "scroll_speed": 30,
-            "item_spacing": 10
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_78985ae_RyVafR"
-      ],
-      "settings": {}
-    },
     "17347204-928a-46d1-8166-ac8c007f382d": {
       "type": "slideshow_n",
       "blocks": {
@@ -87,20 +57,6 @@
         "autoplay_speed": 5
       }
     },
-    "trust_icons_EDYTbe": {
-      "type": "trust-icons_n",
-      "settings": {
-        "section_background": "#eee5da",
-        "top_padding": 20,
-        "bottom_padding": 20,
-        "show_bottom_break_line": false,
-        "top_logo_size": 16,
-        "trust_icon_1_label": "",
-        "trust_icon_2_label": "",
-        "trust_icon_3_label": "",
-        "trust_icon_4_label": "One-of-a-kind Designs"
-      }
-    },
     "rich_text_mEyziK": {
       "type": "rich-text",
       "blocks": {
@@ -137,6 +93,50 @@
         "enable": true,
         "collection_image_enable": false,
         "parallax": true
+      }
+    },
+    "17629930521fca3145": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_78985ae_RyVafR": {
+          "type": "ai_gen_block_78985ae",
+          "settings": {
+            "offer_1": "Try Before You Buy: Pendants ship for $0 today.",
+            "offer_2": "Keep what you love, send the rest back.",
+            "offer_3": "Only pay for the pieces you keep.",
+            "offer_4": "Try Before You Buy: Pendants ship for $0 today.",
+            "offer_5": "Only pay for the pieces you keep.",
+            "background_color": "#dfeafb",
+            "text_color": "#000000",
+            "text_size": 14,
+            "text_weight": "500",
+            "bar_height": 8,
+            "separator": "",
+            "separator_color": "#ffffff",
+            "separator_spacing": 10,
+            "scroll_speed": 30,
+            "item_spacing": 10
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_78985ae_RyVafR"
+      ],
+      "settings": {}
+    },
+    "trust_icons_EDYTbe": {
+      "type": "trust-icons_n",
+      "settings": {
+        "section_background": "#eee5da",
+        "top_padding": 20,
+        "bottom_padding": 20,
+        "show_bottom_break_line": false,
+        "top_logo_size": 16,
+        "trust_icon_1_label": "",
+        "trust_icon_2_label": "",
+        "trust_icon_3_label": "",
+        "trust_icon_4_label": "One-of-a-kind Designs"
       }
     },
     "main-collection": {
