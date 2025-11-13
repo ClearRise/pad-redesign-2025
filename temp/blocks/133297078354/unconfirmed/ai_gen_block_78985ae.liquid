@@ -1,6 +1,250 @@
+{% doc %}
+  @prompt
+    A Promotional bar (like you'd use in the header but this will be lower on the page) It should be permanently scrolling through Offers and should be 1 line of text only
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-promo-bar-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+    padding: {{ block.settings.bar_height }}px 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .ai-promo-bar-track-{{ ai_gen_id }} {
+    display: flex;
+    width: max-content;
+    animation: ai-promo-scroll-{{ ai_gen_id }} {{ block.settings.scroll_speed }}s linear infinite;
+  }
+
+  .ai-promo-bar-item-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: {{ block.settings.text_size }}px;
+    font-weight: {{ block.settings.text_weight }};
+    padding: 0 {{ block.settings.item_spacing }}px;
+  }
+
+  .ai-promo-bar-separator-{{ ai_gen_id }} {
+    margin: 0 {{ block.settings.separator_spacing }}px;
+    color: {{ block.settings.separator_color }};
+  }
+
+  @keyframes ai-promo-scroll-{{ ai_gen_id }} {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .ai-promo-bar-{{ ai_gen_id }}:hover .ai-promo-bar-track-{{ ai_gen_id }} {
+    animation-play-state: paused;
+  }
+{% endstyle %}
+
+<div class="ai-promo-bar-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-promo-bar-track-{{ ai_gen_id }}">
+    {% liquid
+      assign offers = ''
+      if block.settings.offer_1 != blank
+        assign offers = offers | append: block.settings.offer_1
+      endif
+      if block.settings.offer_2 != blank
+        if offers != blank
+          assign offers = offers | append: '|||'
+        endif
+        assign offers = offers | append: block.settings.offer_2
+      endif
+      if block.settings.offer_3 != blank
+        if offers != blank
+          assign offers = offers | append: '|||'
+        endif
+        assign offers = offers | append: block.settings.offer_3
+      endif
+      if block.settings.offer_4 != blank
+        if offers != blank
+          assign offers = offers | append: '|||'
+        endif
+        assign offers = offers | append: block.settings.offer_4
+      endif
+      if block.settings.offer_5 != blank
+        if offers != blank
+          assign offers = offers | append: '|||'
+        endif
+        assign offers = offers | append: block.settings.offer_5
+      endif
+
+      assign offer_array = offers | split: '|||'
+    %}
+
+    {% for i in (1..2) %}
+      {% for offer in offer_array %}
+        <div class="ai-promo-bar-item-{{ ai_gen_id }}">
+          {{ offer }}
+          <span class="ai-promo-bar-separator-{{ ai_gen_id }}">{{ block.settings.separator }}</span>
+        </div>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Promotional bar",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Offers"
+    },
+    {
+      "type": "text",
+      "id": "offer_1",
+      "label": "Offer 1",
+      "default": "Free Shipping on Orders Over $50"
+    },
+    {
+      "type": "text",
+      "id": "offer_2",
+      "label": "Offer 2",
+      "default": "20% Off Your First Order"
+    },
+    {
+      "type": "text",
+      "id": "offer_3",
+      "label": "Offer 3",
+      "default": "Limited Time: Buy 2 Get 1 Free"
+    },
+    {
+      "type": "text",
+      "id": "offer_4",
+      "label": "Offer 4"
+    },
+    {
+      "type": "text",
+      "id": "offer_5",
+      "label": "Offer 5"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f68e36"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "text_weight",
+      "label": "Text weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "range",
+      "id": "bar_height",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Separator"
+    },
+    {
+      "type": "text",
+      "id": "separator",
+      "label": "Separator",
+      "default": "•"
+    },
+    {
+      "type": "color",
+      "id": "separator_color",
+      "label": "Separator color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "separator_spacing",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Separator spacing",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Animation"
+    },
+    {
+      "type": "range",
+      "id": "scroll_speed",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "s",
+      "label": "Scroll speed",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Item spacing",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promotional bar"
+    }
+  ]
+}
 {% endschema %}
