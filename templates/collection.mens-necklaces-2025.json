@@ -42,10 +42,40 @@
             "button_color_1": "white",
             "button_color_2": "white"
           }
+        },
+        "image_WFyKqH": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "Two linetitle slide.",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 40,
+            "base_text_size": 14,
+            "text_bottom_padding_desktop": 30,
+            "text_bottom_padding_mobile": 30,
+            "button_color_1": "white",
+            "button_color_2": "white"
+          }
         }
       },
       "block_order": [
-        "image_WfWU9Q"
+        "image_WfWU9Q",
+        "image_WFyKqH"
       ],
       "settings": {
         "use_img_banner": true,
@@ -56,6 +86,36 @@
         "autoplay": false,
         "autoplay_speed": 5
       }
+    },
+    "17629930521fca3145": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_78985ae_RyVafR": {
+          "type": "ai_gen_block_78985ae",
+          "settings": {
+            "offer_1": "Try Before You Buy:",
+            "offer_2": "Pendants ship for $0 today.",
+            "offer_3": "Keep what you love send the rest back.",
+            "offer_4": "Try Before You Buy:",
+            "offer_5": "Keep what you love send the rest back.",
+            "background_color": "#dfeafb",
+            "text_color": "#000000",
+            "text_size": 13,
+            "text_weight": "500",
+            "bar_height": 8,
+            "separator": "",
+            "separator_color": "#ffffff",
+            "separator_spacing": 10,
+            "scroll_speed": 30,
+            "item_spacing": 10
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_78985ae_RyVafR"
+      ],
+      "settings": {}
     },
     "rich_text_mEyziK": {
       "type": "rich-text",
@@ -95,40 +155,10 @@
         "parallax": true
       }
     },
-    "17629930521fca3145": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_78985ae_RyVafR": {
-          "type": "ai_gen_block_78985ae",
-          "settings": {
-            "offer_1": "Try Before You Buy: Pendants ship for $0 today.",
-            "offer_2": "Keep what you love, send the rest back.",
-            "offer_3": "Only pay for the pieces you keep.",
-            "offer_4": "Try Before You Buy: Pendants ship for $0 today.",
-            "offer_5": "Only pay for the pieces you keep.",
-            "background_color": "#dfeafb",
-            "text_color": "#000000",
-            "text_size": 14,
-            "text_weight": "500",
-            "bar_height": 8,
-            "separator": "",
-            "separator_color": "#ffffff",
-            "separator_spacing": 10,
-            "scroll_speed": 30,
-            "item_spacing": 10
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_78985ae_RyVafR"
-      ],
-      "settings": {}
-    },
     "trust_icons_EDYTbe": {
       "type": "trust-icons_n",
       "settings": {
-        "section_background": "#eee5da",
+        "section_background": "#ffffff",
         "top_padding": 20,
         "bottom_padding": 20,
         "show_bottom_break_line": false,
@@ -191,9 +221,9 @@
   },
   "order": [
     "17347204-928a-46d1-8166-ac8c007f382d",
+    "17629930521fca3145",
     "rich_text_mEyziK",
     "collection-header",
-    "17629930521fca3145",
     "trust_icons_EDYTbe",
     "main-collection"
   ]
