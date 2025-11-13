@@ -1,6 +1,297 @@
+{% doc %}
+  @prompt
+    Design a compact offer bar component for a Shopify collection page called “Pendants & Chains” for a premium men’s jewelry brand.
+    
+    Context & placement
+    
+    This bar sits directly under the “Pendants & Chains” heading and a short paragraph, and directly above the product grid and existing icon row.
+    
+    It must look good on mobile first, then scale to desktop.
+    
+    The rest of the site has a clean, minimal, luxury aesthetic (Patrick Adair Designs).
+    
+    Functional requirements
+    
+    Single horizontal bar with:
+    
+    A small bold label on the left: “Holiday Offer”
+    
+    Descriptive text on the right: “Buy One Get One Free on rings, pendants, and chains. Try pendants at home for $0 and only pay for what you keep.”
+    
+    Entire bar should be clickable and link to a page explaining the offer in detail.
+    
+    On narrow screens, allow the text to wrap but keep the bar no more than 2–3 lines tall.
+    
+    Visual requirements
+    
+    Keep it subtle but clearly distinct from the white background: e.g. very light neutral background, thin border, slightly rounded corners.
+    
+    Typography should match or complement the site’s body font; emphasize only the “Holiday Offer” label with weight, not loud colors.
+    
+    Height should be visually slimmer than a hero banner – more like a notification strip than a card.
+    
+    Deliverables
+    
+    Provide responsive HTML + CSS for the bar that can drop into a Shopify section.
+    
+    Include comments explaining where to change the link URL and text.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-offer-bar-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    margin: 0 0 24px;
+  }
+
+  .ai-offer-bar-link-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background-color: {{ block.settings.background_color }};
+    border: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    min-height: 48px;
+  }
+
+  .ai-offer-bar-link-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.hover_background_color }};
+    border-color: {{ block.settings.hover_border_color }};
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .ai-offer-bar-label-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    font-weight: 700;
+    font-size: {{ block.settings.label_font_size }}px;
+    color: {{ block.settings.label_color }};
+    text-transform: {{ block.settings.label_transform }};
+    letter-spacing: 0.5px;
+  }
+
+  .ai-offer-bar-text-{{ ai_gen_id }} {
+    flex: 1;
+    font-size: {{ block.settings.text_font_size }}px;
+    line-height: 1.4;
+    color: {{ block.settings.text_color }};
+    font-weight: {{ block.settings.text_font_weight }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-offer-bar-link-{{ ai_gen_id }} {
+      flex-direction: {{ block.settings.mobile_layout }};
+      gap: 8px;
+      padding: 10px 14px;
+    }
+
+    .ai-offer-bar-label-{{ ai_gen_id }} {
+      font-size: {{ block.settings.label_font_size | times: 0.9 }}px;
+    }
+
+    .ai-offer-bar-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_font_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-offer-bar-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <a 
+    href="{{ block.settings.offer_link }}" 
+    class="ai-offer-bar-link-{{ ai_gen_id }}"
+    aria-label="{{ block.settings.label_text }}: {{ block.settings.description_text }}"
+  >
+    <span class="ai-offer-bar-label-{{ ai_gen_id }}">
+      {{ block.settings.label_text }}
+    </span>
+    <span class="ai-offer-bar-text-{{ ai_gen_id }}">
+      {{ block.settings.description_text }}
+    </span>
+  </a>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Offer bar",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "label_text",
+      "label": "Label",
+      "default": "Holiday Offer"
+    },
+    {
+      "type": "textarea",
+      "id": "description_text",
+      "label": "Description",
+      "default": "Buy One Get One Free on rings, pendants, and chains. Try pendants at home for $0 and only pay for what you keep."
+    },
+    {
+      "type": "url",
+      "id": "offer_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#fafafa"
+    },
+    {
+      "type": "color",
+      "id": "hover_background_color",
+      "label": "Hover background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "hover_border_color",
+      "label": "Hover border",
+      "default": "#d0d0d0"
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "Border width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 16,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Label"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Color",
+      "default": "#111111"
+    },
+    {
+      "type": "range",
+      "id": "label_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "label_transform",
+      "label": "Text transform",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "header",
+      "content": "Description"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color",
+      "default": "#111111"
+    },
+    {
+      "type": "range",
+      "id": "text_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "text_font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "row",
+          "label": "Horizontal"
+        },
+        {
+          "value": "column",
+          "label": "Stacked"
+        }
+      ],
+      "default": "row"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Offer bar"
+    }
+  ]
+}
 {% endschema %}
