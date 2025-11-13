@@ -53,7 +53,7 @@ theme.recentlyViewed = {
 window.lazySizesConfig = window.lazySizesConfig || {};
 lazySizesConfig.expFactor = 4;
 
-// Tryon
+// Tryon - add or remove tryon fee product
 function tryonHandlingItem() {
   const TRYON_VARIANT_ID = 42097358766162;
   const TRYON_DESCRIPTION = "tryon";
