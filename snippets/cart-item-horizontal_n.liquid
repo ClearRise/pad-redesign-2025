@@ -477,7 +477,8 @@
               <span class="real-_-price-{{ product.id }} real-_-price-engraving-{{ product.id }}">
                 {%- if property_size > 0 and e_product_id != blank %}
                   {%- if is_tryon_item -%}
-                    {{ engrave_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                    {% comment %} {{ engrave_product.selected_or_first_available_variant.price | money_without_trailing_zeros }} {% endcomment %}
+                    {{ 0 | money_without_trailing_zeros }}
                   {%- else -%}
                     {{
                       product.original_price
