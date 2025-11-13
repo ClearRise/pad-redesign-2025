@@ -15,16 +15,16 @@
         "ai_gen_block_78985ae_RyVafR": {
           "type": "ai_gen_block_78985ae",
           "settings": {
-            "offer_1": "BLACK FRIDAY BOGO",
-            "offer_2": "Buy any item and get a second item of equal or lesser value FREE",
-            "offer_3": "BLACK FRIDAY BOGO",
+            "offer_1": "TRY BEFORE YOU BUY",
+            "offer_2": "Get your pendants shipped for $0 today and only pay for what you keep.",
+            "offer_3": "Get your pendants shipped for $0 today and only pay for what you keep.",
             "offer_4": "Buy any item and get a second item of equal or lesser value FREE",
-            "offer_5": "BLACK FRIDAY BOGO",
+            "offer_5": "TRY BEFORE YOU BUY",
             "background_color": "#8ead97",
             "text_color": "#ffffff",
             "text_size": 14,
             "text_weight": "500",
-            "bar_height": 12,
+            "bar_height": 8,
             "separator": "",
             "separator_color": "#ffffff",
             "separator_spacing": 10,
@@ -190,11 +190,11 @@
     }
   },
   "order": [
-    "17629930521fca3145",
     "17347204-928a-46d1-8166-ac8c007f382d",
-    "trust_icons_EDYTbe",
     "rich_text_mEyziK",
     "collection-header",
+    "17629930521fca3145",
+    "trust_icons_EDYTbe",
     "main-collection"
   ]
 }
