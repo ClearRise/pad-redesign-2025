@@ -285,7 +285,7 @@
             "cta_link2": "",
             "image": "shopify://shop_images/IMG_3895_1800x1800_85051cc1-74fe-4254-8a8d-9f65fe84cab2.webp",
             "video_url": "",
-            "width": "33",
+            "width": "50",
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -330,7 +330,7 @@
             "cta_link2": "",
             "image": "shopify://shop_images/1_1.png",
             "video_url": "",
-            "width": "33",
+            "width": "50",
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -342,6 +342,7 @@
         },
         "advanced_FVhCCq": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "Up to 50% off + BOGO",
             "heading": "BLACK FRIDAY EARLY BIRD DEALS",
