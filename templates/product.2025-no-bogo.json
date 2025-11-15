@@ -19,8 +19,8 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": true,
-            "custom_badge": "BUY ONE GET ONE FREE"
+            "enable_badge": false,
+            "custom_badge": "Ends Tomorrow"
           }
         },
         "rivo_loyalty_rewards_referrals_potential_points_tzhzhW": {
@@ -402,6 +402,7 @@
       "blocks": {
         "advanced_KyqEAm": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "",
             "heading": "BLACK FRIDAY SALE",
