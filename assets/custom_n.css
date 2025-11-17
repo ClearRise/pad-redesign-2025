@@ -2716,4 +2716,8 @@ label.variant__label.custom_label {
   text-align: center;
   min-width: 5em;
 }
+
+.grid-product__price--tryon {
+  color: var(--colorSaleTag) !important;
+}
 /* End Tryon Badge */

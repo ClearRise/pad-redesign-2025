@@ -247,45 +247,50 @@ if tag contains '_label_'
 
         <div class="grid-product__subtitle-container">
           <div class="grid-product__price">
-            {%- if on_sale -%}
-              <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
-              <span class="grid-product__price--original">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
-              <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
-            {%- endif -%}
-            {%- if product.price_varies -%}
-              {%- assign price = product.price_min | money_without_trailing_zeros -%}
-              {{ 'products.general.from_text_html' | t: price: price }}
-            {%- else -%}
-              {{ product.price  | money_without_trailing_zeros }}
-            {%- endif -%}
-            {%- if on_sale -%}
-              {%- if settings.product_save_amount -%}
-                {%- if settings.product_save_type == 'dollar' -%}
-                  {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
-                {%- else -%}
-                  {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
-                {%- endif -%}
-                <span class="grid-product__price--savings">
-                  {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
-                </span>
+            {% if section.settings.show_tryon_badge and product.tags contains 'Tryon Product' %}
+              <span class="grid-product__price--original">{{ product.price  | money_without_trailing_zeros }}</span>
+              <span class="grid-product__price--tryon">{{ 0 | money_without_trailing_zeros }}</span>
+            {% else %}
+              {%- if on_sale -%}
+                <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                <span class="grid-product__price--original">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
+                <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
               {%- endif -%}
-            {%- endif -%}
-
-            {%- assign product_variant = product.selected_or_first_available_variant -%}
-            {%- if product_variant.unit_price_measurement -%}
-              <div class="product__unit-price">
-                {%- capture unit_price_base_unit -%}
-                  {%- if product_variant.unit_price_measurement -%}
-                    {%- if product_variant.unit_price_measurement.reference_value != 1 -%}
-                      {{ product_variant.unit_price_measurement.reference_value }}
-                    {%- endif -%}
-                    {{ product_variant.unit_price_measurement.reference_unit }}
+              {%- if product.price_varies -%}
+                {%- assign price = product.price_min | money_without_trailing_zeros -%}
+                {{ 'products.general.from_text_html' | t: price: price }}
+              {%- else -%}
+                {{ product.price  | money_without_trailing_zeros }}
+              {%- endif -%}
+              {%- if on_sale -%}
+                {%- if settings.product_save_amount -%}
+                  {%- if settings.product_save_type == 'dollar' -%}
+                    {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+                  {%- else -%}
+                    {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
                   {%- endif -%}
-                {%- endcapture -%}
+                  <span class="grid-product__price--savings">
+                    {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                  </span>
+                {%- endif -%}
+              {%- endif -%}
 
-                {{ product_variant.unit_price | money_without_trailing_zeros }}/{{ unit_price_base_unit }}
-              </div>
-            {%- endif -%}
+              {%- assign product_variant = product.selected_or_first_available_variant -%}
+              {%- if product_variant.unit_price_measurement -%}
+                <div class="product__unit-price">
+                  {%- capture unit_price_base_unit -%}
+                    {%- if product_variant.unit_price_measurement -%}
+                      {%- if product_variant.unit_price_measurement.reference_value != 1 -%}
+                        {{ product_variant.unit_price_measurement.reference_value }}
+                      {%- endif -%}
+                      {{ product_variant.unit_price_measurement.reference_unit }}
+                    {%- endif -%}
+                  {%- endcapture -%}
+
+                  {{ product_variant.unit_price | money_without_trailing_zeros }}/{{ unit_price_base_unit }}
+                </div>
+              {%- endif -%}
+            {% endif %}
           </div>
           {% if section.settings.show_tryon_badge and product.tags contains 'Tryon Product' %}
             <div class="grid-product__tryon-badge">{{ section.settings.tryon_badge_text }}</div>
