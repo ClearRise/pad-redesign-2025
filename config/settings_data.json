@@ -176,16 +176,15 @@
         "blocks": {
           "timer_banner_CAtMWy": {
             "type": "timer_banner",
-            "disabled": true,
             "settings": {
               "enable_timer_banner": true,
-              "banner_text": "$75,000 Sweepstakes + Sale Ends Friday",
+              "banner_text": "Free Gift on Orders $295 or More",
               "banner_link": "shopify://collections/all-products-new",
               "banner_link_text": "Shop now",
               "background_color": "#8ead97",
               "text_color": "#111111",
               "enable_countdown": true,
-              "countdown_end_date": "2025-10-31 23:59:59",
+              "countdown_end_date": "2025-11-18 23:59:59",
               "hide_when_expired": false
             }
           },
