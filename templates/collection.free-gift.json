@@ -106,6 +106,24 @@
         "autoplay_speed": 5
       }
     },
+    "text_and_image_aaMVyk": {
+      "type": "text-and-image",
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/Titanium_-_Pure_Lapis_1.jpg",
+        "image2": "shopify://shop_images/Aqua_glow_on_mandrel.png",
+        "image_width": 700,
+        "subtitle": "24 Hours Only",
+        "title": "",
+        "text": "<p><strong>Free Lapis Lazuli Glowstone Ring </strong>on all order $295 or more. </p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "right",
+        "divider": false
+      }
+    },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
       "disabled": true,
@@ -117,7 +135,7 @@
     "trust_icons_EDYTbe": {
       "type": "trust-icons_n",
       "settings": {
-        "section_background": "#eeeeee",
+        "section_background": "#ffffff",
         "top_padding": 20,
         "bottom_padding": 20,
         "show_bottom_break_line": false,
@@ -274,6 +292,7 @@
   "order": [
     "advanced_content_eYLzPF",
     "17347204-928a-46d1-8166-ac8c007f382d",
+    "text_and_image_aaMVyk",
     "replo_trust_icons_white_backg_Wc7kJ7",
     "trust_icons_EDYTbe",
     "replo_trust_icons_fy9XYw",
