@@ -104,7 +104,7 @@
     "bottom_text": "Add a (upsell_product_title)($(upsell_product_price)) for your (main_product_title) to unlock the next tier",
     "enable_placing_both_gifts_in_one_step": true,
     "show_gift_box": true,
-    "first_tier_label": "Unlock a Mystery Gift",
+    "first_tier_label": "Unlock a Free Ring",
     "first_tier_progress": "You've unlocked a Free Gift!",
     "gift_box_title": "FREE MYSTERY GIFT",
     "gift_box_text": "",
