@@ -164,24 +164,6 @@
   "name": {{ selected_collection.title | json }}
 }
 </script>
-{% comment %} <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var mobileFilterMenuOpenButton = document.querySelector(".mobile-filter-menu-open-button-ss");
-    var mobileSortMenuOpenButton = document.querySelector(".mobile-sort-menu-open-button-ss");
-    if (mobileFilterMenuOpenButton) {
-      mobileFilterMenuOpenButton.addEventListener("click", function() {
-        document.querySelector("body").classList.add("mobile-filter-menu-on");
-        document.querySelector("body").classList.remove("mobile-sort-menu-on");
-      });
-    }
-    if (mobileSortMenuOpenButton){
-      mobileSortMenuOpenButton.addEventListener("click", function() {
-        document.querySelector("body").classList.add("mobile-filter-menu-on");
-        document.querySelector("body").classList.add("mobile-sort-menu-on");
-      });
-    }
-  });
-</script> {% endcomment %}
 
 {% schema %}
   {
