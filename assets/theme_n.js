@@ -6894,7 +6894,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
         sections: [
           {
             sectionId: this.sectionId,
-            nodeId: "CollectionAjaxContent",
+            nodeId: "CollectionAjaxContent-" + this.sectionId,
           },
         ],
         onReplace: this.onReplaceAjaxContent.bind(this),
@@ -7163,8 +7163,10 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
           return;
         }
 
-        document.getElementById(section.nodeId).innerHTML =
-          newContentEl.innerHTML;
+        var currentContentEl = document.getElementById(section.nodeId);
+        if (currentContentEl) {
+          currentContentEl.innerHTML = newContentEl.innerHTML;
+        }
       },
 
       openCollapsible: function (el) {

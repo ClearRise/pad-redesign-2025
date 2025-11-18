@@ -1,7 +1,12 @@
 {%- liquid
+  assign selected_collection = collection
+  if section.settings.collection != blank
+    assign selected_collection = section.settings.collection
+  endif
+
   assign current_filter_size = 0
 
-  for filter in collection.filters
+  for filter in selected_collection.filters
     assign current_filter_size = current_filter_size | plus: filter.active_values.size
   endfor
 -%}
@@ -20,7 +25,7 @@
   data-section-id="{{ section.id }}"
   data-section-type="collection-grid"
 >
-  <div id="CollectionAjaxContent" class="">
+  <div id="CollectionAjaxContent-{{ section.id }}" class="">
     <div class="product-grid-container-ss">
       {% if section.settings.title != blank %}
       <div class="grid">
@@ -31,7 +36,7 @@
       <div class="grid">
         <div class="grid__item medium-up--one-fifth grid__item--sidebar">
           {%- render 'collection-grid-filters_n',
-            collection: collection,
+            collection: selected_collection,
             enable_sidebar: section.settings.enable_sidebar,
             filter_style: section.settings.filter_style,
             collapsed: section.settings.collapsed,
@@ -83,14 +88,14 @@
           -%}
 
 
-          {%- paginate collection.products by paginate_by -%}
+          {%- paginate selected_collection.products by paginate_by -%}
           {%- for block in section.blocks -%}
             <div {{ block.shopify_attributes }} {%- if block.type == 'product-grid' -%}data-scroll-to{%- endif -%}>
               {%- case block.type -%}
               {%- when 'collection_description' -%}
-                {%- if collection.description != blank and current_filter_size == 0 -%}
+                {%- if selected_collection.description != blank and current_filter_size == 0 -%}
                   <div class="rte collection__description custom_collection__description">
-                    {{ collection.description }}
+                    {{ selected_collection.description }}
                   </div>
                 {%- endif -%}
               {%- when 'subcollections' -%}
@@ -100,8 +105,8 @@
               {%- when 'product_grid' -%}
                 <div data-scroll-to>
                   {% render 'collection-grid_n',
-                    collection: collection,
-                    items: collection.products,
+                    collection: selected_collection,
+                    items: selected_collection.products,
                     enable_sidebar: section.settings.enable_sidebar,
                     filter_style: section.settings.filter_style,
                     enable_sort: section.settings.enable_sort,
@@ -129,7 +134,7 @@
   </div>
 </div>
 
-{%- if section.settings.enable_sidebar == false or section.settings.filter_style == 'drawer' or collection.filters.size == 0 -%}
+{%- if section.settings.enable_sidebar == false or section.settings.filter_style == 'drawer' or selected_collection.filters.size == 0 -%}
 {% comment %}
   Override grid styles if sidebar is disabled
 {% endcomment %}
@@ -144,8 +149,8 @@
 {
   "@context": "http://schema.org",
   "@type": "CollectionPage",
-  {% if collection.description != blank %}
-    "description": {{ collection.description | strip_html | json }},
+  {% if selected_collection.description != blank %}
+    "description": {{ selected_collection.description | strip_html | json }},
   {% endif %}
   {% if page_image %}
     {% assign image_size = page_image.width | append: 'x' %}
@@ -156,7 +161,7 @@
       "width": {{ page_image.width | json }}
     },
   {% endif %}
-  "name": {{ collection.title | json }}
+  "name": {{ selected_collection.title | json }}
 }
 </script>
 {% comment %} <script>
@@ -180,8 +185,14 @@
 
 {% schema %}
   {
-    "name": "Product grid",
+    "name": "Collection Grid",
     "settings": [
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection",
+        "info": "Select a collection to display. If not selected, the current collection page will be used."
+      },
       {
         "type": "text",
         "id": "title",
@@ -402,6 +413,11 @@
           }
         ],
         "limit": 1
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection Grid"
       }
     ]
   }
