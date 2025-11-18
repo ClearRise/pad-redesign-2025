@@ -309,7 +309,7 @@
         "saved_amount_option": "display_entries",
         "entries_multiplier": 2,
         "load_more": false,
-        "show_tryon_badge": true,
+        "show_tryon_badge": false,
         "tryon_badge_text": "Try Free"
       }
     }
