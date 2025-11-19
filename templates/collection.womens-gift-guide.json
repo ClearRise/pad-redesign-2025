@@ -219,6 +219,22 @@
         "divider": false
       }
     },
+    "featured_collection_4e7b7E": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Stackable Glowstone Rings",
+        "home_featured_products": "glowstone-stackable-rings",
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "per_row": 4,
+        "rows": 2,
+        "mobile_scrollable": false,
+        "view_all": true,
+        "divider": false
+      }
+    },
     "featured_collection_XBaYHV": {
       "type": "featured-collection",
       "name": "Featured collection",
@@ -439,6 +455,56 @@
         "top_logo_size": 16,
         "additional_class": ""
       }
+    },
+    "featured_collections_tmXMx8": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_D9Bmgq": {
+          "type": "collection",
+          "settings": {
+            "collection": "glowstone-stackable-rings",
+            "title": "Stackable Rings",
+            "focal_point": "center center"
+          }
+        },
+        "collection_NrrDcr": {
+          "type": "collection",
+          "settings": {
+            "collection": "womens-necklaces",
+            "title": "Necklaces",
+            "focal_point": "center center"
+          }
+        },
+        "collection_EEwhzq": {
+          "type": "collection",
+          "settings": {
+            "collection": "womens-earrings",
+            "title": "Earrings",
+            "focal_point": "center center"
+          }
+        },
+        "collection_ydDaft": {
+          "type": "collection",
+          "settings": {
+            "collection": "wedding-ring-sets",
+            "title": "Matching Sets",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_D9Bmgq",
+        "collection_NrrDcr",
+        "collection_EEwhzq",
+        "collection_ydDaft"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Shop Womens",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
+      }
     }
   },
   "order": [
@@ -450,12 +516,14 @@
     "replo_trust_icons_white_backg_Wc7kJ7",
     "featured_collection_c4PjFV",
     "featured_collection_PJtd47",
+    "featured_collection_4e7b7E",
     "featured_collection_XBaYHV",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
     "collection-header",
     "promo-grid",
     "main-collection",
-    "advanced_content_flexible_J9wirj"
+    "advanced_content_flexible_J9wirj",
+    "featured_collections_tmXMx8"
   ]
 }
