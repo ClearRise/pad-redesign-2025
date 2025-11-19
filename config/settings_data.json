@@ -176,6 +176,7 @@
         "blocks": {
           "timer_banner_CAtMWy": {
             "type": "timer_banner",
+            "disabled": true,
             "settings": {
               "enable_timer_banner": true,
               "banner_text": "Free Gift on Orders $295 or More",
