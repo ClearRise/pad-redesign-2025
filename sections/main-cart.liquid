@@ -823,34 +823,7 @@
               </div>
 
 
-<div id="partiallyCartButtonContainer"></div>
-<script>
-document.partiallyButtonConfig = {
-     offer: '92db5468-d835-4199-bf4e-29247cdbb53c',
-     returnUrl: '{{shop.url}}/cart',
-     returnConfirmedUrl: '{{shop.url}}/cart/clear',
 
-     cssButton: true,
-     cssButtonText: 'Purchase with',
-
-     cssButtonShowLogo: true,
-     cssButtonLogoType: 'full',
-     cssButtonLogoPlacement: 'after',
-
-
-
-     renderSelector: '#partiallyCartButtonContainer',
-
-    shopifyCart: {{cart | json}}
-   };
-   (function() {
-     var script = document.createElement('script');
-     script.type = 'text/javascript';
-     script.src = 'https://partial.ly/js/partially-checkout-button.js';
-     script.async = true;
-     document.head.appendChild(script);
-   })();
-</script>
 
 
               {% if additional_checkout_buttons and settings.cart_additional_buttons %}
