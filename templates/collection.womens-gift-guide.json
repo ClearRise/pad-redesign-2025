@@ -219,6 +219,22 @@
         "divider": false
       }
     },
+    "featured_collection_XBaYHV": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Diamond Engagement Rings",
+        "home_featured_products": "womens-diamond-wedding-bands",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "per_row": 4,
+        "rows": 2,
+        "mobile_scrollable": false,
+        "view_all": true,
+        "divider": false
+      }
+    },
     "replo_trust_icons_fy9XYw": {
       "type": "replo-trust-icons",
       "disabled": true,
@@ -372,6 +388,7 @@
     "replo_trust_icons_white_backg_Wc7kJ7",
     "featured_collection_c4PjFV",
     "featured_collection_PJtd47",
+    "featured_collection_XBaYHV",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
     "collection-header",
