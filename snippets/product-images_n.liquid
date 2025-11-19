@@ -41,9 +41,9 @@
     data-product-images
     data-zoom="{{ product_zoom_enable }}"
     data-has-slideshow="{% if product.media.size > 1 %}true{% else %}false{% endif %}">
-    <div class="product__photos product__photos-{{ section_id }} product__photos--{{ thumbnail_position }}">
+    <div class="asasd product__photos product__photos-{{ section_id }} product__photos--{{ thumbnail_position }}">
 
-      <div class="product__main-photos product-main-photo-swiper-container overflow-hidden" data-aos data-product-single-media-group>
+      <div class="product__main-photos product-main-photo-swiper-container overflow-hidden" data-aos data-product-single-media-group data-slides-count="{{ product.media.size }}">
         <div data-product-photos class="product-slideshow swiper-wrapper" id="ProductPhotos-{{ section_id }}">
           {%- for media in product.media -%}
             {%- render 'media_n',
