@@ -231,6 +231,8 @@
                 </h1>
               {%- endif -%}
 
+
+              {% if product.tags contains 'TAG' %}
               <div id="partiallyWidget" style="top-margin:10px;bottom-margin:10px"></div>
 <script>
 document.partiallyWidgetConfig = {
@@ -254,6 +256,7 @@ body:'Payment Plan Available in Cart',
     document.head.appendChild(script);
 })();
 </script>
+{% endif %}
 
 
               {%- if sku_enable -%}
