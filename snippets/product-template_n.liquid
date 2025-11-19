@@ -239,6 +239,9 @@ document.partiallyWidgetConfig = {
   amount: {{product.selected_or_first_available_variant.price}} / 100,
   targetSelector: '#partiallyWidget',
   currency: 'USD',
+  {%raw%}
+body:'Payment Plan Available in Cart. Only {{payment_amount}} a month',
+{%endraw%}
   style:'thin', 
   popupDetails: 'Payment Plan Available in Cart',
 
