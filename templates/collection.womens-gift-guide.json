@@ -420,22 +420,12 @@
             "button_text_color": "#ffffff",
             "inclue_right_arrow": false
           }
-        },
-        "background_block_hkwmVh": {
-          "type": "background_block",
-          "settings": {
-            "position": "right",
-            "width": 65,
-            "background": "#000001",
-            "top_left_background_color": "#db9036"
-          }
         }
       },
       "block_order": [
         "image_7W8dDt",
         "liquid_9Q6HTf",
-        "child_block_button_tJ4Vgf",
-        "background_block_hkwmVh"
+        "child_block_button_tJ4Vgf"
       ],
       "settings": {
         "full_width": false,
