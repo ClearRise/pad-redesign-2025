@@ -379,6 +379,26 @@
                                               </label>
                                             </div>                                    
                                         </div>
+
+                                        <div id="partiallyWidget"></div>
+<script>
+document.partiallyWidgetConfig = {
+  source: 'shopify',
+  offer: '92db5468-d835-4199-bf4e-29247cdbb53c',
+  amount: {{product.selected_or_first_available_variant.price}} / 100,
+  targetSelector: '#partiallyWidget',
+  currency: 'USD',
+
+};
+(function() {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://partial.ly/js/partially-widget.js';
+    script.async = true;
+    document.head.appendChild(script);
+})();
+</script>
+
                                         
                                       </div>
                                     </div>
@@ -417,28 +437,7 @@
                               </div>
                          </div>   
                       </div>  
-                      {% endif %}
-
-                      <div id="partiallyWidget"></div>
-<script>
-document.partiallyWidgetConfig = {
-  source: 'shopify',
-  offer: '92db5468-d835-4199-bf4e-29247cdbb53c',
-  amount: {{product.selected_or_first_available_variant.price}} / 100,
-  targetSelector: '#partiallyWidget',
-  currency: 'USD',
-
-};
-(function() {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://partial.ly/js/partially-widget.js';
-    script.async = true;
-    document.head.appendChild(script);
-})();
-</script>
-
-                                           
+                      {% endif %}                                           
                     {% endif %}
                   {%- when 'free_gifts' -%}
                     {% style %}
