@@ -995,8 +995,12 @@
               </button>
             </div>
 
+            {% if additional_checkout_buttons and settings.cart_additional_buttons %}
+              <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
+            {% endif %}
+          </div>
 
-<div id="partiallyCartButtonContainer"></div>
+          <div id="partiallyCartButtonContainer"></div>
 <script>
 document.partiallyButtonConfig = {
      offer: '92db5468-d835-4199-bf4e-29247cdbb53c',
@@ -1024,12 +1028,6 @@ document.partiallyButtonConfig = {
      document.head.appendChild(script);
    })();
 </script>
-
-
-            {% if additional_checkout_buttons and settings.cart_additional_buttons %}
-              <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
-            {% endif %}
-          </div>
 
           <div class="cart__item-row text-center">
             <small>
