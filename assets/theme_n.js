@@ -8885,6 +8885,12 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
             },
           }
         );
+        
+        // Calculate number of slides dynamically
+        var container = document.querySelector(".product-main-photo-swiper-container");
+        var slidesCount = container ? container.querySelectorAll(".swiper-slide").length : 0;
+        var slidesPerViewDesktop = slidesCount <= 2 ? slidesCount : 3;
+        
         var productMainPhotoSwiperContainer = new Swiper(
           ".product-main-photo-swiper-container",
           {
@@ -8895,13 +8901,24 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
             breakpoints: {
               769: {
                 direction: "vertical",
-                slidesPerView: 3,
+                slidesPerView: slidesPerViewDesktop,
               },
               0: {
                 direction: "horizontal",
                 slidesPerView: 1,
               },
             },
+            on: {
+              init: function() {
+                // Adjust container height for better display when there are 2 or fewer images
+                if (window.innerWidth >= 769 && slidesCount <= 2 && container) {
+                  var slideHeight = container.offsetHeight / slidesPerViewDesktop;
+                  if (slideHeight < 600) {
+                    container.style.height = (slidesCount * 600) + 'px';
+                  }
+                }
+              }
+            }
           }
         );
       },
