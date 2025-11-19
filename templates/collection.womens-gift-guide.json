@@ -377,6 +377,78 @@
         "show_tryon_badge": true,
         "tryon_badge_text": "Try Free"
       }
+    },
+    "advanced_content_flexible_J9wirj": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "image_7W8dDt": {
+          "type": "image",
+          "settings": {
+            "iamge_name": "",
+            "image": "shopify://shop_images/fabd0ccf-1c92-4d2f-9fdd-020ed5197b48.png",
+            "link": "",
+            "width": "40%",
+            "alignment": "center"
+          }
+        },
+        "liquid_9Q6HTf": {
+          "type": "liquid",
+          "settings": {
+            "is_collection_banner": false,
+            "liquid_name": "btn-ctn",
+            "code": "<h2>Find the Perfect Gift</h2><p>Shop a refined collection of rings, necklaces, bracelets, and pendants crafted with premium materials and timeless design.</p>",
+            "width": "60%",
+            "alignment": "center",
+            "text_color": "#111111",
+            "simple_background_color": "#ffffff",
+            "variant_padding": false,
+            "padding_left": 150,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "child_block_button_tJ4Vgf": {
+          "type": "child_block_button",
+          "settings": {
+            "parent_name": "btn-ctn",
+            "position": "bottom",
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/womens-jewelry",
+            "button_background_color": "#138f7e",
+            "button_border_color": "#111111",
+            "button_text_color": "#ffffff",
+            "inclue_right_arrow": false
+          }
+        },
+        "background_block_hkwmVh": {
+          "type": "background_block",
+          "settings": {
+            "position": "right",
+            "width": 65,
+            "background": "#000001",
+            "top_left_background_color": "#db9036"
+          }
+        }
+      },
+      "block_order": [
+        "image_7W8dDt",
+        "liquid_9Q6HTf",
+        "child_block_button_tJ4Vgf",
+        "background_block_hkwmVh"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": false,
+        "background_color": "#ffffff",
+        "small_image": true,
+        "is_top_line": true,
+        "is_bottom_line": false,
+        "top_logo_size": 16,
+        "additional_class": ""
+      }
     }
   },
   "order": [
@@ -393,6 +465,7 @@
     "rich_text_G9LH7U",
     "collection-header",
     "promo-grid",
-    "main-collection"
+    "main-collection",
+    "advanced_content_flexible_J9wirj"
   ]
 }
