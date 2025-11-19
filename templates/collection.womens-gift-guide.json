@@ -106,6 +106,65 @@
         "autoplay_speed": 5
       }
     },
+    "blocks_d7Lp64": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_78985ae_qyY3YX": {
+          "type": "ai_gen_block_78985ae",
+          "settings": {
+            "offer_1": "Try Before You Buy",
+            "offer_2": "Buy One Get One Free",
+            "offer_3": "Keep what you love send the rest back",
+            "offer_4": "",
+            "offer_5": "",
+            "background_color": "#dfeafb",
+            "text_color": "#000000",
+            "text_size": 13,
+            "text_weight": "500",
+            "bar_height": 8,
+            "separator": "",
+            "separator_color": "#000000",
+            "separator_spacing": 20,
+            "scroll_speed": 30,
+            "item_spacing": 10
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_78985ae_qyY3YX"
+      ],
+      "settings": {}
+    },
+    "rich_text_YkFgAa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xzBNcy": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Pendants & Chains"
+          }
+        },
+        "text_YGcDnk": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h3><strong>Women's Gift Guide</strong></h3><p>Handcrafted from meteorite, glowstone, and more, to be as unique and storied as the people who wear them. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xzBNcy",
+        "text_YGcDnk"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
       "disabled": true,
@@ -114,10 +173,42 @@
       ],
       "settings": {}
     },
+    "featured_collection_c4PjFV": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "New Releases",
+        "home_featured_products": "glowstone-bar-pendant-necklaces",
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "featured_collection_PJtd47": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Gifts Under $300",
+        "home_featured_products": "womens-jewelry-under-250",
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "per_row": 4,
+        "rows": 2,
+        "mobile_scrollable": false,
+        "view_all": true,
+        "divider": false
+      }
+    },
     "trust_icons_EDYTbe": {
       "type": "trust-icons_n",
       "settings": {
-        "section_background": "#eeeeee",
+        "section_background": "#ffffff",
         "top_padding": 20,
         "bottom_padding": 20,
         "show_bottom_break_line": false,
@@ -251,14 +342,15 @@
         "subcollections",
         "product_grid"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "padding_horizontal": 50,
-        "enable_sidebar": true,
+        "enable_sidebar": false,
         "collapsed": true,
         "filter_style": "sidebar",
         "enable_color_swatches": false,
-        "enable_sort": true,
+        "enable_sort": false,
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
@@ -274,8 +366,12 @@
   "order": [
     "advanced_content_eYLzPF",
     "17347204-928a-46d1-8166-ac8c007f382d",
-    "replo_trust_icons_white_backg_Wc7kJ7",
+    "blocks_d7Lp64",
     "trust_icons_EDYTbe",
+    "rich_text_YkFgAa",
+    "replo_trust_icons_white_backg_Wc7kJ7",
+    "featured_collection_c4PjFV",
+    "featured_collection_PJtd47",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
     "collection-header",
