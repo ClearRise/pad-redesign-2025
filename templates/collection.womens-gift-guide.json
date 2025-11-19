@@ -438,7 +438,7 @@
       ],
       "name": "Collection list",
       "settings": {
-        "title": "Shop Womens",
+        "title": "Shop By Collection",
         "divider": false,
         "per_row": 4,
         "enable_gutter": true
