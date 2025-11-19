@@ -136,6 +136,20 @@
       ],
       "settings": {}
     },
+    "trust_icons_EDYTbe": {
+      "type": "trust-icons_n",
+      "settings": {
+        "section_background": "#ffffff",
+        "top_padding": 20,
+        "bottom_padding": 20,
+        "show_bottom_break_line": false,
+        "top_logo_size": 16,
+        "trust_icon_1_label": "",
+        "trust_icon_2_label": "",
+        "trust_icon_3_label": "",
+        "trust_icon_4_label": "One-of-a-kind Designs"
+      }
+    },
     "rich_text_YkFgAa": {
       "type": "rich-text",
       "blocks": {
@@ -150,7 +164,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<h3><strong>Women's Gift Guide</strong></h3><p>Handcrafted from meteorite, glowstone, and more, to be as unique and storied as the people who wear them. </p>"
+            "text": "<h3><strong>Women's Gift Guide</strong></h3><p><br/>Discover meaningful gifts crafted from Glowstone, Opal, and Fine Metals. Thoughtful pieces designed to shine as brightly as the people who wear them.</p>"
           }
         }
       },
@@ -203,20 +217,6 @@
         "mobile_scrollable": false,
         "view_all": true,
         "divider": false
-      }
-    },
-    "trust_icons_EDYTbe": {
-      "type": "trust-icons_n",
-      "settings": {
-        "section_background": "#ffffff",
-        "top_padding": 20,
-        "bottom_padding": 20,
-        "show_bottom_break_line": false,
-        "top_logo_size": 16,
-        "trust_icon_1_label": "",
-        "trust_icon_2_label": "",
-        "trust_icon_3_label": "",
-        "trust_icon_4_label": "One-of-a-kind Designs"
       }
     },
     "replo_trust_icons_fy9XYw": {
