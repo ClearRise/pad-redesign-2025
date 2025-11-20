@@ -995,11 +995,7 @@
               </button>
             </div>
 
-            {% if additional_checkout_buttons and settings.cart_additional_buttons %}
-              <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
-            {% endif %}
-  
-            
+                        
 {% assign Partially = false %}
        {% for line_item in cart.items %}
 
@@ -1053,7 +1049,9 @@ document.partiallyButtonConfig = {
 </script>         
 {% endif %}
 
-
+            {% if additional_checkout_buttons and settings.cart_additional_buttons %}
+              <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
+            {% endif %}
           </div>
 
         
