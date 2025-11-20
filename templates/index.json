@@ -318,17 +318,17 @@
             "framed": false
           }
         },
-        "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
+        "advanced_FVhCCq": {
           "type": "advanced",
           "settings": {
-            "subheading": "BUY ONE GET ONE FREE",
-            "heading": "WEDDING BANDS",
+            "subheading": "Up to $500 off + BOGO",
+            "heading": "BLACK FRIDAY EARLY BIRD DEALS",
             "textarea": "",
             "cta_text1": "SHOP NOW",
-            "cta_link1": "shopify://collections/mens-wedding-bands",
+            "cta_link1": "shopify://collections/black-friday-early-bird-deals",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/1_1.png",
+            "image": "shopify://shop_images/hellfire-lava-glow-ring-5_2.png",
             "video_url": "",
             "width": "50",
             "text_size": 80,
@@ -340,18 +340,17 @@
             "framed": false
           }
         },
-        "advanced_FVhCCq": {
+        "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
           "type": "advanced",
-          "disabled": true,
           "settings": {
-            "subheading": "Up to 50% off + BOGO",
-            "heading": "BLACK FRIDAY EARLY BIRD DEALS",
+            "subheading": "BUY ONE GET ONE FREE",
+            "heading": "WEDDING BANDS",
             "textarea": "",
             "cta_text1": "SHOP NOW",
-            "cta_link1": "shopify://collections/black-friday-early-bird-deals",
+            "cta_link1": "shopify://collections/mens-wedding-bands",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/hellfire-lava-glow-ring-5_2.png",
+            "image": "shopify://shop_images/1_1.png",
             "video_url": "",
             "width": "33",
             "text_size": 80,
@@ -479,8 +478,8 @@
       "block_order": [
         "2f6050a5-96b7-4f7d-b405-7b5952c82699",
         "advanced_gQNjit",
-        "85a12c0c-6ee7-4aba-a660-0e12f6bdc907",
         "advanced_FVhCCq",
+        "85a12c0c-6ee7-4aba-a660-0e12f6bdc907",
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02",
         "advanced_gaqMVW",
         "8f48b383-f1c5-4d34-a6cd-eab1f6f524b0",
