@@ -998,7 +998,17 @@
             {% if additional_checkout_buttons and settings.cart_additional_buttons %}
               <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
             {% endif %}
-       
+  
+            
+​ {% assign Partially = false %}
+       {% for line_item in cart.items %}
+
+       {% if line_item.product.tags contains 'Partial.ly' %}
+       {% assign Partially = true %}
+       {% endif %}
+       {% endfor %}
+​
+       {% if Partially %}            
 <style>
 #partiallyCartButtonContainer a {
  width: 100%;
@@ -1034,7 +1044,7 @@ document.partiallyButtonConfig = {
      document.head.appendChild(script);
    })();
 </script>         
-
+{% endif %}
 
 
           </div>
