@@ -1292,22 +1292,12 @@
             "button_text_color": "#ffffff",
             "inclue_right_arrow": false
           }
-        },
-        "background_block_pJDhcD": {
-          "type": "background_block",
-          "settings": {
-            "position": "right",
-            "width": 65,
-            "background": "#000001",
-            "top_left_background_color": "#db9036"
-          }
         }
       },
       "block_order": [
         "image_LBWe9j",
         "liquid_Q68qKd",
-        "child_block_button_4J6Qp8",
-        "background_block_pJDhcD"
+        "child_block_button_4J6Qp8"
       ],
       "custom_css": [
         ".liquid-container-ss {max-width: 420px;}",
