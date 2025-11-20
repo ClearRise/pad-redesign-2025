@@ -208,7 +208,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "Gifts Under $300",
-        "home_featured_products": "womens-jewelry-under-250",
+        "home_featured_products": "womens-jewelry-under-300",
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
