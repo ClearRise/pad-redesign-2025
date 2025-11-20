@@ -112,7 +112,7 @@
         "ai_gen_block_78985ae_qyY3YX": {
           "type": "ai_gen_block_78985ae",
           "settings": {
-            "offer_1": "Holiday Gifts She’ll Treasure",
+            "offer_1": "",
             "offer_2": "Shop This Season’s Bestsellers",
             "offer_3": "Handcrafted Jewelry for the Holidays",
             "offer_4": "Make This Season Shine",
@@ -164,7 +164,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<h3><strong>Women's Gift Guide</strong></h3><p><br/>Discover meaningful gifts crafted from Glowstone, Opal, and Fine Metals. Thoughtful pieces designed to shine as brightly as the people who wear them.</p>"
+            "text": "<h3><strong>Early Bird Black Friday Deals</strong></h3><p><br/>Take up to $300 off on our curated Luxury Rings or up to $100 off Our Budget Rings + Buy One Get One Free.</p>"
           }
         }
       },
@@ -179,6 +179,11 @@
         "divider": false
       }
     },
+    "replo_flash_sale_timer_JRhnx4": {
+      "type": "replo-flash-sale-timer",
+      "name": "Flash Sale Timer",
+      "settings": {}
+    },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
       "disabled": true,
@@ -191,63 +196,31 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "New Releases",
-        "home_featured_products": "glowstone-bar-pendant-necklaces",
+        "title": "Up to $300 Off + Buy One Get One Free",
+        "home_featured_products": "luxury-black-friday-deals",
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
-        "per_row": 4,
-        "rows": 1,
+        "per_row": 3,
+        "rows": 3,
         "mobile_scrollable": false,
         "view_all": false,
         "divider": false
       }
     },
-    "featured_collection_PJtd47": {
+    "featured_collection_fA8WGh": {
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Gifts Under $300",
-        "home_featured_products": "womens-jewelry-under-300",
+        "title": "Up to $100 Off + Buy One Get One Free",
+        "home_featured_products": "budget-black-friday-deals",
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
-        "per_row": 4,
-        "rows": 2,
+        "per_row": 3,
+        "rows": 3,
         "mobile_scrollable": false,
-        "view_all": true,
-        "divider": false
-      }
-    },
-    "featured_collection_4e7b7E": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "Stackable Glowstone Rings",
-        "home_featured_products": "glowstone-stackable-rings",
-        "type_enable": false,
-        "subtitle_enable": true,
-        "subtitle_type": "two",
-        "per_row": 4,
-        "rows": 2,
-        "mobile_scrollable": false,
-        "view_all": true,
-        "divider": false
-      }
-    },
-    "featured_collection_XBaYHV": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "Diamond Engagement Rings",
-        "home_featured_products": "womens-diamond-wedding-bands",
-        "type_enable": false,
-        "subtitle_enable": false,
-        "subtitle_type": "two",
-        "per_row": 4,
-        "rows": 2,
-        "mobile_scrollable": false,
-        "view_all": true,
+        "view_all": false,
         "divider": false
       }
     },
@@ -436,6 +409,7 @@
         "collection_EEwhzq",
         "collection_ydDaft"
       ],
+      "disabled": true,
       "name": "Collection list",
       "settings": {
         "title": "Shop By Collection",
@@ -493,6 +467,7 @@
         "liquid_9Q6HTf",
         "child_block_button_tJ4Vgf"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "show_navigation": false,
@@ -513,11 +488,10 @@
     "blocks_d7Lp64",
     "trust_icons_EDYTbe",
     "rich_text_YkFgAa",
+    "replo_flash_sale_timer_JRhnx4",
     "replo_trust_icons_white_backg_Wc7kJ7",
     "featured_collection_c4PjFV",
-    "featured_collection_PJtd47",
-    "featured_collection_4e7b7E",
-    "featured_collection_XBaYHV",
+    "featured_collection_fA8WGh",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
     "collection-header",
