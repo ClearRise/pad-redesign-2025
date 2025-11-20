@@ -1050,50 +1050,8 @@ document.partiallyButtonConfig = {
 {% endif %}  -->   
 
 
-            {% if additional_checkout_buttons and settings.cart_additional_buttons %}
-              <style>
-#partiallyCartButtonContainer a {
- width: 100%;
- border-radius: 4px;
- border: 1px solid #138F7E;
- color: #138F7E; 
- height:50px;
- font-size: .75rem;
-}
-
-@media (max-width: 767.98px) {
-#partiallyCartButton {
-  width:100%;
-            }
-          }
-
-</style>          
-          <div id="partiallyCartButtonContainer"></div>
-<script>
-document.partiallyButtonConfig = {
-     offer: '92db5468-d835-4199-bf4e-29247cdbb53c',
-     returnUrl: '{{shop.url}}/cart',
-     returnConfirmedUrl: '{{shop.url}}/cart/clear',
-
-   cssButton: true,
-     cssButtonText: 'Purchase with Financing',
-
-     cssButtonShowLogo: false,
-     cssButtonCustomBg: '#FFFFFF',
-
-     renderSelector: '#partiallyCartButtonContainer',
-
-    shopifyCart: {{cart | json}}
-   };
-   (function() {
-     var script = document.createElement('script');
-     script.type = 'text/javascript';
-     script.src = 'https://partial.ly/js/partially-checkout-button.js';
-     script.async = true;
-     document.head.appendChild(script);
-   })();
-</script>    
-              <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
+            {% if additional_checkout_buttons and settings.cart_additional_buttons %}    
+            <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
             {% endif %}
           </div>
 
