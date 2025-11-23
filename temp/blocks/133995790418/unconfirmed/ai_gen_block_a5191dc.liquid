@@ -1,6 +1,186 @@
+{% doc %}
+  @prompt
+    A callout explainer bar with a customizable background
+    
+    That looks well designed for mobile that says:
+    
+    "How BOGO works: Add any 2 items to your cart – the cheaper one is FREE. No code required." 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-bogo-callout-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_mobile }}px {{ block.settings.horizontal_padding }}px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .ai-bogo-callout__content-{{ ai_gen_id }} {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .ai-bogo-callout__text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.font_size_mobile }}px;
+    line-height: 1.4;
+    margin: 0;
+    font-weight: {{ block.settings.font_weight }};
+  }
+
+  .ai-bogo-callout__highlight-{{ ai_gen_id }} {
+    color: {{ block.settings.highlight_color }};
+    font-weight: 700;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-bogo-callout-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_desktop }}px {{ block.settings.horizontal_padding }}px;
+    }
+
+    .ai-bogo-callout__text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.font_size_desktop }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-bogo-callout-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-bogo-callout__content-{{ ai_gen_id }}">
+    <p class="ai-bogo-callout__text-{{ ai_gen_id }}">
+      {% if block.settings.custom_text != blank %}
+        {{ block.settings.custom_text }}
+      {% else %}
+        How <span class="ai-bogo-callout__highlight-{{ ai_gen_id }}">BOGO</span> works: Add any 2 items to your cart – the cheaper one is <span class="ai-bogo-callout__highlight-{{ ai_gen_id }}">FREE</span>. No code required.
+      {% endif %}
+    </p>
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "BOGO callout bar",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_text",
+      "label": "Custom text",
+      "info": "Leave blank to use default BOGO message. Use <span class=\"highlight\">text</span> to highlight words."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#138f7e"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "highlight_color",
+      "label": "Highlight",
+      "default": "#ffeb3b"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "font_size_mobile",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size (mobile)",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "font_size_desktop",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size (desktop)",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_mobile",
+      "min": 8,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Vertical padding (mobile)",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_desktop",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Vertical padding (desktop)",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "horizontal_padding",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "BOGO callout bar"
+    }
+  ]
+}
 {% endschema %}
