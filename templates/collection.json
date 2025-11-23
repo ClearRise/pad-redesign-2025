@@ -133,6 +133,27 @@
       "disabled": true,
       "settings": {}
     },
+    "rich_text_UFnfJQ": {
+      "type": "rich-text",
+      "blocks": {
+        "text_EgV76n": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p><strong>Mix & Match BOGO:</strong> Add any 2 eligible rings, necklaces, or chains to your cart – the lower-priced piece is free. No code needed.<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_EgV76n"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "rich_text_G9LH7U": {
       "type": "rich-text",
       "blocks": {
@@ -277,6 +298,7 @@
     "replo_trust_icons_white_backg_Wc7kJ7",
     "trust_icons_EDYTbe",
     "replo_trust_icons_fy9XYw",
+    "rich_text_UFnfJQ",
     "rich_text_G9LH7U",
     "collection-header",
     "promo-grid",
