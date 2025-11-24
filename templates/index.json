@@ -9,6 +9,35 @@
  */
 {
   "sections": {
+    "1764008967e1fdf296": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_af7acc2_zrWH9D": {
+          "type": "ai_gen_block_af7acc2",
+          "settings": {
+            "heading": "Buy One Get One Free",
+            "description": "<p>Add two items to your cart and get the lowest-priced item absolutely free. Limited time offer.</p>",
+            "heading_color": "#ffffff",
+            "heading_size": 24,
+            "heading_weight": "700",
+            "heading_transform": "uppercase",
+            "heading_letter_spacing": 1,
+            "text_color": "#ffffff",
+            "text_size": 14,
+            "text_spacing": 8,
+            "background_color": "#138f7e",
+            "padding_vertical": 20,
+            "padding_horizontal": 20,
+            "max_width": 1000
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_af7acc2_zrWH9D"
+      ],
+      "settings": {}
+    },
     "timer_banner_section": {
       "type": "timer-banner",
       "disabled": true,
@@ -390,7 +419,7 @@
           "settings": {
             "subheading": "BUY ONE GET ONE FREE",
             "heading": "WOMEN'S BANDS",
-            "textarea": "Bundle + Save",
+            "textarea": "",
             "cta_text1": "SHOP NOW",
             "cta_link1": "shopify://collections/womens-wedding-bands",
             "cta_text2": "",
@@ -1428,6 +1457,7 @@
     }
   },
   "order": [
+    "1764008967e1fdf296",
     "timer_banner_section",
     "slideshow",
     "hero_section_MKWdHX",
