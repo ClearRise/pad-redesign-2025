@@ -106,6 +106,22 @@
         "autoplay_speed": 5
       }
     },
+    "featured_collection_iVHx6n": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Limited Time Free Gifts",
+        "home_featured_products": "pre-thanksgiving-free-gifts",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "per_row": 2,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
     "text_and_image_aaMVyk": {
       "type": "text-and-image",
       "disabled": true,
@@ -293,6 +309,7 @@
   "order": [
     "advanced_content_eYLzPF",
     "17347204-928a-46d1-8166-ac8c007f382d",
+    "featured_collection_iVHx6n",
     "text_and_image_aaMVyk",
     "replo_trust_icons_white_backg_Wc7kJ7",
     "trust_icons_EDYTbe",
