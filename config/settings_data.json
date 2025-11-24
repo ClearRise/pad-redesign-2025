@@ -350,6 +350,7 @@
           },
           "445961cc-3c5c-4028-98e7-a4ef362b41e6": {
             "type": "custom",
+            "disabled": true,
             "settings": {
               "show_footer_title": true,
               "title": "Contact Information",
