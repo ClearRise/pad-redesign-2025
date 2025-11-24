@@ -98,12 +98,12 @@
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
     "rewards_bar_title": "Unlock Exclusive Rewards",
-    "rewards_bar_subtitle": "Unlock exclusive Black Friday Doorbuster Deals for a Limited Time Only.",
-    "top_text": "You're (amount) away from unlocking a Free Gift",
+    "rewards_bar_subtitle": "Unlock exclusive Black Friday Doorbuster Deals + Buy One Get One Free for a Limited Time Only.",
+    "top_text": "You're (amount) away from unlocking the (next) Tier Offer.",
     "unlock_text": "You've unlocked a new Reward",
     "bottom_text": "Add a (upsell_product_title)($(upsell_product_price)) for your (main_product_title) to unlock the next tier",
     "enable_placing_both_gifts_in_one_step": true,
-    "show_gift_box": false,
+    "show_gift_box": true,
     "first_tier_label": "Tier 1",
     "first_tier_progress": "You've unlocked a Free Gift!",
     "gift_box_title": "Free Dog Tag Pendant",
@@ -114,10 +114,10 @@
     "product-handle-1": "lapis-lazuli-dog-tag-pendant",
     "product-handle-2": "amethyst-dog-tag-pendant",
     "hide_gift_2": true,
-    "hide_all_gifts_tier_1": false,
+    "hide_all_gifts_tier_1": true,
     "allow_adding_both_gifts_tier_1": false,
     "first_tier_name": "Free Pendant",
-    "second_show_gift_box": false,
+    "second_show_gift_box": true,
     "second_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
     "gift_box_title_second": "FREE Chain Bundle",
     "cart_threshold_amount_second": "295",
@@ -125,8 +125,8 @@
     "second_product-handle-1": "stainless-steel-box-chain-necklace-bracelet-bundle",
     "second_product-handle-2": "lapis-lazuli-dog-tag-pendant",
     "second_hide_gift_2": false,
-    "hide_all_gifts_tier_2": false,
-    "second_tier_name": "Unlock a Free Glowstone Ring",
+    "hide_all_gifts_tier_2": true,
+    "second_tier_name": "Free Pendant + Necklace/Chain Bundle",
     "third_show_gift_box": false,
     "third_tier_progress": "Congrats, you've unlocked a free gift! Spend $500+ to unlock a Special offer.",
     "gift_box_title_third": "BUY ONE GET ONE FREE",
@@ -231,7 +231,7 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "<u><b>Sale</b></u>",
-              "link_submenu": "shopify://collections/black-friday-early-bird-deals"
+              "link_submenu": "shopify://collections/all-products-new"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
