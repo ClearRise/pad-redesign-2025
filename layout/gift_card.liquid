@@ -36,6 +36,7 @@ window.TriplePixelData={TripleName:"patrick-adair-designs.myshopify.com",ver:"1.
   {%- render 'font-face' -%}
   {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
   {%- render 'css-variables' -%}
+  {%- render 'color_variables' -%}
 
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
