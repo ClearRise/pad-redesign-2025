@@ -6,6 +6,9 @@
 */
 
 :root {
+  /* Color variables are now managed via snippets/color_variables.liquid */
+  /* These values serve as fallbacks only - actual values come from theme settings */
+  /*
   --colorBtnPrimary: #138f7e;
   --colorBtnPrimaryLight: #19bca6;
   --colorBtnPrimaryDim: #10786a;
@@ -54,11 +57,13 @@
   --colorDrawerButton: #138f7e;
   --colorDrawerButtonText: #ffffff;
 
-  --grid-gutter: 10px;
-  --drawer-gutter: 20px;
   --color-body-text: #111111;
   --color-body: #ffffff;
   --color-bg: #ffffff;
+  */
+
+  --grid-gutter: 10px;
+  --drawer-gutter: 20px;
 }
 
 @font-face {

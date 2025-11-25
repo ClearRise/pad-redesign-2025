@@ -1,0 +1,74 @@
+{%- style -%}
+  :root {
+    {% comment %} General Colors {% endcomment %}
+    {% assign body_bg = settings.color_body_bg | default: '#ffffff' %}
+    {% assign body_text = settings.color_body_text | default: '#111111' %}
+    --colorBody: {{ body_bg }};
+    --colorBodyDim: {{ body_bg | color_darken: 5 }};
+    --colorTextBody: {{ body_text }};
+    --colorPrice: {{ settings.color_price | default: '#111111' }};
+    --colorTextSavings: {{ settings.color_savings_text | default: '#cf7208' }};
+    --colorBorder: {{ settings.color_borders | default: '#111111' }};
+    --colorLink: {{ body_text }};
+    
+    {% comment %} Button Colors {% endcomment %}
+    {% assign button_color = settings.color_button | default: '#138f7e' %}
+    --colorBtnPrimary: {{ button_color }};
+    --colorBtnPrimaryLight: {{ button_color | color_lighten: 10 }};
+    --colorBtnPrimaryDim: {{ button_color | color_darken: 10 }};
+    --colorBtnPrimaryText: {{ settings.color_button_text | default: '#ffffff' }};
+    
+    {% comment %} Sale Tag Colors {% endcomment %}
+    --colorSaleTag: {{ settings.color_sale_tag | default: '#990000' }};
+    --colorSaleTagText: {{ settings.color_sale_tag_text | default: '#ffffff' }};
+    
+    {% comment %} Cart Dot {% endcomment %}
+    --colorCartDot: {{ settings.color_cart_dot | default: '#b30000' }};
+    
+    {% comment %} Image Backgrounds {% endcomment %}
+    --colorSmallImageBg: {{ settings.color_small_image_bg | default: '#ffffff' }};
+    --colorLargeImageBg: {{ settings.color_large_image_bg | default: '#ffffff' }};
+    
+    {% comment %} Header Colors {% endcomment %}
+    --colorNav: {{ settings.color_header | default: '#d8d8d8' }};
+    --colorNavText: {{ settings.color_header_text | default: '#111111' }};
+    
+    {% comment %} Announcement Bar Colors {% endcomment %}
+    --colorAnnouncement: {{ settings.color_announcement | default: '#138f7e' }};
+    --colorAnnouncementText: {{ settings.color_announcement_text | default: '#ffffff' }};
+    
+    {% comment %} Footer Colors {% endcomment %}
+    --colorFooter: {{ settings.color_footer | default: '#000000' }};
+    --colorFooterText: {{ settings.color_footer_text | default: '#ffffff' }};
+    
+    {% comment %} Drawer Colors {% endcomment %}
+    {% assign drawer_bg = settings.color_drawer_background | default: '#262626' %}
+    {% assign drawer_text = settings.color_drawer_text | default: '#f3f3f3' %}
+    --colorDrawers: {{ drawer_bg }};
+    --colorDrawersDim: {{ drawer_bg | color_darken: 5 }};
+    --colorDrawerBorder: {{ settings.color_drawer_border | default: '#dddddd' }};
+    --colorDrawerText: {{ drawer_text }};
+    --colorDrawerTextDark: {{ drawer_text | color_darken: 10 }};
+    --colorDrawerButton: {{ settings.color_drawer_button | default: '#138f7e' }};
+    --colorDrawerButtonText: {{ settings.color_drawer_button_text | default: '#ffffff' }};
+    
+    {% comment %} Modal Overlay {% endcomment %}
+    --colorModalBg: {{ settings.color_modal_overlays | default: '#138f7e' }};
+    
+    {% comment %} Image Treatment Colors {% endcomment %}
+    --colorHeroText: {{ settings.color_image_text | default: '#ffffff' }};
+    --colorImageOverlay: {{ settings.color_image_overlay | default: '#000000' }};
+    --colorImageOverlayOpacity: {{ settings.color_image_overlay_opacity | default: 10 | divided_by: 100.0 }};
+    --colorImageOverlayTextShadow: {{ settings.color_image_overlay_text_shadow | default: 30 | divided_by: 100.0 }};
+    
+    {% comment %} Grid Overlay {% endcomment %}
+    --colorGridOverlay: {{ settings.color_image_overlay | default: '#000000' }};
+    --colorGridOverlayOpacity: {{ settings.color_image_overlay_opacity | default: 10 | divided_by: 100.0 }};
+    
+    {% comment %} Legacy variables for backward compatibility {% endcomment %}
+    --color-body-text: {{ body_text }};
+    --color-body: {{ body_bg }};
+    --color-bg: {{ body_bg }};
+  }
+{%- endstyle -%}
+
