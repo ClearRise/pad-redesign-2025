@@ -20,7 +20,7 @@
           "type": "price",
           "settings": {
             "enable_badge": true,
-            "custom_badge": "BUY ONE GET ONE FREE"
+            "custom_badge": "75% OFF - BLACK FRIDAY DEAL"
           }
         },
         "rivo_loyalty_rewards_referrals_potential_points_tzhzhW": {
@@ -402,6 +402,7 @@
       "blocks": {
         "advanced_KyqEAm": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "",
             "heading": "BLACK FRIDAY SALE",
