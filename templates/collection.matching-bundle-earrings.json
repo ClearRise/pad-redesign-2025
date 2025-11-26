@@ -242,15 +242,15 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "New Releases",
+        "title": "Necklaces",
         "home_featured_products": "glowstone-bar-pendant-necklaces",
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
-        "per_row": 4,
-        "rows": 1,
+        "per_row": 3,
+        "rows": 2,
         "mobile_scrollable": false,
-        "view_all": false,
+        "view_all": true,
         "divider": false
       }
     },
