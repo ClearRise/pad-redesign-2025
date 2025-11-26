@@ -150,6 +150,35 @@
         "trust_icon_4_label": "One-of-a-kind Designs"
       }
     },
+    "rich_text_YkFgAa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xzBNcy": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Pendants & Chains"
+          }
+        },
+        "text_YGcDnk": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h3><strong>Women's Gift Guide</strong></h3><p><br/>Discover meaningful gifts crafted from Glowstone and opal. Thoughtful pieces designed to shine as brightly as the people who wear them.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xzBNcy",
+        "text_YGcDnk"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "featured_product_NEbWEK": {
       "type": "featured-product",
       "blocks": {
@@ -199,35 +228,6 @@
         "mobile_layout": "partial",
         "enable_video_looping": true,
         "product_video_style": "muted"
-      }
-    },
-    "rich_text_YkFgAa": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_xzBNcy": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "title": "Pendants & Chains"
-          }
-        },
-        "text_YGcDnk": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<h3><strong>Women's Gift Guide</strong></h3><p><br/>Discover meaningful gifts crafted from Glowstone, Opal, and Fine Metals. Thoughtful pieces designed to shine as brightly as the people who wear them.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_xzBNcy",
-        "text_YGcDnk"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
       }
     },
     "replo_trust_icons_white_backg_Wc7kJ7": {
@@ -563,8 +563,8 @@
     "17347204-928a-46d1-8166-ac8c007f382d",
     "blocks_d7Lp64",
     "trust_icons_EDYTbe",
-    "featured_product_NEbWEK",
     "rich_text_YkFgAa",
+    "featured_product_NEbWEK",
     "replo_trust_icons_white_backg_Wc7kJ7",
     "featured_collection_c4PjFV",
     "featured_collection_PJtd47",
