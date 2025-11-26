@@ -139,7 +139,7 @@
     "trust_icons_EDYTbe": {
       "type": "trust-icons_n",
       "settings": {
-        "section_background": "#ffffff",
+        "section_background": "#f3f3f3",
         "top_padding": 20,
         "bottom_padding": 20,
         "show_bottom_break_line": false,
