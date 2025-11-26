@@ -700,9 +700,11 @@
                       {%- unless product.has_only_default_variant -%}
                         {%- for option in product.options_with_values -%}
                           {%- liquid
-                            if block.settings.color_swatches
-                              assign is_color = false
-                              assign color_option_index = 0
+                            assign is_color = false
+                            assign is_image = false
+                            assign color_option_index = 0
+                            
+                            if block.settings.swatch_option == 'color'
                               assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase
                               assign color_option_index = forloop.index0
                               assign downcased_option = option.name | downcase
@@ -715,10 +717,13 @@
                               elsif downcased_option contains 'gold type'
                                 assign is_color = true
                               endif
+                            elsif block.settings.swatch_option == 'image'
+                              assign is_image = true
+                              assign color_option_index = forloop.index0
                             endif
                           -%}
                           
-                          {%- if is_color -%}
+                          {%- if is_color or is_image -%}
                             {%- render 'variant-button',
                               block: block,
                               product: product,
@@ -729,6 +734,7 @@
                               variant_labels: block.settings.variant_labels,
                               custom_variant_comment: block.settings.custom_variant_comment, 
                               is_color: is_color,
+                              is_image: is_image,
                               color_option_index: color_option_index
                             -%}
                           {% elsif block.settings.picker_type == 'button' %}
@@ -742,6 +748,7 @@
                               variant_labels: block.settings.variant_labels,
                               custom_variant_comment: block.settings.custom_variant_comment, 
                               is_color: is_color,
+                              is_image: is_image,
                               color_option_index: color_option_index
                             -%}
                           {%- else -%}

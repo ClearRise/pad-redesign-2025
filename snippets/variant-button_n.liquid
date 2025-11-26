@@ -123,7 +123,10 @@
             assign variant_image = blank
             for variant in product.variants
               if variant.options[option_index_0] == value
-                if variant.featured_media
+                if variant.metafields.custom.custom_image != blank
+                  assign variant_image = variant.metafields.custom.custom_image | img_url: '100x100'
+                  break
+                elsif variant.featured_media
                   assign variant_image = variant.featured_media | img_url: '100x100'
                   break
                 endif
