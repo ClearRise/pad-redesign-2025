@@ -7582,6 +7582,7 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
         inventory: "[data-product-inventory]",
         incomingInventory: "[data-incoming-inventory]",
         colorLabel: "[data-variant-color-label]",
+        imageLabel: "[data-variant-image-label]",
 
         addToCart: "[data-add-to-cart]",
         addToCartText: "[data-add-to-cart-text]",
@@ -8347,14 +8348,14 @@ document.addEventListener("DOMContentLoaded", tryonHandlingItem);
           let colorArray = evt.detail.value.split(" ");
           color = colorArray[0];
         }
-        console.log(
-          "SetColor:::::::::::",
-          this.selectors.colorLabel + `[data-index="${index}"`
-        );
         // Updates on radio button change, not variant.js
         this.container.querySelector(
           this.selectors.colorLabel + `[data-index="${index}"`
         ).textContent = color;
+        
+        this.container.querySelector(
+          this.selectors.imageLabel + `[data-index="${index}"`
+        ).textContent = evt.detail.value;
       },
 
       updateCartButton: function (evt) {
