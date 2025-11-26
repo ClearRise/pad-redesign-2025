@@ -164,7 +164,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<h3><strong>Women's Gift Guide</strong></h3><p><br/>Discover meaningful gifts crafted from Glowstone and opal. Thoughtful pieces designed to shine as brightly as the people who wear them.</p>"
+            "text": "<h3><strong>Women's Gift Guide</strong></h3><p>Celebrate Black Friday with extra savings on our Matching Bar Pendant Necklace and Round Earrings. Crafted to shine together or stand beautifully on their own, these pieces make the perfect gift for the special someone in your life. Whether you’re treating a loved one or elevating your own jewelry collection, find a timeless style at an unbeatable holiday value.</p>"
           }
         }
       },
@@ -188,6 +188,7 @@
         },
         "description_VazmdY": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "is_tab": false
           }
