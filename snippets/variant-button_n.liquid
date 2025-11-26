@@ -18,26 +18,39 @@
   <label class="variant__label{% if option.name == 'Default' or option.name == 'Title' %} hidden-label{% endif %}{% unless variant_labels %} hidden-label{% endunless %}"
     for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
     {{ option.name }}
-    <span class="variant__label-info">
-      &mdash;
-      <span
-        data-variant-color-label
-        data-index="option{{ forloop.index }}"
-        data-option-index="{{ color_option_index }}">
-        {% if is_color %}
-          {% if option.selected_value contains 'Gold' %}
-            {{ option.selected_value }}
-          {% else %}
-            {%- liquid
-              assign color_swatch_tmp =  option.selected_value | split: ' ' | first
-            -%}
-            {{ color_swatch_tmp }}
-          {% endif %}
-        {% else %}        
+    {% if is_image %}
+      <span class="variant__label-info">
+        &mdash;
+        <span
+          data-variant-color-label
+          data-variant-image-label
+          data-index="option{{ forloop.index }}"
+          data-option-index="{{ color_option_index }}">    
           {{ option.selected_value }}
-        {% endif %}
+        </span>
       </span>
-    </span>
+    {% else %}
+      <span class="variant__label-info">
+        &mdash;
+        <span
+          data-variant-color-label
+          data-index="option{{ forloop.index }}"
+          data-option-index="{{ color_option_index }}">
+          {% if is_color %}
+            {% if option.selected_value contains 'Gold' %}
+              {{ option.selected_value }}
+            {% else %}
+              {%- liquid
+                assign color_swatch_tmp =  option.selected_value | split: ' ' | first
+              -%}
+              {{ color_swatch_tmp }}
+            {% endif %}
+          {% else %}        
+            {{ option.selected_value }}
+          {% endif %}
+        </span>
+      </span>
+    {% endif %}
     {%- if is_size -%}
       {%- if block.settings.size_chart != blank -%}
         {%- render
@@ -57,6 +70,7 @@
     {%- endif -%}
   </label>
   {%- assign option_index = forloop.index -%}
+  {%- assign option_index_0 = forloop.index0 -%}
   <fieldset class="variant-input-wrap swatch"
     name="{{ option.name }}"
     data-index="option{{ option_index }}"
@@ -81,9 +95,10 @@
           data-index="option{{ option_index }}"
           name="{{ option.name }}"
           data-variant-input
-          class="{% unless product_available %} disabled{% endunless %}{% if is_color %} variant__input--color-swatch{% endif %}"
+          class="{% unless product_available %} disabled{% endunless %}{% if is_color %} variant__input--color-swatch{% endif %}{% if is_image %} variant__input--image-swatch{% endif %}"
           {% if is_color %} data-color-name="{{ value | escape }}"{% endif %}
           {% if is_color %} data-color-index="{{ color_option_index }}"{% endif %}
+          {% if is_image %} data-image-index="{{ color_option_index }}"{% endif %}
           id="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}">
         {%- if is_color -%}
           {%- liquid
@@ -100,6 +115,25 @@
             class="variant__button-label color-swatch color-swatch--{{ value | handle }}{% unless product_available %} disabled{% endunless %}"
             data-file-name="{{color_file_name}}" 
             style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}"
+          >
+            <span>{{ value | escape }}</span>
+          </label>
+        {%- elsif is_image -%}
+          {%- liquid
+            assign variant_image = blank
+            for variant in product.variants
+              if variant.options[option_index_0] == value
+                if variant.featured_media
+                  assign variant_image = variant.featured_media | img_url: '100x100'
+                  break
+                endif
+              endif
+            endfor
+          -%}
+          <label
+            for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
+            class="variant__button-label bold_option_value_swatch color-swatch color-swatch--{{ value | handle }}{% unless product_available %} disabled{% endunless %}"
+            style="{% if variant_image != blank %}background-image: url({{ variant_image }});{% endif %} background-size: cover; background-position: center;"
           >
             <span>{{ value | escape }}</span>
           </label>

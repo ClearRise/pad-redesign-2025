@@ -260,6 +260,10 @@
             "label": "Swatch Style",
             "options": [
               {
+                "value": "circle_image",
+                "label": "Circle Image"
+              },
+              {
                 "value": "circle",
                 "label": "Circle"
               },
@@ -271,9 +275,20 @@
             "default": "square"
           },
           {
-            "type": "checkbox",
-            "id": "color_swatches",
-            "label": "Enable color swatches",
+            "type": "select",
+            "id": "swatch_option",
+            "label": "Swatch option",
+            "options": [
+              {
+                "value": "color",
+                "label": "Color"
+              },
+              {
+                "value": "image",
+                "label": "Image"
+              }
+            ],
+            "default": "color",
             "info": "Requires type to be set to 'Buttons'. [Learn how to set up swatches](https://archetypethemes.co/blogs/impulse/how-do-i-set-up-color-swatches)"
           },
           {
