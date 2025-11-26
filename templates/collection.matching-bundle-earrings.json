@@ -552,8 +552,8 @@
         "space_around": false,
         "background_color": "#ffffff",
         "small_image": true,
-        "is_top_line": true,
-        "is_bottom_line": false,
+        "is_top_line": false,
+        "is_bottom_line": true,
         "top_logo_size": 16,
         "additional_class": ""
       }
