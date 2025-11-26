@@ -198,7 +198,8 @@
             "size_chart": "",
             "variant_labels": true,
             "picker_type": "button",
-            "color_swatches": false
+            "product_swatch_style": "circle_image",
+            "swatch_option": "image"
           }
         },
         "buy_buttons_FCdRXj": {
