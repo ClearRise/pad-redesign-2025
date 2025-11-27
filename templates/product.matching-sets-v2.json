@@ -45,7 +45,7 @@
             "variant_labels": true,
             "picker_type": "dropdown",
             "product_swatch_style": "circle",
-            "color_swatches": true,
+            "swatch_option": "color",
             "custom_variant_comment": false,
             "collapse_options": false
           }
@@ -83,7 +83,6 @@
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
-          "disabled": true,
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
