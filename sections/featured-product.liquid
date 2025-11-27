@@ -158,7 +158,20 @@
       {
         "type": "price",
         "name": "Price",
-        "limit": 1
+        "limit": 1,
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "enable_badge",
+            "label": "Display custom badge",
+            "info": "It will display without compare price"
+          },
+          {
+            "type": "text",
+            "id": "custom_badge",
+            "label": "Custom badge text"
+          }
+        ]
       },
       {
         "type": "quantity_selector",
