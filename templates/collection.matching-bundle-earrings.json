@@ -184,7 +184,10 @@
       "blocks": {
         "price_QmxKBb": {
           "type": "price",
-          "settings": {}
+          "settings": {
+            "enable_badge": false,
+            "custom_badge": ""
+          }
         },
         "description_VazmdY": {
           "type": "description",
