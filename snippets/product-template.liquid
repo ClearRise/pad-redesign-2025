@@ -29,6 +29,40 @@
 
 {{'custom-product.scss.css' | asset_url | stylesheet_tag }}
 
+<style>
+  .buy-one-get-one-free {
+    flex: 1;
+    text-align: right;
+  }
+  .buy-one-get-one-free span {
+    background: #DC3030;
+    padding: 5px 25px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: white;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .buy-one-get-one-free {
+      flex: unset;
+      width: 100%;
+      text-align: left;
+    }
+  }
+  @media (max-width: 520px) {
+    .buy-one-get-one-free span {
+      padding: 3px 10px;
+      font-size: 11px;
+    }  
+  }
+  @media (max-width: 400px) {
+    .buy-one-get-one-free {
+      width: 100%;
+      flex: unset !important;
+      text-align: left;
+    }
+  }
+</style>
+
 <div id="adding-product-modal" class="add-to-cart-loader Modal Modal--dark" aria-hidden="true" role="dialog" data-scrollable="" style="display: none;">
    <div class="Modal__Content Rte">
       <div class="CircleSpinner">
@@ -582,8 +616,16 @@
                       {%- render 'product-description', id: id, product: product, is_tab: block.settings.is_tab -%}
                     </div>
                   {%- when 'price' -%}
-                    <div class="product-block product-block--price" {{ block.shopify_attributes }} data-product-id="{{ product.id }}">
+                    <div class="product-block product-block--price pdp-product-block--price-ss" {{ block.shopify_attributes }} data-product-id="{{ product.id }}">
                       {%- assign hide_sale_price = true -%}
+                      <span data-product-price
+                        class="product__price{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}">
+                        {%- unless product.empty? -%}
+                          {{ current_variant.price | money_without_trailing_zeros }}
+                        {%- else -%}
+                          {{ 1999 | money_without_trailing_zeros }}
+                        {%- endunless -%}
+                      </span>
                       {%- if product.compare_at_price_max > product.price -%}
                         {%- if current_variant.compare_at_price > current_variant.price -%}
                           {%- assign hide_sale_price = false -%}
@@ -606,15 +648,6 @@
                         <span data-a11y-price class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
                       {%- endif -%}
 
-                      <span data-product-price
-                        class="product__price{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}">
-                        {%- unless product.empty? -%}
-                          {{ current_variant.price | money_without_trailing_zeros }}
-                        {%- else -%}
-                          {{ 1999 | money_without_trailing_zeros }}
-                        {%- endunless -%}
-                      </span>
-
                       {%- if settings.product_save_amount -%}
                         {%- if settings.product_save_type == 'dollar' -%}
                           {%- capture saved_amount -%}{{ current_variant.compare_at_price | minus: current_variant.price | money_without_trailing_zeros }}{%- endcapture -%}
@@ -623,15 +656,19 @@
                         {%- endif -%}
                         <span data-save-price class="product__price-savings{% if hide_sale_price %} hide{% endif %}">
                           {%- unless hide_sale_price -%}
+                            {% comment %} <span class="separate-dot"> {% endcomment %}
+                              {% render 'icon-dot', color: '#138E7E66' %}
+                            {% comment %} </span> {% endcomment %}
                             {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
                           {%- endunless -%}
                         </span>
                         
                         {% if block.settings.enable_badge == true and block.settings.custom_badge != blank %}
-                          <span class="save_badge {{settings.save_badge_type}} custom">{{block.settings.custom_badge}}</span>
+                          {% comment %} <span class="save_badge {{settings.save_badge_type}} custom">{{block.settings.custom_badge}}</span> {% endcomment %}
                         {% elsif settings.save_badget_text and settings.display_save_badge == 'true' %}
                           <span class="save_badge {{settings.save_badge_type}}">{{settings.save_badget_text}}</span>
                         {% endif %}
+                        
                       {%- endif -%}
 
                       <div
@@ -661,6 +698,25 @@
                           {%- endif -%}
                         </div>
                       {%- endif -%}
+                      {% if block.settings.enable_badge %}
+                        {% if settings.savings_or_entries == 'savings' -%}
+                          {% if block.settings.custom_badge != blank %}
+                            <div class="buy-one-get-one-free">
+                              <span>{{ block.settings.custom_badge }}</span>
+                            </div>
+                          {% endif %}
+                        {% elsif settings.savings_or_entries == 'entries' -%}
+                          {% if product.metafields.custom.entries_multiplier != blank %}
+                            {%- assign multiplier = product.metafields.custom.entries_multiplier -%}
+                          {% else %}
+                            {%- assign multiplier = settings.entries_multiplier -%}
+                          {% endif %}
+                          {%- assign entries_value = product.price | divided_by: 100.0 | times: multiplier | round -%}
+                            <div class="buy-one-get-one-free">
+                              <span>{{ entries_value }} Entries</span>
+                            </div>
+                        {%- endif -%}
+                      {% endif %}
                     </div>
                   {%- when 'quantity_selector' -%}
                     <div class="product-block" {{ block.shopify_attributes }}>
