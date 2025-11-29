@@ -62,6 +62,7 @@
       "blocks": {
         "ai_gen_block_78985ae_RyVafR": {
           "type": "ai_gen_block_78985ae",
+          "disabled": true,
           "settings": {
             "offer_1": "Try Before You Buy",
             "offer_2": "Pendants ship for $0 today",
@@ -85,6 +86,7 @@
       "block_order": [
         "ai_gen_block_78985ae_RyVafR"
       ],
+      "disabled": true,
       "settings": {}
     },
     "rich_text_mEyziK": {
@@ -184,7 +186,7 @@
         "saved_amount_option": "display_entries",
         "entries_multiplier": 1,
         "load_more": false,
-        "show_tryon_badge": true,
+        "show_tryon_badge": false,
         "tryon_badge_text": "Try Free"
       }
     }
