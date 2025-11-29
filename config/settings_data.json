@@ -222,6 +222,7 @@
           },
           "scroll_navi_mobile_CqAMD8": {
             "type": "scroll_navi_mobile",
+            "disabled": true,
             "settings": {
               "sub_menu": "<u>Try Free</u>",
               "link_submenu": "https://patrickadairdesigns.com/pages/try-before-you-buy"
@@ -493,9 +494,19 @@
         "disabled": false,
         "settings": {}
       },
+      "14660309866608708618": {
+        "type": "shopify://apps/spd-split-payment/blocks/app-embed/35a708d6-4cb9-406a-9fdb-e05a89b032c6",
+        "disabled": false,
+        "settings": {}
+      },
+      "8605505498557855500": {
+        "type": "shopify://apps/bogos-io-free-gift/blocks/app-embed/0432bba6-720a-4e95-be5a-b868386f7aa6",
+        "disabled": false,
+        "settings": {}
+      },
       "5178053274977549534": {
         "type": "shopify://apps/tryon/blocks/tryOnAppEmbed/95799297-dc1d-40fb-9234-066b30a3012a",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "tryon-redirect-on-click": "none",
           "tryon-button-location": "after",
@@ -523,16 +534,6 @@
           "appendable-atc-button": ".buy-buttons-block",
           "tryon-product-form-selector": ""
         }
-      },
-      "14660309866608708618": {
-        "type": "shopify://apps/spd-split-payment/blocks/app-embed/35a708d6-4cb9-406a-9fdb-e05a89b032c6",
-        "disabled": false,
-        "settings": {}
-      },
-      "8605505498557855500": {
-        "type": "shopify://apps/bogos-io-free-gift/blocks/app-embed/0432bba6-720a-4e95-be5a-b868386f7aa6",
-        "disabled": false,
-        "settings": {}
       }
     }
   },
