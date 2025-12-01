@@ -98,7 +98,7 @@
 {% endstyle %}
 
 {% if section.settings.enable_timer_banner %}
-  <div class="timer-banner" id="timer-banner" style="background: {{ section.settings.background_color | default: '#ff6b35' }}; color: {{ section.settings.text_color | default: '#ffffff' }};">
+  <div class="timer-banner" id="timer-banner-section-{{ section.id }}" style="background: {{ section.settings.background_color | default: '#ff6b35' }}; color: {{ section.settings.text_color | default: '#ffffff' }};">
   <div class="timer-banner-content">
     {% if section.settings.banner_link != blank %}
       <a href="{{ section.settings.banner_link }}" class="timer-banner-text timer-banner-link">
@@ -111,21 +111,21 @@
     {% endif %}
     
     {% if section.settings.enable_countdown %}
-      <div class="timer-countdown" id="countdown-timer">
+      <div class="timer-countdown" id="countdown-timer-section-{{ section.id }}">
         <span class="timer-unit">
-          <span id="days">00</span>
+          <span id="days-section-{{ section.id }}">00</span>
         </span>
         <span class="timer-separator">:</span>
         <span class="timer-unit">
-          <span id="hours">00</span>
+          <span id="hours-section-{{ section.id }}">00</span>
         </span>
         <span class="timer-separator">:</span>
         <span class="timer-unit">
-          <span id="minutes">00</span>
+          <span id="minutes-section-{{ section.id }}">00</span>
         </span>
         <span class="timer-separator">:</span>
         <span class="timer-unit">
-          <span id="seconds">00</span>
+          <span id="seconds-section-{{ section.id }}">00</span>
         </span>
       </div>
     {% endif %}
@@ -135,28 +135,46 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   {% if section.settings.enable_countdown %}
-    // Timer functionality
+    // Timer functionality - using unique section IDs
+    const sectionId = '{{ section.id }}';
+    const bannerId = 'timer-banner-section-' + sectionId;
+    const timerId = 'countdown-timer-section-' + sectionId;
+    const daysId = 'days-section-' + sectionId;
+    const hoursId = 'hours-section-' + sectionId;
+    const minutesId = 'minutes-section-' + sectionId;
+    const secondsId = 'seconds-section-' + sectionId;
+    
     function updateCountdown() {
-      const endDate = new Date('{{ section.settings.countdown_end_date | default: "2024-12-31 23:59:59" }}').getTime();
+      // Parse date string - convert "YYYY-MM-DD HH:MM:SS" to ISO format
+      const dateString = '{{ section.settings.countdown_end_date | default: "2024-12-31 23:59:59" }}';
+      const isoDateString = dateString.replace(' ', 'T');
+      const endDate = new Date(isoDateString).getTime();
       const now = new Date().getTime();
       const timeLeft = endDate - now;
       
-      if (timeLeft > 0) {
+      const daysEl = document.getElementById(daysId);
+      const hoursEl = document.getElementById(hoursId);
+      const minutesEl = document.getElementById(minutesId);
+      const secondsEl = document.getElementById(secondsId);
+      
+      if (timeLeft > 0 && daysEl && hoursEl && minutesEl && secondsEl) {
         const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
         
-        document.getElementById('days').textContent = days.toString().padStart(2, '0');
-        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        daysEl.textContent = days.toString().padStart(2, '0');
+        hoursEl.textContent = hours.toString().padStart(2, '0');
+        minutesEl.textContent = minutes.toString().padStart(2, '0');
+        secondsEl.textContent = seconds.toString().padStart(2, '0');
       } else {
         // Timer expired - hide banner or show expired message
         {% if section.settings.hide_when_expired %}
-          document.getElementById('timer-banner').classList.add('hidden');
+          const banner = document.getElementById(bannerId);
+          if (banner) banner.classList.add('hidden');
         {% else %}
-          document.getElementById('countdown-timer').innerHTML = '<span style="font-weight: bold;">EXPIRED</span>';
+          const timer = document.getElementById(timerId);
+          if (timer) timer.innerHTML = '<span style="font-weight: bold;">EXPIRED</span>';
         {% endif %}
       }
     }
