@@ -192,7 +192,7 @@
         "text_color": "#111111",
         "enable_countdown": true,
         "countdown_end_date": "2025-12-01 23:59:59",
-        "hide_when_expired": true
+        "hide_when_expired": false
       }
     },
     "replo_trust_icons_white_backg_Wc7kJ7": {
