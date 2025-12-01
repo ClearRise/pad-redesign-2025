@@ -79,8 +79,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/Artboard_9_copy.png",
-            "image_mobile": "shopify://shop_images/Artboard_7_copy_2.png",
+            "image": "shopify://shop_images/Artboard_25.png",
+            "image_mobile": "shopify://shop_images/Artboard_24.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -164,7 +164,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<h3><strong>Early Bird Black Friday Deals</strong></h3><p><br/>Save <strong>up to $500 off</strong> on our curated Luxury Rings or <strong>$100 off</strong> Our Signature Selections + <strong>Buy One Get One Free</strong>.</p>"
+            "text": "<h3><strong>CYBER MONDAY DEALS</strong></h3><p><br/>Save <strong>up to 50% off </strong>Our Signature Selections + <strong>Buy One Get One Free</strong>.</p>"
           }
         }
       },
@@ -172,6 +172,7 @@
         "heading_xzBNcy",
         "text_YGcDnk"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "align_text": "center",
@@ -179,10 +180,20 @@
         "divider": false
       }
     },
-    "replo_flash_sale_timer_JRhnx4": {
-      "type": "replo-flash-sale-timer",
-      "name": "Flash Sale Timer",
-      "settings": {}
+    "timer_banner_7BpDUP": {
+      "type": "timer-banner",
+      "name": "Timer Banner",
+      "settings": {
+        "enable_timer_banner": true,
+        "banner_text": "CYBER MONDAY DEALS - Up to 50% off + BOGO",
+        "banner_link": "",
+        "banner_link_text": "Shop now",
+        "background_color": "#8ead97",
+        "text_color": "#111111",
+        "enable_countdown": true,
+        "countdown_end_date": "2025-12-01 23:59:59",
+        "hide_when_expired": true
+      }
     },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
@@ -194,6 +205,7 @@
     },
     "featured_collection_c4PjFV": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "Featured collection",
       "settings": {
         "title": "Up to $500 Off + Buy One Get One Free",
@@ -210,6 +222,7 @@
     },
     "featured_collection_fA8WGh": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "Featured collection",
       "settings": {
         "title": "$100 Off + Buy One Get One Free",
@@ -335,7 +348,7 @@
         "product_grid": {
           "type": "product_grid",
           "settings": {
-            "enable_collection_count": true,
+            "enable_collection_count": false,
             "per_row": 3,
             "rows_per_page": 20,
             "mobile_flush_grid": true
@@ -347,11 +360,10 @@
         "subcollections",
         "product_grid"
       ],
-      "disabled": true,
       "settings": {
         "title": "",
         "padding_horizontal": 50,
-        "enable_sidebar": false,
+        "enable_sidebar": true,
         "collapsed": true,
         "filter_style": "sidebar",
         "enable_color_swatches": false,
@@ -488,7 +500,7 @@
     "blocks_d7Lp64",
     "trust_icons_EDYTbe",
     "rich_text_YkFgAa",
-    "replo_flash_sale_timer_JRhnx4",
+    "timer_banner_7BpDUP",
     "replo_trust_icons_white_backg_Wc7kJ7",
     "featured_collection_c4PjFV",
     "featured_collection_fA8WGh",
