@@ -79,8 +79,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/Artboard_25.png",
-            "image_mobile": "shopify://shop_images/Artboard_24.png",
+            "image": "shopify://shop_images/Artboard_25_177b4432-9f1d-48fd-bacb-77f859074ac8.png",
+            "image_mobile": "shopify://shop_images/Artboard_23_7f06e6d9-6cf7-444a-8de4-9a1237e5e861.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -185,14 +185,14 @@
       "name": "Timer Banner",
       "settings": {
         "enable_timer_banner": true,
-        "banner_text": "CYBER MONDAY DEALS - Up to 50% off + BOGO",
+        "banner_text": "CYBER WEEK DEALS - Up to 50% off + BOGO",
         "banner_link": "",
         "banner_link_text": "Shop now",
         "background_color": "#8ead97",
         "text_color": "#111111",
         "enable_countdown": true,
-        "countdown_end_date": "2025-12-01 23:59:59",
-        "hide_when_expired": false
+        "countdown_end_date": "2025-12-02 23:59:59",
+        "hide_when_expired": true
       }
     },
     "replo_trust_icons_white_backg_Wc7kJ7": {
