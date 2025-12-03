@@ -108,7 +108,7 @@
     "first_tier_progress": "You've unlocked a Free Gift!",
     "gift_box_title": "Free Mystery Gift",
     "gift_box_text": "",
-    "unlock_text_first": "Congrats! You've Unlocked a Free Mystery Pendant!",
+    "unlock_text_first": "Congrats! You've Unlocked a Free Mystery Gift!",
     "cart_threshold_amount": 195,
     "spend_progress": "",
     "product-handle-1": "lapis-lazuli-dog-tag-pendant",
@@ -491,11 +491,6 @@
       },
       "2786716548061469553": {
         "type": "shopify://apps/axon/blocks/app-embed/baa0f014-62ea-462f-a8aa-a94befb1cbad",
-        "disabled": false,
-        "settings": {}
-      },
-      "14660309866608708618": {
-        "type": "shopify://apps/spd-split-payment/blocks/app-embed/35a708d6-4cb9-406a-9fdb-e05a89b032c6",
         "disabled": false,
         "settings": {}
       },
