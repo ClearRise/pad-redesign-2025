@@ -184,7 +184,7 @@
               "background_color": "#8ead97",
               "text_color": "#111111",
               "enable_countdown": true,
-              "countdown_end_date": "2025-12-03 23:59:59",
+              "countdown_end_date": "2025-12-05 23:59:59",
               "hide_when_expired": true
             }
           },

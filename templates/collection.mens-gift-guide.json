@@ -138,6 +138,7 @@
     },
     "trust_icons_EDYTbe": {
       "type": "trust-icons_n",
+      "disabled": true,
       "settings": {
         "section_background": "#f3f3f3",
         "top_padding": 20,
