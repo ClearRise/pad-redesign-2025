@@ -180,6 +180,9 @@
     },
     "featured_collection_PJtd47": {
       "type": "featured-collection",
+      "custom_css": [
+        "@media only screen and (max-width: 768px) {.grid-overflow-wrapper .grid__item {flex: 0 0 70vw; }}"
+      ],
       "name": "Featured collection",
       "settings": {
         "title": "The Men's Essentials Collection",
@@ -196,6 +199,9 @@
     },
     "featured_collection_4e7b7E": {
       "type": "featured-collection",
+      "custom_css": [
+        "@media only screen and (max-width: 768px) {.grid-overflow-wrapper .grid__item {flex: 0 0 70vw; }}"
+      ],
       "name": "Featured collection",
       "settings": {
         "title": "Bundled Deals",
