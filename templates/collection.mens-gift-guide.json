@@ -1,0 +1,529 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "advanced_content_eYLzPF": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "liquid_DNKzNA": {
+          "type": "liquid",
+          "settings": {
+            "is_collection_banner": false,
+            "liquid_name": "",
+            "code": "<h2>Glow Stone Series</h2><p>Experience the perfect blend of tradition and quality with craftsmanship that stands the test of time.</p>",
+            "width": "50%",
+            "alignment": "center",
+            "text_color": "#000000",
+            "simple_background_color": "#ffffff",
+            "variant_padding": true,
+            "padding_left": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "image_khDkUk": {
+          "type": "image",
+          "settings": {
+            "iamge_name": "",
+            "image": "shopify://shop_images/2-2.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_DNKzNA",
+        "image_khDkUk"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "show_navigation": true,
+        "image_first": true,
+        "space_around": false,
+        "background_color": "#ffffff",
+        "small_image": false,
+        "is_top_line": false,
+        "is_bottom_line": false,
+        "top_logo_size": 30,
+        "additional_class": ""
+      }
+    },
+    "17347204-928a-46d1-8166-ac8c007f382d": {
+      "type": "slideshow_n",
+      "blocks": {
+        "image_WfWU9Q": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "image": "shopify://shop_images/Artboard_25_177b4432-9f1d-48fd-bacb-77f859074ac8.png",
+            "image_mobile": "shopify://shop_images/Artboard_23_7f06e6d9-6cf7-444a-8de4-9a1237e5e861.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24,
+            "text_bottom_padding_desktop": 30,
+            "text_bottom_padding_mobile": 30,
+            "button_color_1": "white",
+            "button_color_2": "white"
+          }
+        }
+      },
+      "block_order": [
+        "image_WfWU9Q"
+      ],
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
+    "blocks_d7Lp64": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_78985ae_qyY3YX": {
+          "type": "ai_gen_block_78985ae",
+          "settings": {
+            "offer_1": "Holiday Gifts She’ll Treasure",
+            "offer_2": "Shop This Season’s Bestsellers",
+            "offer_3": "Handcrafted Jewelry for the Holidays",
+            "offer_4": "Make This Season Shine",
+            "offer_5": "Meaningful Gifts Made to Last",
+            "background_color": "#dfeafb",
+            "text_color": "#000000",
+            "text_size": 13,
+            "text_weight": "500",
+            "bar_height": 8,
+            "separator": "",
+            "separator_color": "#000000",
+            "separator_spacing": 20,
+            "scroll_speed": 30,
+            "item_spacing": 10
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_78985ae_qyY3YX"
+      ],
+      "settings": {}
+    },
+    "trust_icons_EDYTbe": {
+      "type": "trust-icons_n",
+      "settings": {
+        "section_background": "#f3f3f3",
+        "top_padding": 20,
+        "bottom_padding": 20,
+        "show_bottom_break_line": false,
+        "top_logo_size": 16,
+        "trust_icon_1_label": "",
+        "trust_icon_2_label": "",
+        "trust_icon_3_label": "",
+        "trust_icon_4_label": "One-of-a-kind Designs"
+      }
+    },
+    "rich_text_YkFgAa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xzBNcy": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Pendants & Chains"
+          }
+        },
+        "text_YGcDnk": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h3><strong>Women's Gift Guide</strong></h3><p><br/>Discover meaningful gifts crafted from Glowstone, Opal, and Fine Metals. Thoughtful pieces designed to shine as brightly as the people who wear them.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xzBNcy",
+        "text_YGcDnk"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "replo_trust_icons_white_backg_Wc7kJ7": {
+      "type": "replo-trust-icons-white-backg",
+      "disabled": true,
+      "custom_css": [
+        "{padding: 10 px;}"
+      ],
+      "settings": {}
+    },
+    "featured_collection_c4PjFV": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "New Releases",
+        "home_featured_products": "glowstone-bar-pendant-necklaces",
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "featured_collection_PJtd47": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Gifts Under $300",
+        "home_featured_products": "womens-jewelry-under-300",
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "per_row": 4,
+        "rows": 2,
+        "mobile_scrollable": false,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "featured_collection_4e7b7E": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Stackable Glowstone Rings",
+        "home_featured_products": "glowstone-stackable-rings",
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "per_row": 4,
+        "rows": 2,
+        "mobile_scrollable": false,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "featured_collection_XBaYHV": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Diamond Engagement Rings",
+        "home_featured_products": "womens-diamond-wedding-bands",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "per_row": 4,
+        "rows": 2,
+        "mobile_scrollable": false,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "replo_trust_icons_fy9XYw": {
+      "type": "replo-trust-icons",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_G9LH7U": {
+      "type": "rich-text",
+      "blocks": {
+        "text_Up6xTw": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2><strong>LIMITED TIME OFFER</strong></h2><p>Buy One Get One Free (of equal or lesser value) </p><p>AND</p><p>Spend $250 and get $50 back</p><p><strong>This Weekend ONLY</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_Up6xTw"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "collection-header": {
+      "type": "collection-header",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "collection_image_enable": false,
+        "parallax": true
+      }
+    },
+    "promo-grid": {
+      "type": "promo-grid",
+      "blocks": {
+        "banner": {
+          "type": "banner",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "text": "",
+            "link": "",
+            "label": "",
+            "color_tint": "#e95454",
+            "color_tint_opacity": 8,
+            "framed": false
+          }
+        },
+        "advanced": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Limited time",
+            "heading": "Announce your promotion",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "cta_text1": "Shop This",
+            "cta_link1": "",
+            "cta_text2": "Shop All",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Ring_Main_Focus_Shot.jpg",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "banner",
+        "advanced"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_title": false,
+        "title": "",
+        "align_title": "left",
+        "sub_title": "",
+        "align_sub_title": "left",
+        "show_img_title": false,
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection_n",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "disabled": true,
+          "settings": {}
+        },
+        "subcollections": {
+          "type": "subcollections",
+          "disabled": true,
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 3,
+            "rows_per_page": 20,
+            "mobile_flush_grid": true
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "subcollections",
+        "product_grid"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "padding_horizontal": 50,
+        "enable_sidebar": false,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": false,
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "custom_badge": "BUY ONE GET ONE FREE",
+        "saved_amount_option": "display_entries",
+        "entries_multiplier": 1,
+        "load_more": false,
+        "show_tryon_badge": true,
+        "tryon_badge_text": "Try Free"
+      }
+    },
+    "featured_collections_tmXMx8": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_D9Bmgq": {
+          "type": "collection",
+          "settings": {
+            "collection": "glowstone-stackable-rings",
+            "title": "Stackable Rings",
+            "focal_point": "center center"
+          }
+        },
+        "collection_NrrDcr": {
+          "type": "collection",
+          "settings": {
+            "collection": "womens-necklaces",
+            "title": "Necklaces",
+            "focal_point": "center center"
+          }
+        },
+        "collection_EEwhzq": {
+          "type": "collection",
+          "settings": {
+            "collection": "womens-earrings",
+            "title": "Earrings",
+            "focal_point": "center center"
+          }
+        },
+        "collection_ydDaft": {
+          "type": "collection",
+          "settings": {
+            "collection": "wedding-ring-sets",
+            "title": "Matching Sets",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_D9Bmgq",
+        "collection_NrrDcr",
+        "collection_EEwhzq",
+        "collection_ydDaft"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Shop By Collection",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
+      }
+    },
+    "advanced_content_flexible_J9wirj": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "image_7W8dDt": {
+          "type": "image",
+          "settings": {
+            "iamge_name": "",
+            "image": "shopify://shop_images/fabd0ccf-1c92-4d2f-9fdd-020ed5197b48.png",
+            "link": "",
+            "width": "40%",
+            "alignment": "center"
+          }
+        },
+        "liquid_9Q6HTf": {
+          "type": "liquid",
+          "settings": {
+            "is_collection_banner": false,
+            "liquid_name": "btn-ctn",
+            "code": "<h2>Find the Perfect Gift</h2><p>Shop a refined collection of rings, necklaces, bracelets, and pendants crafted with premium materials and timeless design.</p>",
+            "width": "60%",
+            "alignment": "center",
+            "text_color": "#111111",
+            "simple_background_color": "#ffffff",
+            "variant_padding": false,
+            "padding_left": 150,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "child_block_button_tJ4Vgf": {
+          "type": "child_block_button",
+          "settings": {
+            "parent_name": "btn-ctn",
+            "position": "bottom",
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/womens-jewelry",
+            "button_background_color": "#138f7e",
+            "button_border_color": "#111111",
+            "button_text_color": "#ffffff",
+            "inclue_right_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "image_7W8dDt",
+        "liquid_9Q6HTf",
+        "child_block_button_tJ4Vgf"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": false,
+        "background_color": "#ffffff",
+        "small_image": true,
+        "is_top_line": true,
+        "is_bottom_line": false,
+        "top_logo_size": 16,
+        "additional_class": ""
+      }
+    }
+  },
+  "order": [
+    "advanced_content_eYLzPF",
+    "17347204-928a-46d1-8166-ac8c007f382d",
+    "blocks_d7Lp64",
+    "trust_icons_EDYTbe",
+    "rich_text_YkFgAa",
+    "replo_trust_icons_white_backg_Wc7kJ7",
+    "featured_collection_c4PjFV",
+    "featured_collection_PJtd47",
+    "featured_collection_4e7b7E",
+    "featured_collection_XBaYHV",
+    "replo_trust_icons_fy9XYw",
+    "rich_text_G9LH7U",
+    "collection-header",
+    "promo-grid",
+    "main-collection",
+    "featured_collections_tmXMx8",
+    "advanced_content_flexible_J9wirj"
+  ]
+}
