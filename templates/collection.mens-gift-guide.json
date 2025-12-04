@@ -161,6 +161,9 @@
     },
     "featured_collection_c4PjFV": {
       "type": "featured-collection",
+      "custom_css": [
+        "@media only screen and (max-width: 768px) {.grid-overflow-wrapper .grid__item {flex: 0 0 70vw; }}"
+      ],
       "name": "Featured collection",
       "settings": {
         "title": "Top Gifts For Him",
