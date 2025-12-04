@@ -995,15 +995,7 @@
               </button>
             </div>
 
-{% assign Partially = false %}
-       {% for line_item in cart.items %}
 
-       {% if line_item.product.tags contains 'Partial.ly' %}
-       {% assign Partially = true %}
-       {% endif %}
-       {% endfor %}
-​
-       {% if Partially %}                        
 <style>
 #partiallyCartButtonContainer a {
  width: 100%;
@@ -1020,7 +1012,18 @@
             }
           }
 
-</style>          
+</style>  
+
+{% assign Partially = false %}
+       {% for line_item in cart.items %}
+
+       {% if line_item.product.tags contains 'Partial.ly' %}
+       {% assign Partially = true %}
+       {% endif %}
+       {% endfor %}
+​
+       {% if Partially %}                        
+        
           <div id="partiallyCartButtonContainer"></div>
 <script>
 document.partiallyButtonConfig = {
