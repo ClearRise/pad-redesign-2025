@@ -193,12 +193,13 @@
         "per_row": 3,
         "rows": 2,
         "mobile_scrollable": true,
-        "view_all": true,
+        "view_all": false,
         "divider": false
       }
     },
     "featured_collection_4e7b7E": {
       "type": "featured-collection",
+      "disabled": true,
       "custom_css": [
         "@media only screen and (max-width: 768px) {.grid-overflow-wrapper .grid__item {flex: 0 0 70vw; }}"
       ],
