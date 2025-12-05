@@ -192,8 +192,8 @@
         "collection_NrrDcr": {
           "type": "collection",
           "settings": {
-            "collection": "necklaces",
-            "title": "Men's Necklaces",
+            "collection": "mens-gifts-under-200",
+            "title": "Gifts Under $200",
             "focal_point": "center center"
           }
         },
@@ -245,56 +245,6 @@
         "mobile_scrollable": true,
         "view_all": false,
         "divider": false
-      }
-    },
-    "featured_collections_PgFWdF": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_bNjarY": {
-          "type": "collection",
-          "settings": {
-            "collection": "mens-gifts-under-200",
-            "title": "Gifts Under $200",
-            "focal_point": "center center"
-          }
-        },
-        "collection_r8RfBn": {
-          "type": "collection",
-          "settings": {
-            "collection": "necklaces",
-            "title": "Men's Necklaces",
-            "focal_point": "center center"
-          }
-        },
-        "collection_X86gLf": {
-          "type": "collection",
-          "settings": {
-            "collection": "solid-meteorite-rings",
-            "title": "Meteorite rings",
-            "focal_point": "center center"
-          }
-        },
-        "collection_fJz9jQ": {
-          "type": "collection",
-          "settings": {
-            "collection": "wedding-ring-sets",
-            "title": "Matching Sets",
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "collection_bNjarY",
-        "collection_r8RfBn",
-        "collection_X86gLf",
-        "collection_fJz9jQ"
-      ],
-      "name": "Collection list",
-      "settings": {
-        "title": "Men's Gifts By Price",
-        "divider": false,
-        "per_row": 4,
-        "enable_gutter": false
       }
     },
     "featured_collection_4e7b7E": {
@@ -532,7 +482,6 @@
     "featured_collection_c4PjFV",
     "featured_collections_tmXMx8",
     "featured_collection_PJtd47",
-    "featured_collections_PgFWdF",
     "featured_collection_4e7b7E",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
