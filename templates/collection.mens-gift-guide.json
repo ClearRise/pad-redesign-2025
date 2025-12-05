@@ -406,7 +406,7 @@
       "settings": {
         "title": "Trending Gifts",
         "divider": false,
-        "per_row": 3,
+        "per_row": 4,
         "enable_gutter": false
       }
     },
@@ -417,7 +417,7 @@
           "type": "image",
           "settings": {
             "iamge_name": "",
-            "image": "shopify://shop_images/fabd0ccf-1c92-4d2f-9fdd-020ed5197b48.png",
+            "image": "shopify://shop_images/SnapInsta.to_573728863_18427708885106041_4846084484130255372_n.jpg",
             "link": "",
             "width": "40%",
             "alignment": "center"
@@ -428,7 +428,7 @@
           "settings": {
             "is_collection_banner": false,
             "liquid_name": "btn-ctn",
-            "code": "<h2>Find the Perfect Gift</h2><p>Shop a refined collection of rings, necklaces, bracelets, and pendants crafted with premium materials and timeless design.</p>",
+            "code": "<h2>Find the Perfect Gift</h2><p>Treat yourself or that special someone in your life. Shop a refined collection of rings, necklaces, bracelets, and pendants crafted with premium materials and timeless design.</p>",
             "width": "60%",
             "alignment": "center",
             "text_color": "#111111",
@@ -446,7 +446,7 @@
             "parent_name": "btn-ctn",
             "position": "bottom",
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/womens-jewelry",
+            "link": "shopify://collections/all-products-new",
             "button_background_color": "#138f7e",
             "button_border_color": "#111111",
             "button_text_color": "#ffffff",
