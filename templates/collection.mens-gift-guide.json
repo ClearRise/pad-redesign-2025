@@ -217,22 +217,6 @@
         "divider": false
       }
     },
-    "featured_collection_XBaYHV": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "Diamond Engagement Rings",
-        "home_featured_products": "womens-diamond-wedding-bands",
-        "type_enable": false,
-        "subtitle_enable": false,
-        "subtitle_type": "two",
-        "per_row": 4,
-        "rows": 2,
-        "mobile_scrollable": false,
-        "view_all": true,
-        "divider": false
-      }
-    },
     "replo_trust_icons_fy9XYw": {
       "type": "replo-trust-icons",
       "disabled": true,
@@ -382,24 +366,24 @@
         "collection_D9Bmgq": {
           "type": "collection",
           "settings": {
-            "collection": "glowstone-stackable-rings",
-            "title": "Stackable Rings",
+            "collection": "best-sellers",
+            "title": "Best Sellers",
             "focal_point": "center center"
           }
         },
         "collection_NrrDcr": {
           "type": "collection",
           "settings": {
-            "collection": "womens-necklaces",
-            "title": "Necklaces",
+            "collection": "necklaces",
+            "title": "Men's Necklaces",
             "focal_point": "center center"
           }
         },
         "collection_EEwhzq": {
           "type": "collection",
           "settings": {
-            "collection": "womens-earrings",
-            "title": "Earrings",
+            "collection": "solid-meteorite-rings",
+            "title": "Meteorite rings",
             "focal_point": "center center"
           }
         },
@@ -420,10 +404,10 @@
       ],
       "name": "Collection list",
       "settings": {
-        "title": "Shop By Collection",
+        "title": "Trending Gifts",
         "divider": false,
-        "per_row": 4,
-        "enable_gutter": true
+        "per_row": 3,
+        "enable_gutter": false
       }
     },
     "advanced_content_flexible_J9wirj": {
@@ -498,7 +482,6 @@
     "featured_collection_c4PjFV",
     "featured_collection_PJtd47",
     "featured_collection_4e7b7E",
-    "featured_collection_XBaYHV",
     "replo_trust_icons_fy9XYw",
     "rich_text_G9LH7U",
     "collection-header",
