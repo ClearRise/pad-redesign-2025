@@ -58,10 +58,10 @@
         "additional_class": ""
       }
     },
-    "17347204-928a-46d1-8166-ac8c007f382d": {
+    "slideshow_n_6tEVAA": {
       "type": "slideshow_n",
       "blocks": {
-        "image_WfWU9Q": {
+        "image_wCVNPf": {
           "type": "image",
           "settings": {
             "top_subheading": "",
@@ -79,8 +79,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/Artboard_25_177b4432-9f1d-48fd-bacb-77f859074ac8.png",
-            "image_mobile": "shopify://shop_images/Artboard_23_7f06e6d9-6cf7-444a-8de4-9a1237e5e861.png",
+            "image": "shopify://shop_images/Desktop_Collection_cc63e6fa-ecc2-4f38-818d-8b4e63466463.png",
+            "image_mobile": "shopify://shop_images/Mobile_Collection_Version-5.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -94,7 +94,7 @@
         }
       },
       "block_order": [
-        "image_WfWU9Q"
+        "image_wCVNPf"
       ],
       "settings": {
         "use_img_banner": true,
@@ -504,7 +504,7 @@
   },
   "order": [
     "advanced_content_eYLzPF",
-    "17347204-928a-46d1-8166-ac8c007f382d",
+    "slideshow_n_6tEVAA",
     "blocks_d7Lp64",
     "trust_icons_EDYTbe",
     "replo_trust_icons_white_backg_Wc7kJ7",

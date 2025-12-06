@@ -97,13 +97,14 @@
     "empty_cart_text3": "",
     "show_fbt": false,
     "upsell_box_title": "You May Also Like",
+    "enable_rewards_bar": false,
     "rewards_bar_title": "Unlock Exclusive Rewards",
     "rewards_bar_subtitle": "Unlock exclusive Cyber Week Deals + Buy One Get One Free for a Limited Time Only.",
     "top_text": "You're (amount) away from unlocking a Free Mystery Gift",
     "unlock_text": "You've unlocked a new Reward",
     "bottom_text": "Add a (upsell_product_title)($(upsell_product_price)) for your (main_product_title) to unlock the next tier",
     "enable_placing_both_gifts_in_one_step": true,
-    "show_gift_box": true,
+    "show_gift_box": false,
     "first_tier_label": "Tier 1",
     "first_tier_progress": "You've unlocked a Free Gift!",
     "gift_box_title": "Free Mystery Gift",
@@ -178,14 +179,14 @@
             "type": "timer_banner",
             "settings": {
               "enable_timer_banner": true,
-              "banner_text": "CYBER WEEK SALE",
+              "banner_text": "HOLIDAY SALE - BUY ONE GET ONE FREE",
               "banner_link": "shopify://collections/all-products-new",
               "banner_link_text": "Shop now",
               "background_color": "#8ead97",
               "text_color": "#111111",
-              "enable_countdown": true,
+              "enable_countdown": false,
               "countdown_end_date": "2025-12-05 23:59:59",
-              "hide_when_expired": true
+              "hide_when_expired": false
             }
           },
           "announcement_xVJyfX": {
@@ -232,7 +233,7 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "<u><b>Sale</b></u>",
-              "link_submenu": "shopify://collections/cyber-week-deals"
+              "link_submenu": "shopify://collections/all-products-new"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
@@ -300,8 +301,8 @@
           "sticky_collection": false,
           "mobile_top_banner_image": "shopify://shop_images/oie_haHVk88If7KC.png",
           "mobile_menu_top_banner_image": "shopify://shop_images/Black_Ceramic-_Purple_Class-removebg-preview.png",
-          "mobile_menu_top_banner_title": "CYBER WEEK DEALS",
-          "mobile_menu_top_banner_link_text": "Buy One Get One Free + Up to 50% Off",
+          "mobile_menu_top_banner_title": "HOLIDAY SALE",
+          "mobile_menu_top_banner_link_text": "Buy One Get One Free",
           "mobile_menu_top_banner_link": "shopify://collections/all-products-new",
           "mobile_menu_top_banner_background": "",
           "announcement_compact": true,

@@ -58,7 +58,7 @@
             "variant_labels": true,
             "picker_type": "button",
             "product_swatch_style": "square",
-            "color_swatches": true,
+            "swatch_option": "color",
             "custom_variant_comment": false,
             "collapse_options": false
           }
