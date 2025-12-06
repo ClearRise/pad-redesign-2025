@@ -58,6 +58,54 @@
         "additional_class": ""
       }
     },
+    "slideshow_n_ckEWaB": {
+      "type": "slideshow_n",
+      "blocks": {
+        "image_4TGUca": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_color": "",
+            "title": "",
+            "special_title_color": "",
+            "subheading": "",
+            "special_text_color": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_position": "vertical-center horizontal-center",
+            "text_align": "left",
+            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
+            "mobile_text_align": "left",
+            "image": "shopify://shop_images/Desktop_Collection_cc63e6fa-ecc2-4f38-818d-8b4e63466463.png",
+            "image_mobile": "shopify://shop_images/Mobile_Collection_Version-5.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center",
+            "base_text_color": "#ffffff",
+            "title_size": 80,
+            "base_text_size": 24,
+            "text_bottom_padding_desktop": 30,
+            "text_bottom_padding_mobile": 30,
+            "button_color_1": "white",
+            "button_color_2": "white"
+          }
+        }
+      },
+      "block_order": [
+        "image_4TGUca"
+      ],
+      "settings": {
+        "use_img_banner": true,
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
     "17347204-928a-46d1-8166-ac8c007f382d": {
       "type": "slideshow_n",
       "blocks": {
@@ -96,6 +144,7 @@
       "block_order": [
         "image_WfWU9Q"
       ],
+      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
@@ -309,6 +358,7 @@
   },
   "order": [
     "advanced_content_eYLzPF",
+    "slideshow_n_ckEWaB",
     "17347204-928a-46d1-8166-ac8c007f382d",
     "featured_collection_iVHx6n",
     "text_and_image_aaMVyk",
