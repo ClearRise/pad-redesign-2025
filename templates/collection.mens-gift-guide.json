@@ -225,8 +225,8 @@
         "collection_EEwhzq": {
           "type": "collection",
           "settings": {
-            "collection": "solid-meteorite-rings",
-            "title": "Meteorite rings",
+            "collection": "mens-bundled-sets",
+            "title": "Bundle + Save",
             "focal_point": "center center"
           }
         },
@@ -251,6 +251,25 @@
         "divider": false,
         "per_row": 4,
         "enable_gutter": false
+      }
+    },
+    "featured_collection_cW7Rrd": {
+      "type": "featured-collection",
+      "custom_css": [
+        "@media only screen and (max-width: 768px) {.grid-overflow-wrapper .grid__item {flex: 0 0 70vw; }}"
+      ],
+      "name": "Featured collection",
+      "settings": {
+        "title": "Best Bundled Deals",
+        "home_featured_products": "mens-bundled-sets",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "per_row": 3,
+        "rows": 2,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
       }
     },
     "featured_collection_PJtd47": {
@@ -507,6 +526,7 @@
     "rich_text_CfnnDk",
     "featured_collection_c4PjFV",
     "featured_collections_tmXMx8",
+    "featured_collection_cW7Rrd",
     "featured_collection_PJtd47",
     "featured_collection_4e7b7E",
     "replo_trust_icons_fy9XYw",
