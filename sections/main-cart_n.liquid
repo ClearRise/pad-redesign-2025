@@ -993,7 +993,6 @@
               >
                 {{ 'cart.general.checkout' | t }}
               </button>
-            </div>
 
             <style>
               #partiallyCartButtonContainer a {
@@ -1019,7 +1018,12 @@
               {% endif %}
             {% endfor %}
       ​
-            {% if Partially %} 
+            {% if Partially %}
+              {% style %}
+              .cart__checkout-wrapper {
+                padding-top: 125px;
+              }
+              {% endstyle %}
               <div id="partiallyCartButtonContainer"></div>
               <script>
               document.partiallyButtonConfig = {
@@ -1046,6 +1050,7 @@
                 })();
               </script>    
             {% endif %}
+            </div>
         
             {% if additional_checkout_buttons and settings.cart_additional_buttons %}    
               <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
