@@ -186,6 +186,9 @@
     },
     "featured_collection_c4PjFV": {
       "type": "featured-collection",
+      "custom_css": [
+        "@media only screen and (max-width: 768px) {.grid-overflow-wrapper .grid__item {flex: 0 0 70vw; }}"
+      ],
       "name": "Featured collection",
       "settings": {
         "title": "New Releases",
@@ -195,13 +198,85 @@
         "subtitle_type": "two",
         "per_row": 4,
         "rows": 1,
-        "mobile_scrollable": false,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "featured_collections_tmXMx8": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_D9Bmgq": {
+          "type": "collection",
+          "settings": {
+            "collection": "glowstone-stackable-rings",
+            "title": "Stackable Rings",
+            "focal_point": "center center"
+          }
+        },
+        "collection_NrrDcr": {
+          "type": "collection",
+          "settings": {
+            "collection": "womens-necklaces",
+            "title": "Necklaces",
+            "focal_point": "center center"
+          }
+        },
+        "collection_EEwhzq": {
+          "type": "collection",
+          "settings": {
+            "collection": "womens-earrings",
+            "title": "Earrings",
+            "focal_point": "center center"
+          }
+        },
+        "collection_ydDaft": {
+          "type": "collection",
+          "settings": {
+            "collection": "womens-bundled-sets",
+            "title": "Bundle + Save",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_D9Bmgq",
+        "collection_NrrDcr",
+        "collection_EEwhzq",
+        "collection_ydDaft"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Shop By Collection",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
+      }
+    },
+    "featured_collection_FFkyke": {
+      "type": "featured-collection",
+      "custom_css": [
+        "@media only screen and (max-width: 768px) {.grid-overflow-wrapper .grid__item {flex: 0 0 70vw; }}"
+      ],
+      "name": "Featured collection",
+      "settings": {
+        "title": "Best Bundled Deals",
+        "home_featured_products": "womens-bundled-sets",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "per_row": 3,
+        "rows": 1,
+        "mobile_scrollable": true,
         "view_all": false,
         "divider": false
       }
     },
     "featured_collection_PJtd47": {
       "type": "featured-collection",
+      "custom_css": [
+        "@media only screen and (max-width: 768px) {.grid-overflow-wrapper .grid__item {flex: 0 0 70vw; }}"
+      ],
       "name": "Featured collection",
       "settings": {
         "title": "Gifts Under $250",
@@ -211,13 +286,16 @@
         "subtitle_type": "two",
         "per_row": 4,
         "rows": 2,
-        "mobile_scrollable": false,
+        "mobile_scrollable": true,
         "view_all": true,
         "divider": false
       }
     },
     "featured_collection_4e7b7E": {
       "type": "featured-collection",
+      "custom_css": [
+        "@media only screen and (max-width: 768px) {.grid-overflow-wrapper .grid__item {flex: 0 0 70vw; }}"
+      ],
       "name": "Featured collection",
       "settings": {
         "title": "Stackable Glowstone Rings",
@@ -227,13 +305,16 @@
         "subtitle_type": "two",
         "per_row": 4,
         "rows": 2,
-        "mobile_scrollable": false,
+        "mobile_scrollable": true,
         "view_all": true,
         "divider": false
       }
     },
     "featured_collection_XBaYHV": {
       "type": "featured-collection",
+      "custom_css": [
+        "@media only screen and (max-width: 768px) {.grid-overflow-wrapper .grid__item {flex: 0 0 70vw; }}"
+      ],
       "name": "Featured collection",
       "settings": {
         "title": "Diamond Engagement Rings",
@@ -243,7 +324,7 @@
         "subtitle_type": "two",
         "per_row": 4,
         "rows": 2,
-        "mobile_scrollable": false,
+        "mobile_scrollable": true,
         "view_all": true,
         "divider": false
       }
@@ -391,56 +472,6 @@
         "tryon_badge_text": "Try Free"
       }
     },
-    "featured_collections_tmXMx8": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_D9Bmgq": {
-          "type": "collection",
-          "settings": {
-            "collection": "glowstone-stackable-rings",
-            "title": "Stackable Rings",
-            "focal_point": "center center"
-          }
-        },
-        "collection_NrrDcr": {
-          "type": "collection",
-          "settings": {
-            "collection": "womens-necklaces",
-            "title": "Necklaces",
-            "focal_point": "center center"
-          }
-        },
-        "collection_EEwhzq": {
-          "type": "collection",
-          "settings": {
-            "collection": "womens-earrings",
-            "title": "Earrings",
-            "focal_point": "center center"
-          }
-        },
-        "collection_ydDaft": {
-          "type": "collection",
-          "settings": {
-            "collection": "wedding-ring-sets",
-            "title": "Matching Sets",
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "collection_D9Bmgq",
-        "collection_NrrDcr",
-        "collection_EEwhzq",
-        "collection_ydDaft"
-      ],
-      "name": "Collection list",
-      "settings": {
-        "title": "Shop By Collection",
-        "divider": false,
-        "per_row": 4,
-        "enable_gutter": true
-      }
-    },
     "advanced_content_flexible_J9wirj": {
       "type": "advanced-content-flexible",
       "blocks": {
@@ -512,6 +543,8 @@
     "rich_text_YkFgAa",
     "replo_trust_icons_white_backg_Wc7kJ7",
     "featured_collection_c4PjFV",
+    "featured_collections_tmXMx8",
+    "featured_collection_FFkyke",
     "featured_collection_PJtd47",
     "featured_collection_4e7b7E",
     "featured_collection_XBaYHV",
@@ -520,7 +553,6 @@
     "collection-header",
     "promo-grid",
     "main-collection",
-    "featured_collections_tmXMx8",
     "advanced_content_flexible_J9wirj"
   ]
 }
