@@ -9,10 +9,10 @@
  */
 {
   "sections": {
-    "17347204-928a-46d1-8166-ac8c007f382d": {
+    "slideshow_wzDECg": {
       "type": "slideshow",
       "blocks": {
-        "image_WfWU9Q": {
+        "image_kxxxBb": {
           "type": "image",
           "settings": {
             "top_subheading": "",
@@ -30,36 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/Desktop_Collection_cc63e6fa-ecc2-4f38-818d-8b4e63466463.png",
-            "image_mobile": "shopify://shop_images/Mobile_Collection_Version_ed1bbc6e-c7a0-46a4-8dd7-c165b5d6b831.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 80,
-            "base_text_size": 24
-          }
-        },
-        "image_bGPLEU": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "",
-            "special_title_color": "",
-            "subheading": "",
-            "special_text_color": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_position": "vertical-center horizontal-center",
-            "text_align": "left",
-            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
-            "mobile_text_align": "left",
-            "image": "shopify://shop_images/4-2.jpg",
-            "image_mobile": "shopify://shop_images/2-2.jpg",
+            "image": "shopify://shop_images/Artboard_29.png",
+            "image_mobile": "shopify://shop_images/Artboard_27.png",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -69,8 +41,7 @@
         }
       },
       "block_order": [
-        "image_WfWU9Q",
-        "image_bGPLEU"
+        "image_kxxxBb"
       ],
       "settings": {
         "use_img_banner": true,
@@ -347,7 +318,7 @@
     }
   },
   "order": [
-    "17347204-928a-46d1-8166-ac8c007f382d",
+    "slideshow_wzDECg",
     "trust_icons_n_7A6A4E",
     "replo_trust_icons_white_backg_Wc7kJ7",
     "blocks_iAnYpC",
