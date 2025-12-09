@@ -65,6 +65,46 @@
         "header": "Trending"
       }
     },
+    "main_collection_1_ykhPL8": {
+      "type": "main-collection_1",
+      "blocks": {
+        "product_grid_TNeqa6": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": false,
+            "per_row": 4,
+            "rows_per_page": 7,
+            "mobile_flush_grid": false
+          }
+        }
+      },
+      "block_order": [
+        "product_grid_TNeqa6"
+      ],
+      "custom_css": [
+        ".collection-filter {display: none;}"
+      ],
+      "name": "Collection Grid",
+      "settings": {
+        "collection": "april-birthstone-series",
+        "title": "Trending",
+        "padding_horizontal": 50,
+        "enable_sidebar": false,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": false,
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "custom_badge": "",
+        "saved_amount_option": "basic_logic",
+        "entries_multiplier": 1,
+        "load_more": false,
+        "show_tryon_badge": false,
+        "tryon_badge_text": "Try Free"
+      }
+    },
     "main-collection": {
       "type": "main-collection",
       "blocks": {
@@ -108,7 +148,9 @@
         "custom_badge": "BUY ONE GET ONE FREE",
         "saved_amount_option": "display_entries",
         "entries_multiplier": 1,
-        "load_more": true
+        "load_more": true,
+        "show_tryon_badge": false,
+        "tryon_badge_text": "Try Free"
       }
     }
   },
@@ -116,6 +158,7 @@
     "17347204-928a-46d1-8166-ac8c007f382d",
     "replo_trust_icons_fy9XYw",
     "brand-products",
+    "main_collection_1_ykhPL8",
     "main-collection"
   ]
 }
