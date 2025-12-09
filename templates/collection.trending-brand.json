@@ -81,13 +81,12 @@
       "block_order": [
         "product_grid_TNeqa6"
       ],
-      "disabled": true,
       "custom_css": [
         ".collection-filter {display: none;}"
       ],
       "name": "Collection Grid",
       "settings": {
-        "collection": "{{ collection.metafields.custom.trending.value }}",
+        "collection": "trending-test",
         "title": "Trending",
         "padding_horizontal": 50,
         "enable_sidebar": false,
