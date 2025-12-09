@@ -112,22 +112,22 @@
         "step_zPWLMh": {
           "type": "step",
           "settings": {
-            "title": "<b>TRY UP TO 3 ITEMS</b>",
-            "description": "Fill your cart to find something you love."
+            "title": "<b>LOW COMMITMENT</b>",
+            "description": "Pay as little as 3% initial down payment"
           }
         },
         "step_zEY6MV": {
           "type": "step",
           "settings": {
-            "title": "<b>7-DAY TRIAL</b>",
-            "description": "Try it on in the comfort of your home."
+            "title": "<b>FULLY CUSTOMIZABLE</b>",
+            "description": "Customize the number of monthly payments to best suit your needs!"
           }
         },
         "step_kEbceP": {
           "type": "step",
           "settings": {
-            "title": "<b>RETURNS ARE EASY</b>",
-            "description": "Only pay for what you keep."
+            "title": "<b>0% INTEREST</b>",
+            "description": "Interest Free Financing through Partial.ly"
           }
         }
       },
@@ -312,7 +312,7 @@
         "saved_amount_option": "basic_logic",
         "entries_multiplier": 1,
         "load_more": false,
-        "show_tryon_badge": true,
+        "show_tryon_badge": false,
         "tryon_badge_text": "Try Free"
       }
     },
