@@ -86,7 +86,7 @@
       ],
       "name": "Collection Grid",
       "settings": {
-        "collection": "april-birthstone-series",
+        "collection": "{{ collection.metafields.custom.trending.value }}",
         "title": "Trending",
         "padding_horizontal": 50,
         "enable_sidebar": false,
