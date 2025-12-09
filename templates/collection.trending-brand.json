@@ -61,6 +61,7 @@
     },
     "brand-products": {
       "type": "brand-products",
+      "disabled": true,
       "settings": {
         "header": "Trending"
       }
