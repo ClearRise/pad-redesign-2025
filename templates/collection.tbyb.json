@@ -297,7 +297,45 @@
         "subcollections",
         "product_grid"
       ],
+      "disabled": true,
       "settings": {
+        "title": "",
+        "padding_horizontal": 50,
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true,
+        "type_enable": false,
+        "subtitle_enable": true,
+        "subtitle_type": "two",
+        "custom_badge": "BUY ONE GET ONE FREE",
+        "saved_amount_option": "basic_logic",
+        "entries_multiplier": 1,
+        "load_more": false,
+        "show_tryon_badge": false,
+        "tryon_badge_text": "Try Free"
+      }
+    },
+    "main_collection_1_8pW7mx": {
+      "type": "main-collection_1",
+      "blocks": {
+        "product_grid_WQ6yCm": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 3,
+            "rows_per_page": 20,
+            "mobile_flush_grid": true
+          }
+        }
+      },
+      "block_order": [
+        "product_grid_WQ6yCm"
+      ],
+      "name": "Collection Grid",
+      "settings": {
+        "collection": "all-products-new",
         "title": "",
         "padding_horizontal": 50,
         "enable_sidebar": true,
@@ -395,6 +433,7 @@
     "collection-header",
     "promo-grid",
     "main-collection",
+    "main_collection_1_8pW7mx",
     "faq_VdwH4a"
   ]
 }
