@@ -692,7 +692,7 @@
         "show_navigation": false,
         "image_first": false,
         "space_around": true,
-        "background_color": "#ffffff",
+        "background_color": "#f5f5f5",
         "small_image": false,
         "is_top_line": false,
         "is_bottom_line": true,
