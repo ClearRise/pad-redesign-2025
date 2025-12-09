@@ -82,7 +82,6 @@
       "block_order": [
         "product_grid_TNeqa6"
       ],
-      "disabled": true,
       "custom_css": [
         ".collection-filter {display: none;}"
       ],
