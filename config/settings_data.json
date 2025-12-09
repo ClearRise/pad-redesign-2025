@@ -223,10 +223,9 @@
           },
           "scroll_navi_mobile_CqAMD8": {
             "type": "scroll_navi_mobile",
-            "disabled": true,
             "settings": {
-              "sub_menu": "<u>Try Free</u>",
-              "link_submenu": "https://patrickadairdesigns.com/pages/try-before-you-buy"
+              "sub_menu": "<u>Financing</u>",
+              "link_submenu": "https://patrickadairdesigns.com/pages/interest-free-financing"
             }
           },
           "scroll_navi_mobile_T4MxJh": {
