@@ -322,36 +322,50 @@
         "question_dTFxTP": {
           "type": "question",
           "settings": {
-            "title": "When do I have to return my items by?",
-            "text": "<p>Your trial starts the day your items are marked delivered by the shipping courier. The trial period is 7 days.</p><p>Initiate your return before your trial ends by emailing us at support@patrickadairdesigns.com with your order # and the items you wish to return.</p><p>Once a return is initiated, you then have 5 days to return the products. You are responsible for return shipping costs on any products being returned.</p>"
+            "title": "How Do I Purchase a Product with 0% Interest Financing",
+            "text": "<p>Just add any product to your cart and hit the \"Finance with 0% Interest\" button at checkout. You will then be redirected to the <a href=\"http://Partial.ly\">Partial.ly</a> portal to create/log-in to your account to finish the checkout process.</p><p><br/></p><p>After the checkout process has finished, you will receive an order confirmation email.</p>"
           }
         },
         "question_ye4zpL": {
           "type": "question",
           "settings": {
-            "title": "Why is there an authorization on my card?",
-            "text": "<p>Similar to booking a hotel or rideshare, we reserve the funds in case you decide to keep all your items. An authorization is not a charge - you'll only be charged for what you keep.</p>"
+            "title": "How does 0% Financing Work?",
+            "text": "<p>Our 0% Financing Program works alongside <a href=\"http://Partial.ly\">Partial.ly</a> to deliver an interest free program where you can customize your initial down payment anywhere from 3% to 50% of the total order value. You can also customize the number of monthly payments from 2-6 as well as your first payment date.</p>"
           }
         },
         "question_nWPfzJ": {
           "type": "question",
           "settings": {
-            "title": "Do I get free shipping or free returns?",
-            "text": "<p>Try Before You Buy Orders are NOT eligible for free shipping on returns.</p>"
+            "title": "How do the Monthly Payments Work?",
+            "text": "<p>Monthly Payments are automatically charged by <a href=\"http://Partial.ly\">Partial.ly</a> to the original card on file.</p>"
           }
         },
         "question_WNkRQy": {
           "type": "question",
           "settings": {
-            "title": "I initiated my return, why is my card being re-authorized?",
-            "text": "<p>Banks have limits for how long a hold can be valid. We are likely still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations.</p>"
+            "title": "How do I add or update my existing payment method?",
+            "text": "<p>Customers can log in at <a href=\"https://partial.ly/login\">https://partial.ly/login</a></p><p>From here, you can add/update your payment method.</p>"
           }
         },
         "question_78TDdL": {
           "type": "question",
           "settings": {
-            "title": "My trial ended and I was charged, but now I want to return something. Is this still possible?",
-            "text": "<p>Yes, you can still return eligible items within the our return window. Check out our <a href=\"/pages/limited-lifetime-warranty-and-return-policy\" target=\"_blank\" title=\"Limited Lifetime Warranty and Return Policy\">returns policy</a> for more details.</p>"
+            "title": "What Happens if my Scheduled Monthly Payment Fails?",
+            "text": "<p>Your payment will be automatically rescheduled up to 2 times. You will be notified by email when a payment fails, along with the reschedule date.</p>"
+          }
+        },
+        "question_EWF4Ff": {
+          "type": "question",
+          "settings": {
+            "title": "Can I Make My Monthly Payments Early?",
+            "text": "<p>Yes, inside the customer<a href=\"http://partial.ly/\">Partial.ly</a>portal, you will see a 'make payment' link by the plan. Be sure to select 'Pay my next installment now, leaving my remaining payments unchanged'.<br/><br/></p>"
+          }
+        },
+        "question_ichFFw": {
+          "type": "question",
+          "settings": {
+            "title": "Can I cancel the plan and get a refund?",
+            "text": "<p>If your order has not been shipped yet, it is eligible for a cancellation/refund. If your order has already been delivered, you can still return eligible items within the our return window. Check out our <a href=\"https://patrickadairdesigns.com/pages/lifetime-warranty-and-return-policy\" target=\"_blank\"><span style=\"text-decoration:underline\"><strong>returns policy</strong></span></a> for more details.</p>"
           }
         }
       },
@@ -360,11 +374,13 @@
         "question_ye4zpL",
         "question_nWPfzJ",
         "question_WNkRQy",
-        "question_78TDdL"
+        "question_78TDdL",
+        "question_EWF4Ff",
+        "question_ichFFw"
       ],
       "name": "FAQ",
       "settings": {
-        "title": "Try Before You Buy FAQs"
+        "title": "0% Interest Financing FAQs"
       }
     }
   },
