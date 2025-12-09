@@ -87,7 +87,7 @@
       ],
       "name": "Collection Grid",
       "settings": {
-        "collection": "trending-test",
+        "collection": "{{ collection.metafields.custom.trending.value }}",
         "title": "Trending",
         "padding_horizontal": 50,
         "enable_sidebar": false,
