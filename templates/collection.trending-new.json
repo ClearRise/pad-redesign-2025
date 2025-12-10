@@ -61,7 +61,6 @@
     },
     "brand-products": {
       "type": "brand-products",
-      "disabled": true,
       "settings": {
         "header": "Trending"
       }
@@ -82,6 +81,7 @@
       "block_order": [
         "product_grid_TNeqa6"
       ],
+      "disabled": true,
       "custom_css": [
         ".collection-filter {display: none;}"
       ],
@@ -122,9 +122,10 @@
       "block_order": [
         "product_grid_3p9XLy"
       ],
+      "disabled": true,
       "name": "Collection Grid",
       "settings": {
-        "collection": "all-products-new",
+        "collection": "",
         "title": "All Products",
         "padding_horizontal": 50,
         "enable_sidebar": true,
@@ -173,7 +174,6 @@
         "subcollections",
         "product_grid"
       ],
-      "disabled": true,
       "settings": {
         "title": "Shop All Products",
         "enable_sidebar": true,
