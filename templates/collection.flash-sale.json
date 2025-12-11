@@ -57,6 +57,36 @@
         "autoplay_speed": 5
       }
     },
+    "blocks_NY7dMz": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_78985ae_fMbwrC": {
+          "type": "ai_gen_block_78985ae",
+          "settings": {
+            "offer_1": "0% Interest Financing Available",
+            "offer_2": "Pay as little as 3% Down Payment Today",
+            "offer_3": "Fully Customizable Monthly Payments",
+            "offer_4": "",
+            "offer_5": "",
+            "background_color": "#dfeafb",
+            "text_color": "#000000",
+            "text_size": 13,
+            "text_weight": "500",
+            "bar_height": 8,
+            "separator": "",
+            "separator_color": "#000000",
+            "separator_spacing": 20,
+            "scroll_speed": 30,
+            "item_spacing": 10
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_78985ae_fMbwrC"
+      ],
+      "settings": {}
+    },
     "replo_flash_sale_timer_BdXnmX": {
       "type": "replo-flash-sale-timer",
       "settings": {}
@@ -178,6 +208,7 @@
   },
   "order": [
     "slideshow_n_hjEfYf",
+    "blocks_NY7dMz",
     "replo_flash_sale_timer_BdXnmX",
     "collection-header",
     "promo-grid",
