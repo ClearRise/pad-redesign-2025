@@ -98,8 +98,55 @@
         "tryon_badge_text": "Try Free"
       }
     },
+    "trending_collection_Kn7zTG": {
+      "type": "trending-collection",
+      "blocks": {
+        "product_grid_wygxAj": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 7,
+            "mobile_flush_grid": false
+          }
+        }
+      },
+      "block_order": [
+        "product_grid_wygxAj"
+      ],
+      "disabled": true,
+      "name": "Trending Collection",
+      "settings": {
+        "collection": "all-products-new",
+        "title": "Shop All Products",
+        "padding_horizontal": 50,
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "custom_badge": "",
+        "saved_amount_option": "basic_logic",
+        "entries_multiplier": 1,
+        "load_more": false,
+        "show_tryon_badge": false,
+        "tryon_badge_text": "Try Free"
+      }
+    },
     "main_collection_1_TzeT7M": {
       "type": "main-collection_1",
+      "blocks": {
+        "product_grid_DwbPwa": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": false,
+            "per_row": 4,
+            "rows_per_page": 7,
+            "mobile_flush_grid": true
+          }
+        }
+      },
+      "block_order": [
+        "product_grid_DwbPwa"
+      ],
       "name": "Collection Grid",
       "settings": {
         "collection": "all-products-new",
@@ -177,6 +224,7 @@
     "replo_trust_icons_fy9XYw",
     "brand-products",
     "trending_collection_t6GdLX",
+    "trending_collection_Kn7zTG",
     "main_collection_1_TzeT7M",
     "main-collection"
   ]
