@@ -73,7 +73,7 @@
           "type": "product_grid",
           "settings": {
             "enable_collection_count": true,
-            "per_row": 4,
+            "per_row": 3,
             "rows_per_page": 7,
             "mobile_flush_grid": true
           }
@@ -105,7 +105,7 @@
           "type": "product_grid",
           "settings": {
             "enable_collection_count": false,
-            "per_row": 4,
+            "per_row": 3,
             "rows_per_page": 7,
             "mobile_flush_grid": true
           }
@@ -125,7 +125,7 @@
         "enable_color_swatches": false,
         "enable_sort": true,
         "type_enable": false,
-        "subtitle_enable": false,
+        "subtitle_enable": true,
         "subtitle_type": "two",
         "custom_badge": "",
         "saved_amount_option": "basic_logic",
