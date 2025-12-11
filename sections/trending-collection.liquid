@@ -3,18 +3,17 @@
   if section.settings.collection != blank
     assign selected_collection = section.settings.collection
   endif
-
-  assign current_filter_size = 0
-
-  for filter in selected_collection.filters
-    assign current_filter_size = current_filter_size | plus: filter.active_values.size
-  endfor
 -%}
 
 <style>
   .product-grid-container-ss {
     padding-right: {{ section.settings.padding_horizontal }}px;
     padding-left: {{ section.settings.padding_horizontal }}px;
+  }
+  #CollectionAjaxContent-Nofilter-{{ section.id }} {
+    .collection-filter {
+      display: none;
+    }
   }
 </style>
 
@@ -24,9 +23,10 @@
   class="current collection-content custom_collection_content"
   data-section-id="{{ section.id }}"
   data-section-type="collection-grid"
+  data-collection-title="{{ selected_collection.title }}"
 >
-  <div id={%- if section.settings.enable_sidebar == true -%}"CollectionAjaxContent-{{ section.id }}"{%- else -%}"CollectionAjaxContent-Nofilter-{{ section.id }}"{%- endif -%} class="">
-    <div class="product-grid-container-ss page-width">
+  <div id="CollectionAjaxContent-Nofilter-{{ section.id }}" class="">
+    <div class="product-grid-container-ss">
       {% if section.settings.title != blank %}
       <div class="grid">
         <h2 class="h1 grid__item one-whole">{{section.settings.title}}</h2>
@@ -34,34 +34,7 @@
       {% endif %}
       
       <div class="grid">
-        {%- if section.settings.enable_sidebar == true -%}
-        <div class="grid__item medium-up--one-fifth grid__item--sidebar">
-          {%- render 'collection-grid-filters_n',
-            collection: selected_collection,
-            enable_sidebar: section.settings.enable_sidebar,
-            filter_style: section.settings.filter_style,
-            collapsed: section.settings.collapsed,
-            enable_color_swatches: section.settings.enable_color_swatches
-          -%}
-
-          <div class="filter-bottom-fixed-button-container-ss">
-            <div class="filter-bottom-fixed-right-button-ss filter-bottom-fixed-button-ss apply-filter-ss">
-              {% comment %} {%- render 'button-ss_n', color: 'white', url: "#", label: 'APPLY FILTER' -%} {% endcomment %}
-              <a class="btn btn-white-ss" href="#" style="display: flex !important; font-weight: 500 !important;">
-                APPLY FILTER
-                <svg fill="currentColor" width="64px" height="64px" viewBox="0 0 24 24" id="right-arrow" xmlns="http://www.w3.org/2000/svg" class="icon line">
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-                  <g id="SVGRepo_iconCarrier">
-                  <path id="primary" d="M3,12H21m-3,3,3-3L18,9" style="fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;"/>
-                  </g>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        {%- endif -%}
-        <div class="grid__item medium-up--four-fifths grid__item--content">
+        <div class="grid__item one-whole grid__item--content">
           {%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
           {%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.com' | last |
              replace:'\/','/' | 
@@ -95,30 +68,27 @@
             <div {{ block.shopify_attributes }} {%- if block.type == 'product-grid' -%}data-scroll-to{%- endif -%}>
               {%- case block.type -%}
               {%- when 'collection_description' -%}
-                {%- if selected_collection.description != blank and current_filter_size == 0 -%}
+                {%- if selected_collection.description != blank -%}
                   <div class="rte collection__description custom_collection__description">
                     {{ selected_collection.description }}
                   </div>
                 {%- endif -%}
               {%- when 'subcollections' -%}
-                {%- if paginate.current_page == 1 and current_filter_size == 0 -%}
+                {%- if paginate.current_page == 1 -%}
                   {%- render 'subcollections', per_row: block.settings.subcollections_per_row -%}
                 {%- endif -%}
               {%- when 'product_grid' -%}
                 <div data-scroll-to>
-                  {% render 'collection-grid_n',
+                  {% render 'collection-grid_trending',
                     collection: selected_collection,
                     items: selected_collection.products,
-                    enable_sidebar: section.settings.enable_sidebar,
-                    filter_style: section.settings.filter_style,
-                    enable_sort: section.settings.enable_sort,
                     enable_collection_count: block.settings.enable_collection_count,
                     per_row: block.settings.per_row,
                     mobile_flush_grid: block.settings.mobile_flush_grid,
                     quick_shop_enable: settings.quick_shop_enable,
                     subtitle_type: section.settings.subtitle_type,
                     type_enable: section.settings.type_enable,
-                    subtitle_enable: section.settings.subtitle_enable
+                    subtitle_enable: section.settings.subtitle_enable,
                     paginate_by: paginate_by
                   %}
                   {%- if paginate.pages > 1 -%}
@@ -135,18 +105,6 @@
     </div>
   </div>
 </div>
-
-{%- if section.settings.enable_sidebar == false or section.settings.filter_style == 'drawer' or selected_collection.filters.size == 0 -%}
-{% comment %}
-  Override grid styles if sidebar is disabled
-{% endcomment %}
-{% style %}
-  .collection-content .grid__item--sidebar { width: 0; padding:0; }
-  .collection-content .grid__item--content { width: 100%; }
-  .grid__item--sidebar { position: static; overflow: hidden; }
-{% endstyle %}
-{%- endif -%}
-
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
@@ -169,7 +127,7 @@
 
 {% schema %}
   {
-    "name": "Collection Grid",
+    "name": "Trending Collection",
     "settings": [
       {
         "type": "collection",
@@ -193,52 +151,7 @@
       },
       {
         "type": "header",
-        "content": "Filtering and sorting"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_sidebar",
-        "label": "Enable filter",
-        "default": true,
-        "info": "Allow your customers to filter collections and search results by product availability, price, color, and more. [Customize filters](/admin/menus)"
-      },
-      {
-        "type": "checkbox",
-        "id": "collapsed",
-        "label": "Collapse filters",
-        "default": true
-      },
-      {
-        "type": "select",
-        "id": "filter_style",
-        "label": "Filter style",
-        "default": "sidebar",
-        "options": [
-          {
-            "value": "sidebar",
-            "label": "Sidebar"
-          },
-          {
-            "value": "drawer",
-            "label": "Drawer"
-          }
-        ]
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_color_swatches",
-        "label": "Enable color swatches",
-        "info": "[View setup instructions](https://archetypethemes.co/blogs/impulse/how-do-i-set-up-color-swatches)"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_sort",
-        "label": "Show sort options",
-        "default": true
-      },
-      {
-        "type": "header",
-        "content": "Prduct item"
+        "content": "Product item"
       },
       {
         "type": "checkbox",
@@ -401,7 +314,7 @@
     ],
     "presets": [
       {
-        "name": "Collection Grid"
+        "name": "Trending Collection"
       }
     ]
   }
