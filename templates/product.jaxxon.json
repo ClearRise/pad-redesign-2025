@@ -357,6 +357,71 @@
         "product_video_style": "muted"
       }
     },
+    "176547991975caf3d7": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_26e3136_3M6FDn": {
+          "type": "ai_gen_block_26e3136",
+          "settings": {
+            "title": "Beyond Compare",
+            "title_size": 32,
+            "show_info_icon": false,
+            "info_icon_text": "Compare our product with competitors",
+            "subtitle": "",
+            "subtitle_size": 16,
+            "brand_1_name": "Quince",
+            "brand_2_name": "J.Crew",
+            "brand_3_name": "Everlane",
+            "brand_4_name": "Todd Snyder",
+            "feature_1_label": "Price",
+            "feature_1_brand1": "$59.90",
+            "feature_1_brand2": "$158.00",
+            "feature_1_brand3": "$188.00",
+            "feature_1_brand4": "$348.00",
+            "feature_2_label": "Savings (%)",
+            "feature_2_brand1": "yes",
+            "feature_2_brand2": "62%",
+            "feature_2_brand3": "68%",
+            "feature_2_brand4": "83%",
+            "feature_3_label": "100% Grade-A Mongolian Cashmere",
+            "feature_3_brand1": "yes",
+            "feature_3_brand2": "no",
+            "feature_3_brand3": "no",
+            "feature_3_brand4": "no",
+            "feature_4_label": "Free Shipping",
+            "feature_4_brand1": "yes",
+            "feature_4_brand2": "no",
+            "feature_4_brand3": "yes",
+            "feature_4_brand4": "yes",
+            "feature_5_label": "Free Returns",
+            "feature_5_brand1": "365 days",
+            "feature_5_brand2": "30 days",
+            "feature_5_brand3": "30 days",
+            "feature_5_brand4": "30 days",
+            "feature_6_label": "",
+            "feature_6_brand1": "",
+            "feature_6_brand2": "",
+            "feature_6_brand3": "",
+            "feature_6_brand4": "",
+            "section_bg_color": "#ffffff",
+            "table_bg_color": "#ffffff",
+            "border_color": "#e0e0e0",
+            "text_color": "#111111",
+            "muted_text_color": "#666666",
+            "highlight_bg_color": "#f9f9f9",
+            "yes_icon_color": "#138f7e",
+            "no_icon_color": "#999999",
+            "header_font_size": 16,
+            "body_font_size": 15
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_26e3136_3M6FDn"
+      ],
+      "settings": {}
+    },
     "17563958449821061e": {
       "type": "apps",
       "settings": {
@@ -678,6 +743,7 @@
   },
   "order": [
     "main",
+    "176547991975caf3d7",
     "17563958449821061e",
     "rich_text_zd3AyU",
     "replo_trust_icons_white_backg_AnTLaL",
