@@ -1,0 +1,95 @@
+{% comment %}
+Snippet Arguments
+- collection: Liquid 'collection' or 'search' object
+- items: Paginated 'collection.products' or 'search.results' list. Cannot be pulled from the the 'collection' object passed in above
+- enable_collection_count
+- per_row
+- mobile_flush_grid
+- quick_shop_enable
+- subtitle_type
+- type_enable
+- subtitle_enable
+- paginate_by
+{% endcomment %}
+
+{% liquid
+  if collection.products
+    assign count = collection.products_count
+  endif
+
+  if collection.results
+    assign count = collection.results_count
+  endif
+%}
+
+<div class="collection-grid__wrapper">
+  <div class="collection-filter">
+    <div class="collection-filter__item collection-filter__item--count small--hide filtered-products-count-ss">
+      {%- if enable_collection_count -%}
+         {{ count }} items found
+      {%- endif -%}
+    </div>
+
+    <div class="collection-filter__item product-per-page-count">
+      <label for="ProductCount">Show</label>
+      <select name="ProductCount" id="ProductCount">
+        <option value="12" {% if paginate_by == '12' or paginate_by == 12 %} selected {% endif %}>12</option>
+        <option value="30" {% if paginate_by == '30' or paginate_by == 30 %} selected {% endif %}>30</option>
+        <option value="60" {% if paginate_by == '60' or paginate_by == 60 %} selected {% endif %}>60</option>
+        <option value="90" {% if paginate_by == '90' or paginate_by == 90 %} selected {% endif %}>90</option>
+      </select>
+      <label for="ProductCount">Product per page</label>
+    </div>
+
+    <div class="filtered-products-count-for-mobile-ss">
+      {%- if enable_collection_count -%}
+         {{ count }} items found
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="grid grid--uniform{% if mobile_flush_grid %} small--grid--flush{% endif %} produts-grid"{% unless enable_collection_count %} data-scroll-to{% endunless %}>
+    {%- for item in items -%}
+      {%- if item.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
+      {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
+      {%- if item.object_type == 'product' -%}
+        {%- render 'product-grid-item',
+          product: item,
+          per_row: per_row,
+          quick_shop_enable: quick_shop_enable,
+          subtitle_type: subtitle_type,
+          type_enable: type_enable,
+          subtitle_enable: subtitle_enable
+        -%}
+      {%- else -%}
+        {%- render 'search-grid-item',
+          item: item,
+          per_row: per_row
+        %}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const productCount = document.querySelector('#ProductCount');
+    if (productCount) {
+      productCount.addEventListener('change', (e) => {
+        const url = new URL(window.location.href);
+        url.searchParams.set('limit', e.target.value);
+        url.searchParams.set('page', 1);
+        window.location.href = url.toString();
+      });
+    }
+  });
+</script>
+
+{% style %}
+.collection-filter__item--count {
+  text-align: left;
+}
+html[dir="rtl"] .collection-filter__item--count {
+  text-align: right;
+}
+{% endstyle %}

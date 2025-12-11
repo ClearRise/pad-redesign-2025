@@ -61,55 +61,15 @@
     },
     "brand-products": {
       "type": "brand-products",
+      "disabled": true,
       "settings": {
         "header": "Trending"
       }
     },
-    "main_collection_1_ykhPL8": {
-      "type": "main-collection_1",
+    "trending_collection_t6GdLX": {
+      "type": "trending-collection",
       "blocks": {
-        "product_grid_TNeqa6": {
-          "type": "product_grid",
-          "settings": {
-            "enable_collection_count": false,
-            "per_row": 3,
-            "rows_per_page": 20,
-            "mobile_flush_grid": true
-          }
-        }
-      },
-      "block_order": [
-        "product_grid_TNeqa6"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".collection-filter {display: none;}"
-      ],
-      "name": "Collection Grid",
-      "settings": {
-        "collection": "{{ collection.metafields.custom.trending.value }}",
-        "title": "Trending",
-        "padding_horizontal": 50,
-        "enable_sidebar": false,
-        "collapsed": true,
-        "filter_style": "sidebar",
-        "enable_color_swatches": false,
-        "enable_sort": false,
-        "type_enable": false,
-        "subtitle_enable": false,
-        "subtitle_type": "two",
-        "custom_badge": "BUY ONE GET ONE FREE",
-        "saved_amount_option": "basic_logic",
-        "entries_multiplier": 1,
-        "load_more": false,
-        "show_tryon_badge": false,
-        "tryon_badge_text": "Try Free"
-      }
-    },
-    "main_collection_1_FYJYhE": {
-      "type": "main-collection_1",
-      "blocks": {
-        "product_grid_3p9XLy": {
+        "product_grid_NRRWW4": {
           "type": "product_grid",
           "settings": {
             "enable_collection_count": true,
@@ -120,19 +80,13 @@
         }
       },
       "block_order": [
-        "product_grid_3p9XLy"
+        "product_grid_NRRWW4"
       ],
-      "disabled": true,
-      "name": "Collection Grid",
+      "name": "Trending Collection",
       "settings": {
-        "collection": "",
-        "title": "All Products",
+        "collection": "{{ collection.metafields.custom.trending.value }}",
+        "title": "Trending",
         "padding_horizontal": 50,
-        "enable_sidebar": true,
-        "collapsed": true,
-        "filter_style": "sidebar",
-        "enable_color_swatches": false,
-        "enable_sort": true,
         "type_enable": false,
         "subtitle_enable": false,
         "subtitle_type": "two",
@@ -145,7 +99,7 @@
       }
     },
     "main-collection": {
-      "type": "main-collection",
+      "type": "main-collection_n",
       "blocks": {
         "collection_description": {
           "type": "collection_description",
@@ -176,6 +130,7 @@
       ],
       "settings": {
         "title": "Shop All Products",
+        "padding_horizontal": 50,
         "enable_sidebar": true,
         "collapsed": true,
         "filter_style": "sidebar",
@@ -197,8 +152,7 @@
     "17347204-928a-46d1-8166-ac8c007f382d",
     "replo_trust_icons_fy9XYw",
     "brand-products",
-    "main_collection_1_ykhPL8",
-    "main_collection_1_FYJYhE",
+    "trending_collection_t6GdLX",
     "main-collection"
   ]
 }
