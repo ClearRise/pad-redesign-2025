@@ -98,6 +98,29 @@
         "tryon_badge_text": "Try Free"
       }
     },
+    "main_collection_1_TzeT7M": {
+      "type": "main-collection_1",
+      "name": "Collection Grid",
+      "settings": {
+        "collection": "all-products-new",
+        "title": "Shop All Jewelry",
+        "padding_horizontal": 50,
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true,
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "custom_badge": "",
+        "saved_amount_option": "basic_logic",
+        "entries_multiplier": 1,
+        "load_more": false,
+        "show_tryon_badge": false,
+        "tryon_badge_text": "Try Free"
+      }
+    },
     "main-collection": {
       "type": "main-collection_n",
       "blocks": {
@@ -128,6 +151,7 @@
         "subcollections",
         "product_grid"
       ],
+      "disabled": true,
       "settings": {
         "title": "Shop All Jewelry",
         "padding_horizontal": 50,
@@ -153,6 +177,7 @@
     "replo_trust_icons_fy9XYw",
     "brand-products",
     "trending_collection_t6GdLX",
+    "main_collection_1_TzeT7M",
     "main-collection"
   ]
 }
