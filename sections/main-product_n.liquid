@@ -191,6 +191,24 @@
         ]
       },
       {
+        "type": "price-1",
+        "name": "Price 1",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "enable_badge",
+            "label": "Display custom badge",
+            "info": "It will display without compare price"
+          },
+          {
+            "type": "text",
+            "id": "custom_badge",
+            "label": "Custom badge text"
+          }
+        ]
+      },
+      {
         "type": "quantity_selector",
         "name": "Quantity selector",
         "limit": 1
@@ -413,6 +431,19 @@
             "id": "save_badge",
             "label": "Save badge",
             "default": "For Limited Time Only"
+          }
+        ]
+      },
+      {
+        "type": "optional_addon",
+        "name": "Optional Add-On",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Optional Add-Ons",
+            "info": "Leave blank to use default title"
           }
         ]
       },

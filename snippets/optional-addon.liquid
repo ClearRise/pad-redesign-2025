@@ -1,0 +1,404 @@
+{% comment %}
+  Snippet Arguments:
+  - addon_product: The addon product object
+  - block: The block object (for settings and attributes)
+  - section_id: The section ID
+{% endcomment %}
+
+{%- if addon_product != blank -%}
+  {%- liquid
+    assign addon_form_id = 'AddToCartForm-addon-' | append: section_id | append: '-' | append: addon_product.id
+  -%}
+  <div class="product-block optional-addon-block" {{ block.shopify_attributes }}>
+    <div class="optional-addon-header">
+      {%- if block.settings.title != blank -%}
+        <h3 class="optional-addon-title">{{ block.settings.title }}</h3>
+      {%- else -%}
+        <h3 class="optional-addon-title">Optional Add-Ons</h3>
+      {%- endif -%}
+      <label class="optional-addon-toggle-label">
+        <input
+          type="checkbox"
+          class="optional-addon-checkbox"
+          name="properties[_optional_addon]"
+          value="Yes"
+          data-addon-product-id="{{ addon_product.id }}"
+          data-addon-form-id="{{ addon_form_id }}"
+        >
+        <span class="optional-addon-toggle-switch"></span>
+      </label>
+    </div>
+    
+    <div class="optional-addon-item">
+      {%- if addon_product.featured_media -%}
+        <div class="optional-addon-image">
+          <img 
+            src="{{ addon_product.featured_media | img_url: '100x100' }}" 
+            alt="{{ addon_product.title | escape }}"
+            loading="lazy"
+          >
+        </div>
+      {%- endif -%}
+      <div class="optional-addon-content">
+        <span class="optional-addon-name">{{ addon_product.title }}</span>
+        <div class="optional-addon-price-wrapper">
+          <span class="optional-addon-price">
+            +{{ addon_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+          </span>
+          {%- if addon_product.selected_or_first_available_variant.compare_at_price > addon_product.selected_or_first_available_variant.price -%}
+            <span class="optional-addon-compare-price">
+              ({{ addon_product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }} value)
+            </span>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+      
+    {%- unless addon_product.has_only_default_variant -%}
+      <div class="optional-addon-variants" style="display: none;">
+        {%- for option in addon_product.options_with_values -%}
+          <div class="optional-addon-option">
+            <label class="optional-addon-option-label">{{ option.name }}</label>
+            <div class="optional-addon-variant-buttons">
+              {%- for value in option.values -%}
+                {%- liquid
+                  assign variant_available = true
+                  for variant in addon_product.variants
+                    if variant.title contains value
+                      unless variant.available
+                        assign variant_available = false
+                      endunless
+                    endif
+                  endfor
+                -%}
+                <button
+                  type="button"
+                  class="optional-addon-variant-btn{% unless variant_available %} disabled{% endunless %}"
+                  data-option-name="{{ option.name }}"
+                  data-option-value="{{ value | escape }}"
+                  data-addon-product-id="{{ addon_product.id }}"
+                >
+                  {{ value }}
+                </button>
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- endfor -%}
+        <input
+          type="hidden"
+          class="optional-addon-selected-variant-id"
+          name="properties[_optional_addon_variant_id]"
+          value="{{ addon_product.selected_or_first_available_variant.id }}"
+        >
+      </div>
+    {%- else -%}
+      <input
+        type="hidden"
+        class="optional-addon-selected-variant-id"
+        name="properties[_optional_addon_variant_id]"
+        value="{{ addon_product.selected_or_first_available_variant.id }}"
+      >
+    {%- endunless -%}
+  </div>
+  
+  <style>
+    .optional-addon-block {
+      margin: 20px 0;
+      padding: 20px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+    }
+    .optional-addon-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .optional-addon-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+      color: #000;
+    }
+    .optional-addon-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .optional-addon-toggle-label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin: 0;
+    }
+    .optional-addon-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+    }
+    .optional-addon-price-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .optional-addon-image {
+      width: 60px;
+      height: 60px;
+      flex-shrink: 0;
+      border-radius: 4px;
+      overflow: hidden;
+      background-color: #f5f5f5;
+    }
+    .optional-addon-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .optional-addon-toggle-switch {
+      position: relative;
+      width: 36px;
+      height: 20px;
+      background-color: #ccc;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+      flex-shrink: 0;
+    }
+    .optional-addon-toggle-switch::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: white;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.3s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+    .optional-addon-checkbox:checked + .optional-addon-toggle-switch {
+      background-color: var(--colorBtnPrimary, #138f7e);
+    }
+    .optional-addon-checkbox:checked + .optional-addon-toggle-switch::after {
+      transform: translateX(16px);
+    }
+    .optional-addon-checkbox {
+      display: none;
+    }
+    .optional-addon-name {
+      font-weight: 500;
+      font-size: 16px;
+    }
+    .optional-addon-price {
+      color: #DC3030;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .optional-addon-compare-price {
+      color: #666;
+      font-size: 14px;
+      margin-left: 4px;
+    }
+    .optional-addon-variants {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #e0e0e0;
+    }
+    .optional-addon-option {
+      margin-bottom: 12px;
+    }
+    .optional-addon-option-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    .optional-addon-variant-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .optional-addon-variant-btn {
+      padding: 8px 16px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      background-color: white;
+      color: #333;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+      min-width: 50px;
+      text-align: center;
+    }
+    .optional-addon-variant-btn:hover:not(.disabled):not(.selected) {
+      border-color: #999;
+      background-color: #f5f5f5;
+    }
+    .optional-addon-variant-btn.selected {
+      background-color: white;
+      color: #333;
+      border-color: var(--colorBtnPrimary, #138f7e);
+    }
+    .optional-addon-variant-btn.selected:hover {
+      background-color: white;
+      border-color: var(--colorBtnPrimary, #138f7e);
+    }
+    .optional-addon-variant-btn.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  </style>
+  
+  <script>
+    (function() {
+      const addonBlock = document.querySelector('.optional-addon-block');
+      if (!addonBlock) return;
+      
+      const checkbox = addonBlock.querySelector('.optional-addon-checkbox');
+      const variantsContainer = addonBlock.querySelector('.optional-addon-variants');
+      const variantButtons = addonBlock.querySelectorAll('.optional-addon-variant-btn');
+      const variantIdInput = addonBlock.querySelector('.optional-addon-selected-variant-id');
+      const addonProductId = checkbox.dataset.addonProductId;
+      const priceElement = addonBlock.querySelector('.optional-addon-price');
+      const comparePriceElement = addonBlock.querySelector('.optional-addon-compare-price');
+      const imageElement = addonBlock.querySelector('.optional-addon-image img');
+      
+      // Store product variants data
+      const productVariants = [
+        {%- for variant in addon_product.variants -%}
+        {
+          id: {{ variant.id }},
+          price: {{ variant.price }},
+          compare_at_price: {{ variant.compare_at_price | default: 0 }},
+          available: {{ variant.available | json }},
+          {%- if variant.featured_media -%}
+          image: "{{ variant.featured_media | img_url: '100x100' }}",
+          {%- elsif addon_product.featured_media -%}
+          image: "{{ addon_product.featured_media | img_url: '100x100' }}",
+          {%- else -%}
+          image: "",
+          {%- endif -%}
+          options: [
+            {%- for option in variant.options -%}
+            "{{ option | escape }}"
+            {%- unless forloop.last -%},{%- endunless -%}
+            {%- endfor -%}
+          ]
+        }
+        {%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ];
+      
+      const productOptions = [
+        {%- for option in addon_product.options -%}
+        "{{ option | escape }}"
+        {%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ];
+      
+      // Function to find matching variant
+      function findMatchingVariant(selectedOptions) {
+        return productVariants.find(variant => {
+          return variant.options.every((optionValue, index) => {
+            const optionName = productOptions[index];
+            return selectedOptions[optionName] === optionValue;
+          });
+        });
+      }
+      
+      // Function to update price display and image
+      function updatePriceDisplay(variant) {
+        if (!variant) return;
+        
+        if (priceElement) {
+          const price = (variant.price / 100).toFixed(2);
+          priceElement.textContent = '+' + new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+          }).format(price);
+        }
+        
+        if (comparePriceElement) {
+          if (variant.compare_at_price > variant.price) {
+            const comparePrice = (variant.compare_at_price / 100).toFixed(2);
+            comparePriceElement.textContent = '(' + new Intl.NumberFormat('en-US', {
+              style: 'currency',
+              currency: 'USD',
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0
+            }).format(comparePrice) + ' value)';
+            comparePriceElement.style.display = 'inline';
+          } else {
+            comparePriceElement.style.display = 'none';
+          }
+        }
+        
+        // Update image if variant has a different image
+        if (imageElement && variant.image) {
+          imageElement.src = variant.image;
+          imageElement.alt = imageElement.alt || '';
+        }
+      }
+      
+      // Function to show/hide variants based on checkbox state
+      function toggleVariantsVisibility() {
+        if (variantsContainer) {
+          variantsContainer.style.display = checkbox.checked ? 'block' : 'none';
+        }
+      }
+      
+      // Check initial state on page load
+      toggleVariantsVisibility();
+      
+      // Show/hide variants when checkbox is toggled
+      checkbox.addEventListener('change', function() {
+        toggleVariantsVisibility();
+      });
+      
+      // Handle variant selection
+      variantButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          if (this.classList.contains('disabled')) return;
+          
+          // Remove selected class from siblings in same option group
+          const optionName = this.dataset.optionName;
+          const buttons = addonBlock.querySelectorAll(`[data-option-name="${optionName}"]`);
+          buttons.forEach(btn => btn.classList.remove('selected'));
+          
+          // Add selected class to clicked button
+          this.classList.add('selected');
+          
+          // Collect all selected options
+          const selectedOptions = {};
+          addonBlock.querySelectorAll('.optional-addon-variant-btn.selected').forEach(btn => {
+            selectedOptions[btn.dataset.optionName] = btn.dataset.optionValue;
+          });
+          
+          // Find matching variant
+          const matchingVariant = findMatchingVariant(selectedOptions);
+          
+          if (matchingVariant && variantIdInput) {
+            variantIdInput.value = matchingVariant.id;
+            updatePriceDisplay(matchingVariant);
+          }
+        });
+      });
+      
+      // Select first available variant by default (only if checkbox is checked)
+      if (checkbox.checked && variantButtons.length > 0) {
+        const firstOptionGroup = addonBlock.querySelector('.optional-addon-option');
+        if (firstOptionGroup) {
+          const firstAvailable = firstOptionGroup.querySelector('.optional-addon-variant-btn:not(.disabled)');
+          if (firstAvailable) {
+            firstAvailable.click();
+          }
+        }
+      }
+    })();
+  </script>
+{%- endif -%}
+
