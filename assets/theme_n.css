@@ -12511,6 +12511,32 @@ html[dir="rtl"] .product-single__meta .rte {
   }
 }
 
+/* ********* price-1 pdp-block 12/11/2025 webdev *********** */
+.price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-right: 30px;
+}
+.product__price--compare-1 {
+  display: inline-block;
+  text-decoration: line-through;
+  font-size: calc(var(--typeBaseSize) - 2px);
+  color: rgba(0, 0, 0, 0.4);
+}
+.pdp-product-block--price-ss .product__price--compare-1 {
+  padding-right: 0px;
+  margin-right: 0px;
+  margin-top: 5px;
+}
+@media (max-width: 520px) {
+  .pdp-product-block--price-ss .product__price--compare-1 {
+    font-size: calc(var(--typeBaseSize) * 1.5);
+  }
+}
+/* *************************** */
+
 .pdp-product-block--price-ss {
   text-decoration: none;
 }

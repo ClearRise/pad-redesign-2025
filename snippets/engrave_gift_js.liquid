@@ -178,9 +178,19 @@
         protectionInputs.push(engravingProductID);
       }
 
+      // Check for optional addon product
+      const optionalAddonCheckbox = document.querySelector('.optional-addon-checkbox');
+      if (optionalAddonCheckbox && optionalAddonCheckbox.checked) {
+        const optionalAddonVariantId = document.querySelector('.optional-addon-selected-variant-id');
+        if (optionalAddonVariantId && optionalAddonVariantId.value) {
+          protectionInputs.push(optionalAddonVariantId.value);
+          console.log("Optional addon variant added: " + optionalAddonVariantId.value);
+        }
+      }
+
       console.log("protectionInputs: " + protectionInputs)
       $('.CircleSpinner').addClass('LoadComplete');
-      // Add all selected protection plans
+      // Add all selected protection plans and optional addon
       if (protectionInputs.length > 0) {
         fetch('/cart/add.js', {
           body: JSON.stringify(

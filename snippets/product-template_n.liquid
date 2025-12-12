@@ -816,6 +816,122 @@ body:'Finance with 0% Interest',
                         {%- endif -%}
                       {% endif %}
                     </div>
+                  {%- when 'price-1' -%}
+                    <div class="product-block product-block--price pdp-product-block--price-ss" {{ block.shopify_attributes }} data-product-id="{{ product.id }}">
+                      {%- assign hide_sale_price = true -%}
+                      <div class="price-container">
+                        <span data-product-price
+                          class="product__price{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}">
+                          {%- unless product.empty? -%}
+                            {{ current_variant.price | money_without_trailing_zeros }}
+                          {%- else -%}
+                            {{ 1999 | money_without_trailing_zeros }}
+                          {%- endunless -%}
+                        </span>
+                        {%- if product.compare_at_price_max > product.price and settings.product_save_amount == true -%}
+                          {%- capture saved_amount -%}{{ current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price | round }}%{%- endcapture -%}
+                          <span class="price-text">
+                            You save {{ saved_amount }}
+                          </span> 
+                        {%- endif -%}
+                      </div>
+                      {%- if product.compare_at_price_max > product.price -%}
+                        {%- if current_variant.compare_at_price > current_variant.price -%}
+                          {%- assign hide_sale_price = false -%}
+                        {%- endif -%}
+                        <div class="price-container">
+                          <span
+                            data-a11y-price
+                            class="visually-hidden"
+                            aria-hidden="{{ hide_sale_price }}">
+                              {{ 'products.general.regular_price' | t }}
+                          </span>
+                          <span data-product-price-wrap class="{% if hide_sale_price %} hide{% endif %}">
+                            <span data-compare-price class="product__price product__price--compare-1">
+                              {%- if current_variant.compare_at_price > current_variant.price -%}
+                                {{ current_variant.compare_at_price | money_without_trailing_zeros }}
+                              {%- endif -%}
+                            </span>
+                          </span>
+                          <span data-compare-price-a11y class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+                          <span class="price-text">
+                            Traditional retail
+                          </span>
+                        </div>
+                      {%- else -%}
+                        <span data-a11y-price class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                      {%- endif -%}
+
+                      {% comment %} {%- if settings.product_save_amount -%}
+                        {%- if settings.product_save_type == 'dollar' -%}
+                          {%- capture saved_amount -%}{{ current_variant.compare_at_price | minus: current_variant.price | money_without_trailing_zeros }}{%- endcapture -%}
+                        {%- else -%}
+                          {%- capture saved_amount -%}{{ current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price | round }}%{%- endcapture -%}
+                        {%- endif -%}
+                        <span data-save-price class="product__price-savings{% if hide_sale_price %} hide{% endif %}">
+                          {%- unless hide_sale_price -%}
+                            {% comment %} <span class="separate-dot"> {% endcomment %}
+                              {% render 'icon-dot', color: '#138E7E66' %}
+                            {% comment %} </span> {% endcomment %}
+                            {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                          {%- endunless -%}
+                        </span>
+                        
+                        {% if block.settings.enable_badge == true and block.settings.custom_badge != blank %}
+                          {% comment %} <span class="save_badge {{settings.save_badge_type}} custom">{{block.settings.custom_badge}}</span> {% endcomment %}
+                        {% elsif settings.save_badget_text and settings.display_save_badge == 'true' %}
+                          <span class="save_badge {{settings.save_badge_type}}">{{settings.save_badget_text}}</span>
+                        {% endif %}
+                        
+                      {%- endif -%} {% endcomment %}
+
+                      <div
+                        data-unit-price-wrapper
+                        class="product__unit-price product__unit-price--spacing {% unless current_variant.unit_price_measurement %} hide{% endunless %}">
+                        {%- capture unit_price_base_unit -%}
+                          <span data-unit-base>
+                            {%- if current_variant.unit_price_measurement -%}
+                              {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
+                                {{ current_variant.unit_price_measurement.reference_value }}
+                              {%- endif -%}
+                              {{ current_variant.unit_price_measurement.reference_unit }}
+                            {%- endif -%}
+                          </span>
+                        {%- endcapture -%}
+
+                        <span data-unit-price>{{ current_variant.unit_price | money_without_trailing_zeros }}</span>/{{ unit_price_base_unit }}
+                      </div>
+
+                      {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+                        <div class="product__policies rte small--text-center">
+                          {%- if shop.taxes_included -%}
+                            {{ 'products.product.include_taxes' | t }}
+                          {%- endif -%}
+                          {%- if shop.shipping_policy.body != blank -%}
+                            {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                          {%- endif -%}
+                        </div>
+                      {%- endif -%}
+                      {% if block.settings.enable_badge %}
+                        {% if settings.savings_or_entries == 'savings' -%}
+                          {% if block.settings.custom_badge != blank %}
+                            <div class="buy-one-get-one-free">
+                              <span>{{ block.settings.custom_badge }}</span>
+                            </div>
+                          {% endif %}
+                        {% elsif settings.savings_or_entries == 'entries' -%}
+                          {% if product.metafields.custom.entries_multiplier != blank %}
+                            {%- assign multiplier = product.metafields.custom.entries_multiplier -%}
+                          {% else %}
+                            {%- assign multiplier = settings.entries_multiplier -%}
+                          {% endif %}
+                          {%- assign entries_value = product.price | divided_by: 100.0 | times: multiplier | round -%}
+                            <div class="buy-one-get-one-free">
+                              <span>{{ entries_value }} Entries</span>
+                            </div>
+                        {%- endif -%}
+                      {% endif %}
+                    </div>
                   {%- when 'quantity_selector' -%}
                     <div class="product-block" {{ block.shopify_attributes }}>
                       <div class="product__quantity">
@@ -921,6 +1037,17 @@ body:'Finance with 0% Interest',
                     </div>
                   {% when 'engraving' %}
                     {%- render 'customer-engraving', product: product, form_style: block.settings.form_style, style: block.settings.style -%}
+                  {%- when 'optional_addon' -%}
+                    {%- if product.metafields.custom.optional_addon_product -%}
+                      {%- liquid
+                        assign addon_product = all_products[product.metafields.custom.optional_addon_product]
+                      -%}
+                      {%- render 'optional-addon',
+                        addon_product: addon_product,
+                        block: block,
+                        section_id: section_id
+                      -%}
+                    {%- endif -%}
                   {%- when 'buy_buttons' -%}  
                     {%- render 'buy-buttons_n',
                       block: block,
