@@ -388,7 +388,7 @@
             "subtitle_size": 16,
             "brand_1_name": "Patrick Adair",
             "brand_2_name": "Jaxxon",
-            "brand_3_name": "Everlane",
+            "brand_3_name": "Craftd",
             "brand_4_name": "Todd Snyder",
             "feature_1_label": "Price",
             "feature_1_brand1": "$59.90",
@@ -426,7 +426,7 @@
             "text_color": "#111111",
             "muted_text_color": "#666666",
             "highlight_bg_color": "#f9f9f9",
-            "yes_icon_color": "#138f7e",
+            "yes_icon_color": "#8ead97",
             "no_icon_color": "#999999",
             "header_font_size": 16,
             "body_font_size": 15
