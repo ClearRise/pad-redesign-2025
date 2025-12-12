@@ -12530,6 +12530,10 @@ html[dir="rtl"] .product-single__meta .rte {
   margin-right: 0px;
   margin-top: 5px;
 }
+@media (min-width: 1024px) and (max-width: 1100px) {
+.pdp-product-block--price-ss .product__price--compare-1 {
+  font-size: calc(var(--typeBaseSize) * 1.5);
+}
 @media (max-width: 520px) {
   .pdp-product-block--price-ss .product__price--compare-1 {
     font-size: calc(var(--typeBaseSize) * 1.5);
