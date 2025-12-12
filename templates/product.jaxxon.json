@@ -23,6 +23,14 @@
             "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
+        "price_1_LHJnet": {
+          "type": "price-1",
+          "disabled": true,
+          "settings": {
+            "enable_badge": false,
+            "custom_badge": ""
+          }
+        },
         "rivo_loyalty_rewards_referrals_potential_points_tzhzhW": {
           "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/potential-points/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
           "disabled": true,
@@ -125,6 +133,12 @@
             "form_style": "checkbox",
             "style": "inline",
             "save_badge": "For Limited Time Only"
+          }
+        },
+        "optional_addon_DV7XUK": {
+          "type": "optional_addon",
+          "settings": {
+            "title": "Optional Add-Ons"
           }
         },
         "buy_buttons": {
@@ -315,6 +329,7 @@
       "block_order": [
         "judge_me_reviews_preview_badge_6bMyn3",
         "price",
+        "price_1_LHJnet",
         "rivo_loyalty_rewards_referrals_potential_points_tzhzhW",
         "94c49419-9d53-4cfe-8c63-edaf9a145c94",
         "separator",
@@ -325,6 +340,7 @@
         "premium_protection_plan_AhxfM9",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
         "engraving_YpGMkM",
+        "optional_addon_DV7XUK",
         "buy_buttons",
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
         "pdp_icon_list_eaVUhJ",
