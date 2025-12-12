@@ -184,6 +184,22 @@
         "parallax": true
       }
     },
+    "featured_collection_dMMVyd": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "New Cuban Jewelry",
+        "home_featured_products": "cuban-link-jewelry",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "per_row": 3,
+        "rows": 2,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
     "promo-grid": {
       "type": "promo-grid",
       "blocks": {
@@ -301,6 +317,7 @@
     "rich_text_UFnfJQ",
     "rich_text_G9LH7U",
     "collection-header",
+    "featured_collection_dMMVyd",
     "promo-grid",
     "main-collection"
   ]
