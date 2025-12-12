@@ -18,6 +18,7 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "enable_badge": false,
             "custom_badge": "BUY ONE GET ONE FREE"
@@ -25,7 +26,6 @@
         },
         "price_1_LHJnet": {
           "type": "price-1",
-          "disabled": true,
           "settings": {
             "enable_badge": false,
             "custom_badge": ""
