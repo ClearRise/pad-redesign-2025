@@ -1035,6 +1035,77 @@ body:'Finance with 0% Interest',
                         {%- endfor -%}
                       {%- endunless -%}
                     </div>
+                  {%- when 'variant_picker_1' -%}
+                    <div class="product-block variant-picker-1 custom-product-blocK collapse-options--{{block.settings.collapse_options}}" {{ block.shopify_attributes }} data-swatch-style="{{block.settings.product_swatch_style}}">
+                      {%- unless product.has_only_default_variant -%}
+                        {%- for option in product.options_with_values -%}
+                          {%- liquid
+                            assign is_color = false
+                            assign is_finish = false
+                            assign is_image = false
+                            assign color_option_index = 0
+                            
+                            if block.settings.swatch_option == 'color'
+                              assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase
+                              assign color_option_index = forloop.index0
+                              assign downcased_option = option.name | downcase
+                              if downcased_option contains swatch_trigger
+                                assign is_color = true
+                              elsif downcased_option contains 'colour' or downcased_option contains 'color'
+                                assign is_color = true
+                              elsif downcased_option contains 'metal'
+                                assign is_color = true
+                              elsif downcased_option contains 'gold type'
+                                assign is_color = true
+                              endif
+                            elsif block.settings.swatch_option == 'image'
+                              assign is_image = true
+                              assign color_option_index = forloop.index0
+                            endif
+                          -%}
+                          
+                          {%- if is_color or is_image or is_finish -%}
+                            {%- render 'variant-button_n',
+                              block: block,
+                              product: product,
+                              form_id: form_id,
+                              section_id: section_id,
+                              option: option,
+                              forloop: forloop,
+                              variant_labels: block.settings.variant_labels,
+                              custom_variant_comment: block.settings.custom_variant_comment, 
+                              is_color: is_color,
+                              is_image: is_image,
+                              color_option_index: color_option_index
+                            -%}
+                          {% elsif block.settings.picker_type == 'button' %}
+                            {%- render 'variant-button_n',
+                              block: block,
+                              product: product,
+                              form_id: form_id,
+                              section_id: section_id,
+                              option: option,
+                              forloop: forloop,
+                              variant_labels: block.settings.variant_labels,
+                              custom_variant_comment: block.settings.custom_variant_comment, 
+                              is_color: is_color,
+                              is_image: is_image,
+                              color_option_index: color_option_index
+                            -%}
+                          {%- else -%}
+                            {%- render 'variant-dropdown',
+                              product: product,
+                              form_id: form_id,
+                              section_id: section_id,
+                              option: option,
+                              forloop: forloop,
+                              variant_labels: block.settings.variant_labels,
+                              custom_variant_comment: block.settings.custom_variant_comment
+                            -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+                      {%- endunless -%}
+                    </div>
                   {% when 'engraving' %}
                     {%- render 'customer-engraving', product: product, form_style: block.settings.form_style, style: block.settings.style -%}
                   {%- when 'optional_addon' -%}

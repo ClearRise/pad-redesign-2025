@@ -32,6 +32,23 @@
     {% else %}
       <span class="variant__label-info">
         &mdash;
+        {% if option.name contains 'Finish' %}
+          {% comment %} <span class="variant__label-info-finish"> {% endcomment %}
+            {% if option.selected_value contains 'Gold' %}
+              <svg style="transform: translateY(4.8px);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="url(#paint0_linear_gold)"></circle><defs><linearGradient id="paint0_linear_gold" x1="20" y1="10" x2="0" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#E9D396"></stop><stop offset="0.487898" stop-color="#FBEAAC"></stop><stop offset="1" stop-color="#E9D396"></stop></linearGradient></defs></svg>
+            {% elsif option.selected_value contains 'Silver' %}
+              <svg style="transform: translateY(4.8px);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="url(#paint0_linear_silver)"></circle><defs><linearGradient id="paint0_linear_silver" x1="20" y1="10" x2="0" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#B9B9B9"></stop><stop offset="1" stop-color="#FFFFFF"></stop></linearGradient></defs></svg>
+            {% elsif option.selected_value contains 'Platinum' %}
+              <svg style="transform: translateY(4.8px);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="url(#paint0_linear_platinum)"></circle><defs><linearGradient id="paint0_linear_platinum" x1="20" y1="10" x2="0" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#E0E0E0"></stop><stop offset="1" stop-color="#FFFFFF"></stop></linearGradient></defs></svg>
+            {% elsif option.selected_value contains 'Palladium' %}
+              <svg style="transform: translateY(4.8px);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="url(#paint0_linear_palladium)"></circle><defs><linearGradient id="paint0_linear_palladium" x1="20" y1="10" x2="0" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#A9A9A9"></stop><stop offset="1" stop-color="#FFFFFF"></stop></linearGradient></defs></svg>
+            {% elsif option.selected_value contains 'Rhodium' %}
+              <svg style="transform: translateY(4.8px);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="url(#paint0_linear_rhodium)"></circle><defs><linearGradient id="paint0_linear_rhodium" x1="20" y1="10" x2="0" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#D4D4D4"></stop><stop offset="1" stop-color="#FFFFFF"></stop></linearGradient></defs></svg>
+            {% elsif option.selected_value contains 'Titanium' %}
+              <svg style="transform: translateY(4.8px);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="url(#paint0_linear_titanium)"></circle><defs><linearGradient id="paint0_linear_titanium" x1="20" y1="10" x2="0" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#A3A3A3"></stop><stop offset="1" stop-color="#FFFFFF"></stop></linearGradient></defs></svg>
+            {% endif %}
+          {% comment %} </span> {% endcomment %}
+          {% endif %}
         <span
           data-variant-color-label
           data-index="option{{ forloop.index }}"
@@ -71,83 +88,85 @@
   </label>
   {%- assign option_index = forloop.index -%}
   {%- assign option_index_0 = forloop.index0 -%}
-  <fieldset class="variant-input-wrap swatch"
-    name="{{ option.name }}"
-    data-index="option{{ option_index }}"
-    data-handle="{{ option.name | handleize }}"
-    id="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
-    <legend class="hide">{{ option.name }}</legend>
-    {%- for value in option.values -%}
-      {%- liquid
-        assign product_available = true
-        if product.options.size == 1
-          assign product_available = product.variants[forloop.index0].available
-        endif
-      -%}
-      <div
-        class="variant-input"
-        data-index="option{{ option_index }}"
-        data-value="{{ value | escape }}">
-        <input type="radio"
-          form="{{ form_id }}"
-          {% if option.selected_value == value %} checked="checked"{% endif %}
-          value="{{ value | escape }}"
+  {% if option.values.size > 1 or option.name != 'Finish' %}
+    <fieldset class="variant-input-wrap swatch"
+      name="{{ option.name }}"
+      data-index="option{{ option_index }}"
+      data-handle="{{ option.name | handleize }}"
+      id="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
+      <legend class="hide">{{ option.name }}</legend>
+      {%- for value in option.values -%}
+        {%- liquid
+          assign product_available = true
+          if product.options.size == 1
+            assign product_available = product.variants[forloop.index0].available
+          endif
+        -%}
+        <div
+          class="variant-input {% if option.name contains 'Finish' %} variant-input-finish{% endif %}"
           data-index="option{{ option_index }}"
-          name="{{ option.name }}"
-          data-variant-input
-          class="{% unless product_available %} disabled{% endunless %}{% if is_color %} variant__input--color-swatch{% endif %}{% if is_image %} variant__input--image-swatch{% endif %}"
-          {% if is_color %} data-color-name="{{ value | escape }}"{% endif %}
-          {% if is_color %} data-color-index="{{ color_option_index }}"{% endif %}
-          {% if is_image %} data-image-index="{{ color_option_index }}"{% endif %}
-          id="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}">
-        {%- if is_color -%}
-          {%- liquid
-            assign color_file_name = value | handle | append: '.' | append: swatch_file_extension
-            assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
-            if value contains "Gold"
-              assign color_swatch_fallback = "Gold" 
-            else
-              assign color_swatch_fallback = value | split: ' ' | last
-            endif
-          -%}
-          <label
-            for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
-            class="variant__button-label color-swatch color-swatch--{{ value | handle }}{% unless product_available %} disabled{% endunless %}"
-            data-file-name="{{color_file_name}}" 
-            style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}"
-          >
-            <span>{{ value | escape }}</span>
-          </label>
-        {%- elsif is_image -%}
-          {%- liquid
-            assign variant_image = blank
-            for variant in product.variants
-              if variant.options[option_index_0] == value
-                if variant.metafields.custom.custom_image != blank
-                  assign variant_image = variant.metafields.custom.custom_image | img_url: '100x100'
-                  break
-                elsif variant.featured_media
-                  assign variant_image = variant.featured_media | img_url: '100x100'
-                  break
-                endif
+          data-value="{{ value | escape }}">
+          <input type="radio"
+            form="{{ form_id }}"
+            {% if option.selected_value == value %} checked="checked"{% endif %}
+            value="{{ value | escape }}"
+            data-index="option{{ option_index }}"
+            name="{{ option.name }}"
+            data-variant-input
+            class="{% unless product_available %} disabled{% endunless %}{% if is_color %} variant__input--color-swatch{% endif %}{% if is_image %} variant__input--image-swatch{% endif %}"
+            {% if is_color %} data-color-name="{{ value | escape }}"{% endif %}
+            {% if is_color %} data-color-index="{{ color_option_index }}"{% endif %}
+            {% if is_image %} data-image-index="{{ color_option_index }}"{% endif %}
+            id="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}">
+          {%- if is_color -%}
+            {%- liquid
+              assign color_file_name = value | handle | append: '.' | append: swatch_file_extension
+              assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+              if value contains "Gold"
+                assign color_swatch_fallback = "Gold" 
+              else
+                assign color_swatch_fallback = value | split: ' ' | last
               endif
-            endfor
-          -%}
-          <label
-            for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
-            class="variant__button-label bold_option_value_swatch color-swatch color-swatch--{{ value | handle }}{% unless product_available %} disabled{% endunless %}"
-            style="{% if variant_image != blank %}background-image: url({{ variant_image }});{% endif %} background-size: cover; background-position: center;"
-          >
-            <span>{{ value | escape }}</span>
-          </label>
-        {%- else -%}
-          <label
-            for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
-            class="variant__button-label{% unless product_available %} disabled{% endunless %}">{{ value | escape }}</label>
-        {%- endif -%}
-      </div>
-    {%- endfor -%}
-  </fieldset>
+            -%}
+            <label
+              for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
+              class="variant__button-label color-swatch color-swatch--{{ value | handle }}{% unless product_available %} disabled{% endunless %}"
+              data-file-name="{{color_file_name}}" 
+              style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}"
+            >
+              <span>{{ value | escape }}</span>
+            </label>
+          {%- elsif is_image -%}
+            {%- liquid
+              assign variant_image = blank
+              for variant in product.variants
+                if variant.options[option_index_0] == value
+                  if variant.metafields.custom.custom_image != blank
+                    assign variant_image = variant.metafields.custom.custom_image | img_url: '100x100'
+                    break
+                  elsif variant.featured_media
+                    assign variant_image = variant.featured_media | img_url: '100x100'
+                    break
+                  endif
+                endif
+              endfor
+            -%}
+            <label
+              for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
+              class="variant__button-label bold_option_value_swatch color-swatch color-swatch--{{ value | handle }}{% unless product_available %} disabled{% endunless %}"
+              style="{% if variant_image != blank %}background-image: url({{ variant_image }});{% endif %} background-size: cover; background-position: center;"
+            >
+              <span>{{ value | escape }}</span>
+            </label>
+          {%- else -%}
+            <label
+              for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
+              class="variant__button-label{% unless product_available %} disabled{% endunless %}">{{ value | escape }}</label>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </fieldset>
+  {% endif %}
 </div>
 
 

@@ -9888,6 +9888,7 @@ html[dir="rtl"] .grid-product__content {
   margin-bottom: 10px;
 }
 
+
 .swatch-txt {
   display: block;
   text-align: center;
@@ -12531,8 +12532,9 @@ html[dir="rtl"] .product-single__meta .rte {
   margin-top: 5px;
 }
 @media (min-width: 1024px) and (max-width: 1100px) {
-.pdp-product-block--price-ss .product__price--compare-1 {
-  font-size: calc(var(--typeBaseSize) * 1.5);
+  .pdp-product-block--price-ss .product__price--compare-1 {
+    font-size: calc(var(--typeBaseSize) * 1.5);
+  }
 }
 @media (max-width: 520px) {
   .pdp-product-block--price-ss .product__price--compare-1 {

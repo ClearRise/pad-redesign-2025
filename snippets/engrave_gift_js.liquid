@@ -179,14 +179,33 @@
       }
 
       // Check for optional addon product
-      const optionalAddonCheckbox = document.querySelector('.optional-addon-checkbox');
-      if (optionalAddonCheckbox && optionalAddonCheckbox.checked) {
-        const optionalAddonVariantId = document.querySelector('.optional-addon-selected-variant-id');
-        if (optionalAddonVariantId && optionalAddonVariantId.value) {
-          protectionInputs.push(optionalAddonVariantId.value);
-          console.log("Optional addon variant added: " + optionalAddonVariantId.value);
+      const optionalAddonCheckboxes = document.querySelectorAll('.optional-addon-checkbox');
+      optionalAddonCheckboxes.forEach(checkbox => {
+        if (checkbox && checkbox.checked) {
+          // Find the variant ID input within the same optional-addon-block
+          const addonBlock = checkbox.closest('.optional-addon-block');
+          if (addonBlock) {
+            const optionalAddonVariantId = addonBlock.querySelector('.optional-addon-selected-variant-id');
+            if (optionalAddonVariantId) {
+              // Try value first, then data attribute as fallback
+              const variantIdValue = optionalAddonVariantId.value || optionalAddonVariantId.getAttribute('data-variant-id');
+              if (variantIdValue) {
+                const variantId = parseInt(variantIdValue, 10);
+                if (!isNaN(variantId) && variantId > 0) {
+                  protectionInputs.push(variantId);
+                  console.log("Optional addon variant added to cart: " + variantId);
+                } else {
+                  console.warn("Invalid optional addon variant ID:", variantIdValue);
+                }
+              } else {
+                console.warn("Optional addon checkbox is checked but no variant ID found");
+              }
+            } else {
+              console.warn("Optional addon checkbox is checked but variant ID input not found");
+            }
+          }
         }
-      }
+      });
 
       console.log("protectionInputs: " + protectionInputs)
       $('.CircleSpinner').addClass('LoadComplete');

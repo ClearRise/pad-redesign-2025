@@ -58,46 +58,67 @@
       <div class="optional-addon-variants" style="display: none;">
         {%- for option in addon_product.options_with_values -%}
           <div class="optional-addon-option">
-            <label class="optional-addon-option-label">{{ option.name }}</label>
-            <div class="optional-addon-variant-buttons">
-              {%- for value in option.values -%}
-                {%- liquid
-                  assign variant_available = true
-                  for variant in addon_product.variants
-                    if variant.title contains value
-                      unless variant.available
-                        assign variant_available = false
-                      endunless
-                    endif
-                  endfor
-                -%}
-                <button
-                  type="button"
-                  class="optional-addon-variant-btn{% unless variant_available %} disabled{% endunless %}"
-                  data-option-name="{{ option.name }}"
-                  data-option-value="{{ value | escape }}"
-                  data-addon-product-id="{{ addon_product.id }}"
-                >
-                  {{ value }}
-                </button>
-              {%- endfor -%}
-            </div>
+            <label class="optional-addon-option-label" data-option-name="{{ option.name }}">
+              {{ option.name }} —
+              <span class="optional-addon-selected-value">
+                {% if option.name contains 'Finish' %}
+                  {% if option.selected_value contains 'Gold' %}
+                    <svg style="transform: translateY(4.8px);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="url(#paint0_linear_gold)"></circle><defs><linearGradient id="paint0_linear_gold" x1="20" y1="10" x2="0" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#E9D396"></stop><stop offset="0.487898" stop-color="#FBEAAC"></stop><stop offset="1" stop-color="#E9D396"></stop></linearGradient></defs></svg>
+                  {% elsif option.selected_value contains 'Silver' %}
+                    <svg style="transform: translateY(4.8px);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="url(#paint0_linear_silver)"></circle><defs><linearGradient id="paint0_linear_silver" x1="20" y1="10" x2="0" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#B9B9B9"></stop><stop offset="1" stop-color="#FFFFFF"></stop></linearGradient></defs></svg>
+                  {% elsif option.selected_value contains 'Platinum' %}
+                    <svg style="transform: translateY(4.8px);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="url(#paint0_linear_platinum)"></circle><defs><linearGradient id="paint0_linear_platinum" x1="20" y1="10" x2="0" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#E0E0E0"></stop><stop offset="1" stop-color="#FFFFFF"></stop></linearGradient></defs></svg>
+                  {% elsif option.selected_value contains 'Palladium' %}
+                  {% endif %}
+                {% endif %}
+                <span class="optional-addon-value-text">{{ option.selected_value }}</span>
+              </span>
+            </label>
+            {% if option.values.size > 1 %}
+              <div class="optional-addon-variant-buttons">
+                {%- for value in option.values -%}
+                  {%- liquid
+                    assign variant_available = true
+                    for variant in addon_product.variants
+                      assign option_index = forloop.parentloop.index0
+                      if variant.options[option_index] == value
+                        unless variant.available
+                          assign variant_available = false
+                        endunless
+                      endif
+                    endfor
+                  -%}
+                  <button
+                    type="button"
+                    class="optional-addon-variant-btn{% unless variant_available %} disabled{% endunless %}"
+                    data-option-name="{{ option.name }}"
+                    data-option-value="{{ value | escape }}"
+                    data-option-index="{{ forloop.parentloop.index0 }}"
+                    data-addon-product-id="{{ addon_product.id }}"
+                  >
+                    {{ value }}
+                  </button>
+                {%- endfor -%}
+              </div>
+            {% endif %}
           </div>
         {%- endfor -%}
         <input
           type="hidden"
           class="optional-addon-selected-variant-id"
           name="properties[_optional_addon_variant_id]"
+          data-variant-id="{{ addon_product.selected_or_first_available_variant.id }}"
           value="{{ addon_product.selected_or_first_available_variant.id }}"
         >
       </div>
     {%- else -%}
-      <input
-        type="hidden"
-        class="optional-addon-selected-variant-id"
-        name="properties[_optional_addon_variant_id]"
-        value="{{ addon_product.selected_or_first_available_variant.id }}"
-      >
+        <input
+          type="hidden"
+          class="optional-addon-selected-variant-id"
+          name="properties[_optional_addon_variant_id]"
+          data-variant-id="{{ addon_product.selected_or_first_available_variant.id }}"
+          value="{{ addon_product.selected_or_first_available_variant.id }}"
+        >
     {%- endunless -%}
   </div>
   
@@ -265,10 +286,10 @@
       const comparePriceElement = addonBlock.querySelector('.optional-addon-compare-price');
       const imageElement = addonBlock.querySelector('.optional-addon-image img');
       
-      // Store product variants data
-      const productVariants = [
+      // Create lookup map: option combination -> variant ID (for direct lookup without matching)
+      const variantLookupMap = {
         {%- for variant in addon_product.variants -%}
-        {
+        "{{ variant.options | join: '|' | escape }}": {
           id: {{ variant.id }},
           price: {{ variant.price }},
           compare_at_price: {{ variant.compare_at_price | default: 0 }},
@@ -280,32 +301,60 @@
           {%- else -%}
           image: "",
           {%- endif -%}
-          options: [
-            {%- for option in variant.options -%}
-            "{{ option | escape }}"
-            {%- unless forloop.last -%},{%- endunless -%}
-            {%- endfor -%}
-          ]
-        }
-        {%- unless forloop.last -%},{%- endunless -%}
+        }{% unless forloop.last %},{% endunless %}
         {%- endfor -%}
-      ];
+      };
       
-      const productOptions = [
-        {%- for option in addon_product.options -%}
-        "{{ option | escape }}"
-        {%- unless forloop.last -%},{%- endunless -%}
-        {%- endfor -%}
-      ];
+      // Store product variants data for fallback
+      const productVariants = Object.values(variantLookupMap);
       
-      // Function to find matching variant
-      function findMatchingVariant(selectedOptions) {
-        return productVariants.find(variant => {
-          return variant.options.every((optionValue, index) => {
-            const optionName = productOptions[index];
-            return selectedOptions[optionName] === optionValue;
-          });
+      // Simple function to get selected option values in order and create lookup key
+      function getVariantIdFromSelection() {
+        const selectedValues = [];
+        // Get all option groups in order
+        addonBlock.querySelectorAll('.optional-addon-option').forEach(optionGroup => {
+          const selectedBtn = optionGroup.querySelector('.optional-addon-variant-btn.selected');
+          if (selectedBtn) {
+            selectedValues.push(selectedBtn.dataset.optionValue);
+          }
         });
+        
+        // Create lookup key from selected values
+        if (selectedValues.length === 0) return null;
+        
+        const lookupKey = selectedValues.join('|');
+        return variantLookupMap[lookupKey] || null;
+      }
+      
+      // Simple function to update variant ID - direct lookup, no matching needed
+      function updateVariantId() {
+        if (!variantIdInput) return;
+        
+        const variantData = getVariantIdFromSelection();
+        let variantId = null;
+        
+        if (variantData) {
+          variantId = variantData.id;
+          updatePriceDisplay(variantData);
+          console.log('Optional addon variant ID updated:', variantId);
+        } else if (productVariants.length > 0) {
+          // Fallback: use first available variant or first variant
+          const fallbackVariant = productVariants.find(v => v.available) || productVariants[0];
+          if (fallbackVariant) {
+            variantId = fallbackVariant.id;
+            updatePriceDisplay(fallbackVariant);
+            console.log('Optional addon variant ID fallback:', variantId);
+          }
+        }
+        
+        // Always update both value and data attribute as strings
+        if (variantId) {
+          const variantIdString = String(variantId);
+          variantIdInput.value = variantIdString;
+          variantIdInput.setAttribute('data-variant-id', variantIdString);
+          // Also set it as a property for direct access
+          variantIdInput.dataset.variantId = variantIdString;
+        }
       }
       
       // Function to update price display and image
@@ -351,54 +400,122 @@
         }
       }
       
+      // Function to auto-select first available variant for each option
+      function autoSelectVariants() {
+        if (!checkbox.checked || !variantButtons.length) return;
+        
+        // Select first available button for each option group
+        addonBlock.querySelectorAll('.optional-addon-option').forEach(optionGroup => {
+          const selectedBtn = optionGroup.querySelector('.optional-addon-variant-btn.selected');
+          if (!selectedBtn) {
+            const firstAvailable = optionGroup.querySelector('.optional-addon-variant-btn:not(.disabled)');
+            if (firstAvailable) {
+              firstAvailable.classList.add('selected');
+              const optionName = firstAvailable.dataset.optionName;
+              const selectedValue = firstAvailable.dataset.optionValue;
+              updateOptionLabel(optionName, selectedValue);
+            }
+          }
+        });
+        
+        // Update variant ID after auto-selecting
+        updateVariantId();
+      }
+      
       // Check initial state on page load
       toggleVariantsVisibility();
+      
+      // Ensure variant ID is set on page load
+      if (variantButtons.length === 0) {
+        // Single variant product - ensure data attribute is set from value
+        if (variantIdInput && variantIdInput.value) {
+          const currentValue = String(variantIdInput.value);
+          variantIdInput.setAttribute('data-variant-id', currentValue);
+          variantIdInput.dataset.variantId = currentValue;
+        } else if (variantIdInput) {
+          updateVariantId();
+        }
+      } else if (checkbox.checked) {
+        // Multi-variant product with checkbox checked - auto-select and update
+        autoSelectVariants();
+      } else {
+        // Checkbox not checked but ensure data attribute matches value
+        if (variantIdInput && variantIdInput.value) {
+          const currentValue = String(variantIdInput.value);
+          variantIdInput.setAttribute('data-variant-id', currentValue);
+          variantIdInput.dataset.variantId = currentValue;
+        }
+      }
       
       // Show/hide variants when checkbox is toggled
       checkbox.addEventListener('change', function() {
         toggleVariantsVisibility();
+        if (this.checked) {
+          autoSelectVariants();
+        }
       });
       
-      // Handle variant selection
+      // Function to update option label text
+      function updateOptionLabel(optionName, selectedValue) {
+        const label = addonBlock.querySelector(`.optional-addon-option-label[data-option-name="${optionName}"]`);
+        if (!label) return;
+        
+        const valueTextSpan = label.querySelector('.optional-addon-value-text');
+        const selectedValueContainer = label.querySelector('.optional-addon-selected-value');
+        
+        if (!valueTextSpan || !selectedValueContainer) return;
+        
+        // Update text
+        valueTextSpan.textContent = selectedValue;
+        
+        // Handle Finish option with SVG icons
+        if (optionName.includes('Finish')) {
+          // Remove existing SVG
+          const existingSvg = selectedValueContainer.querySelector('svg');
+          if (existingSvg) {
+            existingSvg.remove();
+          }
+          
+          // Add appropriate SVG based on value
+          let svgHtml = '';
+          if (selectedValue.includes('Gold')) {
+            svgHtml = '<svg style="transform: translateY(4.8px);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="url(#paint0_linear_gold)"></circle><defs><linearGradient id="paint0_linear_gold" x1="20" y1="10" x2="0" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#E9D396"></stop><stop offset="0.487898" stop-color="#FBEAAC"></stop><stop offset="1" stop-color="#E9D396"></stop></linearGradient></defs></svg>';
+          } else if (selectedValue.includes('Silver')) {
+            svgHtml = '<svg style="transform: translateY(4.8px);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="url(#paint0_linear_silver)"></circle><defs><linearGradient id="paint0_linear_silver" x1="20" y1="10" x2="0" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#B9B9B9"></stop><stop offset="1" stop-color="#FFFFFF"></stop></linearGradient></defs></svg>';
+          } else if (selectedValue.includes('Platinum')) {
+            svgHtml = '<svg style="transform: translateY(4.8px);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="url(#paint0_linear_platinum)"></circle><defs><linearGradient id="paint0_linear_platinum" x1="20" y1="10" x2="0" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#E0E0E0"></stop><stop offset="1" stop-color="#FFFFFF"></stop></linearGradient></defs></svg>';
+          }
+          
+          if (svgHtml) {
+            valueTextSpan.insertAdjacentHTML('beforebegin', svgHtml);
+          }
+        }
+      }
+      
+      // Handle variant button clicks
       variantButtons.forEach(button => {
         button.addEventListener('click', function() {
           if (this.classList.contains('disabled')) return;
           
-          // Remove selected class from siblings in same option group
+          // Remove selected class from all buttons in same option group
           const optionName = this.dataset.optionName;
-          const buttons = addonBlock.querySelectorAll(`[data-option-name="${optionName}"]`);
-          buttons.forEach(btn => btn.classList.remove('selected'));
+          const selectedValue = this.dataset.optionValue;
+          const sameOptionButtons = addonBlock.querySelectorAll(`[data-option-name="${optionName}"]`);
+          sameOptionButtons.forEach(btn => btn.classList.remove('selected'));
           
           // Add selected class to clicked button
           this.classList.add('selected');
           
-          // Collect all selected options
-          const selectedOptions = {};
-          addonBlock.querySelectorAll('.optional-addon-variant-btn.selected').forEach(btn => {
-            selectedOptions[btn.dataset.optionName] = btn.dataset.optionValue;
-          });
+          // Update the label text
+          updateOptionLabel(optionName, selectedValue);
           
-          // Find matching variant
-          const matchingVariant = findMatchingVariant(selectedOptions);
-          
-          if (matchingVariant && variantIdInput) {
-            variantIdInput.value = matchingVariant.id;
-            updatePriceDisplay(matchingVariant);
-          }
+          // Update variant ID based on all selected options
+          updateVariantId();
         });
       });
       
-      // Select first available variant by default (only if checkbox is checked)
-      if (checkbox.checked && variantButtons.length > 0) {
-        const firstOptionGroup = addonBlock.querySelector('.optional-addon-option');
-        if (firstOptionGroup) {
-          const firstAvailable = firstOptionGroup.querySelector('.optional-addon-variant-btn:not(.disabled)');
-          if (firstAvailable) {
-            firstAvailable.click();
-          }
-        }
-      }
     })();
   </script>
 {%- endif -%}
+
 
