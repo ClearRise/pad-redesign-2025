@@ -138,7 +138,7 @@
         "optional_addon_DV7XUK": {
           "type": "optional_addon",
           "settings": {
-            "title": "Optional Add-Ons"
+            "title": "Add Matching Accessory"
           }
         },
         "buy_buttons": {
@@ -164,6 +164,7 @@
         },
         "pdp_icon_list_eaVUhJ": {
           "type": "pdp_icon_list",
+          "disabled": true,
           "settings": {
             "label_1": "",
             "label_2": "One-of-a-kind Designs",
