@@ -48,7 +48,7 @@
               <svg style="transform: translateY(4.8px);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="url(#paint0_linear_titanium)"></circle><defs><linearGradient id="paint0_linear_titanium" x1="20" y1="10" x2="0" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#A3A3A3"></stop><stop offset="1" stop-color="#FFFFFF"></stop></linearGradient></defs></svg>
             {% endif %}
           {% comment %} </span> {% endcomment %}
-          {% endif %}
+        {% endif %}
         <span
           data-variant-color-label
           data-index="option{{ forloop.index }}"
@@ -88,7 +88,7 @@
   </label>
   {%- assign option_index = forloop.index -%}
   {%- assign option_index_0 = forloop.index0 -%}
-  {% if option.values.size > 1 or option.name != 'Finish' %}
+  
     <fieldset class="variant-input-wrap swatch"
       name="{{ option.name }}"
       data-index="option{{ option_index }}"
@@ -103,7 +103,9 @@
           endif
         -%}
         <div
-          class="variant-input {% if option.name contains 'Finish' %} variant-input-finish{% endif %}"
+          class="variant-input 
+            {% if option.name contains 'Finish' %} variant-input-finish{% endif %}
+            {% if option.values.size == 1 and option.name == 'Finish' %} hide{% endif %}"
           data-index="option{{ option_index }}"
           data-value="{{ value | escape }}">
           <input type="radio"
@@ -166,7 +168,6 @@
         </div>
       {%- endfor -%}
     </fieldset>
-  {% endif %}
 </div>
 
 
