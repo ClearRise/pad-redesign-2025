@@ -22,7 +22,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>Handcrafted Wedding Bands that are fully customizable featuring sustainable and conflict-free materials. </p>"
+            "text": "<p>Handcrafted Jewelry that is fully customizable featuring sustainable and conflict-free materials. </p>"
           }
         }
       },
@@ -88,7 +88,9 @@
         "custom_badge": "BUY ONE GET ONE FREE",
         "saved_amount_option": "display_entries",
         "entries_multiplier": 1,
-        "load_more": false
+        "load_more": false,
+        "show_tryon_badge": false,
+        "tryon_badge_text": "Try Free"
       }
     },
     "text_and_image_NJ76bR": {
