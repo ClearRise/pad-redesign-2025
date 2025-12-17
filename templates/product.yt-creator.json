@@ -20,10 +20,9 @@
         },
         "text_YrxFDm": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "enlarge_text": false,
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "text": "<p>Check out {{ product.metafields.custom.ready_to_ship_text.value }}'s exclusive Glowstone Design below and shop our annual holiday sale for a limited time with <strong>Buy One Get One Free</strong>. </p><p>Take an <strong>extra 10%</strong> off your order with the code: <strong>{{ product.metafields.custom.discount_text.value }}</strong></p>"
           }
         }
       },
