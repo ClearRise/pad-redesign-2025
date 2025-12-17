@@ -710,7 +710,7 @@
         "enable_color_swatches": false,
         "enable_sort": true,
         "type_enable": false,
-        "subtitle_enable": false,
+        "subtitle_enable": true,
         "subtitle_type": "two",
         "custom_badge": "",
         "saved_amount_option": "basic_logic",
