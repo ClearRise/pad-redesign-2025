@@ -403,6 +403,7 @@
       "blocks": {
         "advanced_KyqEAm": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "",
             "heading": "HOLIDAY SALE",
@@ -427,6 +428,7 @@
         },
         "advanced_nqeHQA": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "",
             "heading": "CRAFTED BY  HAND",
@@ -452,6 +454,7 @@
         },
         "advanced_hEMdLL": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "",
             "heading": "EXOTIC MATERIALS",
@@ -477,6 +480,7 @@
         },
         "advanced_TwEqdf": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "",
             "heading": "EVERY RING <br> IS UNIQUE",
@@ -622,6 +626,7 @@
       "block_order": [
         "46cc26fb-adef-48ef-adb5-d7706819bd7b"
       ],
+      "disabled": true,
       "settings": {
         "max_width": true
       }
@@ -635,6 +640,7 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "show_product_recommendations": false,
         "product_recommendations_heading": "You may also like",
@@ -646,12 +652,14 @@
     },
     "recently-viewed": {
       "type": "recently-viewed_n",
+      "disabled": true,
       "settings": {
         "recent_count": 5
       }
     },
     "collection-return": {
       "type": "collection-return",
+      "disabled": true,
       "settings": {}
     },
     "17352234315dcd193a": {
@@ -674,6 +682,43 @@
         "full_width": false,
         "space_around": true
       }
+    },
+    "main_collection_1_trkVHE": {
+      "type": "main-collection_1",
+      "blocks": {
+        "product_grid_AAYnVp": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": false,
+            "per_row": 3,
+            "rows_per_page": 20,
+            "mobile_flush_grid": true
+          }
+        }
+      },
+      "block_order": [
+        "product_grid_AAYnVp"
+      ],
+      "name": "Collection Grid",
+      "settings": {
+        "collection": "all-products-new",
+        "title": "Shop All Products",
+        "padding_horizontal": 50,
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true,
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "custom_badge": "",
+        "saved_amount_option": "basic_logic",
+        "entries_multiplier": 1,
+        "load_more": false,
+        "show_tryon_badge": false,
+        "tryon_badge_text": "Try Free"
+      }
     }
   },
   "order": [
@@ -689,6 +734,7 @@
     "product-recommendations",
     "recently-viewed",
     "collection-return",
-    "17352234315dcd193a"
+    "17352234315dcd193a",
+    "main_collection_1_trkVHE"
   ]
 }
