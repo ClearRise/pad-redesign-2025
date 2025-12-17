@@ -9,6 +9,34 @@
  */
 {
   "sections": {
+    "rich_text_zd3AyU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NxTmtK": {
+          "type": "heading",
+          "settings": {
+            "title": "Greetings, {{ product.metafields.custom.ready_to_ship_text.value }} Viewers"
+          }
+        },
+        "text_YrxFDm": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NxTmtK",
+        "text_YrxFDm"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
     "main": {
       "type": "main-product_n",
       "blocks": {
@@ -364,35 +392,6 @@
         "space_around": true
       }
     },
-    "rich_text_zd3AyU": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_NxTmtK": {
-          "type": "heading",
-          "settings": {
-            "title": "MORE THAN JUST A RING"
-          }
-        },
-        "text_YrxFDm": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "enlarge_text": false,
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_NxTmtK",
-        "text_YrxFDm"
-      ],
-      "disabled": true,
-      "settings": {
-        "align_text": "center",
-        "narrow_column": false,
-        "divider": false
-      }
-    },
     "replo_trust_icons_white_backg_AnTLaL": {
       "type": "replo-trust-icons-white-backg",
       "disabled": true,
@@ -724,9 +723,9 @@
     }
   },
   "order": [
+    "rich_text_zd3AyU",
     "main",
     "17563958449821061e",
-    "rich_text_zd3AyU",
     "replo_trust_icons_white_backg_AnTLaL",
     "promo_grid_QUweUP",
     "product_img_with_txt",
