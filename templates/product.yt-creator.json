@@ -538,6 +538,7 @@
         "advanced_TwEqdf",
         "advanced_eReELk"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "gutter_size": 0,
@@ -678,6 +679,7 @@
       "block_order": [
         "judge_me_reviews_review_widget_Q9CVK3"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true
