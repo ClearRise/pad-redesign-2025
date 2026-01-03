@@ -58,10 +58,10 @@
         "additional_class": ""
       }
     },
-    "slideshow_n_qrJph9": {
+    "slideshow_n_JqhMAP": {
       "type": "slideshow_n",
       "blocks": {
-        "image_JVb9J3": {
+        "image_hk9QRC": {
           "type": "image",
           "settings": {
             "top_subheading": "",
@@ -79,8 +79,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/Warehouse_Sale_2.png",
-            "image_mobile": "shopify://shop_images/Ware_House_Sale_1.png",
+            "image": "shopify://shop_images/Artboard_35.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_33.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -94,7 +94,7 @@
         }
       },
       "block_order": [
-        "image_JVb9J3"
+        "image_hk9QRC"
       ],
       "settings": {
         "use_img_banner": true,
@@ -358,7 +358,7 @@
   },
   "order": [
     "advanced_content_eYLzPF",
-    "slideshow_n_qrJph9",
+    "slideshow_n_JqhMAP",
     "17347204-928a-46d1-8166-ac8c007f382d",
     "featured_collection_iVHx6n",
     "text_and_image_aaMVyk",
