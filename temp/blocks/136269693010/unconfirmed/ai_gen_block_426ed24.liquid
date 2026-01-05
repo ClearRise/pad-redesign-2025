@@ -1,6 +1,895 @@
+{% doc %}
+  @prompt
+    Goal
+    
+    A clean, modern marketing section with:
+    
+    Centered headline + subheadline
+    
+    On desktop: 2-column layout (large image left, benefits list right)
+    
+    On mobile: stacked layout (headline/subheadline, image, then benefits list)
+    
+    Desktop Layout (>= 990px)
+    
+    Section max-width: 1200px, centered
+    
+    Top content centered:
+    
+    Heading (H2) large and bold, two-line capable
+    
+    Subheading smaller, centered, max-width ~700px
+    
+    Content grid below:
+    
+    Left column: Image card with rounded corners
+    
+    Right column: 3 benefit items stacked vertically
+    
+    Column proportions: Image ~55% / Text ~45%
+    
+    Vertical alignment: benefits start near the top of the image, with comfortable spacing
+    
+    Mobile Layout (< 990px)
+    
+    Stack in this order:
+    
+    Heading
+    
+    Subheading
+    
+    Image (full width, rounded corners)
+    
+    Benefit list (3 items)
+    
+    Ensure:
+    
+    No cramped text
+    
+    Icon + title align nicely
+    
+    Plenty of padding left/right (~16–20px)
+    
+    Benefit List Styling
+    
+    Each benefit item includes:
+    
+    Left: icon (simple outline style)
+    
+    Right: text block:
+    
+    Benefit title (bold)
+    
+    Benefit description (regular)
+    
+    Spacing:
+    
+    20–28px between benefit items
+    
+    12–16px gap between icon and text
+    
+    Typography & Spacing
+    
+    Heading: bold, modern sans (use theme font), responsive sizing
+    
+    Desktop ~40–52px
+    
+    Mobile ~30–38px
+    
+    Subheading:
+    
+    Desktop ~16–18px
+    
+    Mobile ~14–16px
+    
+    Section padding:
+    
+    Desktop: top/bottom 60–80px
+    
+    Mobile: top/bottom 40–60px
+    
+    Keep everything visually airy (like the reference)
+    
+    Image Styling
+    
+    Image should be displayed as a large card
+    
+    Border radius: 16–24px
+    
+    Keep aspect ratio (cover or contain is fine, but prioritize clean cropping)
+    
+    Optional: subtle shadow or none (match minimalist look)
+    
+    Section Settings (must be editable in theme editor)
+    
+    Add customizable settings for:
+    
+    Heading text
+    
+    Subheading text
+    
+    Image picker
+    
+    Image position toggle (left/right on desktop)
+    
+    Up to 4 benefit items (default 3), each with:
+    
+    Icon picker (or select from 6–8 built-in icons: hammer, check, home, shield, star, etc.)
+    
+    Title
+    
+    Description
+    
+    Spacing controls (optional): section pa
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-benefits-section-{{ ai_gen_id }} {
+    width: 100%;
+    padding: {{ block.settings.section_padding_desktop }}px 20px;
+    background-color: {{ block.settings.background_color }};
+    display: block;
+  }
+
+  .ai-benefits-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-benefits-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .ai-benefits-heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size_desktop }}px;
+    font-weight: 700;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 16px;
+    line-height: 1.2;
+  }
+
+  .ai-benefits-subheading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subheading_size_desktop }}px;
+    color: {{ block.settings.subheading_color }};
+    margin: 0 auto;
+    max-width: 700px;
+    line-height: 1.5;
+  }
+
+  .ai-benefits-content-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .ai-benefits-content-{{ ai_gen_id }}--reversed {
+    grid-template-columns: 45% 55%;
+  }
+
+  .ai-benefits-image-wrapper-{{ ai_gen_id }} {
+    width: 100%;
+  }
+
+  .ai-benefits-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .ai-benefits-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background-color: #f4f4f4;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-benefits-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-benefits-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-benefits-list-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.benefit_spacing }}px;
+    padding-top: 8px;
+  }
+
+  .ai-benefits-item-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.icon_text_gap }}px;
+    align-items: flex-start;
+  }
+
+  .ai-benefits-icon-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    color: {{ block.settings.icon_color }};
+  }
+
+  .ai-benefits-icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .ai-benefits-text-{{ ai_gen_id }} {
+    flex: 1;
+  }
+
+  .ai-benefits-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.benefit_title_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.benefit_title_color }};
+    margin: 0 0 8px;
+    line-height: 1.3;
+  }
+
+  .ai-benefits-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.benefit_description_size }}px;
+    color: {{ block.settings.benefit_description_color }};
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-benefits-section-{{ ai_gen_id }} {
+      padding: {{ block.settings.section_padding_mobile }}px 16px;
+    }
+
+    .ai-benefits-header-{{ ai_gen_id }} {
+      margin-bottom: 32px;
+    }
+
+    .ai-benefits-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size_mobile }}px;
+    }
+
+    .ai-benefits-subheading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subheading_size_mobile }}px;
+    }
+
+    .ai-benefits-content-{{ ai_gen_id }},
+    .ai-benefits-content-{{ ai_gen_id }}--reversed {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .ai-benefits-list-{{ ai_gen_id }} {
+      padding-top: 0;
+    }
+  }
+{% endstyle %}
+
+<benefits-section-{{ ai_gen_id }}
+  class="ai-benefits-section-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-benefits-container-{{ ai_gen_id }}">
+    <div class="ai-benefits-header-{{ ai_gen_id }}">
+      {% if block.settings.heading != blank %}
+        <h2 class="ai-benefits-heading-{{ ai_gen_id }}">
+          {{ block.settings.heading }}
+        </h2>
+      {% endif %}
+      {% if block.settings.subheading != blank %}
+        <div class="ai-benefits-subheading-{{ ai_gen_id }}">
+          {{ block.settings.subheading }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="ai-benefits-content-{{ ai_gen_id }} {% if block.settings.image_position == 'right' %}ai-benefits-content-{{ ai_gen_id }}--reversed{% endif %}">
+      <div class="ai-benefits-image-wrapper-{{ ai_gen_id }}" style="{% if block.settings.image_position == 'right' %}order: 2;{% endif %}">
+        {% if block.settings.image %}
+          <img
+            src="{{ block.settings.image | image_url: width: 1200 }}"
+            alt="{{ block.settings.image.alt | escape }}"
+            width="{{ block.settings.image.width }}"
+            height="{{ block.settings.image.height }}"
+            loading="lazy"
+            class="ai-benefits-image-{{ ai_gen_id }}"
+          >
+        {% else %}
+          <div class="ai-benefits-image-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-benefits-empty-state-{{ ai_gen_id }}">
+              Add an image to showcase your product
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="ai-benefits-list-{{ ai_gen_id }}" style="{% if block.settings.image_position == 'right' %}order: 1;{% endif %}">
+        {% for i in (1..4) %}
+          {% liquid
+            assign benefit_enabled_key = 'benefit_' | append: i | append: '_enabled'
+            assign benefit_icon_key = 'benefit_' | append: i | append: '_icon'
+            assign benefit_title_key = 'benefit_' | append: i | append: '_title'
+            assign benefit_description_key = 'benefit_' | append: i | append: '_description'
+
+            assign benefit_enabled = block.settings[benefit_enabled_key]
+            assign benefit_icon = block.settings[benefit_icon_key]
+            assign benefit_title = block.settings[benefit_title_key]
+            assign benefit_description = block.settings[benefit_description_key]
+          %}
+
+          {% if benefit_enabled and benefit_title != blank %}
+            <div class="ai-benefits-item-{{ ai_gen_id }}">
+              <div class="ai-benefits-icon-{{ ai_gen_id }}">
+                {% case benefit_icon %}
+                  {% when 'check' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  {% when 'shield' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                  {% when 'star' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  {% when 'heart' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                  {% when 'truck' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <rect x="1" y="3" width="15" height="13"></rect>
+                      <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                      <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                      <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+                  {% when 'gift' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                      <rect x="2" y="7" width="20" height="5"></rect>
+                      <line x1="12" y1="22" x2="12" y2="7"></line>
+                      <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                      <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                    </svg>
+                  {% when 'award' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <circle cx="12" cy="8" r="7"></circle>
+                      <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                    </svg>
+                  {% when 'zap' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                  {% else %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                {% endcase %}
+              </div>
+              <div class="ai-benefits-text-{{ ai_gen_id }}">
+                <h3 class="ai-benefits-title-{{ ai_gen_id }}">
+                  {{ benefit_title }}
+                </h3>
+                {% if benefit_description != blank %}
+                  <p class="ai-benefits-description-{{ ai_gen_id }}">
+                    {{ benefit_description }}
+                  </p>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</benefits-section-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class BenefitsSection{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+      }
+    }
+
+    customElements.define('benefits-section-{{ ai_gen_id }}', BenefitsSection{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Benefits section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why Choose Our Product"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Discover the features that make our product stand out from the rest"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Benefit 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "benefit_1_enabled",
+      "label": "Enable benefit 1",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "benefit_1_icon",
+      "label": "Icon",
+      "options": [
+        {
+          "value": "check",
+          "label": "Check"
+        },
+        {
+          "value": "shield",
+          "label": "Shield"
+        },
+        {
+          "value": "star",
+          "label": "Star"
+        },
+        {
+          "value": "heart",
+          "label": "Heart"
+        },
+        {
+          "value": "truck",
+          "label": "Truck"
+        },
+        {
+          "value": "gift",
+          "label": "Gift"
+        },
+        {
+          "value": "award",
+          "label": "Award"
+        },
+        {
+          "value": "zap",
+          "label": "Zap"
+        }
+      ],
+      "default": "check"
+    },
+    {
+      "type": "text",
+      "id": "benefit_1_title",
+      "label": "Title",
+      "default": "Premium Quality"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_1_description",
+      "label": "Description",
+      "default": "Crafted with the finest materials to ensure lasting durability and exceptional performance."
+    },
+    {
+      "type": "header",
+      "content": "Benefit 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "benefit_2_enabled",
+      "label": "Enable benefit 2",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "benefit_2_icon",
+      "label": "Icon",
+      "options": [
+        {
+          "value": "check",
+          "label": "Check"
+        },
+        {
+          "value": "shield",
+          "label": "Shield"
+        },
+        {
+          "value": "star",
+          "label": "Star"
+        },
+        {
+          "value": "heart",
+          "label": "Heart"
+        },
+        {
+          "value": "truck",
+          "label": "Truck"
+        },
+        {
+          "value": "gift",
+          "label": "Gift"
+        },
+        {
+          "value": "award",
+          "label": "Award"
+        },
+        {
+          "value": "zap",
+          "label": "Zap"
+        }
+      ],
+      "default": "shield"
+    },
+    {
+      "type": "text",
+      "id": "benefit_2_title",
+      "label": "Title",
+      "default": "Lifetime Warranty"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_2_description",
+      "label": "Description",
+      "default": "We stand behind our products with a comprehensive lifetime warranty for your peace of mind."
+    },
+    {
+      "type": "header",
+      "content": "Benefit 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "benefit_3_enabled",
+      "label": "Enable benefit 3",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "benefit_3_icon",
+      "label": "Icon",
+      "options": [
+        {
+          "value": "check",
+          "label": "Check"
+        },
+        {
+          "value": "shield",
+          "label": "Shield"
+        },
+        {
+          "value": "star",
+          "label": "Star"
+        },
+        {
+          "value": "heart",
+          "label": "Heart"
+        },
+        {
+          "value": "truck",
+          "label": "Truck"
+        },
+        {
+          "value": "gift",
+          "label": "Gift"
+        },
+        {
+          "value": "award",
+          "label": "Award"
+        },
+        {
+          "value": "zap",
+          "label": "Zap"
+        }
+      ],
+      "default": "truck"
+    },
+    {
+      "type": "text",
+      "id": "benefit_3_title",
+      "label": "Title",
+      "default": "Fast Shipping"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_3_description",
+      "label": "Description",
+      "default": "Get your order delivered quickly with our expedited shipping options available worldwide."
+    },
+    {
+      "type": "header",
+      "content": "Benefit 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "benefit_4_enabled",
+      "label": "Enable benefit 4",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "benefit_4_icon",
+      "label": "Icon",
+      "options": [
+        {
+          "value": "check",
+          "label": "Check"
+        },
+        {
+          "value": "shield",
+          "label": "Shield"
+        },
+        {
+          "value": "star",
+          "label": "Star"
+        },
+        {
+          "value": "heart",
+          "label": "Heart"
+        },
+        {
+          "value": "truck",
+          "label": "Truck"
+        },
+        {
+          "value": "gift",
+          "label": "Gift"
+        },
+        {
+          "value": "award",
+          "label": "Award"
+        },
+        {
+          "value": "zap",
+          "label": "Zap"
+        }
+      ],
+      "default": "heart"
+    },
+    {
+      "type": "text",
+      "id": "benefit_4_title",
+      "label": "Title",
+      "default": "Customer Satisfaction"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_4_description",
+      "label": "Description",
+      "default": "Join thousands of happy customers who love our products and exceptional service."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon",
+      "default": "#138f7e"
+    },
+    {
+      "type": "color",
+      "id": "benefit_title_color",
+      "label": "Benefit title",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "benefit_description_color",
+      "label": "Benefit description",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "min": 32,
+      "max": 64,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size (desktop)",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "min": 24,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size (mobile)",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "subheading_size_desktop",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Subheading size (desktop)",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "subheading_size_mobile",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Subheading size (mobile)",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "benefit_title_size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Benefit title size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "benefit_description_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Benefit description size",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_desktop",
+      "min": 40,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding (desktop)",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "section_padding_mobile",
+      "min": 30,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding (mobile)",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "benefit_spacing",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Space between benefits",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "icon_text_gap",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon to text gap",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 20,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 32
+    }
+  ],
+  "presets": [
+    {
+      "name": "Benefits section"
+    }
+  ]
+}
 {% endschema %}
