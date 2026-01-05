@@ -327,6 +327,47 @@
         "enable_video_looping": true,
         "product_video_style": "muted"
       }
+    },
+    "176757718087207406": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_3639f27_KACwJz": {
+          "type": "ai_gen_block_3639f27",
+          "settings": {
+            "heading": "Mystery Ring Testimonials",
+            "heading_size": 28,
+            "background_color": "#ffffff",
+            "text_color": "#111111",
+            "card_background": "#f5f5f5",
+            "card_border_radius": 8,
+            "image_border_radius": 8,
+            "text_size": 16,
+            "author_size": 14,
+            "author_color": "#666666",
+            "star_color": "#8ead97",
+            "arrow_background": "#111111",
+            "arrow_color": "#ffffff",
+            "dot_color": "#111111",
+            "review_1_image": "shopify://shop_images/P1023591_1_0.jpg",
+            "review_1_rating": 5,
+            "review_1_text": "I figured it would be a basic ring for the price, but what I got easily feels like a $250+ piece. The weight, finish, and inlay work are way nicer than I expected from a mystery item. You can tell there’s real craftsmanship here, not leftovers or clearance junk. The mystery part was fun, but the value is what really sold me.",
+            "review_1_author": "Sarah M.",
+            "review_2_image": "shopify://shop_images/regal-halo-glowstone-ring.png",
+            "review_2_rating": 5,
+            "review_2_text": "I was skeptical going in, but the ring I received is flawless. Smooth edges, perfect fit, and the materials look premium. I own a couple of Patrick Adair rings already and this one feels right in line with them quality-wise. For $95, this is kind of a no-brainer.",
+            "review_2_author": "Michael R.",
+            "review_3_image": "shopify://shop_images/BlackFireOpalGlowstoneRing.jpg",
+            "review_3_rating": 5,
+            "review_3_text": "I went in expecting something solid, but ended up with a ring that’s listed for way more than I paid. The detail and finish are insane, and it doesn’t feel like they’re hiding the good stuff.",
+            "review_3_author": "Jessica L."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_3639f27_KACwJz"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -339,6 +380,7 @@
     "collection-header",
     "promo-grid",
     "main-collection",
-    "featured_product_TWmGL7"
+    "featured_product_TWmGL7",
+    "176757718087207406"
   ]
 }
