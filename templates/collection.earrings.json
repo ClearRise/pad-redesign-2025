@@ -76,10 +76,10 @@
         "space_below": false
       }
     },
-    "slideshow_n_kCEbeg": {
+    "slideshow_n_hzWTjL": {
       "type": "slideshow_n",
       "blocks": {
-        "image_M4tcPb": {
+        "image_GyaELe": {
           "type": "image",
           "settings": {
             "top_subheading": "",
@@ -97,8 +97,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/Artboard_35.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_33.jpg",
+            "image": "shopify://shop_images/Artboard_47.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_45.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -112,7 +112,7 @@
         }
       },
       "block_order": [
-        "image_M4tcPb"
+        "image_GyaELe"
       ],
       "settings": {
         "use_img_banner": true,
@@ -123,6 +123,36 @@
         "autoplay": false,
         "autoplay_speed": 5
       }
+    },
+    "blocks_ELwQhq": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_78985ae_9kfLJA": {
+          "type": "ai_gen_block_78985ae",
+          "settings": {
+            "offer_1": "BUY ONE GET ONE FREE - ROUND EARRINGS",
+            "offer_2": "",
+            "offer_3": "",
+            "offer_4": "",
+            "offer_5": "",
+            "background_color": "#dfeafb",
+            "text_color": "#000000",
+            "text_size": 13,
+            "text_weight": "500",
+            "bar_height": 8,
+            "separator": "",
+            "separator_color": "#000000",
+            "separator_spacing": 20,
+            "scroll_speed": 10,
+            "item_spacing": 10
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_78985ae_9kfLJA"
+      ],
+      "settings": {}
     },
     "main-collection": {
       "type": "main-collection",
@@ -175,7 +205,8 @@
   "order": [
     "collection-header",
     "promo-grid",
-    "slideshow_n_kCEbeg",
+    "slideshow_n_hzWTjL",
+    "blocks_ELwQhq",
     "main-collection"
   ]
 }

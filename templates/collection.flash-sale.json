@@ -9,10 +9,10 @@
  */
 {
   "sections": {
-    "slideshow_n_dCQUFh": {
+    "slideshow_n_XpKaB9": {
       "type": "slideshow_n",
       "blocks": {
-        "image_jMr99N": {
+        "image_9CaNJx": {
           "type": "image",
           "settings": {
             "top_subheading": "",
@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/Artboard_35.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_33.jpg",
+            "image": "shopify://shop_images/Artboard_47.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_45.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -45,7 +45,7 @@
         }
       },
       "block_order": [
-        "image_jMr99N"
+        "image_9CaNJx"
       ],
       "settings": {
         "use_img_banner": true,
@@ -207,7 +207,7 @@
     }
   },
   "order": [
-    "slideshow_n_dCQUFh",
+    "slideshow_n_XpKaB9",
     "blocks_NY7dMz",
     "replo_flash_sale_timer_BdXnmX",
     "collection-header",

@@ -9,59 +9,10 @@
  */
 {
   "sections": {
-    "advanced_content_eYLzPF": {
-      "type": "advanced-content-flexible",
-      "blocks": {
-        "liquid_DNKzNA": {
-          "type": "liquid",
-          "settings": {
-            "is_collection_banner": false,
-            "liquid_name": "",
-            "code": "<h2>Glow Stone Series</h2><p>Experience the perfect blend of tradition and quality with craftsmanship that stands the test of time.</p>",
-            "width": "50%",
-            "alignment": "center",
-            "text_color": "#000000",
-            "simple_background_color": "#ffffff",
-            "variant_padding": true,
-            "padding_left": 0,
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "padding_right": 30
-          }
-        },
-        "image_khDkUk": {
-          "type": "image",
-          "settings": {
-            "iamge_name": "",
-            "image": "shopify://shop_images/2-2.jpg",
-            "link": "",
-            "width": "50%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "liquid_DNKzNA",
-        "image_khDkUk"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": true,
-        "show_navigation": true,
-        "image_first": true,
-        "space_around": false,
-        "background_color": "#ffffff",
-        "small_image": false,
-        "is_top_line": false,
-        "is_bottom_line": false,
-        "top_logo_size": 30,
-        "additional_class": ""
-      }
-    },
-    "slideshow_n_iX6EYE": {
+    "slideshow_n_MdJBib": {
       "type": "slideshow_n",
       "blocks": {
-        "image_9YUBrb": {
+        "image_XQYeQG": {
           "type": "image",
           "settings": {
             "top_subheading": "",
@@ -79,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/Warehouse_Sale_2.png",
-            "image_mobile": "shopify://shop_images/Ware_House_Sale_1.png",
+            "image": "shopify://shop_images/Artboard_47.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_45.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -94,7 +45,7 @@
         }
       },
       "block_order": [
-        "image_9YUBrb"
+        "image_XQYeQG"
       ],
       "settings": {
         "use_img_banner": true,
@@ -540,8 +491,7 @@
     }
   },
   "order": [
-    "advanced_content_eYLzPF",
-    "slideshow_n_iX6EYE",
+    "slideshow_n_MdJBib",
     "blocks_d7Lp64",
     "trust_icons_EDYTbe",
     "rich_text_YkFgAa",
