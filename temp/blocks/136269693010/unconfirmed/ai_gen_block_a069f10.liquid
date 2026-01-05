@@ -1,6 +1,219 @@
+{% doc %}
+  @prompt
+    Create a full-width banner section called “Lifetime Warranty Banner.”
+    
+    Layout
+    
+    Full-width section (edge to edge)
+    
+    Centered content (horizontal and vertical)
+    
+    Single column
+    
+    No image
+    
+    Content Structure
+    
+    Headline (H3 or H2): centered, bold
+    
+    Body text: centered, max-width ~700px
+    
+    Styling
+    
+    Background color: dark charcoal / near-black
+    
+    Text color: white
+    
+    Minimal, clean look
+    
+    No borders, no icons, no buttons
+    
+    Spacing
+    
+    Padding:
+    
+    Desktop: 60–80px top & bottom
+    
+    Mobile: 40–60px top & bottom
+    
+    Comfortable line spacing for readability on mobile
+    
+    Typography
+    
+    Heading:
+    
+    Bold
+    
+    Larger than body text
+    
+    Body text:
+    
+    Regular weight
+    
+    Slightly muted white (optional, for contrast)
+    
+    Default Content
+    
+    Heading:
+    Lifetime Warranty
+    
+    Body:
+    Every Patrick Adair Designs accessory is backed by a lifetime warranty. If anything ever happens, let us know and we’ll be happy to replace it for free.
+    
+    Editor Settings
+    
+    Editable heading text
+    
+    Editable body text
+    
+    Background color picker (default dark)
+    
+    Text color picker (default white)
+    
+    Mobile Optimization
+    
+    Text stays centered
+    
+    No overflow or edge clipping
+    
+    Font sizes scale down appropriately
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-warranty-banner-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_desktop }}px 20px;
+  }
+
+  .ai-warranty-banner__content-{{ ai_gen_id }} {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .ai-warranty-banner__heading-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    line-height: 1.3;
+  }
+
+  .ai-warranty-banner__body-{{ ai_gen_id }} {
+    color: {{ block.settings.body_text_color }};
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-warranty-banner-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_mobile }}px 20px;
+    }
+
+    .ai-warranty-banner__heading-{{ ai_gen_id }} {
+      font-size: 24px;
+      margin: 0 0 12px 0;
+    }
+
+    .ai-warranty-banner__body-{{ ai_gen_id }} {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-warranty-banner-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-warranty-banner__content-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-warranty-banner__heading-{{ ai_gen_id }}">
+        {{ block.settings.heading }}
+      </h2>
+    {% endif %}
+    
+    {% if block.settings.body_text != blank %}
+      <div class="ai-warranty-banner__body-{{ ai_gen_id }}">
+        {{ block.settings.body_text }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Lifetime warranty banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Lifetime Warranty"
+    },
+    {
+      "type": "richtext",
+      "id": "body_text",
+      "label": "Body text",
+      "default": "<p>Every Patrick Adair Designs accessory is backed by a lifetime warranty. If anything ever happens, let us know and we'll be happy to replace it for free.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#1c1d1d"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Heading color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "body_text_color",
+      "label": "Body text color",
+      "default": "#e8e8e8"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_desktop",
+      "label": "Desktop padding",
+      "min": 40,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "padding_mobile",
+      "label": "Mobile padding",
+      "min": 30,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lifetime warranty banner"
+    }
+  ]
+}
 {% endschema %}
