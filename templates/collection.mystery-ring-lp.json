@@ -135,13 +135,13 @@
             "image_position": "left",
             "image_border_radius": 16,
             "benefit_1_enabled": true,
-            "benefit_1_icon": "check",
-            "benefit_1_title": "Premium Quality",
-            "benefit_1_description": "Crafted with the finest materials to ensure lasting durability and exceptional performance.",
+            "benefit_1_icon": "star",
+            "benefit_1_title": "Premium Craftsmanship",
+            "benefit_1_description": "Each ring is made by skilled craftsmen using high-grade materials for exceptional strength, detail, and finish.",
             "benefit_2_enabled": true,
-            "benefit_2_icon": "shield",
-            "benefit_2_title": "Lifetime Warranty",
-            "benefit_2_description": "We stand behind our products with a comprehensive lifetime warranty for your peace of mind.",
+            "benefit_2_icon": "check",
+            "benefit_2_title": "Authentic Materials",
+            "benefit_2_description": "Only high-quality metals and inlays selected for durability, comfort, and finish.",
             "benefit_3_enabled": true,
             "benefit_3_icon": "zap",
             "benefit_3_title": "Expedited Production",
@@ -179,6 +179,19 @@
     "176757718087207406": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_a069f10_Jd987E": {
+          "type": "ai_gen_block_a069f10",
+          "settings": {
+            "heading": "Lifetime Warranty",
+            "body_text": "<p>Every Patrick Adair Designs accessory is backed by a lifetime warranty. If anything ever happens, let us know and we'll be happy to replace it for free.</p>",
+            "background_color": "#8ead97",
+            "text_color": "#ffffff",
+            "body_text_color": "#e8e8e8",
+            "padding_desktop": 70,
+            "padding_mobile": 50
+          },
+          "blocks": {}
+        },
         "ai_gen_block_3639f27_KACwJz": {
           "type": "ai_gen_block_3639f27",
           "settings": {
@@ -213,6 +226,7 @@
         }
       },
       "block_order": [
+        "ai_gen_block_a069f10_Jd987E",
         "ai_gen_block_3639f27_KACwJz"
       ],
       "settings": {}
