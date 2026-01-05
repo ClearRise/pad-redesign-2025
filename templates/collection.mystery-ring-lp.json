@@ -169,17 +169,8 @@
             "icon_size": 32
           },
           "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_426ed24_ALWXMC"
-      ],
-      "settings": {}
-    },
-    "176757718087207406": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_a069f10_Jd987E": {
+        },
+        "ai_gen_block_a069f10_aqGaxr": {
           "type": "ai_gen_block_a069f10",
           "settings": {
             "heading": "Lifetime Warranty",
@@ -192,7 +183,7 @@
           },
           "blocks": {}
         },
-        "ai_gen_block_3639f27_KACwJz": {
+        "ai_gen_block_3639f27_eL8i7L": {
           "type": "ai_gen_block_3639f27",
           "settings": {
             "heading": "Mystery Ring Testimonials",
@@ -226,10 +217,73 @@
         }
       },
       "block_order": [
-        "ai_gen_block_a069f10_Jd987E",
-        "ai_gen_block_3639f27_KACwJz"
+        "ai_gen_block_426ed24_ALWXMC",
+        "ai_gen_block_a069f10_aqGaxr",
+        "ai_gen_block_3639f27_eL8i7L"
       ],
       "settings": {}
+    },
+    "advanced_content_flexible_f4tG3P": {
+      "type": "advanced-content-flexible",
+      "blocks": {
+        "image_N6FF3R": {
+          "type": "image",
+          "settings": {
+            "iamge_name": "",
+            "image": "shopify://shop_images/fabd0ccf-1c92-4d2f-9fdd-020ed5197b48.png",
+            "link": "",
+            "width": "40%",
+            "alignment": "center"
+          }
+        },
+        "liquid_jpDH3A": {
+          "type": "liquid",
+          "settings": {
+            "is_collection_banner": false,
+            "liquid_name": "btn-ctn",
+            "code": "<h2>Find the Perfect Gift</h2><p>Shop a refined collection of rings, necklaces, bracelets, and pendants crafted with premium materials and timeless design.</p>",
+            "width": "60%",
+            "alignment": "center",
+            "text_color": "#111111",
+            "simple_background_color": "#ffffff",
+            "variant_padding": false,
+            "padding_left": 150,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 30
+          }
+        },
+        "child_block_button_jXxUXJ": {
+          "type": "child_block_button",
+          "settings": {
+            "parent_name": "btn-ctn",
+            "position": "bottom",
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/womens-jewelry",
+            "button_background_color": "#138f7e",
+            "button_border_color": "#111111",
+            "button_text_color": "#ffffff",
+            "inclue_right_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "image_N6FF3R",
+        "liquid_jpDH3A",
+        "child_block_button_jXxUXJ"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_navigation": false,
+        "image_first": false,
+        "space_around": false,
+        "background_color": "#ffffff",
+        "small_image": true,
+        "is_top_line": true,
+        "is_bottom_line": false,
+        "top_logo_size": 16,
+        "additional_class": ""
+      }
     }
   },
   "order": [
@@ -237,6 +291,6 @@
     "main-collection",
     "featured_product_TWmGL7",
     "1767577945580f75bf",
-    "176757718087207406"
+    "advanced_content_flexible_f4tG3P"
   ]
 }
