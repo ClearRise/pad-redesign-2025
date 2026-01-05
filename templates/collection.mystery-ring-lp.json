@@ -176,8 +176,8 @@
             "heading": "Lifetime Warranty",
             "body_text": "<p>Every Patrick Adair Designs accessory is backed by a lifetime warranty. If anything ever happens, let us know and we'll be happy to replace it for free.</p>",
             "background_color": "#8ead97",
-            "text_color": "#ffffff",
-            "body_text_color": "#e8e8e8",
+            "text_color": "#111111",
+            "body_text_color": "#111111",
             "padding_desktop": 70,
             "padding_mobile": 50
           },
@@ -259,10 +259,10 @@
             "parent_name": "btn-ctn",
             "position": "bottom",
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/all-products-new",
+            "link": "shopify://collections/mystery-rings",
             "button_background_color": "#8ead97",
             "button_border_color": "#111111",
-            "button_text_color": "#ffffff",
+            "button_text_color": "#111111",
             "inclue_right_arrow": false
           }
         }
