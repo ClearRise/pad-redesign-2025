@@ -19,7 +19,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": false,
+            "enable_badge": true,
             "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
