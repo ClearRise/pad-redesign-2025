@@ -78,12 +78,6 @@
             "custom_badge": "LIMITED TIME ONLY"
           }
         },
-        "description_xBggtM": {
-          "type": "description",
-          "settings": {
-            "is_tab": false
-          }
-        },
         "variant_picker_7RfkJH": {
           "type": "variant_picker",
           "settings": {
@@ -100,13 +94,19 @@
             "show_dynamic_checkout": true,
             "surface_pickup_enable": true
           }
+        },
+        "description_xBggtM": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
         }
       },
       "block_order": [
         "price_DbtmAM",
-        "description_xBggtM",
         "variant_picker_7RfkJH",
-        "buy_buttons_Ti3TyA"
+        "buy_buttons_Ti3TyA",
+        "description_xBggtM"
       ],
       "name": "Featured product",
       "settings": {
