@@ -96,6 +96,7 @@
       "block_order": [
         "image_WfWU9Q"
       ],
+      "disabled": true,
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
@@ -116,6 +117,7 @@
     },
     "trust_icons_EDYTbe": {
       "type": "trust-icons_n",
+      "disabled": true,
       "settings": {
         "section_background": "#eeeeee",
         "top_padding": 20,
@@ -132,27 +134,6 @@
       "type": "replo-trust-icons",
       "disabled": true,
       "settings": {}
-    },
-    "rich_text_UFnfJQ": {
-      "type": "rich-text",
-      "blocks": {
-        "text_EgV76n": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": false,
-            "text": "<p><strong>Mix & Match BOGO:</strong> Add any 2 eligible rings, necklaces, or chains to your cart – the lower-priced piece is free. No code needed.<br/><br/></p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_EgV76n"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
-      }
     },
     "rich_text_G9LH7U": {
       "type": "rich-text",
@@ -272,6 +253,7 @@
         "subcollections",
         "product_grid"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "padding_horizontal": 50,
@@ -290,6 +272,61 @@
         "show_tryon_badge": false,
         "tryon_badge_text": "Try Free"
       }
+    },
+    "featured_product_TWmGL7": {
+      "type": "featured-product",
+      "blocks": {
+        "price_DbtmAM": {
+          "type": "price",
+          "settings": {
+            "enable_badge": true,
+            "custom_badge": "LIMITED TIME ONLY"
+          }
+        },
+        "description_xBggtM": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "variant_picker_7RfkJH": {
+          "type": "variant_picker",
+          "settings": {
+            "size_chart": "",
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_swatch_style": "square",
+            "swatch_option": "color"
+          }
+        },
+        "buy_buttons_Ti3TyA": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true
+          }
+        }
+      },
+      "block_order": [
+        "price_DbtmAM",
+        "description_xBggtM",
+        "variant_picker_7RfkJH",
+        "buy_buttons_Ti3TyA"
+      ],
+      "name": "Featured product",
+      "settings": {
+        "featured_product": "mystery-ring",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
     }
   },
   "order": [
@@ -298,10 +335,10 @@
     "replo_trust_icons_white_backg_Wc7kJ7",
     "trust_icons_EDYTbe",
     "replo_trust_icons_fy9XYw",
-    "rich_text_UFnfJQ",
     "rich_text_G9LH7U",
     "collection-header",
     "promo-grid",
-    "main-collection"
+    "main-collection",
+    "featured_product_TWmGL7"
   ]
 }
