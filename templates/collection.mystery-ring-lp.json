@@ -230,7 +230,7 @@
           "type": "image",
           "settings": {
             "iamge_name": "",
-            "image": "shopify://shop_images/fabd0ccf-1c92-4d2f-9fdd-020ed5197b48.png",
+            "image": "shopify://shop_images/carbon-fiber-and-meteorite-ring.jpg",
             "link": "",
             "width": "40%",
             "alignment": "center"
@@ -241,7 +241,7 @@
           "settings": {
             "is_collection_banner": false,
             "liquid_name": "btn-ctn",
-            "code": "<h2>Find the Perfect Gift</h2><p>Shop a refined collection of rings, necklaces, bracelets, and pendants crafted with premium materials and timeless design.</p>",
+            "code": "<h2>Find the Perfect Ring</h2><p>Shop a refined collection of rings, necklaces, bracelets, and pendants crafted with premium materials and timeless design.</p>",
             "width": "60%",
             "alignment": "center",
             "text_color": "#111111",
@@ -259,8 +259,8 @@
             "parent_name": "btn-ctn",
             "position": "bottom",
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/womens-jewelry",
-            "button_background_color": "#138f7e",
+            "link": "shopify://collections/all-products-new",
+            "button_background_color": "#8ead97",
             "button_border_color": "#111111",
             "button_text_color": "#ffffff",
             "inclue_right_arrow": false
