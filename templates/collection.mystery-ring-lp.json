@@ -284,6 +284,22 @@
         "top_logo_size": 16,
         "additional_class": ""
       }
+    },
+    "featured_collection_K4jRiT": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Mystery Ring Bundles",
+        "home_featured_products": "mystery-ring-weekend-bundle",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "per_row": 3,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
     }
   },
   "order": [
@@ -291,6 +307,7 @@
     "main-collection",
     "featured_product_TWmGL7",
     "1767577945580f75bf",
+    "featured_collection_K4jRiT",
     "advanced_content_flexible_f4tG3P"
   ]
 }
