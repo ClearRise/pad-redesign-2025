@@ -15,7 +15,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": true,
+            "enable_badge": false,
             "custom_badge": "BUY ONE GET ONE FREE - 50% OFF"
           }
         },
@@ -360,8 +360,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "HOLIDAY SALE",
-            "textarea": "BUY ONE GET ONE FREE: All matching sets 50% off",
+            "heading": "NEW YEARS SALE",
+            "textarea": "Save up to 40% off and get a free Mystery Gift on orders $195+",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",

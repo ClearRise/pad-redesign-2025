@@ -80,7 +80,7 @@
     "product_threshold_amount": 0,
     "product1-img1": "shopify://shop_images/Mystery_Ring_Gif_bf14da19-95c3-4062-bee1-3da32c79205e.gif",
     "product1-title": "FREE GIFT OFFER",
-    "product1-text": "Get a Free Mystery Gift on Orders $245+<br><b>LIMITED TIME ONLY</b>",
+    "product1-text": "Get a Free Mystery Gift on Orders $195+<br><b>LIMITED TIME ONLY</b>",
     "product2-title": "",
     "product2-text": "",
     "product3-title": "",
@@ -99,7 +99,7 @@
     "upsell_box_title": "You May Also Like",
     "enable_rewards_bar": true,
     "rewards_bar_title": "Unlock Exclusive Rewards",
-    "rewards_bar_subtitle": "Unlock exclusive Holiday Deals + Buy One Get One Free for a Limited Time Only.",
+    "rewards_bar_subtitle": "Unlock an exclusive deal for a limited time only",
     "top_text": "You're (amount) away from unlocking a Free Mystery Gift",
     "unlock_text": "You've unlocked a new Reward",
     "bottom_text": "Add a (upsell_product_title)($(upsell_product_price)) for your (main_product_title) to unlock the next tier",
@@ -110,7 +110,7 @@
     "gift_box_title": "Free Mystery Gift",
     "gift_box_text": "",
     "unlock_text_first": "Congrats! You've Unlocked a Free Mystery Gift!",
-    "cart_threshold_amount": 245,
+    "cart_threshold_amount": 195,
     "spend_progress": "",
     "product-handle-1": "lapis-lazuli-dog-tag-pendant",
     "product-handle-2": "amethyst-dog-tag-pendant",
@@ -179,13 +179,13 @@
             "type": "timer_banner",
             "settings": {
               "enable_timer_banner": true,
-              "banner_text": "WAREHOUSE SALE EXTENDED",
+              "banner_text": "NEW YEARS SALE",
               "banner_link": "shopify://collections/flash-sale",
               "banner_link_text": "Shop now",
               "background_color": "#8ead97",
               "text_color": "#111111",
               "enable_countdown": true,
-              "countdown_end_date": "2026-01-04 23:59:59",
+              "countdown_end_date": "2026-01-11 23:59:59",
               "hide_when_expired": false
             }
           },
@@ -232,7 +232,7 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "<u><b>Sale</b></u>",
-              "link_submenu": "shopify://collections/flash-sale"
+              "link_submenu": "shopify://collections/all-products-new"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {

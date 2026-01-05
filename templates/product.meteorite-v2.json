@@ -15,7 +15,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": true,
+            "enable_badge": false,
             "custom_badge": "LABOR DAY SALE"
           }
         },
@@ -396,8 +396,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "FREE GIFT OFFER",
-            "textarea": "Get a Free Green Glow Burl Carbon Fiber Ring or Pendant on orders $145+<br><b>LIMITED TIME ONLY</b>",
+            "heading": "NEW YEARS SALE",
+            "textarea": "Save up to 40% off and get a free Mystery Gift on orders $195+",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",

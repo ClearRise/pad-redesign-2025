@@ -79,8 +79,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/Artboard_35.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_33.jpg",
+            "image": "shopify://shop_images/Artboard_47.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_45.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -132,27 +132,6 @@
       "type": "replo-trust-icons",
       "disabled": true,
       "settings": {}
-    },
-    "rich_text_UFnfJQ": {
-      "type": "rich-text",
-      "blocks": {
-        "text_EgV76n": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": false,
-            "text": "<p><strong>Mix & Match BOGO:</strong> Add any 2 eligible rings, necklaces, or chains to your cart – the lower-priced piece is free. No code needed.<br/><br/></p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_EgV76n"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
-      }
     },
     "rich_text_G9LH7U": {
       "type": "rich-text",
@@ -283,8 +262,8 @@
         "type_enable": false,
         "subtitle_enable": true,
         "subtitle_type": "two",
-        "custom_badge": "BUY ONE GET ONE FREE",
-        "saved_amount_option": "display_entries",
+        "custom_badge": "",
+        "saved_amount_option": "basic_logic",
         "entries_multiplier": 1,
         "load_more": false,
         "show_tryon_badge": false,
@@ -298,7 +277,6 @@
     "replo_trust_icons_white_backg_Wc7kJ7",
     "trust_icons_EDYTbe",
     "replo_trust_icons_fy9XYw",
-    "rich_text_UFnfJQ",
     "rich_text_G9LH7U",
     "collection-header",
     "promo-grid",
