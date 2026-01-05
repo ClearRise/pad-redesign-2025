@@ -110,7 +110,7 @@
       ],
       "name": "Featured product",
       "settings": {
-        "featured_product": "mystery-ring",
+        "featured_product": "mystery-earrings",
         "divider": false,
         "sku_enable": false,
         "image_position": "left",
@@ -131,13 +131,13 @@
           "settings": {
             "heading": "Crafted With Purpose. Worn With Confidence.",
             "subheading": "Timeless design, premium materials, and craftsmanship that holds up to everyday wear.",
-            "image": "shopify://shop_images/Mystery_Ring_Gif_47e16bb8-4c5f-4048-aafc-899ec07b5473.gif",
+            "image": "shopify://shop_images/earrings-gif_1.gif",
             "image_position": "left",
             "image_border_radius": 16,
             "benefit_1_enabled": true,
             "benefit_1_icon": "star",
             "benefit_1_title": "Premium Craftsmanship",
-            "benefit_1_description": "Each ring is made by skilled craftsmen using high-grade materials for exceptional strength, detail, and finish.",
+            "benefit_1_description": "Every earring is made by skilled craftsmen using high-grade materials for exceptional strength, detail, and finish.",
             "benefit_2_enabled": true,
             "benefit_2_icon": "check",
             "benefit_2_title": "Authentic Materials",
@@ -145,7 +145,7 @@
             "benefit_3_enabled": true,
             "benefit_3_icon": "zap",
             "benefit_3_title": "Expedited Production",
-            "benefit_3_description": "Efficient production and shipping mean your ring arrives sooner, not later.",
+            "benefit_3_description": "Efficient production and shipping means your earrings arrive sooner, not later.",
             "benefit_4_enabled": false,
             "benefit_4_icon": "heart",
             "benefit_4_title": "Customer Satisfaction",
@@ -186,7 +186,7 @@
         "ai_gen_block_3639f27_eL8i7L": {
           "type": "ai_gen_block_3639f27",
           "settings": {
-            "heading": "Mystery Ring Testimonials",
+            "heading": "Mystery Earring Testimonials",
             "heading_size": 28,
             "background_color": "#ffffff",
             "text_color": "#111111",
@@ -200,18 +200,18 @@
             "arrow_background": "#c8bed2",
             "arrow_color": "#ffffff",
             "dot_color": "#111111",
-            "review_1_image": "shopify://shop_images/P1023591_1_0.jpg",
+            "review_1_image": "shopify://shop_images/Black_Emerald_On_Ear_1.jpg",
             "review_1_rating": 5,
-            "review_1_text": "I figured it would be a basic ring for the price, but what I got easily feels like a $250+ piece. The weight, finish, and inlay work are way nicer than I expected from a mystery item. You can tell there’s real craftsmanship here, not leftovers or clearance junk. The mystery part was fun, but the value is what really sold me.",
-            "review_1_author": "Sarah M.",
-            "review_2_image": "shopify://shop_images/regal-halo-glowstone-ring.png",
+            "review_1_text": "The earrings I received are absolutely stunning. The finish is clean, the details are sharp, and they feel really well-made. I love that they don’t look generic at all — they have a distinct, premium design that stands out. I’ve already worn them multiple times and gotten compliments.",
+            "review_1_author": "Diane C.",
+            "review_2_image": "shopify://shop_images/bahamablueearrings.jpg",
             "review_2_rating": 5,
-            "review_2_text": "I was skeptical going in, but the ring I received is flawless. Smooth edges, perfect fit, and the materials look premium. I own a couple of Patrick Adair rings already and this one feels right in line with them quality-wise. For $95, this is kind of a no-brainer.",
-            "review_2_author": "Michael R.",
-            "review_3_image": "shopify://shop_images/BlackFireOpalGlowstoneRing.jpg",
+            "review_2_text": "I was a little nervous ordering mystery earrings, but these are incredibly comfortable and lightweight. The craftsmanship is obvious as soon as you hold them, and they sit perfectly without irritating my ears. They feel durable but still refined — exactly what I was hoping for.",
+            "review_2_author": "Anna D.",
+            "review_3_image": "shopify://shop_images/EmeraldGlowShot.jpg",
             "review_3_rating": 5,
-            "review_3_text": "I went in expecting something solid, but ended up with a ring that’s listed for way more than I paid. The detail and finish are insane, and it doesn’t feel like they’re hiding the good stuff.",
-            "review_3_author": "Jessica L."
+            "review_3_text": "I loved opening the box and seeing what I got. The earrings feel thoughtfully designed and very well finished, not like random leftovers. You can tell real care went into making them. I’d absolutely order another pair just to see what I get next.",
+            "review_3_author": "Jane F."
           },
           "blocks": {}
         }
@@ -222,6 +222,22 @@
         "ai_gen_block_3639f27_eL8i7L"
       ],
       "settings": {}
+    },
+    "featured_collection_K4jRiT": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Mystery Ring Bundles",
+        "home_featured_products": "mystery-ring-weekend-bundle",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "per_row": 3,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
     },
     "advanced_content_flexible_f4tG3P": {
       "type": "advanced-content-flexible",
@@ -283,22 +299,6 @@
         "is_bottom_line": false,
         "top_logo_size": 16,
         "additional_class": ""
-      }
-    },
-    "featured_collection_K4jRiT": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "Mystery Ring Bundles",
-        "home_featured_products": "mystery-ring-weekend-bundle",
-        "type_enable": false,
-        "subtitle_enable": false,
-        "subtitle_type": "two",
-        "per_row": 3,
-        "rows": 1,
-        "mobile_scrollable": true,
-        "view_all": false,
-        "divider": false
       }
     }
   },
