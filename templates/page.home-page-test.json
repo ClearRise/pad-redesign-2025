@@ -9,205 +9,17 @@
  */
 {
   "sections": {
-    "promotional_section_mGEFMz": {
-      "type": "promotional-section",
+    "main": {
+      "type": "main-page",
       "disabled": true,
       "settings": {
-        "background_color": "#d5c3a2",
-        "text_color": "#000000",
-        "button_color": "#ff481b",
-        "desktop_height": 400,
-        "mobile_height": 250,
-        "focal_point": "center center",
-        "heading": "BLACK FRIDAY  STARTS NOW",
-        "subtext": "Rings that tell your story",
-        "button_text": "UP TO 50% OFF →",
-        "button_link": "shopify://collections/all-products-sunset",
-        "desktop_image": "shopify://shop_images/Desktop_-_BF_Image.png",
-        "mobile_image": "shopify://shop_images/Mobile_-_BF_Image.png"
+        "content_display": true
       }
     },
-    "hero_section_ckiQCF": {
+    "hero_section_BnATLe": {
       "type": "hero-section",
       "blocks": {
-        "image_9nnCw6": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "",
-            "special_title_color": "",
-            "subheading": "",
-            "special_text_color": "",
-            "link": "",
-            "link_text": "SHOP NOW",
-            "link_2": "",
-            "link_text_2": "LEARN MORE",
-            "color_accent": "rgba(0,0,0,0)",
-            "vertical_block_position_on_desktop": "flex-end",
-            "horizontal_block_position_on_desktop": "flex-end",
-            "block_height_on_desktop": 85,
-            "max_width_on_desktop": 51,
-            "image": "shopify://shop_images/3_7.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_1_5.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 54,
-            "base_text_size": 24,
-            "button_text_color": "#000000",
-            "button_background_color": "#ffffff",
-            "button_border_color": "#ffffff"
-          }
-        },
-        "image_kfPpHT": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "Two line\ntitle slide.",
-            "special_title_color": "",
-            "subheading": "<p>And big, beautiful imagery</p>",
-            "special_text_color": "",
-            "link": "",
-            "link_text": "Optional button",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "vertical_block_position_on_desktop": "center",
-            "horizontal_block_position_on_desktop": "flex-start",
-            "block_height_on_desktop": 85,
-            "max_width_on_desktop": 60,
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 80,
-            "base_text_size": 24,
-            "button_text_color": "#ffffff",
-            "button_background_color": "#000000",
-            "button_border_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "image_9nnCw6",
-        "image_kfPpHT"
-      ],
-      "custom_css": [],
-      "name": "Hero Section(New)",
-      "settings": {
-        "use_img_banner": true,
-        "section_height": "natural",
-        "mobile_height": "auto",
-        "parallax": true,
-        "style": "bars",
-        "autoplay": true,
-        "autoplay_speed": 5
-      }
-    },
-    "slideshow_n_afjexp": {
-      "type": "slideshow_n",
-      "blocks": {
-        "image_RQk33G": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "",
-            "special_title_color": "",
-            "subheading": "",
-            "special_text_color": "#ffffff",
-            "link": "",
-            "link_text": "SHOP NOW",
-            "link_2": "",
-            "link_text_2": "LEARN MORE",
-            "color_accent": "#8ead97",
-            "text_position": "vertical-center horizontal-center",
-            "text_align": "center",
-            "mobile_text_position": "mobile-vertical-bottom mobile-horizontal-center",
-            "mobile_text_align": "left",
-            "image": "shopify://shop_images/3_7.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_1_5.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 40,
-            "base_text_size": 14,
-            "text_bottom_padding_desktop": 30,
-            "text_bottom_padding_mobile": 30,
-            "button_color_1": "white",
-            "button_color_2": "white"
-          }
-        }
-      },
-      "block_order": [
-        "image_RQk33G"
-      ],
-      "disabled": true,
-      "name": "Hero Section 2",
-      "settings": {
-        "use_img_banner": true,
-        "section_height": "natural",
-        "mobile_height": "auto",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": false,
-        "autoplay_speed": 5
-      }
-    },
-    "ss_scrolling_logo_cloud_3_9dHCRB": {
-      "type": "ss-scrolling-logo-cloud-3",
-      "blocks": {
-        "slide_w8etJH": {
-          "type": "slide",
-          "settings": {
-            "text": "| Vacations Worth Remembering | Rings Worth Keeping"
-          }
-        }
-      },
-      "block_order": [
-        "slide_w8etJH"
-      ],
-      "custom_css": [],
-      "name": "Scrolling Text",
-      "settings": {
-        "section_height_desktop": "50",
-        "section_height_mobile": "40",
-        "height_desktop": "50",
-        "height_mobile": "40",
-        "position_top_desktop": "",
-        "position_top_mobile": "",
-        "logo_bar_height_desktop": "50",
-        "logo_bar_height_mobile": "40",
-        "logo_bar_top_desktop": "",
-        "logo_bar_top_mobile": "",
-        "heading_custom": false,
-        "heading_font": "assistant_n4",
-        "header_align": "center",
-        "scrolling_velocity": 20,
-        "pause_hover": false,
-        "shadow": false,
-        "slider_gap": 10,
-        "slider_gap_mobile": 10,
-        "slider_direction": "left",
-        "slider_rotate": 0,
-        "slider_rotate_mobile": 0,
-        "icon_width_desktop": 40,
-        "icon_width_mobile": 34,
-        "logo_text_color": "",
-        "logo_text_font_size_desktop": 24,
-        "logo_text_font_size_mobile": 24,
-        "slider_background_color": "#8ead97",
-        "full_width": true,
-        "content_width": 120,
-        "border_thickness": 0
-      }
-    },
-    "slideshow_gQY9qw": {
-      "type": "slideshow",
-      "blocks": {
-        "image_rppjPX": {
+        "image_GJhkcm": {
           "type": "image",
           "settings": {
             "top_subheading": "",
@@ -221,260 +33,25 @@
             "link_2": "",
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
-            "text_position": "vertical-center horizontal-center",
-            "text_align": "left",
-            "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
-            "mobile_text_align": "left",
-            "image": "shopify://shop_images/Artboard_2.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_2.jpg",
+            "vertical_block_position_on_desktop": "flex-end",
+            "horizontal_block_position_on_desktop": "flex-end",
+            "block_height_on_desktop": 94,
+            "max_width_on_desktop": 100,
+            "image": "shopify://shop_images/Artboard_46.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_44.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
-            "title_size": 80,
-            "base_text_size": 24
-          }
-        }
-      },
-      "block_order": [
-        "image_rppjPX"
-      ],
-      "custom_css": [],
-      "settings": {
-        "use_img_banner": true,
-        "section_height": "natural",
-        "mobile_height": "auto",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": true,
-        "autoplay_speed": 7
-      }
-    },
-    "how_it_works_2_XVYfNT": {
-      "type": "how-it-works-2",
-      "blocks": {
-        "step_Hy87Q8": {
-          "type": "step",
-          "settings": {
-            "title": "TRY UP TO 8 ITEMS",
-            "description": "Fill your cart to find something you love."
+            "title_size": 60,
+            "base_text_size": 24,
+            "button_text_color": "#111111",
+            "button_background_color": "#ffffff",
+            "button_border_color": "#000000"
           }
         },
-        "step_AhwDFm": {
-          "type": "step",
-          "settings": {
-            "title": "7-DAY TRIAL",
-            "description": "Try it on in the comfort of your home."
-          }
-        },
-        "step_KdjBb4": {
-          "type": "step",
-          "settings": {
-            "title": "RETURNS ARE EASY",
-            "description": "Only pay for what you keep."
-          }
-        }
-      },
-      "block_order": [
-        "step_Hy87Q8",
-        "step_AhwDFm",
-        "step_KdjBb4"
-      ],
-      "disabled": true,
-      "name": "How It Works 2",
-      "settings": {
-        "full_width": false,
-        "max_width": 1600,
-        "background_color": "",
-        "title": "TRY BEFORE YOU BUY",
-        "title_font_size_desktop": 24,
-        "title_font_size_mobile": 24,
-        "step_title_color": "#000000",
-        "step_title_font_size_desktop": 18,
-        "step_title_font_size_mobile": 18,
-        "step_description_font_size_desktop": 14,
-        "step_description_font_size_mobile": 14,
-        "step_description_color": "#000000"
-      }
-    },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "content_display": true
-      }
-    },
-    "promo_grid_4iW6mW": {
-      "type": "promo-grid",
-      "blocks": {
-        "advanced_BTL7At": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "GLOWSTONE SERIES",
-            "textarea": "<u> SHOP NOW </u>",
-            "cta_text1": "",
-            "cta_link1": "https://patrickadairdesigns.com/collections/the-glowstone-series",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Glowstone_Ring_2-_flipped_f2b5db60-8229-40df-aa6f-a3a8827b2809.png",
-            "video_url": "",
-            "width": "50",
-            "height": 300,
-            "text_size": 105,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_VciUai": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "WEDDING   BANDS",
-            "textarea": "<u> SHOP NOW </u>",
-            "cta_text1": "",
-            "cta_link1": "https://patrickadairdesigns.com/collections/best-selling-wedding-bands-v1",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Sterling_Silver.png",
-            "video_url": "",
-            "width": "50",
-            "height": 300,
-            "text_size": 105,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_AMKHzD": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "METEORITE RINGS",
-            "textarea": "<u> SHOP NOW </u>",
-            "cta_text1": "",
-            "cta_link1": "https://patrickadairdesigns.com/collections/meteorite-rings-1",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/meteorite-ring.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 300,
-            "text_size": 105,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_Ld8MT9": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "2X ENTRIES",
-            "heading": "WOMEN'S BANDS",
-            "textarea": "<u> SHOP NOW </u>",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/womens-wedding-bands",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Lavendar_Opal_Ring.png",
-            "video_url": "",
-            "width": "33",
-            "height": 300,
-            "text_size": 105,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_YdUhC6": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "TRY BEFORE YOU BUY",
-            "textarea": "<u> SHOP NOW </u>",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/try-before-you-buy",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/download.png",
-            "video_url": "",
-            "width": "33",
-            "height": 300,
-            "text_size": 105,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_tWbteU": {
-          "type": "advanced",
-          "disabled": true,
-          "settings": {
-            "subheading": "Up to 50% OffLIMITED TIME ONLY",
-            "heading": "THE FAREWELL COLLECTION",
-            "textarea": "<u> SHOP NOW </u>",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/the-farewell-collection",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Wood-forged-carbon-gold-accent-ring-1_c6b44c77-413e-4c7a-8ffe-4e6a0706202f.png",
-            "video_url": "",
-            "width": "100",
-            "height": 400,
-            "text_size": 105,
-            "text_align": "vertical-center horizontal-left",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        }
-      },
-      "block_order": [
-        "advanced_BTL7At",
-        "advanced_VciUai",
-        "advanced_AMKHzD",
-        "advanced_Ld8MT9",
-        "advanced_YdUhC6",
-        "advanced_tWbteU"
-      ],
-      "custom_css": [
-        ".promo-grid {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
-      ],
-      "settings": {
-        "show_title": false,
-        "title": "",
-        "align_title": "left",
-        "sub_title": "",
-        "align_sub_title": "left",
-        "show_img_title": false,
-        "full_width": false,
-        "gutter_size": 20,
-        "space_above": true,
-        "space_below": false
-      }
-    },
-    "hero_section_w4facH": {
-      "type": "hero-section",
-      "blocks": {
-        "image_AmYcJ7": {
+        "image_j7k7Wg": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "top_subheading_color": "",
@@ -482,56 +59,289 @@
             "special_title_color": "",
             "subheading": "",
             "special_text_color": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
+            "link": "shopify://collections/all-products-new",
+            "link_text": "SHOP NOW",
+            "link_2": "shopify://pages/sweepstakes-landing-page",
+            "link_text_2": "LEARN MORE",
             "color_accent": "rgba(0,0,0,0)",
-            "vertical_block_position_on_desktop": "center",
-            "horizontal_block_position_on_desktop": "flex-start",
+            "vertical_block_position_on_desktop": "flex-end",
+            "horizontal_block_position_on_desktop": "flex-end",
             "block_height_on_desktop": 85,
-            "max_width_on_desktop": 60,
-            "image": "shopify://shop_images/Artboard_12.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_13.jpg",
+            "max_width_on_desktop": 51,
+            "image": "shopify://shop_images/3-2_1.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_1_1_4da32d86-aad9-4ff1-a638-080fe5bad8bb.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
-            "title_size": 60,
+            "title_size": 54,
             "base_text_size": 24,
-            "button_text_color": "#ffffff",
-            "button_background_color": "#000000",
-            "button_border_color": "#000000"
+            "button_text_color": "#000000",
+            "button_background_color": "#ffffff",
+            "button_border_color": "#ffffff"
           }
         }
       },
       "block_order": [
-        "image_AmYcJ7"
+        "image_GJhkcm",
+        "image_j7k7Wg"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "@media (min-width: 769px) {.hero__text-shadow {max-width: 37%; }}"
+      ],
       "name": "Hero Section(New)",
       "settings": {
         "use_img_banner": true,
         "section_height": "natural",
         "mobile_height": "auto",
-        "parallax": false,
+        "parallax": true,
         "style": "bars",
         "autoplay": true,
         "autoplay_speed": 5
       }
     },
-    "advanced_content_flexible_GcWtgn": {
+    "promo_grid_fat_YVRWmp": {
+      "type": "promo-grid-fat",
+      "blocks": {
+        "advanced_ijcrwY": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "UP TO 40% OFF",
+            "heading": "GLOWSTONE RINGS",
+            "textarea": "",
+            "cta_text1": "SHOP NOW",
+            "cta_link1": "shopify://collections/glowstone-2-0",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/IMG_3895_1800x1800_85051cc1-74fe-4254-8a8d-9f65fe84cab2.webp",
+            "video_url": "",
+            "width": "50",
+            "text_size": 80,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_wNry7M": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "BUY ONE GET ONE FREE+ UP TO 50% OFF",
+            "heading": "HOLIDAY FLASH SALE",
+            "textarea": "",
+            "cta_text1": "SHOP NOW",
+            "cta_link1": "shopify://collections/flash-sale",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/pure-lapis-glowstone-ring-1_3ad6f989-5a7c-4eaa-ba89-2a8ceb3c8438.png",
+            "video_url": "",
+            "width": "33",
+            "text_size": 80,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_CTcYLF": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "Up to $500 off + BOGO",
+            "heading": "BLACK FRIDAY EARLY BIRD DEALS",
+            "textarea": "",
+            "cta_text1": "SHOP NOW",
+            "cta_link1": "shopify://collections/black-friday-early-bird-deals",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Wood-forged-carbon-gold-accent-ring-1.png",
+            "video_url": "",
+            "width": "50",
+            "text_size": 80,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_imbHGk": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "UP TO 40% OFF",
+            "heading": "WEDDING BANDS",
+            "textarea": "",
+            "cta_text1": "SHOP NOW",
+            "cta_link1": "shopify://collections/mens-wedding-bands",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/1_1.png",
+            "video_url": "",
+            "width": "50",
+            "text_size": 80,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_FDkhAz": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "UP TO 40% OFF",
+            "heading": "METEORITE RINGS",
+            "textarea": "",
+            "cta_text1": "SHOP NOW",
+            "cta_link1": "shopify://collections/meteorite-rings",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/meteorite-gold.jpg",
+            "video_url": "",
+            "width": "50",
+            "text_size": 80,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_JBjNN3": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "UP TO 40% OFF",
+            "heading": "WOMEN'S BANDS",
+            "textarea": "",
+            "cta_text1": "SHOP NOW",
+            "cta_link1": "shopify://collections/womens-wedding-bands",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/lavendar-stackable-1.png",
+            "video_url": "",
+            "width": "50",
+            "text_size": 80,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 14,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_ge8hwX": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "LOW COMMITMENT, FLEXIBLE TERMS",
+            "heading": "FINANCE FOR 0% INTEREST",
+            "textarea": "",
+            "cta_text1": "SHOP NOW",
+            "cta_link1": "https://patrickadairdesigns.com/pages/interest-free-financing",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/StarDustRing.png",
+            "video_url": "",
+            "width": "33",
+            "text_size": 80,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_PcnABe": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "",
+            "heading": "ALL EARRINGS",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://patrickadairdesigns.com/collections/earrings",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/earrings.png",
+            "video_url": "",
+            "width": "50",
+            "text_size": 105,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_BPy9Q7": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "Up to 50% OffLIMITED TIME ONLY",
+            "heading": "FAREWELL COLLECTION",
+            "textarea": "",
+            "cta_text1": "SHOP NOW",
+            "cta_link1": "shopify://collections/the-farewell-collection",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/hellfire-halo-glowstone-ring-5.png",
+            "video_url": "",
+            "width": "33",
+            "text_size": 80,
+            "text_align": "vertical-center horizontal-left",
+            "focal_point": "center",
+            "dark_overlay": 10,
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "advanced_ijcrwY",
+        "advanced_wNry7M",
+        "advanced_CTcYLF",
+        "advanced_imbHGk",
+        "advanced_FDkhAz",
+        "advanced_JBjNN3",
+        "advanced_ge8hwX",
+        "advanced_PcnABe",
+        "advanced_BPy9Q7"
+      ],
+      "custom_css": [
+        ".promo-grid {margin-top: clamp( 0px, 3vw, 30px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
+      ],
+      "settings": {
+        "full_width": true,
+        "gutter_size": 10,
+        "space_above": false,
+        "space_below": false,
+        "block_height_desktop": 24,
+        "block_height_mobile": 70
+      }
+    },
+    "advanced_content_flexible_4wHbMh": {
       "type": "advanced-content-flexible",
       "blocks": {
-        "liquid_wDnjHj": {
+        "liquid_bgLeQ6": {
           "type": "liquid",
           "settings": {
             "is_collection_banner": false,
             "liquid_name": "",
             "code": "<h2>Unique and Storied Like the Men We Make them For.</h2>",
             "width": "50%",
-            "alignment": "center",
+            "alignment": "flex-start",
             "text_color": "#000000",
-            "simple_background_color": "#ffffff",
+            "simple_background_color": "#f5f5f5",
             "variant_padding": true,
             "padding_left": 0,
             "padding_top": 0,
@@ -539,7 +349,7 @@
             "padding_right": 30
           }
         },
-        "liquid_9jrGHR": {
+        "liquid_fcE3iX": {
           "type": "liquid",
           "settings": {
             "is_collection_banner": false,
@@ -548,7 +358,7 @@
             "width": "50%",
             "alignment": "center",
             "text_color": "#000000",
-            "simple_background_color": "#ffffff",
+            "simple_background_color": "#f5f5f5",
             "variant_padding": true,
             "padding_left": 0,
             "padding_top": 0,
@@ -556,13 +366,13 @@
             "padding_right": 30
           }
         },
-        "child_block_button_9UEAUR": {
+        "child_block_button_Y3iTVJ": {
           "type": "child_block_button",
           "settings": {
             "parent_name": "button-container",
             "position": "bottom",
             "button_label": "discover yours",
-            "link": "shopify://collections/all",
+            "link": "shopify://collections/all-products-new",
             "button_background_color": "#ffffff",
             "button_border_color": "#138e7e",
             "button_text_color": "#000000",
@@ -571,17 +381,16 @@
         }
       },
       "block_order": [
-        "liquid_wDnjHj",
-        "liquid_9jrGHR",
-        "child_block_button_9UEAUR"
+        "liquid_bgLeQ6",
+        "liquid_fcE3iX",
+        "child_block_button_Y3iTVJ"
       ],
-      "name": "Advanced content - 2",
       "settings": {
         "full_width": false,
         "show_navigation": false,
         "image_first": false,
         "space_around": true,
-        "background_color": "#ffffff",
+        "background_color": "#f5f5f5",
         "small_image": false,
         "is_top_line": false,
         "is_bottom_line": true,
@@ -589,11 +398,21 @@
         "additional_class": ""
       }
     },
-    "featured_collection_carousel_F9yCMj": {
+    "featured_collection_carousel_gyWyFf": {
       "type": "featured-collection-carousel",
-      "name": "Featured collection(C)",
+      "blocks": {
+        "collection_aNxdUY": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_aNxdUY"
+      ],
       "settings": {
-        "title": "<b>Best Sellers</b>",
+        "title": "Best Sellers",
         "show_sub_title": false,
         "sub_title": "",
         "is_collection_list": false,
@@ -609,14 +428,33 @@
         "mobile_scrollable": true,
         "view_all": true,
         "divider": false,
-        "saved_amount_option": "display_entries",
-        "entries_multiplier": 1
+        "saved_amount_option": "basic_logic",
+        "entries_multiplier": 1,
+        "show_tryon_badge": false,
+        "tryon_badge_text": "Try Free"
       }
     },
-    "how_its_made_rCbMTR": {
+    "trust_icons_n_Wte8Gg": {
+      "type": "trust-icons_n",
+      "custom_css": [
+        "{padding-top: 0px;}"
+      ],
+      "settings": {
+        "section_background": "",
+        "top_padding": 30,
+        "bottom_padding": 15,
+        "show_bottom_break_line": false,
+        "top_logo_size": 16,
+        "trust_icon_1_label": "",
+        "trust_icon_2_label": "",
+        "trust_icon_3_label": "",
+        "trust_icon_4_label": "One-of-a-kind Designs"
+      }
+    },
+    "how_its_made_mtwwew": {
       "type": "how-its-made",
       "blocks": {
-        "image_VKYcbp": {
+        "image_zRYiHD": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/ring-image.jpg",
@@ -625,7 +463,7 @@
             "alignment": "center"
           }
         },
-        "text_box_XFfanx": {
+        "text_box_YRe7MV": {
           "type": "text_box",
           "settings": {
             "header": "How It's Made",
@@ -634,31 +472,31 @@
             "alignment": "center"
           }
         },
-        "option_ELqEir": {
+        "option_QDAiQj": {
           "type": "option",
           "settings": {
             "label": "One of a Kind"
           }
         },
-        "option_x9r6xA": {
+        "option_tRrLMy": {
           "type": "option",
           "settings": {
             "label": "Hand Crafted by Skilled Artisans"
           }
         },
-        "option_qyy6Bq": {
+        "option_yCYMh7": {
           "type": "option",
           "settings": {
             "label": "100M+ Viewers"
           }
         },
-        "option_4jzn9j": {
+        "option_g3VrAC": {
           "type": "option",
           "settings": {
             "label": "Unique Materials"
           }
         },
-        "option_eDLeYF": {
+        "option_bVPntC": {
           "type": "option",
           "settings": {
             "label": "A Story in every Ring"
@@ -666,16 +504,15 @@
         }
       },
       "block_order": [
-        "image_VKYcbp",
-        "text_box_XFfanx",
-        "option_ELqEir",
-        "option_x9r6xA",
-        "option_qyy6Bq",
-        "option_4jzn9j",
-        "option_eDLeYF"
+        "image_zRYiHD",
+        "text_box_YRe7MV",
+        "option_QDAiQj",
+        "option_tRrLMy",
+        "option_yCYMh7",
+        "option_g3VrAC",
+        "option_bVPntC"
       ],
-      "disabled": true,
-      "name": "How its Made",
+      "custom_css": [],
       "settings": {
         "full_width": true,
         "space_around": true,
@@ -683,182 +520,67 @@
         "mobile_background_color": "#ede4da"
       }
     },
-    "promo_grid_fNrj9X": {
-      "type": "promo-grid",
-      "blocks": {
-        "banner_bixk4p": {
-          "type": "banner",
-          "settings": {
-            "heading": "<b>How It Works</b>",
-            "text": "",
-            "link": "",
-            "label": "",
-            "color_tint": "#000000",
-            "color_tint_opacity": 8,
-            "framed": false
-          }
-        },
-        "image_Q7DeqF": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_4.jpg",
-            "link": "https://patrickadairdesigns.com/pages/sweepstakes-rules",
-            "image_title": "image",
-            "width": "50"
-          }
-        },
-        "image_ihL8gw": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_5.jpg",
-            "link": "shopify://collections/all-products-new",
-            "image_title": "image",
-            "width": "50"
-          }
-        },
-        "image_CBMAjw": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_6.jpg",
-            "link": "",
-            "image_title": "image",
-            "width": "50"
-          }
-        },
-        "image_YNhdpU": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3-3.jpg",
-            "link": "",
-            "image_title": "image",
-            "width": "50"
-          }
-        },
-        "image_GykgJh": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Artboard_7.jpg",
-            "link": "",
-            "image_title": "image",
-            "width": "33"
-          }
-        }
-      },
-      "block_order": [
-        "banner_bixk4p",
-        "image_Q7DeqF",
-        "image_ihL8gw",
-        "image_CBMAjw",
-        "image_YNhdpU",
-        "image_GykgJh"
-      ],
-      "custom_css": [
-        ".flex-grid__item--banner_bixk4p .promo-grid__container--tint:before {background: white !important;}",
-        ".type-banner__content {justify-content: flex-start !important;}",
-        ".type-banner__content p {text-align: left !important;}",
-        ".type-banner__text {padding-left: 0 !important;}",
-        ".type-banner p {margin-left: 0 !important;}"
-      ],
-      "name": "Promotional grid",
-      "settings": {
-        "show_title": false,
-        "title": "",
-        "align_title": "left",
-        "sub_title": "",
-        "align_sub_title": "left",
-        "show_img_title": false,
-        "full_width": true,
-        "gutter_size": 0,
-        "space_above": false,
-        "space_below": false
-      }
-    },
-    "promo_grid_qK9aWM": {
-      "type": "promo-grid",
-      "blocks": {
-        "image_zc9WXD": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/aquaglow.png",
-            "link": "shopify://collections/glowstone-stackable-rings",
-            "image_title": "Stackable Glowstone Rings",
-            "width": "33"
-          }
-        },
-        "image_9qn7NF": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Meteorite_Necklace_Photo_1.jpg",
-            "link": "shopify://collections/accessories",
-            "image_title": "Accessories",
-            "width": "33"
-          }
-        },
-        "image_xUXJJP": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Mystery_Ring_Gif_bf14da19-95c3-4062-bee1-3da32c79205e.gif",
-            "link": "shopify://collections/mystery-rings",
-            "image_title": "Mystery Rings",
-            "width": "33"
-          }
-        }
-      },
-      "block_order": [
-        "image_zc9WXD",
-        "image_9qn7NF",
-        "image_xUXJJP"
-      ],
-      "name": "Promotional grid",
-      "settings": {
-        "show_title": true,
-        "title": "<b>Earn 2x Entries</b>",
-        "align_title": "left",
-        "sub_title": "Increase Your Chances by Earning 2x Entries on These Collections",
-        "align_sub_title": "left",
-        "show_img_title": true,
-        "full_width": false,
-        "gutter_size": 20,
-        "space_above": true,
-        "space_below": true
-      }
-    },
-    "featured_collection_carousel_Wjkr9V": {
+    "featured_collection_carousel_hQ7ayb": {
       "type": "featured-collection-carousel",
       "blocks": {
-        "collection_4ppRWC": {
+        "collection_NMfjUJ": {
           "type": "collection",
           "settings": {
-            "collection": "glowstone-stackable-rings"
+            "collection": "the-glowstone-series"
           }
         },
-        "collection_TaFDEK": {
+        "collection_QyLfet": {
           "type": "collection",
           "settings": {
-            "collection": "accessories"
+            "collection": "opal-rings"
           }
         },
-        "collection_xAmbXb": {
+        "collection_qRi6BQ": {
           "type": "collection",
           "settings": {
-            "collection": "mystery-rings"
+            "collection": "gold-rings"
+          }
+        },
+        "collection_8NdC3j": {
+          "type": "collection",
+          "settings": {
+            "collection": "meteorite-rings"
+          }
+        },
+        "collection_YMTJ7f": {
+          "type": "collection",
+          "settings": {
+            "collection": "tungsten-rings"
+          }
+        },
+        "collection_TEqxJX": {
+          "type": "collection",
+          "settings": {
+            "collection": "mens-wood-wedding-bands"
+          }
+        },
+        "collection_d67cXM": {
+          "type": "collection",
+          "settings": {
+            "collection": "ceramic-rings"
           }
         }
       },
       "block_order": [
-        "collection_4ppRWC",
-        "collection_TaFDEK",
-        "collection_xAmbXb"
+        "collection_NMfjUJ",
+        "collection_QyLfet",
+        "collection_qRi6BQ",
+        "collection_8NdC3j",
+        "collection_YMTJ7f",
+        "collection_TEqxJX",
+        "collection_d67cXM"
       ],
-      "disabled": true,
-      "name": "Featured collection(C)",
       "settings": {
-        "title": "Earn 2x Entries",
-        "show_sub_title": true,
-        "sub_title": "Increase Your Chances by Earning 2x Entries on These Collections",
+        "title": "Shop By Material",
+        "show_sub_title": false,
+        "sub_title": "",
         "is_collection_list": true,
-        "home_featured_products": "glowstone-stackable-rings",
+        "home_featured_products": "best-sellers",
         "slides_per_view_desktop": "4.2",
         "slides_per_view_tablet": "3.2",
         "slides_per_view_mobile": "1.3",
@@ -868,16 +590,18 @@
         "per_row": 5,
         "rows": 2,
         "mobile_scrollable": true,
-        "view_all": false,
+        "view_all": true,
         "divider": false,
         "saved_amount_option": "basic_logic",
-        "entries_multiplier": 1
+        "entries_multiplier": 1,
+        "show_tryon_badge": false,
+        "tryon_badge_text": "Try Free"
       }
     },
-    "advanced_content_flexible_qXngJC": {
+    "advanced_content_flexible_NhgMyX": {
       "type": "advanced-content-flexible",
       "blocks": {
-        "image_yJkMeT": {
+        "image_6PfbUx": {
           "type": "image",
           "settings": {
             "iamge_name": "",
@@ -887,7 +611,7 @@
             "alignment": "center"
           }
         },
-        "liquid_69DFCQ": {
+        "liquid_jyT6FP": {
           "type": "liquid",
           "settings": {
             "is_collection_banner": false,
@@ -895,40 +619,38 @@
             "code": "<h2>Get a Custom Ring</h2><p>We pride ourselves on our ability to make intricate, handmade custom rings made from exotic materials.</p>",
             "width": "60%",
             "alignment": "center",
-            "text_color": "#000000",
-            "simple_background_color": "#ede4da",
-            "variant_padding": true,
+            "text_color": "#111111",
+            "simple_background_color": "#ffffff",
+            "variant_padding": false,
             "padding_left": 150,
             "padding_top": 0,
             "padding_bottom": 0,
             "padding_right": 30
           }
         },
-        "child_block_button_FMDwBy": {
+        "child_block_button_U9CChN": {
           "type": "child_block_button",
           "settings": {
             "parent_name": "btn-ctn",
             "position": "bottom",
-            "button_label": "SHOP CUSTOM RINGS",
+            "button_label": "shop custom rings",
             "link": "shopify://collections/custom-rings",
-            "button_background_color": "#ffffff",
-            "button_border_color": "#8ead97",
-            "button_text_color": "#000000",
+            "button_background_color": "#000000",
+            "button_border_color": "#138e7e",
+            "button_text_color": "#ffffff",
             "inclue_right_arrow": false
           }
         }
       },
       "block_order": [
-        "image_yJkMeT",
-        "liquid_69DFCQ",
-        "child_block_button_FMDwBy"
+        "image_6PfbUx",
+        "liquid_jyT6FP",
+        "child_block_button_U9CChN"
       ],
-      "disabled": true,
       "custom_css": [
         ".liquid-container-ss {max-width: 420px;}",
         ".liquid-container-ss h2 {font-size: 40px;}"
       ],
-      "name": "Advanced content - 2",
       "settings": {
         "full_width": false,
         "show_navigation": false,
@@ -936,217 +658,16 @@
         "space_around": true,
         "background_color": "#ffffff",
         "small_image": true,
-        "is_top_line": false,
-        "is_bottom_line": false,
+        "is_top_line": true,
+        "is_bottom_line": true,
         "top_logo_size": 16,
         "additional_class": ""
       }
     },
-    "hero_section_P7XPJ4": {
-      "type": "hero-section",
-      "blocks": {
-        "image_whyCbK": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "",
-            "special_title_color": "",
-            "subheading": "",
-            "special_text_color": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "vertical_block_position_on_desktop": "center",
-            "horizontal_block_position_on_desktop": "flex-start",
-            "block_height_on_desktop": 85,
-            "max_width_on_desktop": 60,
-            "image": "shopify://shop_images/Artboard_8.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_10.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 60,
-            "base_text_size": 24,
-            "button_text_color": "#ffffff",
-            "button_background_color": "#000000",
-            "button_border_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "image_whyCbK"
-      ],
-      "custom_css": [
-        ".hero-section-template--15612662415442__hero_section_P7XPJ4 {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
-      ],
-      "name": "Hero Section(New)",
-      "settings": {
-        "use_img_banner": true,
-        "section_height": "natural",
-        "mobile_height": "auto",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": true,
-        "autoplay_speed": 5
-      }
-    },
-    "hero_section_qmMagR": {
-      "type": "hero-section",
-      "blocks": {
-        "image_LW6aCw": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "",
-            "special_title_color": "",
-            "subheading": "",
-            "special_text_color": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "vertical_block_position_on_desktop": "center",
-            "horizontal_block_position_on_desktop": "flex-start",
-            "block_height_on_desktop": 85,
-            "max_width_on_desktop": 60,
-            "image": "shopify://shop_images/Artboard_9.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_11.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 60,
-            "base_text_size": 24,
-            "button_text_color": "#ffffff",
-            "button_background_color": "#000000",
-            "button_border_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "image_LW6aCw"
-      ],
-      "custom_css": [
-        ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
-      ],
-      "name": "Hero Section(New)",
-      "settings": {
-        "use_img_banner": true,
-        "section_height": "natural",
-        "mobile_height": "auto",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": true,
-        "autoplay_speed": 5
-      }
-    },
-    "hero_section_aPC4Ud": {
-      "type": "hero-section",
-      "blocks": {
-        "image_jXQdzj": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "",
-            "special_title_color": "",
-            "subheading": "",
-            "special_text_color": "",
-            "link": "shopify://collections/all-products-new",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "vertical_block_position_on_desktop": "center",
-            "horizontal_block_position_on_desktop": "flex-start",
-            "block_height_on_desktop": 85,
-            "max_width_on_desktop": 60,
-            "image": "shopify://shop_images/3_copy.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_1_copy.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 60,
-            "base_text_size": 24,
-            "button_text_color": "#ffffff",
-            "button_background_color": "#000000",
-            "button_border_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "image_jXQdzj"
-      ],
-      "custom_css": [
-        ".hero {margin-bottom: clamp( 0px, 3vw, 10px ); /* Scales with viewport: ~0 on small screens up to 30px on desktop */}"
-      ],
-      "name": "Hero Section(New)",
-      "settings": {
-        "use_img_banner": true,
-        "section_height": "natural",
-        "mobile_height": "auto",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": true,
-        "autoplay_speed": 5
-      }
-    },
-    "hero_section_AJaxhE": {
-      "type": "hero-section",
-      "blocks": {
-        "image_Jg48VC": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "top_subheading_color": "",
-            "title": "",
-            "special_title_color": "",
-            "subheading": "",
-            "special_text_color": "",
-            "link": "https://patrickadairdesigns.com/pages/sweepstakes-rules",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "vertical_block_position_on_desktop": "center",
-            "horizontal_block_position_on_desktop": "flex-start",
-            "block_height_on_desktop": 85,
-            "max_width_on_desktop": 60,
-            "image": "shopify://shop_images/Artboard_14.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_15.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center",
-            "base_text_color": "#ffffff",
-            "title_size": 60,
-            "base_text_size": 24,
-            "button_text_color": "#ffffff",
-            "button_background_color": "#000000",
-            "button_border_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "image_Jg48VC"
-      ],
-      "name": "Hero Section(New)",
-      "settings": {
-        "use_img_banner": true,
-        "section_height": "natural",
-        "mobile_height": "auto",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": true,
-        "autoplay_speed": 5
-      }
-    },
-    "custom_review_section_iKtJzk": {
+    "custom_review_section_GKARfR": {
       "type": "custom-review-section",
       "blocks": {
-        "review_3HqkCx": {
+        "review_WNUaAm": {
           "type": "review",
           "settings": {
             "title": "Amazingly Light",
@@ -1154,7 +675,7 @@
             "text": "I absolutely love my new ring. I had lost my wedding ring in a lake on a recent trip and had always followed PAD on Youtube and thought their rings were beautiful. They look even better than the photos in person!"
           }
         },
-        "review_49faXM": {
+        "review_WTWG3P": {
           "type": "review",
           "settings": {
             "title": "Wedding Band",
@@ -1162,7 +683,7 @@
             "text": "I customized this glow stone ring for my fiance, and it came out better than I could have imagined. The stone inlay is beautiful and the the band is super shiny and polished. 10/10 would recommend!"
           }
         },
-        "review_fz8dk7": {
+        "review_DFFwP6": {
           "type": "review",
           "settings": {
             "title": "Picture does not do it justice",
@@ -1172,9 +693,9 @@
         }
       },
       "block_order": [
-        "review_3HqkCx",
-        "review_49faXM",
-        "review_fz8dk7"
+        "review_WNUaAm",
+        "review_WTWG3P",
+        "review_DFFwP6"
       ],
       "name": "Custom Review Section",
       "settings": {
@@ -1194,167 +715,70 @@
         "padding_bottom_mobile": 20
       }
     },
-    "featured_collections_werMCq": {
-      "type": "featured-collections",
+    "logo_list_new_rGUWfp": {
+      "type": "logo-list-new",
       "blocks": {
-        "collection_69TqBL": {
-          "type": "collection",
+        "logo_image_fRBCGP": {
+          "type": "logo_image",
           "settings": {
-            "collection": "the-glowstone-series",
-            "title": "Glowstone",
-            "focal_point": "center center"
+            "image": "shopify://shop_images/logo1.png",
+            "link": ""
           }
         },
-        "collection_YVmkcg": {
-          "type": "collection",
+        "logo_image_Nh9cxQ": {
+          "type": "logo_image",
           "settings": {
-            "collection": "meteorite-rings",
-            "title": "Meteorite",
-            "focal_point": "center center"
+            "image": "shopify://shop_images/logo2.png",
+            "link": ""
           }
         },
-        "collection_kmMqk9": {
-          "type": "collection",
+        "logo_image_HwgrAc": {
+          "type": "logo_image",
           "settings": {
-            "collection": "gold-rings",
-            "title": "Gold",
-            "focal_point": "center center"
+            "image": "shopify://shop_images/logo3.png",
+            "link": ""
           }
         },
-        "collection_tigypz": {
-          "type": "collection",
+        "logo_image_cHebid": {
+          "type": "logo_image",
           "settings": {
-            "collection": "ceramic-rings",
-            "title": "Ceramic",
-            "focal_point": "center center"
+            "image": "shopify://shop_images/logo4_914b6d79-6525-4094-8572-d1aa82d7cb6b.png",
+            "link": ""
           }
         },
-        "collection_FaAeJw": {
-          "type": "collection",
+        "logo_image_44AFCE": {
+          "type": "logo_image",
           "settings": {
-            "collection": "opal-rings",
-            "title": "Opal",
-            "focal_point": "center center"
-          }
-        },
-        "collection_KLeFx7": {
-          "type": "collection",
-          "settings": {
-            "collection": "tungsten-rings",
-            "title": "Tungsten",
-            "focal_point": "center center"
-          }
-        },
-        "collection_PEYVaC": {
-          "type": "collection",
-          "settings": {
-            "collection": "titanium-rings",
-            "title": "Titanium",
-            "focal_point": "center center"
-          }
-        },
-        "collection_inHBRn": {
-          "type": "collection",
-          "settings": {
-            "collection": "mens-wood-wedding-bands",
-            "title": "Wood",
-            "focal_point": "center center"
+            "image": "shopify://shop_images/logo5.png",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "collection_69TqBL",
-        "collection_YVmkcg",
-        "collection_kmMqk9",
-        "collection_tigypz",
-        "collection_FaAeJw",
-        "collection_KLeFx7",
-        "collection_PEYVaC",
-        "collection_inHBRn"
+        "logo_image_fRBCGP",
+        "logo_image_Nh9cxQ",
+        "logo_image_HwgrAc",
+        "logo_image_cHebid",
+        "logo_image_44AFCE"
       ],
-      "disabled": true,
       "settings": {
-        "title": "Shop By Material",
-        "divider": false,
-        "per_row": 4,
-        "enable_gutter": false
-      }
-    },
-    "replo_trust_icons_white_backg_bLLqh7": {
-      "type": "replo-trust-icons-white-backg",
-      "disabled": true,
-      "settings": {}
-    },
-    "featured_collection_RTcdPC": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Best Sellers",
-        "home_featured_products": "best-sellers",
-        "type_enable": false,
-        "subtitle_enable": true,
-        "subtitle_type": "two",
-        "per_row": 5,
-        "rows": 2,
-        "mobile_scrollable": false,
-        "view_all": true,
-        "divider": false
-      }
-    },
-    "rich_text_JaHgJW": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_mVKhB4": {
-          "type": "heading",
-          "settings": {
-            "title": "Customer Testimonials"
-          }
-        },
-        "text_wNKzG8": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>“I love this ring. Every step of the process from sizing to delivery was amazing.”</p><p>- Brett P.</p><p>“I couldn’t have asked for a better ring. PAD did an amazing job and was very communicative through the whole process and was done in a timely manner!”</p><p>- Amber A</p><p>“Feels and looks like anything you’d buy from the highest-end jewelers stores without the high-end prices.”</p><p>- Ben</p><p></p><p><a href=\"https://patrickadairdesigns.com/pages/reviews\" title=\"https://patrickadairdesigns.com/pages/reviews\"><span style=\"text-decoration:underline\">See more reviews</span></a></p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_mVKhB4",
-        "text_wNKzG8"
-      ],
-      "disabled": true,
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
+        "title": "As seen in",
+        "logo_opacity": 100,
         "divider": false
       }
     }
   },
   "order": [
-    "promotional_section_mGEFMz",
-    "hero_section_ckiQCF",
-    "slideshow_n_afjexp",
-    "ss_scrolling_logo_cloud_3_9dHCRB",
-    "slideshow_gQY9qw",
-    "how_it_works_2_XVYfNT",
     "main",
-    "promo_grid_4iW6mW",
-    "hero_section_w4facH",
-    "advanced_content_flexible_GcWtgn",
-    "featured_collection_carousel_F9yCMj",
-    "how_its_made_rCbMTR",
-    "promo_grid_fNrj9X",
-    "promo_grid_qK9aWM",
-    "featured_collection_carousel_Wjkr9V",
-    "advanced_content_flexible_qXngJC",
-    "hero_section_P7XPJ4",
-    "hero_section_qmMagR",
-    "hero_section_aPC4Ud",
-    "hero_section_AJaxhE",
-    "custom_review_section_iKtJzk",
-    "featured_collections_werMCq",
-    "replo_trust_icons_white_backg_bLLqh7",
-    "featured_collection_RTcdPC",
-    "rich_text_JaHgJW"
+    "hero_section_BnATLe",
+    "promo_grid_fat_YVRWmp",
+    "advanced_content_flexible_4wHbMh",
+    "featured_collection_carousel_gyWyFf",
+    "trust_icons_n_Wte8Gg",
+    "how_its_made_mtwwew",
+    "featured_collection_carousel_hQ7ayb",
+    "advanced_content_flexible_NhgMyX",
+    "custom_review_section_GKARfR",
+    "logo_list_new_rGUWfp"
   ]
 }
