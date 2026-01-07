@@ -375,7 +375,7 @@
             "cta_link2": "",
             "image": "shopify://shop_images/meteorite-gold.jpg",
             "video_url": "",
-            "width": "33",
+            "width": "50",
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -397,7 +397,7 @@
             "cta_link2": "",
             "image": "shopify://shop_images/lavendar-stackable-1.png",
             "video_url": "",
-            "width": "33",
+            "width": "50",
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
@@ -409,6 +409,7 @@
         },
         "8f48b383-f1c5-4d34-a6cd-eab1f6f524b0": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "LOW COMMITMENT, FLEXIBLE TERMS",
             "heading": "FINANCE FOR 0% INTEREST",
