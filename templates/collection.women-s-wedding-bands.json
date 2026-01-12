@@ -9,10 +9,10 @@
  */
 {
   "sections": {
-    "slideshow_n_AM7zUf": {
+    "slideshow_n_yxQpHE": {
       "type": "slideshow_n",
       "blocks": {
-        "image_RnJtzb": {
+        "image_xT9hg4": {
           "type": "image",
           "settings": {
             "top_subheading": "",
@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/Artboard_47.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_45.jpg",
+            "image": "shopify://shop_images/Artboard_39.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_42.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -45,7 +45,7 @@
         }
       },
       "block_order": [
-        "image_RnJtzb"
+        "image_xT9hg4"
       ],
       "settings": {
         "use_img_banner": true,
@@ -106,7 +106,7 @@
         "type_enable": false,
         "subtitle_enable": false,
         "subtitle_type": "two",
-        "custom_badge": "",
+        "custom_badge": "BUY ONE GET ONE FREE",
         "saved_amount_option": "basic_logic",
         "entries_multiplier": 1,
         "load_more": false,
@@ -130,80 +130,12 @@
         "layout": "right",
         "divider": false
       }
-    },
-    "promo_grid_mknpQG": {
-      "type": "promo-grid",
-      "blocks": {
-        "advanced_TiMXR7": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "Shop Men's Bands",
-            "cta_link1": "shopify://collections/mens-wedding-bands",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Frame_2065.png",
-            "video_url": "",
-            "width": "50",
-            "height": 500,
-            "text_size": 100,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "#ffffff",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced_PkVnc4": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "Shop Matching Bands",
-            "cta_link1": "shopify://collections/wedding-ring-sets",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Frame_2055.png",
-            "video_url": "",
-            "width": "50",
-            "height": 500,
-            "text_size": 100,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "dark_overlay": 10,
-            "color_accent": "#ffffff",
-            "boxed": false,
-            "framed": false
-          }
-        }
-      },
-      "block_order": [
-        "advanced_TiMXR7",
-        "advanced_PkVnc4"
-      ],
-      "settings": {
-        "show_title": false,
-        "title": "",
-        "align_title": "left",
-        "sub_title": "",
-        "align_sub_title": "left",
-        "show_img_title": false,
-        "full_width": false,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": true
-      }
     }
   },
   "order": [
-    "slideshow_n_AM7zUf",
+    "slideshow_n_yxQpHE",
     "collection-header",
     "main-collection",
-    "text_and_image_NJ76bR",
-    "promo_grid_mknpQG"
+    "text_and_image_NJ76bR"
   ]
 }
