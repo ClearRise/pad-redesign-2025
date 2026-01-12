@@ -179,7 +179,7 @@
             "type": "timer_banner",
             "settings": {
               "enable_timer_banner": true,
-              "banner_text": "VALENTINE'S DAY SALE - BUY 1, GET 1 FREE",
+              "banner_text": "Valentine's Day Sale: Buy 1, Get 1 Free!",
               "banner_link": "shopify://collections/all-products-new",
               "banner_link_text": "Shop now",
               "background_color": "#8ead97",
