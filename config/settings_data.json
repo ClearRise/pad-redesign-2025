@@ -180,11 +180,11 @@
             "settings": {
               "enable_timer_banner": true,
               "banner_text": "VALENTINE'S DAY SALE",
-              "banner_link": "shopify://collections/flash-sale",
+              "banner_link": "shopify://collections/all-products-new",
               "banner_link_text": "Shop now",
               "background_color": "#8ead97",
               "text_color": "#111111",
-              "enable_countdown": true,
+              "enable_countdown": false,
               "countdown_end_date": "2026-02-14 23:59:59",
               "hide_when_expired": false
             }
