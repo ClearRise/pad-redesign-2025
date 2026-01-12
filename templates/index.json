@@ -183,7 +183,7 @@
             "button_primary_hover_color": "#ffffff",
             "show_secondary_button": true,
             "button_secondary_label": "Shop Women's",
-            "button_secondary_link": "",
+            "button_secondary_link": "shopify://collections/womens-gift-guide",
             "button_secondary_bg": "#ede4da",
             "button_secondary_color": "#111111",
             "button_secondary_hover_bg": "#f5f5f5",
