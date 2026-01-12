@@ -222,7 +222,6 @@
         "ai_gen_block_9062c39_MVt3ij",
         "ai_gen_block_af7acc2_3P63BC"
       ],
-      "disabled": true,
       "settings": {}
     },
     "trust_icons_n_6i9LCb": {
@@ -310,6 +309,7 @@
         "image_haGxFE",
         "image_TdFgGQ"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (min-width: 769px) {.hero__text-shadow {max-width: 37%; }}"
       ],
