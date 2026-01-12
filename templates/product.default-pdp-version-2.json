@@ -19,7 +19,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "enable_badge": false,
+            "enable_badge": true,
             "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
@@ -112,6 +112,7 @@
         },
         "6992c020-3994-4f22-9eb2-ca8e26cbda06": {
           "type": "free_gifts",
+          "disabled": true,
           "settings": {
             "gift_box_title": "",
             "gift_included": "",
@@ -469,8 +470,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "NEW YEARS SALE",
-            "textarea": "Save up to 40% off and get a free Mystery Gift on orders $195+",
+            "heading": "VALENTINE'S DAY SALE",
+            "textarea": "BUY ONE GET ONE FREE",
             "cta_text1": "",
             "cta_link1": "",
             "cta_text2": "",

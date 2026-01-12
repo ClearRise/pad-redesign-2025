@@ -262,8 +262,8 @@
             "horizontal_block_position_on_desktop": "flex-end",
             "block_height_on_desktop": 94,
             "max_width_on_desktop": 100,
-            "image": "shopify://shop_images/Artboard_46.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_44.jpg",
+            "image": "shopify://shop_images/Artboard_34_7a1e7698-d14d-4ef7-b882-7d31989c9bc1.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_34_7a1e7698-d14d-4ef7-b882-7d31989c9bc1.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -378,7 +378,7 @@
         "2f6050a5-96b7-4f7d-b405-7b5952c82699": {
           "type": "advanced",
           "settings": {
-            "subheading": "UP TO 40% OFF",
+            "subheading": "BUY ONE GET ONE FREE",
             "heading": "GLOWSTONE RINGS",
             "textarea": "",
             "cta_text1": "SHOP NOW",
@@ -446,7 +446,7 @@
         "85a12c0c-6ee7-4aba-a660-0e12f6bdc907": {
           "type": "advanced",
           "settings": {
-            "subheading": "UP TO 40% OFF",
+            "subheading": "BUY ONE GET ONE FREE",
             "heading": "WEDDING BANDS",
             "textarea": "",
             "cta_text1": "SHOP NOW",
@@ -468,7 +468,7 @@
         "8fd2c38f-76d2-4ebe-87c5-e072122f3d02": {
           "type": "advanced",
           "settings": {
-            "subheading": "UP TO 40% OFF",
+            "subheading": "BUY ONE GET ONE FREE",
             "heading": "METEORITE RINGS",
             "textarea": "",
             "cta_text1": "SHOP NOW",
@@ -490,7 +490,7 @@
         "advanced_gaqMVW": {
           "type": "advanced",
           "settings": {
-            "subheading": "UP TO 40% OFF",
+            "subheading": "BUY ONE GET ONE FREE",
             "heading": "WOMEN'S BANDS",
             "textarea": "",
             "cta_text1": "SHOP NOW",

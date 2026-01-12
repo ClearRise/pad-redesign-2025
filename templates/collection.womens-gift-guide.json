@@ -9,10 +9,10 @@
  */
 {
   "sections": {
-    "slideshow_n_MdJBib": {
+    "slideshow_n_HCVANp": {
       "type": "slideshow_n",
       "blocks": {
-        "image_XQYeQG": {
+        "image_rEVbcD": {
           "type": "image",
           "settings": {
             "top_subheading": "",
@@ -30,8 +30,8 @@
             "text_align": "left",
             "mobile_text_position": "mobile-vertical-center mobile-horizontal-center",
             "mobile_text_align": "left",
-            "image": "shopify://shop_images/Artboard_47.jpg",
-            "image_mobile": "shopify://shop_images/Artboard_45.jpg",
+            "image": "shopify://shop_images/Artboard_39.jpg",
+            "image_mobile": "shopify://shop_images/Artboard_42.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center",
             "base_text_color": "#ffffff",
@@ -45,7 +45,7 @@
         }
       },
       "block_order": [
-        "image_XQYeQG"
+        "image_rEVbcD"
       ],
       "settings": {
         "use_img_banner": true,
@@ -491,7 +491,7 @@
     }
   },
   "order": [
-    "slideshow_n_MdJBib",
+    "slideshow_n_HCVANp",
     "blocks_d7Lp64",
     "trust_icons_EDYTbe",
     "rich_text_YkFgAa",
