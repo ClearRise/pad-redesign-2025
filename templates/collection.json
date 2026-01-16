@@ -106,6 +106,92 @@
         "autoplay_speed": 5
       }
     },
+    "blocks_X4YXEp": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_9062c39_PhfKDp": {
+          "type": "ai_gen_block_9062c39",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/Desktop_Hero_1_6fdddadc-b379-459b-ae28-c8c77181990f.png",
+            "mobile_image": "shopify://shop_images/Mobile_Hero_7add8e94-a47a-41b8-846c-2913e4957afd.png",
+            "background_color": "#f5f5f5",
+            "section_height": 400,
+            "section_height_mobile": 400,
+            "content_width": 1200,
+            "text_alignment": "left",
+            "vertical_position_desktop": "flex-end",
+            "vertical_position_mobile": "flex-end",
+            "text_shadow_offset": 2,
+            "text_shadow_blur": 4,
+            "text_shadow_opacity": 0.9,
+            "subheadline": "<p>Valentine's Sale</p>",
+            "subheadline_color": "#ffffff",
+            "subheadline_size_desktop": 18,
+            "subheadline_size_mobile": 16,
+            "spacing_after_subheadline": 0,
+            "spacing_after_subheadline_mobile": 0,
+            "headline": "<p>Jewelry as Unique as You Are</p>",
+            "headline_color": "#ffffff",
+            "headline_size_desktop": 48,
+            "headline_size_mobile": 24,
+            "spacing_after_headline": 0,
+            "spacing_after_headline_mobile": 0,
+            "body_text": "<p>From meteorite to mammoth tooth, you'll find a story in every piece. </p>",
+            "body_color": "#ffffff",
+            "body_size_desktop": 18,
+            "body_size_mobile": 16,
+            "spacing_after_body": 0,
+            "spacing_after_body_mobile": 0,
+            "button_primary_label": "Shop Men's",
+            "button_primary_link": "shopify://collections/all-products-new",
+            "button_primary_bg": "#8ead97",
+            "button_primary_color": "#000000",
+            "button_primary_hover_bg": "#0f7366",
+            "button_primary_hover_color": "#ffffff",
+            "show_secondary_button": true,
+            "button_secondary_label": "Shop Women's",
+            "button_secondary_link": "shopify://collections/womens-gift-guide",
+            "button_secondary_bg": "#ede4da",
+            "button_secondary_color": "#111111",
+            "button_secondary_hover_bg": "#f5f5f5",
+            "button_secondary_hover_color": "#111111",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 28,
+            "button_border_radius": 0,
+            "button_spacing": 16
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_af7acc2_x6pNtB": {
+          "type": "ai_gen_block_af7acc2",
+          "name": "BOGO announcement bar",
+          "settings": {
+            "heading": "",
+            "description": "<p><strong>Mix & Match BOGO:</strong>Add any 2 eligible rings, necklaces, or chains to your cart – the lower-priced piece is free. No code needed.<br/></p>",
+            "heading_color": "#ffffff",
+            "heading_size": 24,
+            "heading_weight": "700",
+            "heading_transform": "uppercase",
+            "heading_letter_spacing": 1,
+            "text_color": "#000000",
+            "text_size": 14,
+            "text_spacing": 8,
+            "background_color": "#8ead97",
+            "padding_vertical": 20,
+            "padding_horizontal": 20,
+            "max_width": 1000
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_9062c39_PhfKDp",
+        "ai_gen_block_af7acc2_x6pNtB"
+      ],
+      "settings": {}
+    },
     "replo_trust_icons_white_backg_Wc7kJ7": {
       "type": "replo-trust-icons-white-backg",
       "disabled": true,
@@ -274,6 +360,7 @@
   "order": [
     "advanced_content_eYLzPF",
     "17347204-928a-46d1-8166-ac8c007f382d",
+    "blocks_X4YXEp",
     "replo_trust_icons_white_backg_Wc7kJ7",
     "trust_icons_EDYTbe",
     "replo_trust_icons_fy9XYw",
