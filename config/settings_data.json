@@ -179,7 +179,7 @@
             "type": "timer_banner",
             "settings": {
               "enable_timer_banner": true,
-              "banner_text": "Valentine's Day Sale: Buy 1, Get 1 Free!",
+              "banner_text": "<u>Valentine's Day Sale: Buy 1, Get 1 Free!</u>",
               "banner_link": "shopify://collections/all-products-new",
               "banner_link_text": "Shop now",
               "background_color": "#8ead97",
@@ -430,11 +430,6 @@
         "disabled": true,
         "settings": {}
       },
-      "14952540001915115444": {
-        "type": "shopify://apps/upcart-cart-drawer/blocks/app-embed/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
-        "disabled": true,
-        "settings": {}
-      },
       "16881471024131275657": {
         "type": "shopify://apps/searchanise-search-filter/blocks/app-embed/d8f24ada-02b1-458a-bbeb-5bf16d5c921e",
         "disabled": true,
@@ -483,11 +478,6 @@
       "11560147490181472608": {
         "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/app-embed/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
         "disabled": false,
-        "settings": {}
-      },
-      "10840395464443086010": {
-        "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
-        "disabled": true,
         "settings": {}
       },
       "2786716548061469553": {
