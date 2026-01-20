@@ -399,6 +399,7 @@
         },
         "advanced_gQNjit": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "BUY ONE GET ONE FREE+ UP TO 50% OFF",
             "heading": "VALENTINE'S FLASH SALE",
@@ -454,7 +455,7 @@
             "cta_link2": "",
             "image": "shopify://shop_images/1_1.png",
             "video_url": "",
-            "width": "33",
+            "width": "50",
             "text_size": 80,
             "text_align": "vertical-center horizontal-left",
             "focal_point": "center",
