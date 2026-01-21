@@ -333,6 +333,59 @@
         "product_video_style": "muted"
       }
     },
+    "1769022719b4069dcb": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_02ea7d6_jWk3qQ": {
+          "type": "ai_gen_block_02ea7d6",
+          "settings": {
+            "section_title": "WHAT'S INCLUDED?",
+            "title_font_size": 28,
+            "title_font_size_mobile": 20,
+            "title_spacing": 40,
+            "section_background_color": "#ffffff",
+            "text_color": "#111111",
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "badge_text": "INCLUDED",
+            "badge_font_size": 11,
+            "badge_background_color": "#138f7e",
+            "badge_text_color": "#ffffff",
+            "card_background_color": "#f9f9f9",
+            "card_border_radius": 8,
+            "card_shadow": true,
+            "card_padding": 30,
+            "card_spacing": 20,
+            "image_max_width": 200,
+            "label_font_size": 16,
+            "label_font_size_mobile": 14,
+            "card_1_label": "{{ closest.product.title }}",
+            "card_2_label": "Silicone Band",
+            "card_3_label": "Ring Case",
+            "warranty_icon_size": 40,
+            "warranty_text": "LIFETIME WARRANTY INCLUDED",
+            "warranty_link_text": "Learn More",
+            "warranty_link_url": "",
+            "warranty_background_color": "#138f7e",
+            "warranty_text_color": "#ffffff",
+            "warranty_link_color": "#ffffff",
+            "warranty_border_radius": 8,
+            "warranty_padding": 25,
+            "warranty_spacing": 30,
+            "warranty_font_size": 16,
+            "warranty_font_size_mobile": 14,
+            "warranty_link_font_size": 14,
+            "mobile_layout": "stack"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_02ea7d6_jWk3qQ"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
     "rich_text_zd3AyU": {
       "type": "rich-text",
       "blocks": {
@@ -647,6 +700,7 @@
   },
   "order": [
     "main",
+    "1769022719b4069dcb",
     "rich_text_zd3AyU",
     "replo_trust_icons_white_backg_AnTLaL",
     "promo_grid_QUweUP",
