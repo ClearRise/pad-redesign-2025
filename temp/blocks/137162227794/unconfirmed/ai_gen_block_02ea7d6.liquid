@@ -1,6 +1,826 @@
+{% doc %}
+  @prompt
+    Create a “What’s Included” product page section that visually matches a premium comparison-style layout with three included items and a lifetime warranty bar beneath them.
+    
+    Layout & Structure
+    
+    Section title at the top: “WHAT’S INCLUDED?”
+    
+    Below the title, display three equal-width cards in a single row on desktop
+    
+    On mobile:
+    
+    Cards should stack cleanly (either 1 per row or horizontal swipe carousel)
+    
+    Maintain equal spacing and consistent card heights
+    
+    Each card includes:
+    
+    A small “INCLUDED” label at the top
+    
+    An image
+    
+    A short text label under the image
+    
+    Card Content Logic
+    
+    First Card (Dynamic Product Content)
+    
+    Image source: Automatically pull the first product image from the current product listing
+    
+    Text label: Editable text field (default example: “24K Gold”)
+    
+    This card must update dynamically per product
+    
+    Second Card (Custom Upload)
+    
+    Image source: Merchant-uploaded image via theme editor
+    
+    Text label: Editable text field (default example: “Silicone Band”)
+    
+    Third Card (Custom Upload)
+    
+    Image source: Merchant-uploaded image via theme editor
+    
+    Text label: Editable text field (default example: “Ring Case”)
+    
+    Lifetime Warranty Bar
+    
+    Full-width bar below the three cards
+    
+    Contains:
+    
+    Left side: Optional icon or logo (uploadable)
+    
+    Text: “LIFETIME WARRANTY INCLUDED” (editable)
+    
+    Right side: Optional link text (default: “Learn More”)
+    
+    Link should be configurable (URL picker)
+    
+    Entire bar background color should be editable
+    
+    Customization Controls (Theme Editor Settings)
+    
+    Expose controls for:
+    
+    Section background color
+    
+    Individual card background color
+    
+    Border radius & subtle shadow toggle
+    
+    Text color (titles, labels, warranty text)
+    
+    Font size for desktop and mobile
+    
+    Uploadable images for Card 2, Card 3, and Warranty icon
+    
+    Editable text for:
+    
+    Section title
+    
+    Each card label
+    
+    Warranty text
+    
+    Warranty link text
+    
+    Editable warranty link URL
+    
+    Spacing controls (padding top/bottom)
+    
+    Styling Requirements
+    
+    Clean, premium, minimal aesthetic
+    
+    Soft rounded corners on cards
+    
+    Neutral color defaults suitable for luxury jewelry
+    
+    Images centered and constrained to equal visual size
+    
+    No hard-coded product names or images
+    
+    Technical Requirements
+    
+    Fully responsive (mobile + desktop optimized)
+    
+    Uses Shopify dynamic product data for first image
+    
+    Compatible with Online Store 2.0 sections
+    
+    Must not break if product has variant images
+    
+    No external apps or scripts
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-whats-included-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.section_background_color }};
+    padding: {{ block.settings.section_padding_top }}px 20px {{ block.settings.section_padding_bottom }}px;
+  }
+
+  .ai-whats-included-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-whats-included-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_font_size }}px;
+    text-align: center;
+    margin: 0 0 {{ block.settings.title_spacing }}px;
+    color: {{ block.settings.text_color }};
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+
+  .ai-whats-included-cards-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: {{ block.settings.card_spacing }}px;
+    margin-bottom: {{ block.settings.warranty_spacing }}px;
+  }
+
+  .ai-whats-included-card-{{ ai_gen_id }} {
+    background-color: {{ block.settings.card_background_color }};
+    border-radius: {{ block.settings.card_border_radius }}px;
+    padding: {{ block.settings.card_padding }}px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    {% if block.settings.card_shadow %}
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    {% endif %}
+  }
+
+  .ai-whats-included-badge-{{ ai_gen_id }} {
+    font-size: {{ block.settings.badge_font_size }}px;
+    color: {{ block.settings.badge_text_color }};
+    background-color: {{ block.settings.badge_background_color }};
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    display: inline-block;
+  }
+
+  .ai-whats-included-image-wrapper-{{ ai_gen_id }} {
+    width: 100%;
+    max-width: {{ block.settings.image_max_width }}px;
+    margin: 0 auto 20px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .ai-whats-included-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ai-whats-included-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+
+  .ai-whats-included-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-whats-included-label-{{ ai_gen_id }} {
+    font-size: {{ block.settings.label_font_size }}px;
+    color: {{ block.settings.text_color }};
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .ai-whats-included-warranty-{{ ai_gen_id }} {
+    background-color: {{ block.settings.warranty_background_color }};
+    border-radius: {{ block.settings.warranty_border_radius }}px;
+    padding: {{ block.settings.warranty_padding }}px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .ai-whats-included-warranty-left-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .ai-whats-included-warranty-icon-{{ ai_gen_id }} {
+    width: {{ block.settings.warranty_icon_size }}px;
+    height: {{ block.settings.warranty_icon_size }}px;
+    flex-shrink: 0;
+  }
+
+  .ai-whats-included-warranty-icon-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ai-whats-included-warranty-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.warranty_font_size }}px;
+    color: {{ block.settings.warranty_text_color }};
+    font-weight: 600;
+    letter-spacing: 1.5px;
+  }
+
+  .ai-whats-included-warranty-link-{{ ai_gen_id }} {
+    font-size: {{ block.settings.warranty_link_font_size }}px;
+    color: {{ block.settings.warranty_link_color }};
+    text-decoration: underline;
+    white-space: nowrap;
+  }
+
+  .ai-whats-included-warranty-link-{{ ai_gen_id }}:hover {
+    opacity: 0.8;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-whats-included-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_font_size_mobile }}px;
+    }
+
+    .ai-whats-included-label-{{ ai_gen_id }} {
+      font-size: {{ block.settings.label_font_size_mobile }}px;
+    }
+
+    .ai-whats-included-warranty-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.warranty_font_size_mobile }}px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    {% if block.settings.mobile_layout == 'stack' %}
+      .ai-whats-included-cards-{{ ai_gen_id }} {
+        grid-template-columns: 1fr;
+      }
+    {% elsif block.settings.mobile_layout == 'two_column' %}
+      .ai-whats-included-cards-{{ ai_gen_id }} {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ai-whats-included-card-{{ ai_gen_id }}:last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin: 0 auto;
+      }
+    {% elsif block.settings.mobile_layout == 'carousel' %}
+      .ai-whats-included-cards-{{ ai_gen_id }} {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .ai-whats-included-card-{{ ai_gen_id }} {
+        min-width: 280px;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+      }
+    {% endif %}
+
+    .ai-whats-included-warranty-{{ ai_gen_id }} {
+      flex-direction: column;
+      text-align: center;
+      gap: 12px;
+    }
+
+    .ai-whats-included-warranty-left-{{ ai_gen_id }} {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+{% endstyle %}
+
+<whats-included-{{ ai_gen_id }} class="ai-whats-included-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-whats-included-container-{{ ai_gen_id }}">
+    {% if block.settings.section_title != blank %}
+      <h2 class="ai-whats-included-title-{{ ai_gen_id }}">{{ block.settings.section_title }}</h2>
+    {% endif %}
+
+    <div class="ai-whats-included-cards-{{ ai_gen_id }}">
+      <div class="ai-whats-included-card-{{ ai_gen_id }}">
+        <span class="ai-whats-included-badge-{{ ai_gen_id }}">{{ block.settings.badge_text }}</span>
+        <div class="ai-whats-included-image-wrapper-{{ ai_gen_id }}">
+          {% if product.featured_image %}
+            <img
+              src="{{ product.featured_image | image_url: width: 400 }}"
+              alt="{{ product.featured_image.alt | escape }}"
+              class="ai-whats-included-image-{{ ai_gen_id }}"
+              loading="lazy"
+              width="400"
+              height="400"
+            >
+          {% else %}
+            <div class="ai-whats-included-placeholder-{{ ai_gen_id }}">
+              {{ 'product-1' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+        <p class="ai-whats-included-label-{{ ai_gen_id }}">{{ block.settings.card_1_label }}</p>
+      </div>
+
+      <div class="ai-whats-included-card-{{ ai_gen_id }}">
+        <span class="ai-whats-included-badge-{{ ai_gen_id }}">{{ block.settings.badge_text }}</span>
+        <div class="ai-whats-included-image-wrapper-{{ ai_gen_id }}">
+          {% if block.settings.card_2_image %}
+            <img
+              src="{{ block.settings.card_2_image | image_url: width: 400 }}"
+              alt="{{ block.settings.card_2_image.alt | escape }}"
+              class="ai-whats-included-image-{{ ai_gen_id }}"
+              loading="lazy"
+              width="400"
+              height="400"
+            >
+          {% else %}
+            <div class="ai-whats-included-placeholder-{{ ai_gen_id }}">
+              {{ 'product-1' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+        <p class="ai-whats-included-label-{{ ai_gen_id }}">{{ block.settings.card_2_label }}</p>
+      </div>
+
+      <div class="ai-whats-included-card-{{ ai_gen_id }}">
+        <span class="ai-whats-included-badge-{{ ai_gen_id }}">{{ block.settings.badge_text }}</span>
+        <div class="ai-whats-included-image-wrapper-{{ ai_gen_id }}">
+          {% if block.settings.card_3_image %}
+            <img
+              src="{{ block.settings.card_3_image | image_url: width: 400 }}"
+              alt="{{ block.settings.card_3_image.alt | escape }}"
+              class="ai-whats-included-image-{{ ai_gen_id }}"
+              loading="lazy"
+              width="400"
+              height="400"
+            >
+          {% else %}
+            <div class="ai-whats-included-placeholder-{{ ai_gen_id }}">
+              {{ 'product-1' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+        <p class="ai-whats-included-label-{{ ai_gen_id }}">{{ block.settings.card_3_label }}</p>
+      </div>
+    </div>
+
+    <div class="ai-whats-included-warranty-{{ ai_gen_id }}">
+      <div class="ai-whats-included-warranty-left-{{ ai_gen_id }}">
+        {% if block.settings.warranty_icon %}
+          <div class="ai-whats-included-warranty-icon-{{ ai_gen_id }}">
+            <img
+              src="{{ block.settings.warranty_icon | image_url: width: 100 }}"
+              alt="Warranty icon"
+              loading="lazy"
+              width="100"
+              height="100"
+            >
+          </div>
+        {% endif %}
+        <span class="ai-whats-included-warranty-text-{{ ai_gen_id }}">{{ block.settings.warranty_text }}</span>
+      </div>
+      {% if block.settings.warranty_link_text != blank and block.settings.warranty_link_url != blank %}
+        <a href="{{ block.settings.warranty_link_url }}" class="ai-whats-included-warranty-link-{{ ai_gen_id }}">
+          {{ block.settings.warranty_link_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</whats-included-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class WhatsIncluded{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        const carousel = this.querySelector('.ai-whats-included-cards-{{ ai_gen_id }}');
+        if (carousel && window.innerWidth <= 749 && '{{ block.settings.mobile_layout }}' === 'carousel') {
+          this.setupCarousel(carousel);
+        }
+      }
+
+      setupCarousel(carousel) {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        carousel.addEventListener('mousedown', (e) => {
+          isDown = true;
+          startX = e.pageX - carousel.offsetLeft;
+          scrollLeft = carousel.scrollLeft;
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+          isDown = false;
+        });
+
+        carousel.addEventListener('mouseup', () => {
+          isDown = false;
+        });
+
+        carousel.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - carousel.offsetLeft;
+          const walk = (x - startX) * 2;
+          carousel.scrollLeft = scrollLeft - walk;
+        });
+      }
+    }
+
+    customElements.define('whats-included-{{ ai_gen_id }}', WhatsIncluded{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "What's included",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title",
+      "default": "WHAT'S INCLUDED?"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "label": "Title size (desktop)",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "title_font_size_mobile",
+      "label": "Title size (mobile)",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "title_spacing",
+      "label": "Title bottom spacing",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "section_background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#111111"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Cards"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge text",
+      "default": "INCLUDED"
+    },
+    {
+      "type": "range",
+      "id": "badge_font_size",
+      "label": "Badge font size",
+      "min": 8,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 11
+    },
+    {
+      "type": "color",
+      "id": "badge_background_color",
+      "label": "Badge background",
+      "default": "#138f7e"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Badge text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "label": "Card border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "checkbox",
+      "id": "card_shadow",
+      "label": "Show card shadow",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "label": "Card padding",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "card_spacing",
+      "label": "Space between cards",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "image_max_width",
+      "label": "Image max width",
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "default": 200
+    },
+    {
+      "type": "range",
+      "id": "label_font_size",
+      "label": "Label size (desktop)",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "label_font_size_mobile",
+      "label": "Label size (mobile)",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Card 1 (Product)"
+    },
+    {
+      "type": "text",
+      "id": "card_1_label",
+      "label": "Label",
+      "default": "24K Gold"
+    },
+    {
+      "type": "header",
+      "content": "Card 2 (Custom)"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "card_2_label",
+      "label": "Label",
+      "default": "Silicone Band"
+    },
+    {
+      "type": "header",
+      "content": "Card 3 (Custom)"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "card_3_label",
+      "label": "Label",
+      "default": "Ring Case"
+    },
+    {
+      "type": "header",
+      "content": "Warranty bar"
+    },
+    {
+      "type": "image_picker",
+      "id": "warranty_icon",
+      "label": "Icon"
+    },
+    {
+      "type": "range",
+      "id": "warranty_icon_size",
+      "label": "Icon size",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "text",
+      "id": "warranty_text",
+      "label": "Text",
+      "default": "LIFETIME WARRANTY INCLUDED"
+    },
+    {
+      "type": "text",
+      "id": "warranty_link_text",
+      "label": "Link text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "warranty_link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "color",
+      "id": "warranty_background_color",
+      "label": "Background color",
+      "default": "#138f7e"
+    },
+    {
+      "type": "color",
+      "id": "warranty_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "warranty_link_color",
+      "label": "Link color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "warranty_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "warranty_padding",
+      "label": "Padding",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "warranty_spacing",
+      "label": "Top spacing",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "warranty_font_size",
+      "label": "Text size (desktop)",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "warranty_font_size_mobile",
+      "label": "Text size (mobile)",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "warranty_link_font_size",
+      "label": "Link size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Mobile layout"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "stack",
+          "label": "Stack (1 per row)"
+        },
+        {
+          "value": "two_column",
+          "label": "Two columns"
+        },
+        {
+          "value": "carousel",
+          "label": "Horizontal carousel"
+        }
+      ],
+      "default": "stack"
+    }
+  ],
+  "presets": [
+    {
+      "name": "What's included"
+    }
+  ]
+}
 {% endschema %}
