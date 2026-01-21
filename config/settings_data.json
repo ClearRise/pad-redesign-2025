@@ -179,14 +179,14 @@
             "type": "timer_banner",
             "settings": {
               "enable_timer_banner": true,
-              "banner_text": "<u>Valentine's Day Sale: Buy 1, Get 1 Free!</u>",
+              "banner_text": "<u>1 HOUR ONLY - FREE GLOWSTONE RING + BOGO SITEWIDE</u>",
               "banner_link": "shopify://collections/all-products-new",
               "banner_link_text": "Shop now",
               "background_color": "#8ead97",
               "text_color": "#111111",
-              "enable_countdown": false,
-              "countdown_end_date": "2026-02-14 23:59:59",
-              "hide_when_expired": false
+              "enable_countdown": true,
+              "countdown_end_date": "2026-01-21 14:59:59",
+              "hide_when_expired": true
             }
           },
           "announcement_xVJyfX": {
@@ -233,7 +233,7 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "<u><b>Sale</b></u>",
-              "link_submenu": "shopify://collections/all-products-new"
+              "link_submenu": "shopify://collections/flash-sale"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
