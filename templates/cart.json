@@ -61,8 +61,8 @@
         "icon_8h9qxy"
       ],
       "settings": {
-        "text_1": "Add two items to your cart and get the cheaper one for free (excludes matching sets)",
-        "text_2": "Add another item to your cart and get the cheapest one for free (excludes matching sets)",
+        "text_1": "Add two items to your cart and get the cheaper one for free (excludes matching sets)\n<br>Use code <b>LOVE20</b> for an extra 20% off at checkout",
+        "text_2": "Add another item to your cart and get the cheapest one for free (excludes matching sets)\n<br>Use code <b>LOVE20</b> for an extra 20% off at checkout",
         "show_subtotal_certain_amount": false,
         "subtotal_certain_amount": 190,
         "text_3": "Orders $195+ will receive a $50 Gift Card sent to their email within ~24 hours of initial order confirmation.",

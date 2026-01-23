@@ -169,7 +169,7 @@
           "name": "BOGO announcement bar",
           "settings": {
             "heading": "",
-            "description": "<p><strong>Mix & Match BOGO:</strong>Add any 2 eligible rings, necklaces, or chains to your cart – the lower-priced piece is free. No code needed.<br/></p>",
+            "description": "<p><strong>Mix & Match BOGO:</strong>Add any 2 eligible rings, necklaces, or chains to your cart – the lower-priced piece is free. </p><p>THIS WEEKEND ONLY - Code <strong>LOVE20</strong> for 20% off</p>",
             "heading_color": "#ffffff",
             "heading_size": 24,
             "heading_weight": "700",
