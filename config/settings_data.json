@@ -179,14 +179,14 @@
             "type": "timer_banner",
             "settings": {
               "enable_timer_banner": true,
-              "banner_text": "<u>1 HOUR ONLY - FREE GLOWSTONE RING + BOGO SITEWIDE</u>",
+              "banner_text": "VALENTINE'S SALE - BOGO + 20% OFF THIS WEEKEND ONLY - CODE: LOVE20",
               "banner_link": "shopify://collections/all-products-new",
               "banner_link_text": "Shop now",
               "background_color": "#8ead97",
               "text_color": "#111111",
               "enable_countdown": true,
-              "countdown_end_date": "2026-01-21 14:59:59",
-              "hide_when_expired": true
+              "countdown_end_date": "2026-01-25 14:59:59",
+              "hide_when_expired": false
             }
           },
           "announcement_xVJyfX": {
@@ -233,7 +233,7 @@
             "type": "scroll_navi_mobile",
             "settings": {
               "sub_menu": "<u><b>Sale</b></u>",
-              "link_submenu": "shopify://collections/flash-sale"
+              "link_submenu": "shopify://collections/all-products-new"
             }
           },
           "4aeb0b3a-1933-498f-b8c4-e8d9f976a7bc": {
@@ -302,7 +302,7 @@
           "mobile_top_banner_image": "shopify://shop_images/oie_haHVk88If7KC.png",
           "mobile_menu_top_banner_image": "shopify://shop_images/Black_Ceramic-_Purple_Class-removebg-preview.png",
           "mobile_menu_top_banner_title": "VALENTINE’S SALE",
-          "mobile_menu_top_banner_link_text": "Buy One Get One Free - Sitewide",
+          "mobile_menu_top_banner_link_text": "Buy One Get One Free - Sitewide + 20% off THIS WEEKEND ONLY",
           "mobile_menu_top_banner_link": "shopify://collections/all-products-new",
           "mobile_menu_top_banner_background": "",
           "announcement_compact": true,

@@ -115,12 +115,12 @@
           },
           "blocks": {}
         },
-        "ai_gen_block_af7acc2_3tVxPn": {
+        "ai_gen_block_af7acc2_yP3trp": {
           "type": "ai_gen_block_af7acc2",
           "name": "BOGO announcement bar",
           "settings": {
             "heading": "",
-            "description": "<p><strong>Mix & Match BOGO:</strong>Add any 2 eligible rings, necklaces, or chains to your cart – the lower-priced piece is free. No code needed.<br/></p>",
+            "description": "<p><strong>Mix & Match BOGO:</strong>Add any 2 eligible rings, necklaces, or chains to your cart – the lower-priced piece is free. </p><p>THIS WEEKEND ONLY - Code <strong>LOVE20</strong> for 20% off<br/></p>",
             "heading_color": "#ffffff",
             "heading_size": 24,
             "heading_weight": "700",
@@ -139,7 +139,7 @@
       },
       "block_order": [
         "ai_gen_block_9062c39_rmY8jw",
-        "ai_gen_block_af7acc2_3tVxPn"
+        "ai_gen_block_af7acc2_yP3trp"
       ],
       "settings": {}
     },
