@@ -201,7 +201,7 @@
           "name": "BOGO announcement bar",
           "settings": {
             "heading": "",
-            "description": "<p><strong>Valentine's Day Sale: </strong>Buy 1 Get 1 Free</p><p>THIS WEEKEND ONLY - GET AN EXTRA <strong>20% OFF</strong></p><p><strong>CODE: LOVE20</strong></p>",
+            "description": "<p><strong>Valentine's Day Sale: </strong>Buy 1 Get 1 Free</p><p>GET AN EXTRA <strong>20% OFF</strong></p><p><strong>CODE: LOVE20</strong></p>",
             "heading_color": "#ffffff",
             "heading_size": 24,
             "heading_weight": "700",
