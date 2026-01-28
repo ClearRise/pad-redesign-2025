@@ -184,8 +184,8 @@
               "banner_link_text": "Shop now",
               "background_color": "#8ead97",
               "text_color": "#111111",
-              "enable_countdown": false,
-              "countdown_end_date": "2026-01-26 23:59:59",
+              "enable_countdown": true,
+              "countdown_end_date": "2026-01-30 23:59:59",
               "hide_when_expired": false
             }
           },
