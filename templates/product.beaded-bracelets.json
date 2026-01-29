@@ -697,7 +697,7 @@
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
-        "show_product_recommendations": false,
+        "show_product_recommendations": true,
         "product_recommendations_heading": "You may also like",
         "related_count": 5,
         "type_enable": false,
