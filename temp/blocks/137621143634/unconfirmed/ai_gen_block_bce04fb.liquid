@@ -1,6 +1,888 @@
+{% doc %}
+  @prompt
+    Create a full-width editorial content section for a collection or product page titled “SPIRITUAL BEADS” that matches the exact layout and orientation shown in the reference screenshots, optimized for both desktop and mobile.
+    
+    Desktop Layout (Critical – must match exactly)
+    
+    Use a two-column layout:
+    
+    Left Column (Text)
+    
+    Fixed-width text column aligned left
+    
+    Content stacked vertically in this order:
+    
+    Small heading: “Inspiration”
+    
+    Paragraph text (rich text, editable)
+    
+    Spacer
+    
+    Small heading: “Expression”
+    
+    Paragraph text (rich text, editable)
+    
+    Text link at bottom: “Shop the Spiritual Beads Collection” (URL editable)
+    
+    Text column should be vertically centered relative to the main image on desktop.
+    
+    Right Column (Images)
+    
+    Top: One large hero image (full width of right column)
+    
+    Bottom: Three images in a single horizontal row
+    
+    All three images same height
+    
+    Equal spacing between images
+    
+    Images align flush with the hero image above
+    
+    Images should not crop awkwardly; maintain aspect ratio
+    
+    Mobile Layout (Critical – must match exactly)
+    
+    On mobile, stack content vertically in this exact order:
+    
+    Section title: “SPIRITUAL BEADS”
+    
+    Large hero image (full width)
+    
+    Text block:
+    
+    “Inspiration” heading
+    
+    Inspiration paragraph
+    
+    Image block:
+    
+    First supporting image (sketch image)
+    
+    Text block:
+    
+    “Expression” heading
+    
+    Expression paragraph
+    
+    “Shop the Spiritual Beads Collection” link
+    
+    Remaining supporting images stacked vertically or in a 2-column grid depending on screen width
+    
+    Text should be left-aligned on mobile.
+    
+    Image Controls
+    
+    All images must be merchant-uploaded via theme editor
+    
+    Separate upload fields for:
+    
+    Hero image
+    
+    Supporting image 1
+    
+    Supporting image 2
+    
+    Supporting image 3
+    
+    Customization Settings (Theme Editor)
+    
+    Expose settings for:
+    
+    Section background color
+    
+    Text color
+    
+    Heading color
+    
+    Link text & URL
+    
+    Font size controls (desktop & mobile)
+    
+    Spacing controls (padding top/bottom)
+    
+    Optional divider spacing between sections
+    
+    Styling Requirements
+    
+    Clean, editorial, luxury aesthetic
+    
+    No card borders
+    
+    No shadows
+    
+    Plenty of white space
+    
+    Typography should feel modern and premium
+    
+    Images should align precisely between rows (desktop)
+    
+    Technical Notes
+    
+    Fully responsive
+    
+    Compatible with Online Store 2.0 sections
+    
+    No JavaScript required
+    
+    No external apps
+    
+    Use semantic HTML and CSS grid or flexbox
+    
+    Do not auto-generate content — all text must be editable
+    
+    Important
+    
+    Do not:
+    
+    Change the desktop image orientation
+    
+    Convert this into a carousel
+    
+    Wrap content in cards
+    
+    Center-align text on desktop, For mobile: Please put the inspiration title and text right after the first image.
+    
+    Please also make the three images underneath a carousel that slides
+    
+    For desktop, The inspiration text should be aligned with the top of the first image
+    
+    The expression text section should be aligned with the bottom three images.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-editorial-section-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_top }}px 0 {{ block.settings.padding_bottom }}px;
+  }
+
+  .ai-editorial-container-{{ ai_gen_id }} {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-editorial-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.heading_color }};
+    text-align: center;
+    margin: 0 0 {{ block.settings.title_spacing }}px;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+  }
+
+  .ai-editorial-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 60px;
+  }
+
+  .ai-editorial-text-column-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .ai-editorial-text-block-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ai-editorial-small-heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.small_heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+
+  .ai-editorial-paragraph-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+  }
+
+  .ai-editorial-paragraph-{{ ai_gen_id }} p {
+    margin: 0 0 12px;
+  }
+
+  .ai-editorial-paragraph-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-editorial-link-{{ ai_gen_id }} {
+    font-size: {{ block.settings.link_size }}px;
+    color: {{ block.settings.link_color }};
+    text-decoration: underline;
+    text-align: left;
+    display: inline-block;
+    margin-top: 8px;
+  }
+
+  .ai-editorial-link-{{ ai_gen_id }}:hover {
+    opacity: 0.7;
+  }
+
+  .ai-editorial-images-column-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ai-editorial-hero-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-editorial-supporting-images-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .ai-editorial-supporting-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+  }
+
+  .ai-editorial-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    aspect-ratio: 4 / 5;
+  }
+
+  .ai-editorial-supporting-placeholder-{{ ai_gen_id }} {
+    aspect-ratio: 1 / 1;
+  }
+
+  .ai-editorial-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .ai-editorial-carousel-{{ ai_gen_id }} {
+    display: none;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-editorial-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .ai-editorial-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size_mobile }}px;
+      margin-bottom: {{ block.settings.title_spacing_mobile }}px;
+    }
+
+    .ai-editorial-small-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.small_heading_size_mobile }}px;
+    }
+
+    .ai-editorial-paragraph-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size_mobile }}px;
+    }
+
+    .ai-editorial-link-{{ ai_gen_id }} {
+      font-size: {{ block.settings.link_size_mobile }}px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-editorial-grid-{{ ai_gen_id }} {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .ai-editorial-text-column-{{ ai_gen_id }} {
+      display: contents;
+    }
+
+    .ai-editorial-images-column-{{ ai_gen_id }} {
+      display: contents;
+    }
+
+    .ai-editorial-supporting-images-{{ ai_gen_id }} {
+      display: none;
+    }
+
+    .ai-editorial-carousel-{{ ai_gen_id }} {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .ai-editorial-carousel-track-{{ ai_gen_id }} {
+      display: flex;
+      transition: transform 0.3s ease;
+    }
+
+    .ai-editorial-carousel-slide-{{ ai_gen_id }} {
+      min-width: 100%;
+      flex-shrink: 0;
+    }
+
+    .ai-editorial-carousel-slide-{{ ai_gen_id }} img,
+    .ai-editorial-carousel-slide-{{ ai_gen_id }} .ai-editorial-image-placeholder-{{ ai_gen_id }} {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .ai-editorial-carousel-controls-{{ ai_gen_id }} {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .ai-editorial-carousel-dot-{{ ai_gen_id }} {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: {{ block.settings.text_color }};
+      opacity: 0.3;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    .ai-editorial-carousel-dot-{{ ai_gen_id }}.active {
+      opacity: 1;
+    }
+
+    .ai-editorial-mobile-order-1-{{ ai_gen_id }} {
+      order: 1;
+    }
+
+    .ai-editorial-mobile-order-2-{{ ai_gen_id }} {
+      order: 2;
+    }
+
+    .ai-editorial-mobile-order-3-{{ ai_gen_id }} {
+      order: 3;
+    }
+
+    .ai-editorial-mobile-order-4-{{ ai_gen_id }} {
+      order: 4;
+    }
+
+    .ai-editorial-mobile-order-5-{{ ai_gen_id }} {
+      order: 5;
+    }
+  }
+{% endstyle %}
+
+<editorial-content-{{ ai_gen_id }} class="ai-editorial-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-editorial-container-{{ ai_gen_id }}">
+    {% if block.settings.section_title != blank %}
+      <h2 class="ai-editorial-title-{{ ai_gen_id }} ai-editorial-mobile-order-1-{{ ai_gen_id }}">{{ block.settings.section_title }}</h2>
+    {% endif %}
+
+    <div class="ai-editorial-grid-{{ ai_gen_id }}">
+      <div class="ai-editorial-text-column-{{ ai_gen_id }}">
+        {% if block.settings.inspiration_heading != blank or block.settings.inspiration_text != blank %}
+          <div class="ai-editorial-text-block-{{ ai_gen_id }} ai-editorial-mobile-order-3-{{ ai_gen_id }}">
+            {% if block.settings.inspiration_heading != blank %}
+              <h3 class="ai-editorial-small-heading-{{ ai_gen_id }}">{{ block.settings.inspiration_heading }}</h3>
+            {% endif %}
+            {% if block.settings.inspiration_text != blank %}
+              <div class="ai-editorial-paragraph-{{ ai_gen_id }}">{{ block.settings.inspiration_text }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if block.settings.expression_heading != blank or block.settings.expression_text != blank %}
+          <div class="ai-editorial-text-block-{{ ai_gen_id }} ai-editorial-mobile-order-5-{{ ai_gen_id }}">
+            {% if block.settings.expression_heading != blank %}
+              <h3 class="ai-editorial-small-heading-{{ ai_gen_id }}">{{ block.settings.expression_heading }}</h3>
+            {% endif %}
+            {% if block.settings.expression_text != blank %}
+              <div class="ai-editorial-paragraph-{{ ai_gen_id }}">{{ block.settings.expression_text }}</div>
+            {% endif %}
+            {% if block.settings.link_text != blank and block.settings.link_url != blank %}
+              <a href="{{ block.settings.link_url }}" class="ai-editorial-link-{{ ai_gen_id }}">
+                {{ block.settings.link_text }}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="ai-editorial-images-column-{{ ai_gen_id }}">
+        <div class="ai-editorial-mobile-order-2-{{ ai_gen_id }}">
+          {% if block.settings.hero_image %}
+            <img
+              src="{{ block.settings.hero_image | image_url: width: 1200 }}"
+              alt="{{ block.settings.hero_image.alt | escape }}"
+              loading="lazy"
+              width="{{ block.settings.hero_image.width }}"
+              height="{{ block.settings.hero_image.height }}"
+              class="ai-editorial-hero-image-{{ ai_gen_id }}"
+            >
+          {% else %}
+            <div class="ai-editorial-image-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="ai-editorial-supporting-images-{{ ai_gen_id }}">
+          {% if block.settings.supporting_image_1 %}
+            <img
+              src="{{ block.settings.supporting_image_1 | image_url: width: 600 }}"
+              alt="{{ block.settings.supporting_image_1.alt | escape }}"
+              loading="lazy"
+              width="{{ block.settings.supporting_image_1.width }}"
+              height="{{ block.settings.supporting_image_1.height }}"
+              class="ai-editorial-supporting-image-{{ ai_gen_id }}"
+            >
+          {% else %}
+            <div class="ai-editorial-image-placeholder-{{ ai_gen_id }} ai-editorial-supporting-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+
+          {% if block.settings.supporting_image_2 %}
+            <img
+              src="{{ block.settings.supporting_image_2 | image_url: width: 600 }}"
+              alt="{{ block.settings.supporting_image_2.alt | escape }}"
+              loading="lazy"
+              width="{{ block.settings.supporting_image_2.width }}"
+              height="{{ block.settings.supporting_image_2.height }}"
+              class="ai-editorial-supporting-image-{{ ai_gen_id }}"
+            >
+          {% else %}
+            <div class="ai-editorial-image-placeholder-{{ ai_gen_id }} ai-editorial-supporting-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+
+          {% if block.settings.supporting_image_3 %}
+            <img
+              src="{{ block.settings.supporting_image_3 | image_url: width: 600 }}"
+              alt="{{ block.settings.supporting_image_3.alt | escape }}"
+              loading="lazy"
+              width="{{ block.settings.supporting_image_3.width }}"
+              height="{{ block.settings.supporting_image_3.height }}"
+              class="ai-editorial-supporting-image-{{ ai_gen_id }}"
+            >
+          {% else %}
+            <div class="ai-editorial-image-placeholder-{{ ai_gen_id }} ai-editorial-supporting-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="ai-editorial-carousel-{{ ai_gen_id }} ai-editorial-mobile-order-4-{{ ai_gen_id }}">
+          <div class="ai-editorial-carousel-track-{{ ai_gen_id }}">
+            <div class="ai-editorial-carousel-slide-{{ ai_gen_id }}">
+              {% if block.settings.supporting_image_1 %}
+                <img
+                  src="{{ block.settings.supporting_image_1 | image_url: width: 800 }}"
+                  alt="{{ block.settings.supporting_image_1.alt | escape }}"
+                  loading="lazy"
+                  width="{{ block.settings.supporting_image_1.width }}"
+                  height="{{ block.settings.supporting_image_1.height }}"
+                >
+              {% else %}
+                <div class="ai-editorial-image-placeholder-{{ ai_gen_id }} ai-editorial-supporting-placeholder-{{ ai_gen_id }}">
+                  {{ 'image' | placeholder_svg_tag }}
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="ai-editorial-carousel-slide-{{ ai_gen_id }}">
+              {% if block.settings.supporting_image_2 %}
+                <img
+                  src="{{ block.settings.supporting_image_2 | image_url: width: 800 }}"
+                  alt="{{ block.settings.supporting_image_2.alt | escape }}"
+                  loading="lazy"
+                  width="{{ block.settings.supporting_image_2.width }}"
+                  height="{{ block.settings.supporting_image_2.height }}"
+                >
+              {% else %}
+                <div class="ai-editorial-image-placeholder-{{ ai_gen_id }} ai-editorial-supporting-placeholder-{{ ai_gen_id }}">
+                  {{ 'image' | placeholder_svg_tag }}
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="ai-editorial-carousel-slide-{{ ai_gen_id }}">
+              {% if block.settings.supporting_image_3 %}
+                <img
+                  src="{{ block.settings.supporting_image_3 | image_url: width: 800 }}"
+                  alt="{{ block.settings.supporting_image_3.alt | escape }}"
+                  loading="lazy"
+                  width="{{ block.settings.supporting_image_3.width }}"
+                  height="{{ block.settings.supporting_image_3.height }}"
+                >
+              {% else %}
+                <div class="ai-editorial-image-placeholder-{{ ai_gen_id }} ai-editorial-supporting-placeholder-{{ ai_gen_id }}">
+                  {{ 'image' | placeholder_svg_tag }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="ai-editorial-carousel-controls-{{ ai_gen_id }}">
+            <button class="ai-editorial-carousel-dot-{{ ai_gen_id }} active" data-slide="0" aria-label="Go to slide 1"></button>
+            <button class="ai-editorial-carousel-dot-{{ ai_gen_id }}" data-slide="1" aria-label="Go to slide 2"></button>
+            <button class="ai-editorial-carousel-dot-{{ ai_gen_id }}" data-slide="2" aria-label="Go to slide 3"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</editorial-content-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class EditorialContent{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentSlide = 0;
+        this.totalSlides = 3;
+      }
+
+      connectedCallback() {
+        this.carousel = this.querySelector('.ai-editorial-carousel-{{ ai_gen_id }}');
+        this.track = this.querySelector('.ai-editorial-carousel-track-{{ ai_gen_id }}');
+        this.dots = this.querySelectorAll('.ai-editorial-carousel-dot-{{ ai_gen_id }}');
+
+        if (this.carousel && this.track && this.dots.length > 0) {
+          this.setupCarousel();
+        }
+      }
+
+      setupCarousel() {
+        this.dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            this.goToSlide(index);
+          });
+        });
+
+        let startX = 0;
+        let currentX = 0;
+        let isDragging = false;
+
+        this.carousel.addEventListener('touchstart', (e) => {
+          startX = e.touches[0].clientX;
+          isDragging = true;
+        });
+
+        this.carousel.addEventListener('touchmove', (e) => {
+          if (!isDragging) return;
+          currentX = e.touches[0].clientX;
+        });
+
+        this.carousel.addEventListener('touchend', () => {
+          if (!isDragging) return;
+          isDragging = false;
+
+          const diff = startX - currentX;
+          
+          if (Math.abs(diff) > 50) {
+            if (diff > 0 && this.currentSlide < this.totalSlides - 1) {
+              this.goToSlide(this.currentSlide + 1);
+            } else if (diff < 0 && this.currentSlide > 0) {
+              this.goToSlide(this.currentSlide - 1);
+            }
+          }
+        });
+      }
+
+      goToSlide(index) {
+        this.currentSlide = index;
+        const offset = -100 * index;
+        this.track.style.transform = `translateX(${offset}%)`;
+
+        this.dots.forEach((dot, i) => {
+          if (i === index) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+    }
+
+    customElements.define('editorial-content-{{ ai_gen_id }}', EditorialContent{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Editorial content",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section title"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title",
+      "default": "SPIRITUAL BEADS"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Desktop title size",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "label": "Mobile title size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "title_spacing",
+      "label": "Desktop title spacing",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "title_spacing_mobile",
+      "label": "Mobile title spacing",
+      "min": 15,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Inspiration section"
+    },
+    {
+      "type": "text",
+      "id": "inspiration_heading",
+      "label": "Heading",
+      "default": "Inspiration"
+    },
+    {
+      "type": "richtext",
+      "id": "inspiration_text",
+      "label": "Text",
+      "default": "<p>Each bead carries its own unique energy and meaning, carefully selected to inspire mindfulness and personal growth.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Expression section"
+    },
+    {
+      "type": "text",
+      "id": "expression_heading",
+      "label": "Heading",
+      "default": "Expression"
+    },
+    {
+      "type": "richtext",
+      "id": "expression_text",
+      "label": "Text",
+      "default": "<p>Express your journey through handcrafted designs that blend ancient wisdom with modern craftsmanship.</p>"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text",
+      "default": "Shop the Spiritual Beads Collection"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "image_picker",
+      "id": "supporting_image_1",
+      "label": "Supporting image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "supporting_image_2",
+      "label": "Supporting image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "supporting_image_3",
+      "label": "Supporting image 3"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Headings",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link",
+      "default": "#111111"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "small_heading_size",
+      "label": "Desktop small heading size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "small_heading_size_mobile",
+      "label": "Mobile small heading size",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Desktop text size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "label": "Mobile text size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "link_size",
+      "label": "Desktop link size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "link_size_mobile",
+      "label": "Mobile link size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "text_block_spacing",
+      "label": "Space between text blocks",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Editorial content"
+    }
+  ]
+}
 {% endschema %}
