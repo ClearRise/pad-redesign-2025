@@ -127,6 +127,12 @@
             "save_badge": "For Limited Time Only"
           }
         },
+        "optional_addon_t3HtUH": {
+          "type": "optional_addon",
+          "settings": {
+            "title": "Complete The Look"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -325,6 +331,7 @@
         "premium_protection_plan_AhxfM9",
         "6992c020-3994-4f22-9eb2-ca8e26cbda06",
         "engraving_YpGMkM",
+        "optional_addon_t3HtUH",
         "buy_buttons",
         "71160726-c2e7-4e18-bcb9-e14abb7b42b0",
         "pdp_icon_list_eaVUhJ",
