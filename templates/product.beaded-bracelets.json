@@ -398,6 +398,25 @@
       "disabled": true,
       "settings": {}
     },
+    "featured_collection_YewiBJ": {
+      "type": "featured-collection",
+      "custom_css": [
+        "@media only screen and (max-width: 768px) {.grid-overflow-wrapper .grid__item {flex: 0 0 70vw; }}"
+      ],
+      "name": "Featured collection",
+      "settings": {
+        "title": "You May Also Like",
+        "home_featured_products": "beaded-bracelets",
+        "type_enable": false,
+        "subtitle_enable": false,
+        "subtitle_type": "two",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
     "promo_grid_QUweUP": {
       "type": "promo-grid_n",
       "blocks": {
@@ -681,6 +700,7 @@
     "17563958449821061e",
     "rich_text_zd3AyU",
     "replo_trust_icons_white_backg_AnTLaL",
+    "featured_collection_YewiBJ",
     "promo_grid_QUweUP",
     "product_img_with_txt",
     "product_how_to_work",
