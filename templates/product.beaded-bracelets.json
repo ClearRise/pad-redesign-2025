@@ -594,6 +594,7 @@
         "advanced_TwEqdf",
         "advanced_eReELk"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "gutter_size": 0,
