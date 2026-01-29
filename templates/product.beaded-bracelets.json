@@ -420,8 +420,8 @@
     "1769724210c4f26598": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_a581fa0_CrmrEA": {
-          "type": "ai_gen_block_a581fa0",
+        "ai_gen_block_7afc852_47HRc3": {
+          "type": "ai_gen_block_7afc852",
           "settings": {
             "section_title": "SPIRITUAL BEADS",
             "title_size": 32,
@@ -433,9 +433,7 @@
             "expression_heading": "Expression",
             "expression_text": "<p>Express your journey through handcrafted designs that blend ancient wisdom with modern craftsmanship.</p>",
             "link_text": "Shop the Spiritual Beads Collection",
-            "link_url": "",
-            "hero_image": "shopify://shop_images/2026-01-19_08-36-17_B_R8_S4.jpg",
-            "supporting_image_1": "shopify://shop_images/Recreate_the_first_4k_202601291520.jpg",
+            "link_url": "shopify://collections/beaded-bracelets",
             "background_color": "#ffffff",
             "heading_color": "#111111",
             "text_color": "#111111",
@@ -446,7 +444,7 @@
             "text_size_mobile": 14,
             "link_size": 14,
             "link_size_mobile": 14,
-            "text_block_spacing": 40,
+            "text_block_spacing": 60,
             "padding_top": 60,
             "padding_bottom": 60
           },
@@ -454,7 +452,7 @@
         }
       },
       "block_order": [
-        "ai_gen_block_a581fa0_CrmrEA"
+        "ai_gen_block_7afc852_47HRc3"
       ],
       "settings": {}
     },
