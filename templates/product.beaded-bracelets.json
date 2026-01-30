@@ -698,7 +698,7 @@
       "type": "product-recommendations",
       "settings": {
         "show_product_recommendations": true,
-        "product_recommendations_heading": "You may also like",
+        "product_recommendations_heading": "Recommended Products",
         "related_count": 5,
         "type_enable": false,
         "subtitle_enable": false,
@@ -707,6 +707,7 @@
     },
     "recently-viewed": {
       "type": "recently-viewed_n",
+      "disabled": true,
       "settings": {
         "recent_count": 5
       }
