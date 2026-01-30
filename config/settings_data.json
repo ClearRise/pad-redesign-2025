@@ -186,7 +186,7 @@
               "text_color": "#111111",
               "enable_countdown": true,
               "countdown_end_date": "2026-01-30 23:59:59",
-              "hide_when_expired": false
+              "hide_when_expired": true
             }
           },
           "announcement_xVJyfX": {
