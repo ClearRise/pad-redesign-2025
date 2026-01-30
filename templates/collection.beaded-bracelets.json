@@ -355,6 +355,47 @@
         "show_tryon_badge": false,
         "tryon_badge_text": "Try Free"
       }
+    },
+    "blocks_DXa4KL": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_7afc852_kBkLRD": {
+          "type": "ai_gen_block_7afc852",
+          "settings": {
+            "section_title": "SPIRITUAL BEADS",
+            "title_size": 32,
+            "title_size_mobile": 24,
+            "title_spacing": 50,
+            "title_spacing_mobile": 30,
+            "inspiration_heading": "Inspiration",
+            "inspiration_text": "<p>Every bead is chosen for its character, color, weight, and natural variation. The Spiritual Beads collection is built around materials that feel grounded and intentional, bringing a sense of balance to everyday wear. Subtle in meaning but strong in presence, these pieces are designed to move with you, not define you.</p>",
+            "inspiration_image": "shopify://shop_images/2026-01-19_08-36-17_B_R8_S4.jpg",
+            "expression_heading": "Expression",
+            "expression_text": "<p>Crafted to stand on their own or layer effortlessly, these bracelets combine refined construction with natural stone textures. Smooth finishes, clean silhouettes, and thoughtful proportions create a look that feels modern yet personal. Easy to wear, easy to style, each piece adds quiet depth without trying too hard.</p>",
+            "expression_image": "shopify://shop_images/Change_the_background_4k_202601291537.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/beaded-bracelets",
+            "background_color": "#eeeeee",
+            "heading_color": "#111111",
+            "text_color": "#111111",
+            "link_color": "#111111",
+            "small_heading_size": 18,
+            "small_heading_size_mobile": 16,
+            "text_size": 16,
+            "text_size_mobile": 14,
+            "link_size": 14,
+            "link_size_mobile": 14,
+            "text_block_spacing": 60,
+            "padding_top": 60,
+            "padding_bottom": 60
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_7afc852_kBkLRD"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -367,6 +408,7 @@
     "rich_text_G9LH7U",
     "collection-header",
     "promo-grid",
-    "main-collection"
+    "main-collection",
+    "blocks_DXa4KL"
   ]
 }
