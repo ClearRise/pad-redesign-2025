@@ -1,6 +1,723 @@
+{% doc %}
+  @prompt
+    Can you make me a hero section
+    
+    It needs to have no overlay slider (just a drop shadow slider for under all the text) 
+    
+    It should have the ability to adjust the spacing between all the text. 
+    
+    It should be structured as 
+    
+    Subheadline
+    
+    Then a headline
+    
+    Then a body text
+    
+    Then two buttons (the second should be optional) 
+    The buttons should be side by side not stacked , The buttons need to be side by side not stacked vertically, Can you make it so we can add a mobile and desktop image? , Can you also make it so we can change font size on mobile and desktop independently and change the vertical positioning of objects
+    
+    We also should be able to move the spacing between all the different text elements as well as move the buttons (to top bottom center / left / right
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-hero-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+
+  .ai-hero-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .ai-hero-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-hero-image-desktop-{{ ai_gen_id }} {
+    display: block;
+  }
+
+  .ai-hero-image-mobile-{{ ai_gen_id }} {
+    display: none;
+  }
+
+  .ai-hero-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    min-height: 400px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-hero-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  .ai-hero-content-wrapper-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: {{ block.settings.vertical_alignment }};
+    justify-content: {{ block.settings.horizontal_alignment }};
+    padding: 20px;
+    z-index: 2;
+  }
+
+  .ai-hero-content-{{ ai_gen_id }} {
+    text-align: {{ block.settings.text_alignment }};
+    max-width: {{ block.settings.content_max_width }}px;
+    width: 100%;
+  }
+
+  .ai-hero-subheadline-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.subheadline_size_desktop }}px;
+    margin: 0 0 {{ block.settings.subheadline_spacing }}px 0;
+    text-shadow: 0 {{ block.settings.text_shadow_y }}px {{ block.settings.text_shadow_blur }}px rgba(0, 0, 0, {{ block.settings.text_shadow_opacity }});
+  }
+
+  .ai-hero-headline-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.headline_size_desktop }}px;
+    margin: 0 0 {{ block.settings.headline_spacing }}px 0;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 {{ block.settings.text_shadow_y }}px {{ block.settings.text_shadow_blur }}px rgba(0, 0, 0, {{ block.settings.text_shadow_opacity }});
+  }
+
+  .ai-hero-body-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.body_size_desktop }}px;
+    margin: 0 0 {{ block.settings.body_spacing }}px 0;
+    line-height: 1.5;
+    text-shadow: 0 {{ block.settings.text_shadow_y }}px {{ block.settings.text_shadow_blur }}px rgba(0, 0, 0, {{ block.settings.text_shadow_opacity }});
+  }
+
+  .ai-hero-buttons-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.button_gap }}px;
+    justify-content: {{ block.settings.button_alignment }};
+    flex-wrap: wrap;
+  }
+
+  .ai-hero-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_font_size }}px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-shadow: none;
+  }
+
+  .ai-hero-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_bg_hover_color }};
+    color: {{ block.settings.button_text_hover_color }};
+  }
+
+  .ai-hero-button-secondary-{{ ai_gen_id }} {
+    background-color: {{ block.settings.button_secondary_bg_color }};
+    color: {{ block.settings.button_secondary_text_color }};
+  }
+
+  .ai-hero-button-secondary-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_secondary_bg_hover_color }};
+    color: {{ block.settings.button_secondary_text_hover_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-hero-image-desktop-{{ ai_gen_id }} {
+      display: none;
+    }
+
+    .ai-hero-image-mobile-{{ ai_gen_id }} {
+      display: block;
+    }
+
+    .ai-hero-content-wrapper-{{ ai_gen_id }} {
+      align-items: {{ block.settings.vertical_alignment_mobile }};
+    }
+
+    .ai-hero-subheadline-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subheadline_size_mobile }}px;
+    }
+
+    .ai-hero-headline-{{ ai_gen_id }} {
+      font-size: {{ block.settings.headline_size_mobile }}px;
+    }
+
+    .ai-hero-body-{{ ai_gen_id }} {
+      font-size: {{ block.settings.body_size_mobile }}px;
+    }
+
+    .ai-hero-buttons-{{ ai_gen_id }} {
+      justify-content: {{ block.settings.button_alignment_mobile }};
+    }
+  }
+{% endstyle %}
+
+<div class="ai-hero-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-hero-image-wrapper-{{ ai_gen_id }}">
+    {% if block.settings.image_desktop or block.settings.image_mobile %}
+      {% if block.settings.image_desktop %}
+        <img
+          src="{{ block.settings.image_desktop | image_url: width: 2000 }}"
+          alt="{{ block.settings.image_desktop.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image_desktop.width }}"
+          height="{{ block.settings.image_desktop.height }}"
+          class="ai-hero-image-{{ ai_gen_id }} ai-hero-image-desktop-{{ ai_gen_id }}"
+        >
+      {% endif %}
+      {% if block.settings.image_mobile %}
+        <img
+          src="{{ block.settings.image_mobile | image_url: width: 1000 }}"
+          alt="{{ block.settings.image_mobile.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image_mobile.width }}"
+          height="{{ block.settings.image_mobile.height }}"
+          class="ai-hero-image-{{ ai_gen_id }} ai-hero-image-mobile-{{ ai_gen_id }}"
+        >
+      {% elsif block.settings.image_desktop %}
+        <img
+          src="{{ block.settings.image_desktop | image_url: width: 1000 }}"
+          alt="{{ block.settings.image_desktop.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image_desktop.width }}"
+          height="{{ block.settings.image_desktop.height }}"
+          class="ai-hero-image-{{ ai_gen_id }} ai-hero-image-mobile-{{ ai_gen_id }}"
+        >
+      {% endif %}
+    {% else %}
+      <div class="ai-hero-placeholder-{{ ai_gen_id }}">
+        {{ 'hero-apparel-1' | placeholder_svg_tag }}
+      </div>
+    {% endif %}
+
+    <div class="ai-hero-content-wrapper-{{ ai_gen_id }}">
+      <div class="ai-hero-content-{{ ai_gen_id }}">
+        {% if block.settings.subheadline != blank %}
+          <div class="ai-hero-subheadline-{{ ai_gen_id }}">
+            {{ block.settings.subheadline }}
+          </div>
+        {% endif %}
+
+        {% if block.settings.headline != blank %}
+          <h2 class="ai-hero-headline-{{ ai_gen_id }}">
+            {{ block.settings.headline }}
+          </h2>
+        {% endif %}
+
+        {% if block.settings.body_text != blank %}
+          <div class="ai-hero-body-{{ ai_gen_id }}">
+            {{ block.settings.body_text }}
+          </div>
+        {% endif %}
+
+        {% if block.settings.button_text != blank or block.settings.button_secondary_text != blank %}
+          <div class="ai-hero-buttons-{{ ai_gen_id }}">
+            {% if block.settings.button_text != blank %}
+              <a
+                href="{{ block.settings.button_link }}"
+                class="ai-hero-button-{{ ai_gen_id }}"
+              >
+                {{ block.settings.button_text }}
+              </a>
+            {% endif %}
+
+            {% if block.settings.show_secondary_button and block.settings.button_secondary_text != blank %}
+              <a
+                href="{{ block.settings.button_secondary_link }}"
+                class="ai-hero-button-{{ ai_gen_id }} ai-hero-button-secondary-{{ ai_gen_id }}"
+              >
+                {{ block.settings.button_secondary_text }}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Hero section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Desktop image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile image"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "subheadline",
+      "label": "Subheadline",
+      "default": "<p>Welcome to our store</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "headline",
+      "label": "Headline",
+      "default": "<p>Discover Amazing Products</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "body_text",
+      "label": "Body text",
+      "default": "<p>Shop our latest collection and find exactly what you need</p>"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "Content max width",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "default": 800
+    },
+    {
+      "type": "header",
+      "content": "Desktop typography"
+    },
+    {
+      "type": "range",
+      "id": "subheadline_size_desktop",
+      "label": "Subheadline size",
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "headline_size_desktop",
+      "label": "Headline size",
+      "min": 20,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "body_size_desktop",
+      "label": "Body text size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Mobile typography"
+    },
+    {
+      "type": "range",
+      "id": "subheadline_size_mobile",
+      "label": "Subheadline size",
+      "min": 10,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "headline_size_mobile",
+      "label": "Headline size",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "body_size_mobile",
+      "label": "Body text size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Text spacing"
+    },
+    {
+      "type": "range",
+      "id": "subheadline_spacing",
+      "label": "Subheadline bottom spacing",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "headline_spacing",
+      "label": "Headline bottom spacing",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "body_spacing",
+      "label": "Body text bottom spacing",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Text shadow"
+    },
+    {
+      "type": "range",
+      "id": "text_shadow_y",
+      "label": "Shadow vertical offset",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "text_shadow_blur",
+      "label": "Shadow blur",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "text_shadow_opacity",
+      "label": "Shadow opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.5
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment",
+      "label": "Desktop vertical alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment_mobile",
+      "label": "Mobile vertical alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment",
+      "label": "Horizontal alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Primary button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Background color",
+      "default": "#138f7e"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_hover_color",
+      "label": "Hover background color",
+      "default": "#0f7266"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_text_hover_color",
+      "label": "Hover text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Secondary button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_button",
+      "label": "Show secondary button",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "button_secondary_text",
+      "label": "Button text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "button_secondary_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "button_secondary_bg_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_secondary_bg_hover_color",
+      "label": "Hover background color",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "button_secondary_text_color",
+      "label": "Text color",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "button_secondary_text_hover_color",
+      "label": "Hover text color",
+      "default": "#111111"
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "label": "Vertical padding",
+      "min": 8,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "label": "Horizontal padding",
+      "min": 16,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "button_gap",
+      "label": "Gap between buttons",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "button_alignment",
+      "label": "Desktop button alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "button_alignment_mobile",
+      "label": "Mobile button alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero section"
+    }
+  ]
+}
 {% endschema %}
