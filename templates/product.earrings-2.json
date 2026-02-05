@@ -23,6 +23,13 @@
             "custom_badge": "BUY ONE GET ONE FREE"
           }
         },
+        "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
+          "type": "text",
+          "settings": {
+            "text": "<b>Use Code LOVE20 for an extra 20% off</b>",
+            "bold": false
+          }
+        },
         "rivo_loyalty_rewards_referrals_potential_points_tzhzhW": {
           "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/potential-points/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
           "disabled": true,
@@ -34,13 +41,6 @@
             "show_icon": false,
             "logged_out_only": false,
             "custom_css": ""
-          }
-        },
-        "94c49419-9d53-4cfe-8c63-edaf9a145c94": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.custom.discount_text.value }}",
-            "bold": false
           }
         },
         "separator": {
@@ -321,8 +321,8 @@
       "block_order": [
         "judge_me_reviews_preview_badge_6bMyn3",
         "price",
-        "rivo_loyalty_rewards_referrals_potential_points_tzhzhW",
         "94c49419-9d53-4cfe-8c63-edaf9a145c94",
+        "rivo_loyalty_rewards_referrals_potential_points_tzhzhW",
         "separator",
         "variant_picker",
         "bold_option_agdenj",
